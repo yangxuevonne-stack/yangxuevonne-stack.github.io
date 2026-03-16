@@ -1,0 +1,22 @@
+# ================================================================
+# netlify.toml — Netlify 部署配置
+# 把这个文件放在网站根目录
+# ================================================================
+
+[build]
+  publish = "."        # 发布根目录下的文件
+
+# 开启 Netlify Identity（用于后台登录）
+# 部署后在 Netlify 控制台：Site Settings → Identity → Enable Identity
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+
+# 所有页面都可以直接访问
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200

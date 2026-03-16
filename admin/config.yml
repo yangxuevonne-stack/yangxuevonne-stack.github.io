@@ -1,0 +1,212 @@
+# ================================================================
+# Netlify CMS 配置文件
+# 这个文件定义了后台的所有管理功能
+# ================================================================
+
+backend:
+  name: git-gateway          # 通过 Netlify 的 Git Gateway 连接 GitHub
+  branch: main               # 你的 GitHub 主分支名（有些账号是 master，注意确认）
+
+# 媒体文件上传目录
+media_folder: "images/uploads"       # 上传的图片存在这里
+public_folder: "/images/uploads"     # 网页访问图片的路径
+
+# ================================================================
+# 后台管理的内容类型
+# ================================================================
+collections:
+
+  # ── 博客文章 ──────────────────────────────────────────────────
+  - name: "blog"
+    label: "📝 博客文章"
+    label_singular: "文章"
+    folder: "_posts/blog"           # 文章的 Markdown 文件存在这里
+    create: true                    # 允许创建新文章
+    slug: "{{slug}}"                # 文件名格式
+    preview_path: "blog/{{slug}}"   # 预览链接
+    fields:
+      - label: "文章标题"
+        name: "title"
+        widget: "string"
+        hint: "显示在文章页面和列表页的标题"
+
+      - label: "发布日期"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY年MM月DD日"
+        default: ""
+
+      - label: "分类"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "AI合规", value: "ai-compliance" }
+          - { label: "跨境并购", value: "ma" }
+          - { label: "创业法律", value: "startup-law" }
+          - { label: "市场分析", value: "market-analysis" }
+          - { label: "深度分析", value: "deep-dive" }
+        default: "ai-compliance"
+
+      - label: "文章摘要"
+        name: "excerpt"
+        widget: "text"
+        hint: "显示在文章列表页的简短描述（建议50-100字）"
+
+      - label: "预计阅读时间"
+        name: "readTime"
+        widget: "string"
+        default: "8分钟阅读"
+
+      - label: "封面图"
+        name: "coverImage"
+        widget: "image"
+        required: false
+        hint: "建议尺寸 1200x630px"
+
+      - label: "文章内容"
+        name: "body"
+        widget: "markdown"
+        hint: "支持 Markdown 格式，可以用工具栏插入标题、加粗、链接等"
+
+      - label: "SEO描述"
+        name: "seoDescription"
+        widget: "text"
+        required: false
+        hint: "搜索引擎显示的描述，不填则使用文章摘要"
+
+      - label: "是否发布"
+        name: "published"
+        widget: "boolean"
+        default: true
+        hint: "关闭则保存为草稿，不显示在网站上"
+
+  # ── 视频内容 ──────────────────────────────────────────────────
+  - name: "videos"
+    label: "🎬 视频内容"
+    label_singular: "视频"
+    folder: "_posts/videos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "视频标题"
+        name: "title"
+        widget: "string"
+
+      - label: "发布日期"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY年MM月DD日"
+
+      - label: "视频平台"
+        name: "platform"
+        widget: "select"
+        options:
+          - { label: "YouTube", value: "youtube" }
+          - { label: "Bilibili", value: "bilibili" }
+          - { label: "小红书视频", value: "xiaohongshu" }
+
+      - label: "视频链接"
+        name: "videoUrl"
+        widget: "string"
+        hint: "粘贴 YouTube 或 Bilibili 的完整链接"
+
+      - label: "视频封面图"
+        name: "thumbnail"
+        widget: "image"
+        required: false
+
+      - label: "视频简介"
+        name: "description"
+        widget: "text"
+
+      - label: "分类"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "AI合规", value: "ai-compliance" }
+          - { label: "跨境并购", value: "ma" }
+          - { label: "创业法律", value: "startup-law" }
+
+      - label: "是否发布"
+        name: "published"
+        widget: "boolean"
+        default: true
+
+  # ── 网站基本信息 ──────────────────────────────────────────────
+  - name: "settings"
+    label: "⚙️ 网站设置"
+    files:
+      - name: "general"
+        label: "基本信息"
+        file: "_data/settings.json"
+        fields:
+          - label: "网站名称"
+            name: "siteName"
+            widget: "string"
+            default: "Evonne Law"
+
+          - label: "个人简介（首页显示）"
+            name: "heroDesc"
+            widget: "text"
+            hint: "首页 Hero 区的个人描述"
+
+          - label: "关于我（长文）"
+            name: "aboutText"
+            widget: "text"
+
+          - label: "统计数字1 — 数字"
+            name: "stat1Num"
+            widget: "string"
+            default: "10+"
+
+          - label: "统计数字1 — 标签"
+            name: "stat1Label"
+            widget: "string"
+            default: "年跨境法律经验"
+
+          - label: "统计数字2 — 数字"
+            name: "stat2Num"
+            widget: "string"
+            default: "50k+"
+
+          - label: "统计数字2 — 标签"
+            name: "stat2Label"
+            widget: "string"
+            default: "小红书粉丝"
+
+          - label: "统计数字3 — 数字"
+            name: "stat3Num"
+            widget: "string"
+            default: "200+"
+
+          - label: "统计数字3 — 标签"
+            name: "stat3Label"
+            widget: "string"
+            default: "企业服务案例"
+
+          - label: "联系邮箱"
+            name: "email"
+            widget: "string"
+
+          - label: "小红书账号"
+            name: "xiaohongshu"
+            widget: "string"
+
+          - label: "LinkedIn链接"
+            name: "linkedin"
+            widget: "string"
+
+          - label: "YouTube链接"
+            name: "youtube"
+            widget: "string"
+            required: false
+
+          - label: "Calendly预约链接"
+            name: "calendly"
+            widget: "string"
+            hint: "格式：https://calendly.com/你的用户名"
+
+          - label: "Newsletter订阅人数（显示用）"
+            name: "subscriberCount"
+            widget: "string"
+            default: "2,400+"

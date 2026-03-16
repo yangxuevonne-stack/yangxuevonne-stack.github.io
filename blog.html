@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Evonne Law</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.blog-page-hero { background:var(--dark); padding:140px 60px 80px; text-align:center; }
+.blog-page-hero h1 { font-family:'Cormorant Garamond',serif; font-size:56px; font-weight:300; color:var(--cream); margin-bottom:16px; }
+.blog-page-hero p { font-size:16px; color:rgba(247,243,238,0.6); }
+.filter-bar { background:var(--warm-white); border-bottom:1px solid var(--border); padding:0 60px; display:flex; overflow-x:auto; }
+.filter-btn { padding:16px 24px; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--light-text); cursor:pointer; border:none; background:transparent; border-bottom:2px solid transparent; margin-bottom:-1px; font-family:inherit; transition:all 0.2s; white-space:nowrap; }
+.filter-btn.active { color:var(--rose-gold); border-bottom-color:var(--rose-gold); }
+.filter-btn:hover:not(.active) { color:var(--dark); }
+.posts-container { max-width:900px; margin:0 auto; padding:60px 60px 100px; }
+.post-card { display:grid; grid-template-columns:1fr auto; gap:32px; align-items:center; padding:40px; background:var(--cream); border:1px solid var(--border); margin-bottom:20px; text-decoration:none; color:inherit; transition:all 0.3s; }
+.post-card:hover { box-shadow:0 16px 48px rgba(28,21,16,0.1); transform:translateY(-3px); border-color:var(--champagne); }
+.post-cat { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--rose-gold); margin-bottom:12px; }
+.post-title { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:400; line-height:1.35; margin-bottom:12px; color:var(--dark); }
+.post-excerpt { font-size:14px; line-height:1.8; color:var(--light-text); }
+.post-meta { font-size:12px; color:var(--rose-gold); margin-top:16px; display:flex; gap:16px; }
+.post-arrow { font-family:'Cormorant Garamond',serif; font-size:36px; color:var(--champagne); transition:color 0.3s; flex-shrink:0; }
+.post-card:hover .post-arrow { color:var(--rose-gold); }
+.empty-state { text-align:center; padding:80px 20px; color:var(--light-text); }
+.empty-state h3 { font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:300; margin-bottom:12px; }
+.loading { text-align:center; padding:80px; color:var(--light-text); font-size:13px; letter-spacing:2px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">E<span>.</span>LAW</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">关于我</a></li>
+    <li><a href="index.html#services">服务</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="videos.html">视频</a></li>
+    <li><a href="index.html#newsletter">订阅</a></li>
+    <li><a href="index.html#contact" class="nav-cta">预约咨询</a></li>
+  </ul>
+</nav>
+
+<div class="blog-page-hero">
+  <p class="section-tag" style="margin-bottom:16px;">内容中心</p>
+  <h1>法律 × 商业 × AI</h1>
+  <p>深度解读AI监管动态、跨境并购趋势与法律风险</p>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterPosts('all',this)">全部</button>
+  <button class="filter-btn" onclick="filterPosts('deep-dive',this)">深度分析</button>
+  <button class="filter-btn" onclick="filterPosts('ai-compliance',this)">AI合规</button>
+  <button class="filter-btn" onclick="filterPosts('ma',this)">跨境并购</button>
+  <button class="filter-btn" onclick="filterPosts('startup-law',this)">创业法律</button>
+  <button class="filter-btn" onclick="filterPosts('market-analysis',this)">市场分析</button>
+</div>
+
+<div class="posts-container">
+  <div id="posts-list"><div class="loading">加载中…</div></div>
+</div>
+
+<script>
+const categoryLabels = {'ai-compliance':'AI合规','ma':'跨境并购','startup-law':'创业法律','market-analysis':'市场分析','deep-dive':'深度分析'};
+
+// ================================================================
+// 📌 新增文章时，把文件名加到这个列表里
+// 例如：'_posts/blog/my-new-article.md'
+// ================================================================
+const postFiles = [
+  '_posts/blog/xai-vs-california.md',
+  '_posts/blog/colorado-sb205.md',
+  '_posts/blog/humanoid-robotics-ma.md',
+];
+
+let allPosts = [];
+
+function parseFrontmatter(text) {
+  const match = text.match(/^---\n([\s\S]*?)\n---/);
+  if (!match) return {};
+  const data = {};
+  match[1].split('\n').forEach(line => {
+    const i = line.indexOf(':');
+    if (i > -1) {
+      const k = line.slice(0,i).trim();
+      const v = line.slice(i+1).trim().replace(/^["']|["']$/g,'');
+      data[k] = v;
+    }
+  });
+  return data;
+}
+
+async function loadPosts() {
+  const results = await Promise.allSettled(postFiles.map(async f => {
+    try {
+      const r = await fetch(f);
+      if (!r.ok) return null;
+      const text = await r.text();
+      const data = parseFrontmatter(text);
+      return { ...data, url: 'blog/' + f.split('/').pop().replace('.md','.html') };
+    } catch { return null; }
+  }));
+  allPosts = results
+    .filter(r => r.status==='fulfilled' && r.value && r.value.published !== 'false')
+    .map(r => r.value);
+  renderPosts(allPosts);
+}
+
+function renderPosts(posts) {
+  const el = document.getElementById('posts-list');
+  if (!posts.length) {
+    el.innerHTML = '<div class="empty-state"><h3>暂无文章</h3><p>请到后台发布内容。</p></div>';
+    return;
+  }
+  el.innerHTML = posts.map(p => `
+    <a href="${p.url}" class="post-card">
+      <div>
+        <div class="post-cat">${categoryLabels[p.category]||p.category||'AI法律'}</div>
+        <div class="post-title">${p.title||'无标题'}</div>
+        <p class="post-excerpt">${p.excerpt||''}</p>
+        <div class="post-meta">
+          <span>${p.date||''}</span>
+          ${p.readTime?`<span>·</span><span>${p.readTime}</span>`:''}
+        </div>
+      </div>
+      <div class="post-arrow">→</div>
+    </a>`).join('');
+}
+
+function filterPosts(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderPosts(cat==='all' ? allPosts : allPosts.filter(p=>p.category===cat));
+}
+
+loadPosts();
+</script>
+</body>
+</html>
