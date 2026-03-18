@@ -3,195 +3,399 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Evonne | AI法律顾问 · 跨境并购专家</title>
+<title>Evonne Xu | AI法律顾问 · 跨境并购专家</title>
 <meta name="description" content="专注中美跨境并购与AI法律合规。帮助企业在复杂监管环境中找到最优路径。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style>
+/* 语言切换按钮 */
+.lang-switch { display:flex; align-items:center; gap:0; border:1px solid var(--border); overflow:hidden; margin-left:16px; flex-shrink:0; }
+.lang-btn { padding:6px 14px; font-size:11px; letter-spacing:1.5px; font-weight:500; cursor:pointer; border:none; background:transparent; color:var(--light-text); font-family:'DM Sans',sans-serif; transition:all 0.2s; }
+.lang-btn.active { background:var(--dark); color:var(--cream); }
+.lang-btn:hover:not(.active) { color:var(--rose-gold); }
+
+/* 语言显示控制 */
+[data-lang] { display:none; }
+.lang-zh [data-lang="zh"] { display:block; }
+.lang-en [data-lang="en"] { display:block; }
+/* inline元素 */
+span[data-lang] { display:none; }
+.lang-zh span[data-lang="zh"] { display:inline; }
+.lang-en span[data-lang="en"] { display:inline; }
+
+/* 图片框 */
+.photo-placeholder-box { width:100%; height:100%; background:linear-gradient(160deg,#E8D5C0,#C49A7A); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; position:relative; }
+.photo-placeholder-box .initials { font-family:'Cormorant Garamond',serif; font-size:80px; font-weight:300; color:rgba(255,255,255,0.7); line-height:1; }
+.photo-placeholder-box .photo-hint { position:absolute; bottom:16px; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.5); background:rgba(0,0,0,0.15); padding:4px 10px; text-align:center; }
+.hero-photo-img { width:100%; height:100%; object-fit:cover; object-position:center top; display:none; }
+
+/* About 图片 */
+.about-photo-wrap { width:100%; aspect-ratio:4/5; overflow:hidden; position:relative; background:linear-gradient(135deg,#E8D5C0,#C49A7A); display:flex; align-items:center; justify-content:center; }
+.about-photo-wrap img { width:100%; height:100%; object-fit:cover; object-position:center top; display:none; }
+.about-photo-initial { font-family:'Cormorant Garamond',serif; font-size:100px; font-weight:300; color:rgba(255,255,255,0.6); }
+.about-photo-label { position:absolute; bottom:16px; left:0; right:0; text-align:center; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.55); }
+</style>
 </head>
-<body>
+<body class="lang-zh">
+
 <nav>
   <a href="index.html" class="nav-logo">E<span>.</span>LAW</a>
   <ul class="nav-links">
-    <li><a href="#about">关于我</a></li>
-    <li><a href="#services">服务</a></li>
+    <li><a href="#about"><span data-lang="zh">关于我</span><span data-lang="en">About</span></a></li>
+    <li><a href="#services"><span data-lang="zh">服务</span><span data-lang="en">Services</span></a></li>
     <li><a href="blog.html">Blog</a></li>
-    <li><a href="#newsletter">订阅</a></li>
-    <li><a href="#contact" class="nav-cta">预约咨询</a></li>
+    <li><a href="#newsletter"><span data-lang="zh">订阅</span><span data-lang="en">Subscribe</span></a></li>
+    <li><a href="#contact" class="nav-cta"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a></li>
   </ul>
+  <div class="lang-switch">
+    <button class="lang-btn active" id="btn-zh" onclick="switchLang('zh')">CN</button>
+    <button class="lang-btn" id="btn-en" onclick="switchLang('en')">EN</button>
+  </div>
+  <div class="nav-hamburger" onclick="openMobileMenu()">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
+
+<div class="nav-mobile-menu" id="mobileMenu">
+  <button class="nav-mobile-close" onclick="closeMobileMenu()">✕</button>
+  <a href="#about" onclick="closeMobileMenu()"><span data-lang="zh">关于我</span><span data-lang="en">About</span></a>
+  <a href="#services" onclick="closeMobileMenu()"><span data-lang="zh">服务</span><span data-lang="en">Services</span></a>
+  <a href="blog.html" onclick="closeMobileMenu()">Blog</a>
+  <a href="videos.html" onclick="closeMobileMenu()"><span data-lang="zh">视频</span><span data-lang="en">Videos</span></a>
+  <a href="#newsletter" onclick="closeMobileMenu()"><span data-lang="zh">订阅</span><span data-lang="en">Subscribe</span></a>
+  <a href="#contact" onclick="closeMobileMenu()" style="color:var(--rose-gold)"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a>
+</div>
+
 <section class="hero">
   <div class="hero-left">
     <div class="hero-tag">AI Law · M&A · Cross-Border</div>
-    <h1 class="hero-title">AI时代的<br><em>法律智库</em></h1>
-    <p class="hero-subtitle-cn">跨境并购 · AI合规 · 商业战略</p>
-    <p class="hero-desc">专注于中美科技并购与AI法律合规，帮助企业在复杂监管环境中找到最优路径。</p>
+    <h1 class="hero-title">
+      <span data-lang="zh">AI时代的<br><em>法律智库</em></span>
+      <span data-lang="en">Your Legal Edge<br>in the <em>AI Era</em></span>
+    </h1>
+    <p class="hero-subtitle-cn">
+      <span data-lang="zh">跨境并购 · AI合规 · 商业战略</span>
+      <span data-lang="en">Cross-Border M&A · AI Compliance · Business Strategy</span>
+    </p>
+    <p class="hero-desc">
+      <span data-lang="zh">专注于中美制造业和科技并购与AI法律合规，帮助企业在复杂监管环境中找到最优路径。用创业者和企业家听得懂的语言，解读AI时代的法律风险。</span>
+      <span data-lang="en">Specializing in US-China M&A and AI legal compliance, helping businesses navigate complex regulatory environments. Translating intricate legal risk into clear, actionable strategy for founders and executives.</span>
+    </p>
     <div class="hero-btns">
-      <a href="#contact" class="btn-primary">预约免费咨询</a>
-      <a href="blog.html" class="btn-secondary">探索内容</a>
+      <a href="#contact" class="btn-primary"><span data-lang="zh">预约免费咨询</span><span data-lang="en">Book a Free Call</span></a>
+      <a href="blog.html" class="btn-secondary"><span data-lang="zh">探索内容</span><span data-lang="en">Explore Content</span></a>
     </div>
     <div class="hero-stats">
-      <div class="stat-item"><div class="stat-num">10+</div><div class="stat-label">年跨境法律经验</div></div>
-      <div class="stat-item"><div class="stat-num">50k+</div><div class="stat-label">小红书粉丝</div></div>
-      <div class="stat-item"><div class="stat-num">200+</div><div class="stat-label">企业服务案例</div></div>
+      <div class="stat-item">
+        <div class="stat-num">12+</div>
+        <div class="stat-label"><span data-lang="zh">年跨境法律经验</span><span data-lang="en">Yrs Experience</span></div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5k+</div>
+        <div class="stat-label"><span data-lang="zh">全网粉丝</span><span data-lang="en">Followers</span></div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">200+</div>
+        <div class="stat-label"><span data-lang="zh">企业服务案例</span><span data-lang="en">Clients Served</span></div>
+      </div>
     </div>
   </div>
   <div class="hero-right">
     <div class="hero-bg-panel"></div>
     <div class="hero-deco-line"></div>
     <div class="hero-photo-frame">
-      <div class="hero-photo-placeholder">
+      <!--
+        ★ 换真实照片：
+        1. 把照片命名 photo.jpg，上传到 images/ 文件夹
+        2. 把 hero-photo-img 的 style 里 display:none 改成 display:block
+        3. 把 photo-placeholder-box 整个div删掉
+      -->
+      <img src="images/photo.jpg" alt="Evonne Xu" class="hero-photo-img" style="display:none">
+      <div class="photo-placeholder-box">
         <div class="initials">E</div>
-        <div class="name-cn">律师 · 创作者 · 顾问</div>
+        <div class="photo-hint">Replace with images/photo.jpg</div>
       </div>
     </div>
   </div>
 </section>
-<div class="marquee-bar"><div class="marquee-track"><span>AI合规</span><span class="dot">·</span><span>跨境并购</span><span class="dot">·</span><span>数据隐私</span><span class="dot">·</span><span>AI监管</span><span class="dot">·</span><span>中美科技法律</span><span class="dot">·</span><span>AI合同谈判</span><span class="dot">·</span><span>AI合规</span><span class="dot">·</span><span>跨境并购</span><span class="dot">·</span><span>数据隐私</span><span class="dot">·</span><span>AI监管</span><span class="dot">·</span><span>中美科技法律</span><span class="dot">·</span><span>AI合同谈判</span><span class="dot">·</span></div></div>
+
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span>AI Compliance</span><span class="dot">·</span><span>Cross-Border M&A</span><span class="dot">·</span><span>Data Privacy</span><span class="dot">·</span><span>AI Regulation</span><span class="dot">·</span><span>US-China Tech Law</span><span class="dot">·</span><span>AI合规</span><span class="dot">·</span><span>跨境并购</span><span class="dot">·</span><span>数据隐私</span><span class="dot">·</span><span>AI监管</span><span class="dot">·</span><span>中美科技法律</span><span class="dot">·</span><span>AI Compliance</span><span class="dot">·</span><span>Cross-Border M&A</span><span class="dot">·</span><span>Data Privacy</span><span class="dot">·</span><span>AI Regulation</span><span class="dot">·</span><span>US-China Tech Law</span><span class="dot">·</span><span>AI合规</span><span class="dot">·</span><span>跨境并购</span><span class="dot">·</span><span>数据隐私</span><span class="dot">·</span><span>AI监管</span><span class="dot">·</span><span>中美科技法律</span><span class="dot">·</span>
+  </div>
+</div>
+
 <section class="about" id="about">
   <div class="container">
     <div class="about-grid">
       <div class="about-visual">
-        <div class="about-card">
-          <div class="about-card-label">专业背景</div>
-          <div class="about-card-title">懂法律的商业顾问<br>懂商业的法律专家</div>
-          <div class="about-card-desc">拥有中美双重法律背景，深耕科技并购与AI合规赛道。</div>
-          <div class="about-expertise">
-            <div class="expertise-item"><span class="expertise-icon">⚖️</span><span class="expertise-text">美国/中国双重执照律师</span></div>
-            <div class="expertise-item"><span class="expertise-icon">🤖</span><span class="expertise-text">AI法律合规专家</span></div>
-            <div class="expertise-item"><span class="expertise-icon">🌏</span><span class="expertise-text">中美跨境并购顾问</span></div>
-            <div class="expertise-item"><span class="expertise-icon">📱</span><span class="expertise-text">小红书法律科普创作者</span></div>
-          </div>
+        <!--
+          ★ 关于我区域照片：
+          上传 images/photo-about.jpg 后把 img 的 display:none 改成 display:block
+          把 about-photo-initial 和 about-photo-label 删掉
+        -->
+        <div class="about-photo-wrap">
+          <img src="images/photo-about.jpg" alt="Evonne Xu" style="display:none">
+          <div class="about-photo-initial">E</div>
+          <div class="about-photo-label">Replace with images/photo-about.jpg</div>
         </div>
       </div>
       <div class="about-content">
-        <div class="section-tag">关于我</div>
-        <h3>在AI与法律的<br>交叉口，找到<br>商业的确定性</h3>
-        <p>很多创业者和C级高管面临同样的困境：AI时代机遇无限，但监管红线、合规风险、跨境法律差异让人无所适从。我在这里，把复杂的法律语言翻译成商业决策。</p>
-        <p>在小红书上，我用内容帮助创业者理解AI监管动态；在会议室里，我帮企业主导中美跨境并购交易。</p>
+        <div class="section-tag"><span data-lang="zh">关于我</span><span data-lang="en">About Me</span></div>
+        <h3>
+          <span data-lang="zh">在AI与法律的<br>交叉口，找到<br>商业的确定性</span>
+          <span data-lang="en">Where AI Meets Law,<br>Clarity Meets<br>Strategy</span>
+        </h3>
+        <p>
+          <span data-lang="zh">很多创业者和C级高管面临同样的困境：AI时代机遇无限，但监管红线、合规风险、跨境法律差异让人无所适从。我在这里，把复杂的法律语言翻译成商业决策。</span>
+          <span data-lang="en">Founders and C-suite executives often face the same challenge: the AI era offers unlimited opportunity, yet regulatory red lines, compliance risks, and cross-border legal complexity create uncertainty. I help translate that complexity into clear business decisions.</span>
+        </p>
+        <p>
+          <span data-lang="zh">在小红书上，我用内容帮助创业者理解AI监管动态；在会议室里，我帮企业主导中美跨境并购交易，保驾护航每一个关键决策节点。</span>
+          <span data-lang="en">Through content creation, I help founders stay ahead of fast-moving AI regulations. In practice, I advise on US-China cross-border transactions and guide clients through every critical decision point.</span>
+        </p>
         <div class="about-tags">
           <span class="tag">Colorado SB 205</span>
           <span class="tag">California AB 2013</span>
-          <span class="tag">AI合同谈判</span>
-          <span class="tag">并购尽职调查</span>
-          <span class="tag">数据合规</span>
+          <span class="tag">AI Contract</span>
+          <span class="tag">M&A Due Diligence</span>
+          <span class="tag">Data Compliance</span>
+          <span class="tag">Robotics Law</span>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <section id="services">
-  <div class="container"><div class="section-header"><div class="section-tag">服务范围</div><h2 class="section-title">我能为你做<em>什么</em></h2></div></div>
-  <div class="services-wrap"><div class="services-grid">
-    <div class="service-card"><div class="service-num">01</div><div class="service-title">AI法律合规咨询</div><p class="service-desc">帮助科技公司梳理AI产品的合规风险，包括美国各州AI法案、欧盟AI Act合规路径，以及AI合同条款谈判策略。</p></div>
-    <div class="service-card"><div class="service-num">02</div><div class="service-title">中美跨境并购</div><p class="service-desc">主导或参与中美双向并购交易，提供从尽职调查、交易结构设计，到监管审批的全流程法律支持。</p></div>
-    <div class="service-card"><div class="service-num">03</div><div class="service-title">创业公司法律顾问</div><p class="service-desc">为早期到成长期科技公司提供常年法律顾问服务，覆盖融资协议、股权架构、IP保护等关键法律文件。</p></div>
-    <div class="service-card"><div class="service-num">04</div><div class="service-title">法律内容合作</div><p class="service-desc">为品牌、律所提供高质量中文法律科普内容，触达小红书商业精英受众。</p></div>
-    <div class="service-card"><div class="service-num">05</div><div class="service-title">高管培训工作坊</div><p class="service-desc">为企业管理团队定制AI法律风险培训，内容涵盖AI采购合同、员工AI使用政策等。</p></div>
-    <div class="service-card"><div class="service-num">06</div><div class="service-title">演讲与媒体合作</div><p class="service-desc">受邀参与行业峰会、播客、媒体专访，围绕AI法律监管等主题提供深度专业解读。</p></div>
-  </div></div>
-</section>
-<section class="blog-section" id="blog">
   <div class="container">
-    <div class="section-header"><div class="section-tag">最新内容</div><h2 class="section-title">法律 × 商业 × <em>AI</em></h2></div>
-    <div class="blog-grid">
-      <div class="blog-featured">
-        <div class="blog-cat">深度分析</div>
-        <h3 class="blog-title">xAI起诉加州AB 2013：<br>这场官司将决定<br>AI透明度立法的未来</h3>
-        <p class="blog-excerpt">当马斯克的xAI将加州政府告上法庭，这是科技巨头与监管机构之间的权力博弈。</p>
-        <div class="blog-meta"><span>2025年3月</span><span>·</span><span>8分钟阅读</span></div>
-        <a href="blog/xai-vs-california.html" class="read-more">阅读全文 →</a>
+    <div class="section-header">
+      <div class="section-tag"><span data-lang="zh">服务范围</span><span data-lang="en">Services</span></div>
+      <h2 class="section-title"><span data-lang="zh">我能为你做<em>什么</em></span><span data-lang="en">How I Can <em>Help</em></span></h2>
+    </div>
+  </div>
+  <div class="services-wrap">
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-title"><span data-lang="zh">AI法律合规咨询</span><span data-lang="en">AI Legal Compliance</span></div>
+        <p class="service-desc"><span data-lang="zh">帮助科技公司梳理AI产品的合规风险，包括美国各州AI法案、欧盟AI Act合规路径，以及AI合同条款谈判策略。</span><span data-lang="en">Helping tech companies navigate AI product compliance risks, including US state AI laws, EU AI Act requirements, and AI contract negotiation strategies.</span></p>
       </div>
-      <div class="blog-card">
-        <div class="blog-cat-small">AI合规</div>
-        <h3 class="blog-title-small">Colorado SB 24-205：全美第一部AI高风险系统法</h3>
-        <p class="blog-excerpt-small">科罗拉多州走在全美前列，这对你的AI产品意味着什么？</p>
-        <div class="blog-meta-small">2025年2月</div>
-        <a href="blog/colorado-sb205.html" class="read-more-small">阅读 →</a>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-title"><span data-lang="zh">中美跨境并购</span><span data-lang="en">US-China Cross-Border M&A</span></div>
+        <p class="service-desc"><span data-lang="zh">主导或参与中美双向并购交易，提供从尽职调查、交易结构设计，到监管审批的全流程法律支持。</span><span data-lang="en">Leading or advising on US-China bilateral M&A transactions, providing full-cycle legal support from due diligence and deal structuring to regulatory approval.</span></p>
       </div>
-      <div class="blog-card">
-        <div class="blog-cat-small">并购动态</div>
-        <h3 class="blog-title-small">人形机器人赛道并购浪潮分析</h3>
-        <p class="blog-excerpt-small">资本在赌未来，法律在守规则——并购背后的交易逻辑解析。</p>
-        <div class="blog-meta-small">2025年1月</div>
-        <a href="blog/humanoid-robotics-ma.html" class="read-more-small">阅读 →</a>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-title"><span data-lang="zh">创业公司法律顾问</span><span data-lang="en">Startup General Counsel</span></div>
+        <p class="service-desc"><span data-lang="zh">为早期到成长期科技公司提供常年法律顾问服务，覆盖融资协议、股权架构、IP保护等关键法律文件。</span><span data-lang="en">Serving as ongoing legal counsel for early to growth-stage tech companies, covering financing agreements, equity structures, IP protection, and key legal documents.</span></p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-title"><span data-lang="zh">法律内容合作</span><span data-lang="en">Legal Content Partnership</span></div>
+        <p class="service-desc"><span data-lang="zh">为品牌、律所提供高质量中文法律科普内容，覆盖AI监管、并购市场、科技法律领域，触达小红书商业精英受众。</span><span data-lang="en">Creating high-quality legal content for brands and law firms covering AI regulation, M&A trends, and tech law, reaching business-savvy audiences across platforms.</span></p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <div class="service-title"><span data-lang="zh">高管培训工作坊</span><span data-lang="en">Executive Legal Workshops</span></div>
+        <p class="service-desc"><span data-lang="zh">为企业管理团队定制AI法律风险培训，内容涵盖AI采购合同、员工AI使用政策、AI生成内容版权等。</span><span data-lang="en">Customized AI legal risk training for leadership teams, covering AI procurement contracts, employee AI usage policies, and AI-generated content copyright.</span></p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <div class="service-title"><span data-lang="zh">演讲与媒体合作</span><span data-lang="en">Speaking & Media</span></div>
+        <p class="service-desc"><span data-lang="zh">受邀参与行业峰会、播客、媒体专访，围绕AI法律监管、中美科技竞争、并购市场等主题提供深度专业解读。</span><span data-lang="en">Available for industry conferences, podcasts, and media appearances on AI regulation, US-China tech competition, and M&A market trends.</span></p>
       </div>
     </div>
-    <div class="blog-more"><a href="blog.html" class="btn-secondary">查看全部文章</a></div>
   </div>
 </section>
+
+<section class="blog-section" id="blog">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag"><span data-lang="zh">最新内容</span><span data-lang="en">Latest Content</span></div>
+      <h2 class="section-title"><span data-lang="zh">法律 × 商业 × <em>AI</em></span><span data-lang="en">Law × Business × <em>AI</em></span></h2>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-featured">
+        <div class="blog-cat"><span data-lang="zh">深度分析</span><span data-lang="en">Deep Dive</span></div>
+        <h3 class="blog-title">
+          <span data-lang="zh">xAI起诉加州AB 2013：<br>这场官司将决定<br>AI透明度立法的未来</span>
+          <span data-lang="en">xAI vs. California AB 2013:<br>The Lawsuit That Could<br>Define AI Transparency Law</span>
+        </h3>
+        <p class="blog-excerpt">
+          <span data-lang="zh">当马斯克的xAI将加州政府告上法庭，这不仅仅是一场商业纠纷——这是科技巨头与监管机构之间的权力博弈，其结果将深刻影响全美AI监管格局。</span>
+          <span data-lang="en">When Musk's xAI sued California, it became more than a business dispute — it's a power struggle between tech giants and regulators that will reshape AI regulation nationwide.</span>
+        </p>
+        <div class="blog-meta">
+          <span><span data-lang="zh">2025年3月</span><span data-lang="en">March 2025</span></span>
+          <span>·</span>
+          <span><span data-lang="zh">8分钟阅读</span><span data-lang="en">8 min read</span></span>
+        </div>
+        <a href="blog/xai-vs-california.html" class="read-more"><span data-lang="zh">阅读全文 →</span><span data-lang="en">Read More →</span></a>
+      </div>
+      <div class="blog-card">
+        <div class="blog-cat-small">AI <span data-lang="zh">合规</span><span data-lang="en">Compliance</span></div>
+        <h3 class="blog-title-small"><span data-lang="zh">Colorado SB 24-205：全美第一部AI高风险系统法</span><span data-lang="en">Colorado SB 24-205: America's First High-Risk AI Law</span></h3>
+        <p class="blog-excerpt-small"><span data-lang="zh">科罗拉多州走在全美前列，这对你的AI产品意味着什么？</span><span data-lang="en">Colorado leads the nation — what does this mean for your AI product?</span></p>
+        <div class="blog-meta-small"><span data-lang="zh">2025年2月</span><span data-lang="en">Feb 2025</span></div>
+        <a href="blog/colorado-sb205.html" class="read-more-small"><span data-lang="zh">阅读 →</span><span data-lang="en">Read →</span></a>
+      </div>
+      <div class="blog-card">
+        <div class="blog-cat-small"><span data-lang="zh">并购动态</span><span data-lang="en">M&A</span></div>
+        <h3 class="blog-title-small"><span data-lang="zh">人形机器人赛道并购浪潮分析</span><span data-lang="en">The Humanoid Robot M&A Wave: A Legal Analysis</span></h3>
+        <p class="blog-excerpt-small"><span data-lang="zh">资本在赌未来，法律在守规则——并购背后的交易逻辑解析。</span><span data-lang="en">Capital bets on the future; law sets the rules — unpacking the deal logic behind the robotics M&A boom.</span></p>
+        <div class="blog-meta-small"><span data-lang="zh">2025年1月</span><span data-lang="en">Jan 2025</span></div>
+        <a href="blog/humanoid-robotics-ma.html" class="read-more-small"><span data-lang="zh">阅读 →</span><span data-lang="en">Read →</span></a>
+      </div>
+    </div>
+    <div class="blog-more"><a href="blog.html" class="btn-secondary"><span data-lang="zh">查看全部文章</span><span data-lang="en">View All Posts</span></a></div>
+  </div>
+</section>
+
 <section class="newsletter" id="newsletter">
   <div class="newsletter-inner">
     <div class="newsletter-eyebrow">Weekly Intelligence</div>
-    <h2 class="newsletter-title">每周一封<br>AI法律简报</h2>
-    <p class="newsletter-desc">精选本周最重要的AI监管动态。每周一发送，已有 <strong data-field="subscriberCount">2,400+</strong> 位读者订阅。</p>
+    <h2 class="newsletter-title">
+      <span data-lang="zh">每周一封<br>AI法律简报</span>
+      <span data-lang="en">Weekly AI Law<br>Intelligence Brief</span>
+    </h2>
+    <p class="newsletter-desc">
+      <span data-lang="zh">精选本周最重要的AI监管动态、并购市场趋势、法律风险提示。每周一发送，已有 <strong data-field="subscriberCount">2,400+</strong> 位读者订阅。</span>
+      <span data-lang="en">Curated weekly: the most important AI regulatory updates, M&A trends, and legal risk alerts. Published every Monday, with <strong>2,400+</strong> subscribers.</span>
+    </p>
     <form class="newsletter-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-      <input type="email" name="email" placeholder="输入你的邮箱地址" required>
-      <button type="submit">免费订阅</button>
+      <input type="email" name="email" placeholder="your@email.com" required>
+      <button type="submit"><span data-lang="zh">免费订阅</span><span data-lang="en">Subscribe Free</span></button>
     </form>
-    <p class="newsletter-promise">无垃圾邮件 · 随时退订 · 每周一次</p>
+    <p class="newsletter-promise">
+      <span data-lang="zh">无垃圾邮件 · 随时退订 · 每周一次</span>
+      <span data-lang="en">No spam · Unsubscribe anytime · Weekly</span>
+    </p>
   </div>
 </section>
+
 <section class="contact" id="contact">
   <div class="container">
-    <div class="section-header"><div class="section-tag">联系咨询</div><h2 class="section-title">开始一次<em>对话</em></h2></div>
+    <div class="section-header">
+      <div class="section-tag"><span data-lang="zh">联系咨询</span><span data-lang="en">Get in Touch</span></div>
+      <h2 class="section-title"><span data-lang="zh">开始一次<em>对话</em></span><span data-lang="en">Start a <em>Conversation</em></span></h2>
+    </div>
     <div class="contact-grid">
       <div class="contact-info">
-        <h3>每一个复杂问题<br>都值得认真对待</h3>
-        <p>无论你是面临AI合规压力的科技公司，还是计划跨境并购的创始人，欢迎发起对话。</p>
+        <h3><span data-lang="zh">每一个复杂问题<br>都值得认真对待</span><span data-lang="en">Every Complex Problem<br>Deserves Careful Thought</span></h3>
+        <p><span data-lang="zh">无论你是面临AI合规压力的科技公司，还是计划跨境并购的创始人，欢迎发起对话。</span><span data-lang="en">Whether you're a tech company facing AI compliance pressure or a founder planning a cross-border deal, I'd love to connect.</span></p>
         <div class="contact-methods">
-          <div class="contact-method"><div class="method-icon">📱</div><div><div class="method-label">小红书</div><div class="method-value" data-field="xiaohongshu">@Evonne法律说</div></div></div>
-          <div class="contact-method"><div class="method-icon">💼</div><div><div class="method-label">LinkedIn</div><div class="method-value" data-field="linkedin">linkedin.com/in/evonne-law</div></div></div>
-          <div class="contact-method"><div class="method-icon">📧</div><div><div class="method-label">Email</div><div class="method-value" data-field="email">hello@evonnelaw.com</div></div></div>
-          <div class="contact-method"><div class="method-icon">📅</div><div><div class="method-label">预约通话</div><div class="method-value"><a href="https://calendly.com/YOUR_LINK" target="_blank" style="color:inherit;">Calendly 在线预约 →</a></div></div></div>
+          <div class="contact-method"><div class="method-icon">📱</div><div><div class="method-label">小红书 / Xiaohongshu</div><div class="method-value" data-field="xiaohongshu">@Evonne美国公司咨询</div></div></div>
+          <div class="contact-method"><div class="method-icon">💼</div><div><div class="method-label">LinkedIn</div><div class="method-value" data-field="linkedin">linkedin.com/in/evonne-xu</div></div></div>
+          <div class="contact-method"><div class="method-icon">📧</div><div><div class="method-label">Email</div><div class="method-value" data-field="email">evonne.xu.legal@gmail.com</div></div></div>
+          <div class="contact-method"><div class="method-icon">📅</div><div><div class="method-label"><span data-lang="zh">预约通话</span><span data-lang="en">Book a Call</span></div><div class="method-value"><a href="https://calendly.com/YOUR_LINK" target="_blank" style="color:inherit;">Calendly →</a></div></div></div>
         </div>
       </div>
       <div class="contact-form-wrap">
-        <div class="form-header"><div class="form-title">发送咨询</div><div class="form-sub">我通常在24小时内回复</div></div>
+        <div class="form-header">
+          <div class="form-title"><span data-lang="zh">发送咨询</span><span data-lang="en">Send a Message</span></div>
+          <div class="form-sub"><span data-lang="zh">我通常在24小时内回复</span><span data-lang="en">I typically respond within 24 hours</span></div>
+        </div>
         <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
           <div class="form-row">
-            <div class="form-group"><label>姓名</label><input type="text" name="name" placeholder="你的名字" required></div>
-            <div class="form-group"><label>公司</label><input type="text" name="company" placeholder="公司名称（选填）"></div>
+            <div class="form-group"><label><span data-lang="zh">姓名</span><span data-lang="en">Name</span></label><input type="text" name="name" placeholder="Your name" required></div>
+            <div class="form-group"><label><span data-lang="zh">公司</span><span data-lang="en">Company</span></label><input type="text" name="company" placeholder="Optional"></div>
           </div>
-          <div class="form-group"><label>联系邮箱</label><input type="email" name="email" placeholder="your@email.com" required></div>
-          <div class="form-group"><label>咨询类型</label>
-            <select name="type"><option>请选择...</option><option>AI法律合规咨询</option><option>跨境并购法律顾问</option><option>创业公司常年顾问</option><option>内容合作</option><option>演讲邀请</option><option>其他</option></select>
+          <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required></div>
+          <div class="form-group">
+            <label><span data-lang="zh">咨询类型</span><span data-lang="en">Inquiry Type</span></label>
+            <select name="type">
+              <option>AI Legal Compliance</option>
+              <option>Cross-Border M&A</option>
+              <option>Startup General Counsel</option>
+              <option>Content Partnership</option>
+              <option>Speaking / Media</option>
+              <option>Other</option>
+            </select>
           </div>
-          <div class="form-group"><label>简述你的情况</label><textarea name="message" placeholder="请简单描述你的问题或需求..."></textarea></div>
-          <button type="submit" class="form-submit">发送咨询 →</button>
+          <div class="form-group"><label><span data-lang="zh">简述你的情况</span><span data-lang="en">Tell me about your situation</span></label><textarea name="message" placeholder="Briefly describe your question or needs..."></textarea></div>
+          <button type="submit" class="form-submit"><span data-lang="zh">发送咨询 →</span><span data-lang="en">Send Message →</span></button>
         </form>
       </div>
     </div>
   </div>
 </section>
+
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand"><div class="footer-logo">E<span>.</span>LAW</div><p>AI时代的法律智库。帮助创业者和企业在复杂监管环境中找到确定性。</p></div>
-    <div class="footer-col"><h4>导航</h4><ul><li><a href="#about">关于我</a></li><li><a href="#services">服务范围</a></li><li><a href="blog.html">内容中心</a></li><li><a href="#newsletter">订阅简报</a></li><li><a href="#contact">联系咨询</a></li></ul></div>
-    <div class="footer-col"><h4>内容平台</h4><ul><li><a href="#" target="_blank">小红书</a></li><li><a href="#" target="_blank">LinkedIn</a></li><li><a href="#" target="_blank">YouTube</a></li><li><a href="#newsletter">Newsletter</a></li></ul></div>
+    <div class="footer-brand">
+      <div class="footer-logo">E<span>.</span>LAW</div>
+      <p><span data-lang="zh">AI时代的法律智库。帮助创业者和企业在复杂监管环境中找到确定性。</span><span data-lang="en">Your legal edge in the AI era. Helping founders and businesses find clarity in complex regulatory environments.</span></p>
+    </div>
+    <div class="footer-col">
+      <h4><span data-lang="zh">导航</span><span data-lang="en">Navigation</span></h4>
+      <ul>
+        <li><a href="#about"><span data-lang="zh">关于我</span><span data-lang="en">About</span></a></li>
+        <li><a href="#services"><span data-lang="zh">服务范围</span><span data-lang="en">Services</span></a></li>
+        <li><a href="blog.html"><span data-lang="zh">内容中心</span><span data-lang="en">Blog</span></a></li>
+        <li><a href="#newsletter"><span data-lang="zh">订阅简报</span><span data-lang="en">Newsletter</span></a></li>
+        <li><a href="#contact"><span data-lang="zh">联系咨询</span><span data-lang="en">Contact</span></a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4><span data-lang="zh">内容平台</span><span data-lang="en">Platforms</span></h4>
+      <ul>
+        <li><a href="#" target="_blank">小红书</a></li>
+        <li><a href="https://linkedin.com/in/evonne-xu" target="_blank">LinkedIn</a></li>
+        <li><a href="#" target="_blank">YouTube</a></li>
+        <li><a href="#"><span data-lang="zh">公众号</span><span data-lang="en">WeChat</span></a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="footer-bottom"><p>© 2025 Evonne Law · 保留所有权利</p><div class="social-links"><a href="#">小红书</a><a href="#">LinkedIn</a><a href="#">Newsletter</a></div></div>
+  <div class="footer-bottom">
+    <p>© 2025 Evonne Xu Law · <span data-lang="zh">保留所有权利</span><span data-lang="en">All Rights Reserved</span></p>
+    <div class="social-links">
+      <a href="#">小红书</a>
+      <a href="https://linkedin.com/in/evonne-xu">LinkedIn</a>
+      <a href="#newsletter">Newsletter</a>
+    </div>
+  </div>
 </footer>
+
 <script src="js/main.js"></script>
 <script>
+// 语言切换
+function switchLang(lang) {
+  document.body.className = 'lang-' + lang;
+  document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  localStorage.setItem('evonne-lang', lang);
+  document.title = lang === 'zh'
+    ? 'Evonne Xu | AI法律顾问 · 跨境并购专家'
+    : 'Evonne Xu | AI Lawyer · Cross-Border M&A';
+}
+// 记住语言选择
+const savedLang = localStorage.getItem('evonne-lang') || 'zh';
+switchLang(savedLang);
+
+// 手机菜单
+function openMobileMenu() { document.getElementById('mobileMenu').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); document.body.style.overflow=''; }
+
+// 读取后台设置
 async function loadSettings() {
   try {
     const res = await fetch('_data/settings.json?t=' + Date.now());
     if (!res.ok) return;
     const s = await res.json();
-    if (s.heroDesc) { const el = document.querySelector('.hero-desc'); if (el) el.textContent = s.heroDesc; }
-    if (s.aboutText) { const els = document.querySelectorAll('.about-content p'); if (els[0]) els[0].textContent = s.aboutText; }
     const nums = document.querySelectorAll('.stat-num');
     const labels = document.querySelectorAll('.stat-label');
-    if (s.stat1Num && nums[0]) { nums[0].textContent = s.stat1Num; labels[0].textContent = s.stat1Label; }
-    if (s.stat2Num && nums[1]) { nums[1].textContent = s.stat2Num; labels[1].textContent = s.stat2Label; }
-    if (s.stat3Num && nums[2]) { nums[2].textContent = s.stat3Num; labels[2].textContent = s.stat3Label; }
+    if (s.stat1Num && nums[0]) nums[0].textContent = s.stat1Num;
+    if (s.stat2Num && nums[1]) nums[1].textContent = s.stat2Num;
+    if (s.stat3Num && nums[2]) nums[2].textContent = s.stat3Num;
     if (s.email) { const el = document.querySelector('[data-field="email"]'); if (el) el.textContent = s.email; }
     if (s.xiaohongshu) { const el = document.querySelector('[data-field="xiaohongshu"]'); if (el) el.textContent = s.xiaohongshu; }
     if (s.linkedin) { const el = document.querySelector('[data-field="linkedin"]'); if (el) el.textContent = s.linkedin; }
-    if (s.calendly) { document.querySelectorAll('a[href*="calendly"]').forEach(a => a.href = s.calendly); }
-    if (s.subscriberCount) { document.querySelectorAll('[data-field="subscriberCount"]').forEach(el => el.textContent = s.subscriberCount); }
-    if (s.siteName) { document.title = s.siteName + ' | AI法律顾问 · 跨境并购专家'; }
+    if (s.calendly) document.querySelectorAll('a[href*="calendly"]').forEach(a => a.href = s.calendly);
+    if (s.subscriberCount) document.querySelectorAll('[data-field="subscriberCount"]').forEach(el => el.textContent = s.subscriberCount);
   } catch(e) {}
 }
 loadSettings();
