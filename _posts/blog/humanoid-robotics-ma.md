@@ -3,7 +3,7 @@ title: 人形机器人赛道并购浪潮：Figure AI与Physical Intelligence的�
 date: 2025年01月20日
 category: ma
 excerpt: 资本在赌未来，法律在守规则。深度解析人形机器人赛道跨境并购背后的交易逻辑、法律风险与监管路径。
-readTime: 12分钟阅读
+readTime: 2分钟阅读
 published: true
 ---
 
