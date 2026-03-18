@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U.S. Legal AI Market Map 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Noto+Serif+SC:wght@300;400;500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream:      #F7F3ED;
+  --warm-white: #FEFCF8;
+  --sand:       #EDE5D8;
+  --sand-2:     #E2D8C8;
+  --stone:      #C4B49C;
+
+  --ink:        #1E1A16;
+  --ink-light:  #3D3530;
+  --ink-muted:  #6B6056;
+  --ink-faded:  #9E9288;
+  --ink-ghost:  #BDB5AC;
+
+  --rose:       #C26E68;
+  --rose-light: #D4928C;
+  --rose-soft:  rgba(194,110,104,0.09);
+  --rose-line:  rgba(194,110,104,0.20);
+
+  --rg:         #B8896A;
+  --rg-light:   #CCA484;
+  --rg-soft:    rgba(184,137,106,0.09);
+  --rg-line:    rgba(184,137,106,0.20);
+
+  --blush:      #E8D0C8;
+
+  --c-platform:    #B8896A;
+  --c-litigation:  #7A96AA;
+  --c-transact:    #7A9A70;
+  --c-compliance:  #AA9470;
+  --c-immigration: #9A7AAA;
+  --c-inhouse:     #7A9A8A;
+
+  --c-marketing:   #A07880;
+
+
+  --font-display: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
+  --font-zh:      'Noto Serif SC', serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+
+  --shadow-sm: 0 1px 4px rgba(30,26,22,0.06);
+  --shadow-md: 0 4px 24px rgba(30,26,22,0.09);
+  --radius: 4px;
+}
+/* ─── TOP BANNER ─── */
+.top-banner {
+  background: var(--ink);
+  padding: 0.6rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 99;
+}
+.tb-text-en { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.1em; color: #9E9288; }
+.tb-text-zh { font-family: var(--font-zh); font-size: 0.68rem; color: #9E9288; letter-spacing: 0.05em; }
+.tb-divider { width: 1px; height: 14px; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+.tb-social { display: flex; gap: 0.5rem; align-items: center; }
+.tb-link {
+  font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.08em;
+  color: var(--rg-light); text-decoration: none;
+  border: 1px solid rgba(184,137,106,0.3); padding: 0.2rem 0.65rem;
+  border-radius: 100px; transition: all 0.2s; white-space: nowrap;
+}
+.tb-link:hover { background: var(--rg); color: white; border-color: var(--rg); }
+.tb-link.primary { background: var(--rose); color: white; border-color: var(--rose); }
+.tb-link.primary:hover { background: var(--rose-light); border-color: var(--rose-light); }
+
+/* ─── MID CTA ─── */
+.mid-cta {
+  background: var(--warm-white); border: 1px solid var(--sand-2);
+  border-radius: var(--radius); padding: 1.5rem 1.8rem;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1.5rem; flex-wrap: wrap; margin: 0 0 4.5rem; position: relative; overflow: hidden;
+}
+.mid-cta::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--rose), var(--rg), #E8D0C8);
+}
+.ct-label { font-family: var(--font-mono); font-size: 0.52rem; letter-spacing: 0.15em; color: var(--rose); text-transform: uppercase; margin-bottom: 0.3rem; }
+.ct-en { font-family: var(--font-display); font-size: 1.05rem; font-style: italic; color: var(--ink); line-height: 1.3; }
+.ct-zh { font-family: var(--font-zh); font-size: 0.73rem; color: var(--ink-muted); letter-spacing: 0.04em; margin-top: 0.2rem; }
+.mid-cta-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; flex-shrink: 0; }
+.cta-btn {
+  font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em;
+  text-decoration: none; padding: 0.52rem 1.1rem; border-radius: 100px;
+  transition: all 0.2s; white-space: nowrap; display: inline-flex;
+  align-items: center; gap: 0.35rem; cursor: pointer; border: none;
+}
+.cta-btn.primary { background: var(--rose); color: white; }
+.cta-btn.primary:hover { background: var(--rose-light); }
+.cta-btn.secondary { background: none; color: var(--ink-muted); border: 1px solid var(--sand-2); }
+.cta-btn.secondary:hover { border-color: var(--stone); color: var(--ink); }
+
+/* ─── SOCIAL LINKS ─── */
+.social-link {
+  font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.07em;
+  color: var(--ink-faded); text-decoration: none;
+  border: 1px solid var(--sand-2); padding: 0.3rem 0.75rem;
+  border-radius: 100px; transition: all 0.2s;
+  display: inline-flex; align-items: center; gap: 0.3rem;
+}
+.social-link:hover { border-color: var(--rose); color: var(--rose); }
+.footer-social { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+.footer-col { display: flex; flex-direction: column; gap: 0.75rem; }
+.footer-tagline { font-family: var(--font-zh); font-size: 0.7rem; color: var(--ink-ghost); letter-spacing: 0.04em; }
+
+/* ─── NEWSLETTER FORM ─── */
+.nl-form { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.nl-input {
+  font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.04em;
+  background: var(--cream); border: 1px solid var(--sand-2); border-radius: 100px;
+  padding: 0.5rem 1rem; color: var(--ink); outline: none; width: 190px; transition: border-color 0.2s;
+}
+.nl-input::placeholder { color: var(--ink-ghost); }
+.nl-input:focus { border-color: var(--rose); }
+
+
+
+
+html { scroll-behavior: smooth; overflow-x: hidden; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── LANG TOGGLE ─── */
+.lang-bar {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.5rem;
+  z-index: 200;
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--sand-2);
+  border-radius: 100px;
+  background: rgba(254,252,248,0.9);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-faded);
+  padding: 0.4rem 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.lang-btn.active {
+  background: var(--rose);
+  color: white;
+}
+
+/* ─── HERO ─── */
+.hero {
+  background: var(--warm-white);
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 5.5rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--sand-2);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 900px; height: 700px;
+  background:
+    radial-gradient(ellipse at 38% 38%, rgba(194,110,104,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 68% 62%, rgba(184,137,106,0.05) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.hero-eyebrow span {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.26em;
+  color: var(--rg);
+  text-transform: uppercase;
+}
+.hero-eyebrow::before,
+.hero-eyebrow::after {
+  content: '';
+  display: block;
+  width: 36px; height: 1px;
+  background: var(--rg-line);
+}
+
+.hero-title-en {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 6.5vw, 5.8rem);
+  font-weight: 300;
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  position: relative;
+}
+.hero-title-en em { font-style: italic; color: var(--rose); }
+
+.hero-title-zh {
+  font-family: var(--font-zh);
+  font-size: clamp(1.2rem, 2.8vw, 2rem);
+  font-weight: 300;
+  color: var(--ink-muted);
+  letter-spacing: 0.08em;
+  margin-top: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-date {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--ink-ghost);
+  margin-bottom: 1.8rem;
+}
+
+.hero-desc-en {
+  font-size: 0.86rem;
+  color: var(--ink-muted);
+  max-width: 400px;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+.hero-desc-zh {
+  font-family: var(--font-zh);
+  font-size: 0.82rem;
+  color: var(--ink-faded);
+  max-width: 380px;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  margin-bottom: 3rem;
+}
+
+/* stats */
+.stats {
+  display: flex;
+  border: 1px solid var(--sand-2);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--warm-white);
+  box-shadow: var(--shadow-sm);
+}
+.stat {
+  padding: 1rem 1.8rem;
+  border-right: 1px solid var(--sand-2);
+  text-align: center;
+}
+.stat:last-child { border-right: none; }
+.stat-n {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--rg);
+  line-height: 1;
+}
+.stat-l-en {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.13em;
+  color: var(--ink-ghost);
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+}
+.stat-l-zh {
+  display: block;
+  font-family: var(--font-zh);
+  font-size: 0.6rem;
+  color: var(--ink-ghost);
+  margin-top: 0.1rem;
+  letter-spacing: 0.04em;
+}
+
+/* ─── FILTER BAR ─── */
+.filter-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(247,243,237,0.94);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--sand-2);
+}
+.filter-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.filter-inner::-webkit-scrollbar { display: none; }
+
+.f-btn {
+  background: none;
+  border: none;
+  border-right: 1px solid var(--sand);
+  color: var(--ink-faded);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.3rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  white-space: nowrap;
+  position: relative;
+  line-height: 1.4;
+  text-align: center;
+}
+.f-btn .zh { display: block; font-family: var(--font-zh); font-size: 0.65rem; letter-spacing: 0.05em; }
+.f-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--rose);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: left;
+}
+.f-btn:hover { color: var(--ink); }
+.f-btn.active { color: var(--rose); }
+.f-btn.active::after { transform: scaleX(1); }
+
+/* ─── MAIN ─── */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 8rem;
+}
+
+/* ─── SECTION ─── */
+.section { margin-bottom: 5rem; }
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--sand);
+}
+.s-num {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--ink-ghost);
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+}
+.s-title-en {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink);
+}
+.s-title-zh {
+  font-family: var(--font-zh);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--ink-muted);
+  letter-spacing: 0.06em;
+  margin-left: 0.3rem;
+}
+.s-count {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  color: var(--ink-ghost);
+  letter-spacing: 0.1em;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* ─── GRID ─── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+  gap: 1.2rem;
+}
+
+/* ─── CARD ─── */
+.card {
+  background: var(--warm-white);
+  border: 1px solid var(--sand-2);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--stone);
+}
+.card-strip {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px; opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.card:hover .card-strip { opacity: 1; }
+
+.section-platform    .card-strip { background: linear-gradient(90deg, var(--rg), #D4B49A); }
+.section-litigation  .card-strip { background: linear-gradient(90deg, #7A96AA, #A0B8C8); }
+.section-transactional .card-strip { background: linear-gradient(90deg, #7A9A70, #A0BA94); }
+.section-compliance  .card-strip { background: linear-gradient(90deg, #AA9470, #C8B08A); }
+.section-immigration .card-strip { background: linear-gradient(90deg, #9A7AAA, #B89EC8); }
+.section-inhouse .card-strip { background: linear-gradient(90deg, #5A8A72, #8ABAA0); }
+
+.section-marketing .card-strip { background: linear-gradient(90deg, #A07880, #C4A0A8); }
+
+
+/* card head */
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.3rem;
+}
+.card-name-en {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.card-name-zh {
+  font-family: var(--font-zh);
+  font-size: 0.72rem;
+  color: var(--ink-faded);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.7rem;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+.badge-incumbent { background: var(--rg-soft); color: var(--rg); border: 1px solid var(--rg-line); }
+.badge-startup   { background: var(--rose-soft); color: var(--rose); border: 1px solid var(--rose-line); }
+.badge-emerging  { background: rgba(122,154,112,0.09); color: #6A8A5A; border: 1px solid rgba(122,154,112,0.22); }
+
+/* desc */
+.desc-en {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+}
+.desc-zh {
+  font-family: var(--font-zh);
+  font-size: 0.75rem;
+  color: var(--ink-faded);
+  line-height: 1.85;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.3rem;
+}
+
+/* ─── META TABLE ─── */
+.meta {
+  border: 1px solid var(--sand);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+  background: var(--cream);
+}
+.meta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--sand);
+}
+.meta-row:last-child { border-bottom: none; }
+.mc {
+  padding: 0.55rem 0.75rem;
+  border-right: 1px solid var(--sand);
+}
+.mc:last-child { border-right: none; }
+.mk {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.12em;
+  color: var(--ink-ghost);
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+.mk-zh {
+  font-family: var(--font-zh);
+  font-size: 0.6rem;
+  color: var(--ink-ghost);
+  letter-spacing: 0.04em;
+}
+.mv {
+  font-size: 0.74rem;
+  font-weight: 400;
+  color: var(--ink-light);
+  line-height: 1.35;
+}
+.mv.gold  { color: var(--rg); }
+.mv.rose  { color: var(--rose); }
+.mv.sage  { color: #6A8A5A; }
+.mv sub {
+  display: block;
+  font-size: 0.63rem;
+  color: var(--ink-faded);
+  line-height: 1.5;
+  font-style: italic;
+}
+.mv-zh {
+  font-family: var(--font-zh);
+  font-size: 0.65rem;
+  color: var(--ink-faded);
+  letter-spacing: 0.02em;
+  margin-top: 0.1rem;
+}
+
+/* ─── CLIENTS ─── */
+.clients { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.client {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.03em;
+  color: var(--ink-faded);
+  background: var(--sand);
+  border: 1px solid var(--sand-2);
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+}
+
+/* ─── PRICING NOTE ─── */
+.pricing-note {
+  background: rgba(184,137,106,0.06);
+  border: 1px solid var(--rg-line);
+  border-radius: 3px;
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 1.2rem;
+}
+.pricing-note .pn-label {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.12em;
+  color: var(--rg);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+.pricing-note .pn-en {
+  font-size: 0.78rem;
+  color: var(--ink-light);
+  font-weight: 400;
+  line-height: 1.4;
+}
+.pricing-note .pn-zh {
+  font-family: var(--font-zh);
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.03em;
+  margin-top: 0.2rem;
+  line-height: 1.6;
+}
+
+/* ─── DIVIDER ─── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--sand-2), transparent);
+  margin: 4.5rem 0;
+}
+
+/* ─── DISCLAIMER ─── */
+.disclaimer-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+.disclaimer {
+  background: var(--warm-white);
+  border: 1px solid var(--sand-2);
+  border-left: 3px solid var(--rg);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+}
+.disclaimer p {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--ink-faded);
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+.disclaimer p + p { margin-top: 0.4rem; }
+
+/* ─── FOOTER ─── */
+.footer {
+  background: var(--warm-white);
+  border-top: 1px solid var(--sand-2);
+  padding: 2rem 2rem;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--rg);
+}
+.footer-meta {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--ink-ghost);
+  letter-spacing: 0.08em;
+}
+
+/* ─── LANG SHOW/HIDE ─── */
+body.lang-en .zh-only { display: none; }
+body.lang-en .f-btn .zh { display: none; }
+body.lang-en .mk .zh-only { display: none; }
+body.lang-en .tb-text-zh { display: none; }
+body.lang-zh .en-only { display: none; }
+
+/* ─── HIDDEN ─── */
+.card-wrap.hidden { display: none; }
+.section.hidden-section { display: none; }
+.divider.hidden-div { display: none; }
+
+/* ─── ANIMATIONS ─── */
+@keyframes up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero > * { animation: up 0.65s ease both; }
+.hero-eyebrow { animation-delay: 0.05s; }
+.hero-title-en { animation-delay: 0.15s; }
+.hero-title-zh { animation-delay: 0.22s; }
+.hero-date     { animation-delay: 0.28s; }
+.hero-desc-en  { animation-delay: 0.34s; }
+.hero-desc-zh  { animation-delay: 0.38s; }
+.stats         { animation-delay: 0.44s; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 680px) {
+  .grid { grid-template-columns: 1fr; }
+  .meta-row { grid-template-columns: 1fr; }
+  .mc { border-right: none; border-bottom: 1px solid var(--sand); }
+  .mc:last-child { border-bottom: none; }
+  .stats { flex-wrap: wrap; }
+  .stat { flex: 1 1 45%; border-right: none; border-bottom: 1px solid var(--sand-2); }
+  .hero-title-en { font-size: 2.6rem; }
+  .lang-bar { top: 0.8rem; right: 0.8rem; }
+  .s-title-zh { display: none; }
+}
+
+/* ─── BACK BAR ─── */
+.back-bar {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--sand-2);
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+}
+.back-link {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-faded);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--rose); }
+.back-link::before { content: '←'; font-size: 0.75rem; }
+</style>
+</head>
+<body class="lang-en">
+
+<!-- LANG TOGGLE -->
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" onclick="setLang('zh')">中文</button>
+</div>
+
+
+<!-- ═══════════ BACK BAR ═══════════ -->
+<div class="back-bar">
+  <a href="https://evonnexulegal.com" class="back-link">evonnexulegal.com</a>
+</div>
+
+<!-- ═══════════ TOP BANNER ═══════════ -->
+<div class="top-banner">
+  <span class="tb-text-en en-only">📬 Weekly Legal AI updates — subscribe to stay current</span>
+  <span class="tb-text-zh zh-only">📬 每周法律 AI 动态 · 订阅不错过</span>
+  <div class="tb-divider"></div>
+  <div class="tb-social">
+    <a href="https://YOUR-SUBSTACK-URL.substack.com" target="_blank" class="tb-link primary">Subscribe Newsletter</a>
+    <a href="https://www.xiaohongshu.com/user/YOUR-XHS-ID" target="_blank" class="tb-link"><span class="en-only">Xiaohongshu</span><span class="zh-only">小红书</span></a>
+    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" class="tb-link">LinkedIn</a>
+  </div>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <div class="hero-eyebrow"><span>Legal AI Intelligence</span></div>
+  <h1 class="hero-title-en">U.S. Legal AI<br><em>Market Map</em></h1>
+  <p class="hero-title-zh zh-only">美国法律 AI 工具全景图</p>
+  <p class="hero-date">Q1 2026 &nbsp;·&nbsp; <span class="en-only">27 Tools · 7 Sections</span><span class="zh-only">27 个工具 · 7 大板块</span></p>
+  <p class="hero-desc-en en-only">A curated intelligence brief on the AI tools reshaping American legal practice — from legacy incumbents to venture-backed challengers.</p>
+  <p class="hero-desc-zh zh-only">精选美国法律 AI 工具全景，涵盖老牌平台与新一代初创公司，横跨五大执业领域。</p>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-n">$4B+</span>
+      <span class="stat-l-en en-only">Legal Tech VC · 2025</span>
+      <span class="stat-l-zh zh-only">2025年融资规模</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">17</span>
+      <span class="stat-l-en en-only">Tools Mapped</span>
+      <span class="stat-l-zh zh-only">收录工具数</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">$8B</span>
+      <span class="stat-l-en en-only">Harvey Valuation</span>
+      <span class="stat-l-zh zh-only">Harvey估值</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">$5.55B</span>
+      <span class="stat-l-en en-only">Legora Valuation</span>
+      <span class="stat-l-zh zh-only">Legora估值</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FILTER ═══════════ -->
+<nav class="filter-bar">
+  <div class="filter-inner">
+    <button class="f-btn active" data-filter="all">All<span class="zh">全部</span></button>
+    <button class="f-btn" data-filter="platform">Platform &amp; Research<span class="zh">平台与研究</span></button>
+    <button class="f-btn" data-filter="litigation">Litigation<span class="zh">诉讼律师</span></button>
+    <button class="f-btn" data-filter="transactional">Transactional<span class="zh">交易律师</span></button>
+    <button class="f-btn" data-filter="inhouse">In-House Counsel<span class="zh">公司法律顾问</span></button>
+    <button class="f-btn" data-filter="compliance">Compliance<span class="zh">合规律师</span></button>
+    <button class="f-btn" data-filter="immigration">Immigration<span class="zh">移民律师</span></button>
+    <button class="f-btn" data-filter="marketing">Marketing AI<span class="zh">营销 AI</span></button>
+  </div>
+</nav>
+
+<!-- ═══════════ MAIN ═══════════ -->
+<main class="main">
+
+<!-- ══ 01 PLATFORM ══ -->
+<section class="section section-platform" data-section="platform">
+  <div class="section-head">
+    <span class="s-num">01</span>
+    <h2 class="s-title-en">Platform &amp; Research</h2>
+    <span class="s-title-zh zh-only">平台与法律研究</span>
+    <span class="s-count"><span class="en-only">4 TOOLS</span><span class="zh-only">4 个工具</span></span>
+  </div>
+  <div class="grid">
+
+    <!-- Westlaw CoCounsel -->
+    <div class="card-wrap" data-category="platform"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Westlaw CoCounsel</div>
+        <span class="badge badge-incumbent"><span class="en-only">Incumbent</span><span class="zh-only">老牌平台</span></span>
+      </div>
+      <div class="card-name-zh zh-only">汤森路透旗下 AI 法律助手</div>
+      <p class="desc-en en-only">Thomson Reuters' flagship AI suite built on Westlaw's comprehensive database. Features agentic Deep Research, multi-step guided workflows, Litigation Document Analyzer, and deposition prep — all grounded in Westlaw's authoritative primary law content.</p>
+      <p class="desc-zh zh-only">汤森路透旗舰 AI 套件，基于 Westlaw 权威法律数据库。具备自主 Deep Research、多步骤引导工作流、诉讼文件分析器和庭审准备功能，所有答案均来自 Westlaw 一手法律内容。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">$220–$500/user/month (annual) · Add-on to Westlaw Precision subscription · No standalone plan</div>
+        <div class="pn-zh zh-only">$220–$500/人/月（按年付）· 需叠加 Westlaw Precision 订阅 · 无独立购买选项</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">1975 (TR) · CoCounsel 2022</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Status</span><span class="zh-only">公司状态</span></div><div class="mv gold">Public · NYSE: TRI</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Backer</span><span class="zh-only">背景</span></div><div class="mv">Thomson Reuters Corp.</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Key Clients</span><span class="zh-only">主要客户</span></div><div class="mv"><span class="en-only">AmLaw 100 · Federal agencies · Law schools</span><span class="zh-only">AmLaw 100 · 联邦机构 · 法学院</span></div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">AmLaw 100</span><span class="client">Federal agencies</span><span class="client">Law schools</span><span class="client">Fortune 500 legal</span></div>
+    </div></div>
+
+    <!-- Lexis+ AI -->
+    <div class="card-wrap" data-category="platform"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Lexis+ AI Protégé</div>
+        <span class="badge badge-incumbent"><span class="en-only">Incumbent</span><span class="zh-only">老牌平台</span></span>
+      </div>
+      <div class="card-name-zh zh-only">LexisNexis AI 法律助手</div>
+      <p class="desc-en en-only">LexisNexis's agentic AI with Shepard's citation validation — industry gold standard for citation accuracy. Features Protégé Vault for secure document storage, no-code workflow builder, and RAG-grounded answers. June 2025: exclusive primary law data partnership with Harvey AI.</p>
+      <p class="desc-zh zh-only">LexisNexis 旗舰 AI，内置 Shepard's 引用验证，是法律引用准确性的行业标杆。支持安全文件库、无代码工作流定制。2025年6月与 Harvey AI 达成独家一手法律数据合作协议。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Enterprise custom pricing · Bundled with Lexis subscription · No public pricing page</div>
+        <div class="pn-zh zh-only">企业定制报价 · 与 Lexis 订阅捆绑销售 · 无公开定价</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">1970 (LN) · AI 2023</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Status</span><span class="zh-only">公司状态</span></div><div class="mv gold">Public · RELX Group</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Backer</span><span class="zh-only">背景</span></div><div class="mv">RELX plc · REV VC arm</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Partnership</span><span class="zh-only">战略合作</span></div><div class="mv rose">Harvey AI (June 2025)</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">Big Law</span><span class="client">Gov. agencies</span><span class="client">In-house teams</span><span class="client">Harvey users</span></div>
+    </div></div>
+
+    <!-- Bloomberg Law AI -->
+    <div class="card-wrap" data-category="platform"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Bloomberg Law AI</div>
+        <span class="badge badge-incumbent"><span class="en-only">Incumbent</span><span class="zh-only">老牌平台</span></span>
+      </div>
+      <div class="card-name-zh zh-only">彭博法律 AI 研究平台</div>
+      <p class="desc-en en-only">Bloomberg Law's AI research suite emphasizing accuracy and source attribution. Unique edge for regulatory and securities practices due to deep integration with Bloomberg financial data, legislative tracking, and court analytics.</p>
+      <p class="desc-zh zh-only">彭博法律 AI 研究平台，强调准确性与来源归因。深度整合彭博金融数据、立法追踪和法院分析，在监管与证券执业领域具有独特竞争优势。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">~$600–$800/user/month (enterprise annual) · Bundled with Bloomberg Law subscription</div>
+        <div class="pn-zh zh-only">约 $600–$800/人/月（企业年付）· 与彭博法律订阅捆绑</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2009 (BL) · AI 2024</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Status</span><span class="zh-only">公司状态</span></div><div class="mv gold">Private · Bloomberg LP</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Backer</span><span class="zh-only">背景</span></div><div class="mv">Bloomberg LP</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Best For</span><span class="zh-only">适合场景</span></div><div class="mv">Securities · Regulatory</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">Securities firms</span><span class="client">Regulatory practices</span><span class="client">Financial institutions</span></div>
+    </div></div>
+
+    <!-- Harvey AI -->
+    <div class="card-wrap" data-category="platform"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Harvey AI</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">法律 AI 独角兽，估值 $80亿</div>
+      <p class="desc-en en-only">Category-defining legal AI platform. Built atop OpenAI, Anthropic Claude, and Mistral with deep legal fine-tuning. Covers research, drafting, litigation, and M&A across practice areas. LexisNexis primary law integration added June 2025. $100M+ ARR as of Aug 2025. 50+ AmLaw 100 firms.</p>
+      <p class="desc-zh zh-only">法律 AI 赛道定义者，估值 $80亿。基于 OpenAI、Anthropic Claude 及 Mistral 进行深度法律微调，覆盖研究、起草、诉讼、并购全链条。2025年6月接入 LexisNexis 一手法律库，ARR 超 $1亿，服务全美 50+ 家百强律所。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">~$1,000–$1,200/user/month (industry estimates, annual contract) · Minimum ~25–50 seats · Entry-level firm: ~$300K–$720K/year · No public pricing; enterprise negotiation only</div>
+        <div class="pn-zh zh-only">业内估计约 $1,000–$1,200/人/月（年度合同）· 最低约 25–50 个席位 · 小型律所起步约 $30万–$72万/年 · 无公开定价，需企业谈判</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2022 · San Francisco</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Raised / Val.</span><span class="zh-only">融资/估值</span></div><div class="mv gold">$806M raised · $8B valuation</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">投资方</span></div><div class="mv">a16z · Sequoia · KP · OpenAI Fund · EQT</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">ARR</span><span class="zh-only">年经常性收入</span></div><div class="mv rose">$100M+ (Aug 2025)</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">50 of AmLaw 100</span><span class="client">A&O Shearman</span><span class="client">Latham & Watkins</span><span class="client">KKR</span><span class="client">PwC</span><span class="client">Paul Weiss</span></div>
+    </div></div>
+
+  </div>
+</section>
+<div class="divider" data-div="1"></div>
+
+<!-- ══ 02 LITIGATION ══ -->
+<section class="section section-litigation" data-section="litigation">
+  <div class="section-head">
+    <span class="s-num">02</span>
+    <h2 class="s-title-en">Litigation</h2>
+    <span class="s-title-zh zh-only">诉讼律师工具</span>
+    <span class="s-count"><span class="en-only">8 TOOLS</span><span class="zh-only">8 个工具</span></span>
+  </div>
+  <div class="grid">
+
+    <!-- Harvey AI — Litigation -->
+    <div class="card-wrap" data-category="litigation"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Harvey AI</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">诉讼全链条 AI — 行业顶配</div>
+      <p class="desc-en en-only">Harvey's litigation suite covers case law research, discovery document review, deposition prep, motion drafting, and advocacy strategy — all fine-tuned on legal data. Adopted by 50+ of the AmLaw 100. Integrates LexisNexis primary law content (June 2025). $100M+ ARR.</p>
+      <p class="desc-zh zh-only">Harvey 诉讼套件覆盖案例研究、证据开示文件审查、证人庭审准备、动议起草及诉讼策略，深度法律微调。服务全美 50+ 家百强律所，2025年6月整合 LexisNexis 一手法律库，ARR 超 $1亿。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">~$1,000–$1,200/user/month (industry estimates, annual contract) · Min. ~25–50 seats · No public pricing</div>
+        <div class="pn-zh zh-only">业内估计约 $1,000–$1,200/人/月（年度合同）· 最低约 25–50 席 · 无公开定价</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2022 · San Francisco</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Raised / Val.</span><span class="zh-only">融资/估值</span></div><div class="mv gold">$806M raised · $8B valuation</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">投资方</span></div><div class="mv">a16z · Sequoia · KP · OpenAI Fund · EQT</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">ARR</span><span class="zh-only">年经常性收入</span></div><div class="mv rose">$100M+ (Aug 2025)</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">50 of AmLaw 100</span><span class="client">A&O Shearman</span><span class="client">Latham & Watkins</span><span class="client">O'Melveny</span></div>
+    </div></div>
+
+    <!-- Legora -->
+    <div class="card-wrap" data-category="litigation"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Legora</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">协作式法律 AI 工作台，估值 $55.5亿</div>
+      <p class="desc-en en-only">Collaborative AI workspace built on Anthropic's Claude. Tabular Review transforms thousands of litigation documents into structured grids for rapid extraction. Used across complex matters by Cleary Gottlieb, White & Case, and Goodwin. $550M Series D at $5.55B (March 2026).</p>
+      <p class="desc-zh zh-only">基于 Anthropic Claude 构建的协作式法律 AI 工作台。Tabular Review 将数千份诉讼文件转化为结构化数据网格，已被 Cleary Gottlieb、White & Case 等顶所采用。2026年3月完成 $5.5亿 D 轮融资，估值 $55.5亿。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">$3,000/user/year (annual only) · Min. 10 seats · Min. annual contract $30,000 · No monthly billing</div>
+        <div class="pn-zh zh-only">$3,000/人/年（仅限年付）· 最低 10 席 · 最低年合同 $3万 · 无月付选项</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2023 · Stockholm / NYC</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Raised / Val.</span><span class="zh-only">融资/估值</span></div><div class="mv gold">$816M raised · $5.55B valuation</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">投资方</span></div><div class="mv">Accel · Benchmark · Bessemer · GC · YC</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Clients</span><span class="zh-only">客户</span></div><div class="mv">800+ firms · 50+ markets</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">Cleary Gottlieb</span><span class="client">White & Case</span><span class="client">Goodwin</span><span class="client">Linklaters</span><span class="client">Bird & Bird</span></div>
+    </div></div>
+
+    <!-- Relativity AI -->
+    <div class="card-wrap" data-category="litigation"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Relativity AI</div>
+        <span class="badge badge-incumbent"><span class="en-only">Incumbent</span><span class="zh-only">老牌平台</span></span>
+      </div>
+      <div class="card-name-zh zh-only">电子证据开示行业标准，AI 升级版</div>
+      <p class="desc-en en-only">Industry standard eDiscovery platform with integrated generative AI. RelativityOne AI supports document classification, privilege review assistance, predictive coding, and analytics at massive scale. Essential infrastructure for litigation teams handling high-volume discovery across complex matters.</p>
+      <p class="desc-zh zh-only">电子证据开示行业标准平台，集成生成式 AI。RelativityOne AI 支持大规模文件分类、特权审查辅助、预测性编码和数据分析，是高强度诉讼团队处理海量证据开示的核心基础设施。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Usage-based (per GB + per user/month) · Typical matter: $2,000–$20,000+ · Annual platform license negotiated separately</div>
+        <div class="pn-zh zh-only">按使用量计费（GB + 用户/月）· 单案典型费用 $2,000–$20,000+ · 年度平台许可另行谈判</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">1999 · Chicago</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Valuation</span><span class="zh-only">估值</span></div><div class="mv gold">Private · ~$3.4B</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">背景</span></div><div class="mv">Silver Lake · ICONIQ</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Best For</span><span class="zh-only">适合场景</span></div><div class="mv">High-volume eDiscovery</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">DOJ</span><span class="client">Top litigation boutiques</span><span class="client">Big 4 forensics</span><span class="client">Insurance carriers</span></div>
+    </div></div>
+
+    <!-- Westlaw Precision -->
+    <div class="card-wrap" data-category="litigation"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Westlaw Precision + CoCounsel</div>
+        <span class="badge badge-incumbent"><span class="en-only">Incumbent</span><span class="zh-only">老牌平台</span></span>
+      </div>
+      <div class="card-name-zh zh-only">Westlaw AI 诉讼研究旗舰版</div>
+      <p class="desc-en en-only">Westlaw's premium AI tier combining Precision Research with CoCounsel's agentic Deep Research, Litigation Document Analyzer (spots misrepresentations in opposing briefs), Claims Explorer, and AI Jurisdictional Surveys. Tiered above Westlaw Edge; the go-to for litigation research teams.</p>
+      <p class="desc-zh zh-only">Westlaw 旗舰 AI 层，整合 Precision Research 与 CoCounsel 自主 Deep Research、诉讼文件分析器（识别对方文书中的错误陈述）、Claims Explorer 及 AI 管辖权调研。是诉讼研究团队的核心研究平台。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Westlaw Precision: custom (contact sales) · CoCounsel add-on: $220–$500/user/month (annual) · Classic base: from $133/user/month (annual, 1-state)</div>
+        <div class="pn-zh zh-only">Westlaw Precision：定制报价（需联系销售）· CoCounsel 附加：$220–$500/人/月（年付）· Classic 基础版：$133起/人/月（年付，单州）</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">1975 (TR) · Precision 2023</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Status</span><span class="zh-only">公司状态</span></div><div class="mv gold">Public · NYSE: TRI</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Parent</span><span class="zh-only">母公司</span></div><div class="mv">Thomson Reuters Corp.</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Key Feature</span><span class="zh-only">核心功能</span></div><div class="mv">Litigation Document Analyzer</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">AmLaw 100</span><span class="client">Federal agencies</span><span class="client">Appellate teams</span><span class="client">Law schools</span></div>
+    </div></div>
+
+    <!-- Lexis+ AI Protégé — Litigation -->
+    <div class="card-wrap" data-category="litigation"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Lexis+ AI Protégé</div>
+        <span class="badge badge-incumbent"><span class="en-only">Incumbent</span><span class="zh-only">老牌平台</span></span>
+      </div>
+      <div class="card-name-zh zh-only">LexisNexis AI 诉讼助手 · Shepard's 引用验证</div>
+      <p class="desc-en en-only">LexisNexis's agentic AI with Shepard's citation validation for litigation — industry gold standard for citation accuracy (17% error rate vs. Westlaw's 34%, per Stanford study). Drafts deposition questions, discovery documents, and motions. Protégé Vault for secure upload of 10,000+ case documents.</p>
+      <p class="desc-zh zh-only">内置 Shepard's 引用验证的诉讼 AI，斯坦福研究显示错误率 17%（低于 Westlaw 的 34%）。可起草庭审问题、证据开示文件及动议，Protégé Vault 支持上传 10,000+ 份案件文件进行安全分析。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Enterprise custom pricing · Bundled with Lexis subscription · No standalone plan · Contact sales</div>
+        <div class="pn-zh zh-only">企业定制报价 · 与 Lexis 订阅捆绑 · 无独立购买选项 · 需联系销售</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">1970 (LN) · Protégé 2024</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Status</span><span class="zh-only">公司状态</span></div><div class="mv gold">Public · RELX Group</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Key Edge</span><span class="zh-only">核心优势</span></div><div class="mv">Shepard's citation validation</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Partnership</span><span class="zh-only">战略合作</span></div><div class="mv rose">Harvey AI (June 2025)</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">Big Law litigation</span><span class="client">Gov. agencies</span><span class="client">Appellate practices</span></div>
+    </div></div>
+
+    <!-- Opus 2 -->
+    <div class="card-wrap" data-category="litigation"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Opus 2</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">诉讼案件管理平台 · 88家百强律所采用</div>
+      <p class="desc-en en-only">The #1 AI platform for litigation case management, preparation, and strategy per SKILLS survey of AmLaw innovation leaders. Serves 88 of the AmLaw 100 and 70% of The Lawyer's Top 20 Cases. Integrated AI for case strategy, fact extraction, hearing management, and international arbitration proceedings.</p>
+      <p class="desc-zh zh-only">据百强律所创新领袖 SKILLS 调研评选为诉讼案件管理第一 AI 平台，服务 88 家美国百强律所及 70% 的英国顶级年度案件。集成 AI 支持案件策略、事实提取、庭审管理及国际仲裁全流程。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Enterprise custom pricing only · SaaS-based annual contracts · No public pricing · Contact Opus 2 sales for quote</div>
+        <div class="pn-zh zh-only">仅企业定制报价 · SaaS 年度合同 · 无公开定价 · 需联系 Opus 2 销售</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2008 · London / Kansas City</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Status</span><span class="zh-only">公司状态</span></div><div class="mv gold">Private · Acquired Uncover (2025)</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Market Position</span><span class="zh-only">市场地位</span></div><div class="mv">#1 litigation mgmt (SKILLS 2025)</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Reach</span><span class="zh-only">覆盖范围</span></div><div class="mv">88 of AmLaw 100</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">BakerHostetler</span><span class="client">Norton Rose Fulbright</span><span class="client">Quinn Emanuel</span><span class="client">ICC</span><span class="client">DIAC</span></div>
+    </div></div>
+
+    <!-- Clearbrief -->
+    <div class="card-wrap" data-category="litigation"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Clearbrief</div>
+        <span class="badge badge-emerging"><span class="en-only">Emerging</span><span class="zh-only">新兴工具</span></span>
+      </div>
+      <div class="card-name-zh zh-only">诉状写作 AI · 引用核查与事实超链接</div>
+      <p class="desc-en en-only">AI brief-writing platform built inside Microsoft Word. Automatically links every factual claim in a brief to supporting evidence, catches fake/erroneous citations before filing, generates hyperlinked timelines, and produces exhibit packages. Ranked #1 by Nevada State Bar AI Work Group. Used by AmLaw 200 and Microsoft Legal.</p>
+      <p class="desc-zh zh-only">基于 Word 的 AI 诉状写作平台，自动将诉状中每条事实陈述链接至支持证据，提交前自动识别错误或虚假引用，生成超链接时间轴及展示文件包。荣获内华达州律师协会 AI 评测第一名，AmLaw 200 及微软法务部门采用。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Flat rate per user/month (annual) · Per-brief billing option available for contingency firms · Law students/professors: free · Contact for enterprise quote</div>
+        <div class="pn-zh zh-only">按用户/月固定费率（年付）· 胜诉收费律所可选按诉状计费 · 法学院师生免费 · 企业版需询价</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2020 · Seattle</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Total Raised</span><span class="zh-only">累计融资</span></div><div class="mv gold">~$8.2M · Series A</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">背景</span></div><div class="mv">Sequoia · Madrona · Authentic Ventures · Wilson Sonsini fund</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Award</span><span class="zh-only">荣誉</span></div><div class="mv rose">#1 Nevada Bar AI Eval 2025</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">AmLaw 200</span><span class="client">Microsoft Legal</span><span class="client">AAA arbitrators</span><span class="client">Dykema</span><span class="client">Latham & Watkins</span></div>
+    </div></div>
+
+    <!-- CaseMark -->
+    <div class="card-wrap" data-category="litigation"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">CaseMark</div>
+        <span class="badge badge-emerging"><span class="en-only">Emerging</span><span class="zh-only">新兴工具</span></span>
+      </div>
+      <div class="card-name-zh zh-only">证词摘要 AI · 按量付费，透明定价</div>
+      <p class="desc-en en-only">AI-driven litigation workflow platform covering the full case lifecycle: deposition summaries (page-line & narrative), medical chronologies, discovery responses, trial prep, and appellate briefs. 700+ pre-built legal workflows. Pay-per-use pricing model — unique transparency in the legal AI market. SOC 2 Type II certified, HIPAA compliant.</p>
+      <p class="desc-zh zh-only">覆盖完整诉讼生命周期的 AI 工作流平台：证词摘要（逐页/叙述式）、医疗时间轴、证据开示回复、庭审准备及上诉文书。700+ 预建法律工作流，按使用量付费——在法律 AI 市场中极为罕见的透明定价。通过 SOC 2 Type II 认证及 HIPAA 合规。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Pay-per-use: $25/document (industry standard rate) · Free trial: $15 in credits + 14-day access · Subscription plans available · Enterprise: 12-month commitment, volume discounts from 100 docs/month</div>
+        <div class="pn-zh zh-only">按量付费：$25/份文件 · 免费试用：$15 积分 + 14天完整访问 · 支持订阅制 · 企业版：12个月承诺，月处理 100 份起享折扣</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2023 · Portland, OR</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Total Raised</span><span class="zh-only">累计融资</span></div><div class="mv gold">$1.7M · Gradient Ventures (Google)</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">背景</span></div><div class="mv">Gradient Ventures · Alumni Ventures · Hustle Fund</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Unique Feature</span><span class="zh-only">独特优势</span></div><div class="mv rose">Pay-per-use · No seat minimums</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">Solo to AmLaw 100</span><span class="client">Court reporters</span><span class="client">Litigation support firms</span><span class="client">Personal injury firms</span></div>
+    </div></div>
+
+  </div>
+</section>
+<div class="divider" data-div="2"></div>
+
+<!-- MID CTA 1 — after platform section -->
+<div class="mid-cta">
+  <div>
+    <div class="ct-label"><span class="en-only">Stay Current</span><span class="zh-only">保持更新</span></div>
+    <div class="ct-en en-only">Get weekly Legal AI briefings — funding rounds, pricing changes, new tools.</div>
+    <div class="ct-zh zh-only">每周法律 AI 简报：最新融资、定价变动、工具上线，第一时间送达。</div>
+  </div>
+  <div class="mid-cta-actions">
+    <div class="nl-form">
+      <input class="nl-input" type="email" placeholder="your@email.com" />
+      <a href="https://YOUR-SUBSTACK-URL.substack.com" target="_blank" class="cta-btn primary">Subscribe ↗</a>
+    </div>
+    <a href="https://www.xiaohongshu.com/user/YOUR-XHS-ID" target="_blank" class="cta-btn secondary"><span class="en-only">Xiaohongshu ↗</span><span class="zh-only">小红书 ↗</span></a>
+  </div>
+</div>
+
+
+<!-- ══ 03 TRANSACTIONAL ══ -->
+<section class="section section-transactional" data-section="transactional">
+  <div class="section-head">
+    <span class="s-num">03</span>
+    <h2 class="s-title-en">Transactional — M&amp;A, Contracts &amp; Deals</h2>
+    <span class="s-title-zh zh-only">交易律师 · 并购与合同</span>
+    <span class="s-count"><span class="en-only">8 TOOLS</span><span class="zh-only">8 个工具</span></span>
+  </div>
+  <div class="grid">
+
+    <!-- Harvey Transactional -->
+    <div class="card-wrap" data-category="transactional"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Harvey AI</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">并购全链条 AI — 行业顶配</div>
+      <p class="desc-en en-only">Harvey's transactional suite covers the full M&A lifecycle: contract generation, due diligence, clause analysis, deal process management, and financial instrument review. Trains on firm-specific precedent data for each deal team. The premium choice for AmLaw 100 M&A practices.</p>
+      <p class="desc-zh zh-only">Harvey 交易业务套件覆盖并购全链条：合同生成、尽职调查、条款分析、交易流程管理及金融工具审查。可基于律所专属先例文件进行定制训练，是百强律所并购业务的顶级选择。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">~$1,000–$1,200/user/month (industry estimates, annual contract) · ~$40,000/year for 10 users (indicative) · Minimum ~25–50 seats · No public pricing</div>
+        <div class="pn-zh zh-only">业内估计约 $1,000–$1,200/人/月（年度合同）· 10人团队参考年费约 $4万 · 最低约 25–50 席 · 无公开定价</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2022 · San Francisco</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Raised / Val.</span><span class="zh-only">融资/估值</span></div><div class="mv gold">$806M raised · $8B valuation</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">投资方</span></div><div class="mv">a16z · Sequoia · KP · OpenAI Fund · EQT</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">ARR</span><span class="zh-only">年经常性收入</span></div><div class="mv rose">$100M+ (Aug 2025)</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">50 of AmLaw 100</span><span class="client">A&O Shearman</span><span class="client">Latham & Watkins</span><span class="client">KKR</span><span class="client">PwC</span><span class="client">O'Melveny</span></div>
+    </div></div>
+
+    <!-- Legora (Transactional) -->
+    <div class="card-wrap" data-category="transactional"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Legora</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">协作式并购尽调 AI，估值 $55.5亿</div>
+      <p class="desc-en en-only">Legora's transactional strength lies in Tabular Review — extracting structured data across thousands of due diligence documents at once into a spreadsheet-like grid. Built on Anthropic's Claude, deployed by Cleary Gottlieb, White & Case, and Goodwin for M&A and deal room workflows. Also covered under Litigation (02) for document-intensive matters.</p>
+      <p class="desc-zh zh-only">Legora 交易业务核心在于 Tabular Review：将数千份尽调文件同步转化为结构化数据网格，大幅压缩并购尽调周期。基于 Anthropic Claude 构建，已被 Cleary Gottlieb、White & Case 和 Goodwin 用于并购及交易室工作流。亦收录于诉讼板块（02）。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">$3,000/user/year (annual only) · Minimum 10 seats · Minimum annual contract $30,000 · No monthly billing option</div>
+        <div class="pn-zh zh-only">$3,000/人/年（仅限年付）· 最低 10 个席位 · 最低年合同金额 $3万 · 无月付选项</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2023 · Stockholm / NYC</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Raised / Val.</span><span class="zh-only">融资/估值</span></div><div class="mv gold">$816M raised · $5.55B valuation</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">投资方</span></div><div class="mv">Accel · Benchmark · Bessemer · GC · YC</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Clients</span><span class="zh-only">客户</span></div><div class="mv">800+ firms · 50+ markets</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">Cleary Gottlieb</span><span class="client">White & Case</span><span class="client">Goodwin</span><span class="client">Linklaters</span><span class="client">Deloitte</span></div>
+    </div></div>
+
+    <!-- Luminance -->
+    <div class="card-wrap" data-category="transactional"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Luminance / Eve</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">M&A 尽调专家 · 自主谈判 AI</div>
+      <p class="desc-en en-only">Cambridge mathematician-founded legal AI trained on 150M+ documents. Proprietary "Panel of Judges" model autonomously reviews, redlines, and negotiates contracts end-to-end in Microsoft Word. Best-in-class for M&A due diligence and high-volume deal rooms.</p>
+      <p class="desc-zh zh-only">剑桥数学家创立，基于 1.5亿+法律文件训练。独家"法官团"模型可在 Word 中全自动完成合同审阅、红线标注和条款谈判，是 M&A 尽调和高密度交易室的最强专项工具。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">~$800–$1,500/user/month (annual enterprise contract) · Custom quotes only · No public pricing page</div>
+        <div class="pn-zh zh-only">约 $800–$1,500/人/月（企业年度合同）· 仅企业定制报价 · 无公开定价</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2015 · London / NYC</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Total Raised</span><span class="zh-only">累计融资</span></div><div class="mv gold">~$165M · Series C</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">投资方</span></div><div class="mv">Point72 · March Capital · Forestay · Slaughter & May</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Training Data</span><span class="zh-only">训练数据</span></div><div class="mv">150M+ legal docs</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">700+ orgs globally</span><span class="client">M&A teams</span><span class="client">In-house counsel</span><span class="client">Private equity</span></div>
+    </div></div>
+
+    <!-- Spellbook -->
+    <div class="card-wrap" data-category="transactional"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Spellbook</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">Word 内合同起草 AI，中小所首选</div>
+      <p class="desc-en en-only">GPT-powered contract drafting assistant living natively inside Microsoft Word. Generates first drafts, suggests missing clauses, explains provisions in plain English. Strong fit for solo and small-to-mid transactional practices. 7-day free trial available.</p>
+      <p class="desc-zh zh-only">基于 GPT 构建、深度嵌入 Microsoft Word 的合同起草助手。自动生成初稿、提示遗漏条款、以平实语言解释合同条款。适合个人及中小型交易律所，提供 7 天免费试用。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Pro: ~$20/user/month · Team: ~$40/user/month · Mid-tier (full features): ~$179/user/month (industry estimate, annual) · 7-day free trial available</div>
+        <div class="pn-zh zh-only">Pro：约 $20/人/月 · Team：约 $40/人/月 · 完整功能版（中级）：约 $179/人/月（业内估计，年付）· 提供 7 天免费试用</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2022 · Ottawa, Canada</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Total Raised</span><span class="zh-only">累计融资</span></div><div class="mv gold">~$20M · Series A</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">背景</span></div><div class="mv">Real Ventures · Desjardins</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Users</span><span class="zh-only">用户规模</span></div><div class="mv">4,000+ legal teams</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">Solo & small firms</span><span class="client">Startup counsel</span><span class="client">In-house SMEs</span></div>
+    </div></div>
+
+    <!-- Robin AI -->
+    <div class="card-wrap" data-category="transactional"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Robin AI</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">AI + 人工混合合同审查服务</div>
+      <p class="desc-en en-only">Hybrid AI + managed-services model. Combines automated AI redlining with human lawyer oversight for high-stakes contracts. Two tiers: self-service AI Assistant and AI+ Legal Services (human-in-the-loop). Strong in financial services. Clients include GE, Pfizer, KPMG, UBS.</p>
+      <p class="desc-zh zh-only">AI + 人工混合合同服务模型。将 AI 自动红线标注与人工律师监督结合，提供两档服务：AI 助手自助版和 AI+ 法律服务（含人工审核）。在金融服务领域实力突出，客户包括 GE、辉瑞、毕马威、瑞银。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Free tier (limited) · Pro: $100/user/month · Enterprise AI+ Legal Services: custom pricing (human-in-the-loop) · Monthly billing available</div>
+        <div class="pn-zh zh-only">免费版（功能受限）· Pro：$100/人/月 · 企业 AI+ 法律服务（含人工）：定制报价 · 支持月付</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2019 · London / NYC</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Total Raised</span><span class="zh-only">累计融资</span></div><div class="mv gold">~$50M · Series B</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">背景</span></div><div class="mv">Plural · MMC · Lachy Groom</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Legal Team</span><span class="zh-only">法律团队</span></div><div class="mv">90 in-house lawyers</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">GE</span><span class="client">Pfizer</span><span class="client">KPMG</span><span class="client">UBS</span><span class="client">Financial services</span></div>
+    </div></div>
+
+    <!-- Ironclad -->
+    <div class="card-wrap" data-category="transactional"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Ironclad + AI</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">CLM 市场领导者，$1.5亿年收入</div>
+      <p class="desc-en en-only">Market-leading Contract Lifecycle Management (CLM) platform with integrated AI. Manages the full contract lifecycle post-signature — automated extraction, obligation tracking, renewal alerts. $150M ARR as of 2025. Platform-first, AI-augmented; best when CLM is the core need.</p>
+      <p class="desc-zh zh-only">CLM（合同全生命周期管理）市场领导者，集成 AI 功能，管理签约后全流程：自动条款提取、义务追踪、续签提醒。2025年年度经常性收入 $1.5亿。以工作流平台为主，AI 为辅，适合以 CLM 为核心需求的企业。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">~$800–$2,000+/month for small teams (annual) · Enterprise: custom pricing · Implementation can add $50K–$200K+ · No monthly self-serve option</div>
+        <div class="pn-zh zh-only">小团队约 $800–$2,000+/月（年付）· 企业版：定制报价 · 实施费用可额外增加 $5万–$20万+ · 无月付自助版</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2014 · San Francisco</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Raised / Val.</span><span class="zh-only">融资/估值</span></div><div class="mv gold">~$333M raised · $3.2B valuation</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">背景</span></div><div class="mv">Accel · Sequoia · BOND · YC</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">ARR</span><span class="zh-only">年经常性收入</span></div><div class="mv rose">$150M (2025)</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">Asana</span><span class="client">L'Oréal</span><span class="client">OpenAI</span><span class="client">Carrier</span><span class="client">DoorDash</span></div>
+    </div></div>
+
+
+    <!-- Kira by Litera -->
+    <div class="card-wrap" data-category="transactional"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Kira (by Litera)</div>
+        <span class="badge badge-incumbent"><span class="en-only">Incumbent</span><span class="zh-only">老牌平台</span></span>
+      </div>
+      <div class="card-name-zh zh-only">并购合同审查先驱 · Litera 旗下</div>
+      <p class="desc-en en-only">The pioneer of AI contract analysis, founded 2011 by a former Weil Gotshal lawyer. Acquired by Litera in 2021. Identifies 1,400+ contract provisions across 40+ substantive areas in 100+ languages. Serves 64% of the Am Law 100 and 84% of the top 25 M&A firms globally. Now includes Lito — an AI legal agent for everyday tasks inside Outlook. No-configuration deployment, ready from day one.</p>
+      <p class="desc-zh zh-only">法律 AI 合同分析赛道的开创者，由前 Weil Gotshal 律师创立，2021年被 Litera 收购。可识别 100+ 种语言中 40+ 实质性领域的 1,400+ 合同条款。服务全美 64% 的百强律所和全球 84% 的顶级 M&A 律所。现集成 Lito AI 法律智能体，支持在 Outlook 中处理日常法律事务。无需配置，开箱即用。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Enterprise custom pricing · Setup fee applies · No free trial · Contact Litera sales · Annual contract required</div>
+        <div class="pn-zh zh-only">企业定制报价 · 含配置费 · 无免费试用 · 需联系 Litera 销售 · 年度合同</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2011 · Toronto · Acq. by Litera 2021</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Parent / Backer</span><span class="zh-only">母公司</span></div><div class="mv gold">Litera · Insight Partners ($50M)</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Market Reach</span><span class="zh-only">市场覆盖</span></div><div class="mv">64% of Am Law 100 · 84% top 25 M&amp;A firms</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">AI Fields</span><span class="zh-only">识别字段</span></div><div class="mv rose">1,400+ provisions · 40+ areas · 100+ languages</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">50%+ Am Law 100</span><span class="client">Top 25 M&A firms globally</span><span class="client">Real estate</span><span class="client">Banking & finance</span></div>
+    </div></div>
+
+    <!-- Diligen -->
+    <div class="card-wrap" data-category="transactional"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Diligen</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">ML 驱动合同审查 · Fortune 15 采用</div>
+      <p class="desc-en en-only">Machine learning-powered contract analysis platform built specifically for due diligence and high-volume contract review. 200+ pre-trained clause models ready from day one, plus custom model training. Scales from small legal teams to Fortune 15 corporations. Integrates with Box for seamless document workflows. Identifies 200+ provision types across M&A, lease review, tax, finance, and LIBOR.</p>
+      <p class="desc-zh zh-only">专为尽职调查和大批量合同审查设计的 ML 驱动合同分析平台。200+ 预训练条款模型开箱即用，支持自定义模型训练。可扩展服务从小型法务团队到 Fortune 15 大型企业。与 Box 集成实现无缝文件工作流。覆盖 M&A、租约审查、税务、金融及 LIBOR 等 200+ 条款类型。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Enterprise custom pricing · Contact Diligen for quote · Annual contracts · No public pricing page</div>
+        <div class="pn-zh zh-only">企业定制报价 · 需联系 Diligen 询价 · 年度合同 · 无公开定价</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">Toronto, Canada · ~2015</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Status</span><span class="zh-only">公司状态</span></div><div class="mv gold">Private · Bootstrap / undisclosed</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Best For</span><span class="zh-only">适合场景</span></div><div class="mv">High-volume M&amp;A, lease &amp; finance review</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Clause Models</span><span class="zh-only">条款模型</span></div><div class="mv rose">200+ pre-trained · custom training</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">Fortune 15 corporations</span><span class="client">Law firms</span><span class="client">Legal service providers</span><span class="client">Compliance teams</span></div>
+    </div></div>
+
+  </div>
+</section>
+<div class="divider" data-div="3"></div>
+
+<!-- ══ 04 IN-HOUSE COUNSEL ══ -->
+<section class="section section-inhouse" data-section="inhouse">
+  <div class="section-head">
+    <span class="s-num">04</span>
+    <h2 class="s-title-en">In-House Counsel</h2>
+    <span class="s-title-zh zh-only">公司法律顾问工具</span>
+    <span class="s-count"><span class="en-only">6 TOOLS</span><span class="zh-only">6 个工具</span></span>
+  </div>
+  <div class="grid">
+
+    <!-- Harvey — In-House -->
+    <div class="card-wrap" data-category="inhouse"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Harvey AI</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">企业法务全能 AI · KKR、PwC 采用</div>
+      <p class="desc-en en-only">Harvey is the most widely adopted AI across both law firms and in-house legal teams. Corporate legal departments at KKR, PwC, DoorDash, and OpenAI use Harvey for contract analysis, regulatory compliance tracking, multi-jurisdiction research, and deal workflows. Custom models can be trained on the company's own document library.</p>
+      <p class="desc-zh zh-only">Harvey 是律所与企业法务采用率最高的法律 AI。KKR、PwC、DoorDash、OpenAI 等企业法务部门用于合同分析、监管合规追踪、跨司法管辖研究及交易工作流。可基于企业自有文件库训练专属模型。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">~$1,000–$1,200/user/month (industry estimates, annual) · Min. ~25–50 seats · No public pricing</div>
+        <div class="pn-zh zh-only">业内估计约 $1,000–$1,200/人/月（年度合同）· 最低约 25–50 席 · 无公开定价</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2022 · San Francisco</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Raised / Val.</span><span class="zh-only">融资/估值</span></div><div class="mv gold">$806M raised · $8B valuation</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">投资方</span></div><div class="mv">a16z · Sequoia · KP · OpenAI Fund · EQT</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Key In-House Clients</span><span class="zh-only">企业客户</span></div><div class="mv rose">KKR · PwC · DoorDash · OpenAI</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">KKR</span><span class="client">PwC</span><span class="client">DoorDash</span><span class="client">OpenAI</span><span class="client">50 of AmLaw 100</span></div>
+    </div></div>
+
+    <!-- Ironclad — In-House -->
+    <div class="card-wrap" data-category="inhouse"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Ironclad + AI</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">企业合同全生命周期管理首选 CLM</div>
+      <p class="desc-en en-only">The leading CLM platform for in-house legal teams. Ironclad's "Jurist" AI agents handle contract drafting, first-pass redlines, playbook enforcement, compliance gap detection, and legal research with Bluebook citations. Gartner Magic Quadrant Leader 2025. $150M ARR. Designed for legal and non-legal users (Sales, HR, Procurement) alike.</p>
+      <p class="desc-zh zh-only">企业内部法律团队首选 CLM 平台。Ironclad "Jurist" AI 智能体处理合同起草、初步红线标注、内部标准执行、合规缺口识别及带 Bluebook 引用的法律研究。2025年 Gartner 魔力象限领导者，ARR $1.5亿，适合法务及非法务（销售、HR、采购）共用。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">~$800–$2,000+/month for small teams (annual) · Enterprise: custom · Implementation $50K–$200K+ · No monthly self-serve</div>
+        <div class="pn-zh zh-only">小团队约 $800–$2,000+/月（年付）· 企业版定制 · 实施费 $5万–$20万+ · 无月付自助版</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2014 · San Francisco</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Raised / Val.</span><span class="zh-only">融资/估值</span></div><div class="mv gold">~$333M raised · $3.2B valuation</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">投资方</span></div><div class="mv">Accel · Sequoia · BOND · YC</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">ARR</span><span class="zh-only">年经常性收入</span></div><div class="mv rose">$150M (2025)</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">Asana</span><span class="client">L'Oréal</span><span class="client">OpenAI</span><span class="client">DoorDash</span><span class="client">Carrier</span></div>
+    </div></div>
+
+    <!-- Luminance — In-House -->
+    <div class="card-wrap" data-category="inhouse"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Luminance / Eve</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">企业合同谈判 AI · BBC、国家电网采用</div>
+      <p class="desc-en en-only">Highly adopted by in-house corporate legal teams for autonomous contract negotiation and due diligence. Eve, Luminance's negotiation product, reviews incoming contracts, applies company standards, and redlines automatically. "Institutional memory" feature (launched Jan 2026) retains negotiation history across all enterprise contracts. Used by BBC, National Grid, and 700+ enterprises.</p>
+      <p class="desc-zh zh-only">企业内部法律团队高度采用的自主合同谈判与尽调 AI。Eve 产品自动审阅来往合同、应用公司标准并自动标注红线。2026年1月推出"机构记忆"功能，跨企业全量合同保留谈判历史。BBC、国家电网等 700+ 机构采用。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">~$800–$1,500/user/month (annual enterprise) · Custom quotes only · No public pricing</div>
+        <div class="pn-zh zh-only">约 $800–$1,500/人/月（企业年度合同）· 仅企业定制报价 · 无公开定价</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2015 · London / NYC</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Total Raised</span><span class="zh-only">累计融资</span></div><div class="mv gold">~$165M · Series C</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">投资方</span></div><div class="mv">Point72 · March Capital · Forestay · Slaughter &amp; May</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Key Feature (2026)</span><span class="zh-only">2026新功能</span></div><div class="mv rose">Institutional Memory</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">BBC</span><span class="client">National Grid</span><span class="client">700+ enterprises</span><span class="client">In-house M&amp;A teams</span></div>
+    </div></div>
+
+    <!-- Robin AI — In-House -->
+    <div class="card-wrap" data-category="inhouse"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Robin AI</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">AI + 人工混合合同服务 · GE、辉瑞采用</div>
+      <p class="desc-en en-only">Purpose-built for in-house corporate legal teams needing fast, accurate contract review without large legal headcount. The AI+ Legal Services tier combines automated redlining with 90 in-house lawyers for quality control. Particularly strong in financial services, pharma, and insurance. Clients include GE, Pfizer, KPMG, and UBS.</p>
+      <p class="desc-zh zh-only">专为企业内部法律团队设计，无需大量法务编制即可快速完成高质量合同审查。AI+ 法律服务档位结合自动红线标注与 90 名内部律师的人工质控。在金融服务、制药及保险领域尤为强势。客户包括 GE、辉瑞、毕马威、瑞银。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Free tier (limited) · Pro: $100/user/month (monthly billing available) · Enterprise AI+ Legal Services: custom</div>
+        <div class="pn-zh zh-only">免费版（功能受限）· Pro：$100/人/月（支持月付）· 企业 AI+ 法律服务版：定制报价</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2019 · London / NYC</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Total Raised</span><span class="zh-only">累计融资</span></div><div class="mv gold">~$50M · Series B</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">投资方</span></div><div class="mv">Plural · MMC · Lachy Groom</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">In-House Clients</span><span class="zh-only">企业客户</span></div><div class="mv rose">GE · Pfizer · KPMG · UBS</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">GE</span><span class="client">Pfizer</span><span class="client">KPMG</span><span class="client">UBS</span><span class="client">Financial services</span></div>
+    </div></div>
+
+    <!-- Wolters Kluwer ELM — In-House -->
+    <div class="card-wrap" data-category="inhouse"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Wolters Kluwer ELM</div>
+        <span class="badge badge-incumbent"><span class="en-only">Incumbent</span><span class="zh-only">老牌平台</span></span>
+      </div>
+      <div class="card-name-zh zh-only">F500 企业法务管理标配 · 外部律师账单审核</div>
+      <p class="desc-en en-only">The standard Enterprise Legal Management (ELM) platform for Fortune 500 legal departments. AI automates outside counsel billing review, flags overbilling and guideline violations, monitors regulatory changes, and provides legal spend analytics. Integrates with Wolters Kluwer's global compliance content libraries for regulatory obligation tracking.</p>
+      <p class="desc-zh zh-only">Fortune 500 企业法务部门标配的企业法务管理（ELM）平台。AI 自动审核外部律师账单、识别超额计费及违规行为、监控监管变化，并提供法务支出分析。整合 Wolters Kluwer 全球合规内容库，实现监管义务追踪。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">~$100–$300/user/month (annual, module-based) · Platform setup fee may apply · Full suite requires enterprise negotiation</div>
+        <div class="pn-zh zh-only">约 $100–$300/人/月（年付，按模块计费）· 可能收取平台配置费 · 完整套件需企业谈判</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">1836 (WK) · ELM 2014</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Status</span><span class="zh-only">公司状态</span></div><div class="mv gold">Public · AMS: WKL</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Parent</span><span class="zh-only">母公司</span></div><div class="mv">Wolters Kluwer NV</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Best For</span><span class="zh-only">适合场景</span></div><div class="mv rose">F500 legal ops &amp; spend mgmt</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">Fortune 500 legal depts</span><span class="client">Healthcare</span><span class="client">Financial services</span><span class="client">Insurance</span></div>
+    </div></div>
+
+    <!-- Legora — In-House -->
+    <div class="card-wrap" data-category="inhouse"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Legora</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">企业法务协作 AI 平台 · 德勤、Linklaters 采用</div>
+      <p class="desc-en en-only">Legora's in-house strength lies in its collaborative workspace and agentic workflows — replacing $1,200/hour outside counsel reviews with internal AI analysis in minutes. In-house teams at Deloitte, Linklaters, and pharma companies use Legora to manage complex matters, run diligence, and enforce company playbooks at scale.</p>
+      <p class="desc-zh zh-only">Legora 对企业法务的核心价值在于其协作工作台和自主工作流——用内部 AI 分析在数分钟内替代时薪 $1,200 的外部律师审查。德勤、Linklaters 及制药公司内部法律团队借助 Legora 管理复杂事务、开展尽调并规模化执行公司标准。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">$3,000/user/year (annual only) · Min. 10 seats · Min. annual contract $30,000 · No monthly billing option</div>
+        <div class="pn-zh zh-only">$3,000/人/年（仅限年付）· 最低 10 席 · 最低年合同 $3万 · 无月付选项</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2023 · Stockholm / NYC</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Raised / Val.</span><span class="zh-only">融资/估值</span></div><div class="mv gold">$816M raised · $5.55B valuation</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">投资方</span></div><div class="mv">Accel · Benchmark · Bessemer · GC · YC</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">In-House Clients</span><span class="zh-only">企业客户</span></div><div class="mv rose">Deloitte · Linklaters · Pharma cos</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">Deloitte</span><span class="client">Linklaters</span><span class="client">Goodwin</span><span class="client">MinterEllison</span></div>
+    </div></div>
+
+  </div>
+</section>
+<div class="divider" data-div="3b"></div>
+
+<!-- ══ 05 COMPLIANCE ══ -->
+<section class="section section-compliance" data-section="compliance">
+  <div class="section-head">
+    <span class="s-num">05</span>
+    <h2 class="s-title-en">Compliance &amp; Regulatory</h2>
+    <span class="s-title-zh zh-only">合规与监管律师工具</span>
+    <span class="s-count"><span class="en-only">2 TOOLS</span><span class="zh-only">2 个工具</span></span>
+  </div>
+  <div class="grid">
+
+    <!-- Paxton AI -->
+    <div class="card-wrap" data-category="compliance"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Paxton AI</div>
+        <span class="badge badge-emerging"><span class="en-only">Emerging</span><span class="zh-only">新兴工具</span></span>
+      </div>
+      <div class="card-name-zh zh-only">高准确度合规研究 AI，有免费版</div>
+      <p class="desc-en en-only">Accuracy-focused legal research with transparent source verification, designed for compliance and regulatory practices. Offers a free basic tier with explicit confidence scoring on every answer. Ideal for smaller teams that can't justify enterprise pricing for narrow compliance research needs.</p>
+      <p class="desc-zh zh-only">专注准确性的法律研究 AI，透明显示引用来源，每条答案均提供置信度评分，适合合规与监管执业。提供永久免费基础版，是中小型团队进行合规专项研究的高性价比选择。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Free tier (basic research, permanent) · Paid plans: ~$99/user/month · Enterprise: custom pricing · Monthly billing available</div>
+        <div class="pn-zh zh-only">永久免费版（基础研究）· 付费版：约 $99/人/月 · 企业版：定制报价 · 支持月付</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2023 · Washington D.C.</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Total Raised</span><span class="zh-only">累计融资</span></div><div class="mv gold">~$5M · Seed</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">背景</span></div><div class="mv">Seedcamp · angel rounds</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Best For</span><span class="zh-only">适合场景</span></div><div class="mv">Compliance · Regulatory · Small firms</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">Compliance officers</span><span class="client">Regulatory teams</span><span class="client">Smaller law firms</span><span class="client">Gov. contractors</span></div>
+    </div></div>
+
+    <!-- Wolters Kluwer -->
+    <div class="card-wrap" data-category="compliance"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Wolters Kluwer ELM</div>
+        <span class="badge badge-incumbent"><span class="en-only">Incumbent</span><span class="zh-only">老牌平台</span></span>
+      </div>
+      <div class="card-name-zh zh-only">企业法律事务管理（ELM）老牌平台</div>
+      <p class="desc-en en-only">Enterprise Legal Management platform with embedded AI for compliance tracking, regulatory monitoring, and legal spend analytics. Automates outside counsel billing review, flags regulatory changes, and integrates with Wolters Kluwer's global compliance content libraries.</p>
+      <p class="desc-zh zh-only">内嵌 AI 的企业法务管理平台，提供合规追踪、监管变化预警和法律支出分析。自动审核外部律师账单，整合 Wolters Kluwer 全球合规内容库，是大型企业法务部门的成熟方案。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">~$100–$300/user/month (annual, module-based) · Platform setup fee may apply · Enterprise negotiation required for full suite</div>
+        <div class="pn-zh zh-only">约 $100–$300/人/月（年付，按模块计费）· 可能收取平台配置费 · 完整套件需企业谈判</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">1836 (WK) · ELM 2014</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Status</span><span class="zh-only">公司状态</span></div><div class="mv gold">Public · AMS: WKL</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Parent</span><span class="zh-only">母公司</span></div><div class="mv">Wolters Kluwer NV</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Best For</span><span class="zh-only">适合场景</span></div><div class="mv">Fortune 500 legal depts</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">Fortune 500 legal depts</span><span class="client">Healthcare</span><span class="client">Financial services</span><span class="client">Insurance</span></div>
+    </div></div>
+
+  </div>
+</section>
+<div class="divider" data-div="4"></div>
+
+<!-- MID CTA 2 — after transactional section -->
+<div class="mid-cta">
+  <div>
+    <div class="ct-label"><span class="en-only">Follow for Analysis</span><span class="zh-only">关注深度分析</span></div>
+    <div class="ct-en en-only">In-depth breakdowns of legal AI tools, M&amp;A implications, and regulatory developments.</div>
+    <div class="ct-zh zh-only">法律 AI 工具深度拆解 · 并购影响分析 · 监管动态解读，由执业律师撰写。</div>
+  </div>
+  <div class="mid-cta-actions">
+    <a href="https://www.xiaohongshu.com/user/YOUR-XHS-ID" target="_blank" class="cta-btn primary"><span class="en-only">Xiaohongshu ↗</span><span class="zh-only">关注小红书 ↗</span></a>
+    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" class="cta-btn secondary">LinkedIn ↗</a>
+  </div>
+</div>
+
+
+<!-- ══ 06 IMMIGRATION ══ -->
+<section class="section section-immigration" data-section="immigration">
+  <div class="section-head">
+    <span class="s-num">06</span>
+    <h2 class="s-title-en">Immigration</h2>
+    <span class="s-title-zh zh-only">移民律师工具</span>
+    <span class="s-count"><span class="en-only">2 TOOLS</span><span class="zh-only">2 个工具</span></span>
+  </div>
+  <div class="grid">
+
+    <!-- Docketwise -->
+    <div class="card-wrap" data-category="immigration"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Docketwise</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">移民律所专属 CRM + AI 表格自动填写</div>
+      <p class="desc-en en-only">Immigration-specific CRM and case management with AI-assisted form auto-fill, document collection, and deadline tracking. Handles I-485, N-400, I-130, and 400+ USCIS forms. AI auto-populates client data across related forms to eliminate manual re-entry.</p>
+      <p class="desc-zh zh-only">专为移民律所设计的 CRM 与案件管理系统，AI 辅助自动填写 I-485、N-400、I-130 等 400+ 份 USCIS 表格，自动跨表同步客户信息，彻底消除重复手动录入。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Basic: $69/user/month (annual) / $79/user/month (monthly) · Pro: $89/$99 · Advanced: $109/$119 · Non-profit: additional 18.5% discount on annual plans</div>
+        <div class="pn-zh zh-only">Basic：$69/人/月（年付）/ $79/人/月（月付）· Pro：$89/$99 · Advanced：$109/$119 · 非营利组织年付另享 18.5% 折扣</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2018 · New York</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Total Raised</span><span class="zh-only">累计融资</span></div><div class="mv gold">~$13M · Series A</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">背景</span></div><div class="mv">Elsewhere Partners · Matchstick</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Forms Supported</span><span class="zh-only">支持表格</span></div><div class="mv">400+ USCIS forms</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">Immigration boutiques</span><span class="client">Solo practitioners</span><span class="client">Nonprofits</span><span class="client">Corporate immigration</span></div>
+    </div></div>
+
+    <!-- Boundless -->
+    <div class="card-wrap" data-category="immigration"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Boundless AI</div>
+        <span class="badge badge-emerging"><span class="en-only">Emerging</span><span class="zh-only">新兴工具</span></span>
+      </div>
+      <div class="card-name-zh zh-only">美国最大消费者绿卡申请 AI 平台</div>
+      <p class="desc-en en-only">Consumer-facing immigration platform using AI to guide individuals through family-based green card and citizenship applications. AI error-checks before filing and connects users with immigration attorneys for complex cases. Largest consumer immigration tech platform in the U.S.</p>
+      <p class="desc-zh zh-only">面向个人申请者的移民 AI 平台，引导用户完成家庭类绿卡和公民身份申请，AI 提交前自动查错。对复杂案例连接专业移民律师。是美国消费者移民科技领域规模最大的平台。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">$995–$1,500 flat fee per application (one-time) · No monthly subscription · Attorney review included for complex cases</div>
+        <div class="pn-zh zh-only">每份申请一次性收费 $995–$1,500 · 无月度订阅费 · 复杂案件含律师审核</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2017 · Seattle</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Total Raised</span><span class="zh-only">累计融资</span></div><div class="mv gold">~$22M · Series B</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">背景</span></div><div class="mv">Trilogy Equity · Founders' Co-op</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Best For</span><span class="zh-only">适合场景</span></div><div class="mv">Individual · Family-based GC</div></div>
+</div>
+      </div>
+      <div class="clients"><span class="client">Individual applicants</span><span class="client">Couples (spousal GC)</span><span class="client">HR depts (referrals)</span></div>
+    </div></div>
+
+  </div>
+</section>
+
+
+<div class="divider" data-div="5"></div>
+
+<!-- ══ 07 MARKETING AI ══ -->
+<section class="section section-marketing" data-section="marketing">
+  <div class="section-head">
+    <span class="s-num">07</span>
+    <h2 class="s-title-en">Marketing AI — Content &amp; Growth</h2>
+    <span class="s-title-zh zh-only">营销 AI · 内容创作与增长工具</span>
+    <span class="s-count"><span class="en-only">7 TOOLS</span><span class="zh-only">7 个工具</span></span>
+  </div>
+  <div class="grid">
+
+    <!-- Jasper -->
+    <div class="card-wrap" data-category="marketing"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Jasper AI</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">营销团队首选 · AI 品牌声音管理</div>
+      <p class="desc-en en-only">The leading AI content platform purpose-built for marketing teams. Brand Voice learns your style and enforces consistency across all content. Campaigns feature generates an entire suite of assets (blog, social, email) from a single brief. 50+ templates covering ads, landing pages, product descriptions, and SEO content. Now includes agentic AI workflows and a Marketing IQ knowledge layer. Used by 70,000+ teams.</p>
+      <p class="desc-zh zh-only">专为营销团队打造的领先 AI 内容平台。Brand Voice 功能学习并统一全渠道内容风格。Campaigns 功能可从一份简报生成完整资产包（博客、社媒、邮件）。50+ 模板覆盖广告、落地页、产品描述及 SEO 内容。现已集成自主 AI 工作流和 Marketing IQ 知识层。70,000+ 团队使用。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Creator: $39/user/month (annual) · Pro: $59/user/month (annual) · Business: custom · 7-day free trial on Creator &amp; Pro</div>
+        <div class="pn-zh zh-only">Creator：$39/人/月（年付）· Pro：$59/人/月（年付）· Business：定制报价 · Creator 和 Pro 提供 7 天免费试用</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2021 · Austin, TX</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Total Raised / Val.</span><span class="zh-only">融资/估值</span></div><div class="mv gold">$131M raised · $1.5B valuation (2022)</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Investors</span><span class="zh-only">投资方</span></div><div class="mv">Insight Partners · Coatue · Bessemer · IVP · HubSpot Ventures</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Best For</span><span class="zh-only">适合场景</span></div><div class="mv rose">Marketing teams · Brand voice · Campaign at scale</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">70,000+ teams</span><span class="client">Marketing agencies</span><span class="client">Enterprise content teams</span></div>
+    </div></div>
+
+    <!-- Rytr -->
+    <div class="card-wrap" data-category="marketing"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Rytr</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">高性价比 AI 写作 · 40+ 模板，$9/月起</div>
+      <p class="desc-en en-only">Budget-friendly AI writing assistant with 40+ content templates covering blog posts, ad copy, emails, social media, and product descriptions. Supports 30+ languages and 20+ tones. Built-in plagiarism checker via Copyscape. Tone matching and AIDA/PAS copywriting formulas. Best value option for freelancers and small teams needing fast short-form content without enterprise pricing.</p>
+      <p class="desc-zh zh-only">高性价比 AI 写作助手，40+ 内容模板涵盖博客、广告文案、邮件、社媒和产品描述。支持 30+ 种语言和 20+ 种语气。内置 Copyscape 抄袭检测。支持语气匹配和 AIDA/PAS 文案公式。适合自由职业者和小团队快速生成短内容的最高性价比选择。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Free (10K chars/month) · Unlimited: $9/month · Premium: $29/month (35+ languages, priority support) · Annual billing saves 2 months</div>
+        <div class="pn-zh zh-only">免费版（每月 1万字符）· Unlimited：$9/月 · Premium：$29/月（35+ 种语言，优先支持）· 年付省 2 个月</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2021 · India-based team</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Status</span><span class="zh-only">公司状态</span></div><div class="mv gold">Private · Bootstrapped</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Best For</span><span class="zh-only">适合场景</span></div><div class="mv">Freelancers · SMBs · Short-form copy</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Languages</span><span class="zh-only">支持语言</span></div><div class="mv rose">30+ languages · 20+ tones</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">Freelance writers</span><span class="client">Small marketing teams</span><span class="client">Entrepreneurs</span></div>
+    </div></div>
+
+    <!-- Sudowrite -->
+    <div class="card-wrap" data-category="marketing"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Sudowrite</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">创意写作 AI · 小说家和内容创作者专用</div>
+      <p class="desc-en en-only">AI creative writing tool purpose-built for fiction authors, content creators, and storytellers — not generic marketing copy. Story Engine guides users through planning, writing, and revising long-form narratives. Describe, Rewrite, Expand, and Twist tools break writer's block. Style matching mirrors your unique voice. Featured in NYT and The Verge. Best for brand storytelling, editorial content, and creative campaigns.</p>
+      <p class="desc-zh zh-only">专为小说作者、内容创作者和讲故事者打造的 AI 创意写作工具，而非通用营销文案。Story Engine 引导用户规划、写作和修改长篇叙事。Describe、Rewrite、Expand 和 Twist 工具突破写作瓶颈。风格匹配技术复刻你的独特声音。适合品牌叙事、深度内容和创意营销活动。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Hobby: $10/month (225K credits) · Starter: $22/month (1M credits) · Professional: $44/month (2M credits) · Credit-based, no seat minimums</div>
+        <div class="pn-zh zh-only">Hobby：$10/月（22.5万积分）· Starter：$22/月（100万积分）· Professional：$44/月（200万积分）· 按积分计费，无席位下限</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2020 · San Francisco</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Status</span><span class="zh-only">公司状态</span></div><div class="mv gold">Private · VC-backed</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Best For</span><span class="zh-only">适合场景</span></div><div class="mv">Fiction · Brand storytelling · Editorial content</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Press</span><span class="zh-only">媒体报道</span></div><div class="mv rose">NYT · The Verge · Wired</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">Fiction authors</span><span class="client">Content creators</span><span class="client">Brand storytelling teams</span></div>
+    </div></div>
+
+    <!-- GrowthBar -->
+    <div class="card-wrap" data-category="marketing"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">GrowthBar (by SEOptimer)</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">SEO + AI 写作一体化 · 博客排名首选</div>
+      <p class="desc-en en-only">AI writing tool built specifically for SEO-driven content. "2-Minute Blog Builder" takes an outline to a 1,500-word SEO-optimized post in minutes. Includes keyword research, competitor analysis, Content Optimization Meter (0–100 score), Google Search Console integration, and a Chrome extension that overlays SEO data on Google results. Recently acquired by SEOptimer. Used by agencies and in-house content teams including AllTrails and Product Hunt.</p>
+      <p class="desc-zh zh-only">专为 SEO 内容打造的 AI 写作工具。"2分钟博客生成器"可在数分钟内将大纲转化为 1,500 字 SEO 优化文章。包含关键词研究、竞品分析、内容优化评分仪（0–100 分）、Google Search Console 集成和覆盖 Google 搜索结果的 Chrome 扩展。已被 SEOptimer 收购。AllTrails、Product Hunt 等团队使用。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Standard: $36/month (25 articles) · Pro: $74.25/month (100 articles, 3 sites) · Agency: $149.25/month (300 articles, 25 sites) · 7-day free trial</div>
+        <div class="pn-zh zh-only">Standard：$36/月（25篇文章）· Pro：$74.25/月（100篇，3个站点）· Agency：$149.25/月（300篇，25个站点）· 7天免费试用</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2020 · Acq. by SEOptimer 2024</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Status</span><span class="zh-only">公司状态</span></div><div class="mv gold">Acquired · Part of SEOptimer</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Best For</span><span class="zh-only">适合场景</span></div><div class="mv">Bloggers · SEO content teams · Agencies</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Keywords DB</span><span class="zh-only">关键词库</span></div><div class="mv rose">7 billion keywords · Chrome extension</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">AllTrails</span><span class="client">Product Hunt</span><span class="client">Minted</span><span class="client">Content agencies</span></div>
+    </div></div>
+
+    <!-- Copy.ai -->
+    <div class="card-wrap" data-category="marketing"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Copy.ai</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">AI 销售与营销文案 · 工作流自动化</div>
+      <p class="desc-en en-only">AI platform for sales and marketing copy, now pivoting toward GTM (Go-to-Market) workflow automation. Generates landing pages, email sequences, ad copy, product descriptions, and social content at scale. Inflow feature automates multi-step marketing pipelines. Strong for teams needing high-volume outbound copy and sales enablement content. Free plan available; popular among startups and growth teams.</p>
+      <p class="desc-zh zh-only">面向销售和营销文案的 AI 平台，现已转型为 GTM（市场进入）工作流自动化。大规模生成落地页、邮件序列、广告文案、产品描述和社媒内容。Inflow 功能自动化多步营销流程。适合需要高产出外联文案和销售赋能内容的团队。提供免费版，深受初创公司和增长团队欢迎。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Free (limited) · Starter: $49/month ($36/month annual) · Advanced: $249/month · Enterprise: custom · Free plan available</div>
+        <div class="pn-zh zh-only">免费版（有限功能）· Starter：$49/月（年付 $36/月）· Advanced：$249/月 · Enterprise：定制 · 有免费版</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2020 · San Francisco</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Total Raised</span><span class="zh-only">累计融资</span></div><div class="mv gold">~$13.9M · Seed / Series A</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Best For</span><span class="zh-only">适合场景</span></div><div class="mv">Sales copy · GTM workflows · Startups</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Users</span><span class="zh-only">用户规模</span></div><div class="mv rose">10M+ users (free + paid)</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">Startups</span><span class="client">Growth teams</span><span class="client">Sales enablement</span><span class="client">E-commerce</span></div>
+    </div></div>
+
+    <!-- Anyword -->
+    <div class="card-wrap" data-category="marketing"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Anyword</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">预测性能评分 AI · 广告文案优化首选</div>
+      <p class="desc-en en-only">Performance marketing AI with a unique Predictive Performance Score — each piece of copy gets a real-time score predicting its conversion likelihood before publishing. Trained on billions of ad impressions. Ideal for PPC, social ads, email subject lines, and landing pages where conversion data matters. Connects to ad platforms to learn from actual performance data. Stronger analytics than Jasper or Rytr for performance-driven teams.</p>
+      <p class="desc-zh zh-only">效果营销 AI，独创"预测性能评分"功能——每段文案在发布前获得实时评分，预测转化可能性。基于数十亿次广告曝光训练。适合 PPC、社媒广告、邮件主题行和落地页等转化数据敏感场景。可连接广告平台从实际效果中学习。在数据驱动团队中分析能力优于 Jasper 和 Rytr。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Starter: $49/month · Data-Driven: $99/month · Business: $499/month · Enterprise: custom · 7-day free trial</div>
+        <div class="pn-zh zh-only">Starter：$49/月 · Data-Driven：$99/月 · Business：$499/月 · Enterprise：定制 · 7天免费试用</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2013 · Tel Aviv / NYC</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Total Raised</span><span class="zh-only">累计融资</span></div><div class="mv gold">~$30M · Series B</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Best For</span><span class="zh-only">适合场景</span></div><div class="mv">PPC ads · Email · Performance marketing</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Key Feature</span><span class="zh-only">核心功能</span></div><div class="mv rose">Predictive Performance Score</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">Performance marketers</span><span class="client">PPC agencies</span><span class="client">E-commerce brands</span><span class="client">SaaS companies</span></div>
+    </div></div>
+
+    <!-- Writesonic -->
+    <div class="card-wrap" data-category="marketing"><div class="card">
+      <div class="card-strip"></div>
+      <div class="card-head">
+        <div class="card-name-en">Writesonic</div>
+        <span class="badge badge-startup"><span class="en-only">Startup</span><span class="zh-only">初创公司</span></span>
+      </div>
+      <div class="card-name-zh zh-only">全能 AI 内容套件 · SEO + 设计 + 聊天机器人</div>
+      <p class="desc-en en-only">All-in-one AI content suite combining long-form writing, SEO optimization, image generation, and a ChatGPT-like chatbot (Chatsonic). Article Writer 5.0 generates 3,000-word SEO-optimized articles. Includes AI art generation, social media toolkit, bulk content upload, and Zapier integration. Best value-for-money among full-featured platforms. Free tier available. Strong alternative to Jasper at lower price.</p>
+      <p class="desc-zh zh-only">集长篇写作、SEO 优化、图像生成和类 ChatGPT 聊天机器人（Chatsonic）于一体的 AI 内容套件。Article Writer 5.0 可生成 3,000 字 SEO 优化文章。包含 AI 图像生成、社媒工具包、批量内容上传和 Zapier 集成。在全功能平台中性价比最高。提供免费版。低价格下 Jasper 的强力替代方案。</p>
+      <div class="pricing-note">
+        <div class="pn-label"><span class="en-only">Pricing</span><span class="zh-only">费用</span></div>
+        <div class="pn-en en-only">Free tier · Individual: $16/month (annual) · Teams: $12.67/user/month (annual) · Enterprise: custom · No credit card for free plan</div>
+        <div class="pn-zh zh-only">免费版 · Individual：$16/月（年付）· Teams：$12.67/人/月（年付）· Enterprise：定制 · 免费版无需信用卡</div>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Founded</span><span class="zh-only">创立时间</span></div><div class="mv">2020 · San Francisco</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Total Raised</span><span class="zh-only">累计融资</span></div><div class="mv gold">~$2.6M · Seed</div></div>
+        </div>
+        <div class="meta-row">
+          <div class="mc"><div class="mk"><span class="en-only">Best For</span><span class="zh-only">适合场景</span></div><div class="mv">All-in-one content · SEO articles · Social</div></div>
+          <div class="mc"><div class="mk"><span class="en-only">Key Feature</span><span class="zh-only">核心功能</span></div><div class="mv rose">Article Writer 5.0 · Chatsonic · AI Art</div></div>
+        </div>
+      </div>
+      <div class="clients"><span class="client">Content marketers</span><span class="client">SEO agencies</span><span class="client">Solopreneurs</span><span class="client">E-commerce</span></div>
+    </div></div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer-wrap">
+  <div class="disclaimer">
+    <p>⚠ DISCLAIMER — This directory is for general informational and educational purposes only. It does not constitute legal or financial advice, nor an endorsement of any product. Pricing data is based on publicly available third-party estimates, user reports, and vendor disclosures as of March 2026; most enterprise vendors do not publish official pricing. Actual costs vary significantly based on firm size, seat count, negotiation, and contract terms. Contact vendors directly for current pricing.</p>
+    <p class="zh-only">免责声明：本目录仅供一般信息和教育参考，不构成法律或财务建议，亦不代表对任何产品的推荐。费用数据来源于截至2026年3月的第三方公开估算、用户报告及供应商披露；大多数企业级供应商不公开官方定价。实际费用因律所规模、席位数量、谈判结果和合同条款而存在显著差异，请直接联系供应商获取当前报价。</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner" style="align-items:flex-start; gap:2rem;">
+
+    <div class="footer-col">
+      <div class="footer-brand">Legal AI Intelligence</div>
+      <p class="footer-tagline en-only" style="font-family:var(--font-mono);font-size:0.6rem;color:var(--ink-ghost);letter-spacing:0.04em;">By a practicing M&amp;A lawyer at the intersection<br>of U.S. &amp; Chinese legal frameworks.</p>
+      <p class="footer-tagline zh-only">跨境并购律师出品 · 专注中美法律 AI 前沿</p>
+      <div class="footer-social">
+        <a href="https://www.xiaohongshu.com/user/YOUR-XHS-ID" target="_blank" class="social-link"><span>📕</span> <span class="en-only">Xiaohongshu</span><span class="zh-only">小红书</span></a>
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" class="social-link"><span>💼</span> LinkedIn</a>
+        <a href="https://YOUR-SUBSTACK-URL.substack.com" target="_blank" class="social-link"><span>📬</span> Newsletter</a>
+      </div>
+    </div>
+
+    <div class="footer-col" style="margin-left:auto; text-align:right;">
+      <div class="footer-meta" style="margin-bottom:0.75rem;"><span class="en-only">27 TOOLS · 7 SECTIONS · UPDATED MARCH 2026</span><span class="zh-only">27 个工具 · 7 大板块 · 2026年3月更新</span></div>
+      <div style="display:flex; flex-direction:column; gap:0.5rem; align-items:flex-end;">
+        <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--ink-ghost);letter-spacing:0.04em;" class="en-only">Subscribe for weekly updates</p>
+        <p style="font-family:var(--font-zh);font-size:0.62rem;color:var(--ink-ghost);" class="zh-only">订阅每周更新</p>
+        <div class="nl-form" style="justify-content:flex-end;">
+          <input class="nl-input" type="email" placeholder="your@email.com" style="width:170px;" />
+          <a href="https://YOUR-SUBSTACK-URL.substack.com" target="_blank" class="cta-btn primary" style="font-size:0.58rem;">Subscribe ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+// ── LANG TOGGLE ──
+function setLang(lang) {
+  document.body.className = document.body.className.replace(/lang-\w+/, '') + ' lang-' + lang;
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.textContent.trim().toLowerCase() === lang || (lang === 'zh' && b.textContent.trim() === '中文'));
+  });
+}
+
+// ── FILTER ──
+const btns     = document.querySelectorAll('.f-btn');
+const cards    = document.querySelectorAll('.card-wrap');
+const sections = document.querySelectorAll('.section[data-section]');
+const dividers = document.querySelectorAll('.divider');
+
+btns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    if (f === 'all') {
+      sections.forEach(s => s.classList.remove('hidden-section'));
+      cards.forEach(c => c.classList.remove('hidden'));
+      dividers.forEach(d => d.classList.remove('hidden-div'));
+    } else {
+      sections.forEach(s => s.classList.toggle('hidden-section', s.dataset.section !== f));
+      cards.forEach(c => c.classList.toggle('hidden', c.dataset.category !== f));
+      dividers.forEach(d => d.classList.add('hidden-div'));
+    }
+  });
+});
+</script>
+</body>
+</html>
