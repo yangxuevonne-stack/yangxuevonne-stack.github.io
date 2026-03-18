@@ -323,3 +323,140 @@ footer { background:var(--dark); }
 .article-body h3 { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:400; color:var(--dark); margin:36px 0 16px; }
 .article-body p { margin-bottom:20px; }
 .article-body blockquote { border-left:3px solid var(--rose-gold); padding:20px 32px; background:var(--warm-white); margin:32px 0; font-style:italic; color:var(--mid); }
+
+/* ================================================================
+   手机端适配 (Responsive / Mobile)
+   ================================================================ */
+
+/* ── 平板 (768px以下) ── */
+@media (max-width: 768px) {
+
+  /* 导航：隐藏链接，只显示logo和预约按钮 */
+  nav { padding: 16px 20px; }
+  .nav-links { display: none; }
+
+  /* Hero：上下布局，不再左右分栏 */
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 100px 24px 48px; }
+  .hero-title { font-size: 42px; }
+  .hero-subtitle-cn { font-size: 15px; }
+  .hero-desc { font-size: 14px; max-width: 100%; }
+  .hero-right { height: 300px; }
+  .hero-photo-frame { width: 200px; height: 260px; bottom: 20px; }
+  .hero-photo-placeholder .initials { font-size: 56px; }
+  .hero-stats { gap: 24px; }
+  .stat-num { font-size: 28px; }
+
+  /* 通用容器 */
+  .container { padding: 0 20px; }
+  section { padding: 64px 0; }
+
+  /* 关于我：上下布局 */
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-card { padding: 28px; }
+  .about-card::before { display: none; }
+  .about-content h3 { font-size: 28px; }
+
+  /* 服务：单列 */
+  .services-wrap { padding: 0 20px; }
+  .services-grid { grid-template-columns: 1fr; gap: 2px; }
+
+  /* Blog：单列 */
+  .blog-grid { grid-template-columns: 1fr; gap: 16px; }
+  .blog-featured { padding: 32px; }
+  .blog-title { font-size: 22px; }
+
+  /* Newsletter */
+  .newsletter-inner { padding: 0 24px; }
+  .newsletter-title { font-size: 34px; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form input { border-right: 1px solid rgba(196,154,122,0.3); border-bottom: none; }
+  .newsletter-form button { padding: 14px; }
+
+  /* 联系：上下布局 */
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-info h3 { font-size: 28px; }
+  .contact-form-wrap { padding: 28px 20px; }
+  .form-row { grid-template-columns: 1fr; }
+
+  /* 页脚：单列 */
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; padding: 40px 24px; }
+  .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 12px; text-align: center; }
+
+  /* Blog列表页 */
+  .blog-list { padding: 32px 20px 60px; }
+  .blog-list-item { grid-template-columns: 1fr; gap: 12px; padding: 24px 20px; }
+  .blog-list-arrow { display: none; }
+  .blog-page-hero { padding: 100px 24px 48px; }
+  .blog-page-hero h1 { font-size: 36px; }
+
+  /* 文章页 */
+  .article-hero { padding: 100px 24px 48px; }
+  .article-body { padding: 0 20px; margin: 40px auto 60px; }
+}
+
+/* ── 小手机 (480px以下) ── */
+@media (max-width: 480px) {
+  .hero-title { font-size: 34px; }
+  .hero-stats { flex-wrap: wrap; gap: 20px; }
+  .stat-item { min-width: 80px; }
+  .hero-btns { flex-direction: column; }
+  .btn-primary, .btn-secondary { text-align: center; width: 100%; }
+  .section-title { font-size: 28px; }
+  .newsletter-title { font-size: 28px; }
+  .about-tags { gap: 8px; }
+  .tag { font-size: 10px; padding: 6px 12px; }
+}
+
+/* ── 手机导航菜单（汉堡菜单） ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--dark);
+  transition: all 0.3s;
+}
+
+.nav-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--dark);
+  z-index: 200;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--cream);
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: color 0.3s;
+}
+.nav-mobile-menu a:hover { color: var(--rose-gold); }
+.nav-mobile-close {
+  position: absolute;
+  top: 24px; right: 24px;
+  font-size: 28px;
+  color: var(--champagne);
+  cursor: pointer;
+  background: none;
+  border: none;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .nav-hamburger { display: flex; }
+}
