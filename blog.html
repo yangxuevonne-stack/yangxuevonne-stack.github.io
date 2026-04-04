@@ -1,188 +1,484 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog | Evonne Law</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog & Newsletter | Evonne Xu</title>
+  <meta name="description" content="Insights on U.S.-China M&A, AI regulation, and legal tech from Evonne Xu, M&A lawyer and AI-native legal engineer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --gold: #C49A7A;
+      --dark: #1C1510;
+      --cream: #F7F3EE;
+      --blush: #E8D5C0;
+      --gold-light: #d4b49a;
+      --text-muted: #7a6a5a;
+    }
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPB5RY7C2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4XPB5RY7C2');
-</script>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<style>
-.blog-page-hero { background:var(--dark); padding:140px 60px 80px; text-align:center; }
-.blog-page-hero h1 { font-family:'Cormorant Garamond',serif; font-size:56px; font-weight:300; color:var(--cream); margin-bottom:16px; }
-.blog-page-hero p { font-size:16px; color:rgba(247,243,238,0.6); }
-.filter-bar { background:var(--warm-white); border-bottom:1px solid var(--border); padding:0 60px; display:flex; overflow-x:auto; }
-.filter-btn { padding:16px 24px; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--light-text); cursor:pointer; border:none; background:transparent; border-bottom:2px solid transparent; margin-bottom:-1px; font-family:inherit; transition:all 0.2s; white-space:nowrap; }
-.filter-btn.active { color:var(--rose-gold); border-bottom-color:var(--rose-gold); }
-.filter-btn:hover:not(.active) { color:var(--dark); }
-.posts-container { max-width:900px; margin:0 auto; padding:60px 60px 100px; }
-.post-card { display:grid; grid-template-columns:1fr auto; gap:32px; align-items:center; padding:40px; background:var(--cream); border:1px solid var(--border); margin-bottom:20px; text-decoration:none; color:inherit; transition:all 0.3s; }
-.post-card:hover { box-shadow:0 16px 48px rgba(28,21,16,0.1); transform:translateY(-3px); border-color:var(--champagne); }
-.post-cat { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--rose-gold); margin-bottom:12px; }
-.post-title { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:400; line-height:1.35; margin-bottom:12px; color:var(--dark); }
-.post-excerpt { font-size:14px; line-height:1.8; color:var(--light-text); }
-.post-meta { font-size:12px; color:var(--rose-gold); margin-top:16px; display:flex; gap:16px; }
-.post-arrow { font-family:'Cormorant Garamond',serif; font-size:36px; color:var(--champagne); transition:color 0.3s; flex-shrink:0; }
-.post-card:hover .post-arrow { color:var(--rose-gold); }
-.empty-state { text-align:center; padding:80px 20px; color:var(--light-text); }
-.empty-state h3 { font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:300; margin-bottom:12px; }
-.loading { text-align:center; padding:80px; color:var(--light-text); font-size:13px; letter-spacing:2px; }
-</style>
+    body {
+      background-color: var(--cream);
+      color: var(--dark);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+    }
+
+    /* ── Hero ── */
+    .blog-hero {
+      background: var(--dark);
+      padding: 100px 40px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 0%, rgba(196,154,122,0.18) 0%, transparent 65%),
+                  radial-gradient(ellipse at 10% 100%, rgba(196,154,122,0.10) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    .blog-hero .eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .blog-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .blog-hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .blog-hero .subtitle {
+      font-size: 15px;
+      color: rgba(247,243,238,0.55);
+      max-width: 480px;
+      margin: 0 auto 0;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── Divider ── */
+    .section-divider {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      margin: 28px auto;
+      opacity: 0.6;
+    }
+
+    /* ── Main layout ── */
+    .blog-main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 72px 32px 100px;
+    }
+
+    /* ── Subscribe card ── */
+    .subscribe-card {
+      background: var(--dark);
+      border-radius: 4px;
+      padding: 56px 48px;
+      margin-bottom: 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .subscribe-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .subscribe-card .card-eyebrow {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .subscribe-card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .subscribe-card p {
+      font-size: 14px;
+      color: rgba(247,243,238,0.5);
+      line-height: 1.75;
+      max-width: 480px;
+      margin-bottom: 36px;
+    }
+
+    .subscribe-form {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .subscribe-form input[type="email"] {
+      flex: 1;
+      min-width: 220px;
+      padding: 14px 18px;
+      background: rgba(247,243,238,0.07);
+      border: 1px solid rgba(196,154,122,0.3);
+      border-radius: 2px;
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .subscribe-form input[type="email"]::placeholder {
+      color: rgba(247,243,238,0.3);
+    }
+
+    .subscribe-form input[type="email"]:focus {
+      border-color: var(--gold);
+    }
+
+    .subscribe-form button {
+      padding: 14px 28px;
+      background: var(--gold);
+      color: var(--dark);
+      border: none;
+      border-radius: 2px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+
+    .subscribe-form button:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    .subscribe-form button:active {
+      transform: translateY(0);
+    }
+
+    .form-note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: rgba(247,243,238,0.28);
+      letter-spacing: 0.3px;
+    }
+
+    .success-msg {
+      display: none;
+      margin-top: 16px;
+      padding: 14px 18px;
+      background: rgba(196,154,122,0.15);
+      border: 1px solid rgba(196,154,122,0.3);
+      border-radius: 2px;
+      color: var(--gold-light);
+      font-size: 13px;
+    }
+
+    /* ── Topics ── */
+    .topics-section {
+      margin-bottom: 64px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+    }
+
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .topic-pill {
+      padding: 18px 22px;
+      border: 1px solid var(--blush);
+      border-radius: 2px;
+      background: white;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+
+    .topic-pill:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .topic-pill .topic-icon {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .topic-pill h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .topic-pill p {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── Archive CTA ── */
+    .archive-cta {
+      text-align: center;
+      padding: 56px 40px;
+      border: 1px solid var(--blush);
+      border-radius: 4px;
+      background: white;
+    }
+
+    .archive-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 300;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
+    .archive-cta p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 13px 32px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s, transform 0.15s;
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--dark);
+      transform: translateY(-1px);
+    }
+
+    /* ── Language toggle support ── */
+    [data-lang] { display: none; }
+    body.lang-en [data-lang="en"],
+    body.lang-zh [data-lang="zh"] { display: block; }
+    body.lang-en span[data-lang="en"],
+    body.lang-zh span[data-lang="zh"] { display: inline; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .blog-hero { padding: 80px 24px 60px; }
+      .blog-main { padding: 48px 20px 72px; }
+      .subscribe-card { padding: 36px 24px; }
+      .subscribe-form { flex-direction: column; }
+      .subscribe-form button { width: 100%; }
+    }
+  </style>
 </head>
+<body class="lang-en">
 
-<body>
-<nav>
-  <a href="index.html" class="nav-logo">E<span>.</span>LAW</a>
-  <ul class="nav-links">
-    <li><a href="index.html#about">关于我</a></li>
-    <li><a href="index.html#services">服务</a></li>
-    <li><a href="index.html#portfolio">AI作品</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="videos.html">视频</a></li>
-    <li><a href="index.html#newsletter">订阅</a></li>
-    <li><a href="index.html#contact" class="nav-cta">预约咨询</a></li>
-  </ul>
-</nav>
+  <!-- ── Nav (matches site nav) ── -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Evonne Xu</a>
+      <div class="nav-links">
+        <a href="index.html" data-lang="en">Home</a>
+        <a href="index.html" data-lang="zh">首页</a>
+        <a href="blog.html" class="active" data-lang="en">Blog</a>
+        <a href="blog.html" class="active" data-lang="zh">博客</a>
+        <a href="videos.html" data-lang="en">Videos</a>
+        <a href="videos.html" data-lang="zh">视频</a>
+        <a href="index.html#contact" data-lang="en">Contact</a>
+        <a href="index.html#contact" data-lang="zh">联系</a>
+        <button class="lang-toggle" onclick="toggleLang()">中文</button>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-<div class="blog-page-hero">
-  <p class="section-tag" style="margin-bottom:16px;">内容中心</p>
-  <h1>法律 × 商业 × AI</h1>
-  <p>深度解读AI监管动态、跨境并购趋势与法律风险</p>
-</div>
+  <!-- ── Hero ── -->
+  <section class="blog-hero">
+    <p class="eyebrow" data-lang="en">Newsletter & Insights</p>
+    <p class="eyebrow" data-lang="zh">时事通讯与洞察</p>
+    <div class="section-divider"></div>
+    <h1 data-lang="en">M&A, AI & the <em>Law</em><br>Decoded.</h1>
+    <h1 data-lang="zh">并购、AI与法律<br><em>深度解析</em></h1>
+    <p class="subtitle" data-lang="en">Bilingual insights on cross-border M&A, AI regulation, and legal tech — written for lawyers, dealmakers, and founders navigating U.S.–China complexity.</p>
+    <p class="subtitle" data-lang="zh">关于跨境并购、AI监管与法律科技的双语洞察——专为律师、投资人及在中美两国开展业务的创始人撰写。</p>
+  </section>
 
-<div class="filter-bar">
-  <button class="filter-btn active" onclick="filterPosts('all',this)">全部</button>
-  <button class="filter-btn" onclick="filterPosts('deep-dive',this)">深度分析</button>
-  <button class="filter-btn" onclick="filterPosts('ai-compliance',this)">AI合规</button>
-  <button class="filter-btn" onclick="filterPosts('ma',this)">跨境并购</button>
-  <button class="filter-btn" onclick="filterPosts('startup-law',this)">创业法律</button>
-  <button class="filter-btn" onclick="filterPosts('market-analysis',this)">市场分析</button>
-</div>
+  <!-- ── Main ── -->
+  <main class="blog-main">
 
-<div class="posts-container">
-  <div id="posts-list"><div class="loading">加载中…</div></div>
-</div>
+    <!-- Subscribe card -->
+    <div class="subscribe-card">
+      <p class="card-eyebrow" data-lang="en">Free Newsletter</p>
+      <p class="card-eyebrow" data-lang="zh">免费订阅</p>
+      <h2 data-lang="en">Get the edge<br>on every deal.</h2>
+      <h2 data-lang="zh">掌握每笔交易的<br>先机。</h2>
+      <p data-lang="en">Join founders, in-house counsel, and dealmakers who read Evonne's bilingual breakdown of what's actually moving in cross-border M&A and AI law.</p>
+      <p data-lang="zh">加入创始人、企业法律顾问和交易撮合者的行列，阅读Evonne对跨境并购和AI法律领域真正重要动态的双语解读。</p>
 
-<script>
-const categoryLabels = {
-  'ai-compliance':'AI合规',
-  'ma':'跨境并购',
-  'startup-law':'创业法律',
-  'market-analysis':'市场分析',
-  'deep-dive':'深度分析'
-};
+      <form class="subscribe-form" id="subscribeForm">
+        <input type="email" id="emailInput" placeholder="your@email.com" required />
+        <button type="submit" data-lang="en">Subscribe →</button>
+        <button type="submit" data-lang="zh">订阅 →</button>
+      </form>
+      <p class="form-note" data-lang="en">No spam. Unsubscribe anytime. Powered by Beehiiv.</p>
+      <p class="form-note" data-lang="zh">无垃圾邮件。随时取消订阅。由 Beehiiv 提供支持。</p>
+      <div class="success-msg" id="successMsg">
+        <span data-lang="en">✓ You're in! Check your inbox to confirm.</span>
+        <span data-lang="zh">✓ 订阅成功！请检查收件箱确认。</span>
+      </div>
+    </div>
 
-let allPosts = [];
-
-// ================================================================
-// 博客文章自动加载系统
-// 新增文章时：只需在后台发布，然后把文件名加到 _posts/blog/index.json
-// index.json 格式: ["xai-vs-california.md", "colorado-sb205.md", ...]
-// ================================================================
-
-function parseFrontmatter(text) {
-  const match = text.match(/^---\n([\s\S]*?)\n---/);
-  if (!match) return {};
-  const data = {};
-  match[1].split('\n').forEach(line => {
-    const i = line.indexOf(':');
-    if (i > -1) {
-      const k = line.slice(0,i).trim();
-      const v = line.slice(i+1).trim().replace(/^["']|["']$/g,'');
-      data[k] = v;
-    }
-  });
-  return data;
-}
-
-async function loadPosts() {
-  try {
-    // 第一步：从 index.json 读取文章列表（自动，不需要手动维护）
-    const indexRes = await fetch('_posts/blog/index.json?t=' + Date.now());
-    
-    let postFiles = [];
-    
-    if (indexRes.ok) {
-      postFiles = await indexRes.json();
-    } else {
-      // 如果 index.json 不存在，fallback 到手动列表
-      postFiles = [
-        'xai-vs-california.md',
-        'colorado-sb205.md',
-        'humanoid-robotics-ma.md'
-      ];
-    }
-
-    // 第二步：读取每篇文章的 frontmatter
-    const results = await Promise.allSettled(postFiles.map(async filename => {
-      try {
-        const r = await fetch('_posts/blog/' + filename + '?t=' + Date.now());
-        if (!r.ok) return null;
-        const text = await r.text();
-        const data = parseFrontmatter(text);
-        if (data.published === 'false') return null;
-        return {
-          ...data,
-          url: 'blog/' + filename.replace('.md', '.html')
-        };
-      } catch { return null; }
-    }));
-
-    allPosts = results
-      .filter(r => r.status === 'fulfilled' && r.value)
-      .map(r => r.value)
-      .sort((a, b) => {
-        // 按日期倒序排列（新的在前）
-        if (!a.date || !b.date) return 0;
-        return new Date(b.date) - new Date(a.date);
-      });
-
-    renderPosts(allPosts);
-
-  } catch(e) {
-    document.getElementById('posts-list').innerHTML =
-      '<div class="empty-state"><h3>暂无文章</h3><p>请到后台发布内容。</p></div>';
-  }
-}
-
-function renderPosts(posts) {
-  const el = document.getElementById('posts-list');
-  if (!posts.length) {
-    el.innerHTML = '<div class="empty-state"><h3>暂无文章</h3><p>请到后台发布内容。</p></div>';
-    return;
-  }
-  el.innerHTML = posts.map(p => `
-    <a href="${p.url}" class="post-card">
-      <div>
-        <div class="post-cat">${categoryLabels[p.category] || p.category || 'AI法律'}</div>
-        <div class="post-title">${p.title || '无标题'}</div>
-        <p class="post-excerpt">${p.excerpt || ''}</p>
-        <div class="post-meta">
-          <span>${p.date || ''}</span>
-          ${p.readTime ? `<span>·</span><span>${p.readTime}</span>` : ''}
+    <!-- Topics -->
+    <div class="topics-section">
+      <p class="section-label" data-lang="en">What I write about</p>
+      <p class="section-label" data-lang="zh">写作主题</p>
+      <div class="topics-grid">
+        <div class="topic-pill">
+          <div class="topic-icon">⚖️</div>
+          <h3 data-lang="en">Cross-Border M&A</h3>
+          <h3 data-lang="zh">跨境并购</h3>
+          <p data-lang="en">HSR, CFIUS, RWI — the mechanics behind U.S.–China deals.</p>
+          <p data-lang="zh">HSR、CFIUS、RWI——中美交易背后的法律机制。</p>
+        </div>
+        <div class="topic-pill">
+          <div class="topic-icon">🤖</div>
+          <h3 data-lang="en">AI Regulation</h3>
+          <h3 data-lang="zh">AI监管</h3>
+          <p data-lang="en">State legislation, federal preemption, privilege doctrine, and compliance.</p>
+          <p data-lang="zh">州立法、联邦抢占、特权原则与合规。</p>
+        </div>
+        <div class="topic-pill">
+          <div class="topic-icon">🔧</div>
+          <h3 data-lang="en">Legal Tech</h3>
+          <h3 data-lang="zh">法律科技</h3>
+          <p data-lang="en">Tools lawyers wish existed — built by a lawyer who codes.</p>
+          <p data-lang="zh">律师渴望拥有的工具——由一位会编程的律师打造。</p>
+        </div>
+        <div class="topic-pill">
+          <div class="topic-icon">🌏</div>
+          <h3 data-lang="en">China Business</h3>
+          <h3 data-lang="zh">中国商业</h3>
+          <p data-lang="en">Geopolitical risk, market access, and strategic positioning.</p>
+          <p data-lang="zh">地缘政治风险、市场准入与战略定位。</p>
         </div>
       </div>
-      <div class="post-arrow">→</div>
-    </a>`).join('');
-}
+    </div>
 
-function filterPosts(cat, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderPosts(cat === 'all' ? allPosts : allPosts.filter(p => p.category === cat));
-}
+    <!-- Archive CTA -->
+    <div class="archive-cta">
+      <h2 data-lang="en">Browse all posts</h2>
+      <h2 data-lang="zh">浏览所有文章</h2>
+      <p data-lang="en">Read the full archive of newsletters and insights on Beehiiv.</p>
+      <p data-lang="zh">在 Beehiiv 上阅读完整的通讯和洞察文章档案。</p>
+      <a href="https://evonnexulegal.beehiiv.com" target="_blank" rel="noopener" class="btn-outline">
+        <span data-lang="en">View Archive →</span>
+        <span data-lang="zh">查看档案 →</span>
+      </a>
+    </div>
 
-loadPosts();
-</script>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-name">Evonne Xu</p>
+      <p class="footer-tagline" data-lang="en">M&A Lawyer · AI Legal Engineer · Builder</p>
+      <p class="footer-tagline" data-lang="zh">并购律师 · AI法律工程师 · 构建者</p>
+      <p class="footer-copy" data-lang="en">© 2025 Evonne Xu. All rights reserved.</p>
+      <p class="footer-copy" data-lang="zh">© 2025 徐律师。保留所有权利。</p>
+    </div>
+  </footer>
+
+  <script>
+    // Language toggle
+    function toggleLang() {
+      const isEn = document.body.classList.contains('lang-en');
+      document.body.classList.toggle('lang-en', !isEn);
+      document.body.classList.toggle('lang-zh', isEn);
+      const btn = document.querySelector('.lang-toggle');
+      btn.textContent = isEn ? 'English' : '中文';
+      localStorage.setItem('lang', isEn ? 'zh' : 'en');
+    }
+
+    // Restore saved language
+    const saved = localStorage.getItem('lang') || 'en';
+    document.body.classList.remove('lang-en', 'lang-zh');
+    document.body.classList.add('lang-' + saved);
+    const btn = document.querySelector('.lang-toggle');
+    if (btn) btn.textContent = saved === 'en' ? '中文' : 'English';
+
+    // Mobile menu
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+
+    // Subscribe form → redirect to Beehiiv
+    document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('emailInput').value;
+      if (!email) return;
+      // Redirect to Beehiiv subscribe page with email prefilled
+      window.open(
+        'https://evonnexulegal.beehiiv.com/subscribe?email=' + encodeURIComponent(email),
+        '_blank'
+      );
+      document.getElementById('successMsg').style.display = 'block';
+      document.getElementById('emailInput').value = '';
+    });
+  </script>
+
 </body>
 </html>
