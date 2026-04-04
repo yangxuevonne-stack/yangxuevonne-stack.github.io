@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog | Evonne Law</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPB5RY7C2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4XPB5RY7C2');
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -29,13 +39,14 @@
 .loading { text-align:center; padding:80px; color:var(--light-text); font-size:13px; letter-spacing:2px; }
 </style>
 </head>
-<body>
 
+<body>
 <nav>
   <a href="index.html" class="nav-logo">E<span>.</span>LAW</a>
   <ul class="nav-links">
     <li><a href="index.html#about">关于我</a></li>
     <li><a href="index.html#services">服务</a></li>
+    <li><a href="index.html#portfolio">AI作品</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="videos.html">视频</a></li>
     <li><a href="index.html#newsletter">订阅</a></li>
@@ -63,19 +74,21 @@
 </div>
 
 <script>
-const categoryLabels = {'ai-compliance':'AI合规','ma':'跨境并购','startup-law':'创业法律','market-analysis':'市场分析','deep-dive':'深度分析'};
-
-// ================================================================
-// 📌 新增文章时，把文件名加到这个列表里
-// 例如：'_posts/blog/my-new-article.md'
-// ================================================================
-const postFiles = [
-  '_posts/blog/xai-vs-california.md',
-  '_posts/blog/colorado-sb205.md',
-  '_posts/blog/humanoid-robotics-ma.md',
-];
+const categoryLabels = {
+  'ai-compliance':'AI合规',
+  'ma':'跨境并购',
+  'startup-law':'创业法律',
+  'market-analysis':'市场分析',
+  'deep-dive':'深度分析'
+};
 
 let allPosts = [];
+
+// ================================================================
+// 博客文章自动加载系统
+// 新增文章时：只需在后台发布，然后把文件名加到 _posts/blog/index.json
+// index.json 格式: ["xai-vs-california.md", "colorado-sb205.md", ...]
+// ================================================================
 
 function parseFrontmatter(text) {
   const match = text.match(/^---\n([\s\S]*?)\n---/);
@@ -93,19 +106,53 @@ function parseFrontmatter(text) {
 }
 
 async function loadPosts() {
-  const results = await Promise.allSettled(postFiles.map(async f => {
-    try {
-      const r = await fetch(f);
-      if (!r.ok) return null;
-      const text = await r.text();
-      const data = parseFrontmatter(text);
-      return { ...data, url: 'blog/' + f.split('/').pop().replace('.md','.html') };
-    } catch { return null; }
-  }));
-  allPosts = results
-    .filter(r => r.status==='fulfilled' && r.value && r.value.published !== 'false')
-    .map(r => r.value);
-  renderPosts(allPosts);
+  try {
+    // 第一步：从 index.json 读取文章列表（自动，不需要手动维护）
+    const indexRes = await fetch('_posts/blog/index.json?t=' + Date.now());
+    
+    let postFiles = [];
+    
+    if (indexRes.ok) {
+      postFiles = await indexRes.json();
+    } else {
+      // 如果 index.json 不存在，fallback 到手动列表
+      postFiles = [
+        'xai-vs-california.md',
+        'colorado-sb205.md',
+        'humanoid-robotics-ma.md'
+      ];
+    }
+
+    // 第二步：读取每篇文章的 frontmatter
+    const results = await Promise.allSettled(postFiles.map(async filename => {
+      try {
+        const r = await fetch('_posts/blog/' + filename + '?t=' + Date.now());
+        if (!r.ok) return null;
+        const text = await r.text();
+        const data = parseFrontmatter(text);
+        if (data.published === 'false') return null;
+        return {
+          ...data,
+          url: 'blog/' + filename.replace('.md', '.html')
+        };
+      } catch { return null; }
+    }));
+
+    allPosts = results
+      .filter(r => r.status === 'fulfilled' && r.value)
+      .map(r => r.value)
+      .sort((a, b) => {
+        // 按日期倒序排列（新的在前）
+        if (!a.date || !b.date) return 0;
+        return new Date(b.date) - new Date(a.date);
+      });
+
+    renderPosts(allPosts);
+
+  } catch(e) {
+    document.getElementById('posts-list').innerHTML =
+      '<div class="empty-state"><h3>暂无文章</h3><p>请到后台发布内容。</p></div>';
+  }
 }
 
 function renderPosts(posts) {
@@ -117,12 +164,12 @@ function renderPosts(posts) {
   el.innerHTML = posts.map(p => `
     <a href="${p.url}" class="post-card">
       <div>
-        <div class="post-cat">${categoryLabels[p.category]||p.category||'AI法律'}</div>
-        <div class="post-title">${p.title||'无标题'}</div>
-        <p class="post-excerpt">${p.excerpt||''}</p>
+        <div class="post-cat">${categoryLabels[p.category] || p.category || 'AI法律'}</div>
+        <div class="post-title">${p.title || '无标题'}</div>
+        <p class="post-excerpt">${p.excerpt || ''}</p>
         <div class="post-meta">
-          <span>${p.date||''}</span>
-          ${p.readTime?`<span>·</span><span>${p.readTime}</span>`:''}
+          <span>${p.date || ''}</span>
+          ${p.readTime ? `<span>·</span><span>${p.readTime}</span>` : ''}
         </div>
       </div>
       <div class="post-arrow">→</div>
@@ -130,9 +177,9 @@ function renderPosts(posts) {
 }
 
 function filterPosts(cat, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  renderPosts(cat==='all' ? allPosts : allPosts.filter(p=>p.category===cat));
+  renderPosts(cat === 'all' ? allPosts : allPosts.filter(p => p.category === cat));
 }
 
 loadPosts();
