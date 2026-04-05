@@ -359,6 +359,7 @@ span[data-lang] { display:none; }
   </div>
 </section>
 
+<!-- ===== NEWSLETTER SECTION — 已换成 Beehiiv ===== -->
 <section class="newsletter" id="newsletter">
   <div class="newsletter-inner">
     <div class="newsletter-eyebrow">Weekly Intelligence</div>
@@ -370,10 +371,10 @@ span[data-lang] { display:none; }
       <span data-lang="zh">精选本周最重要的AI监管动态、并购市场趋势、法律风险提示。每周一发送，已有 <strong data-field="subscriberCount">2,400+</strong> 位读者订阅。</span>
       <span data-lang="en">Curated weekly: the most important AI regulatory updates, M&A trends, and legal risk alerts. Published every Monday, with <strong>2,400+</strong> subscribers.</span>
     </p>
-<form class="newsletter-form" id="newsletterForm" onsubmit="handleSubscribe(event)">
-  <input type="email" id="newsletterEmail" placeholder="your@email.com" required>
-  <button type="submit"><span data-lang="zh">免费订阅</span><span data-lang="en">Subscribe Free</span></button>
-</form>
+    <form class="newsletter-form" id="newsletterForm" onsubmit="handleSubscribe(event)">
+      <input type="email" id="newsletterEmail" placeholder="your@email.com" required>
+      <button type="submit"><span data-lang="zh">免费订阅</span><span data-lang="en">Subscribe Free</span></button>
+    </form>
     <p class="newsletter-promise">
       <span data-lang="zh">无垃圾邮件 · 随时退订 · 每周一次</span>
       <span data-lang="en">No spam · Unsubscribe anytime · Weekly</span>
@@ -484,6 +485,18 @@ switchLang(savedLang);
 function openMobileMenu() { document.getElementById('mobileMenu').classList.add('open'); document.body.style.overflow='hidden'; }
 function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); document.body.style.overflow=''; }
 
+// ===== Beehiiv 订阅处理 =====
+function handleSubscribe(e) {
+  e.preventDefault();
+  const email = document.getElementById('newsletterEmail').value;
+  if (!email) return;
+  window.open(
+    'https://evonnexulegal.beehiiv.com/subscribe?email=' + encodeURIComponent(email),
+    '_blank'
+  );
+  document.getElementById('newsletterEmail').value = '';
+}
+
 async function loadSettings() {
   try {
     const res = await fetch('_data/settings.json?t=' + Date.now());
@@ -501,18 +514,6 @@ async function loadSettings() {
   } catch(e) {}
 }
 loadSettings();
-</script>
-  <script>
-function handleSubscribe(e) {
-  e.preventDefault();
-  const email = document.getElementById('newsletterEmail').value;
-  if (!email) return;
-  window.open(
-    'https://evonnexulegal.beehiiv.com/subscribe?email=' + encodeURIComponent(email),
-    '_blank'
-  );
-  document.getElementById('newsletterEmail').value = '';
-}
 </script>
 </body>
 </html>
