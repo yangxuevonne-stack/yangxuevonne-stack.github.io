@@ -400,48 +400,21 @@ function renderHomeBlog() {
 
   grid.innerHTML = `
     <div class="blog-featured">
-      <div class="blog-cat">
-        <span data-lang="zh">${featured.catZh}</span>
-        <span data-lang="en">${featured.catEn}</span>
-      </div>
-      <h3 class="blog-title">
-        <span data-lang="zh">${featured.titleZh}</span>
-        <span data-lang="en">${featured.titleEn}</span>
-      </h3>
-      <p class="blog-excerpt">
-        <span data-lang="zh">${featured.excerptZh}</span>
-        <span data-lang="en">${featured.excerptEn}</span>
-      </p>
+      <div class="blog-cat">${lang === 'zh' ? featured.catZh : featured.catEn}</div>
+      <h3 class="blog-title">${lang === 'zh' ? featured.titleZh : featured.titleEn}</h3>
+      <p class="blog-excerpt">${lang === 'zh' ? featured.excerptZh : featured.excerptEn}</p>
       <div class="blog-meta">
         <span>${featured.date}</span><span>·</span><span>${featured.readTime}</span>
       </div>
-      <a href="${featured.file}" class="read-more">
-        <span data-lang="zh">阅读全文 →</span>
-        <span data-lang="en">Read More →</span>
-      </a>
+      <a href="${featured.file}" class="read-more">${lang === 'zh' ? '阅读全文 →' : 'Read More →'}</a>
     </div>
     ${rest.map(p => `
     <div class="blog-card">
-      <div class="blog-cat-small">
-        <span data-lang="zh">${p.catZh}</span>
-        <span data-lang="en">${p.catEn}</span>
-      </div>
-      <h3 class="blog-title-small">
-        <span data-lang="zh">${p.titleZh}</span>
-        <span data-lang="en">${p.titleEn}</span>
-      </h3>
+      <div class="blog-cat-small">${lang === 'zh' ? p.catZh : p.catEn}</div>
+      <h3 class="blog-title-small">${lang === 'zh' ? p.titleZh : p.titleEn}</h3>
       <div class="blog-meta-small">${p.date}</div>
-      <a href="${p.file}" class="read-more-small">
-        <span data-lang="zh">阅读 →</span>
-        <span data-lang="en">Read →</span>
-      </a>
+      <a href="${p.file}" class="read-more-small">${lang === 'zh' ? '阅读 →' : 'Read →'}</a>
     </div>`).join('')}`;
-
-  // 应用当前语言
-  const curLang = document.body.classList.contains('lang-zh') ? 'zh' : 'en';
-  grid.querySelectorAll('[data-lang]').forEach(el => {
-    el.style.display = el.getAttribute('data-lang') === curLang ? '' : 'none';
-  });
 }
 
 /* ===== 语言切换 ===== */
