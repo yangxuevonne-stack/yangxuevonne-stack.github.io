@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EBITDA低于$500万的卖家如何找到买家并完成交易 | Evonne Xu Legal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C49A7A;
+  --dark: #1C1510;
+  --cream: #F7F3EE;
+  --blush: #E8D5C0;
+  --gold-light: #d4b49a;
+  --text-muted: #7a6a5a;
+  --white: #ffffff;
+  --teal: #1a6b5a;
+  --teal-light: #2a8a73;
+  --teal-pale: #e8f4f0;
+  --amber: #c47e2a;
+  --amber-light: #f5a623;
+  --amber-pale: #fdf4e3;
+  --red: #c8392b;
+  --red-pale: #fdf0ee;
+  --blue: #1a3a5c;
+  --blue-mid: #2a5a8a;
+  --blue-pale: #eef3f8;
+  --ink: #1a1410;
+  --ink-soft: #3a2e25;
+  --ink-muted: #6a5a4a;
+  --paper: #f7f3ee;
+  --paper-warm: #ede8df;
+  --rule: #d8cfc4;
+  --sidebar-w: 240px;
+}
+
+[data-lang] { display: none; }
+body.lang-zh [data-lang="zh"] { display: block; }
+body.lang-en [data-lang="en"] { display: block; }
+span[data-lang] { display: none; }
+body.lang-zh span[data-lang="zh"] { display: inline; }
+body.lang-en span[data-lang="en"] { display: inline; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ===== READING PROGRESS ===== */
+#readingBar {
+  position: fixed; top: 0; left: 0; right: 0; height: 3px;
+  background: rgba(196,154,122,0.15); z-index: 200;
+}
+#readingFill {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--gold), var(--amber-light));
+  transition: width 0.1s;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed; top: 3px; left: 0; right: 0; z-index: 100;
+  background: var(--dark);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; height: 52px;
+  border-bottom: 1px solid rgba(196,154,122,0.3);
+}
+.nav-brand {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--gold);
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  font-weight: 600;
+}
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-links a {
+  color: rgba(247,243,238,0.65);
+  text-decoration: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold); }
+#langBtn {
+  background: rgba(196,154,122,0.15);
+  border: 1px solid rgba(196,154,122,0.4);
+  color: var(--gold);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  padding: 5px 14px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+#langBtn:hover { background: rgba(196,154,122,0.28); }
+
+/* ===== HERO ===== */
+.hero {
+  margin-top: 55px;
+  background: var(--dark);
+  padding: 72px 40px 64px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 80% 50%, rgba(196,154,122,0.07) 0%, transparent 70%),
+    repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(255,255,255,0.018) 59px, rgba(255,255,255,0.018) 60px),
+    repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(255,255,255,0.018) 59px, rgba(255,255,255,0.018) 60px);
+}
+.hero-inner { max-width: 920px; margin: 0 auto; position: relative; }
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 28px; height: 1.5px;
+  background: var(--gold); display: block;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4.5vw, 58px);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.12;
+  margin-bottom: 12px;
+}
+.hero h1 em { font-style: italic; color: var(--gold-light); }
+.hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(17px, 2.2vw, 24px);
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 36px;
+  line-height: 1.5;
+}
+.hero-meta {
+  display: flex; gap: 28px; flex-wrap: wrap;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,0.38);
+  letter-spacing: 0.07em;
+}
+.hero-meta span::before { content: '◆ '; color: var(--gold); font-size: 7px; }
+
+/* ===== STAT STRIP ===== */
+.stat-strip {
+  background: var(--gold);
+  padding: 0;
+}
+.stat-strip-inner {
+  max-width: 920px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+}
+.stat-item {
+  padding: 28px 32px;
+  border-right: 1px solid rgba(28,21,16,0.15);
+  text-align: center;
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--dark);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(28,21,16,0.65);
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+  max-width: 1160px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  gap: 0;
+  padding: 0 40px;
+  align-items: start;
+}
+
+/* ===== TOC ===== */
+.toc {
+  position: sticky; top: 68px;
+  padding: 44px 32px 44px 0;
+  border-right: 1px solid var(--rule);
+  min-height: calc(100vh - 68px);
+}
+.toc-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.toc ul { list-style: none; }
+.toc li { margin-bottom: 2px; }
+.toc a {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 5px 0 5px 12px;
+  border-left: 2px solid transparent;
+  transition: all 0.2s;
+  line-height: 1.4;
+}
+.toc a:hover, .toc a.active {
+  color: var(--dark);
+  border-left-color: var(--gold);
+  padding-left: 16px;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  padding: 44px 0 44px 48px;
+  max-width: 700px;
+}
+
+section.section { margin-bottom: 56px; }
+
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+.section h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin: 28px 0 12px;
+}
+.section p { margin-bottom: 16px; color: var(--ink-soft); }
+hr.section-divider {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0 0 56px 48px;
+}
+
+/* ===== BUYER TYPE CARDS ===== */
+.buyer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+.buyer-card {
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+}
+.buyer-card-header {
+  padding: 14px 18px 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.buyer-card.teal .buyer-card-header { background: var(--teal); }
+.buyer-card.amber .buyer-card-header { background: var(--amber); }
+.buyer-card.blue .buyer-card-header { background: var(--blue); }
+.buyer-card.red .buyer-card-header { background: var(--red); }
+.buyer-icon {
+  width: 32px; height: 32px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
+}
+.buyer-card-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.3;
+}
+.buyer-card-body {
+  padding: 14px 18px;
+  background: #fff;
+}
+.buyer-card-body p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+.buyer-card-body p:last-child { margin-bottom: 0; }
+.buyer-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+.buyer-card.teal .buyer-tag { background: var(--teal-pale); color: var(--teal); }
+.buyer-card.amber .buyer-tag { background: var(--amber-pale); color: var(--amber); }
+.buyer-card.blue .buyer-tag { background: var(--blue-pale); color: var(--blue-mid); }
+.buyer-card.red .buyer-tag { background: var(--red-pale); color: var(--red); }
+
+/* ===== PROCESS FLOW ===== */
+.process-flow {
+  margin: 28px 0;
+  overflow-x: auto;
+}
+.flow-track {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  min-width: 500px;
+}
+.flow-step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.flow-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: calc(50% + 22px);
+  right: calc(-50% + 22px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), rgba(196,154,122,0.3));
+}
+.flow-circle {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--dark);
+  border: 2px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--gold);
+  position: relative; z-index: 1;
+}
+.flow-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+.flow-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+/* ===== FEE TABLE ===== */
+.fee-table-wrap {
+  margin: 24px 0;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  box-shadow: 0 2px 12px rgba(28,21,16,0.06);
+}
+.fee-table {
+  width: 100%; border-collapse: collapse;
+}
+.fee-table thead tr {
+  background: var(--dark);
+}
+.fee-table thead th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 400;
+  border-right: 1px solid rgba(196,154,122,0.15);
+}
+.fee-table thead th:last-child { border-right: none; }
+.fee-table tbody tr {
+  border-bottom: 1px solid var(--rule);
+  transition: background 0.15s;
+}
+.fee-table tbody tr:last-child { border-bottom: none; }
+.fee-table tbody tr:hover { background: rgba(196,154,122,0.06); }
+.fee-table td {
+  padding: 13px 18px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  border-right: 1px solid var(--rule);
+  vertical-align: top;
+}
+.fee-table td:last-child { border-right: none; }
+.fee-table td:first-child { font-weight: 600; color: var(--dark); }
+.fee-highlight { color: var(--amber) !important; font-weight: 600 !important; }
+.fee-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  background: var(--paper-warm);
+  padding: 10px 18px;
+  border-top: 1px solid var(--rule);
+}
+
+/* ===== ALERT BOXES ===== */
+.alert-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.alert-box.warning {
+  background: #fff8f0;
+  border-left: 4px solid var(--amber);
+  color: var(--ink-soft);
+}
+.alert-box.tip {
+  background: #f0f9f6;
+  border-left: 4px solid var(--teal);
+  color: var(--ink-soft);
+}
+.alert-box.danger {
+  background: var(--red-pale);
+  border-left: 4px solid var(--red);
+  color: var(--ink-soft);
+}
+.alert-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.alert-text strong { color: var(--dark); }
+
+/* ===== PULL QUOTE ===== */
+.pull-quote {
+  margin: 32px 0;
+  padding: 28px 32px;
+  background: var(--dark);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+  position: relative;
+}
+.pull-quote::before {
+  content: '"';
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  color: var(--gold);
+  opacity: 0.25;
+  position: absolute;
+  top: -10px; left: 20px;
+  line-height: 1;
+}
+.pull-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--cream);
+  line-height: 1.6;
+  position: relative; z-index: 1;
+}
+
+/* ===== LEGAL POINT CARDS ===== */
+.legal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 24px 0;
+}
+.legal-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+}
+.legal-num {
+  background: var(--dark);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.legal-content { padding: 16px 20px; }
+.legal-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+.legal-desc {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 0;
+}
+.legal-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 2px;
+  margin-bottom: 6px;
+}
+.tag-critical { background: var(--red-pale); color: var(--red); }
+.tag-important { background: var(--amber-pale); color: var(--amber); }
+.tag-note { background: var(--blue-pale); color: var(--blue-mid); }
+
+/* ===== TWO COL ===== */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+.col-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 20px;
+}
+.col-card-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.col-card h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+.col-card p, .col-card li {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+.col-card ul { list-style: none; padding: 0; }
+.col-card li { padding: 3px 0; padding-left: 14px; position: relative; }
+.col-card li::before { content: '›'; position: absolute; left: 0; color: var(--gold); }
+
+/* ===== COST VISUAL ===== */
+.cost-visual {
+  background: var(--dark);
+  border-radius: 6px;
+  padding: 28px;
+  margin: 24px 0;
+  color: #fff;
+}
+.cost-visual-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.cost-bar-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 80px;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.cost-bar-label {
+  font-size: 12px;
+  color: rgba(247,243,238,0.75);
+  line-height: 1.3;
+}
+.cost-bar-label span[data-lang] { display: none; }
+body.lang-zh .cost-bar-label span[data-lang="zh"] { display: inline; }
+body.lang-en .cost-bar-label span[data-lang="en"] { display: inline; }
+.cost-bar-track {
+  height: 10px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.cost-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.8s ease;
+}
+.cost-bar-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  text-align: right;
+}
+
+/* ===== TIMELINE ===== */
+.timeline { margin: 24px 0; }
+.timeline-item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 0;
+  position: relative;
+}
+.timeline-item:not(:last-child) .timeline-dot::after {
+  content: '';
+  position: absolute;
+  left: 35px;
+  top: 36px;
+  bottom: -14px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), rgba(196,154,122,0.2));
+}
+.timeline-dot {
+  display: flex; flex-direction: column; align-items: center;
+  padding-top: 4px;
+  position: relative;
+}
+.timeline-dot-circle {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  background: var(--paper);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  font-weight: 500;
+  z-index: 1;
+}
+.timeline-content { padding: 0 0 28px 16px; }
+.timeline-week {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+.timeline-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+.timeline-desc {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+/* ===== CHECKLIST ===== */
+.checklist {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin: 20px 0;
+}
+.checklist-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 12px;
+  display: flex; align-items: center; gap: 8px;
+}
+.checklist ul { list-style: none; }
+.checklist li {
+  padding: 5px 0;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  display: flex; align-items: flex-start; gap: 10px;
+  border-bottom: 1px solid var(--paper-warm);
+}
+.checklist li:last-child { border-bottom: none; }
+.check-icon { color: var(--teal); font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+
+/* ===== CTA ===== */
+.cta-section {
+  background: var(--dark);
+  padding: 56px 40px;
+  margin-top: 0;
+}
+.cta-inner { max-width: 920px; margin: 0 auto; text-align: center; }
+.cta-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.cta-inner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.cta-inner p {
+  color: rgba(247,243,238,0.6);
+  font-size: 15px;
+  margin-bottom: 32px;
+  max-width: 480px;
+  margin-left: auto; margin-right: auto;
+}
+.cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--gold);
+  color: var(--dark);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 13px 28px;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+.btn-outline {
+  border: 1px solid rgba(196,154,122,0.5);
+  color: var(--gold);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 13px 28px;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s;
+  display: inline-block;
+}
+.btn-outline:hover { background: rgba(196,154,122,0.12); }
+
+/* ===== AUTHOR ===== */
+.author-strip {
+  background: var(--paper-warm);
+  border-top: 1px solid var(--rule);
+  padding: 40px;
+}
+.author-inner {
+  max-width: 920px; margin: 0 auto;
+  display: flex; gap: 24px; align-items: flex-start;
+}
+.author-avatar {
+  width: 56px; height: 56px; flex-shrink: 0;
+  background: var(--dark);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  color: var(--gold);
+  font-weight: 600;
+}
+.author-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--dark);
+}
+.author-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin: 3px 0 10px;
+  text-transform: uppercase;
+}
+.author-bio { font-size: 13.5px; color: var(--ink-soft); line-height: 1.65; margin-bottom: 16px; }
+.author-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+
+footer {
+  background: var(--dark);
+  padding: 20px 40px;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  color: rgba(196,154,122,0.45);
+}
+footer a { color: rgba(196,154,122,0.6); text-decoration: none; }
+footer a:hover { color: var(--gold); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; padding: 0 20px; }
+  .toc { display: none; }
+  main { padding: 32px 0; }
+  nav { padding: 0 20px; }
+  .hero { padding: 52px 20px 48px; }
+  .stat-strip-inner { grid-template-columns: 1fr 1fr; }
+  .stat-item:nth-child(3) { grid-column: 1 / -1; border-right: none; border-top: 1px solid rgba(28,21,16,0.15); }
+  .buyer-grid { grid-template-columns: 1fr; }
+  .two-col { grid-template-columns: 1fr; }
+  .cost-bar-row { grid-template-columns: 100px 1fr 60px; }
+  .cta-section { padding: 40px 20px; }
+  .author-strip { padding: 28px 20px; }
+  footer { padding: 16px 20px; }
+}
+</style>
+</head>
+<body class="lang-zh">
+
+<div id="readingBar"><div id="readingFill"></div></div>
+
+<!-- NAV -->
+<nav>
+  <a href="../index.html" class="nav-brand">Evonne Xu Legal</a>
+  <div class="nav-links">
+    <a href="../index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a>
+    <a href="../blog.html"><span data-lang="zh">博客</span><span data-lang="en">Blog</span></a>
+    <a href="../index.html#contact"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a>
+    <button id="langBtn" onclick="toggleLang()">English</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span data-lang="zh">跨境并购 · 卖方实战指南</span>
+      <span data-lang="en">Cross-Border M&amp;A · Seller Playbook</span>
+    </div>
+    <h1 data-lang="zh">EBITDA低于<em>$500万</em>的卖家<br>如何找到买家并完成交易</h1>
+    <h1 data-lang="en">How Sellers with <em>Sub-$5M EBITDA</em><br>Find Buyers &amp; Close Deals</h1>
+    <div class="hero-sub" data-lang="zh">中小型企业的退出之路：买家寻找策略、中介费用结构，以及律师不会主动提醒你的法律风险</div>
+    <div class="hero-sub" data-lang="en">The exit roadmap for lower middle-market companies: buyer sourcing strategies, broker fee structures, and legal risks nobody warns you about</div>
+    <div class="hero-meta">
+      <span data-lang="zh">2025年6月</span><span data-lang="en">June 2025</span>
+      <span data-lang="zh">阅读约12分钟</span><span data-lang="en">12 min read</span>
+      <span data-lang="zh">Evonne Xu</span><span data-lang="en">Evonne Xu</span>
+    </div>
+  </div>
+</div>
+
+<!-- STAT STRIP -->
+<div class="stat-strip">
+  <div class="stat-strip-inner">
+    <div class="stat-item">
+      <div class="stat-num">~10,000</div>
+      <div class="stat-label" data-lang="zh">年度小企业并购交易（美国）</div>
+      <div class="stat-label" data-lang="en">Annual small biz M&amp;A deals (US)</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">8–12%</div>
+      <div class="stat-label" data-lang="zh">小型交易中介佣金区间</div>
+      <div class="stat-label" data-lang="en">Broker commission range</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">9–18mo</div>
+      <div class="stat-label" data-lang="zh">平均完成交易周期</div>
+      <div class="stat-label" data-lang="en">Average deal timeline</div>
+    </div>
+  </div>
+</div>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+  <!-- TOC -->
+  <aside class="toc">
+    <div class="toc-label"><span data-lang="zh">目录</span><span data-lang="en">Contents</span></div>
+    <ul>
+      <li><a href="#market-reality"><span data-lang="zh">市场现实</span><span data-lang="en">Market Reality</span></a></li>
+      <li><a href="#buyer-types"><span data-lang="zh">买家类型图谱</span><span data-lang="en">Buyer Landscape</span></a></li>
+      <li><a href="#find-buyers"><span data-lang="zh">如何寻找买家</span><span data-lang="en">How to Find Buyers</span></a></li>
+      <li><a href="#broker-fees"><span data-lang="zh">中介费用 + 律师费</span><span data-lang="en">Fees: Broker &amp; Legal</span></a></li>
+      <li><a href="#multiples"><span data-lang="zh">行业估值倍数</span><span data-lang="en">Industry Multiples</span></a></li>
+      <li><a href="#legal-risks"><span data-lang="zh">关键法律风险点</span><span data-lang="en">Key Legal Risks</span></a></li>
+      <li><a href="#timeline"><span data-lang="zh">交易时间线</span><span data-lang="en">Deal Timeline</span></a></li>
+      <li><a href="#checklist"><span data-lang="zh">卖家行动清单</span><span data-lang="en">Seller Checklist</span></a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- SECTION 1: MARKET REALITY -->
+    <section class="section" id="market-reality">
+      <div class="section-label"><span data-lang="zh">第一节</span><span data-lang="en">Section 01</span></div>
+      <h2 data-lang="zh">你面对的市场现实</h2>
+      <h2 data-lang="en">The Market Reality You Face</h2>
+
+      <div data-lang="zh">
+        <p>在并购市场，EBITDA低于500万美元（约合人民币3,500万元）的企业通常被归类为"下中端市场"（Lower Middle Market）或"小型交易"（Small Market Deals）。这个区间的企业面临一个结构性困境：</p>
+        <p><strong>太大了，不适合简单出售；太小了，大型投行不愿意接。</strong></p>
+        <p>根据GF Data和Axial的市场数据，2024年美国有效完成的并购交易中，交易价值在500万至2,500万美元区间的占比约38%，构成了并购市场的最大体量——但这类交易的完成率也是最低的，主要原因是买卖双方无法有效匹配，信息严重不对称。</p>
+        <p>对于有中国背景的卖家（在美运营的华人企业主或希望退出的中国外资企业），还需要叠加额外的监管复杂性：CFIUS审查风险、税务处理（尤其是withholding tax）以及买家身份合规。</p>
+      </div>
+      <div data-lang="en">
+        <p>In the M&A market, businesses with EBITDA below $5 million are typically classified as "Lower Middle Market" or "Small Market Deals." This segment faces a structural paradox:</p>
+        <p><strong>Too large for a simple sale; too small for major investment banks to care about.</strong></p>
+        <p>According to GF Data and Axial market reports, transactions valued between $5M and $25M accounted for roughly 38% of completed U.S. M&A deals in 2024 — the highest volume segment, but also with the lowest completion rates, primarily due to information asymmetry and buyer-seller matching failures.</p>
+        <p>For sellers with Chinese backgrounds — Chinese-American business owners or Chinese-invested companies looking to exit — additional regulatory complexity applies: CFIUS review risk, tax treatment (especially withholding tax), and buyer identity compliance.</p>
+      </div>
+
+      <div class="pull-quote">
+        <p data-lang="zh">"规模不是障碍，信息不对称才是。知道在哪里找买家、怎么讲故事、该规避哪些坑，才是小型并购成功的真正关键。"</p>
+        <p data-lang="en">"Size isn't the obstacle — information asymmetry is. Knowing where to find buyers, how to tell your story, and which pitfalls to avoid is what actually determines success in small-deal M&A."</p>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- SECTION 2: BUYER TYPES -->
+    <section class="section" id="buyer-types">
+      <div class="section-label"><span data-lang="zh">第二节</span><span data-lang="en">Section 02</span></div>
+      <h2 data-lang="zh">买家类型图谱：谁会买你的公司？</h2>
+      <h2 data-lang="en">The Buyer Landscape: Who Will Buy Your Business?</h2>
+
+      <p data-lang="zh">对于EBITDA低于500万的企业，买家结构与大型并购截然不同。了解这些买家的动机与诉求，是找到匹配买家的第一步。</p>
+      <p data-lang="en">For sub-$5M EBITDA businesses, the buyer universe looks very different from large-cap M&A. Understanding each buyer type's motivation is the first step to finding your match.</p>
+
+      <div class="buyer-grid">
+        <div class="buyer-card teal">
+          <div class="buyer-card-header">
+            <div class="buyer-icon">🏗️</div>
+            <div class="buyer-card-title"><span data-lang="zh">战略买家 / 同业竞争者</span><span data-lang="en">Strategic / Trade Buyers</span></div>
+          </div>
+          <div class="buyer-card-body">
+            <span class="buyer-tag"><span data-lang="zh">最常见</span><span data-lang="en">Most Common</span></span>
+            <p data-lang="zh">同行业或相邻行业的运营企业，通过收购获取客户、技术或地理覆盖。通常能给出最高溢价，因为他们能直接实现协同效应。</p>
+            <p data-lang="en">Operating companies in the same or adjacent industries, acquiring for customers, technology, or geographic reach. Typically offer the highest valuations due to direct synergy realization.</p>
+          </div>
+        </div>
+
+        <div class="buyer-card amber">
+          <div class="buyer-card-header">
+            <div class="buyer-icon">💼</div>
+            <div class="buyer-card-title"><span data-lang="zh">搜索基金 / 个人买家</span><span data-lang="en">Search Funds / Owner-Operators</span></div>
+          </div>
+          <div class="buyer-card-body">
+            <span class="buyer-tag"><span data-lang="zh">增速最快</span><span data-lang="en">Fastest Growing</span></span>
+            <p data-lang="zh">个人投资者或MBA毕业生组建的搜索基金，专门寻找稳定现金流的小型企业接管经营。偏好EBITDA $100万–$300万、利润率稳定的公司。</p>
+            <p data-lang="en">Individual investors or MBA-backed search funds looking for stable cash-flow businesses to acquire and operate. Prefer $1M–$3M EBITDA with consistent margins and minimal owner dependency.</p>
+          </div>
+        </div>
+
+        <div class="buyer-card blue">
+          <div class="buyer-card-header">
+            <div class="buyer-icon">📊</div>
+            <div class="buyer-card-title"><span data-lang="zh">私募股权 / 平台投资</span><span data-lang="en">Private Equity / Platform Add-ons</span></div>
+          </div>
+          <div class="buyer-card-body">
+            <span class="buyer-tag"><span data-lang="zh">附加收购</span><span data-lang="en">Add-on Acquisitions</span></span>
+            <p data-lang="zh">PE基金已持有平台公司，寻找附加收购（Add-on）扩大规模。对EBITDA要求弹性较大，但你的业务必须与平台有明确协同。估值通常低于战略买家。</p>
+            <p data-lang="en">PE-backed platform companies acquiring add-ons for scale. EBITDA requirements are flexible, but your business must fit the platform's thesis. Valuations typically trail strategic buyers.</p>
+          </div>
+        </div>
+
+        <div class="buyer-card red">
+          <div class="buyer-card-header">
+            <div class="buyer-icon">🌏</div>
+            <div class="buyer-card-title"><span data-lang="zh">跨境买家（含中国资本）</span><span data-lang="en">Cross-Border Buyers (incl. Chinese Capital)</span></div>
+          </div>
+          <div class="buyer-card-body">
+            <span class="buyer-tag"><span data-lang="zh">需监管审查</span><span data-lang="en">Regulatory Scrutiny</span></span>
+            <p data-lang="zh">中国资本（含国企、民企、PE）在非敏感行业仍有收购空间，但CFIUS审查压力较大。2025年后，涉及技术、制造、基础设施的交易需格外谨慎评估。</p>
+            <p data-lang="en">Chinese capital (state-owned, private, PE) still has room in non-sensitive sectors, but CFIUS scrutiny has intensified. Post-2025, tech, manufacturing, and infrastructure deals require very careful regulatory assessment.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert-box tip">
+        <span class="alert-icon">💡</span>
+        <span class="alert-text" data-lang="zh"><strong>实战建议：</strong>EBITDA低于$200万的企业，搜索基金和个人买家（ETA路径）往往比传统PE更积极匹配。先明确你的目标买家类型，再决定走哪条渠道。</span>
+        <span class="alert-text" data-lang="en"><strong>Practical Tip:</strong> For businesses under $2M EBITDA, search funds and individual ETA (Entrepreneurship Through Acquisition) buyers are often more actively interested than traditional PE. Clarify your target buyer type before choosing your channel.</span>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- SECTION 3: FIND BUYERS -->
+    <section class="section" id="find-buyers">
+      <div class="section-label"><span data-lang="zh">第三节</span><span data-lang="en">Section 03</span></div>
+      <h2 data-lang="zh">如何寻找买家：五条路径详解</h2>
+      <h2 data-lang="en">How to Find Buyers: Five Proven Channels</h2>
+
+      <p data-lang="zh">寻找买家没有单一路径，不同企业体量、行业、卖家诉求对应不同的最优渠道组合。以下是EBITDA低于$500万企业最常见的五种路径。</p>
+      <p data-lang="en">There's no single path to finding a buyer. Different deal sizes, industries, and seller objectives call for different channel combinations. Here are the five most common routes for sub-$5M EBITDA businesses.</p>
+
+      <div class="process-flow">
+        <div class="flow-track">
+          <div class="flow-step">
+            <div class="flow-circle"><span>A</span></div>
+            <div class="flow-label" data-lang="zh">商业经纪人</div>
+            <div class="flow-label" data-lang="en">Business Broker</div>
+            <div class="flow-sub" data-lang="zh">$1M–$5M</div>
+            <div class="flow-sub" data-lang="en">$1M–$5M</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-circle"><span>B</span></div>
+            <div class="flow-label" data-lang="zh">M&A顾问</div>
+            <div class="flow-label" data-lang="en">M&A Advisor</div>
+            <div class="flow-sub" data-lang="zh">$3M–$20M</div>
+            <div class="flow-sub" data-lang="en">$3M–$20M</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-circle"><span>C</span></div>
+            <div class="flow-label" data-lang="zh">线上平台</div>
+            <div class="flow-label" data-lang="en">Online Platforms</div>
+            <div class="flow-sub" data-lang="zh">$500K–$3M</div>
+            <div class="flow-sub" data-lang="en">$500K–$3M</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-circle"><span>D</span></div>
+            <div class="flow-label" data-lang="zh">行业网络</div>
+            <div class="flow-label" data-lang="en">Industry Network</div>
+            <div class="flow-sub" data-lang="zh">全区间</div>
+            <div class="flow-sub" data-lang="en">All ranges</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-circle"><span>E</span></div>
+            <div class="flow-label" data-lang="zh">直接接触</div>
+            <div class="flow-label" data-lang="en">Direct Outreach</div>
+            <div class="flow-sub" data-lang="zh">全区间</div>
+            <div class="flow-sub" data-lang="en">All ranges</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 data-lang="zh">A｜商业经纪人（Business Broker）</h3>
+      <h3 data-lang="en">A | Business Broker</h3>
+      <div data-lang="zh">
+        <p>商业经纪人是小型交易最传统的渠道，主要服务交易价值低于$500万的企业。全美有超过3,000名持证商业经纪人，通过IBBA（国际商业经纪人协会）认证。他们通常在本地或行业垂直领域拥有买家网络，并在BizBuySell、BusinessBroker.net等平台发布挂牌信息。</p>
+        <p><strong>优势：</strong>流程规范，交易经验丰富，对本地市场了解深；<strong>局限：</strong>买家池有限，很少触达战略买家或PE，谈判能力相对较弱。</p>
+      </div>
+      <div data-lang="en">
+        <p>Business brokers are the most traditional channel for smaller deals, primarily serving businesses valued under $5M. There are over 3,000 licensed brokers in the U.S., many certified by IBBA (International Business Brokers Association). They typically maintain local or vertical-specific buyer networks and list on platforms like BizBuySell and BusinessBroker.net.</p>
+        <p><strong>Strengths:</strong> Standardized process, strong local market knowledge; <strong>Limitations:</strong> Limited buyer pool, rarely reaches strategic or PE buyers, weaker negotiation leverage.</p>
+      </div>
+
+      <h3 data-lang="zh">B｜M&A顾问（Lower Middle Market Advisor）</h3>
+      <h3 data-lang="en">B | M&A Advisor (Lower Middle Market)</h3>
+      <div data-lang="zh">
+        <p>对于EBITDA在$200万–$500万的企业，建议寻找专注下中端市场的M&A顾问，而非传统的大型投行。代表性机构包括Generational Equity、Sunbelt Business Advisors、Murphy Business等，以及专注特定行业的精品M&A顾问。</p>
+        <p>M&A顾问会主动构建竞争性流程（CIM + 管理层说明会），向战略买家和PE平台发出保密推介，通常比商业经纪人能争取到更高估值和更好的交易条款。</p>
+      </div>
+      <div data-lang="en">
+        <p>For businesses with EBITDA between $2M–$5M, seek M&A advisors specializing in the lower middle market rather than bulge-bracket banks. Representative firms include Generational Equity, Sunbelt Business Advisors, Murphy Business, and industry-specific boutique advisors.</p>
+        <p>These advisors build competitive processes (CIM + management presentations), reach strategic buyers and PE platforms directly, and typically secure better valuations and terms than generalist brokers.</p>
+      </div>
+
+      <h3 data-lang="zh">C｜线上并购平台</h3>
+      <h3 data-lang="en">C | Online M&A Platforms</h3>
+      <div data-lang="zh">
+        <p>近年来，专注下中端市场的线上平台快速发展，正在改变小型并购的信息流通方式：</p>
+      </div>
+      <div data-lang="en">
+        <p>Online platforms focused on the lower middle market have grown rapidly, changing how small deal information flows:</p>
+      </div>
+
+      <div class="two-col">
+        <div class="col-card">
+          <p class="col-card-label"><span data-lang="zh">买家端聚合平台</span><span data-lang="en">Buy-side Aggregators</span></p>
+          <h4>Axial · DealStream</h4>
+          <ul>
+            <li data-lang="zh">连接卖方顾问与机构买家（PE、搜索基金、家族办公室）</li>
+            <li data-lang="zh">买家需付费注册，质量相对较高</li>
+            <li data-lang="zh">适合交易价值$200万–$5,000万</li>
+            <li data-lang="en">Connects sell-side advisors with institutional buyers (PE, search funds, family offices)</li>
+            <li data-lang="en">Buyers pay to register — quality filter in place</li>
+            <li data-lang="en">Best for $2M–$50M deal value</li>
+          </ul>
+        </div>
+        <div class="col-card">
+          <p class="col-card-label"><span data-lang="zh">卖方直挂平台</span><span data-lang="en">Self-Listing Platforms</span></p>
+          <h4>BizBuySell · Flippa</h4>
+          <ul>
+            <li data-lang="zh">卖家可自行发布挂牌，成本低</li>
+            <li data-lang="zh">买家质量参差，需要做大量筛选</li>
+            <li data-lang="zh">适合线上业务、SaaS、小型服务公司</li>
+            <li data-lang="en">Self-serve listing, low cost</li>
+            <li data-lang="en">Variable buyer quality — heavy screening required</li>
+            <li data-lang="en">Best for online businesses, SaaS, small service firms</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 data-lang="zh">D｜行业网络与协会</h3>
+      <h3 data-lang="en">D | Industry Networks &amp; Associations</h3>
+      <div data-lang="zh">
+        <p>最被低估的渠道。行业协会年会、商会活动、CEO圆桌会议——很多真正有价值的并购交易是在"自然场景"中发生的，而非通过中介。对于有中国背景的企业主，华美商业协会（USACC）、百人会（Committee of 100）等组织同样可以成为买家资源网络。</p>
+      </div>
+      <div data-lang="en">
+        <p>The most underrated channel. Industry association conferences, chamber events, CEO roundtables — many of the best small-deal transactions happen organically, not through intermediaries. For Chinese-American business owners, organizations like USACC (U.S.-Asia Chamber of Commerce) and Committee of 100 can also serve as buyer network resources.</p>
+      </div>
+
+      <h3 data-lang="zh">E｜直接买家接触（Direct Outreach）</h3>
+      <h3 data-lang="en">E | Direct Buyer Outreach</h3>
+      <div data-lang="zh">
+        <p>越来越多的卖家选择自建买家列表——在LinkedIn研究同行竞争者、PE平台附加收购策略，通过律师或顾问进行保密接触。这条路成本最低，但需要卖家自己或委托律师严格管理信息披露和保密协议。</p>
+      </div>
+      <div data-lang="en">
+        <p>More sellers are building their own buyer lists — researching competitors and PE platform add-on strategies on LinkedIn, then making confidential approaches through counsel or advisors. This route has the lowest cost but requires rigorous management of information disclosure and NDAs — ideally handled by legal counsel.</p>
+      </div>
+
+      <div class="alert-box warning">
+        <span class="alert-icon">⚠️</span>
+        <span class="alert-text" data-lang="zh"><strong>注意：</strong>直接接触买家前，务必先签署保密协议（NDA）。泄露核心运营信息（客户名单、财务数据、关键员工）可能直接损害企业价值，甚至导致竞争对手获取商业机密。</span>
+        <span class="alert-text" data-lang="en"><strong>Warning:</strong> Always execute an NDA before sharing any material information with prospective buyers. Leaking core operational data (client lists, financials, key employees) can directly impair business value and expose you to competitive harm.</span>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- SECTION 4: BROKER FEES -->
+    <section class="section" id="broker-fees">
+      <div class="section-label"><span data-lang="zh">第四节</span><span data-lang="en">Section 04</span></div>
+      <h2 data-lang="zh">中介费用结构：你真正要付多少钱？</h2>
+      <h2 data-lang="en">Broker Fee Structure: What Will You Actually Pay?</h2>
+
+      <p data-lang="zh">小型并购的中介费用结构与大型并购有本质差异。了解这些费用结构，是保护卖家利益的第一步。</p>
+      <p data-lang="en">Broker and advisor fee structures for small deals differ fundamentally from large-cap M&A. Understanding these structures is the first step to protecting your interests as a seller.</p>
+
+      <div class="fee-table-wrap">
+        <table class="fee-table">
+          <thead>
+            <tr>
+              <th><span data-lang="zh">顾问类型</span><span data-lang="en">Advisor Type</span></th>
+              <th><span data-lang="zh">适用交易规模</span><span data-lang="en">Deal Size Range</span></th>
+              <th><span data-lang="zh">前期费用</span><span data-lang="en">Upfront Fees</span></th>
+              <th><span data-lang="zh">成功佣金</span><span data-lang="en">Success Fee</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span data-lang="zh">商业经纪人</span><span data-lang="en">Business Broker</span></td>
+              <td><span data-lang="zh">$50万–$300万</span><span data-lang="en">$500K–$3M</span></td>
+              <td><span data-lang="zh">通常无/极低</span><span data-lang="en">None / Minimal</span></td>
+              <td class="fee-highlight">10–12%</td>
+            </tr>
+            <tr>
+              <td><span data-lang="zh">M&A顾问（精品）</span><span data-lang="en">M&A Advisor (Boutique)</span></td>
+              <td><span data-lang="zh">$200万–$2,500万</span><span data-lang="en">$2M–$25M</span></td>
+              <td><span data-lang="zh">$1万–$5万 月费</span><span data-lang="en">$10K–$50K/mo retainer</span></td>
+              <td class="fee-highlight">5–8%</td>
+            </tr>
+            <tr>
+              <td><span data-lang="zh">投行（中型）</span><span data-lang="en">Investment Bank (Mid-size)</span></td>
+              <td><span data-lang="zh">$1,000万+</span><span data-lang="en">$10M+</span></td>
+              <td><span data-lang="zh">$5万–$15万 月费</span><span data-lang="en">$50K–$150K/mo retainer</span></td>
+              <td class="fee-highlight">3–5%</td>
+            </tr>
+            <tr>
+              <td><span data-lang="zh">Lehman公式（参考）</span><span data-lang="en">Lehman Formula (Reference)</span></td>
+              <td><span data-lang="zh">历史参考</span><span data-lang="en">Historical reference</span></td>
+              <td>—</td>
+              <td><span data-lang="zh">5-4-3-2-1梯度递减</span><span data-lang="en">5-4-3-2-1 sliding scale</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="fee-note">
+          <span data-lang="zh">* Lehman公式：首$100万 × 5%，次$100万 × 4%，以此类推；现代版通常为"Double Lehman"（费率翻倍）。最终费用以签约时协议为准。</span>
+          <span data-lang="en">* Lehman Formula: First $1M × 5%, next $1M × 4%, etc.; modern usage often applies "Double Lehman" (doubled rates). Final fees are determined by signed engagement letter.</span>
+        </div>
+      </div>
+
+      <div class="cost-visual">
+        <div class="cost-visual-title"><span data-lang="zh">实际费用示例：$400万交易价值（总成本对比）</span><span data-lang="en">Real Cost Example: $4M Transaction Value (Total Cost Comparison)</span></div>
+        <div class="cost-bar-row">
+          <div class="cost-bar-label"><span data-lang="zh">商业经纪人 (10%)</span><span data-lang="en">Business Broker (10%)</span></div>
+          <div class="cost-bar-track"><div class="cost-bar-fill" style="width:80%; background: linear-gradient(90deg,#c8392b,#e8734a);"></div></div>
+          <div class="cost-bar-val">$400K</div>
+        </div>
+        <div class="cost-bar-row">
+          <div class="cost-bar-label"><span data-lang="zh">M&A顾问 (6%)</span><span data-lang="en">M&A Advisor (6%)</span></div>
+          <div class="cost-bar-track"><div class="cost-bar-fill" style="width:50%; background: linear-gradient(90deg,#c49a7a,#d4b49a);"></div></div>
+          <div class="cost-bar-val">$240K</div>
+        </div>
+        <div class="cost-bar-row">
+          <div class="cost-bar-label"><span data-lang="zh">卖方律师费（简单）</span><span data-lang="en">Seller Legal (Simple)</span></div>
+          <div class="cost-bar-track"><div class="cost-bar-fill" style="width:20%; background: linear-gradient(90deg,#1a6b5a,#2a8a73);"></div></div>
+          <div class="cost-bar-val">$30–50K</div>
+        </div>
+        <div class="cost-bar-row">
+          <div class="cost-bar-label"><span data-lang="zh">卖方律师费（复杂）</span><span data-lang="en">Seller Legal (Complex)</span></div>
+          <div class="cost-bar-track"><div class="cost-bar-fill" style="width:38%; background: linear-gradient(90deg,#1a3a5c,#2a5a8a);"></div></div>
+          <div class="cost-bar-val">$80–150K</div>
+        </div>
+        <div class="cost-bar-row">
+          <div class="cost-bar-label"><span data-lang="zh">会计/税务顾问</span><span data-lang="en">Accounting / Tax</span></div>
+          <div class="cost-bar-track"><div class="cost-bar-fill" style="width:16%; background: linear-gradient(90deg,#7a4a2a,#c47e2a);"></div></div>
+          <div class="cost-bar-val">$20–50K</div>
+        </div>
+      </div>
+
+      <h3 data-lang="zh">律师费用详解：你在每个阶段付什么钱？</h3>
+      <h3 data-lang="en">Legal Fee Breakdown: What You Pay at Each Stage</h3>
+
+      <p data-lang="zh">律师费是很多卖家最困惑的成本项——既不透明，又因交易复杂程度差异极大。以下是基于实际市场数据的分层参考。</p>
+      <p data-lang="en">Legal fees are the most opaque cost item for most sellers — they vary enormously by deal complexity. The following is a tiered reference based on actual market data.</p>
+
+      <div class="fee-table-wrap">
+        <table class="fee-table">
+          <thead>
+            <tr>
+              <th><span data-lang="zh">工作阶段</span><span data-lang="en">Work Stage</span></th>
+              <th><span data-lang="zh">简单交易</span><span data-lang="en">Simple Deal</span></th>
+              <th><span data-lang="zh">标准交易</span><span data-lang="en">Standard Deal</span></th>
+              <th><span data-lang="zh">复杂交易</span><span data-lang="en">Complex Deal</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span data-lang="zh">NDA起草 / 审查</span><span data-lang="en">NDA Drafting / Review</span></td>
+              <td><span data-lang="zh" class="fee-highlight">$500–1,500</span><span data-lang="en" class="fee-highlight">$500–1,500</span></td>
+              <td><span data-lang="zh">$1,000–3,000</span><span data-lang="en">$1,000–3,000</span></td>
+              <td><span data-lang="zh">$2,000–5,000</span><span data-lang="en">$2,000–5,000</span></td>
+            </tr>
+            <tr>
+              <td><span data-lang="zh">LOI谈判（意向书）</span><span data-lang="en">LOI Negotiation</span></td>
+              <td><span data-lang="zh" class="fee-highlight">$2,000–5,000</span><span data-lang="en" class="fee-highlight">$2,000–5,000</span></td>
+              <td><span data-lang="zh">$5,000–12,000</span><span data-lang="en">$5,000–12,000</span></td>
+              <td><span data-lang="zh">$10,000–25,000</span><span data-lang="en">$10,000–25,000</span></td>
+            </tr>
+            <tr>
+              <td><span data-lang="zh">SPA / APA起草与谈判</span><span data-lang="en">SPA / APA Drafting &amp; Negotiation</span></td>
+              <td><span data-lang="zh" class="fee-highlight">$15,000–30,000</span><span data-lang="en" class="fee-highlight">$15,000–30,000</span></td>
+              <td><span data-lang="zh">$30,000–70,000</span><span data-lang="en">$30,000–70,000</span></td>
+              <td><span data-lang="zh">$70,000–150,000</span><span data-lang="en">$70,000–150,000</span></td>
+            </tr>
+            <tr>
+              <td><span data-lang="zh">尽调配合 + 数据室管理</span><span data-lang="en">Due Diligence Support + Data Room</span></td>
+              <td><span data-lang="zh" class="fee-highlight">$3,000–8,000</span><span data-lang="en" class="fee-highlight">$3,000–8,000</span></td>
+              <td><span data-lang="zh">$8,000–20,000</span><span data-lang="en">$8,000–20,000</span></td>
+              <td><span data-lang="zh">$20,000–50,000</span><span data-lang="en">$20,000–50,000</span></td>
+            </tr>
+            <tr>
+              <td><span data-lang="zh">披露函（Disclosure Schedules）</span><span data-lang="en">Disclosure Schedules</span></td>
+              <td><span data-lang="zh" class="fee-highlight">$2,000–5,000</span><span data-lang="en" class="fee-highlight">$2,000–5,000</span></td>
+              <td><span data-lang="zh">$5,000–15,000</span><span data-lang="en">$5,000–15,000</span></td>
+              <td><span data-lang="zh">$15,000–40,000</span><span data-lang="en">$15,000–40,000</span></td>
+            </tr>
+            <tr>
+              <td><span data-lang="zh">交割文件 + 签约</span><span data-lang="en">Closing Documents + Signing</span></td>
+              <td><span data-lang="zh" class="fee-highlight">$3,000–6,000</span><span data-lang="en" class="fee-highlight">$3,000–6,000</span></td>
+              <td><span data-lang="zh">$6,000–15,000</span><span data-lang="en">$6,000–15,000</span></td>
+              <td><span data-lang="zh">$15,000–30,000</span><span data-lang="en">$15,000–30,000</span></td>
+            </tr>
+            <tr style="background:var(--paper-warm);">
+              <td style="font-weight:700; color:var(--dark);"><span data-lang="zh">合计（卖方律师费估算）</span><span data-lang="en">Total (Seller Legal Estimate)</span></td>
+              <td colspan="1" class="fee-highlight" style="font-weight:700;">$25–50K</td>
+              <td colspan="1" style="font-weight:700; color:var(--ink-soft);">$55–135K</td>
+              <td colspan="1" style="font-weight:700; color:var(--ink-soft);">$130–300K+</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="fee-note">
+          <span data-lang="zh">简单交易：单一买家、资产结构清晰、无跨境因素、无Earn-out。复杂交易：跨境结构、CFIUS审查、多轮谈判、Earn-out设计、IP争议或员工安排复杂。律师时薪参考：精品并购律师 $400–$800/hr；大城市顶级律所合伙人 $800–$1,500/hr。</span>
+          <span data-lang="en">Simple: single buyer, clean asset structure, no cross-border, no earnout. Complex: cross-border, CFIUS, multi-round negotiations, earnout design, IP disputes, or complex employee arrangements. Hourly rate reference: boutique M&A counsel $400–$800/hr; top-tier big-city partner $800–$1,500/hr.</span>
+        </div>
+      </div>
+
+      <div class="alert-box tip">
+        <span class="alert-icon">💡</span>
+        <span class="alert-text" data-lang="zh"><strong>省钱技巧：</strong>在交易启动前，请律师做"预尽调"（Sell-side Legal Audit），提前识别并修复问题。这笔$3,000–$8,000的前期投入，往往能避免尽调阶段因发现问题导致价格下调或交易破裂，实际上是最高ROI的法律费用。</span>
+        <span class="alert-text" data-lang="en"><strong>Cost-Saving Tip:</strong> Before launching, have counsel conduct a "sell-side legal audit" to identify and fix issues proactively. This $3,000–$8,000 upfront investment often prevents price chips or deal breaks during buyer due diligence — arguably the highest-ROI legal spend in the entire process.</span>
+      </div>
+
+      <div class="alert-box warning">
+        <span class="alert-icon">⚠️</span>
+        <span class="alert-text" data-lang="zh"><strong>核心谈判点：</strong>与中介签约前，务必明确"成功费的计算基础"——是总企业价值（EV）还是仅股权对价？Earn-out部分是否纳入计算？前期月费是否从最终佣金中抵扣？这几个问题的答案可以使最终费用相差20%以上。</span>
+        <span class="alert-text" data-lang="en"><strong>Key Negotiation Points:</strong> Before signing any engagement, clarify the success fee calculation basis — is it total enterprise value or equity consideration only? Does earnout consideration count? Are retainer fees credited against the final success fee? These answers can move your total cost by 20%+.</span>
+      </div>
+
+      <h3 data-lang="zh">什么时候值得付投行费用？</h3>
+      <h3 data-lang="en">When Is It Worth Paying Investment Bank Fees?</h3>
+      <div data-lang="zh">
+        <p>对于EBITDA低于$500万的企业，大型投行（Goldman Sachs、Lazard等）通常不接单，也没有意义。但以下情况下，聘请中型精品投行是合理的：</p>
+        <ul style="list-style:none; padding:0;">
+          <li style="padding:4px 0; padding-left:16px; position:relative; font-size:14px; color:var(--ink-soft);"><span style="position:absolute;left:0;color:var(--gold)">›</span>有多方竞争买家，需要构建正式竞价流程</li>
+          <li style="padding:4px 0; padding-left:16px; position:relative; font-size:14px; color:var(--ink-soft);"><span style="position:absolute;left:0;color:var(--gold)">›</span>交易涉及跨境结构或CFIUS审查风险</li>
+          <li style="padding:4px 0; padding-left:16px; position:relative; font-size:14px; color:var(--ink-soft);"><span style="position:absolute;left:0;color:var(--gold)">›</span>预期估值在$2,000万以上，顾问费用可以被额外溢价覆盖</li>
+          <li style="padding:4px 0; padding-left:16px; position:relative; font-size:14px; color:var(--ink-soft);"><span style="position:absolute;left:0;color:var(--gold)">›</span>行业高度专业，需要顾问具备深度行业关系网络</li>
+        </ul>
+      </div>
+      <div data-lang="en">
+        <p>Bulge-bracket banks (Goldman Sachs, Lazard, etc.) typically don't take sub-$5M EBITDA mandates, and it doesn't make economic sense. However, engaging a mid-size boutique investment bank is justified when:</p>
+        <ul style="list-style:none; padding:0;">
+          <li style="padding:4px 0; padding-left:16px; position:relative; font-size:14px; color:var(--ink-soft);"><span style="position:absolute;left:0;color:var(--gold)">›</span>Multiple competitive buyers exist and a formal auction process is warranted</li>
+          <li style="padding:4px 0; padding-left:16px; position:relative; font-size:14px; color:var(--ink-soft);"><span style="position:absolute;left:0;color:var(--gold)">›</span>Cross-border structure or CFIUS review risk is involved</li>
+          <li style="padding:4px 0; padding-left:16px; position:relative; font-size:14px; color:var(--ink-soft);"><span style="position:absolute;left:0;color:var(--gold)">›</span>Expected valuation exceeds $20M — premium achieved can cover advisor fees</li>
+          <li style="padding:4px 0; padding-left:16px; position:relative; font-size:14px; color:var(--ink-soft);"><span style="position:absolute;left:0;color:var(--gold)">›</span>Highly specialized industry where deep relationship networks matter</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- SECTION 5: MULTIPLES -->
+    <section class="section" id="multiples">
+      <div class="section-label"><span data-lang="zh">第五节</span><span data-lang="en">Section 05</span></div>
+      <h2 data-lang="zh">你的公司值多少倍？行业估值倍数参考</h2>
+      <h2 data-lang="en">What Multiple Will Your Business Fetch? Industry Benchmarks</h2>
+
+      <div data-lang="zh">
+        <p>EBITDA倍数（EV/EBITDA）是下中端市场最常用的估值锚点。对于EBITDA低于$500万的企业，倍数普遍低于中大型交易——这被称为"小公司折价"（Small Company Discount），通常在1–3倍EBITDA之间。</p>
+        <p>以下行业基准数据综合自GF Data、Axial和BVR（Business Valuation Resources）2023–2024年的成交数据，适用于EBITDA $100万–$500万区间的私人公司交易。</p>
+      </div>
+      <div data-lang="en">
+        <p>EBITDA multiples (EV/EBITDA) are the most common valuation anchor in the lower middle market. For sub-$5M EBITDA businesses, multiples are systematically lower than mid-to-large deals — this is known as the "small company discount," typically 1–3x EBITDA below comparable larger peers.</p>
+        <p>The industry benchmarks below are drawn from GF Data, Axial, and BVR (Business Valuation Resources) 2023–2024 transaction data, applicable to private company deals with $1M–$5M EBITDA.</p>
+      </div>
+
+      <!-- MULTIPLE VISUAL CHART -->
+      <div class="cost-visual" style="margin-bottom:0; border-radius:6px 6px 0 0;">
+        <div class="cost-visual-title"><span data-lang="zh">各行业 EV/EBITDA 倍数区间（下中端市场，2023–2024）</span><span data-lang="en">EV/EBITDA Multiple Ranges by Industry (Lower Middle Market, 2023–2024)</span></div>
+
+        <div class="cost-bar-row">
+          <div class="cost-bar-label"><span data-lang="zh">SaaS / 软件</span><span data-lang="en">SaaS / Software</span></div>
+          <div class="cost-bar-track">
+            <div class="cost-bar-fill" style="width:90%; background: linear-gradient(90deg,#1a6b5a,#2a8a73);"></div>
+          </div>
+          <div class="cost-bar-val" style="color:#2a8a73;">8–14×</div>
+        </div>
+
+        <div class="cost-bar-row">
+          <div class="cost-bar-label"><span data-lang="zh">医疗服务</span><span data-lang="en">Healthcare Services</span></div>
+          <div class="cost-bar-track">
+            <div class="cost-bar-fill" style="width:75%; background: linear-gradient(90deg,#1a6b5a,#2a8a73);"></div>
+          </div>
+          <div class="cost-bar-val" style="color:#2a8a73;">6–10×</div>
+        </div>
+
+        <div class="cost-bar-row">
+          <div class="cost-bar-label"><span data-lang="zh">IT服务 / MSP</span><span data-lang="en">IT Services / MSP</span></div>
+          <div class="cost-bar-track">
+            <div class="cost-bar-fill" style="width:68%; background: linear-gradient(90deg,#c49a7a,#d4b49a);"></div>
+          </div>
+          <div class="cost-bar-val">5–9×</div>
+        </div>
+
+        <div class="cost-bar-row">
+          <div class="cost-bar-label"><span data-lang="zh">商业服务 / B2B</span><span data-lang="en">Business Services / B2B</span></div>
+          <div class="cost-bar-track">
+            <div class="cost-bar-fill" style="width:60%; background: linear-gradient(90deg,#c49a7a,#d4b49a);"></div>
+          </div>
+          <div class="cost-bar-val">4–7×</div>
+        </div>
+
+        <div class="cost-bar-row">
+          <div class="cost-bar-label"><span data-lang="zh">分销 / 批发</span><span data-lang="en">Distribution / Wholesale</span></div>
+          <div class="cost-bar-track">
+            <div class="cost-bar-fill" style="width:50%; background: linear-gradient(90deg,#c47e2a,#f5a623);"></div>
+          </div>
+          <div class="cost-bar-val" style="color:var(--amber);">3.5–6×</div>
+        </div>
+
+        <div class="cost-bar-row">
+          <div class="cost-bar-label"><span data-lang="zh">轻制造 / 加工</span><span data-lang="en">Light Manufacturing</span></div>
+          <div class="cost-bar-track">
+            <div class="cost-bar-fill" style="width:45%; background: linear-gradient(90deg,#c47e2a,#f5a623);"></div>
+          </div>
+          <div class="cost-bar-val" style="color:var(--amber);">3–5.5×</div>
+        </div>
+
+        <div class="cost-bar-row">
+          <div class="cost-bar-label"><span data-lang="zh">建筑 / 承包</span><span data-lang="en">Construction / Contracting</span></div>
+          <div class="cost-bar-track">
+            <div class="cost-bar-fill" style="width:38%; background: linear-gradient(90deg,#c8392b,#e8734a);"></div>
+          </div>
+          <div class="cost-bar-val" style="color:var(--red);">2.5–4.5×</div>
+        </div>
+
+        <div class="cost-bar-row">
+          <div class="cost-bar-label"><span data-lang="zh">餐饮 / 零售</span><span data-lang="en">Restaurant / Retail</span></div>
+          <div class="cost-bar-track">
+            <div class="cost-bar-fill" style="width:28%; background: linear-gradient(90deg,#c8392b,#e8734a);"></div>
+          </div>
+          <div class="cost-bar-val" style="color:var(--red);">2–3.5×</div>
+        </div>
+      </div>
+      <div class="fee-note" style="border-radius:0 0 6px 6px; border:1px solid var(--rule); border-top:none;">
+        <span data-lang="zh">数据来源：GF Data Q4 2024、Axial Deal Flow Report 2024、BVR私人公司成交数据库。倍数为EBITDA $100万–$500万区间中位数区间，战略买家溢价通常高出PE买家1–2×。具体交易倍数因盈利质量、客户集中度、增长率、管理团队深度等因素显著差异。</span>
+        <span data-lang="en">Sources: GF Data Q4 2024, Axial Deal Flow Report 2024, BVR private company transaction database. Multiples reflect median ranges for $1M–$5M EBITDA; strategic buyers typically pay 1–2× premium over PE buyers. Actual multiples vary significantly based on earnings quality, customer concentration, growth rate, and management depth.</span>
+      </div>
+
+      <!-- MULTIPLE FACTORS TABLE -->
+      <h3 data-lang="zh">影响倍数的关键因素</h3>
+      <h3 data-lang="en">Key Factors That Drive Your Multiple Up or Down</h3>
+
+      <p data-lang="zh">同一行业内，不同企业获得的倍数可以相差3–5倍。以下是影响最显著的因素：</p>
+      <p data-lang="en">Within the same industry, multiples can differ by 3–5× between companies. These are the highest-impact factors:</p>
+
+      <div class="two-col" style="margin-top:20px;">
+        <div class="col-card" style="border-top:3px solid var(--teal);">
+          <p class="col-card-label" style="color:var(--teal);">📈 <span data-lang="zh">拉高倍数的因素</span><span data-lang="en">Multiple Expanders</span></p>
+          <h4 data-lang="zh">这些特征让买家愿意多付钱</h4>
+          <h4 data-lang="en">Features buyers pay premium for</h4>
+          <ul>
+            <li data-lang="zh">经常性收入（订阅/合同）占比高（>60%）</li>
+            <li data-lang="en">High recurring revenue (subscription/contract) &gt;60%</li>
+            <li data-lang="zh">客户分散，无单一客户超过15%收入</li>
+            <li data-lang="en">Diversified customers, no single client &gt;15% revenue</li>
+            <li data-lang="zh">EBITDA利润率持续提升，近3年复合增长率>10%</li>
+            <li data-lang="en">Improving EBITDA margins, &gt;10% CAGR over 3 years</li>
+            <li data-lang="zh">管理团队不依赖老板，可独立运营</li>
+            <li data-lang="en">Management team operating independently of owner</li>
+            <li data-lang="zh">可防御的竞争壁垒（专利、长期合同、品牌）</li>
+            <li data-lang="en">Defensible competitive moat (patents, long-term contracts, brand)</li>
+            <li data-lang="zh">明确的增长路径（新产品/地域/客群可见）</li>
+            <li data-lang="en">Visible growth runway (new products, geographies, segments)</li>
+          </ul>
+        </div>
+        <div class="col-card" style="border-top:3px solid var(--red);">
+          <p class="col-card-label" style="color:var(--red);">📉 <span data-lang="zh">压低倍数的因素</span><span data-lang="en">Multiple Compressors</span></p>
+          <h4 data-lang="zh">这些特征让买家大幅砍价</h4>
+          <h4 data-lang="en">Features that trigger heavy discounting</h4>
+          <ul>
+            <li data-lang="zh">老板依赖严重：关键关系、技能全在老板手中</li>
+            <li data-lang="en">Heavy owner-dependency: key relationships/skills concentrated in founder</li>
+            <li data-lang="zh">客户高度集中：前两大客户占收入>40%</li>
+            <li data-lang="en">Customer concentration: top 2 clients &gt;40% of revenue</li>
+            <li data-lang="zh">财务记录不完整、无审计报告</li>
+            <li data-lang="en">Incomplete financials, no audit or review</li>
+            <li data-lang="zh">收入不稳定，项目驱动型（无合同保障）</li>
+            <li data-lang="en">Lumpy, project-based revenue with no contractual backlog</li>
+            <li data-lang="zh">未决法律纠纷、环境合规问题</li>
+            <li data-lang="en">Pending litigation, environmental compliance issues</li>
+            <li data-lang="zh">行业本身处于结构性衰退</li>
+            <li data-lang="en">Industry in structural secular decline</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="alert-box warning">
+        <span class="alert-icon">⚠️</span>
+        <span class="alert-text" data-lang="zh"><strong>"小公司折价"现实：</strong>EBITDA低于$200万的企业，在同行业内比$500万以上的企业低1.5–3倍EBITDA倍数。这意味着：同样的$200万EBITDA，如果能增长到$500万再卖，估值的增幅可能远超收益本身的增幅。"等一等再卖"有时是最好的策略。</span>
+        <span class="alert-text" data-lang="en"><strong>"Small Company Discount" Reality:</strong> Businesses with EBITDA below $2M trade at 1.5–3× lower multiples than $5M+ peers in the same industry. This means: the same $2M EBITDA, if grown to $5M before selling, may generate a valuation increase far exceeding the earnings growth itself. "Wait and grow" is sometimes the best exit strategy.</span>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- SECTION 6: LEGAL RISKS -->
+    <section class="section" id="legal-risks">
+      <div class="section-label"><span data-lang="zh">第六节</span><span data-lang="en">Section 06</span></div>
+      <h2 data-lang="zh">卖家必须知道的八个法律风险点</h2>
+      <h2 data-lang="en">Eight Legal Risks Every Seller Must Know</h2>
+
+      <p data-lang="zh">小型并购中，卖家往往因为对法律细节不熟悉而在谈判中处于劣势，甚至在交割后面临追索风险。以下是实践中最常见的法律坑。</p>
+      <p data-lang="en">In small deals, sellers often find themselves at a disadvantage due to unfamiliarity with legal details — or face post-closing clawback risk. These are the most common legal pitfalls in practice.</p>
+
+      <div class="legal-grid">
+        <div class="legal-card">
+          <div class="legal-num">1</div>
+          <div class="legal-content">
+            <span class="legal-tag tag-critical"><span data-lang="zh">高危</span><span data-lang="en">High Risk</span></span>
+            <div class="legal-title" data-lang="zh">陈述与保证范围过宽（R&W Overreach）</div>
+            <div class="legal-title" data-lang="en">Overly Broad Representations & Warranties</div>
+            <p class="legal-desc" data-lang="zh">SPA中的陈述与保证（R&W）条款是买方事后追索卖方的主要依据。小型交易中，买方律师往往使用大型交易模板，卖家如果不认真谈判，可能签下与实际业务状况不符的"知识性陈述"，在交割后遭到索赔。重点谈判：陈述的知识限定词（to the knowledge of the Seller）、重要性修饰词（Material Adverse Effect）、生存期（Survival Period，建议18个月）和赔偿上限（Cap，建议不超过10%–20%交易对价）。</p>
+            <p class="legal-desc" data-lang="en">R&W provisions are the primary basis for post-closing buyer claims against sellers. In small deals, buyer counsel often imports large-deal templates. Sellers who don't negotiate carefully may sign representations inconsistent with actual business conditions. Key negotiation points: knowledge qualifiers ("to the knowledge of the Seller"), materiality thresholds (MAE), survival periods (18 months recommended), and indemnification caps (suggest 10%–20% of transaction value).</p>
+          </div>
+        </div>
+
+        <div class="legal-card">
+          <div class="legal-num">2</div>
+          <div class="legal-content">
+            <span class="legal-tag tag-critical"><span data-lang="zh">高危</span><span data-lang="en">High Risk</span></span>
+            <div class="legal-title" data-lang="zh">Earn-out条款的隐形陷阱</div>
+            <div class="legal-title" data-lang="en">Hidden Earnout Traps</div>
+            <p class="legal-desc" data-lang="zh">对于EBITDA较低的卖家，买方经常提出Earn-out安排（部分收购价与未来业绩挂钩）。问题在于：Earn-out实现率极低。哈佛商学院研究显示，超过60%的Earn-out最终未被全额支付。卖家需要在SPA中明确：Earn-out期间买方的经营义务（不得故意压低EBITDA）、会计准则的一致性要求、Earn-out争议解决机制（建议引入独立会计师仲裁）。</p>
+            <p class="legal-desc" data-lang="en">For lower-EBITDA sellers, buyers frequently propose earnouts (tying a portion of the price to future performance). The problem: earnout achievement rates are very low. Harvard Business School research shows over 60% of earnouts are not fully paid. Sellers must specify in the SPA: buyer's operating obligations during the earnout period (prohibiting deliberate EBITDA suppression), accounting standard consistency requirements, and earnout dispute resolution mechanisms (recommend independent accountant arbitration).</p>
+          </div>
+        </div>
+
+        <div class="legal-card">
+          <div class="legal-num">3</div>
+          <div class="legal-content">
+            <span class="legal-tag tag-important"><span data-lang="zh">重要</span><span data-lang="en">Important</span></span>
+            <div class="legal-title" data-lang="zh">营运资金调整机制（Working Capital Peg）</div>
+            <div class="legal-title" data-lang="en">Working Capital Adjustment Mechanism</div>
+            <p class="legal-desc" data-lang="zh">几乎所有并购SPA都包含营运资金调整条款：交割时实际营运资金与目标营运资金（Peg）的差额，直接增减交易对价。卖家常见失误：在交割前减少存货、拖延应收账款回收，以"优化"账面数字，结果触发大额调整。建议在Term Sheet阶段即锁定营运资金目标的计算口径和参考历史期间（通常取过去12个月平均）。</p>
+            <p class="legal-desc" data-lang="en">Nearly all M&A SPAs include working capital adjustment provisions: the difference between actual closing working capital and the target peg directly adjusts the purchase price. Common seller mistake: reducing inventory or slowing receivables collections before closing to "optimize" the balance sheet, triggering large post-closing adjustments. Lock down the working capital target definition and reference period (typically trailing 12-month average) at the Term Sheet stage.</p>
+          </div>
+        </div>
+
+        <div class="legal-card">
+          <div class="legal-num">4</div>
+          <div class="legal-content">
+            <span class="legal-tag tag-important"><span data-lang="zh">重要</span><span data-lang="en">Important</span></span>
+            <div class="legal-title" data-lang="zh">竞业禁止协议（Non-Compete）范围谈判</div>
+            <div class="legal-title" data-lang="en">Non-Compete Agreement Scope</div>
+            <p class="legal-desc" data-lang="zh">买方通常要求卖家签署3–5年竞业禁止协议，限制在特定地域和行业内的商业活动。对卖家而言，过宽的竞业禁止条款严重限制未来职业选择。关键谈判点：地域范围（应限于企业实际运营范围，而非"全美国"）、行业定义（越具体越好）、客户不招揽期限（通常2年可接受）。注意：加州法院通常不执行竞业禁止协议，但仍需在SPA中审慎处理。</p>
+            <p class="legal-desc" data-lang="en">Buyers typically require sellers to sign 3–5 year non-compete agreements restricting commercial activities in specific geographies and industries. Overly broad non-competes severely limit future career options. Key negotiation points: geographic scope (limit to actual operating territory, not "nationwide"), industry definition (more specific = better for seller), and non-solicitation period (2 years typically acceptable). Note: California courts generally do not enforce non-competes, but careful SPA drafting is still essential.</p>
+          </div>
+        </div>
+
+        <div class="legal-card">
+          <div class="legal-num">5</div>
+          <div class="legal-content">
+            <span class="legal-tag tag-important"><span data-lang="zh">重要</span><span data-lang="en">Important</span></span>
+            <div class="legal-title" data-lang="zh">资产收购 vs 股权收购的税务影响</div>
+            <div class="legal-title" data-lang="en">Asset Sale vs. Stock Sale Tax Implications</div>
+            <p class="legal-desc" data-lang="zh">买方通常偏好资产收购（可获得步进式税基），卖家通常偏好股权收购（资本利得税率更低）。对于C-Corp卖家，资产收购可能导致双重征税；对于S-Corp或LLC，区别较小但仍然显著。建议在接受LOI之前，先咨询税务律师或CPA，确认交易结构对net proceeds的实际影响。同样注意：338(h)(10)选举可以在形式上实现股权收购但税务上按资产收购处理，是谈判的灵活工具。</p>
+            <p class="legal-desc" data-lang="en">Buyers typically prefer asset acquisitions (they get stepped-up tax basis); sellers typically prefer stock sales (lower capital gains tax rates). For C-Corp sellers, asset sales may trigger double taxation; for S-Corps and LLCs, the distinction is smaller but still significant. Consult a tax attorney or CPA before accepting an LOI to understand the actual net proceeds impact. Also note: a 338(h)(10) election can achieve stock sale economics while being treated as an asset sale for tax purposes — a useful negotiating tool.</p>
+          </div>
+        </div>
+
+        <div class="legal-card">
+          <div class="legal-num">6</div>
+          <div class="legal-content">
+            <span class="legal-tag tag-note"><span data-lang="zh">注意</span><span data-lang="en">Note</span></span>
+            <div class="legal-title" data-lang="zh">关键合同的变更控制条款（Change of Control）</div>
+            <div class="legal-title" data-lang="en">Change-of-Control Clauses in Key Contracts</div>
+            <p class="legal-desc" data-lang="zh">企业的核心客户合同、供应商协议、租赁合同和特许经营协议中，很多包含"变更控制"条款——公司股权发生重大变化时，对方有权终止合同或要求重新谈判。这类条款直接影响企业价值。卖家应在尽调前自行梳理合同，识别哪些合同需要提前获得第三方同意（Third-Party Consent），并在交割条件中明确处理方案。</p>
+            <p class="legal-desc" data-lang="en">Many key customer contracts, supplier agreements, leases, and franchise agreements contain change-of-control provisions — giving counterparties the right to terminate or renegotiate when significant ownership changes occur. These clauses directly impact business value. Sellers should conduct their own contract review before due diligence, identify which agreements require third-party consent, and address this clearly in the closing conditions.</p>
+          </div>
+        </div>
+
+        <div class="legal-card">
+          <div class="legal-num">7</div>
+          <div class="legal-content">
+            <span class="legal-tag tag-note"><span data-lang="zh">注意</span><span data-lang="en">Note</span></span>
+            <div class="legal-title" data-lang="zh">员工过渡安排与WARN Act合规</div>
+            <div class="legal-title" data-lang="en">Employee Transition &amp; WARN Act Compliance</div>
+            <p class="legal-desc" data-lang="zh">交割后若买方计划裁员，WARN Act（联邦法，适用于100人以上企业）和各州类似法规要求提前60天通知。卖家需在SPA中明确哪些员工过渡义务由买方承担，避免在交割后被追索。对于有H-1B持有者的公司，股权变更可能触发visa transfer要求，需提前与移民律师协调。</p>
+            <p class="legal-desc" data-lang="en">If the buyer plans post-closing layoffs, the federal WARN Act (applying to companies with 100+ employees) and analogous state laws require 60-day advance notice. Sellers must clearly allocate employee transition obligations to the buyer in the SPA to avoid post-closing liability. For companies with H-1B visa holders, ownership changes may trigger visa transfer requirements — coordinate with immigration counsel in advance.</p>
+          </div>
+        </div>
+
+        <div class="legal-card">
+          <div class="legal-num">8</div>
+          <div class="legal-content">
+            <span class="legal-tag tag-critical"><span data-lang="zh">高危（跨境）</span><span data-lang="en">High Risk (Cross-Border)</span></span>
+            <div class="legal-title" data-lang="zh">跨境交易的CFIUS与Withholding Tax</div>
+            <div class="legal-title" data-lang="en">CFIUS Review &amp; Withholding Tax in Cross-Border Deals</div>
+            <p class="legal-desc" data-lang="zh">如果卖方是外国个人或外国实体（包括在美国经营的中国资本企业），美国税法要求买方对交易价款扣缴15%的预扣税（FIRPTA Withholding）。卖家可申请IRS Withholding Certificate降低或豁免。此外，如果买方为外国人（特别是中国资本），需评估CFIUS申报义务，即使交易金额低于门槛，在敏感行业（国防、技术、基础设施）也建议主动申报（Voluntary Notice）以降低事后调查风险。</p>
+            <p class="legal-desc" data-lang="en">If the seller is a foreign individual or foreign entity (including Chinese-capital businesses operating in the U.S.), U.S. tax law requires the buyer to withhold 15% of the transaction price (FIRPTA Withholding). Sellers can apply for an IRS Withholding Certificate to reduce or exempt the withholding. Additionally, if the buyer is foreign (especially Chinese capital), evaluate CFIUS notification obligations. Even below the mandatory threshold, voluntary notice in sensitive sectors (defense, technology, infrastructure) is recommended to reduce the risk of post-closing review.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- SECTION 6: TIMELINE -->
+    <section class="section" id="timeline">
+      <div class="section-label"><span data-lang="zh">第七节</span><span data-lang="en">Section 07</span></div>
+      <h2 data-lang="zh">典型交易时间线</h2>
+      <h2 data-lang="en">Typical Deal Timeline</h2>
+
+      <p data-lang="zh">EBITDA低于$500万的交易，从启动到交割平均需要9–18个月。以下是一个结构性流程，供参考规划。</p>
+      <p data-lang="en">Sub-$5M EBITDA deals average 9–18 months from launch to close. Here is a structured process for planning purposes.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <div class="timeline-dot-circle">1</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-week" data-lang="zh">第1–2月</div>
+            <div class="timeline-week" data-lang="en">Months 1–2</div>
+            <div class="timeline-title" data-lang="zh">准备阶段：整理财务、法律文件</div>
+            <div class="timeline-title" data-lang="en">Preparation: Organize Financials & Legal Documents</div>
+            <p class="timeline-desc" data-lang="zh">准备过去3年经审计/复核财务报表、调整后EBITDA计算表（Add-back Schedule）、关键合同清单、组织架构图、IP清单。聘请律师和税务顾问进行预尽调（Sell-side Due Diligence）。</p>
+            <p class="timeline-desc" data-lang="en">Prepare 3 years of audited/reviewed financials, adjusted EBITDA add-back schedule, key contract inventory, org chart, IP schedule. Engage counsel and tax advisors for sell-side due diligence.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <div class="timeline-dot-circle">2</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-week" data-lang="zh">第2–4月</div>
+            <div class="timeline-week" data-lang="en">Months 2–4</div>
+            <div class="timeline-title" data-lang="zh">市场推介：构建CIM，接触买家</div>
+            <div class="timeline-title" data-lang="en">Market: Build CIM, Approach Buyers</div>
+            <p class="timeline-desc" data-lang="zh">与中介共同准备保密信息备忘录（CIM），向目标买家发送NDA，初步筛选兴趣方，组织管理层说明会（Management Presentation）。</p>
+            <p class="timeline-desc" data-lang="en">Prepare Confidential Information Memorandum (CIM) with advisor, distribute NDAs to target buyers, screen for serious interest, conduct Management Presentations.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <div class="timeline-dot-circle">3</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-week" data-lang="zh">第4–6月</div>
+            <div class="timeline-week" data-lang="en">Months 4–6</div>
+            <div class="timeline-title" data-lang="zh">意向书：谈判LOI，锁定买家</div>
+            <div class="timeline-title" data-lang="en">LOI: Negotiate Term Sheet, Select Buyer</div>
+            <p class="timeline-desc" data-lang="zh">收取并评估多份意向书（LOI），重点比较：价格、交易结构（现金/Earn-out比例）、排他期长度、关键条件。签署LOI后进入排他期（通常45–90天）。</p>
+            <p class="timeline-desc" data-lang="en">Receive and evaluate multiple LOIs, comparing: price, structure (cash/earnout ratio), exclusivity period length, key conditions. Execute LOI and enter exclusivity (typically 45–90 days).</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <div class="timeline-dot-circle">4</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-week" data-lang="zh">第6–9月</div>
+            <div class="timeline-week" data-lang="en">Months 6–9</div>
+            <div class="timeline-title" data-lang="zh">尽职调查：配合买方尽调，谈判SPA</div>
+            <div class="timeline-title" data-lang="en">Due Diligence: Support Buyer DD, Negotiate SPA</div>
+            <p class="timeline-desc" data-lang="zh">配合买方财务、法律、运营尽调，同步谈判股权/资产购买协议（SPA/APA）、披露函（Disclosure Schedules）、过渡服务协议（TSA）等。</p>
+            <p class="timeline-desc" data-lang="en">Support buyer financial, legal, and operational due diligence; simultaneously negotiate the SPA/APA, Disclosure Schedules, Transition Services Agreement (TSA), and related documents.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <div class="timeline-dot-circle">5</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-week" data-lang="zh">第9–12月+</div>
+            <div class="timeline-week" data-lang="en">Months 9–12+</div>
+            <div class="timeline-title" data-lang="zh">监管审批 → 交割</div>
+            <div class="timeline-title" data-lang="en">Regulatory Approvals → Closing</div>
+            <p class="timeline-desc" data-lang="zh">获取第三方同意（Change of Control合同），完成HSR申报（如适用），处理CFIUS（如适用），满足所有交割条件，完成资金划转。</p>
+            <p class="timeline-desc" data-lang="en">Obtain third-party consents (change-of-control contracts), complete HSR filing (if applicable), resolve CFIUS (if applicable), satisfy all closing conditions, execute wire transfer.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert-box tip">
+        <span class="alert-icon">💡</span>
+        <span class="alert-text" data-lang="zh"><strong>时间管理关键：</strong>排他期（Exclusivity Period）是整个流程最脆弱的环节。一旦签署LOI进入排他期，卖方就失去了向其他买家出价的机会。建议在排他期开始前，尽量完成sell-side尽调和主要合同审查，减少被动。</span>
+        <span class="alert-text" data-lang="en"><strong>Time Management Key:</strong> The exclusivity period is the most vulnerable stage of the entire process. Once you sign the LOI and enter exclusivity, you lose leverage from competing buyers. Complete sell-side due diligence and major contract review before exclusivity begins to reduce your vulnerability.</span>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- SECTION 7: CHECKLIST -->
+    <section class="section" id="checklist">
+      <div class="section-label"><span data-lang="zh">第八节</span><span data-lang="en">Section 08</span></div>
+      <h2 data-lang="zh">卖家启动行动清单</h2>
+      <h2 data-lang="en">Seller Action Checklist</h2>
+
+      <p data-lang="zh">在正式启动出售流程之前，以下准备工作可以显著提升成交概率和最终估值。</p>
+      <p data-lang="en">Before formally launching a sale process, the following preparations can significantly improve close probability and final valuation.</p>
+
+      <div class="checklist">
+        <div class="checklist-title">📋 <span data-lang="zh">财务准备</span><span data-lang="en">Financial Preparation</span></div>
+        <ul>
+          <li><span class="check-icon">✓</span><span data-lang="zh">过去3年经审计或复核财务报表（P&L, Balance Sheet, Cash Flow）</span><span data-lang="en">3 years of audited or reviewed financial statements (P&L, Balance Sheet, Cash Flow)</span></li>
+          <li><span class="check-icon">✓</span><span data-lang="zh">调整后EBITDA Add-back Schedule（识别非经常性费用）</span><span data-lang="en">Adjusted EBITDA Add-back Schedule (identifying non-recurring items)</span></li>
+          <li><span class="check-icon">✓</span><span data-lang="zh">未来12–24个月财务预测（包含假设说明）</span><span data-lang="en">12–24 month financial projections (with stated assumptions)</span></li>
+          <li><span class="check-icon">✓</span><span data-lang="zh">客户收入集中度分析（前5大客户收入占比）</span><span data-lang="en">Customer revenue concentration analysis (top 5 customer revenue share)</span></li>
+        </ul>
+      </div>
+
+      <div class="checklist">
+        <div class="checklist-title">⚖️ <span data-lang="zh">法律准备</span><span data-lang="en">Legal Preparation</span></div>
+        <ul>
+          <li><span class="check-icon">✓</span><span data-lang="zh">公司成立文件、股权结构表（Cap Table）</span><span data-lang="en">Formation documents, capitalization table (Cap Table)</span></li>
+          <li><span class="check-icon">✓</span><span data-lang="zh">识别所有含变更控制条款的合同</span><span data-lang="en">Identify all contracts with change-of-control provisions</span></li>
+          <li><span class="check-icon">✓</span><span data-lang="zh">IP清单：专利、商标、版权、域名的所有权确认</span><span data-lang="en">IP inventory: confirm ownership of patents, trademarks, copyrights, domains</span></li>
+          <li><span class="check-icon">✓</span><span data-lang="zh">未决诉讼/政府调查/合规问题梳理</span><span data-lang="en">Review pending litigation, government investigations, compliance matters</span></li>
+          <li><span class="check-icon">✓</span><span data-lang="zh">关键员工协议（Non-compete, Non-solicitation, IP Assignment）</span><span data-lang="en">Key employee agreements (Non-compete, Non-solicitation, IP Assignment)</span></li>
+        </ul>
+      </div>
+
+      <div class="checklist">
+        <div class="checklist-title">🧭 <span data-lang="zh">战略准备</span><span data-lang="en">Strategic Preparation</span></div>
+        <ul>
+          <li><span class="check-icon">✓</span><span data-lang="zh">明确退出目标：全部现金 vs 部分留存 vs Earn-out</span><span data-lang="en">Define exit goals: all-cash vs. partial rollover vs. earnout structure</span></li>
+          <li><span class="check-icon">✓</span><span data-lang="zh">确定目标买家类型（战略/PE/搜索基金）</span><span data-lang="en">Identify target buyer type (strategic / PE / search fund)</span></li>
+          <li><span class="check-icon">✓</span><span data-lang="zh">确认企业"去老板化"程度（买家对Owner-Dependent业务估值折扣大）</span><span data-lang="en">Assess owner-dependency level (buyers discount owner-dependent businesses heavily)</span></li>
+          <li><span class="check-icon">✓</span><span data-lang="zh">提前咨询并购律师和税务顾问，确定最优交易结构</span><span data-lang="en">Consult M&A counsel and tax advisor to determine optimal transaction structure</span></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-tag"><span data-lang="zh">准备好了吗？</span><span data-lang="en">Ready to Start?</span></div>
+    <h2 data-lang="zh">让专业律师陪你走完每一步</h2>
+    <h2 data-lang="en">Let Expert Counsel Guide You Through Every Step</h2>
+    <p data-lang="zh">每一笔小型并购背后，都有卖家一生的心血。在正式启动之前，与并购律师进行一次深度对话，可以避免未来90%的被动。</p>
+    <p data-lang="en">Every small deal represents a lifetime of effort. A single in-depth consultation with M&A counsel before you launch can prevent 90% of the problems sellers face down the road.</p>
+    <div class="cta-buttons">
+      <a href="https://evonnexulegal.beehiiv.com/subscribe" class="btn-primary">
+        <span data-lang="zh">📩 订阅每周法律简报</span>
+        <span data-lang="en">📩 Subscribe to Weekly Brief</span>
+      </a>
+      <a href="https://calendly.com/evonne-xu-legal/30min" class="btn-outline">
+        <span data-lang="zh">📅 预约30分钟咨询</span>
+        <span data-lang="en">📅 Book 30-Min Consultation</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- AUTHOR -->
+<div class="author-strip">
+  <div class="author-inner">
+    <div class="author-avatar">E</div>
+    <div>
+      <div class="author-name">Evonne Xu</div>
+      <div class="author-title"><span data-lang="zh">并购律师 · AI法律工程师</span><span data-lang="en">M&A Lawyer · AI Legal Engineer</span></div>
+      <p class="author-bio" data-lang="zh">专注于中美跨境并购与AI法律合规。服务汽车、自动化与制造业客户的跨境并购战略设计与执行。如果你正在评估出售企业，或需要了解买家寻找策略、交易结构设计和SPA谈判，欢迎联系。</p>
+      <p class="author-bio" data-lang="en">Specializing in U.S.-China cross-border M&A and AI legal compliance. Serving clients in automotive, automation, and manufacturing on cross-border acquisition strategy and execution. If you are considering selling your business and need guidance on buyer strategy, deal structuring, and SPA negotiation, reach out.</p>
+      <div class="author-cta">
+        <a href="https://evonnexulegal.beehiiv.com/subscribe" class="btn-primary"><span data-lang="zh">订阅每周并购简报</span><span data-lang="en">Subscribe to M&A Brief</span></a>
+        <a href="../index.html#contact" class="btn-outline"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Consultation</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 · <a href="../index.html">evonnexulegal.com</a> · <a href="../blog.html"><span data-lang="zh">博客</span><span data-lang="en">Blog</span></a> · <a href="../index.html#contact"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a></p>
+</footer>
+
+<script>
+  // ===== LANGUAGE SWITCH =====
+  const saved = localStorage.getItem('lang') || 'zh';
+  document.body.className = 'lang-' + saved;
+  document.getElementById('langBtn').textContent = saved === 'zh' ? 'English' : '中文';
+
+  function toggleLang() {
+    const next = document.body.classList.contains('lang-zh') ? 'en' : 'zh';
+    document.body.className = 'lang-' + next;
+    document.getElementById('langBtn').textContent = next === 'zh' ? 'English' : '中文';
+    localStorage.setItem('lang', next);
+  }
+
+  // ===== READING PROGRESS =====
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    document.getElementById('readingFill').style.width = progress + '%';
+  });
+
+  // ===== TOC ACTIVE HIGHLIGHT =====
+  const sections = document.querySelectorAll('section.section');
+  const tocLinks = document.querySelectorAll('.toc a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const id = entry.target.id;
+        const activeLink = document.querySelector('.toc a[href="#' + id + '"]');
+        if (activeLink) activeLink.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-15% 0px -65% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
