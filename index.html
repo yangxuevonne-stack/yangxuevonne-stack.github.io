@@ -289,7 +289,7 @@ span[data-lang] { display:none; }
           <div class="contact-method"><div class="method-icon">📱</div><div><div class="method-label">小红书 / Xiaohongshu</div><div class="method-value" data-field="xiaohongshu">@Evonne美国公司咨询</div></div></div>
           <div class="contact-method"><div class="method-icon">💼</div><div><div class="method-label">LinkedIn</div><div class="method-value" data-field="linkedin">linkedin.com/in/evonnexu</div></div></div>
           <div class="contact-method"><div class="method-icon">📧</div><div><div class="method-label">Email</div><div class="method-value" data-field="email">evonne.xu.legal@gmail.com</div></div></div>
-          <div class="contact-method"><div class="method-icon">📅</div><div><div class="method-label"><span data-lang="zh">预约通话</span><span data-lang="en">Book a Call</span></div><div class="method-value"><a href="hhttps://calendly.com/evonne-xu-legal/30min" target="_blank" style="color:inherit;">Calendly →</a></div></div></div>
+          <div class="contact-method"><div class="method-icon">📅</div><div><div class="method-label"><span data-lang="zh">预约通话</span><span data-lang="en">Book a Call</span></div><div class="method-value"><a href="https://calendly.com/evonne-xu-legal/30min" target="_blank" style="color:inherit;">Calendly →</a></div></div></div>
         </div>
       </div>
       <div class="contact-form-wrap">
@@ -365,6 +365,18 @@ span[data-lang] { display:none; }
 /* ===== 文章数据 ===== */
 const POSTS = [
   {
+    file: "blog/blog-ma-pricing.html",
+    titleZh: "并购买家如何定价并制胜：汽车、自动化与制造业",
+    titleEn: "How Acquirers Price Deals and Win: Automotive, Automation & Manufacturing",
+    excerptZh: "深度剖析工业并购买家的定价逻辑：EBITDA倍数区间、核心价值驱动因子、协同效应建模与竞价制胜策略。麦肯锡框架，附完整项目Deliverables清单。",
+    excerptEn: "A deep dive into how industrial M&A buyers price deals: EBITDA multiple ranges, core value drivers, synergy modeling, and competitive bidding strategies. McKinsey framework with full project deliverables.",
+    catZh: "跨境并购 · 深度分析",
+    catEn: "Cross-Border M&A · Deep Analysis",
+    date: "April 2026",
+    readTime: "40 min",
+    featured: true
+  },
+  {
     file: "blog/blog-ma-process.html",
     titleZh: "在美国作为买家的完整并购流程：从寻找标的到交割完成",
     titleEn: "The Complete U.S. M&A Process from a Buyer's Perspective",
@@ -374,7 +386,7 @@ const POSTS = [
     catEn: "Cross-Border M&A · Complete Guide",
     date: "April 2026",
     readTime: "25 min",
-    featured: true
+    featured: false
   },
   {
     file: "blog/blog-cfius-2026.html",
@@ -390,10 +402,11 @@ const POSTS = [
   }
 ];
 
+/* ===== 渲染首页博客 ===== */
 function renderHomeBlog() {
   const grid = document.getElementById('homeBlogGrid');
   if (!grid || !POSTS.length) return;
-  const lang = document.body.classList.contains('lang-en') ? 'en' : 'zh';
+
   const featured = POSTS.find(p => p.featured) || POSTS[0];
   const rest = POSTS.filter(p => p !== featured).slice(0, 2);
 
@@ -436,6 +449,7 @@ function renderHomeBlog() {
       </a>
     </div>`).join('')}`;
 
+  /* 重新应用当前语言到新注入的 data-lang 元素 */
   const curLang = document.body.classList.contains('lang-zh') ? 'zh' : 'en';
   grid.querySelectorAll('[data-lang]').forEach(el => {
     el.style.display = el.getAttribute('data-lang') === curLang ? '' : 'none';
@@ -457,9 +471,11 @@ function switchLang(lang) {
 const savedLang = localStorage.getItem('evonne-lang') || 'zh';
 switchLang(savedLang);
 
+/* ===== 移动端菜单 ===== */
 function openMobileMenu() { document.getElementById('mobileMenu').classList.add('open'); document.body.style.overflow='hidden'; }
 function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); document.body.style.overflow=''; }
 
+/* ===== 订阅 ===== */
 function handleSubscribe(e) {
   e.preventDefault();
   const email = document.getElementById('newsletterEmail').value;
@@ -468,6 +484,7 @@ function handleSubscribe(e) {
   document.getElementById('newsletterEmail').value = '';
 }
 
+/* ===== 动态设置 ===== */
 async function loadSettings() {
   try {
     const res = await fetch('_data/settings.json?t=' + Date.now());
