@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CFIUS 2026最新审查趋势：中国企业赴美并购的红线在哪里 | Evonne Xu</title>
+  <meta name="description" content="2026年CFIUS审查已从国家安全扩展到供应链韧性与数据主权。本文梳理最新审查趋势、三大高风险行业、两起真实案例及应对策略。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #C49A7A;
+      --dark: #1C1510;
+      --cream: #F7F3EE;
+      --blush: #E8D5C0;
+      --gold-light: #d4b49a;
+      --text-muted: #7a6a5a;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--dark);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--cream);
+      border-bottom: 1px solid var(--blush);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 32px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; font-weight: 500;
+      color: var(--dark); text-decoration: none; letter-spacing: 0.5px;
+    }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a {
+      font-size: 13px; color: var(--dark); text-decoration: none;
+      opacity: 0.6; transition: opacity 0.2s; letter-spacing: 0.3px;
+    }
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+    .lang-toggle {
+      background: none; border: 1px solid var(--gold); color: var(--gold);
+      font-family: 'DM Sans', sans-serif; font-size: 11px;
+      padding: 5px 12px; border-radius: 2px; cursor: pointer;
+      letter-spacing: 0.5px; transition: all 0.2s;
+    }
+    .lang-toggle:hover { background: var(--gold); color: var(--dark); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--dark); }
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--cream); padding: 20px 32px; border-bottom: 1px solid var(--blush); gap: 16px; }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+    }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero {
+      background: var(--dark);
+      padding: 80px 40px 72px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 0%, rgba(196,154,122,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 5% 100%, rgba(196,154,122,0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 780px; margin: 0 auto; position: relative; }
+    .article-category {
+      display: inline-block;
+      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 24px;
+      border: 1px solid rgba(196,154,122,0.3); padding: 5px 14px; border-radius: 2px;
+    }
+    .article-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 300; color: var(--cream);
+      line-height: 1.2; margin-bottom: 24px;
+    }
+    .article-title em { font-style: italic; color: var(--gold); }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px;
+      flex-wrap: wrap;
+    }
+    .meta-item { font-size: 12px; color: rgba(247,243,238,0.45); letter-spacing: 0.5px; }
+    .meta-dot { color: rgba(196,154,122,0.4); }
+    .article-summary {
+      margin-top: 28px; padding: 24px 28px;
+      background: rgba(247,243,238,0.05);
+      border-left: 2px solid var(--gold);
+      border-radius: 0 2px 2px 0;
+    }
+    .article-summary p {
+      font-size: 14px; color: rgba(247,243,238,0.65);
+      line-height: 1.75;
+    }
+    .summary-label {
+      font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 10px;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-wrap {
+      max-width: 780px; margin: 0 auto;
+      padding: 72px 32px 100px;
+    }
+
+    .article-body h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 400; color: var(--dark);
+      margin: 56px 0 20px; line-height: 1.3;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--blush);
+    }
+    .article-body h2 .num {
+      font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); display: block; margin-bottom: 8px;
+      font-family: 'DM Sans', sans-serif; font-weight: 400;
+    }
+
+    .article-body p {
+      font-size: 15.5px; color: #2a1e16;
+      line-height: 1.85; margin-bottom: 20px;
+    }
+
+    .article-body strong {
+      font-weight: 500; color: var(--dark);
+    }
+
+    /* Risk cards */
+    .risk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px; margin: 28px 0;
+    }
+    .risk-card {
+      background: var(--white);
+      border: 1px solid var(--blush);
+      border-top: 2px solid var(--gold);
+      padding: 24px 22px; border-radius: 2px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .risk-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(28,21,16,0.08); }
+    .risk-tag {
+      font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 10px; font-weight: 500;
+    }
+    .risk-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; font-weight: 500;
+      color: var(--dark); margin-bottom: 8px;
+    }
+    .risk-card p {
+      font-size: 13px !important; color: var(--text-muted) !important;
+      line-height: 1.65 !important; margin: 0 !important;
+    }
+
+    /* Case boxes */
+    .case-box {
+      background: var(--white);
+      border: 1px solid var(--blush);
+      border-radius: 2px; overflow: hidden;
+      margin: 24px 0;
+    }
+    .case-header {
+      background: var(--dark); padding: 16px 24px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .case-badge {
+      font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--dark); background: var(--gold);
+      padding: 3px 10px; border-radius: 2px; white-space: nowrap; font-weight: 500;
+    }
+    .case-title-text {
+      font-size: 13px; color: rgba(247,243,238,0.8);
+      font-weight: 400; letter-spacing: 0.3px;
+    }
+    .case-body { padding: 24px 24px 20px; }
+    .case-body p {
+      font-size: 14px !important; margin-bottom: 14px !important;
+    }
+    .case-lesson {
+      background: rgba(196,154,122,0.08);
+      border-left: 2px solid var(--gold);
+      padding: 12px 16px; border-radius: 0 2px 2px 0;
+      font-size: 13px !important; color: var(--text-muted) !important;
+      line-height: 1.65 !important; margin: 0 !important;
+    }
+    .case-lesson strong { color: var(--gold) !important; }
+
+    /* Strategy steps */
+    .strategy-list { display: flex; flex-direction: column; gap: 12px; margin: 24px 0; }
+    .strategy-item {
+      display: flex; gap: 16px; align-items: flex-start;
+      background: var(--white); border: 1px solid var(--blush);
+      border-radius: 2px; padding: 20px 22px;
+      transition: border-color 0.2s;
+    }
+    .strategy-item:hover { border-color: var(--gold); }
+    .strategy-num {
+      min-width: 32px; height: 32px; border-radius: 50%;
+      background: var(--dark); color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .strategy-content h4 {
+      font-size: 14px; font-weight: 500; color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .strategy-content p {
+      font-size: 13px !important; color: var(--text-muted) !important;
+      line-height: 1.65 !important; margin: 0 !important;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      margin: 40px 0; padding: 32px 36px;
+      border-left: 3px solid var(--gold);
+      background: rgba(196,154,122,0.06);
+    }
+    .pull-quote p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.3rem, 2vw, 1.6rem) !important;
+      font-weight: 300; color: var(--dark) !important;
+      line-height: 1.5 !important; font-style: italic;
+      margin: 0 !important;
+    }
+
+    /* Language toggle */
+    [data-lang] { display: none; }
+    body.lang-en [data-lang="en"] { display: block; }
+    body.lang-zh [data-lang="zh"] { display: block; }
+    body.lang-en span[data-lang="en"],
+    body.lang-zh span[data-lang="zh"] { display: inline; }
+    body.lang-en div[data-lang="en"],
+    body.lang-zh div[data-lang="zh"] { display: block; }
+
+    /* Section divider */
+    .lang-divider {
+      margin: 64px 0 0;
+      padding: 40px 0 0;
+      border-top: 1px solid var(--blush);
+      display: flex !important; align-items: center; gap: 16px;
+    }
+    .lang-divider-label {
+      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); white-space: nowrap;
+    }
+    .lang-divider-line { flex: 1; height: 1px; background: var(--blush); }
+
+    /* CTA */
+    .article-cta {
+      margin-top: 64px; padding: 48px 44px;
+      background: var(--dark); border-radius: 2px;
+      position: relative; overflow: hidden;
+    }
+    .article-cta::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .cta-label {
+      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 12px;
+    }
+    .article-cta h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 300; color: var(--cream);
+      margin-bottom: 10px; line-height: 1.3;
+    }
+    .article-cta p {
+      font-size: 13px; color: rgba(247,243,238,0.5);
+      margin-bottom: 28px; line-height: 1.7;
+    }
+    .cta-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-gold {
+      padding: 12px 26px; background: var(--gold); color: var(--dark);
+      text-decoration: none; font-size: 12px; font-weight: 500;
+      letter-spacing: 1px; text-transform: uppercase; border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-ghost {
+      padding: 12px 26px; background: none;
+      border: 1px solid rgba(196,154,122,0.4); color: var(--gold);
+      text-decoration: none; font-size: 12px; font-weight: 500;
+      letter-spacing: 1px; text-transform: uppercase; border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--gold); background: rgba(196,154,122,0.1); }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; color: var(--text-muted); text-decoration: none;
+      letter-spacing: 0.5px; margin-bottom: 36px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--gold); }
+    .back-link::before { content: '←'; }
+
+    /* Footer */
+    footer {
+      background: var(--dark); padding: 48px 32px;
+      text-align: center; margin-top: 0;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; color: var(--cream); margin-bottom: 8px;
+    }
+    .footer-sub { font-size: 12px; color: rgba(247,243,238,0.3); letter-spacing: 1px; }
+
+    @media (max-width: 600px) {
+      .article-hero { padding: 56px 24px 56px; }
+      .article-wrap { padding: 48px 20px 72px; }
+      .article-cta { padding: 32px 24px; }
+      .risk-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="lang-zh">
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Evonne Xu</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a>
+      <a href="blog.html"><span data-lang="zh">博客</span><span data-lang="en">Blog</span></a>
+      <a href="videos.html"><span data-lang="zh">视频</span><span data-lang="en">Videos</span></a>
+      <a href="index.html#contact"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a>
+      <button class="lang-toggle" onclick="toggleLang()" id="langBtn">English</button>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="article-hero">
+  <div class="hero-inner">
+    <div class="article-category">
+      <span data-lang="zh">跨境并购 · 深度分析</span>
+      <span data-lang="en">Cross-Border M&A · Deep Analysis</span>
+    </div>
+    <h1 class="article-title">
+      <span data-lang="zh">CFIUS 2026最新审查趋势：<br>中国企业赴美并购的<em>红线</em>在哪里</span>
+      <span data-lang="en">CFIUS 2026: Where Are the <em>Red Lines</em><br>for Chinese Acquirers?</span>
+    </h1>
+    <div class="article-meta">
+      <span class="meta-item">Evonne Xu</span>
+      <span class="meta-dot">·</span>
+      <span class="meta-item">April 2026</span>
+      <span class="meta-dot">·</span>
+      <span class="meta-item"><span data-lang="zh">约1500字 · 8分钟阅读</span><span data-lang="en">~1500 words · 8 min read</span></span>
+    </div>
+    <div class="article-summary">
+      <p class="summary-label"><span data-lang="zh">核心摘要</span><span data-lang="en">Executive Summary</span></p>
+      <p data-lang="zh">2026年，CFIUS审查已从"国家安全"扩展到"供应链韧性"与"数据主权"。本文梳理最新审查趋势、三大高风险行业、两起真实案例，以及中国企业CFO/法务必须掌握的应对策略。</p>
+      <p data-lang="en">In 2026, CFIUS review has expanded beyond "national security" to encompass "supply chain resilience" and "data sovereignty." This article maps the latest review trends, the three highest-risk sectors, two real-world cases, and the strategies every Chinese acquirer's CFO and general counsel must master.</p>
+    </div>
+  </div>
+</section>
+
+<div class="article-wrap">
+  <a href="blog.html" class="back-link"><span data-lang="zh">返回博客</span><span data-lang="en">Back to Blog</span></a>
+
+  <article class="article-body">
+
+    <!-- CHINESE VERSION -->
+    <div data-lang="zh">
+      <h2><span class="num">一</span>CFIUS是什么，为什么2026年更难过</h2>
+      <p>美国外国投资委员会（CFIUS）并非新机构，但其审查权力在过去五年经历了根本性扩张。2018年《外国投资风险审查现代化法案》（FIRRMA）奠定了现代CFIUS的法律框架，而2026年，随着中美科技竞争白热化，CFIUS的实际审查范围已远超法律文本的字面解读。</p>
+      <p>数据显示，2024财年CFIUS共收到约450份申报，其中涉及中国买方的交易审查时间平均延长至270天，远超其他国家买方的180天平均水平。更关键的是，被要求撤回申报或遭到总统令禁止的交易中，中国买方占比超过60%。</p>
+      <p>2026年的新变量在于：CFIUS开始将"数据可及性"作为独立审查维度。即便目标公司不涉及任何军事技术，只要其数据库包含大量美国公民的生物特征、金融行为或地理位置信息，就可能触发强制申报义务。</p>
+
+      <div class="pull-quote">
+        <p>"监管确定性本身已经成为并购交易中最昂贵、也最值得提前投资的资产。"</p>
+      </div>
+
+      <h2><span class="num">二</span>2026年三大高风险行业</h2>
+      <div class="risk-grid">
+        <div class="risk-card">
+          <p class="risk-tag">高风险 01</p>
+          <h3>半导体与先进制造</h3>
+          <p>涵盖芯片设计、EDA工具、先进封装。任何涉及14nm以下制程技术的并购，强制申报概率接近100%。</p>
+        </div>
+        <div class="risk-card">
+          <p class="risk-tag">高风险 02</p>
+          <h3>医疗健康与生物技术</h3>
+          <p>基因组数据、电子病历、医疗AI平台。目标公司持有超过100万美国公民健康数据即触发强制申报。</p>
+        </div>
+        <div class="risk-card">
+          <p class="risk-tag">高风险 03</p>
+          <h3>关键基础设施与能源</h3>
+          <p>港口、电网、电信网络、稀土加工。2026年新增：海底光缆运营商被纳入TID强制申报范围。</p>
+        </div>
+      </div>
+
+      <h2><span class="num">三</span>两起真实案例：过与不过的边界在哪里</h2>
+      <div class="case-box">
+        <div class="case-header">
+          <span class="case-badge">被阻止</span>
+          <span class="case-title-text">神经科学收购案（2024年）</span>
+        </div>
+        <div class="case-body">
+          <p>某中国大型医药集团计划收购一家美国神经科学公司的多数股权。该目标公司本身不涉及任何军事合同，但其临床数据库包含超过200万美国患者的神经影像与基因组信息。</p>
+          <p>CFIUS认定：神经影像数据具有潜在的生物特征识别价值，叠加买方与中国军民融合体系的关联背景，构成"不可缓解的国家安全风险"。交易在审查第二阶段被要求撤回。</p>
+          <p class="case-lesson"><strong>关键教训：</strong>数据类型比技术本身更敏感。神经科学≠武器，但神经数据=生物特征=红线。</p>
+        </div>
+      </div>
+      <div class="case-box">
+        <div class="case-header">
+          <span class="case-badge" style="background:#4a8c6a;color:white;">获批</span>
+          <span class="case-title-text">制造业少数股权投资案（2024年）</span>
+        </div>
+        <div class="case-body">
+          <p>一家中国汽车零部件企业计划收购一家美国精密铸造公司19.9%的少数股权，不要求董事会席位，不获取技术许可，不接触客户数据库。该目标公司主要客户为民用汽车OEM，无国防合同。</p>
+          <p>买方主动提交自愿申报，配合CFIUS谈判签署国家安全协议（NSA），承诺：不派驻工程师访问核心生产线、不获取任何客户名单、每年接受独立合规审计。最终在审查第一阶段获批，历时112天。</p>
+          <p class="case-lesson"><strong>关键教训：</strong>主动申报+结构设计+NSA谈判，是目前中国买方通过CFIUS审查的最可靠路径。</p>
+        </div>
+      </div>
+
+      <h2><span class="num">四</span>CFO和法务必须掌握的五个应对策略</h2>
+      <div class="strategy-list">
+        <div class="strategy-item">
+          <div class="strategy-num">01</div>
+          <div class="strategy-content">
+            <h4>交割前做CFIUS风险预评估</h4>
+            <p>签LOI之前，委托专业律师对目标公司进行TID筛查。重点评估：是否涉及关键技术、关键基础设施、或敏感数据；买方是否与解放军或情报机构存在可追溯关联。</p>
+          </div>
+        </div>
+        <div class="strategy-item">
+          <div class="strategy-num">02</div>
+          <div class="strategy-content">
+            <h4>用交易结构降低审查强度</h4>
+            <p>少数股权（低于10%且无实质控制权）在某些情况下可豁免强制申报。剥离目标公司的敏感业务单元后再收购，也是常见的结构优化路径。</p>
+          </div>
+        </div>
+        <div class="strategy-item">
+          <div class="strategy-num">03</div>
+          <div class="strategy-content">
+            <h4>主动申报优于被动等待</h4>
+            <p>CFIUS有权在交割后5年内主动发起审查，强制要求剥离。主动提交自愿申报，虽然延长前期时间，但能有效锁定监管确定性。</p>
+          </div>
+        </div>
+        <div class="strategy-item">
+          <div class="strategy-num">04</div>
+          <div class="strategy-content">
+            <h4>提前准备NSA谈判方案</h4>
+            <p>国家安全协议（NSA）是CFIUS批准高风险交易的常用工具。内容通常包括：数据本地化、访问限制、独立合规监察员、年度审计。提前准备NSA草案可大幅缩短谈判周期。</p>
+          </div>
+        </div>
+        <div class="strategy-item">
+          <div class="strategy-num">05</div>
+          <div class="strategy-content">
+            <h4>管理买方身份的可见度</h4>
+            <p>CFIUS会深度调查买方股权结构、管理层背景、政府关联。在申报材料中主动、透明地披露所有相关信息，远比被调查中发现隐瞒更有利。</p>
+          </div>
+        </div>
+      </div>
+
+      <h2><span class="num">五</span>结语：确定性是最昂贵的并购资产</h2>
+      <p>2026年的CFIUS审查环境，对中国买方而言不是"能不能做"的问题，而是"怎么做才能过"的问题。监管确定性本身已经成为并购交易中最昂贵、也最值得提前投资的资产。</p>
+      <p>每一笔跨境交易的背后，都是数年的战略布局和数亿的资本押注。在监管的红线面前，法律准备的早晚，往往决定了交易的生死。</p>
+    </div>
+
+    <!-- ENGLISH VERSION -->
+    <div class="lang-divider" data-lang="en">
+      <span class="lang-divider-label">English Version</span>
+      <span class="lang-divider-line"></span>
+    </div>
+
+    <div data-lang="en">
+      <h2><span class="num">I</span>Why CFIUS Is Harder Than Ever in 2026</h2>
+      <p>The Committee on Foreign Investment in the United States (CFIUS) is not a new institution, but its review authority has undergone a fundamental expansion over the past five years. The Foreign Investment Risk Review Modernization Act (FIRRMA) of 2018 established the modern CFIUS legal framework, and in 2026, as U.S.-China technology competition intensifies, the practical scope of CFIUS review has extended far beyond the literal text of the law.</p>
+      <p>Data shows that in fiscal year 2024, CFIUS received approximately 450 filings. Transactions involving Chinese acquirers averaged 270 days under review — significantly longer than the 180-day average for buyers from other countries. More critically, Chinese acquirers accounted for over 60% of transactions that were either asked to withdraw or blocked by presidential order.</p>
+      <p>The new variable in 2026 is that CFIUS has begun treating "data accessibility" as an independent review dimension. Even if a target company has no military contracts, if its database contains substantial biometric, financial behavioral, or geolocation data on U.S. citizens, it may trigger mandatory filing obligations.</p>
+
+      <div class="pull-quote">
+        <p>"Regulatory certainty has itself become the most expensive, and most valuable, asset to invest in early in any cross-border transaction."</p>
+      </div>
+
+      <h2><span class="num">II</span>The Three Highest-Risk Sectors in 2026</h2>
+      <div class="risk-grid">
+        <div class="risk-card">
+          <p class="risk-tag">High Risk 01</p>
+          <h3>Semiconductors & Advanced Manufacturing</h3>
+          <p>Covers chip design, EDA tools, and advanced packaging. Any acquisition involving sub-14nm process technology carries a near-100% probability of mandatory filing.</p>
+        </div>
+        <div class="risk-card">
+          <p class="risk-tag">High Risk 02</p>
+          <h3>Healthcare & Biotechnology</h3>
+          <p>Genomic data, electronic health records, and medical AI platforms. A target holding health data on more than one million U.S. citizens triggers mandatory filing.</p>
+        </div>
+        <div class="risk-card">
+          <p class="risk-tag">High Risk 03</p>
+          <h3>Critical Infrastructure & Energy</h3>
+          <p>Ports, power grids, telecommunications networks, and rare earth processing. 2026 addition: submarine cable operators brought within TID mandatory filing scope.</p>
+        </div>
+      </div>
+
+      <h2><span class="num">III</span>Two Real Cases: Where the Line Falls</h2>
+      <div class="case-box">
+        <div class="case-header">
+          <span class="case-badge">Blocked</span>
+          <span class="case-title-text">Neuroscience acquisition (2024)</span>
+        </div>
+        <div class="case-body">
+          <p>A major Chinese pharmaceutical group planned to acquire a majority stake in a U.S. neuroscience company. The target had no military contracts, but its clinical database held neuroimaging and genomic data on over two million U.S. patients.</p>
+          <p>CFIUS determined that neuroimaging data carries potential biometric identification value, and combined with the acquirer's ties to China's civil-military fusion ecosystem, constituted an "unmitigable national security risk." The transaction was asked to withdraw in Phase II review.</p>
+          <p class="case-lesson"><strong>Key lesson:</strong> Data type is more sensitive than the technology itself. Neuroscience ≠ weapons, but neural data = biometrics = red line.</p>
+        </div>
+      </div>
+      <div class="case-box">
+        <div class="case-header">
+          <span class="case-badge" style="background:#4a8c6a;color:white;">Approved</span>
+          <span class="case-title-text">Minority stake in manufacturing (2024)</span>
+        </div>
+        <div class="case-body">
+          <p>A Chinese auto parts company sought to acquire 19.9% of a U.S. precision casting company with no board seat, no technology license, and no access to customer databases. The target's customers were civilian automotive OEMs with no defense contracts.</p>
+          <p>The acquirer filed voluntarily, negotiated a National Security Agreement (NSA) committing to no engineer access to core production lines, no customer list access, and annual independent compliance audits. The deal cleared in Phase I after 112 days.</p>
+          <p class="case-lesson"><strong>Key lesson:</strong> Voluntary filing + deal structuring + NSA negotiation is currently the most reliable path for Chinese acquirers to clear CFIUS review.</p>
+        </div>
+      </div>
+
+      <h2><span class="num">IV</span>Five Strategies for CFOs and General Counsel</h2>
+      <div class="strategy-list">
+        <div class="strategy-item">
+          <div class="strategy-num">01</div>
+          <div class="strategy-content">
+            <h4>CFIUS risk assessment before signing the LOI</h4>
+            <p>Commission specialized counsel to conduct a TID screen of the target before any letter of intent is signed. Focus on critical technology, infrastructure, sensitive data, and acquirer connections to the PLA or intelligence agencies.</p>
+          </div>
+        </div>
+        <div class="strategy-item">
+          <div class="strategy-num">02</div>
+          <div class="strategy-content">
+            <h4>Use deal structure to reduce review intensity</h4>
+            <p>Minority stakes below 10% with no substantive control can qualify for filing exemptions. Carving out the target's sensitive business units before acquisition is also a common structural optimization path.</p>
+          </div>
+        </div>
+        <div class="strategy-item">
+          <div class="strategy-num">03</div>
+          <div class="strategy-content">
+            <h4>Voluntary filing beats passive waiting</h4>
+            <p>CFIUS retains authority to initiate review up to five years post-closing and can mandate divestiture. Proactive voluntary filing locks in regulatory certainty.</p>
+          </div>
+        </div>
+        <div class="strategy-item">
+          <div class="strategy-num">04</div>
+          <div class="strategy-content">
+            <h4>Prepare your NSA negotiating position early</h4>
+            <p>National Security Agreements are CFIUS's standard tool for approving higher-risk transactions. Provisions typically include data localization, access restrictions, independent compliance monitors, and annual audits.</p>
+          </div>
+        </div>
+        <div class="strategy-item">
+          <div class="strategy-num">05</div>
+          <div class="strategy-content">
+            <h4>Manage the visibility of acquirer identity</h4>
+            <p>CFIUS conducts deep investigations into acquirer ownership structures, management backgrounds, and government connections. Proactive, transparent disclosure is far more advantageous than having omissions discovered during review.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2><span class="num">V</span>Conclusion: Regulatory Certainty Is the Most Expensive M&A Asset</h2>
+      <p>In 2026, navigating CFIUS as a Chinese acquirer is no longer a question of whether a deal can be done — it is a question of how to structure it to succeed. Regulatory certainty has itself become the most expensive, and most valuable, asset to invest in early in any cross-border transaction.</p>
+      <p>Behind every cross-border deal is years of strategic positioning and hundreds of millions in capital at stake. When it comes to regulatory red lines, how early you prepare your legal strategy often determines whether the deal lives or dies.</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="article-cta">
+      <p class="cta-label"><span data-lang="zh">关于作者</span><span data-lang="en">About the Author</span></p>
+      <h3 data-lang="zh">Evonne Xu — 并购律师 · AI法律工程师</h3>
+      <h3 data-lang="en">Evonne Xu — M&A Lawyer · AI Legal Engineer</h3>
+      <p data-lang="zh">专注于中美跨境并购与AI法律合规，同时也是法律科技工具的构建者。如果你正在评估一笔赴美并购交易，欢迎联系。</p>
+      <p data-lang="en">Specializing in U.S.-China cross-border M&A and AI legal compliance, and a builder of legal tech tools. If you're evaluating a U.S.-bound acquisition, get in touch.</p>
+      <div class="cta-buttons">
+        <a href="https://evonnexulegal.beehiiv.com/subscribe" target="_blank" class="btn-gold">
+          <span data-lang="zh">订阅周报</span><span data-lang="en">Subscribe</span>
+        </a>
+        <a href="index.html#contact" class="btn-ghost">
+          <span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span>
+        </a>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <p class="footer-logo">Evonne Xu</p>
+  <p class="footer-sub">© 2026 · evonnexulegal.com</p>
+</footer>
+
+<script>
+  const saved = localStorage.getItem('lang') || 'zh';
+  document.body.className = 'lang-' + saved;
+  document.getElementById('langBtn').textContent = saved === 'zh' ? 'English' : '中文';
+
+  function toggleLang() {
+    const isZh = document.body.classList.contains('lang-zh');
+    const next = isZh ? 'en' : 'zh';
+    document.body.className = 'lang-' + next;
+    document.getElementById('langBtn').textContent = next === 'zh' ? 'English' : '中文';
+    localStorage.setItem('lang', next);
+  }
+</script>
+</body>
+</html>
