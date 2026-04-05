@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>在美国作为买家的完整并购流程：从寻找标的到交割完成 | Evonne Xu</title>
+  <meta name="description" content="全面解析美国并购两大路径——主动寻找标的与竞价流程，从商业策略到法律文件，每个阶段深度拆解。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold:#C49A7A; --dark:#1C1510; --cream:#F7F3EE;
+      --blush:#E8D5C0; --gold-light:#d4b49a; --text-muted:#7a6a5a; --white:#fff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--cream);color:var(--dark);font-family:'DM Sans',sans-serif;font-weight:300;font-size:16px;line-height:1.85;}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px solid var(--blush);}
+    .nav-inner{max-width:1100px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--dark);text-decoration:none;}
+    .nav-links{display:flex;align-items:center;gap:28px;}
+    .nav-links a{font-size:13px;color:var(--dark);text-decoration:none;opacity:.6;transition:opacity .2s;}
+    .nav-links a:hover{opacity:1;color:var(--gold);}
+    .lang-toggle{background:none;border:1px solid var(--gold);color:var(--gold);font-family:'DM Sans',sans-serif;font-size:11px;padding:5px 12px;border-radius:2px;cursor:pointer;transition:all .2s;}
+    .lang-toggle:hover{background:var(--gold);color:var(--dark);}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+    .hamburger span{display:block;width:22px;height:1.5px;background:var(--dark);}
+    @media(max-width:768px){
+      .nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:var(--cream);padding:20px 32px;border-bottom:1px solid var(--blush);gap:16px;}
+      .nav-links.open{display:flex;}
+      .hamburger{display:flex;}
+    }
+
+    /* HERO */
+    .article-hero{background:var(--dark);padding:80px 40px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 0%,rgba(196,154,122,.15) 0%,transparent 60%);pointer-events:none;}
+    .hero-inner{max-width:820px;margin:0 auto;position:relative;}
+    .article-category{display:inline-block;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;border:1px solid rgba(196,154,122,.3);padding:5px 14px;border-radius:2px;}
+    .article-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.4rem);font-weight:300;color:var(--cream);line-height:1.2;margin-bottom:24px;}
+    .article-title em{font-style:italic;color:var(--gold);}
+    .article-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+    .meta-item{font-size:12px;color:rgba(247,243,238,.45);letter-spacing:.5px;}
+    .meta-dot{color:rgba(196,154,122,.4);}
+    .article-summary{margin-top:28px;padding:24px 28px;background:rgba(247,243,238,.05);border-left:2px solid var(--gold);}
+    .summary-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .article-summary p{font-size:14px;color:rgba(247,243,238,.65);line-height:1.75;}
+
+    /* TOC */
+    .toc-wrap{max-width:820px;margin:48px auto 0;padding:0 32px;}
+    .toc-box{background:var(--white);border:1px solid var(--blush);border-radius:4px;padding:32px 36px;}
+    .toc-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--dark);margin-bottom:20px;}
+    .toc-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+    .toc-list li a{font-size:13px;color:var(--text-muted);text-decoration:none;display:flex;align-items:center;gap:10px;transition:color .2s;}
+    .toc-list li a:hover{color:var(--gold);}
+    .toc-num{font-size:10px;letter-spacing:1px;color:var(--gold);min-width:24px;}
+    .toc-list .toc-sub{padding-left:34px;}
+    .toc-list .toc-sub a{font-size:12px;}
+
+    /* ARTICLE BODY */
+    .article-wrap{max-width:820px;margin:0 auto;padding:64px 32px 100px;}
+    .back-link{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--text-muted);text-decoration:none;letter-spacing:.5px;margin-bottom:48px;transition:color .2s;}
+    .back-link:hover{color:var(--gold);}
+    .back-link::before{content:'←';}
+
+    /* SECTION HEADINGS */
+    .article-body h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:400;color:var(--dark);margin:72px 0 24px;padding-bottom:14px;border-bottom:1px solid var(--blush);line-height:1.3;}
+    .article-body h2 .section-num{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px;font-family:'DM Sans',sans-serif;font-weight:400;}
+    .article-body h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2vw,1.5rem);font-weight:500;color:var(--dark);margin:40px 0 16px;}
+    .article-body h3 .sub-num{font-size:10px;letter-spacing:1.5px;color:var(--gold);margin-right:8px;font-family:'DM Sans',sans-serif;font-weight:400;}
+    .article-body p{font-size:15.5px;color:#2a1e16;line-height:1.9;margin-bottom:20px;}
+    .article-body strong{font-weight:500;color:var(--dark);}
+    .article-body ul{margin:16px 0 24px 0;padding-left:0;list-style:none;}
+    .article-body ul li{font-size:15px;color:#2a1e16;line-height:1.8;padding:6px 0 6px 24px;position:relative;}
+    .article-body ul li::before{content:'';position:absolute;left:0;top:16px;width:6px;height:1px;background:var(--gold);}
+
+    /* PROCESS FLOW — HORIZONTAL TIMELINE */
+    .process-flow{margin:36px 0;overflow-x:auto;padding-bottom:8px;}
+    .flow-track{display:flex;gap:0;min-width:600px;}
+    .flow-step{flex:1;position:relative;text-align:center;}
+    .flow-step::after{content:'';position:absolute;top:24px;left:50%;width:100%;height:2px;background:linear-gradient(90deg,var(--gold),rgba(196,154,122,.3));z-index:0;}
+    .flow-step:last-child::after{display:none;}
+    .flow-circle{width:48px;height:48px;border-radius:50%;background:var(--dark);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;position:relative;z-index:1;}
+    .flow-circle span{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--gold);font-weight:400;}
+    .flow-label{font-size:11px;font-weight:500;color:var(--dark);letter-spacing:.3px;line-height:1.4;}
+    .flow-sub{font-size:10px;color:var(--text-muted);margin-top:4px;line-height:1.4;}
+
+    /* PHASE CARD */
+    .phase-card{background:var(--white);border:1px solid var(--blush);border-radius:4px;overflow:hidden;margin:28px 0;}
+    .phase-header{background:var(--dark);padding:20px 28px;display:flex;align-items:center;gap:16px;}
+    .phase-badge{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--dark);background:var(--gold);padding:4px 12px;border-radius:2px;white-space:nowrap;font-weight:500;}
+    .phase-header-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--cream);font-weight:400;}
+    .phase-body{padding:28px;}
+    .phase-body p{font-size:14.5px !important;margin-bottom:14px !important;}
+    .phase-body ul{margin:12px 0 16px !important;}
+    .phase-body ul li{font-size:14px !important;}
+
+    /* TWO-COL GRID */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0;}
+    .col-card{background:var(--white);border:1px solid var(--blush);border-radius:4px;padding:24px;}
+    .col-card-label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:500;}
+    .col-card h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;color:var(--dark);margin-bottom:12px;}
+    .col-card p,.col-card li{font-size:13px !important;color:var(--text-muted);line-height:1.7;}
+    @media(max-width:640px){.two-col{grid-template-columns:1fr;}}
+
+    /* COMPARISON TABLE */
+    .compare-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:13px;}
+    .compare-table th{background:var(--dark);color:var(--gold);padding:14px 18px;text-align:left;font-weight:500;letter-spacing:.5px;font-size:11px;text-transform:uppercase;}
+    .compare-table th:first-child{border-radius:4px 0 0 0;}
+    .compare-table th:last-child{border-radius:0 4px 0 0;}
+    .compare-table td{padding:13px 18px;border-bottom:1px solid var(--blush);color:#2a1e16;vertical-align:top;line-height:1.65;}
+    .compare-table tr:last-child td{border-bottom:none;}
+    .compare-table tr:nth-child(even) td{background:rgba(232,213,192,.12);}
+    .compare-table td:first-child{font-weight:500;color:var(--dark);white-space:nowrap;}
+
+    /* TIMELINE VERTICAL */
+    .timeline{margin:28px 0;display:flex;flex-direction:column;gap:0;}
+    .tl-item{display:flex;gap:20px;position:relative;}
+    .tl-left{display:flex;flex-direction:column;align-items:center;min-width:48px;}
+    .tl-dot{width:40px;height:40px;border-radius:50%;background:var(--dark);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .tl-dot span{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--gold);}
+    .tl-line{width:2px;flex:1;background:linear-gradient(var(--gold),rgba(196,154,122,.15));min-height:24px;margin-top:4px;}
+    .tl-item:last-child .tl-line{display:none;}
+    .tl-content{padding:4px 0 32px;}
+    .tl-phase{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-weight:500;}
+    .tl-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;color:var(--dark);margin-bottom:8px;}
+    .tl-duration{display:inline-block;font-size:10px;background:rgba(196,154,122,.12);color:var(--gold);padding:3px 10px;border-radius:2px;margin-bottom:10px;letter-spacing:.5px;}
+    .tl-desc{font-size:14px;color:var(--text-muted);line-height:1.75;}
+    .tl-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+    .tl-tag{font-size:10px;padding:3px 10px;border:1px solid var(--blush);border-radius:2px;color:var(--text-muted);}
+    .tl-tag.biz{border-color:rgba(196,154,122,.4);color:var(--gold);}
+    .tl-tag.legal{border-color:#7a9c8a;color:#4a6c5a;}
+
+    /* PULL QUOTE */
+    .pull-quote{margin:40px 0;padding:32px 36px;border-left:3px solid var(--gold);background:rgba(196,154,122,.06);}
+    .pull-quote p{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2vw,1.55rem) !important;font-weight:300;color:var(--dark) !important;line-height:1.5 !important;font-style:italic;margin:0 !important;}
+
+    /* ALERT BOX */
+    .alert-box{margin:24px 0;padding:20px 24px;border-radius:4px;display:flex;gap:14px;align-items:flex-start;}
+    .alert-box.warning{background:rgba(196,154,122,.1);border:1px solid rgba(196,154,122,.3);}
+    .alert-box.tip{background:rgba(122,156,138,.1);border:1px solid rgba(122,156,138,.3);}
+    .alert-icon{font-size:16px;flex-shrink:0;margin-top:2px;}
+    .alert-text{font-size:13.5px;color:var(--dark);line-height:1.7;}
+    .alert-text strong{color:var(--dark);font-weight:500;}
+
+    /* DOC LIST */
+    .doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:20px 0;}
+    .doc-item{background:var(--white);border:1px solid var(--blush);border-radius:4px;padding:16px 18px;display:flex;align-items:flex-start;gap:12px;}
+    .doc-icon{font-size:18px;flex-shrink:0;}
+    .doc-name{font-size:13px;font-weight:500;color:var(--dark);margin-bottom:3px;}
+    .doc-desc{font-size:11px;color:var(--text-muted);line-height:1.5;}
+
+    /* LANGUAGE */
+    [data-lang]{display:none;}
+    body.lang-zh [data-lang="zh"]{display:block;}
+    body.lang-en [data-lang="en"]{display:block;}
+    span[data-lang]{display:none;}
+    body.lang-zh span[data-lang="zh"]{display:inline;}
+    body.lang-en span[data-lang="en"]{display:inline;}
+
+    /* CTA */
+    .article-cta{margin-top:72px;padding:48px 44px;background:var(--dark);border-radius:4px;position:relative;overflow:hidden;}
+    .article-cta::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+    .cta-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-cta h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:300;color:var(--cream);margin-bottom:10px;line-height:1.3;}
+    .article-cta p{font-size:13px;color:rgba(247,243,238,.5);margin-bottom:28px;line-height:1.7;}
+    .cta-buttons{display:flex;gap:12px;flex-wrap:wrap;}
+    .btn-gold{padding:12px 26px;background:var(--gold);color:var(--dark);text-decoration:none;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;border-radius:2px;transition:all .2s;}
+    .btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);}
+    .btn-ghost{padding:12px 26px;background:none;border:1px solid rgba(196,154,122,.4);color:var(--gold);text-decoration:none;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;border-radius:2px;transition:all .2s;}
+    .btn-ghost:hover{border-color:var(--gold);background:rgba(196,154,122,.1);}
+
+    /* FOOTER */
+    footer{background:var(--dark);padding:40px 32px;text-align:center;margin-top:0;}
+    .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--cream);margin-bottom:8px;}
+    .footer-sub{font-size:11px;color:rgba(247,243,238,.3);letter-spacing:1px;}
+
+    @media(max-width:600px){
+      .article-hero{padding:56px 24px 56px;}
+      .article-wrap{padding:48px 20px 72px;}
+      .toc-wrap{padding:0 20px;}
+      .article-cta{padding:32px 24px;}
+      .phase-body{padding:20px;}
+      .flow-label{font-size:10px;}
+    }
+  </style>
+</head>
+<body class="lang-zh">
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">Evonne Xu</a>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a>
+      <a href="../blog.html"><span data-lang="zh">博客</span><span data-lang="en">Blog</span></a>
+      <a href="../index.html#contact"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a>
+      <button class="lang-toggle" onclick="toggleLang()" id="langBtn">English</button>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="article-hero">
+  <div class="hero-inner">
+    <div class="article-category">
+      <span data-lang="zh">跨境并购 · 深度指南</span>
+      <span data-lang="en">Cross-Border M&A · Complete Guide</span>
+    </div>
+    <h1 class="article-title">
+      <span data-lang="zh">在美国作为买家的<em>完整并购流程</em>：<br>从寻找标的到交割完成</span>
+      <span data-lang="en">The Complete U.S. M&A Process<br>from a Buyer's Perspective:<br>From <em>Target Identification</em> to Closing</span>
+    </h1>
+    <div class="article-meta">
+      <span class="meta-item">Evonne Xu</span>
+      <span class="meta-dot">·</span>
+      <span class="meta-item">April 2026</span>
+      <span class="meta-dot">·</span>
+      <span class="meta-item"><span data-lang="zh">深度指南 · 约8000字 · 25分钟阅读</span><span data-lang="en">Deep Guide · ~8,000 words · 25 min read</span></span>
+    </div>
+    <div class="article-summary">
+      <p class="summary-label"><span data-lang="zh">文章摘要</span><span data-lang="en">Summary</span></p>
+      <p data-lang="zh">本文从买方视角，完整拆解美国并购的两大路径：主动寻找标的（Proprietary Deal）与竞价流程（Auction Process）。涵盖每个阶段的商业决策逻辑与法律文件要求，是中国企业赴美收购的实操指南。</p>
+      <p data-lang="en">From a buyer's perspective, this guide breaks down both major U.S. M&A paths: the proprietary deal and the auction process. Covering business strategy and legal documentation at every stage — a practical playbook for Chinese acquirers in the U.S. market.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TOC -->
+<div class="toc-wrap">
+  <div class="toc-box">
+    <p class="toc-title"><span data-lang="zh">📋 文章目录</span><span data-lang="en">📋 Table of Contents</span></p>
+    <ul class="toc-list">
+      <li><a href="#overview"><span class="toc-num">01</span><span data-lang="zh">并购路径总览：两种方式的本质差异</span><span data-lang="en">M&A Path Overview: The Core Differences</span></a></li>
+      <li><a href="#path-a"><span class="toc-num">02</span><span data-lang="zh">路径A：主动寻找标的（Proprietary Deal）</span><span data-lang="en">Path A: Proprietary Deal</span></a></li>
+      <li class="toc-sub"><a href="#phase-a1"><span class="toc-num">↳</span><span data-lang="zh">阶段1：战略定义与目标筛选</span><span data-lang="en">Phase 1: Strategy & Target Screening</span></a></li>
+      <li class="toc-sub"><a href="#phase-a2"><span class="toc-num">↳</span><span data-lang="zh">阶段2：初步接触与NDA签署</span><span data-lang="en">Phase 2: Outreach & NDA</span></a></li>
+      <li class="toc-sub"><a href="#phase-a3"><span class="toc-num">↳</span><span data-lang="zh">阶段3：初步尽调与IOI</span><span data-lang="en">Phase 3: Preliminary DD & IOI</span></a></li>
+      <li class="toc-sub"><a href="#phase-a4"><span class="toc-num">↳</span><span data-lang="zh">阶段4：LOI谈判与签署</span><span data-lang="en">Phase 4: LOI Negotiation & Signing</span></a></li>
+      <li class="toc-sub"><a href="#phase-a5"><span class="toc-num">↳</span><span data-lang="zh">阶段5：完整尽职调查</span><span data-lang="en">Phase 5: Full Due Diligence</span></a></li>
+      <li class="toc-sub"><a href="#phase-a6"><span class="toc-num">↳</span><span data-lang="zh">阶段6：SPA谈判与签约</span><span data-lang="en">Phase 6: SPA Negotiation & Signing</span></a></li>
+      <li class="toc-sub"><a href="#phase-a7"><span class="toc-num">↳</span><span data-lang="zh">阶段7：监管审批与交割</span><span data-lang="en">Phase 7: Regulatory Approval & Closing</span></a></li>
+      <li><a href="#path-b"><span class="toc-num">03</span><span data-lang="zh">路径B：竞价流程（Auction Process）</span><span data-lang="en">Path B: Auction Process</span></a></li>
+      <li class="toc-sub"><a href="#phase-b1"><span class="toc-num">↳</span><span data-lang="zh">第一轮：收到IM与提交IOI</span><span data-lang="en">Round 1: IM Receipt & IOI Submission</span></a></li>
+      <li class="toc-sub"><a href="#phase-b2"><span class="toc-num">↳</span><span data-lang="zh">第二轮：管理层会议与提交LOI</span><span data-lang="en">Round 2: Management Meetings & LOI</span></a></li>
+      <li class="toc-sub"><a href="#phase-b3"><span class="toc-num">↳</span><span data-lang="zh">排他谈判到交割</span><span data-lang="en">Exclusivity to Closing</span></a></li>
+      <li><a href="#key-docs"><span class="toc-num">04</span><span data-lang="zh">核心法律文件全览</span><span data-lang="en">Key Legal Documents Overview</span></a></li>
+      <li><a href="#compare"><span class="toc-num">05</span><span data-lang="zh">两种路径对比：如何选择</span><span data-lang="en">Comparing Both Paths: How to Choose</span></a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-wrap">
+  <a href="../blog.html" class="back-link"><span data-lang="zh">返回博客</span><span data-lang="en">Back to Blog</span></a>
+
+  <article class="article-body">
+
+    <!-- ══════════════════════════════════════
+         SECTION 1: OVERVIEW
+    ══════════════════════════════════════ -->
+    <div data-lang="zh">
+      <h2 id="overview"><span class="section-num">一</span>并购路径总览：两种方式的本质差异</h2>
+      <p>在美国做并购，买方通常面临两种截然不同的路径。理解这两条路的本质差异，是制定收购策略的第一步。</p>
+
+      <div class="two-col">
+        <div class="col-card">
+          <p class="col-card-label">路径 A</p>
+          <h4>主动寻找标的<br>Proprietary Deal</h4>
+          <p>买方主动发起，通过投行或直接接触卖方，在没有其他竞争者的情况下完成谈判。<strong>买方占主导，时间更长，但价格通常更优。</strong></p>
+        </div>
+        <div class="col-card">
+          <p class="col-card-label">路径 B</p>
+          <h4>竞价流程<br>Auction Process</h4>
+          <p>卖方委托投行组织竞价，多个买家同时参与，按照严格时间表提交报价。<strong>卖方占主导，时间压缩，价格竞争激烈。</strong></p>
+        </div>
+      </div>
+
+      <p>两种路径在流程、时间、法律文件要求和谈判动态上都有显著差异。但无论哪条路，核心逻辑是相同的：<strong>商业上判断这笔交易是否值得做，法律上确保你买到的是你以为买到的东西。</strong></p>
+
+      <div class="pull-quote">
+        <p>"并购的本质不是买一家公司，而是买一个未来的现金流——法律文件的作用，是在这个未来到来之前，锁定你对它的权利。"</p>
+      </div>
+
+      <!-- Overall flow -->
+      <h3>并购总体时间线</h3>
+      <p>无论哪种路径，美国并购的完整周期通常在<strong>6到18个月</strong>之间，主要分为以下几个大阶段：</p>
+
+      <div class="process-flow">
+        <div class="flow-track">
+          <div class="flow-step">
+            <div class="flow-circle"><span>1</span></div>
+            <div class="flow-label">战略准备</div>
+            <div class="flow-sub">1–3个月</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-circle"><span>2</span></div>
+            <div class="flow-label">接触谈判</div>
+            <div class="flow-sub">1–3个月</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-circle"><span>3</span></div>
+            <div class="flow-label">尽职调查</div>
+            <div class="flow-sub">2–3个月</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-circle"><span>4</span></div>
+            <div class="flow-label">文件签署</div>
+            <div class="flow-sub">1–2个月</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-circle"><span>5</span></div>
+            <div class="flow-label">监管审批</div>
+            <div class="flow-sub">2–6个月</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-circle"><span>6</span></div>
+            <div class="flow-circle" style="background:var(--gold);"><span style="color:var(--dark);">✓</span></div>
+            <div class="flow-label">交割完成</div>
+            <div class="flow-sub">Closing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-lang="en">
+      <h2 id="overview"><span class="section-num">I</span>M&A Path Overview: The Core Differences</h2>
+      <p>When acquiring in the U.S., a buyer typically faces two fundamentally different paths. Understanding these differences is the first step in building an acquisition strategy.</p>
+      <div class="two-col">
+        <div class="col-card">
+          <p class="col-card-label">Path A</p>
+          <h4>Proprietary Deal</h4>
+          <p>The buyer initiates contact — through an investment bank or directly — and negotiates without competing bidders. <strong>The buyer drives the process; timelines are longer but pricing is typically more favorable.</strong></p>
+        </div>
+        <div class="col-card">
+          <p class="col-card-label">Path B</p>
+          <h4>Auction Process</h4>
+          <p>The seller's investment bank organizes a structured competitive sale. Multiple buyers participate simultaneously and submit bids on a strict timetable. <strong>The seller drives the process; timelines are compressed and pricing competition is intense.</strong></p>
+        </div>
+      </div>
+      <p>The two paths differ significantly in process structure, timeline, legal documentation requirements, and negotiation dynamics. But the core logic is the same regardless: <strong>decide commercially whether the deal is worth doing, then use legal documentation to ensure you actually acquire what you believe you are acquiring.</strong></p>
+      <div class="pull-quote">
+        <p>"An acquisition is not buying a company — it is buying a future cash flow. The legal documents exist to lock in your rights to that future before it arrives."</p>
+      </div>
+      <h3>Overall M&A Timeline</h3>
+      <p>Regardless of path, a complete U.S. M&A cycle typically runs <strong>6 to 18 months</strong>, across the following broad stages:</p>
+      <div class="process-flow">
+        <div class="flow-track">
+          <div class="flow-step"><div class="flow-circle"><span>1</span></div><div class="flow-label">Strategy</div><div class="flow-sub">1–3 mo</div></div>
+          <div class="flow-step"><div class="flow-circle"><span>2</span></div><div class="flow-label">Outreach</div><div class="flow-sub">1–3 mo</div></div>
+          <div class="flow-step"><div class="flow-circle"><span>3</span></div><div class="flow-label">Due Diligence</div><div class="flow-sub">2–3 mo</div></div>
+          <div class="flow-step"><div class="flow-circle"><span>4</span></div><div class="flow-label">Signing</div><div class="flow-sub">1–2 mo</div></div>
+          <div class="flow-step"><div class="flow-circle"><span>5</span></div><div class="flow-label">Regulatory</div><div class="flow-sub">2–6 mo</div></div>
+          <div class="flow-step"><div class="flow-circle" style="background:var(--gold);"><span style="color:var(--dark);">✓</span></div><div class="flow-label">Closing</div><div class="flow-sub">Done</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         SECTION 2: PATH A
+    ══════════════════════════════════════ -->
+    <div data-lang="zh">
+      <h2 id="path-a"><span class="section-num">二</span>路径A：主动寻找标的（Proprietary Deal）</h2>
+      <p>Proprietary Deal 是买方最理想的交易形式——在没有竞争者的情况下，与卖方建立独特的信任关系，以相对合理的价格完成收购。但这也意味着买方需要投入更多的时间和资源，主动识别、接触并说服潜在卖家。</p>
+
+      <!-- PHASE A1 -->
+      <h3 id="phase-a1"><span class="sub-num">阶段1</span>战略定义与目标筛选</h3>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-badge">商业 + 法律</span>
+          <span class="phase-header-title">战略定义与目标筛选 · 1–2个月</span>
+        </div>
+        <div class="phase-body">
+          <p><strong>商业层面：</strong>在接触任何目标之前，买方必须首先明确自己的收购战略。这不是一个可以边走边想的问题——明确的战略是整个交易的基础，也是后续每个决策的参照系。</p>
+          <ul>
+            <li><strong>收购战略类型：</strong>水平整合（收购竞争对手扩大市场份额）、垂直整合（收购上下游供应商或渠道）、多元化（进入新业务领域）、技术收购（获取特定技术或人才）</li>
+            <li><strong>目标画像（Target Profile）：</strong>行业、规模（收入/EBITDA/员工数）、地理位置、盈利状况、所有权结构（PE持有 vs 家族企业 vs 上市公司）</li>
+            <li><strong>财务参数：</strong>买方愿意支付的估值区间（通常以EV/EBITDA倍数表达）、预期的协同效应（Synergies）、整合后的财务模型</li>
+            <li><strong>投行聘用：</strong>买方通常会聘用买方顾问投行（Buy-Side Advisor），协助筛选目标、建立联系、管理流程。投行的报酬通常包括固定的顾问费（Retainer）和成功费（Success Fee，通常为交易价值的0.5%–2%）</li>
+          </ul>
+          <p><strong>法律层面：</strong>这个阶段的法律工作看似不多，但有几件事必须提前准备好：</p>
+          <ul>
+            <li>聘用并购律师（M&A Counsel），确认律师事务所没有利益冲突</li>
+            <li>准备买方的基本法律实体文件，以备后续尽调中的披露需要</li>
+            <li>如果买方是中国实体，需要评估是否存在CFIUS强制申报的可能性——这会影响整个交易时间表</li>
+            <li>初步评估目标行业的监管环境（是否涉及HSR、行业特定许可、州级监管审批等）</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PHASE A2 -->
+      <h3 id="phase-a2"><span class="sub-num">阶段2</span>初步接触与NDA签署</h3>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-badge">商业 + 法律</span>
+          <span class="phase-header-title">初步接触与保密协议 · 2–6周</span>
+        </div>
+        <div class="phase-body">
+          <p><strong>商业层面：</strong>接触潜在卖家是整个Proprietary Deal中最需要技巧的环节。买方需要在不暴露过多意图的情况下，让卖家愿意坐下来谈。</p>
+          <ul>
+            <li><strong>接触方式：</strong>通过投行（最常见）、通过共同认识的人介绍、买方高管直接与卖家CEO联系（适用于有既有关系的情况）</li>
+            <li><strong>初步对话（Preliminary Conversation）：</strong>通常以非正式的探索性对话开始，讨论双方是否有战略契合点，而不直接讨论价格或条款</li>
+            <li><strong>卖家的心理：</strong>很多中小企业主并没有"想卖"的明确意图，买方需要构建一个让卖家觉得"现在是好时机"的叙事——市场估值高、买方能提供的战略价值（Strategic Value）、交易后的管理团队稳定性承诺等</li>
+          </ul>
+          <p><strong>法律层面：NDA（保密协议）是一切信息交换的前提。</strong></p>
+          <ul>
+            <li><strong>NDA的核心条款：</strong>保密信息的定义（越宽越好对卖方，越窄越好对买方）、保密期限（通常1–3年）、禁止挖角条款（Non-Solicitation，禁止买方接触卖方员工）、禁止竞价条款（Standstill Provision，防止买方利用信息做空或竞价）</li>
+            <li><strong>买方谈判重点：</strong>NDA中的"残留信息"条款（Residuals Clause）——如果买方团队成员在记忆中保留了卖方的某些信息，是否受到限制？在AI公司收购中这一条款尤为敏感。</li>
+            <li><strong>双边NDA vs 单边NDA：</strong>Proprietary Deal中通常签署双边NDA，因为买方也需要向卖方披露部分信息（如收购意图、财务状况）</li>
+          </ul>
+          <div class="alert-box warning">
+            <span class="alert-icon">⚠️</span>
+            <span class="alert-text"><strong>常见陷阱：</strong>NDA中的"排他期"（Exclusivity）条款经常被卖方律师塞进NDA里，但排他期本应在LOI阶段才出现。买方在签NDA时应注意删除任何隐含的排他安排。</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE A3 -->
+      <h3 id="phase-a3"><span class="sub-num">阶段3</span>初步尽调与意向函（IOI）</h3>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-badge">商业 + 法律</span>
+          <span class="phase-header-title">初步尽职调查与IOI · 3–6周</span>
+        </div>
+        <div class="phase-body">
+          <p><strong>商业层面：</strong>在签署NDA之后，卖方会分享初步的财务信息（通常是过去3–5年的财务报表、业务概述）。买方需要基于这些信息做出初步的估值判断。</p>
+          <ul>
+            <li><strong>初步财务分析：</strong>正常化EBITDA（Adjusted EBITDA）计算——剔除一次性费用、卖家个人开支、非经常性项目；初步的DCF估值和可比交易分析（Comparable Transaction Analysis）</li>
+            <li><strong>管理层初次见面（Management Presentation）：</strong>卖家CEO或CFO会做一个业务介绍，这是买方评估管理团队能力和文化契合度的重要机会</li>
+            <li><strong>协同效应初步评估：</strong>买方内部团队评估收购后能带来的成本节约和收入增长，这是支撑溢价出价的核心依据</li>
+          </ul>
+          <p><strong>法律层面：IOI（意向函，Indication of Interest）是Proprietary Deal中第一份正式文件。</strong></p>
+          <ul>
+            <li><strong>IOI的内容：</strong>初步的估值区间（通常以EV范围表达，如"$50M–$70M"）、初步的交易结构设想（全现金 vs 股权对价 vs 分期付款）、继续推进的前提条件</li>
+            <li><strong>IOI的法律效力：</strong>IOI通常是<strong>不具有法律约束力的</strong>（Non-Binding），目的是向卖方表明认真意图，同时保留买方的灵活性</li>
+            <li><strong>谈判注意点：</strong>IOI中不要过早承诺价格区间的上限——一旦提出，就成为后续谈判的基准线</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PHASE A4 -->
+      <h3 id="phase-a4"><span class="sub-num">阶段4</span>LOI谈判与签署</h3>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-badge">核心法律阶段</span>
+          <span class="phase-header-title">意向书谈判与签署 · 2–4周</span>
+        </div>
+        <div class="phase-body">
+          <p><strong>LOI（Letter of Intent，意向书）是整个并购过程中最重要的里程碑之一。</strong>它在技术上通常不具约束力，但在实践中极大地影响后续谈判的走向。</p>
+          <p><strong>商业层面：LOI需要明确的商业条款：</strong></p>
+          <ul>
+            <li><strong>交易价格（Purchase Price）：</strong>具体的数字，而非范围。通常以企业价值（Enterprise Value, EV）表达，再减去净债务（Net Debt）得到股权价值（Equity Value）</li>
+            <li><strong>价格调整机制：</strong>净营运资金调整（Working Capital Adjustment）——交割时实际营运资金与目标营运资金的差额调整；收益条款（Earnout）——部分价款与未来业绩挂钩</li>
+            <li><strong>交易结构：</strong>资产收购（Asset Purchase）还是股权收购（Stock Purchase）？两者在税务处理和责任承接上有根本差异</li>
+            <li><strong>管理团队安排：</strong>CEO是否继续留任？期限多长？是否有激励安排？</li>
+          </ul>
+          <p><strong>法律层面：LOI中具有约束力的条款：</strong></p>
+          <ul>
+            <li><strong>排他期（Exclusivity / No-Shop）：</strong>通常30–60天，卖方承诺在此期间不与其他潜在买家接触。这是LOI中最重要的具有约束力的条款</li>
+            <li><strong>费用分担（Break-Up Fee）：</strong>如果卖方在排他期内违约接受其他报价，是否需要赔偿买方已支付的尽调费用？</li>
+            <li><strong>保密义务：</strong>通常引用已签署的NDA</li>
+            <li><strong>适用法律：</strong>通常选择特拉华州法律（Delaware Law）</li>
+          </ul>
+          <div class="alert-box tip">
+            <span class="alert-icon">💡</span>
+            <span class="alert-text"><strong>策略建议：</strong>在LOI阶段，买方应尽量避免过于详细地规定SPA中的陈述与保证条款。过早承诺会削弱你在SPA谈判中的筹码。LOI阶段谈价格和结构，SPA阶段才谈风险分配。</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE A5 -->
+      <h3 id="phase-a5"><span class="sub-num">阶段5</span>完整尽职调查（Full Due Diligence）</h3>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-badge">核心法律 + 商业阶段</span>
+          <span class="phase-header-title">全面尽职调查 · 6–10周</span>
+        </div>
+        <div class="phase-body">
+          <p>尽职调查是并购中工作量最大的阶段，也是买方风险控制的核心环节。目标是：<strong>验证LOI中假设的一切，发现LOI中没有披露的一切。</strong></p>
+          <p><strong>商业尽调（Commercial / Business DD）：</strong></p>
+          <ul>
+            <li><strong>市场分析：</strong>目标公司所在市场的规模、增长率、竞争格局</li>
+            <li><strong>客户集中度：</strong>前5大客户占收入比例、客户流失率（Churn Rate）、合同续签情况</li>
+            <li><strong>产品/服务竞争力：</strong>护城河（Moat）分析、差异化优势</li>
+            <li><strong>供应链稳定性：</strong>关键供应商依赖度、供应链中断风险</li>
+            <li><strong>管理团队深度访谈：</strong>评估团队能力、文化、以及收购后的稳定性风险</li>
+          </ul>
+          <p><strong>财务尽调（Financial DD）：</strong></p>
+          <ul>
+            <li>历史财务报表验证（通常5年）、审计报告核查</li>
+            <li>正常化EBITDA的详细分析，识别所有一次性项目</li>
+            <li>营运资金分析（Working Capital Analysis）——确定正常营运资金水平</li>
+            <li>现金流分析、资本支出历史与计划</li>
+            <li>债务结构、表外负债（Off-Balance Sheet Liabilities）</li>
+          </ul>
+          <p><strong>法律尽调（Legal DD）——最复杂的部分：</strong></p>
+          <ul>
+            <li><strong>公司结构：</strong>股权架构图、子公司列表、股东协议</li>
+            <li><strong>重大合同：</strong>客户合同（是否有Change of Control条款？）、供应商合同、租约、贷款协议</li>
+            <li><strong>知识产权：</strong>专利、商标、版权的所有权验证；是否有侵权风险</li>
+            <li><strong>劳动法合规：</strong>员工分类（雇员 vs 独立承包商）、非竞争协议、薪酬福利</li>
+            <li><strong>诉讼与或有负债：</strong>未决诉讼、监管调查、环境责任</li>
+            <li><strong>数据隐私合规：</strong>GDPR、CCPA合规状况，数据泄露历史</li>
+            <li><strong>税务：</strong>税务历史、税务优惠的合规性、潜在税务风险</li>
+          </ul>
+          <div class="alert-box warning">
+            <span class="alert-icon">⚠️</span>
+            <span class="alert-text"><strong>Change of Control条款：</strong>这是法律尽调中最容易被忽视的雷区。很多重要合同（特别是大客户合同、软件许可合同）都有控制权变更条款，规定在公司被收购时对方有权终止合同或要求重新谈判。如果目标公司50%的收入来自一个有这个条款的大客户，这个交易的风险就完全不同了。</span>
+          </div>
+          <p><strong>技术尽调（Technical DD，适用于科技公司）：</strong></p>
+          <ul>
+            <li>代码库质量评估、技术债务分析</li>
+            <li>基础设施安全性、数据存储合规性</li>
+            <li>核心技术人才的留任风险</li>
+          </ul>
+          <p><strong>尽调工具：</strong>所有文件通常通过虚拟数据室（Virtual Data Room, VDR）共享，常用平台有Intralinks、Datasite（原Merrill DataSite）、Firmex。买方的律师和顾问团队在VDR中提问，卖方律师逐条回复。</p>
+        </div>
+      </div>
+
+      <!-- PHASE A6 -->
+      <h3 id="phase-a6"><span class="sub-num">阶段6</span>SPA谈判与签署</h3>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-badge">核心法律阶段</span>
+          <span class="phase-header-title">股权购买协议谈判 · 4–8周</span>
+        </div>
+        <div class="phase-body">
+          <p>SPA（Stock Purchase Agreement，股权购买协议）或APA（Asset Purchase Agreement，资产购买协议）是并购交易的核心法律文件。<strong>SPA谈判是整个交易中法律团队工作最密集的阶段。</strong></p>
+          <p><strong>SPA的核心条款结构：</strong></p>
+          <ul>
+            <li><strong>陈述与保证（Representations and Warranties）：</strong>卖方对目标公司状况的一系列声明——财务数据真实、没有重大未披露负债、知识产权权属清晰等。这是SPA中篇幅最长、谈判最激烈的部分</li>
+            <li><strong>卖方披露函（Disclosure Schedules）：</strong>卖方对陈述与保证的例外事项列表。"已披露"的事项通常从赔偿义务中排除</li>
+            <li><strong>契约（Covenants）：</strong>签约到交割期间双方的行为约束——卖方承诺在正常商业轨道上运营，不做重大变更；买方承诺推进监管审批</li>
+            <li><strong>交割条件（Closing Conditions）：</strong>什么情况下双方有权拒绝完成交割？通常包括：监管审批获得、没有重大不利变化（Material Adverse Change, MAC）、陈述与保证在交割时仍然准确</li>
+            <li><strong>赔偿条款（Indemnification）：</strong>如果陈述与保证违反，谁赔、赔多少、赔多久？通常设有免赔额（Basket）、赔偿上限（Cap）和时效（Survival Period）</li>
+            <li><strong>价格调整机制：</strong>营运资金调整、收益调款（Earnout）的具体计算方式</li>
+          </ul>
+          <p><strong>RWI保险（Representations & Warranties Insurance）：</strong></p>
+          <p>在现代并购中，买方越来越多地购买RWI保险，将卖方陈述与保证违反的赔偿责任转移给保险公司。这使得卖方可以在交割时实现"干净退出"，同时保护买方在违约时有真实的追偿渠道。保费通常为保额的2%–4%。</p>
+          <div class="alert-box tip">
+            <span class="alert-icon">💡</span>
+            <span class="alert-text"><strong>MAC条款的谈判艺术：</strong>重大不利变化（Material Adverse Change）条款定义了什么情况下买方可以在签约后、交割前退出交易。新冠疫情期间大量并购因MAC争议进入诉讼。买方希望MAC的定义尽量宽，卖方希望尽量窄。关键战场在于：行业性因素、宏观经济因素、是否纳入疫情/贸易战等系统性风险。</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE A7 -->
+      <h3 id="phase-a7"><span class="sub-num">阶段7</span>监管审批与交割</h3>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-badge">监管 + 交割</span>
+          <span class="phase-header-title">监管审批与交割 · 2–6个月</span>
+        </div>
+        <div class="phase-body">
+          <p><strong>主要监管审批类型：</strong></p>
+          <ul>
+            <li><strong>HSR申报（Hart-Scott-Rodino Act）：</strong>如果交易规模超过$119.5M（2024年门槛），买卖双方必须向FTC和DOJ提交HSR申报，等待30天审查期（初始等待期）。反垄断问题严重的交易可能收到"第二次请求（Second Request）"，大幅延长时间</li>
+            <li><strong>CFIUS审查（涉及中国买方）：</strong>对于中国买方收购美国TID（技术、基础设施、数据）领域的企业，CFIUS强制申报是必须的。审查时间从45天初始审查到完整270天不等。CFIUS是目前中美跨境并购最大的监管变量</li>
+            <li><strong>行业特定审批：</strong>金融（FDIC/Fed）、电信（FCC）、航空（DOT）、医疗（FDA）等行业有额外的监管审批要求</li>
+            <li><strong>州级监管：</strong>某些州对特定行业（如保险、银行）有独立的审批要求</li>
+          </ul>
+          <p><strong>交割（Closing）流程：</strong></p>
+          <ul>
+            <li><strong>交割前检查清单（Pre-Closing Checklist）：</strong>双方律师确认所有交割条件已满足，包括监管审批、陈述与保证更新、必要的第三方同意</li>
+            <li><strong>资金交割：</strong>买方将交易款项汇入托管账户（Escrow Account），卖方同时完成股权转让</li>
+            <li><strong>托管安排（Escrow Arrangement）：</strong>通常将5%–15%的交易价款放入托管账户，作为卖方赔偿义务的担保，锁定期通常12–24个月</li>
+            <li><strong>交割文件：</strong>官员证书、股权转让文件、辞职信（卖方董事辞职）、聘用协议（管理团队）等</li>
+          </ul>
+          <div class="alert-box warning">
+            <span class="alert-icon">⚠️</span>
+            <span class="alert-text"><strong>对于中国买方的特别提示：</strong>签约和交割之间的时间差（有时长达6–12个月）对中国买方尤其风险高。在这段时间里，地缘政治局势可能变化，CFIUS审查可能升级，卖方也可能发生重大不利变化。买方应在SPA中争取尽可能宽的MAC定义，同时确保CFIUS批准作为交割先决条件明确列明。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENGLISH PATH A -->
+    <div data-lang="en">
+      <h2 id="path-a"><span class="section-num">II</span>Path A: The Proprietary Deal</h2>
+      <p>A proprietary deal is a buyer's ideal scenario — building a unique relationship with the seller without competing bidders, and completing the acquisition at a more reasonable valuation. But it also requires the buyer to invest significantly more time and resources in identifying, approaching, and persuading potential sellers.</p>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot"><span>1</span></div><div class="tl-line"></div></div>
+          <div class="tl-content">
+            <p class="tl-phase">Phase 1</p>
+            <p class="tl-title">Strategy Definition & Target Screening</p>
+            <span class="tl-duration">1–2 months</span>
+            <p class="tl-desc">Before approaching any target, the buyer must define a clear acquisition strategy. This includes the acquisition thesis (horizontal integration, vertical integration, technology acquisition, etc.), a detailed target profile (industry, size, geography, ownership structure), and financial parameters (valuation range in EV/EBITDA multiples, expected synergies). A buy-side investment bank is typically engaged to assist with screening and outreach. Legal counsel should be engaged early to assess CFIUS risk and regulatory landscape for the target industry.</p>
+            <div class="tl-tags"><span class="tl-tag biz">Business</span><span class="tl-tag legal">Legal</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot"><span>2</span></div><div class="tl-line"></div></div>
+          <div class="tl-content">
+            <p class="tl-phase">Phase 2</p>
+            <p class="tl-title">Outreach & NDA Execution</p>
+            <span class="tl-duration">2–6 weeks</span>
+            <p class="tl-desc">The buyer (often through its investment bank) initiates contact with the target. Initial conversations are exploratory and non-committal, focused on strategic fit rather than price. Once there is mutual interest, a Non-Disclosure Agreement (NDA) is signed. Key NDA negotiation points include the definition of confidential information, the non-solicitation of employees clause, and any standstill provisions. Buyers should be alert to exclusivity obligations that sellers' counsel sometimes attempt to embed in NDAs — these should be reserved for the LOI stage.</p>
+            <div class="tl-tags"><span class="tl-tag biz">Business</span><span class="tl-tag legal">Legal</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot"><span>3</span></div><div class="tl-line"></div></div>
+          <div class="tl-content">
+            <p class="tl-phase">Phase 3</p>
+            <p class="tl-title">Preliminary Due Diligence & IOI</p>
+            <span class="tl-duration">3–6 weeks</span>
+            <p class="tl-desc">After NDA execution, the seller shares preliminary financial information. The buyer conducts initial financial analysis — calculating normalized EBITDA, building a preliminary DCF model, and analyzing comparable transactions. A management presentation follows. Based on this analysis, the buyer submits a non-binding Indication of Interest (IOI) expressing a preliminary valuation range and proposed transaction structure. Buyers should avoid anchoring themselves to a high end of a range at this stage.</p>
+            <div class="tl-tags"><span class="tl-tag biz">Business</span><span class="tl-tag legal">Legal</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot"><span>4</span></div><div class="tl-line"></div></div>
+          <div class="tl-content">
+            <p class="tl-phase">Phase 4</p>
+            <p class="tl-title">LOI Negotiation & Signing</p>
+            <span class="tl-duration">2–4 weeks</span>
+            <p class="tl-desc">The Letter of Intent (LOI) is one of the most important milestones in the M&A process. It is typically non-binding on price, but binding on exclusivity (30–60 days), confidentiality, and governing law. Commercially, the LOI must nail down the purchase price, price adjustment mechanisms (working capital adjustment, earnout), and transaction structure (asset vs. stock purchase). Legally, the exclusivity period is the most critical binding provision — it prevents the seller from shopping the deal to other buyers during full due diligence.</p>
+            <div class="tl-tags"><span class="tl-tag biz">Business</span><span class="tl-tag legal">Legal</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot"><span>5</span></div><div class="tl-line"></div></div>
+          <div class="tl-content">
+            <p class="tl-phase">Phase 5</p>
+            <p class="tl-title">Full Due Diligence</p>
+            <span class="tl-duration">6–10 weeks</span>
+            <p class="tl-desc">Full due diligence is the most labor-intensive phase of the deal. The objective is to verify every assumption made in the LOI and surface anything that was not disclosed. This encompasses commercial DD (market analysis, customer concentration, competitive positioning), financial DD (5-year historical financials, normalized EBITDA, working capital analysis, off-balance sheet liabilities), legal DD (corporate structure, material contracts, IP ownership, employment law compliance, litigation, data privacy), and for technology targets, technical DD (code quality, technical debt, infrastructure security). All materials are shared through a Virtual Data Room (VDR). The Change of Control clause in key customer contracts is one of the most frequently overlooked risk areas in legal DD.</p>
+            <div class="tl-tags"><span class="tl-tag biz">Business</span><span class="tl-tag legal">Legal</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot"><span>6</span></div><div class="tl-line"></div></div>
+          <div class="tl-content">
+            <p class="tl-phase">Phase 6</p>
+            <p class="tl-title">SPA Negotiation & Signing</p>
+            <span class="tl-duration">4–8 weeks</span>
+            <p class="tl-desc">The Stock Purchase Agreement (or Asset Purchase Agreement) is the definitive legal document of the transaction. SPA negotiation is the most legally intensive phase. Key negotiated provisions include Representations and Warranties (the seller's factual statements about the target company's condition), Disclosure Schedules (the seller's carve-outs from those representations), Covenants (behavioral obligations between signing and closing), Closing Conditions (including MAC clauses), and Indemnification (the risk allocation mechanism — basket, cap, survival period). RWI (Representations and Warranties Insurance) is increasingly common, transferring the seller's indemnification exposure to an insurer and enabling a clean exit.</p>
+            <div class="tl-tags"><span class="tl-tag legal">Legal</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot" style="background:var(--gold);border-color:var(--gold);"><span style="color:var(--dark);">✓</span></div></div>
+          <div class="tl-content">
+            <p class="tl-phase">Phase 7</p>
+            <p class="tl-title">Regulatory Approval & Closing</p>
+            <span class="tl-duration">2–6 months</span>
+            <p class="tl-desc">Regulatory approvals run in parallel with or after SPA signing. For deals above the HSR threshold (~$119.5M in 2024), an HSR filing triggers a 30-day initial waiting period. For Chinese acquirers of U.S. technology, infrastructure, or data companies, CFIUS review is mandatory and can extend the timeline by 3–9 months. Closing involves confirming all conditions have been satisfied, wiring funds to escrow, executing stock transfer documents, and delivering officer certificates and management employment agreements. A portion of the purchase price (typically 5–15%) is held in escrow for 12–24 months as security for indemnification obligations.</p>
+            <div class="tl-tags"><span class="tl-tag biz">Business</span><span class="tl-tag legal">Legal</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         SECTION 3: PATH B — AUCTION
+    ══════════════════════════════════════ -->
+    <div data-lang="zh">
+      <h2 id="path-b"><span class="section-num">三</span>路径B：竞价流程（Auction Process）</h2>
+      <p>竞价流程（也称Sell-Side Process或Structured Process）是卖方主导的交易形式。卖方聘用投行，向多个潜在买家同时发送材料，按照严格时间表收集报价，最终选择最优买家进入排他谈判。</p>
+      <p>作为买方参与竞价，你的核心挑战是：<strong>在有限的时间和有限的信息下，做出尽可能精准的估值，同时在报价上具有竞争力，在谈判条款上对卖方有吸引力。</strong></p>
+
+      <h3>竞价流程的典型时间表</h3>
+      <div class="process-flow">
+        <div class="flow-track">
+          <div class="flow-step">
+            <div class="flow-circle"><span>1</span></div>
+            <div class="flow-label">收到IM</div>
+            <div class="flow-sub">第1–2周</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-circle"><span>2</span></div>
+            <div class="flow-label">提交IOI</div>
+            <div class="flow-sub">第3–4周</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-circle"><span>3</span></div>
+            <div class="flow-label">管理层会议</div>
+            <div class="flow-sub">第5–7周</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-circle"><span>4</span></div>
+            <div class="flow-label">提交LOI</div>
+            <div class="flow-sub">第8–10周</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-circle"><span>5</span></div>
+            <div class="flow-label">排他尽调</div>
+            <div class="flow-sub">第11–18周</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-circle" style="background:var(--gold);"><span style="color:var(--dark);">✓</span></div>
+            <div class="flow-label">签约 → 交割</div>
+            <div class="flow-sub">第19周+</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE B1 -->
+      <h3 id="phase-b1"><span class="sub-num">第一轮</span>收到IM与提交IOI</h3>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-badge">第一轮竞价</span>
+          <span class="phase-header-title">信息备忘录分析与意向函提交 · 2–4周</span>
+        </div>
+        <div class="phase-body">
+          <p><strong>信息备忘录（Information Memorandum, IM）：</strong>这是卖方投行准备的核心材料，通常50–150页，包含公司概述、历史财务、市场定位、管理团队介绍等。IM是买方在第一轮中唯一可以依赖的信息来源。</p>
+          <p><strong>买方的第一轮工作：</strong></p>
+          <ul>
+            <li><strong>快速建模：</strong>基于IM中的财务数据，在1–2周内建立初步财务模型，得出估值区间</li>
+            <li><strong>内部战略评估：</strong>这笔交易是否符合买方战略？协同效应有多大？整合复杂度如何？</li>
+            <li><strong>竞争态势分析：</strong>评估谁会是竞争对手？战略买家（Strategic Buyer）还是财务买家（Financial Buyer，即PE）？他们的出价逻辑是什么？</li>
+          </ul>
+          <p><strong>IOI提交：</strong>第一轮IOI通常包括初步估值区间、初步的交易结构意向、融资确认（Financing Confirmation），有时包括初步的尽调问题清单。<strong>这是一场关于信号博弈的游戏</strong>——你的报价要足够高进入第二轮，但又不能高到让你在第二轮失去谈判空间。</p>
+          <div class="alert-box tip">
+            <span class="alert-icon">💡</span>
+            <span class="alert-text"><strong>竞价策略：</strong>在第一轮IOI中，除了价格，买方的"确定性（Certainty of Closing）"是卖方投行非常看重的因素。融资已落实、不需要股东大会审批、CFIUS风险低——这些因素有时比多出10%的报价更有说服力。对于中国买方，CFIUS风险的管理和沟通是第一轮胜出的关键。</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE B2 -->
+      <h3 id="phase-b2"><span class="sub-num">第二轮</span>管理层会议与提交最终LOI</h3>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-badge">第二轮竞价</span>
+          <span class="phase-header-title">深度尽调与最终报价 · 3–5周</span>
+        </div>
+        <div class="phase-body">
+          <p>进入第二轮的买家通常缩减至3–6家。卖方投行会开放更多的数据室文件，并安排买家与管理层的深度会议。</p>
+          <p><strong>管理层会议（Management Meetings）：</strong></p>
+          <ul>
+            <li>通常半天到一天的深度会议，买方CEO和CFO应亲自参加</li>
+            <li>重点评估管理团队的能力、诚信度和文化契合度</li>
+            <li>询问IM中没有解释清楚的问题：客户流失原因、毛利率波动、资本支出计划</li>
+            <li>在这个阶段，"买人"和"买业务"同样重要——你不只是在买数字，你在买一个会和你一起共事的团队</li>
+          </ul>
+          <p><strong>第二轮LOI（最终报价）要求更精准：</strong></p>
+          <ul>
+            <li>具体的交易价格（而非区间），通常精确到百万美元</li>
+            <li>具体的交易结构（资产收购 vs 股权收购）</li>
+            <li>融资安排确认（Committed Financing，而非Anticipated Financing）</li>
+            <li>排他期时长和尽调计划</li>
+            <li>标记版的SPA初稿（Marked-Up SPA Draft）——在竞争激烈的竞价中，买方提交一份对卖方友好的SPA标记版，可以大幅提升胜出概率</li>
+          </ul>
+          <div class="alert-box warning">
+            <span class="alert-icon">⚠️</span>
+            <span class="alert-text"><strong>竞价中的标记版SPA：</strong>在激烈的竞价中，卖方投行有时会要求所有第二轮买家提交标记版的SPA草案。这意味着你的律师必须在2–3周内完整审阅并标注卖方律师起草的SPA——这是极高强度的工作，需要提前与律师团队协调好资源。</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE B3 -->
+      <h3 id="phase-b3"><span class="sub-num">排他后</span>从排他到交割</h3>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-badge">排他后阶段</span>
+          <span class="phase-header-title">排他尽调、SPA谈判、监管、交割</span>
+        </div>
+        <div class="phase-body">
+          <p>一旦卖方选定优先买家并进入排他期，后续的流程与Proprietary Deal基本相同：完整尽调 → SPA最终谈判 → 签约 → 监管审批 → 交割。</p>
+          <p><strong>竞价排他后的特殊注意点：</strong></p>
+          <ul>
+            <li><strong>价格重新谈判的机会：</strong>尽调中发现的重大问题（Material DD Finding）是买方重新谈判价格的合法依据。但要注意：在竞价结束后轻易压价会严重损害关系，卖方有时宁愿选回第二高价买家</li>
+            <li><strong>时间压力：</strong>竞价流程中的排他期通常比Proprietary Deal短（30–45天 vs 45–60天），买方必须高效组织尽调</li>
+            <li><strong>SPA谈判：</strong>在竞价中，卖方律师通常提供的是对卖方极为友好的SPA初稿，买方需要在有限时间内争取合理的风险分配</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div data-lang="en">
+      <h2 id="path-b"><span class="section-num">III</span>Path B: The Auction Process</h2>
+      <p>The auction process (also called a sell-side process or structured process) is a seller-driven transaction. The seller engages an investment bank to send materials to multiple potential buyers simultaneously, collect bids on a strict timetable, and select the preferred buyer to enter exclusive negotiations.</p>
+      <p>As a buyer in an auction, your central challenge is: <strong>making a precise valuation decision under time pressure and with limited information, while submitting a price that is competitive and terms that are attractive to the seller.</strong></p>
+
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-badge">Round 1</span>
+          <span class="phase-header-title">Information Memorandum & IOI Submission · 2–4 weeks</span>
+        </div>
+        <div class="phase-body">
+          <p>The seller's bank distributes a teaser and, after NDA execution, a full Information Memorandum (IM) — typically 50–150 pages covering business overview, historical financials, market positioning, and management team. The IM is the buyer's primary information source in Round 1.</p>
+          <p>The buyer must rapidly build a financial model, conduct an internal strategic assessment, and analyze the competitive landscape (who else is bidding, and at what logic). The Round 1 IOI includes a preliminary valuation range, transaction structure intent, and financing confirmation.</p>
+          <p><strong>Certainty of closing</strong> is as important as price in Round 1. Committed financing, no shareholder vote required, and a credible regulatory clearance timeline (especially CFIUS for Chinese buyers) can outweigh a 10% higher bid from a less certain buyer.</p>
+        </div>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-badge">Round 2</span>
+          <span class="phase-header-title">Management Meetings & Final LOI · 3–5 weeks</span>
+        </div>
+        <div class="phase-body">
+          <p>Round 2 typically narrows the field to 3–6 buyers. The data room opens further, and management meetings are scheduled — typically half-day to full-day sessions that the buyer's CEO and CFO should attend in person.</p>
+          <p>The Round 2 LOI (final bid) requires a specific price (not a range), a confirmed transaction structure, committed financing documentation, a proposed exclusivity period, and increasingly, a marked-up SPA draft. Submitting a seller-friendly SPA mark-up in a competitive auction can dramatically improve the probability of selection as preferred buyer.</p>
+          <p>Once selected as preferred buyer and entering exclusivity, the process converges with the proprietary deal path: full due diligence → SPA finalization → signing → regulatory approvals → closing. Note that exclusivity periods in auctions are typically shorter (30–45 days vs. 45–60 days in proprietary deals), requiring efficient diligence execution.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         SECTION 4: KEY DOCUMENTS
+    ══════════════════════════════════════ -->
+    <div data-lang="zh">
+      <h2 id="key-docs"><span class="section-num">四</span>核心法律文件全览</h2>
+      <p>以下是美国并购中从头到尾会涉及的主要法律文件：</p>
+      <div class="doc-grid">
+        <div class="doc-item"><span class="doc-icon">📄</span><div><p class="doc-name">NDA / Confidentiality Agreement</p><p class="doc-desc">保密协议。信息共享的前提，通常是并购第一份正式文件</p></div></div>
+        <div class="doc-item"><span class="doc-icon">📋</span><div><p class="doc-name">IOI — Indication of Interest</p><p class="doc-desc">意向函。非约束性，表达初步估值和收购意向</p></div></div>
+        <div class="doc-item"><span class="doc-icon">🤝</span><div><p class="doc-name">LOI — Letter of Intent</p><p class="doc-desc">意向书。排他期具有约束力，价格条款通常非约束性</p></div></div>
+        <div class="doc-item"><span class="doc-icon">📊</span><div><p class="doc-name">SPA / APA</p><p class="doc-desc">股权/资产购买协议。交易的核心法律文件，完全具有约束力</p></div></div>
+        <div class="doc-item"><span class="doc-icon">📝</span><div><p class="doc-name">Disclosure Schedules</p><p class="doc-desc">卖方披露函。SPA中陈述与保证的例外事项清单</p></div></div>
+        <div class="doc-item"><span class="doc-icon">🔒</span><div><p class="doc-name">Escrow Agreement</p><p class="doc-desc">托管协议。规定托管款项的持有、释放和索赔条件</p></div></div>
+        <div class="doc-item"><span class="doc-icon">👔</span><div><p class="doc-name">Employment Agreements</p><p class="doc-desc">管理层雇用协议。交割条件之一，留任安排的法律载体</p></div></div>
+        <div class="doc-item"><span class="doc-icon">🛡️</span><div><p class="doc-name">RWI Policy</p><p class="doc-desc">陈述与保证保险。将违约赔偿转移给保险公司</p></div></div>
+        <div class="doc-item"><span class="doc-icon">📮</span><div><p class="doc-name">HSR Filing</p><p class="doc-desc">反垄断申报文件。超过门槛的交易必须向FTC/DOJ提交</p></div></div>
+        <div class="doc-item"><span class="doc-icon">🏛️</span><div><p class="doc-name">CFIUS Filing</p><p class="doc-desc">外国投资审查申报。涉及中国买方的TID交易必须提交</p></div></div>
+        <div class="doc-item"><span class="doc-icon">📃</span><div><p class="doc-name">Closing Certificates</p><p class="doc-desc">交割证书。确认交割条件满足的官员证书</p></div></div>
+        <div class="doc-item"><span class="doc-icon">💼</span><div><p class="doc-name">Transition Services Agreement</p><p class="doc-desc">过渡服务协议。卖方在交割后提供的临时运营支持安排</p></div></div>
+      </div>
+    </div>
+
+    <div data-lang="en">
+      <h2 id="key-docs"><span class="section-num">IV</span>Key Legal Documents Overview</h2>
+      <div class="doc-grid">
+        <div class="doc-item"><span class="doc-icon">📄</span><div><p class="doc-name">NDA / Confidentiality Agreement</p><p class="doc-desc">The prerequisite for all information sharing. Typically the first formal document in any M&A process.</p></div></div>
+        <div class="doc-item"><span class="doc-icon">📋</span><div><p class="doc-name">IOI — Indication of Interest</p><p class="doc-desc">Non-binding expression of preliminary valuation range and acquisition intent.</p></div></div>
+        <div class="doc-item"><span class="doc-icon">🤝</span><div><p class="doc-name">LOI — Letter of Intent</p><p class="doc-desc">Exclusivity is binding; price and most commercial terms are non-binding.</p></div></div>
+        <div class="doc-item"><span class="doc-icon">📊</span><div><p class="doc-name">SPA / APA</p><p class="doc-desc">The definitive purchase agreement. Fully binding. The core legal document of the transaction.</p></div></div>
+        <div class="doc-item"><span class="doc-icon">📝</span><div><p class="doc-name">Disclosure Schedules</p><p class="doc-desc">Seller's exceptions and carve-outs from representations and warranties in the SPA.</p></div></div>
+        <div class="doc-item"><span class="doc-icon">🔒</span><div><p class="doc-name">Escrow Agreement</p><p class="doc-desc">Governs holding, release, and claims against the indemnification escrow.</p></div></div>
+        <div class="doc-item"><span class="doc-icon">👔</span><div><p class="doc-name">Employment Agreements</p><p class="doc-desc">Management retention arrangements, often a closing condition.</p></div></div>
+        <div class="doc-item"><span class="doc-icon">🛡️</span><div><p class="doc-name">RWI Policy</p><p class="doc-desc">Transfers indemnification exposure for R&W breaches to an insurer.</p></div></div>
+        <div class="doc-item"><span class="doc-icon">📮</span><div><p class="doc-name">HSR Filing</p><p class="doc-desc">Mandatory antitrust filing for deals above the threshold (~$119.5M in 2024).</p></div></div>
+        <div class="doc-item"><span class="doc-icon">🏛️</span><div><p class="doc-name">CFIUS Filing</p><p class="doc-desc">Mandatory for Chinese acquirers of U.S. TID sector targets.</p></div></div>
+        <div class="doc-item"><span class="doc-icon">📃</span><div><p class="doc-name">Closing Certificates</p><p class="doc-desc">Officer certificates confirming that closing conditions have been satisfied.</p></div></div>
+        <div class="doc-item"><span class="doc-icon">💼</span><div><p class="doc-name">Transition Services Agreement</p><p class="doc-desc">Governs operational support provided by the seller to the buyer post-closing.</p></div></div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         SECTION 5: COMPARISON
+    ══════════════════════════════════════ -->
+    <div data-lang="zh">
+      <h2 id="compare"><span class="section-num">五</span>两种路径对比：如何选择</h2>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>维度</th>
+            <th>Proprietary Deal</th>
+            <th>Auction Process</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>发起方</td><td>买方主动</td><td>卖方主导</td></tr>
+          <tr><td>竞争程度</td><td>无竞争或极少竞争</td><td>通常3–10家买家同时竞价</td></tr>
+          <tr><td>典型总时长</td><td>12–18个月</td><td>6–12个月</td></tr>
+          <tr><td>估值水平</td><td>通常较低，有协商空间</td><td>通常较高，卖方充分博弈</td></tr>
+          <tr><td>信息获取</td><td>更深入，时间更充裕</td><td>有限，按卖方节奏</td></tr>
+          <tr><td>谈判主导权</td><td>买方较强</td><td>卖方较强</td></tr>
+          <tr><td>法律文件节奏</td><td>相对从容</td><td>高度压缩，需快速响应</td></tr>
+          <tr><td>关系建立</td><td>深度关系，整合基础更好</td><td>接触时间短，整合挑战更大</td></tr>
+          <tr><td>适合场景</td><td>买方有明确目标、强战略协同、长期布局</td><td>卖方主动出售、行业热门标的、PE卖出</td></tr>
+          <tr><td>对中国买方的特殊考量</td><td>CFIUS风险可以更充分评估；可以提前与CFIUS预沟通</td><td>时间压力大，CFIUS审查周期与竞价节奏往往不兼容</td></tr>
+        </tbody>
+      </table>
+
+      <div class="pull-quote">
+        <p>"最好的交易，是你在别人还没意识到值得卖的时候，就已经坐在谈判桌上了。"</p>
+      </div>
+
+      <p>对于中国买方而言，Proprietary Deal通常更具优势——因为它允许在CFIUS审查介入之前，充分建立与卖方的信任关系，设计对双方都有利的交易结构。而在Auction中，中国买方往往因为CFIUS不确定性而处于不利地位，即便报价更高，卖方也可能选择"确定性更高"的其他买家。</p>
+      <p>这不意味着中国买方应该放弃竞价机会——而是意味着，在参与竞价时，必须更早、更主动地管理CFIUS风险，将"监管确定性"作为报价的核心竞争力之一。</p>
+    </div>
+
+    <div data-lang="en">
+      <h2 id="compare"><span class="section-num">V</span>Comparing Both Paths: How to Choose</h2>
+      <table class="compare-table">
+        <thead>
+          <tr><th>Dimension</th><th>Proprietary Deal</th><th>Auction Process</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Who initiates</td><td>Buyer-driven</td><td>Seller-driven</td></tr>
+          <tr><td>Competition</td><td>None or minimal</td><td>Typically 3–10 simultaneous bidders</td></tr>
+          <tr><td>Typical total timeline</td><td>12–18 months</td><td>6–12 months</td></tr>
+          <tr><td>Valuation level</td><td>Typically lower, more negotiating room</td><td>Typically higher, seller fully monetizes competition</td></tr>
+          <tr><td>Information access</td><td>Deeper, more time to analyze</td><td>Limited, on seller's timetable</td></tr>
+          <tr><td>Negotiating leverage</td><td>Buyer-favorable</td><td>Seller-favorable</td></tr>
+          <tr><td>Legal document pace</td><td>More deliberate</td><td>Highly compressed, rapid response required</td></tr>
+          <tr><td>Relationship building</td><td>Deep, better integration foundation</td><td>Limited contact time, integration challenges greater</td></tr>
+          <tr><td>Best suited for</td><td>Specific strategic target, long-term positioning</td><td>Seller actively marketing, hot sector asset, PE exit</td></tr>
+          <tr><td>Chinese buyer consideration</td><td>CFIUS risk can be assessed and managed proactively</td><td>Timeline compression conflicts with CFIUS review cycle</td></tr>
+        </tbody>
+      </table>
+      <p>For Chinese acquirers, proprietary deals typically offer a structural advantage — they allow time to build seller trust, design a CFIUS-compliant transaction structure, and manage regulatory risk proactively before it becomes a competitive liability. In auctions, Chinese buyers often face headwinds from CFIUS uncertainty even with a higher bid, as sellers prioritize certainty of closing.</p>
+      <p>This does not mean Chinese buyers should avoid auctions. It means that when participating in auctions, CFIUS risk management must begin earlier, and regulatory certainty must be positioned as a core element of the bid's competitive value — not an afterthought.</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="article-cta">
+      <p class="cta-label"><span data-lang="zh">关于作者</span><span data-lang="en">About the Author</span></p>
+      <h3 data-lang="zh">Evonne Xu — 并购律师 · AI法律工程师</h3>
+      <h3 data-lang="en">Evonne Xu — M&A Lawyer · AI Legal Engineer</h3>
+      <p data-lang="zh">专注于中美跨境并购与AI法律合规。如果你正在评估一笔赴美并购交易，或需要了解CFIUS审查和并购文件的法律建议，欢迎联系。</p>
+      <p data-lang="en">Specializing in U.S.-China cross-border M&A and AI legal compliance. If you are evaluating a U.S. acquisition or need legal guidance on CFIUS review and M&A documentation, get in touch.</p>
+      <div class="cta-buttons">
+        <a href="https://evonnexulegal.beehiiv.com/subscribe" target="_blank" class="btn-gold">
+          <span data-lang="zh">订阅周报</span><span data-lang="en">Subscribe</span>
+        </a>
+        <a href="../index.html#contact" class="btn-ghost">
+          <span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span>
+        </a>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <p class="footer-logo">Evonne Xu</p>
+  <p class="footer-sub">© 2026 · evonnexulegal.com</p>
+</footer>
+
+<script>
+  const saved = localStorage.getItem('lang') || 'zh';
+  document.body.className = 'lang-' + saved;
+  document.getElementById('langBtn').textContent = saved === 'zh' ? 'English' : '中文';
+
+  function toggleLang() {
+    const next = document.body.classList.contains('lang-zh') ? 'en' : 'zh';
+    document.body.className = 'lang-' + next;
+    document.getElementById('langBtn').textContent = next === 'zh' ? 'English' : '中文';
+    localStorage.setItem('lang', next);
+  }
+</script>
+</body>
+</html>
