@@ -43,18 +43,23 @@
     .blog-main { max-width:860px; margin:0 auto; padding:72px 32px 100px; }
 
     /* SUBSCRIBE CARD */
-    .subscribe-card { background:var(--dark); border-radius:4px; padding:56px 48px; margin-bottom:64px; position:relative; overflow:hidden; }
+    .subscribe-card { background:var(--dark); border-radius:4px; margin-bottom:64px; position:relative; overflow:hidden; display:grid; grid-template-columns:1fr 1fr; min-height:300px; }
+    .subscribe-card::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 75% 50%, rgba(196,154,122,.2) 0%, transparent 55%); pointer-events:none; z-index:0; }
     .subscribe-card::after { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--gold),transparent); }
+    .subscribe-left { padding:52px 48px; display:flex; flex-direction:column; justify-content:center; position:relative; z-index:1; }
+    .subscribe-right { position:relative; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+    .subscribe-right .ring { position:absolute; border-radius:50%; border:1px solid rgba(196,154,122,.12); top:50%; left:50%; transform:translate(-50%,-50%); }
+    .subscribe-right .ring-1 { width:500px; height:500px; border-color:rgba(196,154,122,.08); }
+    .subscribe-right .ring-2 { width:340px; height:340px; border-color:rgba(196,154,122,.14); }
+    .subscribe-right .ring-3 { width:180px; height:180px; border-color:rgba(196,154,122,.22); }
+    .subscribe-right .ring-center { width:60px; height:60px; border-radius:50%; background:radial-gradient(circle, rgba(196,154,122,.45) 0%, rgba(196,154,122,.05) 100%); border:1px solid rgba(196,154,122,.4); position:relative; z-index:1; }
     .card-eyebrow { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
-    .subscribe-card h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:300; color:var(--cream); margin-bottom:12px; }
-    .subscribe-card p { font-size:14px; color:rgba(247,243,238,.5); line-height:1.75; max-width:480px; margin-bottom:36px; }
-    .subscribe-form { display:flex; gap:12px; flex-wrap:wrap; }
-    .subscribe-form input { flex:1; min-width:220px; padding:14px 18px; background:rgba(247,243,238,.07); border:1px solid rgba(196,154,122,.3); border-radius:2px; color:var(--cream); font-family:'DM Sans',sans-serif; font-size:14px; outline:none; transition:border-color .2s; }
-    .subscribe-form input:focus { border-color:var(--gold); }
-    .subscribe-form input::placeholder { color:rgba(247,243,238,.3); }
-    .subscribe-form button { padding:14px 28px; background:var(--gold); color:var(--dark); border:none; border-radius:2px; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; letter-spacing:1px; text-transform:uppercase; cursor:pointer; transition:all .2s; white-space:nowrap; }
-    .subscribe-form button:hover { background:var(--gold-light); transform:translateY(-1px); }
-    .form-note { margin-top:14px; font-size:12px; color:rgba(247,243,238,.28); }
+    .subscribe-card h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.7rem,3vw,2.4rem); font-weight:300; color:var(--cream); margin-bottom:12px; line-height:1.25; }
+    .subscribe-card .sub-desc { font-size:14px; color:rgba(247,243,238,.5); line-height:1.75; margin-bottom:32px; }
+    .subscribe-btn { display:inline-block; padding:12px 30px; background:var(--gold); color:var(--dark); text-decoration:none; border-radius:2px; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:500; letter-spacing:1.5px; text-transform:uppercase; transition:all .2s; align-self:flex-start; }
+    .subscribe-btn:hover { background:var(--gold-light); transform:translateY(-1px); box-shadow:0 8px 24px rgba(196,154,122,.25); }
+    .form-note { margin-top:14px; font-size:11px; color:rgba(247,243,238,.25); }
+    @media(max-width:640px) { .subscribe-card { grid-template-columns:1fr; } .subscribe-right { display:none; } .subscribe-left { padding:40px 28px; } }
 
     /* TOPICS */
     .topics-section { margin-bottom:64px; }
@@ -122,8 +127,6 @@
       .blog-hero { padding:64px 24px; }
       .blog-main { padding:48px 20px 72px; }
       .subscribe-card { padding:36px 24px; }
-      .subscribe-form { flex-direction:column; }
-      .subscribe-form button { width:100%; }
     }
   </style>
 </head>
@@ -157,15 +160,22 @@
 
   <!-- 1. SUBSCRIBE -->
   <div class="subscribe-card">
-    <p class="card-eyebrow"><span data-lang="zh">免费订阅</span><span data-lang="en">Free Newsletter</span></p>
-    <h2><span data-lang="zh">掌握每笔交易的<br>先机。</span><span data-lang="en">Get the edge<br>on every deal.</span></h2>
-    <p data-lang="zh">加入创始人、企业法律顾问和交易撮合者的行列，阅读Evonne对跨境并购和AI法律领域真正重要动态的双语解读。</p>
-    <p data-lang="en">Join founders, in-house counsel, and dealmakers who read Evonne's bilingual breakdown of what's moving in cross-border M&A and AI law.</p>
-    <form class="subscribe-form" id="subscribeForm">
-      <input type="email" id="emailInput" placeholder="your@email.com" required />
-      <button type="submit"><span data-lang="zh">订阅 →</span><span data-lang="en">Subscribe →</span></button>
-    </form>
-    <p class="form-note"><span data-lang="zh">无垃圾邮件。随时取消订阅。由 Beehiiv 提供支持。</span><span data-lang="en">No spam. Unsubscribe anytime. Powered by Beehiiv.</span></p>
+    <div class="subscribe-left">
+      <p class="card-eyebrow"><span data-lang="zh">免费订阅</span><span data-lang="en">Free Newsletter</span></p>
+      <h2><span data-lang="zh">掌握每笔交易的<br>先机。</span><span data-lang="en">Get the edge<br>on every deal.</span></h2>
+      <p class="sub-desc" data-lang="zh">加入创始人、企业法律顾问和交易撮合者的行列，阅读Evonne对跨境并购和AI法律领域真正重要动态的双语解读。</p>
+      <p class="sub-desc" data-lang="en">Join founders, in-house counsel, and dealmakers who read Evonne's bilingual breakdown of what's moving in cross-border M&A and AI law.</p>
+      <a href="https://evonnexulegal.beehiiv.com/subscribe" target="_blank" rel="noopener" class="subscribe-btn">
+        <span data-lang="zh">免费订阅 →</span><span data-lang="en">Subscribe Free →</span>
+      </a>
+      <p class="form-note"><span data-lang="zh">无垃圾邮件。随时取消订阅。由 Beehiiv 提供支持。</span><span data-lang="en">No spam. Unsubscribe anytime. Powered by Beehiiv.</span></p>
+    </div>
+    <div class="subscribe-right">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-3"></div>
+      <div class="ring-center"></div>
+    </div>
   </div>
 
   <!-- 2. TOPICS -->
@@ -234,15 +244,6 @@
     if (window._posts) renderPosts(window._posts);
   }
 
-  /* ── Subscribe ── */
-  document.getElementById('subscribeForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const email = document.getElementById('emailInput').value;
-    if (!email) return;
-    window.open('https://evonnexulegal.beehiiv.com/subscribe?email=' + encodeURIComponent(email), '_blank');
-    document.getElementById('emailInput').value = '';
-  });
-
   /* ── Render posts ── */
   function renderPosts(posts) {
     const lang = document.body.classList.contains('lang-zh') ? 'zh' : 'en';
@@ -291,6 +292,18 @@
   /* ── Posts data ── */
   const posts = [
     {
+      file: "blog/ieepa-refund-participation.html",
+      titleZh: "IEEPA退税权利变现：如何谈判向机构买家出售参与权",
+      titleEn: "Monetizing IEEPA Refund Claims: A Seller's Negotiation Playbook",
+      excerptZh: "最高法院裁定IEEPA违宪后，约1,750亿美元退税预期催生了全新的债权变现市场。本文深度解析市场折扣率（裁决后已升至50%–72%）、参与权交易结构、六大核心谈判条款及下游索赔风险——帮助出售方在签约前建立完整判断框架。",
+      excerptEn: "Following the Supreme Court's ruling invalidating IEEPA tariffs, ~$175B in expected refunds has created a new claims monetization market. This guide covers market discount rates (now 50%–72% post-ruling), transaction structure, six key negotiation terms, and downstream litigation risk — a complete seller's framework before you sign anything.",
+      catZh: "跨境贸易 · 债权变现",
+      catEn: "Cross-Border Trade · Distressed Claims",
+      date: "April 2026",
+      readTime: "20 min",
+      featured: true
+    },
+    {
       file: "blog/blog-ma-pricing.html",
       titleZh: "并购买家如何定价并制胜：汽车、自动化与制造业",
       titleEn: "How Acquirers Price Deals and Win: Automotive, Automation & Manufacturing",
@@ -300,7 +313,7 @@
       catEn: "Cross-Border M&A · Deep Analysis",
       date: "April 2026",
       readTime: "40 min",
-      featured: true
+      featured: false
     },
     {
       file: "blog/blog-ma-process.html",
