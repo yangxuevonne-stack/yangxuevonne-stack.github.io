@@ -80,50 +80,92 @@ nav {
    HERO
 ══════════════════════════════════════════════════ */
 .hero {
-  min-height: 100vh; display: flex; align-items: center;
-  padding-top: 72px; overflow: hidden; position: relative;
+  min-height: 100vh;
+  padding-top: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
   background: var(--warm-white);
 }
-.hero::before {
-  content: ''; position: absolute; right: 0; top: 0;
-  width: 45%; height: 100%;
-  background: linear-gradient(135deg, var(--champagne) 0%, #D4A882 100%);
-  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+.hero::after {
+  content: 'E';
+  position: absolute;
+  right: -2%; bottom: -8%;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(300px, 40vw, 520px);
+  font-weight: 300;
+  color: rgba(196,154,122,0.055);
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
 }
-.hero-left { flex: 1; padding: 80px 60px 80px 100px; position: relative; z-index: 2; max-width: 700px; }
-.hero-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--rose-gold); margin-bottom: 24px; }
-.hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 5vw, 4.8rem); font-weight: 300; line-height: 1.1; color: var(--dark); margin-bottom: 20px; }
+.hero-inner {
+  position: relative; z-index: 1;
+  width: 100%; max-width: 1100px;
+  margin: 0 auto; padding: 80px 100px;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 0;
+  align-items: center;
+}
+.hero-content { padding-right: 72px; border-right: 1px solid var(--border); }
+.hero-tag {
+  font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--rose-gold); margin-bottom: 32px;
+  display: flex; align-items: center; gap: 16px;
+}
+.hero-tag::before {
+  content: ''; display: block; width: 32px; height: 1px; background: var(--rose-gold);
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 5.5vw, 5.2rem);
+  font-weight: 300; line-height: 1.05;
+  color: var(--dark); margin-bottom: 28px; letter-spacing: -0.5px;
+}
 .hero-title em { color: var(--rose-gold); font-style: italic; }
-.hero-subtitle-cn { font-size: 13px; letter-spacing: 2px; color: var(--light-text); margin-bottom: 24px; text-transform: uppercase; }
-.hero-desc { font-size: 15px; line-height: 1.85; color: var(--mid); max-width: 480px; margin-bottom: 40px; }
+.hero-divider { width: 56px; height: 1px; background: linear-gradient(90deg, var(--rose-gold), transparent); margin-bottom: 24px; }
+.hero-subtitle-cn { font-size: 11px; letter-spacing: 2.5px; color: var(--light-text); margin-bottom: 24px; text-transform: uppercase; }
+.hero-desc { font-size: 15px; line-height: 1.9; color: var(--mid); max-width: 500px; margin-bottom: 44px; }
 .hero-btns { display: flex; gap: 16px; margin-bottom: 56px; flex-wrap: wrap; }
-.btn-primary { display: inline-block; padding: 14px 32px; background: var(--dark); color: var(--cream); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; transition: all 0.25s; }
+.btn-primary { display: inline-block; padding: 14px 36px; background: var(--dark); color: var(--cream); font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; transition: all 0.25s; }
 .btn-primary:hover { background: var(--rose-gold); color: var(--dark); }
-.btn-secondary { display: inline-block; padding: 14px 32px; border: 1px solid var(--dark); color: var(--dark); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; transition: all 0.25s; }
+.btn-secondary { display: inline-block; padding: 14px 36px; border: 1px solid rgba(28,21,16,0.3); color: var(--dark); font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; transition: all 0.25s; }
 .btn-secondary:hover { border-color: var(--rose-gold); color: var(--rose-gold); }
-.hero-stats { display: flex; gap: 48px; }
-.stat-item { }
-.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; color: var(--dark); line-height: 1; }
-.stat-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--light-text); margin-top: 4px; }
-.hero-right { position: relative; z-index: 2; width: 420px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 80px 60px; }
-.hero-photo-frame {
-  width: 320px; height: 400px; position: relative;
+.hero-stats { display: flex; gap: 44px; padding-top: 40px; border-top: 1px solid var(--border); }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 300; color: var(--dark); line-height: 1; }
+.stat-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--light-text); margin-top: 6px; }
+.hero-deco-panel {
+  padding-left: 60px;
+  display: flex; flex-direction: column; gap: 36px;
 }
-.hero-photo-frame::before {
-  content: ''; position: absolute; top: -12px; left: -12px; right: 12px; bottom: 12px;
-  border: 1px solid rgba(255,255,255,0.4);
+.hero-deco-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; font-weight: 300; font-style: italic;
+  color: var(--mid); line-height: 1.75;
+  border-left: 2px solid var(--rose-gold);
+  padding-left: 20px;
 }
-.hero-photo-img {
-  width: 100%; height: 100%; object-fit: cover; object-position: center top;
-  display: block;
+.hero-deco-credentials { display: flex; flex-direction: column; gap: 14px; }
+.hero-deco-cred-item {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 12px; letter-spacing: 0.5px; color: var(--light-text);
 }
-.photo-placeholder-box {
-  width: 100%; height: 100%;
-  background: linear-gradient(160deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
+.hero-deco-cred-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--rose-gold); flex-shrink: 0;
 }
-.photo-placeholder-box .initials { font-family: 'Cormorant Garamond', serif; font-size: 80px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1; }
-.photo-placeholder-box .photo-hint { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+.hero-deco-geo { margin-top: 8px; }
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; padding: 60px 32px; }
+  .hero-content { padding-right: 0; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 40px; }
+  .hero-deco-panel { padding-left: 0; }
+  .hero::after { display: none; }
+  .hero-stats { gap: 28px; flex-wrap: wrap; }
+}
 
 /* ══════════════════════════════════════════════════
    MARQUEE
@@ -568,34 +610,94 @@ footer { background: var(--dark); padding: 80px 0 0; }
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-left">
-    <div class="hero-tag">AI Law · M&A · Cross-Border</div>
-    <h1 class="hero-title">
-      <span data-lang="zh">AI时代的<br><em>法律智库</em></span>
-      <span data-lang="en">Your Legal Edge<br>in the <em>AI Era</em></span>
-    </h1>
-    <p class="hero-subtitle-cn">
-      <span data-lang="zh">跨境并购 · AI合规 · 商业战略</span>
-      <span data-lang="en">Cross-Border M&A · AI Compliance · Business Strategy</span>
-    </p>
-    <p class="hero-desc">
-      <span data-lang="zh">专注于中美制造业和科技并购与AI法律合规，帮助企业在复杂监管环境中找到最优路径。用创业者和企业家听得懂的语言，解读AI时代的法律风险。</span>
-      <span data-lang="en">Specializing in US-China M&A and AI legal compliance, helping businesses navigate complex regulatory environments. Translating intricate legal risk into clear, actionable strategy for founders and executives.</span>
-    </p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary"><span data-lang="zh">预约免费咨询</span><span data-lang="en">Book a Free Call</span></a>
-      <a href="blog.html" class="btn-secondary"><span data-lang="zh">探索内容</span><span data-lang="en">Explore Content</span></a>
+  <div class="hero-inner">
+
+    <!-- LEFT: main content -->
+    <div class="hero-content">
+      <div class="hero-tag">AI Law · M&A · Cross-Border</div>
+      <h1 class="hero-title">
+        <span data-lang="zh">AI时代的<br><em>法律智库</em></span>
+        <span data-lang="en">Your Legal Edge<br>in the <em>AI Era</em></span>
+      </h1>
+      <div class="hero-divider"></div>
+      <p class="hero-subtitle-cn">
+        <span data-lang="zh">跨境并购 · AI合规 · 商业战略</span>
+        <span data-lang="en">Cross-Border M&A · AI Compliance · Business Strategy</span>
+      </p>
+      <p class="hero-desc">
+        <span data-lang="zh">专注于中美制造业和科技并购与AI法律合规，帮助企业在复杂监管环境中找到最优路径。用创业者和企业家听得懂的语言，解读AI时代的法律风险。</span>
+        <span data-lang="en">Specializing in US-China M&A and AI legal compliance, helping businesses navigate complex regulatory environments. Translating intricate legal risk into clear, actionable strategy for founders and executives.</span>
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary"><span data-lang="zh">预约免费咨询</span><span data-lang="en">Book a Free Call</span></a>
+        <a href="blog.html" class="btn-secondary"><span data-lang="zh">探索内容</span><span data-lang="en">Explore Content</span></a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-num">12+</div><div class="stat-label"><span data-lang="zh">年执业经验</span><span data-lang="en">Yrs Experience</span></div></div>
+        <div class="stat-item"><div class="stat-num">1000+</div><div class="stat-label"><span data-lang="zh">服务案例</span><span data-lang="en">Transactions</span></div></div>
+        <div class="stat-item"><div class="stat-num">2</div><div class="stat-label"><span data-lang="zh">执照管辖区</span><span data-lang="en">Jurisdictions</span></div></div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat-item"><div class="stat-num">12+</div><div class="stat-label"><span data-lang="zh">年跨境法律经验</span><span data-lang="en">Yrs Experience</span></div></div>
-      <div class="stat-item"><div class="stat-num">5k+</div><div class="stat-label"><span data-lang="zh">全网粉丝</span><span data-lang="en">Followers</span></div></div>
-      <div class="stat-item"><div class="stat-num">1000+</div><div class="stat-label"><span data-lang="zh">企业服务案例</span><span data-lang="en">Clients Served</span></div></div>
+
+    <!-- RIGHT: decorative panel -->
+    <div class="hero-deco-panel">
+      <div class="hero-deco-quote">
+        <span data-lang="zh">把复杂的法律语言<br>翻译成商业决策。</span>
+        <span data-lang="en">Translating legal complexity<br>into business clarity.</span>
+      </div>
+
+      <div class="hero-deco-credentials">
+        <div class="hero-deco-cred-item">
+          <div class="hero-deco-cred-dot"></div>
+          <span data-lang="zh">美国执业律师 · 双执照</span>
+          <span data-lang="en">U.S. Licensed Attorney · Dual Bar</span>
+        </div>
+        <div class="hero-deco-cred-item">
+          <div class="hero-deco-cred-dot"></div>
+          <span data-lang="zh">上市公司 · 基金 · 家族企业</span>
+          <span data-lang="en">Public Co · Funds · Family Offices</span>
+        </div>
+        <div class="hero-deco-cred-item">
+          <div class="hero-deco-cred-dot"></div>
+          <span data-lang="zh">中美跨境并购全流程</span>
+          <span data-lang="en">US-China M&A Full Lifecycle</span>
+        </div>
+        <div class="hero-deco-cred-item">
+          <div class="hero-deco-cred-dot"></div>
+          <span data-lang="zh">AI法律合规先驱</span>
+          <span data-lang="en">AI Legal Compliance Pioneer</span>
+        </div>
+      </div>
+
+      <!-- geometric SVG decoration -->
+      <div class="hero-deco-geo">
+        <svg viewBox="0 0 300 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- outer rectangle -->
+          <rect x="1" y="1" width="298" height="158" stroke="#C49A7A" stroke-width="0.5" stroke-opacity="0.4"/>
+          <!-- inner offset rectangle -->
+          <rect x="12" y="12" width="276" height="136" stroke="#C49A7A" stroke-width="0.5" stroke-opacity="0.2"/>
+          <!-- diagonal accent line -->
+          <line x1="1" y1="159" x2="100" y2="1" stroke="#C49A7A" stroke-width="0.5" stroke-opacity="0.25"/>
+          <!-- horizontal rule -->
+          <line x1="24" y1="80" x2="276" y2="80" stroke="#C49A7A" stroke-width="0.5" stroke-opacity="0.15"/>
+          <!-- center circle -->
+          <circle cx="150" cy="80" r="28" stroke="#C49A7A" stroke-width="0.5" stroke-opacity="0.3"/>
+          <!-- small accent dots -->
+          <circle cx="24" cy="80" r="2.5" fill="#C49A7A" fill-opacity="0.5"/>
+          <circle cx="276" cy="80" r="2.5" fill="#C49A7A" fill-opacity="0.5"/>
+          <circle cx="150" cy="80" r="3" fill="#C49A7A" fill-opacity="0.6"/>
+          <!-- corner marks -->
+          <path d="M1 20 L1 1 L20 1" stroke="#C49A7A" stroke-width="1" stroke-opacity="0.6"/>
+          <path d="M280 1 L299 1 L299 20" stroke="#C49A7A" stroke-width="1" stroke-opacity="0.6"/>
+          <path d="M1 140 L1 159 L20 159" stroke="#C49A7A" stroke-width="1" stroke-opacity="0.6"/>
+          <path d="M280 159 L299 159 L299 140" stroke="#C49A7A" stroke-width="1" stroke-opacity="0.6"/>
+          <!-- text inside circle -->
+          <text x="150" y="76" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="9" fill="#C49A7A" fill-opacity="0.7" letter-spacing="2">EVONNE XU</text>
+          <text x="150" y="89" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="7" fill="#C49A7A" fill-opacity="0.5" letter-spacing="1.5">LEGAL</text>
+        </svg>
+      </div>
     </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-photo-frame">
-      <img src="images/IMG_7091.jpeg" alt="Evonne Xu" class="hero-photo-img">
-    </div>
+
   </div>
 </section>
 
