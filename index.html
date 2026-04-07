@@ -18,9 +18,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-/* ══════════════════════════════════════════════════
-   CSS VARIABLES & RESET
-══════════════════════════════════════════════════ */
 :root {
   --cream: #F7F3EE;
   --warm-white: #FAF8F5;
@@ -38,9 +35,6 @@ body { font-family: 'DM Sans', sans-serif; font-weight: 300; background: var(--w
 a { text-decoration: none; color: inherit; }
 em { font-style: italic; }
 
-/* ══════════════════════════════════════════════════
-   LANGUAGE SYSTEM
-══════════════════════════════════════════════════ */
 .lang-switch { display:flex; align-items:center; gap:0; border:1px solid var(--border); overflow:hidden; margin-left:16px; flex-shrink:0; }
 .lang-btn { padding:6px 14px; font-size:11px; letter-spacing:1.5px; font-weight:500; cursor:pointer; border:none; background:transparent; color:var(--light-text); font-family:'DM Sans',sans-serif; transition:all 0.2s; }
 .lang-btn.active { background:var(--dark); color:var(--cream); }
@@ -52,9 +46,6 @@ span[data-lang] { display:none; }
 .lang-zh span[data-lang="zh"] { display:inline; }
 .lang-en span[data-lang="en"] { display:inline; }
 
-/* ══════════════════════════════════════════════════
-   NAV
-══════════════════════════════════════════════════ */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
@@ -76,9 +67,6 @@ nav {
 .nav-mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--cream); letter-spacing: 2px; }
 .nav-mobile-close { position: absolute; top: 24px; right: 24px; background: none; border: none; color: var(--cream); font-size: 24px; cursor: pointer; }
 
-/* ══════════════════════════════════════════════════
-   HERO
-══════════════════════════════════════════════════ */
 .hero {
   min-height: 100vh;
   padding-top: 72px;
@@ -167,20 +155,12 @@ nav {
   .hero-stats { gap: 28px; flex-wrap: wrap; }
 }
 
-/* ══════════════════════════════════════════════════
-   MARQUEE
-══════════════════════════════════════════════════ */
 .marquee-bar { background: var(--dark); padding: 14px 0; overflow: hidden; white-space: nowrap; }
 .marquee-track { display: inline-flex; gap: 32px; animation: marquee 30s linear infinite; }
 .marquee-track span { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(247,243,238,0.5); }
 .marquee-track .dot { color: var(--rose-gold); }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* ══════════════════════════════════════════════════
-   ABOUT — FULL REDESIGN
-══════════════════════════════════════════════════ */
-
-/* Hero Bio区 */
 .about-hero {
   background: var(--warm-white);
   padding: 100px 0 80px;
@@ -194,8 +174,6 @@ nav {
   gap: 80px;
   align-items: start;
 }
-
-/* 圆形照片列 */
 .about-photo-col {
   position: sticky;
   top: 100px;
@@ -237,8 +215,6 @@ nav {
   margin-top: 6px;
   line-height: 1.6;
 }
-
-/* 徽章 */
 .about-badge {
   background: var(--dark);
   color: var(--cream);
@@ -270,8 +246,6 @@ nav {
   margin-top: 4px;
   color: rgba(247,243,238,0.6);
 }
-
-/* 认证栏 */
 .about-credential-bar {
   width: 100%;
   display: flex;
@@ -295,8 +269,6 @@ nav {
   background: var(--rose-gold);
   flex-shrink: 0;
 }
-
-/* Bio文字列 */
 .about-bio-col { padding-top: 4px; }
 .section-tag {
   font-size: 10px;
@@ -348,7 +320,6 @@ nav {
 }
 .tag:hover { border-color: var(--rose-gold); color: var(--rose-gold); }
 
-/* 数据条 */
 .about-stats-bar {
   background: var(--dark);
   padding: 56px 80px;
@@ -382,7 +353,6 @@ nav {
   flex-shrink: 0;
 }
 
-/* 执业领域条 */
 .about-focus-strip {
   background: var(--cream);
   padding: 60px 0;
@@ -430,9 +400,6 @@ nav {
   transition: color 0.25s;
 }
 
-/* ══════════════════════════════════════════════════
-   SERVICES
-══════════════════════════════════════════════════ */
 #services { padding: 100px 0; background: var(--warm-white); }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
 .section-header { text-align: center; margin-bottom: 56px; }
@@ -446,9 +413,6 @@ nav {
 .service-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--dark); margin-bottom: 14px; line-height: 1.3; }
 .service-desc { font-size: 13px; line-height: 1.8; color: var(--light-text); }
 
-/* ══════════════════════════════════════════════════
-   PORTFOLIO
-══════════════════════════════════════════════════ */
 .portfolio-section { background: var(--dark); padding: 100px 0; }
 .portfolio-section .section-tag { color: var(--champagne); }
 .portfolio-section .section-title { color: var(--cream); }
@@ -470,9 +434,6 @@ nav {
 .portfolio-card-link { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--rose-gold); display: flex; align-items: center; gap: 8px; transition: gap 0.2s; margin-top: auto; }
 .portfolio-card:hover .portfolio-card-link { gap: 14px; }
 
-/* ══════════════════════════════════════════════════
-   BLOG
-══════════════════════════════════════════════════ */
 .blog-section { padding: 100px 0; background: white; }
 .blog-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 32px; margin-top: 48px; }
 .blog-featured { padding: 40px; border: 1px solid var(--border); background: var(--warm-white); }
@@ -488,24 +449,16 @@ nav {
 .read-more-small { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--rose-gold); margin-top: auto; }
 .blog-more { text-align: center; margin-top: 40px; }
 
-/* ══════════════════════════════════════════════════
-   NEWSLETTER
-══════════════════════════════════════════════════ */
+/* NEWSLETTER — no form, just button */
 .newsletter { background: var(--dark); padding: 100px 0; }
 .newsletter-inner { max-width: 600px; margin: 0 auto; text-align: center; padding: 0 40px; }
 .newsletter-eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--rose-gold); margin-bottom: 20px; }
 .newsletter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3.5vw,2.8rem); font-weight: 300; color: var(--cream); line-height: 1.2; margin-bottom: 20px; }
 .newsletter-desc { font-size: 14px; line-height: 1.8; color: rgba(247,243,238,0.6); margin-bottom: 36px; }
-.newsletter-form { display: flex; gap: 0; max-width: 440px; margin: 0 auto 16px; }
-.newsletter-form input { flex: 1; padding: 14px 20px; border: 1px solid rgba(196,154,122,0.3); background: rgba(255,255,255,0.05); color: var(--cream); font-size: 13px; font-family: 'DM Sans', sans-serif; outline: none; }
-.newsletter-form input::placeholder { color: rgba(247,243,238,0.3); }
-.newsletter-form button { padding: 14px 24px; background: var(--rose-gold); border: none; color: var(--dark); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-family: 'DM Sans', sans-serif; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
-.newsletter-form button:hover { background: var(--rose-deep); color: var(--cream); }
-.newsletter-promise { font-size: 11px; color: rgba(247,243,238,0.3); letter-spacing: 1px; }
+.newsletter-btn { display: inline-block; padding: 14px 48px; background: var(--rose-gold); color: var(--dark); font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: all 0.2s; }
+.newsletter-btn:hover { background: var(--rose-deep); color: var(--cream); transform: translateY(-1px); }
+.newsletter-promise { margin-top: 20px; font-size: 11px; color: rgba(247,243,238,0.3); letter-spacing: 1px; }
 
-/* ══════════════════════════════════════════════════
-   CONTACT
-══════════════════════════════════════════════════ */
 .contact { padding: 100px 0; background: var(--warm-white); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; margin-top: 56px; }
 .contact-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--dark); line-height: 1.4; margin-bottom: 20px; }
@@ -528,9 +481,6 @@ nav {
 .form-submit { width: 100%; padding: 14px; background: var(--dark); color: var(--cream); border: none; font-family: 'DM Sans', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
 .form-submit:hover { background: var(--rose-gold); color: var(--dark); }
 
-/* ══════════════════════════════════════════════════
-   FOOTER
-══════════════════════════════════════════════════ */
 footer { background: var(--dark); padding: 80px 0 0; }
 .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 60px 60px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; border-bottom: 1px solid rgba(196,154,122,0.15); }
 .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--cream); letter-spacing: 2px; margin-bottom: 16px; }
@@ -545,15 +495,11 @@ footer { background: var(--dark); padding: 80px 0 0; }
 .social-links a { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(247,243,238,0.3); transition: color 0.2s; }
 .social-links a:hover { color: var(--rose-gold); }
 
-/* ══════════════════════════════════════════════════
-   MOBILE
-══════════════════════════════════════════════════ */
 @media (max-width: 768px) {
   nav { padding: 0 24px; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
   .hero { flex-direction: column; padding-top: 72px; }
-  .hero::before { display: none; }
   .hero-left { padding: 48px 24px; }
   .hero-right { display: none; }
   .hero-stats { gap: 24px; flex-wrap: wrap; }
@@ -578,7 +524,6 @@ footer { background: var(--dark); padding: 80px 0 0; }
 
 <body class="lang-zh">
 
-<!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">Evonne Xu Legal</a>
   <ul class="nav-links">
@@ -611,8 +556,6 @@ footer { background: var(--dark); padding: 80px 0 0; }
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-
-    <!-- LEFT: main content -->
     <div class="hero-content">
       <div class="hero-tag">AI Law · M&A · Cross-Border</div>
       <h1 class="hero-title">
@@ -638,14 +581,11 @@ footer { background: var(--dark); padding: 80px 0 0; }
         <div class="stat-item"><div class="stat-num">2</div><div class="stat-label"><span data-lang="zh">执照管辖区</span><span data-lang="en">Jurisdictions</span></div></div>
       </div>
     </div>
-
-    <!-- RIGHT: decorative panel -->
     <div class="hero-deco-panel">
       <div class="hero-deco-quote">
         <span data-lang="zh">把复杂的法律语言<br>翻译成商业决策。</span>
         <span data-lang="en">Translating legal complexity<br>into business clarity.</span>
       </div>
-
       <div class="hero-deco-credentials">
         <div class="hero-deco-cred-item">
           <div class="hero-deco-cred-dot"></div>
@@ -668,36 +608,25 @@ footer { background: var(--dark); padding: 80px 0 0; }
           <span data-lang="en">AI Legal Compliance Pioneer</span>
         </div>
       </div>
-
-      <!-- geometric SVG decoration -->
       <div class="hero-deco-geo">
         <svg viewBox="0 0 300 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- outer rectangle -->
           <rect x="1" y="1" width="298" height="158" stroke="#C49A7A" stroke-width="0.5" stroke-opacity="0.4"/>
-          <!-- inner offset rectangle -->
           <rect x="12" y="12" width="276" height="136" stroke="#C49A7A" stroke-width="0.5" stroke-opacity="0.2"/>
-          <!-- diagonal accent line -->
           <line x1="1" y1="159" x2="100" y2="1" stroke="#C49A7A" stroke-width="0.5" stroke-opacity="0.25"/>
-          <!-- horizontal rule -->
           <line x1="24" y1="80" x2="276" y2="80" stroke="#C49A7A" stroke-width="0.5" stroke-opacity="0.15"/>
-          <!-- center circle -->
           <circle cx="150" cy="80" r="28" stroke="#C49A7A" stroke-width="0.5" stroke-opacity="0.3"/>
-          <!-- small accent dots -->
           <circle cx="24" cy="80" r="2.5" fill="#C49A7A" fill-opacity="0.5"/>
           <circle cx="276" cy="80" r="2.5" fill="#C49A7A" fill-opacity="0.5"/>
           <circle cx="150" cy="80" r="3" fill="#C49A7A" fill-opacity="0.6"/>
-          <!-- corner marks -->
           <path d="M1 20 L1 1 L20 1" stroke="#C49A7A" stroke-width="1" stroke-opacity="0.6"/>
           <path d="M280 1 L299 1 L299 20" stroke="#C49A7A" stroke-width="1" stroke-opacity="0.6"/>
           <path d="M1 140 L1 159 L20 159" stroke="#C49A7A" stroke-width="1" stroke-opacity="0.6"/>
           <path d="M280 159 L299 159 L299 140" stroke="#C49A7A" stroke-width="1" stroke-opacity="0.6"/>
-          <!-- text inside circle -->
           <text x="150" y="76" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="9" fill="#C49A7A" fill-opacity="0.7" letter-spacing="2">EVONNE XU</text>
           <text x="150" y="89" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="7" fill="#C49A7A" fill-opacity="0.5" letter-spacing="1.5">LEGAL</text>
         </svg>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -708,21 +637,14 @@ footer { background: var(--dark); padding: 80px 0 0; }
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     ABOUT — FULL REDESIGN
-══════════════════════════════════ -->
+<!-- ABOUT -->
 <section id="about">
-
-  <!-- PART 1: Hero Bio -->
   <div class="about-hero">
     <div class="about-hero-inner">
-
-      <!-- 左：圆形照片 + 装饰 -->
       <div class="about-photo-col">
         <div class="about-avatar-ring">
           <img src="images/IMG_7091.jpeg" alt="Evonne Xu" class="about-avatar-img">
         </div>
-
         <div class="about-avatar-caption">
           <div class="about-avatar-name">Evonne Xu</div>
           <div class="about-avatar-title">
@@ -730,7 +652,6 @@ footer { background: var(--dark); padding: 80px 0 0; }
             <span data-lang="en">Dual-Qualified Attorney<br>US & China · EN / ZH</span>
           </div>
         </div>
-
         <div class="about-badge">
           <div class="about-badge-num">12+</div>
           <div class="about-badge-label">
@@ -738,7 +659,6 @@ footer { background: var(--dark); padding: 80px 0 0; }
             <span data-lang="en">Years Practice</span>
           </div>
         </div>
-
         <div class="about-credential-bar">
           <div class="about-credential-item">
             <div class="about-credential-dot"></div>
@@ -757,38 +677,29 @@ footer { background: var(--dark); padding: 80px 0 0; }
           </div>
         </div>
       </div>
-
-      <!-- 右：Bio -->
       <div class="about-bio-col">
         <div class="section-tag">
           <span data-lang="zh">关于我</span>
           <span data-lang="en">About Me</span>
         </div>
-
         <h2 class="about-bio-heading">
           <span data-lang="zh">在AI与法律的<br>交叉口，找到<br><em>商业的确定性</em></span>
           <span data-lang="en">Where AI Meets Law,<br>Clarity Meets<br><em>Strategy</em></span>
         </h2>
-
         <p class="about-bio-text">
           <span data-lang="zh">执业逾十年，我深度服务于公众公司、私人企业与跨国机构，专注并购、跨境交易与AI法律合规。凭借敏锐的商业洞察力与对客户业务需求的深度理解，我在并购、跨境交易、监管合规与复杂商业安排上提供全面法律支持——涵盖股权与资产的收购处置、主体架构设计、公司重组、合资与战略联盟、融资及债权股权安排。</span>
           <span data-lang="en">With over a decade of practice, I advise public companies, private enterprises, and institutional clients on M&A, cross-border transactions, and AI legal compliance. Recognized for sharp business acumen and a deep understanding of clients' operational needs, I provide comprehensive legal support across mergers and acquisitions, cross-border transactions, regulatory compliance, and complex commercial arrangements — including equity and asset transactions, entity structuring, joint ventures, and debt and equity financings.</span>
         </p>
-
         <div class="about-bio-divider"></div>
-
         <p class="about-bio-text">
           <span data-lang="zh">我的并购实践横跨国内与跨境两大维度。在美国本土，我代理上市公司、私募基金与家族企业完成复杂并购交易，涵盖股权收购、资产交易、杠杆收购及公司重组。在跨境领域，我曾成功引导数百家亚太国际企业——包括来自中国、韩国及其他亚太地区的公司——完成赴美投资与业务扩张的全流程法律工作：公司架构搭建、治理与合规、商业争议、劳工雇佣、融资尽调、并购交易、合同起草谈判、移民事务及合资安排。</span>
           <span data-lang="en">My M&A practice spans both domestic and cross-border transactions. In the U.S., I have represented public companies, private equity funds, and family-owned businesses in complex transactions — including stock and asset acquisitions, leveraged buyouts, and corporate restructurings. On the cross-border side, I have successfully guided hundreds of international enterprises from China, Korea, and across Asia-Pacific through the full lifecycle of U.S. market entry: corporate structuring, governance and compliance, commercial disputes, labor and employment, financing, due diligence, contract negotiation, immigration, and joint ventures.</span>
         </p>
-
         <div class="about-bio-divider"></div>
-
         <p class="about-bio-text">
           <span data-lang="zh">作为美国与中国的双执照律师，我以流利的中英双语，弥合法律体系与商业文化之间的鸿沟。我的执业领域聚焦于汽车、科技、服务业、制造、自动化与新兴AI行业。在小红书与每周简报上，我持续将复杂法律风险翻译成企业家听得懂的决策语言。</span>
           <span data-lang="en">As a dual-qualified attorney admitted in both the U.S. and China, I bridge legal and cultural complexities in cross-border engagements — fluent in both English and Chinese. My practice is concentrated in automotive, technology, services, manufacturing, automation, and emerging AI sectors. Through Xiaohongshu and my weekly newsletter, I translate complex legal risk into clear, actionable strategy for founders and executives.</span>
         </p>
-
         <div class="about-tags">
           <span class="tag">M&A · 并购</span>
           <span class="tag">AI Compliance</span>
@@ -805,83 +716,41 @@ footer { background: var(--dark); padding: 80px 0 0; }
     </div>
   </div>
 
-  <!-- PART 2: 数据条 -->
   <div class="about-stats-bar">
     <div class="about-stat-item">
       <div class="about-stat-num">12+</div>
-      <div class="about-stat-label">
-        <span data-lang="zh">年跨境法律经验</span>
-        <span data-lang="en">Years of Practice</span>
-      </div>
+      <div class="about-stat-label"><span data-lang="zh">年跨境法律经验</span><span data-lang="en">Years of Practice</span></div>
     </div>
     <div class="about-stat-divider"></div>
     <div class="about-stat-item">
       <div class="about-stat-num">1000+</div>
-      <div class="about-stat-label">
-        <span data-lang="zh">服务企业案例</span>
-        <span data-lang="en">Transactions & Clients</span>
-      </div>
+      <div class="about-stat-label"><span data-lang="zh">服务企业案例</span><span data-lang="en">Transactions & Clients</span></div>
     </div>
     <div class="about-stat-divider"></div>
     <div class="about-stat-item">
       <div class="about-stat-num">2</div>
-      <div class="about-stat-label">
-        <span data-lang="zh">执照司法管辖区</span>
-        <span data-lang="en">Jurisdictions Licensed</span>
-      </div>
+      <div class="about-stat-label"><span data-lang="zh">执照司法管辖区</span><span data-lang="en">Jurisdictions Licensed</span></div>
     </div>
     <div class="about-stat-divider"></div>
     <div class="about-stat-item">
       <div class="about-stat-num">5k+</div>
-      <div class="about-stat-label">
-        <span data-lang="zh">全网法律内容受众</span>
-        <span data-lang="en">Content Followers</span>
-      </div>
+      <div class="about-stat-label"><span data-lang="zh">全网法律内容受众</span><span data-lang="en">Content Followers</span></div>
     </div>
   </div>
 
-  <!-- PART 3: 执业领域 -->
   <div class="about-focus-strip">
-    <div class="about-focus-label">
-      <span data-lang="zh">核心执业领域</span>
-      <span data-lang="en">Practice Focus</span>
-    </div>
+    <div class="about-focus-label"><span data-lang="zh">核心执业领域</span><span data-lang="en">Practice Focus</span></div>
     <div class="about-focus-items">
-      <div class="about-focus-item">
-        <div class="about-focus-icon">⚖️</div>
-        <div class="about-focus-text"><span data-lang="zh">跨境并购</span><span data-lang="en">Cross-Border M&A</span></div>
-      </div>
-      <div class="about-focus-item">
-        <div class="about-focus-icon">🤖</div>
-        <div class="about-focus-text"><span data-lang="zh">AI法律合规</span><span data-lang="en">AI Compliance</span></div>
-      </div>
-      <div class="about-focus-item">
-        <div class="about-focus-icon">🏭</div>
-        <div class="about-focus-text"><span data-lang="zh">制造业 · 自动化</span><span data-lang="en">Manufacturing & Automation</span></div>
-      </div>
-      <div class="about-focus-item">
-        <div class="about-focus-icon">💡</div>
-        <div class="about-focus-text"><span data-lang="zh">科技 · 新兴AI</span><span data-lang="en">Tech & Emerging AI</span></div>
-      </div>
-      <div class="about-focus-item">
-        <div class="about-focus-icon">🚗</div>
-        <div class="about-focus-text"><span data-lang="zh">汽车行业</span><span data-lang="en">Automotive</span></div>
-      </div>
-      <div class="about-focus-item">
-        <div class="about-focus-icon">🌏</div>
-        <div class="about-focus-text"><span data-lang="zh">亚太企业出海</span><span data-lang="en">APAC Market Entry</span></div>
-      </div>
-      <div class="about-focus-item">
-        <div class="about-focus-icon">📋</div>
-        <div class="about-focus-text"><span data-lang="zh">公司治理 · 合规</span><span data-lang="en">Corporate Governance</span></div>
-      </div>
-      <div class="about-focus-item">
-        <div class="about-focus-icon">💰</div>
-        <div class="about-focus-text"><span data-lang="zh">股权融资</span><span data-lang="en">Equity Financing</span></div>
-      </div>
+      <div class="about-focus-item"><div class="about-focus-icon">⚖️</div><div class="about-focus-text"><span data-lang="zh">跨境并购</span><span data-lang="en">Cross-Border M&A</span></div></div>
+      <div class="about-focus-item"><div class="about-focus-icon">🤖</div><div class="about-focus-text"><span data-lang="zh">AI法律合规</span><span data-lang="en">AI Compliance</span></div></div>
+      <div class="about-focus-item"><div class="about-focus-icon">🏭</div><div class="about-focus-text"><span data-lang="zh">制造业 · 自动化</span><span data-lang="en">Manufacturing & Automation</span></div></div>
+      <div class="about-focus-item"><div class="about-focus-icon">💡</div><div class="about-focus-text"><span data-lang="zh">科技 · 新兴AI</span><span data-lang="en">Tech & Emerging AI</span></div></div>
+      <div class="about-focus-item"><div class="about-focus-icon">🚗</div><div class="about-focus-text"><span data-lang="zh">汽车行业</span><span data-lang="en">Automotive</span></div></div>
+      <div class="about-focus-item"><div class="about-focus-icon">🌏</div><div class="about-focus-text"><span data-lang="zh">亚太企业出海</span><span data-lang="en">APAC Market Entry</span></div></div>
+      <div class="about-focus-item"><div class="about-focus-icon">📋</div><div class="about-focus-text"><span data-lang="zh">公司治理 · 合规</span><span data-lang="en">Corporate Governance</span></div></div>
+      <div class="about-focus-item"><div class="about-focus-icon">💰</div><div class="about-focus-text"><span data-lang="zh">股权融资</span><span data-lang="en">Equity Financing</span></div></div>
     </div>
   </div>
-
 </section>
 
 <!-- SERVICES -->
@@ -973,7 +842,7 @@ footer { background: var(--dark); padding: 80px 0 0; }
   </div>
 </section>
 
-<!-- NEWSLETTER -->
+<!-- NEWSLETTER — direct Beehiiv link, no email input, no subscriber count -->
 <section class="newsletter" id="newsletter">
   <div class="newsletter-inner">
     <div class="newsletter-eyebrow">Weekly Intelligence</div>
@@ -982,13 +851,13 @@ footer { background: var(--dark); padding: 80px 0 0; }
       <span data-lang="en">Weekly AI Law<br>Intelligence Brief</span>
     </h2>
     <p class="newsletter-desc">
-      <span data-lang="zh">精选本周最重要的AI监管动态、并购市场趋势、法律风险提示。每周一发送，已有 <strong style="color:var(--champagne)" data-field="subscriberCount">2,400+</strong> 位读者订阅。</span>
-      <span data-lang="en">Curated weekly: the most important AI regulatory updates, M&A trends, and legal risk alerts. Published every Monday, with <strong style="color:var(--champagne)">2,400+</strong> subscribers.</span>
+      <span data-lang="zh">精选本周最重要的AI监管动态、并购市场趋势、法律风险提示。</span>
+      <span data-lang="en">Curated weekly: the most important AI regulatory updates, M&A market trends, and legal risk alerts.</span>
     </p>
-    <form class="newsletter-form" id="newsletterForm" onsubmit="handleSubscribe(event)">
-      <input type="email" id="newsletterEmail" placeholder="your@email.com" required>
-      <button type="submit"><span data-lang="zh">免费订阅</span><span data-lang="en">Subscribe Free</span></button>
-    </form>
+    <a href="https://evonnexulegal.beehiiv.com/subscribe" target="_blank" rel="noopener" class="newsletter-btn">
+      <span data-lang="zh">免费订阅 →</span>
+      <span data-lang="en">Subscribe Free →</span>
+    </a>
     <p class="newsletter-promise">
       <span data-lang="zh">无垃圾邮件 · 随时退订 · 每周一次</span>
       <span data-lang="en">No spam · Unsubscribe anytime · Weekly</span>
@@ -1008,10 +877,32 @@ footer { background: var(--dark); padding: 80px 0 0; }
         <h3><span data-lang="zh">每一个复杂问题<br>都值得认真对待</span><span data-lang="en">Every Complex Problem<br>Deserves Careful Thought</span></h3>
         <p><span data-lang="zh">无论你是面临AI合规压力的科技公司，还是计划跨境并购的创始人，欢迎发起对话。</span><span data-lang="en">Whether you're a tech company facing AI compliance pressure or a founder planning a cross-border deal, I'd love to connect.</span></p>
         <div class="contact-methods">
-          <div class="contact-method"><div class="method-icon">📱</div><div><div class="method-label">小红书 / Xiaohongshu</div><div class="method-value" data-field="xiaohongshu">@Evonne美国公司咨询</div></div></div>
-          <div class="contact-method"><div class="method-icon">💼</div><div><div class="method-label">LinkedIn</div><div class="method-value" data-field="linkedin">linkedin.com/in/evonnexu</div></div></div>
-          <div class="contact-method"><div class="method-icon">📧</div><div><div class="method-label">Email</div><div class="method-value" data-field="email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f491829b9a9a91da8c81da9891939598b49399959d98da979b99">[email&#160;protected]</a></div></div></div>
-          <div class="contact-method"><div class="method-icon">📅</div><div><div class="method-label"><span data-lang="zh">预约通话</span><span data-lang="en">Book a Call</span></div><div class="method-value"><a href="https://calendly.com/evonne-xu-legal/30min" target="_blank" style="color:inherit;">Calendly →</a></div></div></div>
+          <!-- 小红书 -->
+          <div class="contact-method">
+            <div class="method-icon">📱</div>
+            <div>
+              <div class="method-label">小红书 / Xiaohongshu</div>
+              <div class="method-value">@Evonne美国公司咨询</div>
+            </div>
+          </div>
+          <!-- LinkedIn — clickable -->
+          <div class="contact-method">
+            <div class="method-icon">💼</div>
+            <div>
+              <div class="method-label">LinkedIn</div>
+              <div class="method-value">
+                <a href="https://linkedin.com/in/evonnexu" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-decoration-color:rgba(196,154,122,0.4);">linkedin.com/in/evonnexu</a>
+              </div>
+            </div>
+          </div>
+          <!-- 预约通话 -->
+          <div class="contact-method">
+            <div class="method-icon">📅</div>
+            <div>
+              <div class="method-label"><span data-lang="zh">预约通话</span><span data-lang="en">Book a Call</span></div>
+              <div class="method-value"><a href="https://calendly.com/evonne-xu-legal/30min" target="_blank" style="color:inherit;">Calendly →</a></div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="contact-form-wrap">
@@ -1050,6 +941,7 @@ footer { background: var(--dark); padding: 80px 0 0; }
     <div class="footer-brand">
       <div class="footer-logo">Evonne Xu Legal</div>
       <p><span data-lang="zh">AI时代的法律智库。帮助创业者和企业在复杂监管环境中找到确定性。</span><span data-lang="en">Your legal edge in the AI era. Helping founders and businesses find clarity in complex regulatory environments.</span></p>
+    </div>
     <div class="footer-col">
       <h4><span data-lang="zh">导航</span><span data-lang="en">Navigation</span></h4>
       <ul>
@@ -1085,13 +977,22 @@ footer { background: var(--dark); padding: 80px 0 0; }
 <script>
 const POSTS = [
   {
+    file: "blog/ieepa-refund-participation.html",
+    titleZh: "IEEPA退税权利变现：如何谈判向机构买家出售参与权",
+    titleEn: "Monetizing IEEPA Refund Claims: A Seller's Negotiation Playbook",
+    excerptZh: "最高法院裁定IEEPA违宪后，约1,750亿美元退税预期催生了全新的债权变现市场。深度解析市场折扣率（裁决后已升至50%–72%）、参与权交易结构与六大核心谈判条款。",
+    excerptEn: "Following the Supreme Court's ruling invalidating IEEPA tariffs, ~$175B in expected refunds has created a new claims market. Covers market discount rates (now 50%–72%), transaction structure, and six key negotiation terms.",
+    catZh: "跨境贸易 · 债权变现", catEn: "Cross-Border Trade · Distressed Claims",
+    date: "April 2026", readTime: "20 min", featured: true
+  },
+  {
     file: "blog/blog-ma-pricing.html",
     titleZh: "并购买家如何定价并制胜：汽车、自动化与制造业",
     titleEn: "How Acquirers Price Deals and Win: Automotive, Automation & Manufacturing",
     excerptZh: "深度剖析工业并购买家的定价逻辑：EBITDA倍数区间、核心价值驱动因子、协同效应建模与竞价制胜策略。麦肯锡框架，附完整项目Deliverables清单。",
     excerptEn: "A deep dive into how industrial M&A buyers price deals: EBITDA multiple ranges, core value drivers, synergy modeling, and competitive bidding strategies. McKinsey framework with full project deliverables.",
     catZh: "跨境并购 · 深度分析", catEn: "Cross-Border M&A · Deep Analysis",
-    date: "April 2026", readTime: "40 min", featured: true
+    date: "April 2026", readTime: "40 min", featured: false
   },
   {
     file: "blog/blog-ma-process.html",
@@ -1101,15 +1002,6 @@ const POSTS = [
     excerptEn: "A complete breakdown of both U.S. M&A paths — proprietary deal and auction process — covering business strategy and legal documentation at every stage.",
     catZh: "跨境并购 · 深度指南", catEn: "Cross-Border M&A · Complete Guide",
     date: "April 2026", readTime: "25 min", featured: false
-  },
-  {
-    file: "blog/blog-cfius-2026.html",
-    titleZh: "CFIUS 2026最新审查趋势：中国企业赴美并购的红线在哪里",
-    titleEn: "CFIUS 2026: Where Are the Red Lines for Chinese Acquirers?",
-    excerptZh: "CFIUS审查已从国家安全扩展到数据主权。三大高风险行业、两起真实案例、五个应对策略。",
-    excerptEn: "CFIUS review now extends to data sovereignty. Three high-risk sectors, two real cases, five strategies.",
-    catZh: "跨境并购 · 深度分析", catEn: "Cross-Border M&A · Deep Analysis",
-    date: "April 2026", readTime: "8 min", featured: false
   }
 ];
 
@@ -1159,14 +1051,6 @@ function switchLang(lang) {
 
 function openMobileMenu() { document.getElementById('mobileMenu').classList.add('open'); document.body.style.overflow='hidden'; }
 function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); document.body.style.overflow=''; }
-
-function handleSubscribe(e) {
-  e.preventDefault();
-  var email = document.getElementById('newsletterEmail').value;
-  if (!email) return;
-  window.open('https://evonnexulegal.beehiiv.com/subscribe?email=' + encodeURIComponent(email), '_blank');
-  document.getElementById('newsletterEmail').value = '';
-}
 
 var initLang = 'zh';
 try { initLang = localStorage.getItem('evonne-lang') || 'zh'; } catch(e) {}
