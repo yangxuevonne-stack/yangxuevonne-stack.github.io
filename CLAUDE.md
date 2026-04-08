@@ -102,6 +102,34 @@
 
 **规则**：所有面向用户的文字，必须同时有 `data-lang="zh"` 和 `data-lang="en"` 两个版本。缺一不可。
 
+### 双语目录导航（TOC）规范
+
+当文章使用左侧 sticky 目录导航时，**必须遵守以下规则**：
+
+1. **中英文内容分别放在两个 `data-lang` 块中**，各自拥有独立的 `<section>` 标签
+2. **两套 section 必须都有 `id`**：中文用 `id="s0"`, `id="s1"` …，英文用 `id="en-s0"`, `id="en-s1"` …（子章节同理：`t1` → `en-t1`）
+3. **TOC 链接的 `href` 默认指向中文锚点**（`#s0`, `#s1` …）
+4. **JS 必须在切换语言时同步更新 TOC 的 `href`**，使用映射表：
+
+```javascript
+var tocMap = { s0:'en-s0', s1:'en-s1', /* ... */ t1:'en-t1', t2:'en-t2', t3:'en-t3' };
+var tocMapReverse = {};
+Object.keys(tocMap).forEach(function(k){ tocMapReverse[tocMap[k]] = k; });
+
+function updateTocHrefs(){
+  document.querySelectorAll('.toc a').forEach(function(a){
+    var hash = a.getAttribute('href').replace('#','');
+    if(currentLang==='en' && tocMap[hash]) a.setAttribute('href','#'+tocMap[hash]);
+    else if(currentLang==='zh' && tocMapReverse[hash]) a.setAttribute('href','#'+tocMapReverse[hash]);
+  });
+}
+```
+
+5. **IntersectionObserver 监听所有带 `id` 的 section**，但回调中必须过滤：只响应当前语言的 section（英文 id 以 `en-` 开头，中文 id 不含 `en-` 前缀）
+6. **页面初始化时也要调用 `updateTocHrefs()`**，确保默认语言为英文时链接正确
+
+> ⚠️ 这条规范源于实际 bug：如果英文 section 没有 id，切换到英文后 TOC 点击无法跳转、滚动高亮失效。
+
 ---
 
 ## ⚡ 发布新博客文章（必须同时改 5 个地方）
