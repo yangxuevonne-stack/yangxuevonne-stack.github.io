@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>过关斩将：美国大型交易必须通过的审批关卡 | Evonne Xu</title>
+  <meta name="description" content="深度拆解美国大型交易中的核心审批——HSR反垄断、CFIUS国家安全、SEC证券监管、行业许可与州级审批。一篇文章看懂交易从签约到交割的监管全图。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #C49A7A;
+      --dark: #1C1510;
+      --cream: #F7F3EE;
+      --blush: #E8D5C0;
+      --gold-light: #d4b49a;
+      --text-muted: #7a6a5a;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--dark);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--cream);
+      border-bottom: 1px solid var(--blush);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 32px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; font-weight: 500;
+      color: var(--dark); text-decoration: none; letter-spacing: 0.5px;
+    }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a {
+      font-size: 13px; color: var(--dark); text-decoration: none;
+      opacity: 0.6; transition: opacity 0.2s; letter-spacing: 0.3px;
+    }
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+    .lang-toggle {
+      background: none; border: 1px solid var(--gold); color: var(--gold);
+      font-family: 'DM Sans', sans-serif; font-size: 11px;
+      padding: 5px 12px; border-radius: 2px; cursor: pointer;
+      letter-spacing: 0.5px; transition: all 0.2s;
+    }
+    .lang-toggle:hover { background: var(--gold); color: var(--dark); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--dark); }
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--cream); padding: 20px 32px; border-bottom: 1px solid var(--blush); gap: 16px; }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+    }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero {
+      background: var(--dark);
+      padding: 80px 40px 72px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 0%, rgba(196,154,122,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 5% 100%, rgba(196,154,122,0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 780px; margin: 0 auto; position: relative; }
+    .article-category {
+      display: inline-block;
+      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 24px;
+      border: 1px solid rgba(196,154,122,0.3); padding: 5px 14px; border-radius: 2px;
+    }
+    .article-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 300; color: var(--cream);
+      line-height: 1.2; margin-bottom: 24px;
+    }
+    .article-title em { font-style: italic; color: var(--gold); }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px;
+      flex-wrap: wrap;
+    }
+    .meta-item { font-size: 12px; color: rgba(247,243,238,0.45); letter-spacing: 0.5px; }
+    .meta-dot { color: rgba(196,154,122,0.4); }
+    .article-summary {
+      margin-top: 28px; padding: 24px 28px;
+      background: rgba(247,243,238,0.05);
+      border-left: 2px solid var(--gold);
+      border-radius: 0 2px 2px 0;
+    }
+    .article-summary p {
+      font-size: 14px; color: rgba(247,243,238,0.65);
+      line-height: 1.75;
+    }
+    .summary-label {
+      font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 10px;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-wrap {
+      max-width: 780px; margin: 0 auto;
+      padding: 72px 32px 100px;
+    }
+
+    .article-body h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 400; color: var(--dark);
+      margin: 56px 0 20px; line-height: 1.3;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--blush);
+    }
+    .article-body h2 .num {
+      font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); display: block; margin-bottom: 8px;
+      font-family: 'DM Sans', sans-serif; font-weight: 400;
+    }
+
+    .article-body p {
+      font-size: 15.5px; color: #2a1e16;
+      line-height: 1.85; margin-bottom: 20px;
+    }
+
+    .article-body strong {
+      font-weight: 500; color: var(--dark);
+    }
+
+    /* Approval cards */
+    .approval-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px; margin: 28px 0;
+    }
+    .approval-card {
+      background: var(--white);
+      border: 1px solid var(--blush);
+      border-left: 3px solid var(--gold);
+      padding: 28px 26px; border-radius: 2px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .approval-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(28,21,16,0.08); }
+    .approval-tag {
+      font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 10px; font-weight: 500;
+    }
+    .approval-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; font-weight: 500;
+      color: var(--dark); margin-bottom: 10px;
+    }
+    .approval-card p {
+      font-size: 14px !important; color: var(--text-muted) !important;
+      line-height: 1.7 !important; margin: 0 !important;
+    }
+    .approval-card .card-detail {
+      margin-top: 12px; padding-top: 12px;
+      border-top: 1px solid var(--blush);
+      font-size: 13px !important; color: var(--text-muted) !important;
+      line-height: 1.65 !important;
+    }
+
+    /* Risk cards (reused) */
+    .risk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px; margin: 28px 0;
+    }
+    .risk-card {
+      background: var(--white);
+      border: 1px solid var(--blush);
+      border-top: 2px solid var(--gold);
+      padding: 24px 22px; border-radius: 2px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .risk-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(28,21,16,0.08); }
+    .risk-tag {
+      font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 10px; font-weight: 500;
+    }
+    .risk-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; font-weight: 500;
+      color: var(--dark); margin-bottom: 8px;
+    }
+    .risk-card p {
+      font-size: 13px !important; color: var(--text-muted) !important;
+      line-height: 1.65 !important; margin: 0 !important;
+    }
+
+    /* Timeline */
+    .timeline {
+      margin: 32px 0; position: relative;
+      padding-left: 32px;
+    }
+    .timeline::before {
+      content: ''; position: absolute; left: 8px; top: 0; bottom: 0;
+      width: 1px; background: var(--blush);
+    }
+    .timeline-item {
+      position: relative; margin-bottom: 28px;
+    }
+    .timeline-item::before {
+      content: ''; position: absolute; left: -28px; top: 6px;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--gold);
+    }
+    .timeline-item h4 {
+      font-size: 14px; font-weight: 500; color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .timeline-item p {
+      font-size: 13.5px !important; color: var(--text-muted) !important;
+      line-height: 1.7 !important; margin: 0 !important;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      margin: 40px 0; padding: 32px 36px;
+      border-left: 3px solid var(--gold);
+      background: rgba(196,154,122,0.06);
+    }
+    .pull-quote p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.3rem, 2vw, 1.6rem) !important;
+      font-weight: 300; color: var(--dark) !important;
+      line-height: 1.5 !important; font-style: italic;
+      margin: 0 !important;
+    }
+
+    /* Info box */
+    .info-box {
+      background: var(--white);
+      border: 1px solid var(--blush);
+      border-radius: 2px; overflow: hidden;
+      margin: 24px 0;
+    }
+    .info-header {
+      background: var(--dark); padding: 14px 24px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .info-badge {
+      font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--dark); background: var(--gold);
+      padding: 3px 10px; border-radius: 2px; white-space: nowrap; font-weight: 500;
+    }
+    .info-title-text {
+      font-size: 13px; color: rgba(247,243,238,0.8);
+      font-weight: 400; letter-spacing: 0.3px;
+    }
+    .info-body { padding: 24px 24px 20px; }
+    .info-body p {
+      font-size: 14px !important; margin-bottom: 14px !important;
+    }
+    .info-note {
+      background: rgba(196,154,122,0.08);
+      border-left: 2px solid var(--gold);
+      padding: 12px 16px; border-radius: 0 2px 2px 0;
+      font-size: 13px !important; color: var(--text-muted) !important;
+      line-height: 1.65 !important; margin: 0 !important;
+    }
+    .info-note strong { color: var(--gold) !important; }
+
+    /* Language toggle */
+    [data-lang] { display: none; }
+    body.lang-en [data-lang="en"] { display: block; }
+    body.lang-zh [data-lang="zh"] { display: block; }
+    body.lang-en span[data-lang="en"],
+    body.lang-zh span[data-lang="zh"] { display: inline; }
+    body.lang-en div[data-lang="en"],
+    body.lang-zh div[data-lang="zh"] { display: block; }
+
+    /* Section divider */
+    .lang-divider {
+      margin: 64px 0 0;
+      padding: 40px 0 0;
+      border-top: 1px solid var(--blush);
+      display: flex !important; align-items: center; gap: 16px;
+    }
+    .lang-divider-label {
+      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); white-space: nowrap;
+    }
+    .lang-divider-line { flex: 1; height: 1px; background: var(--blush); }
+
+    /* CTA */
+    .article-cta {
+      margin-top: 64px; padding: 48px 44px;
+      background: var(--dark); border-radius: 2px;
+      position: relative; overflow: hidden;
+    }
+    .article-cta::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .cta-label {
+      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 12px;
+    }
+    .article-cta h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 300; color: var(--cream);
+      margin-bottom: 10px; line-height: 1.3;
+    }
+    .article-cta p {
+      font-size: 13px; color: rgba(247,243,238,0.5);
+      margin-bottom: 28px; line-height: 1.7;
+    }
+    .cta-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-gold {
+      padding: 12px 26px; background: var(--gold); color: var(--dark);
+      text-decoration: none; font-size: 12px; font-weight: 500;
+      letter-spacing: 1px; text-transform: uppercase; border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-ghost {
+      padding: 12px 26px; background: none;
+      border: 1px solid rgba(196,154,122,0.4); color: var(--gold);
+      text-decoration: none; font-size: 12px; font-weight: 500;
+      letter-spacing: 1px; text-transform: uppercase; border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--gold); background: rgba(196,154,122,0.1); }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; color: var(--text-muted); text-decoration: none;
+      letter-spacing: 0.5px; margin-bottom: 36px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--gold); }
+    .back-link::before { content: '\2190'; }
+
+    /* Footer */
+    footer {
+      background: var(--dark); padding: 48px 32px;
+      text-align: center; margin-top: 0;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; color: var(--cream); margin-bottom: 8px;
+    }
+    .footer-sub { font-size: 12px; color: rgba(247,243,238,0.3); letter-spacing: 1px; }
+
+    @media (max-width: 600px) {
+      .article-hero { padding: 56px 24px 56px; }
+      .article-wrap { padding: 48px 20px 72px; }
+      .article-cta { padding: 32px 24px; }
+      .risk-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPB5RY7C2"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4XPB5RY7C2');</script>
+</head>
+<body class="lang-zh">
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Evonne Xu</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a>
+      <a href="blog.html"><span data-lang="zh">博客</span><span data-lang="en">Blog</span></a>
+      <a href="videos.html"><span data-lang="zh">视频</span><span data-lang="en">Videos</span></a>
+      <a href="index.html#contact"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a>
+      <button class="lang-toggle" onclick="toggleLang()" id="langBtn">English</button>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="article-hero">
+  <div class="hero-inner">
+    <div class="article-category">
+      <span data-lang="zh">跨境并购 · 监管实务</span>
+      <span data-lang="en">Cross-Border M&A · Regulatory Practice</span>
+    </div>
+    <h1 class="article-title">
+      <span data-lang="zh">过关斩将：美国大型交易<br>必须通过的<em>审批关卡</em></span>
+      <span data-lang="en">Gatekeeper Gauntlet: The <em>Regulatory Approvals</em><br>Every Major U.S. Deal Must Clear</span>
+    </h1>
+    <div class="article-meta">
+      <span class="meta-item">Evonne Xu</span>
+      <span class="meta-dot">&middot;</span>
+      <span class="meta-item">April 2026</span>
+      <span class="meta-dot">&middot;</span>
+      <span class="meta-item"><span data-lang="zh">约3000字 · 15分钟阅读</span><span data-lang="en">~3000 words &middot; 15 min read</span></span>
+    </div>
+    <div class="article-summary">
+      <p class="summary-label"><span data-lang="zh">核心摘要</span><span data-lang="en">Executive Summary</span></p>
+      <p data-lang="zh">在美国完成一笔大型并购交易，签约只是起点。从签约到交割，交易方可能需要通过HSR反垄断审查、CFIUS国家安全审查、SEC证券监管审批、行业特定许可以及州级监管等多道关卡。本文逐一拆解每道审批的触发条件、审查流程、时间线和实操要点。</p>
+      <p data-lang="en">Signing a major U.S. deal is just the starting line. Between signing and closing, parties may need to clear HSR antitrust review, CFIUS national security review, SEC regulatory approval, industry-specific licenses, and state-level oversight. This article breaks down each gatekeeper — triggers, process, timeline, and practical tips.</p>
+    </div>
+  </div>
+</section>
+
+<div class="article-wrap">
+  <a href="blog.html" class="back-link"><span data-lang="zh">返回博客</span><span data-lang="en">Back to Blog</span></a>
+
+  <article class="article-body">
+
+    <!-- ==================== CHINESE VERSION ==================== -->
+    <div data-lang="zh">
+
+      <h2><span class="num">引言</span>为什么签约不等于成交</h2>
+      <p>许多第一次参与美国大型交易的企业家和高管会有一个误解：以为买卖双方签了购买协议，交易就基本完成了。事实恰恰相反——在美国，签约（signing）和交割（closing）之间通常隔着数月甚至超过一年的监管审批流程。</p>
+      <p>一笔十亿美元级别的并购交易，可能需要同时面对联邦反垄断机构、国家安全审查委员会、证券监管机构以及多个州级监管部门的审查。任何一道审批受阻，都可能导致交易延迟、条件修改甚至彻底流产。</p>
+      <p>本文将系统梳理美国大型交易中最常见的五类审批关卡，帮助你在交易规划阶段就建立起完整的监管地图。</p>
+
+      <div class="pull-quote">
+        <p>"在美国做大型交易，不怕对手出价高，就怕监管审批拖。时间本身就是最大的交易风险。"</p>
+      </div>
+
+      <!-- ===== HSR ===== -->
+      <h2><span class="num">一</span>HSR反垄断审查——最常见的第一道关</h2>
+      <p>几乎所有达到一定规模的并购交易都需要面对的第一道审批，就是<strong>哈特-斯科特-罗迪诺法案（Hart-Scott-Rodino Antitrust Improvements Act, HSR）</strong>规定的反垄断审查。</p>
+
+      <div class="info-box">
+        <div class="info-header">
+          <span class="info-badge">触发条件</span>
+          <span class="info-title-text">什么时候需要HSR申报？</span>
+        </div>
+        <div class="info-body">
+          <p>HSR申报义务由交易金额和当事方规模两个维度决定。2026年，<strong>基本门槛为1.19亿美元</strong>（每年根据GNP指数调整）。具体而言：如果交易金额超过1.19亿美元，且买卖双方满足一定的资产/营收规模测试，则双方必须在交割前向FTC和DOJ提交HSR申报表。</p>
+          <p class="info-note"><strong>关键提示：</strong>如果交易金额超过4.782亿美元（2026年标准），无论当事方规模如何，都必须申报——这是"仅看交易金额"的绝对门槛。</p>
+        </div>
+      </div>
+
+      <p><strong>审查流程分为两个阶段：</strong></p>
+      <p>第一阶段：申报提交后，FTC和DOJ有30天的初步审查期（现金要约收购为15天）。大多数交易在这一阶段获得"早期终止"（Early Termination）或等待期自然届满，即获准交割。</p>
+      <p>第二阶段：如果监管机构认为交易可能存在反竞争问题，会发出"第二次请求"（Second Request），要求提交大量补充材料。第二次请求的合规成本极高——通常涉及数百万页文件审查和高管访谈，耗时6至18个月不等。</p>
+
+      <div class="risk-grid">
+        <div class="risk-card">
+          <p class="risk-tag">时间线</p>
+          <h3>30天 → 6-18个月</h3>
+          <p>第一阶段30天（快的话15天早期终止）。第二次请求后，审查时间可达6-18个月。</p>
+        </div>
+        <div class="risk-card">
+          <p class="risk-tag">监管机构</p>
+          <h3>FTC 或 DOJ</h3>
+          <p>两个机构"分案"审查。科技和医药归FTC，电信和金融归DOJ。但分案规则并非完全固定。</p>
+        </div>
+        <div class="risk-card">
+          <p class="risk-tag">后果</p>
+          <h3>禁令或强制剥离</h3>
+          <p>FTC/DOJ可以向联邦法院申请临时禁令阻止交割，或要求当事方剥离部分业务作为批准条件。</p>
+        </div>
+      </div>
+
+      <p><strong>实操要点：</strong>许多买方在签约前就聘请反垄断律师进行市场份额分析，判断交易是否可能遭遇第二次请求。如果买卖双方在同一市场有高度重叠，提前准备剥离方案（fix-it-first或consent decree）可以显著缩短审查时间。</p>
+
+      <!-- ===== CFIUS ===== -->
+      <h2><span class="num">二</span>CFIUS国家安全审查——跨境交易的核心关卡</h2>
+      <p>如果交易涉及外国买方，尤其是来自中国、俄罗斯等"受关注国家"的买方，<strong>美国外国投资委员会（CFIUS）</strong>的国家安全审查几乎是绕不过的关卡。</p>
+      <p>CFIUS由财政部牵头，成员包括国防部、国务院、商务部等九个联邦机构。其审查权限在2018年《外国投资风险审查现代化法案》（FIRRMA）后大幅扩展，不仅覆盖控制权收购，还延伸到特定类型的非控制性投资和房地产交易。</p>
+
+      <div class="info-box">
+        <div class="info-header">
+          <span class="info-badge">强制申报</span>
+          <span class="info-title-text">TID行业的强制申报义务</span>
+        </div>
+        <div class="info-body">
+          <p>如果目标公司属于"TID"类别——即涉及关键技术（Technology）、关键基础设施（Infrastructure）或敏感个人数据（Data）——且买方来自受关注国家或与此类国家有实质关联，则<strong>必须</strong>在交割前提交强制申报（mandatory declaration）。</p>
+          <p class="info-note"><strong>关键提示：</strong>即使交易不属于强制申报范围，CFIUS仍有权在交割后5年内主动发起审查并强制要求剥离。因此，涉及敏感行业的交易通常会选择"自愿申报"以锁定确定性。</p>
+        </div>
+      </div>
+
+      <p><strong>审查流程的三个阶段：</strong></p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>简短申报（Declaration）— 30天</h4>
+          <p>适用于低风险交易。CFIUS可以在30天内批准、要求转入正式申报、或不做处理。</p>
+        </div>
+        <div class="timeline-item">
+          <h4>正式申报（Notice）第一阶段 — 45天</h4>
+          <p>CFIUS进行全面审查。约半数交易在第一阶段获得批准（clearance）。</p>
+        </div>
+        <div class="timeline-item">
+          <h4>第二阶段调查（Investigation）— 额外45天</h4>
+          <p>如果第一阶段未能得出结论，进入45天调查期。调查结束后可批准、附条件批准（签署NSA/mitigation agreement），或提交总统做最终决定。</p>
+        </div>
+      </div>
+
+      <p>2026年，涉及中国买方的交易平均审查时间已达到270天，远超法定最短时间框架。这是因为当事方与CFIUS之间的"预申报沟通"和NSA谈判通常在正式时钟之外进行。</p>
+
+      <!-- ===== SEC ===== -->
+      <h2><span class="num">三</span>SEC证券监管审批——上市公司交易的必经之路</h2>
+      <p>当交易涉及上市公司，或者交易对价中包含股票（stock-for-stock merger），<strong>美国证券交易委员会（SEC）</strong>的审查就不可避免。</p>
+
+      <p><strong>SEC审查的几个核心触发点：</strong></p>
+      <div class="approval-grid">
+        <div class="approval-card">
+          <p class="approval-tag">代理声明</p>
+          <h3>Proxy Statement / 股东投票材料</h3>
+          <p>如果交易需要目标公司股东投票批准（大多数上市公司并购都需要），公司必须向SEC提交代理声明（Schedule 14A），披露交易条款、财务顾问意见、管理层利益冲突等全部重大信息。</p>
+          <div class="card-detail">SEC审查代理声明通常需要1-3轮comment letter往返，耗时4-8周。</div>
+        </div>
+        <div class="approval-card">
+          <p class="approval-tag">注册声明</p>
+          <h3>Registration Statement (Form S-4)</h3>
+          <p>如果买方以自身股票作为对价，需要在SEC注册新发行的股票。S-4文件的审查往往更加严格，尤其关注pro forma财务信息和风险因素披露。</p>
+          <div class="card-detail">S-4审查时间一般为6-12周，复杂交易可能更长。</div>
+        </div>
+        <div class="approval-card">
+          <p class="approval-tag">要约收购</p>
+          <h3>Tender Offer (Schedule TO / 14D-9)</h3>
+          <p>要约收购中，买方需提交Schedule TO，目标公司董事会需提交14D-9（推荐或反对意见）。SEC对要约收购文件的审查节奏通常更快，但对披露质量要求极高。</p>
+          <div class="card-detail">SEC对要约收购有严格的20个工作日最短要约期要求。</div>
+        </div>
+      </div>
+
+      <p><strong>实操要点：</strong>SEC审查的核心不是"批准或否决"交易本身，而是确保信息披露的充分性和准确性。但如果SEC持续发出comment letter要求修改披露，会显著延迟股东投票时间表，间接影响交割进度。经验丰富的证券律师通常会在提交前进行"pre-filing"沟通以加速流程。</p>
+
+      <!-- ===== INDUSTRY SPECIFIC ===== -->
+      <h2><span class="num">四</span>行业特定审批——被忽视的"隐形关卡"</h2>
+      <p>除了上述三大横向审批之外，许多行业还有自己的监管机构和审批要求。这些"隐形关卡"经常被交易方低估，却可能成为交割的最大障碍。</p>
+
+      <div class="risk-grid">
+        <div class="risk-card">
+          <p class="risk-tag">电信</p>
+          <h3>FCC审批</h3>
+          <p>涉及无线频谱许可证、广播电视牌照或国际通信线路的交易，需获得联邦通信委员会（FCC）批准。FCC有独立的国家安全审查程序（Team Telecom）。审查时间：6-18个月。</p>
+        </div>
+        <div class="risk-card">
+          <p class="risk-tag">能源</p>
+          <h3>FERC / NRC审批</h3>
+          <p>电力公用事业和天然气管道交易需获得联邦能源监管委员会（FERC）批准。核电相关交易还需核管理委员会（NRC）许可。审查时间：6-12个月。</p>
+        </div>
+        <div class="risk-card">
+          <p class="risk-tag">银行与保险</p>
+          <h3>联邦和州级金融监管</h3>
+          <p>银行并购需获得OCC、FDIC或美联储批准（取决于银行类型）。保险公司并购需获得每个运营州保险监管局的批准，50州的要求各不相同。审查时间：3-12个月。</p>
+        </div>
+        <div class="risk-card">
+          <p class="risk-tag">国防</p>
+          <h3>DDTC / 出口管制</h3>
+          <p>目标公司如果持有国防合同或涉及ITAR管控物项，控制权变更需通知国防贸易管制局（DDTC）。涉及EAR管控技术的交易也可能需要商务部审批。</p>
+        </div>
+      </div>
+
+      <p><strong>实操要点：</strong>行业审批的难度在于其"碎片化"——没有一个统一的清单告诉你需要哪些许可。最佳做法是在尽职调查阶段对目标公司持有的所有许可证、牌照和政府合同进行全面梳理，识别出哪些涉及控制权变更通知或审批义务。</p>
+
+      <!-- ===== STATE LEVEL ===== -->
+      <h2><span class="num">五</span>州级审批——不要忘记"最后一公里"</h2>
+      <p>美国是联邦制国家，许多监管权力保留在州级层面。以下几类州级审批经常出现在大型交易中：</p>
+
+      <div class="approval-grid">
+        <div class="approval-card">
+          <p class="approval-tag">州反垄断</p>
+          <h3>州检察长的反垄断审查</h3>
+          <p>即使联邦层面HSR审查已经通过，州检察长仍有独立权力对交易进行反垄断审查。在医疗、零售和农业领域，州检察长的审查越来越活跃。近年来，多个州联合起诉阻止大型并购的案例屡见不鲜。</p>
+        </div>
+        <div class="approval-card">
+          <p class="approval-tag">保险监管</p>
+          <h3>州保险监管局审批</h3>
+          <p>保险公司并购必须获得其注册州和主要运营州保险监管局的"控制权变更"批准。审查重点包括买方的财务实力、运营计划以及对保单持有人的影响。多州并行审批可能耗时6-12个月。</p>
+        </div>
+        <div class="approval-card">
+          <p class="approval-tag">公用事业</p>
+          <h3>州公共事业委员会审批</h3>
+          <p>电力、天然气和水务公司的交易需获得相关州公共事业委员会（PUC）批准。PUC审查关注交易对费率的影响、服务质量保障和就业承诺。这是能源并购中最耗时的审批之一。</p>
+        </div>
+      </div>
+
+      <!-- ===== OVERVIEW ===== -->
+      <h2><span class="num">六</span>全景图：一笔交易可能面对多少审批？</h2>
+      <p>让我们以一个假设场景说明——一家中国科技公司以股票加现金方式收购一家美国上市电信公司：</p>
+
+      <div class="info-box">
+        <div class="info-header">
+          <span class="info-badge">案例推演</span>
+          <span class="info-title-text">跨境上市电信公司收购</span>
+        </div>
+        <div class="info-body">
+          <p><strong>HSR反垄断申报</strong> — 交易金额超过门槛，必须申报。如果双方在美国电信市场有重叠业务，可能触发第二次请求。</p>
+          <p><strong>CFIUS国家安全审查</strong> — 中国买方+电信行业=几乎确定触发强制申报。审查时间可能超过一年。</p>
+          <p><strong>SEC注册声明</strong> — 对价包含股票，需提交S-4注册声明并获SEC审核通过。</p>
+          <p><strong>FCC审批</strong> — 目标公司持有无线频谱许可证，需FCC批准控制权变更。Team Telecom将进行独立国安审查。</p>
+          <p><strong>州PUC审批</strong> — 如果目标公司在多个州提供电信服务，可能需要多个州PUC批准。</p>
+          <p class="info-note"><strong>总时间估计：</strong>18-24个月。这就是为什么大型跨境交易的购买协议中通常会设置18个月甚至更长的"长停日期"（outside date / long-stop date）。</p>
+        </div>
+      </div>
+
+      <h2><span class="num">七</span>结语：监管地图是交易战略的一部分</h2>
+      <p>在美国做大型交易，法律尽职调查的范围不能只看目标公司的合同和财务。监管审批的路线图——需要哪些审批、每个审批的风险等级、预计时间线——本身就是交易可行性分析的核心组成部分。</p>
+      <p>最成功的交易方，往往是在签约前就画好了完整的监管地图，预判了每一道关卡的通过概率和应对方案。在审批的世界里，早一步准备，可能就是早一年交割。</p>
+
+      <div class="pull-quote">
+        <p>"大型交易的成败，三分靠商业谈判，七分靠监管策略。"</p>
+      </div>
+    </div>
+
+    <!-- ==================== ENGLISH VERSION ==================== -->
+    <div class="lang-divider" data-lang="en">
+      <span class="lang-divider-label">English Version</span>
+      <span class="lang-divider-line"></span>
+    </div>
+
+    <div data-lang="en">
+
+      <h2><span class="num">Introduction</span>Why Signing Is Not Closing</h2>
+      <p>Many first-time participants in major U.S. transactions share a common misconception: that once the purchase agreement is signed, the deal is essentially done. The reality is the opposite — in the United States, <strong>signing</strong> and <strong>closing</strong> are often separated by months, sometimes more than a year, of regulatory approvals.</p>
+      <p>A billion-dollar acquisition may simultaneously face scrutiny from federal antitrust enforcers, the national security review committee, securities regulators, and multiple state-level agencies. Any single gatekeeper can delay, modify, or kill a deal.</p>
+      <p>This article systematically maps the five most common categories of regulatory approvals in major U.S. transactions, helping you build a complete regulatory roadmap at the deal planning stage.</p>
+
+      <div class="pull-quote">
+        <p>"In major U.S. deals, the biggest risk isn't a higher competing bid — it's regulatory delay. Time itself is the deal's greatest enemy."</p>
+      </div>
+
+      <!-- ===== HSR ===== -->
+      <h2><span class="num">I</span>HSR Antitrust Review — The Most Common First Gate</h2>
+      <p>The first regulatory hurdle for virtually any transaction above a certain size is the antitrust review mandated by the <strong>Hart-Scott-Rodino Antitrust Improvements Act (HSR)</strong>.</p>
+
+      <div class="info-box">
+        <div class="info-header">
+          <span class="info-badge">Trigger</span>
+          <span class="info-title-text">When is an HSR filing required?</span>
+        </div>
+        <div class="info-body">
+          <p>HSR filing obligations are determined by two dimensions: transaction value and party size. In 2026, the <strong>base threshold is $119 million</strong> (adjusted annually by GNP index). Specifically: if the transaction value exceeds $119 million and both parties meet certain asset/revenue size tests, both must file an HSR notification with the FTC and DOJ before closing.</p>
+          <p class="info-note"><strong>Key point:</strong> If the transaction value exceeds $478.2 million (2026 standard), filing is mandatory regardless of party size — this is the absolute "transaction size only" threshold.</p>
+        </div>
+      </div>
+
+      <p><strong>The review process has two phases:</strong></p>
+      <p>Phase I: After filing, the FTC and DOJ have a 30-day initial review period (15 days for cash tender offers). Most transactions receive "Early Termination" or the waiting period expires naturally in this phase, clearing the way to close.</p>
+      <p>Phase II: If the agencies believe the transaction may raise competitive concerns, they issue a "Second Request" demanding extensive supplemental materials. Second Request compliance is extraordinarily expensive — typically involving millions of pages of document review and executive depositions, taking 6 to 18 months.</p>
+
+      <div class="risk-grid">
+        <div class="risk-card">
+          <p class="risk-tag">Timeline</p>
+          <h3>30 Days → 6-18 Months</h3>
+          <p>Phase I: 30 days (Early Termination possible in 15 days). After a Second Request, review can take 6-18 months.</p>
+        </div>
+        <div class="risk-card">
+          <p class="risk-tag">Agencies</p>
+          <h3>FTC or DOJ</h3>
+          <p>The two agencies "clear" deals between themselves. Tech and pharma typically go to FTC; telecom and financial services to DOJ. But allocation rules aren't rigid.</p>
+        </div>
+        <div class="risk-card">
+          <p class="risk-tag">Consequences</p>
+          <h3>Injunction or Forced Divestiture</h3>
+          <p>The FTC/DOJ can seek a federal court injunction to block closing, or require divestitures as a condition of approval.</p>
+        </div>
+      </div>
+
+      <p><strong>Practical tip:</strong> Many acquirers retain antitrust counsel before signing to perform market share overlap analysis and assess whether a Second Request is likely. If the parties have significant overlap, preparing a divestiture package (fix-it-first or consent decree) in advance can meaningfully shorten review time.</p>
+
+      <!-- ===== CFIUS ===== -->
+      <h2><span class="num">II</span>CFIUS National Security Review — The Core Cross-Border Gate</h2>
+      <p>When a deal involves a foreign acquirer — especially one from a "country of concern" such as China or Russia — the <strong>Committee on Foreign Investment in the United States (CFIUS)</strong> national security review is virtually unavoidable.</p>
+      <p>CFIUS is chaired by the Treasury Department and includes nine federal agencies: Defense, State, Commerce, and others. Its authority expanded dramatically under the Foreign Investment Risk Review Modernization Act (FIRRMA) of 2018, reaching beyond controlling acquisitions to cover certain non-controlling investments and real estate transactions.</p>
+
+      <div class="info-box">
+        <div class="info-header">
+          <span class="info-badge">Mandatory Filing</span>
+          <span class="info-title-text">TID mandatory declaration obligations</span>
+        </div>
+        <div class="info-body">
+          <p>If the target company falls within the "TID" categories — critical Technology, critical Infrastructure, or sensitive personal Data — and the acquirer is from or has substantial ties to a country of concern, a <strong>mandatory declaration</strong> must be filed before closing.</p>
+          <p class="info-note"><strong>Key point:</strong> Even if a transaction doesn't trigger mandatory filing, CFIUS retains authority to initiate review up to 5 years post-closing and can mandate divestiture. Transactions involving sensitive sectors typically opt for voluntary filing to lock in certainty.</p>
+        </div>
+      </div>
+
+      <p><strong>The three-stage review process:</strong></p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Short-Form Declaration — 30 Days</h4>
+          <p>For lower-risk transactions. CFIUS can approve, request a full notice, or take no action within 30 days.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Full Notice — Phase I: 45 Days</h4>
+          <p>CFIUS conducts a comprehensive review. Roughly half of all transactions are cleared at the Phase I stage.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Phase II Investigation — Additional 45 Days</h4>
+          <p>If Phase I is inconclusive, a 45-day investigation period follows. The investigation may result in approval, conditional approval (NSA/mitigation agreement), or referral to the President for a final decision.</p>
+        </div>
+      </div>
+
+      <p>In 2026, transactions involving Chinese acquirers have averaged 270 days under review — far exceeding the statutory minimum timeline. This is because pre-filing consultations and NSA negotiations between parties and CFIUS typically occur "off the clock."</p>
+
+      <!-- ===== SEC ===== -->
+      <h2><span class="num">III</span>SEC Review — The Mandatory Path for Public Company Deals</h2>
+      <p>When a transaction involves a public company, or when the deal consideration includes stock (stock-for-stock merger), review by the <strong>Securities and Exchange Commission (SEC)</strong> is unavoidable.</p>
+
+      <p><strong>Key SEC review triggers:</strong></p>
+      <div class="approval-grid">
+        <div class="approval-card">
+          <p class="approval-tag">Proxy Statement</p>
+          <h3>Schedule 14A — Shareholder Voting Materials</h3>
+          <p>If the transaction requires shareholder approval (most public M&A does), the company must file a proxy statement (Schedule 14A) disclosing all material information: deal terms, financial advisor opinions, management conflicts of interest, and more.</p>
+          <div class="card-detail">SEC review typically involves 1-3 rounds of comment letters, taking 4-8 weeks.</div>
+        </div>
+        <div class="approval-card">
+          <p class="approval-tag">Registration Statement</p>
+          <h3>Form S-4 — Stock-for-Stock Deals</h3>
+          <p>If the acquirer uses its own stock as consideration, the newly issued shares must be registered with the SEC. S-4 review is often more rigorous, with particular focus on pro forma financials and risk factor disclosure.</p>
+          <div class="card-detail">S-4 review generally takes 6-12 weeks; complex deals may take longer.</div>
+        </div>
+        <div class="approval-card">
+          <p class="approval-tag">Tender Offer</p>
+          <h3>Schedule TO / Schedule 14D-9</h3>
+          <p>In tender offers, the acquirer files Schedule TO and the target board files a 14D-9 recommendation statement. SEC review of tender offer documents is typically faster, but disclosure quality standards are extremely high.</p>
+          <div class="card-detail">SEC mandates a minimum 20 business day offer period for tender offers.</div>
+        </div>
+      </div>
+
+      <p><strong>Practical tip:</strong> SEC review is fundamentally about disclosure adequacy, not approving or blocking the deal itself. However, ongoing comment letters requiring disclosure amendments can significantly delay the shareholder vote timeline, indirectly impacting closing. Experienced securities counsel typically engage in "pre-filing" consultations to accelerate the process.</p>
+
+      <!-- ===== INDUSTRY SPECIFIC ===== -->
+      <h2><span class="num">IV</span>Industry-Specific Approvals — The Overlooked "Hidden Gates"</h2>
+      <p>Beyond the three major horizontal reviews, many industries have their own regulators and approval requirements. These "hidden gates" are frequently underestimated by deal parties, yet can become the biggest obstacles to closing.</p>
+
+      <div class="risk-grid">
+        <div class="risk-card">
+          <p class="risk-tag">Telecom</p>
+          <h3>FCC Approval</h3>
+          <p>Deals involving wireless spectrum licenses, broadcast licenses, or international communication lines require Federal Communications Commission (FCC) approval. The FCC has its own national security review process (Team Telecom). Timeline: 6-18 months.</p>
+        </div>
+        <div class="risk-card">
+          <p class="risk-tag">Energy</p>
+          <h3>FERC / NRC Approval</h3>
+          <p>Electric utility and natural gas pipeline deals require Federal Energy Regulatory Commission (FERC) approval. Nuclear-related transactions also need Nuclear Regulatory Commission (NRC) licensing. Timeline: 6-12 months.</p>
+        </div>
+        <div class="risk-card">
+          <p class="risk-tag">Banking & Insurance</p>
+          <h3>Federal and State Financial Regulators</h3>
+          <p>Bank mergers require OCC, FDIC, or Federal Reserve approval (depending on charter type). Insurance company acquisitions require approval from every state where the insurer operates — requirements vary across all 50 states. Timeline: 3-12 months.</p>
+        </div>
+        <div class="risk-card">
+          <p class="risk-tag">Defense</p>
+          <h3>DDTC / Export Controls</h3>
+          <p>If the target holds defense contracts or handles ITAR-controlled items, change of control requires notification to the Directorate of Defense Trade Controls (DDTC). Deals involving EAR-controlled technology may also need Commerce Department approval.</p>
+        </div>
+      </div>
+
+      <p><strong>Practical tip:</strong> The difficulty with industry-specific approvals is their fragmentation — there is no unified checklist. Best practice is to conduct a comprehensive inventory during due diligence of all licenses, permits, and government contracts held by the target, identifying which ones carry change-of-control notification or approval obligations.</p>
+
+      <!-- ===== STATE LEVEL ===== -->
+      <h2><span class="num">V</span>State-Level Approvals — Don't Forget the "Last Mile"</h2>
+      <p>The United States is a federal system, and significant regulatory authority resides at the state level. Several categories of state-level approvals frequently appear in major transactions:</p>
+
+      <div class="approval-grid">
+        <div class="approval-card">
+          <p class="approval-tag">State Antitrust</p>
+          <h3>State Attorney General Antitrust Review</h3>
+          <p>Even after federal HSR clearance, state attorneys general retain independent authority to challenge transactions on antitrust grounds. In healthcare, retail, and agriculture, state AG enforcement has become increasingly aggressive. Multi-state coalition lawsuits to block major mergers have become common.</p>
+        </div>
+        <div class="approval-card">
+          <p class="approval-tag">Insurance Regulation</p>
+          <h3>State Insurance Commissioner Approval</h3>
+          <p>Insurance company acquisitions must obtain "change of control" approval from the state of domicile and major operating states. Review focuses on the acquirer's financial strength, operating plans, and impact on policyholders. Multi-state parallel review can take 6-12 months.</p>
+        </div>
+        <div class="approval-card">
+          <p class="approval-tag">Utilities</p>
+          <h3>State Public Utility Commission Approval</h3>
+          <p>Electric, gas, and water utility transactions require approval from relevant state public utility commissions (PUCs). PUC review focuses on rate impact, service quality assurances, and employment commitments. This is often the most time-consuming approval in energy M&A.</p>
+        </div>
+      </div>
+
+      <!-- ===== OVERVIEW ===== -->
+      <h2><span class="num">VI</span>The Big Picture: How Many Approvals Can One Deal Face?</h2>
+      <p>Consider a hypothetical scenario — a Chinese technology company acquiring a U.S. publicly traded telecom company using a stock-and-cash mix:</p>
+
+      <div class="info-box">
+        <div class="info-header">
+          <span class="info-badge">Case Study</span>
+          <span class="info-title-text">Cross-border public telecom acquisition</span>
+        </div>
+        <div class="info-body">
+          <p><strong>HSR Antitrust Filing</strong> — Transaction exceeds the threshold; filing required. Second Request possible if the parties have overlapping U.S. telecom operations.</p>
+          <p><strong>CFIUS National Security Review</strong> — Chinese acquirer + telecom industry = near-certain mandatory filing. Review may exceed one year.</p>
+          <p><strong>SEC Registration Statement</strong> — Stock consideration requires an S-4 registration statement reviewed and declared effective by the SEC.</p>
+          <p><strong>FCC Approval</strong> — Target holds wireless spectrum licenses; FCC must approve the change of control. Team Telecom will conduct an independent national security review.</p>
+          <p><strong>State PUC Approvals</strong> — If the target provides telecom services in multiple states, several state PUC approvals may be required.</p>
+          <p class="info-note"><strong>Total estimated timeline:</strong> 18-24 months. This is why purchase agreements for major cross-border deals typically include an 18-month or longer "outside date" (long-stop date).</p>
+        </div>
+      </div>
+
+      <h2><span class="num">VII</span>Conclusion: The Regulatory Map Is Part of Deal Strategy</h2>
+      <p>In major U.S. transactions, legal due diligence cannot be limited to the target's contracts and financials. The regulatory approval roadmap — which approvals are needed, the risk level of each, estimated timelines — is itself a core component of deal feasibility analysis.</p>
+      <p>The most successful dealmakers are those who draw the complete regulatory map before signing, predict the probability of clearance at each gate, and prepare contingency plans. In the world of regulatory approvals, preparing one step earlier may mean closing one year sooner.</p>
+
+      <div class="pull-quote">
+        <p>"In major deals, 30% is commercial negotiation; 70% is regulatory strategy."</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="article-cta">
+      <p class="cta-label"><span data-lang="zh">关于作者</span><span data-lang="en">About the Author</span></p>
+      <h3 data-lang="zh">Evonne Xu — 并购律师 · AI法律工程师</h3>
+      <h3 data-lang="en">Evonne Xu — M&A Lawyer · AI Legal Engineer</h3>
+      <p data-lang="zh">专注于中美跨境并购与AI法律合规，同时也是法律科技工具的构建者。如果你正在规划一笔赴美交易，欢迎联系。</p>
+      <p data-lang="en">Specializing in U.S.-China cross-border M&A and AI legal compliance, and a builder of legal tech tools. If you're planning a U.S.-bound transaction, get in touch.</p>
+      <div class="cta-buttons">
+        <a href="https://evonnexulegal.beehiiv.com/subscribe" target="_blank" class="btn-gold">
+          <span data-lang="zh">订阅周报</span><span data-lang="en">Subscribe</span>
+        </a>
+        <a href="index.html#contact" class="btn-ghost">
+          <span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span>
+        </a>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <div class="footer-logo">Evonne Xu</div>
+  <p class="footer-sub">&copy; 2026 Evonne Xu Law</p>
+</footer>
+
+<script>
+let currentLang = localStorage.getItem('evonne-lang') || 'zh';
+function toggleLang() {
+  currentLang = currentLang === 'zh' ? 'en' : 'zh';
+  document.body.className = 'lang-' + currentLang;
+  document.getElementById('langBtn').textContent = currentLang === 'zh' ? 'English' : '中文';
+  localStorage.setItem('evonne-lang', currentLang);
+}
+document.body.className = 'lang-' + currentLang;
+document.getElementById('langBtn').textContent = currentLang === 'zh' ? 'English' : '中文';
+</script>
+</body>
+</html>
