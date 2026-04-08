@@ -104,7 +104,7 @@
 
 ---
 
-## ⚡ 发布新博客文章（必须同时改 4 个地方）
+## ⚡ 发布新博客文章（必须同时改 5 个地方）
 
 ### 第 1 步：创建文章文件
 新建 `blog/文章名.html`，参考以下模板：
@@ -209,7 +209,30 @@ switchLang(saved);
 ### 第 3 步：更新 `posts.json`（首页预览用）
 在数组**最前面**插入同样格式的记录。
 
-### 第 4 步：更新 `sitemap.xml`
+### 第 4 步：更新 `index.html` 首页博客预览区
+
+**这步经常被遗漏，必须执行。**
+
+找到 `index.html` 底部 `const POSTS = [` 数组，在**最前面**插入新文章，同时把原来 `featured: true` 的改为 `false`：
+
+```javascript
+{
+  file: "blog/文章名.html",
+  titleZh: "中文标题",
+  titleEn: "English Title",
+  excerptZh: "中文摘要（50字以内）",
+  excerptEn: "English excerpt (under 50 words)",
+  catZh: "分类 · 子分类",
+  catEn: "Category · Subcategory",
+  date: "April 2026",
+  readTime: "10 min",
+  featured: true
+},
+```
+
+⚠️ 注意：`index.html` 里的数组名是 `POSTS`（大写），`blog.html` 里是 `posts`（小写），是两个独立的数组，**都必须更新**。
+
+### 第 5 步：更新 `sitemap.xml`
 在 `</urlset>` 前插入：
 ```xml
 <url><loc>https://evonnexulegal.com/blog/文章名.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
@@ -317,7 +340,7 @@ git push origin main
 
 | 用户说 | Agent 应做 |
 |--------|-----------|
-| "发一篇新文章" | 执行「发布新博客」4步流程 |
+| "发一篇新文章" | 执行「发布新博客」**5步流程**（含更新 index.html POSTS 数组） |
 | "更新订阅人数" | 改 `_data/settings.json` → push |
 | "加一个 AI 工具卡片" | 改 `index.html` portfolio-grid → push |
 | "换照片" | 保存图片到 images/ → 改 index.html 显示逻辑 → push |
@@ -327,4 +350,4 @@ git push origin main
 
 ---
 
-*最后更新：2026年4月*
+*最后更新：2026年4月7日 — 新增发布流程第4步：更新 index.html POSTS 数组*
