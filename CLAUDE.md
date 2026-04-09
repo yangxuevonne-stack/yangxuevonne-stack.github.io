@@ -378,4 +378,158 @@ git push origin main
 
 ---
 
-*最后更新：2026年4月7日 — 新增发布流程第4步：更新 index.html POSTS 数组*
+---
+
+## 🔄 转换外部文章为本站博客风格
+
+当用户提供一个外部 HTML 博客文章（或任何格式的内容）要求转换为本站风格时，按照以下规范执行。
+
+### 核心原则
+
+1. **每篇博客文章是完全独立的** — 所有 CSS 写在 `<style>` 内联块中，**不要引用 `../css/style.css`**（那是首页专用的，会导致 nav 等样式冲突）
+2. **参考现有文章** — 以 `blog/ieepa-refund-participation.html` 作为风格范本
+3. **所有文字必须双语** — 每一段可见文本都必须有 `data-lang="zh"` 和 `data-lang="en"` 两个版本，**包括**标题编号（如"条款1"→"Clause 1"）、风险等级标签、表格内容等
+
+### 导航栏（固定深色顶栏）
+
+```html
+<nav>
+  <a class="nav-brand" href="../index.html">Evonne Xu Legal</a>
+  <div class="nav-links">
+    <a href="../index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a>
+    <a href="../blog.html"><span data-lang="zh">博客</span><span data-lang="en">Blog</span></a>
+    <a href="../index.html#contact"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a>
+    <button id="langBtn" onclick="toggleLang()" style="font-family:'DM Sans',sans-serif;font-size:11px;background:transparent;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.7);padding:4px 12px;cursor:pointer;letter-spacing:.08em;border-radius:2px;">English</button>
+  </div>
+</nav>
+```
+
+对应 CSS：
+```css
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--dark);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; height: 52px;
+  border-bottom: 2px solid var(--gold);
+}
+.nav-brand {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--cream); font-size: 13px; letter-spacing: .15em;
+  text-decoration: none; text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a {
+  color: rgba(247,243,238,.7); text-decoration: none;
+  font-family: 'DM Sans', sans-serif; font-size: 11px;
+  letter-spacing: .12em; text-transform: uppercase;
+  opacity: .7; transition: opacity .2s;
+}
+.nav-links a:hover { opacity: 1; }
+```
+
+> ⚠️ **不要**使用 `.nav-inner` 包裹层、不要用 `.nav-logo`、不要用 `<ul>` 包裹链接、不要包含"视频"导航项。
+
+### 双语切换 CSS（必须放在 `<style>` 最顶部）
+
+```css
+[data-lang] { display: none; }
+body.lang-en [data-lang="en"] { display: block; }
+body.lang-zh [data-lang="zh"] { display: block; }
+body.lang-en span[data-lang="en"],
+body.lang-zh span[data-lang="zh"] { display: inline; }
+body.lang-en div[data-lang="en"],
+body.lang-zh div[data-lang="zh"] { display: block; }
+```
+
+> ⚠️ **不要**给英文元素加 `style="display:none;"`，CSS 规则会自动处理显示/隐藏。加了反而会导致切换语言时英文无法显示。
+
+### 双语切换 JS（放在 `</body>` 前）
+
+```javascript
+var currentLang = 'zh';
+function toggleLang() {
+  currentLang = currentLang === 'zh' ? 'en' : 'zh';
+  document.body.className = 'lang-' + currentLang;
+  document.getElementById('langBtn').textContent = currentLang === 'zh' ? 'English' : '中文';
+  localStorage.setItem('lang', currentLang);
+}
+var saved = localStorage.getItem('lang') || 'zh';
+currentLang = saved;
+document.body.className = 'lang-' + currentLang;
+document.getElementById('langBtn').textContent = currentLang === 'zh' ? 'English' : '中文';
+```
+
+> ⚠️ localStorage key 统一用 `'lang'`，和其他博客文章保持一致。
+
+### Hero 区域（全宽深色背景，nav 下方）
+
+```css
+.hero-section {
+  margin-top: 52px; /* 为 fixed nav 留空间 */
+  background: var(--dark);
+  color: var(--cream);
+  padding: 80px 40px 72px;
+  position: relative; overflow: hidden;
+}
+.hero-section::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 70% 0%, rgba(196,154,122,0.15) 0%, transparent 60%),
+              radial-gradient(ellipse at 5% 100%, rgba(196,154,122,0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero-inner { max-width: 780px; margin: 0 auto; position: relative; }
+```
+
+Hero 必须放在 `<nav>` 之后、`article-container` 之前，**不要**放在文章容器内部。
+
+### 间距规范（紧凑布局）
+
+| 元素 | 间距 |
+|------|------|
+| 板块之间 | `margin: 32px 0` 或 `margin: 16px 0`，**不要超过 40px** |
+| 条款卡片 | `margin: 16px 0`，`padding: 28px` |
+| 表格/矩阵 | `margin: 20px 0` |
+| CTA 区域 | `margin: 40px 0 24px` |
+| 文章容器 padding | `padding: 32px 40px 48px` |
+
+> ⚠️ 绝对不要出现 60px、80px 的板块间距，会导致大片留白。
+
+### 表格风险等级标签（鲜艳彩色徽章）
+
+```css
+.tbl-risk {
+  display: inline-block; padding: 3px 10px; border-radius: 3px;
+  font-size: 11px; font-weight: 700; letter-spacing: .05em;
+  text-align: center; min-width: 42px;
+}
+.tbl-high { background: #e74c3c; color: #fff; }
+.tbl-med  { background: #f39c12; color: #fff; }
+.tbl-low  { background: #2ecc71; color: #fff; }
+```
+
+用法：`<span class="tbl-risk tbl-high"><span data-lang="zh">高</span><span data-lang="en">HIGH</span></span>`
+
+### 常见踩坑清单
+
+| 问题 | 原因 | 解决方案 |
+|------|------|---------|
+| 中英文同时显示 | `[data-lang]` CSS 规则缺失或被 `style.css` 覆盖 | 确保双语 CSS 在 `<style>` 最顶部；不引用 `../css/style.css` |
+| 英文元素加了 `style="display:none;"` 后切换语言不显示 | inline style 优先级高于 CSS 规则 | 不要加 inline `display:none`，靠 CSS 规则控制 |
+| 导航栏布局错乱（文字竖排、间距异常） | 引用了 `../css/style.css` 导致首页 nav 样式冲突 | 所有 nav CSS 写在文章内联 `<style>` 中 |
+| 条款编号/标签在英文版显示中文 | 编号文字没有用 `data-lang` 包裹 | **所有**可见文字都必须双语包裹，包括"条款1"→"Clause 1" |
+| 语言切换按钮点击无反应 | JS 函数名/localStorage key 不一致 | 函数名用 `toggleLang()`，localStorage key 用 `'lang'` |
+| TOC 点击无法跳转（使用 `en-s0` 映射但页面无对应 ID） | 过度复杂的双套锚点系统 | 如果用 `data-lang` 切换内容（同一个 section 内），只需一套 `id="s0"` 即可，不需要 `en-s0` 映射 |
+
+### 转换步骤总结
+
+1. **读取原文内容** — 理解文章结构、提取所有中文文本
+2. **翻译为英文** — 所有段落、标题、标签、表格内容
+3. **创建 `blog/文章名.html`** — 按上述规范，所有 CSS 内联，nav 用深色顶栏模板
+4. **更新 `blog.html`** — posts 数组最前面插入，原置顶改 `featured: false`
+5. **更新 `sitemap.xml`** — 添加新 URL
+6. **（如用户要求）更新 `index.html`** — POSTS 数组和 `posts.json`
+
+---
+
+*最后更新：2026年4月8日 — 新增「转换外部文章为本站博客风格」完整规范*
