@@ -3,271 +3,854 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>资产收购 vs 股权收购深度对比 | Evonne Xu Law</title>
-<meta name="description" content="美国并购交易中资产收购与股权收购的全面法律对比：税务、负债、合同、员工、知识产权等8大维度深度分析">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+<title>资产收购 vs 股权收购深度对比 | Evonne Xu Legal</title>
+<meta name="description" content="美国并购交易中资产收购与股权收购的全面法律对比：税务、负债、合同、员工、知识产权等8大维度深度分析，附综合对比表和场景选择指南。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"DM Sans",sans-serif;background:#f4f6f9;color:#1a2332;display:flex;min-height:100vh}
-a{color:inherit;text-decoration:none}
-
-/* Sidebar */
-.sidebar{width:220px;min-width:220px;background:#0d1b2a;color:#c8d6e5;position:fixed;top:0;left:0;height:100vh;overflow-y:auto;padding:32px 0;z-index:100}
-.sidebar-brand{padding:0 24px 28px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:20px}
-.sidebar-brand a{color:#fff;font-size:13px;letter-spacing:.15em;text-transform:uppercase}
-.sidebar-brand span{color:#e87a2d}
-.sidebar h3{padding:0 24px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(200,214,229,.4);margin-bottom:10px}
-.sidebar ul{list-style:none}
-.sidebar ul li a{display:block;padding:8px 24px;font-size:12px;color:rgba(200,214,229,.75);transition:.2s;border-left:2px solid transparent}
-.sidebar ul li a:hover{color:#fff;border-left-color:#e87a2d;background:rgba(255,255,255,.04)}
-
-/* Main */
-.main{margin-left:220px;flex:1;padding:48px 48px 80px}
-.hero{background:linear-gradient(135deg,#0d1b2a 0%,#1a3a5c 100%);color:#fff;border-radius:8px;padding:48px 40px;margin-bottom:40px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:280px;height:280px;border-radius:50%;background:rgba(232,122,45,.12);pointer-events:none}
-.hero-tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#e87a2d;margin-bottom:16px}
-.hero h1{font-family:"Noto Serif SC",serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;line-height:1.35;margin-bottom:16px}
-.hero p{font-size:14px;color:rgba(255,255,255,.7);line-height:1.8;max-width:600px}
-
-/* Legend */
-.legend{display:flex;gap:24px;margin-bottom:32px;align-items:center}
-.legend-item{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:500;letter-spacing:.05em}
-.dot{width:10px;height:10px;border-radius:50%}
-.dot-blue{background:#2563eb}
-.dot-orange{background:#e87a2d}
-
-/* Dimension cards */
-.dim-card{background:#fff;border-radius:8px;border:1px solid #e2e8f0;margin-bottom:24px;overflow:hidden}
-.dim-header{background:#1a2332;color:#fff;padding:16px 24px;display:flex;align-items:center;gap:12px}
-.dim-num{background:rgba(255,255,255,.15);border-radius:4px;padding:2px 8px;font-size:11px;letter-spacing:.1em;font-weight:500}
-.dim-title{font-size:14px;font-weight:500;letter-spacing:.05em}
-.dim-en{font-size:10px;color:rgba(255,255,255,.5);margin-left:auto;letter-spacing:.1em;text-transform:uppercase}
-.dim-body{display:grid;grid-template-columns:1fr 1fr}
-.dim-col{padding:24px}
-.dim-col-title{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.dim-col.asset{border-right:1px solid #e2e8f0;background:#f0f6ff}
-.dim-col.asset .dim-col-title{color:#2563eb}
-.dim-col.asset .tag{background:#dbeafe;color:#1d4ed8}
-.dim-col.stock{background:#fff8f3}
-.dim-col.stock .dim-col-title{color:#c2611a}
-.dim-col.stock .tag{background:#fed7aa;color:#92400e}
-.tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:.05em}
-.dim-col ul{list-style:none;margin-top:4px}
-.dim-col ul li{font-size:13px;line-height:1.7;color:#374151;padding:3px 0 3px 14px;position:relative}
-.dim-col ul li::before{content:"›";position:absolute;left:0;color:#94a3b8}
-.note{font-size:11px;color:#6b7280;margin-top:12px;padding:10px;background:rgba(0,0,0,.03);border-radius:4px;line-height:1.6}
-
-/* Summary table */
-.summary-section{background:#fff;border-radius:8px;border:1px solid #e2e8f0;padding:32px;margin-bottom:24px}
-.summary-section h2{font-family:"Noto Serif SC",serif;font-size:1.1rem;font-weight:400;margin-bottom:20px;color:#0d1b2a}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th{background:#0d1b2a;color:#fff;padding:10px 14px;text-align:left;font-size:11px;letter-spacing:.08em;font-weight:500}
-th.asset{background:#1d4ed8}
-th.stock{background:#c2611a}
-td{padding:10px 14px;border-bottom:1px solid #f1f5f9;color:#374151;vertical-align:top}
-tr:last-child td{border-bottom:none}
-tr:hover td{background:#fafbfc}
-.td-dim{font-weight:500;color:#1a2332;font-size:12px;width:22%}
-
-/* Guide section */
-.guide{background:#fff;border-radius:8px;border:1px solid #e2e8f0;padding:32px;margin-bottom:24px}
-.guide h2{font-family:"Noto Serif SC",serif;font-size:1.1rem;font-weight:400;margin-bottom:20px;color:#0d1b2a}
-.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.guide-card{border-radius:6px;padding:20px}
-.guide-card.asset{background:#eff6ff;border:1px solid #bfdbfe}
-.guide-card.stock{background:#fff7ed;border:1px solid #fed7aa}
-.guide-card h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:12px}
-.guide-card.asset h3{color:#1d4ed8}
-.guide-card.stock h3{color:#c2611a}
-.guide-card ul{list-style:none}
-.guide-card ul li{font-size:13px;line-height:1.75;color:#374151;padding-left:16px;position:relative}
-.guide-card ul li::before{content:"✓";position:absolute;left:0;font-size:11px}
-.guide-card.asset ul li::before{color:#2563eb}
-.guide-card.stock ul li::before{color:#e87a2d}
-
-footer{text-align:center;font-size:11px;color:#9ca3af;margin-top:20px;padding-top:24px;border-top:1px solid #e2e8f0}
+  :root {
+    --gold:#C49A7A; --dark:#1C1510; --cream:#F7F3EE; --blush:#E8D5C0;
+    --gold-light:#d4b49a; --ink:#1C1510; --ink-soft:#2e2118;
+    --ink-muted:#6b5a4a; --ink-faint:#9a876f;
+    --paper:#f5f2ec; --paper-warm:#ede8df; --paper-bright:#faf8f4; --rule:#ddd5c8;
+    --gold-b:#b5862d; --gold-light-b:#d4a84b; --teal:#3a6b5a; --sidebar-w:260px;
+  }
+  [data-lang]{display:none;}
+  body.lang-zh [data-lang="zh"]{display:block;}
+  body.lang-en [data-lang="en"]{display:block;}
+  span[data-lang]{display:none;}
+  body.lang-zh span[data-lang="zh"]{display:inline;}
+  body.lang-en span[data-lang="en"]{display:inline;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.75;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--dark);display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:52px;border-bottom:2px solid var(--gold-b);}
+  .nav-brand{font-family:'JetBrains Mono',monospace;color:var(--cream);font-size:13px;letter-spacing:.15em;text-decoration:none;text-transform:uppercase;}
+  .nav-links{display:flex;gap:28px;align-items:center;}
+  .nav-links a{color:var(--paper-warm);text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .reading-bar{position:fixed;top:52px;left:0;right:0;height:3px;z-index:99;}
+  .reading-fill{height:100%;background:linear-gradient(90deg,var(--gold-b),var(--gold-light-b));width:0%;transition:width .1s;}
+  .hero{margin-top:52px;background:var(--dark);padding:80px 40px 70px;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(255,255,255,.025) 79px,rgba(255,255,255,.025) 80px),repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(255,255,255,.025) 59px,rgba(255,255,255,.025) 60px);}
+  .hero-inner{max-width:960px;margin:0 auto;position:relative;}
+  .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light-b);margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+  .hero-eyebrow::before{content:'';display:inline-block;width:32px;height:2px;background:var(--gold-light-b);}
+  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,52px);font-weight:900;color:#fff;line-height:1.15;margin-bottom:10px;}
+  .hero h1 em{font-style:italic;color:var(--gold-light-b);}
+  .hero-sub{font-family:'Playfair Display',serif;font-size:clamp(15px,2vw,20px);font-weight:300;font-style:italic;color:rgba(255,255,255,.6);margin-bottom:36px;}
+  .hero-meta{display:flex;gap:28px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.45);letter-spacing:.08em;}
+  .hero-meta span{display:flex;align-items:center;gap:6px;}
+  .hero-meta span::before{content:'◆';color:var(--gold-b);font-size:8px;}
+  .summary-strip{background:var(--dark);border-top:3px solid var(--gold-b);padding:28px 40px;}
+  .summary-strip-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;}
+  .summary-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-b);padding-top:3px;white-space:nowrap;}
+  .summary-text{color:rgba(247,243,238,.75);font-size:15.5px;line-height:1.65;font-style:italic;}
+  .layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:var(--sidebar-w) 1fr;gap:0;padding:0 40px;align-items:start;}
+  .toc{position:sticky;top:72px;padding:40px 40px 40px 0;border-right:1px solid var(--rule);min-height:calc(100vh - 72px);max-height:calc(100vh - 72px);overflow-y:auto;}
+  .toc-title{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;}
+  .toc ul{list-style:none;}
+  .toc ul li{margin-bottom:2px;}
+  .toc ul li a{text-decoration:none;color:var(--ink-muted);font-size:12.5px;line-height:1.5;display:block;padding:4px 0 4px 12px;border-left:2px solid transparent;transition:all .2s;font-family:'Source Serif 4',serif;}
+  .toc ul li a:hover,.toc ul li a.active{color:var(--gold-b);border-left-color:var(--gold-b);}
+  .toc ul li.toc-section>a{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;font-size:10px;padding-left:0;border-left:none;color:var(--ink-faint);margin-top:12px;}
+  .toc ul li.toc-sub>a{padding-left:20px;font-size:12px;}
+  .main{padding:48px 0 80px 52px;}
+  .section{margin-bottom:8px;}
+  .section-num{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:var(--gold-b);text-transform:uppercase;margin-bottom:8px;}
+  h2.section-title{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,34px);font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:6px;}
+  h2.section-title em{font-style:italic;color:var(--gold-b);}
+  .section-title-en{font-family:'Source Serif 4',serif;font-size:14px;font-style:italic;color:var(--ink-faint);margin-bottom:32px;}
+  h3.sub-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--dark);margin:36px 0 12px;line-height:1.3;}
+  p{margin-bottom:16px;color:var(--ink-soft);}
+  strong{font-weight:600;color:var(--ink);}
+  .section-divider{border:none;border-top:1px solid var(--rule);margin:56px 0;position:relative;}
+  .section-divider::before{content:'◆';position:absolute;left:50%;transform:translateX(-50%) translateY(-50%);background:var(--paper);padding:0 12px;color:var(--gold-light);font-size:10px;}
+  .callout{border-left:4px solid var(--gold-b);background:var(--paper-bright);padding:20px 24px;margin:28px 0;border-radius:0 4px 4px 0;}
+  .callout-icon{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-b);margin-bottom:8px;}
+  .callout p{margin-bottom:0;font-size:15.5px;font-style:italic;}
+  .callout-warn{border-left-color:#8a6030;background:rgba(196,154,122,.08);}
+  .callout-warn .callout-icon{color:#8a6030;}
+  .callout-insight{border-left-color:var(--teal);background:#eef6f4;}
+  .callout-insight .callout-icon{color:var(--teal);}
+  .pullquote{font-family:'Playfair Display',serif;font-size:19px;font-style:italic;font-weight:700;line-height:1.45;color:var(--dark);border-top:3px solid var(--gold-b);border-bottom:1px solid var(--rule);padding:28px 0;margin:40px 0;text-align:center;}
+  .struct-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+  .struct-card{border:1px solid var(--rule);border-radius:4px;overflow:hidden;}
+  .struct-card-header{padding:12px 18px;background:var(--dark);}
+  .struct-card.asset .struct-card-header{border-bottom:2px solid var(--gold-b);}
+  .struct-card.stock .struct-card-header{background:#0d1e18;border-bottom:2px solid var(--teal);}
+  .struct-card-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:4px;}
+  .struct-card.asset .struct-card-label{color:var(--gold-light-b);}
+  .struct-card.stock .struct-card-label{color:#7ec8ae;}
+  .struct-card-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:white;}
+  .struct-card-body{padding:16px 18px;background:var(--paper-bright);}
+  .struct-card-body p{font-size:13.5px;margin-bottom:8px;line-height:1.65;}
+  ul.content-list{margin:12px 0 16px;padding-left:0;list-style:none;}
+  ul.content-list li{padding:5px 0 5px 20px;position:relative;font-size:15.5px;color:var(--ink-soft);border-bottom:1px dotted var(--rule);line-height:1.6;}
+  ul.content-list li:last-child{border-bottom:none;}
+  ul.content-list li::before{content:'→';position:absolute;left:0;color:var(--gold-b);font-size:12px;top:7px;}
+  .struct-card-body ul{list-style:none;margin:4px 0;}
+  .struct-card-body ul li{font-size:13px;line-height:1.65;color:var(--ink-soft);padding:3px 0 3px 14px;position:relative;}
+  .struct-card-body ul li::before{content:'›';position:absolute;left:0;color:var(--ink-faint);}
+  .comp-table{width:100%;border-collapse:collapse;font-size:13.5px;margin:24px 0;}
+  .comp-table th{background:var(--dark);color:var(--cream);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:12px 14px;text-align:left;}
+  .comp-table th:first-child{background:#0d0a07;}
+  .comp-table th.th-asset{background:var(--gold-b);color:var(--dark);}
+  .comp-table th.th-stock{background:var(--teal);color:white;}
+  .comp-table td{padding:11px 14px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.55;color:var(--ink-soft);}
+  .comp-table tr:nth-child(even) td{background:var(--paper-warm);}
+  .comp-table td:first-child{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:var(--ink-soft);background:rgba(28,21,16,.04);border-right:1px solid var(--rule);}
+  .check-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0;}
+  .check-item{display:flex;gap:12px;align-items:flex-start;background:var(--paper-bright);border:1px solid var(--rule);padding:14px 16px;border-radius:2px;}
+  .check-icon{font-size:18px;flex-shrink:0;}
+  .check-name{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:3px;}
+  .check-desc{font-size:12px;color:var(--ink-faint);line-height:1.5;}
+  .author-strip{background:var(--paper-warm);border-top:3px solid var(--gold-b);padding:40px;}
+  .author-inner{max-width:900px;margin:0 auto;display:flex;gap:28px;align-items:flex-start;}
+  .author-avatar{width:64px;height:64px;background:var(--dark);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:24px;color:var(--gold-light);font-style:italic;}
+  .author-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+  .author-title{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px;}
+  .author-bio{font-size:14.5px;color:var(--ink-muted);margin-bottom:0;line-height:1.65;}
+  .author-cta{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap;}
+  .btn{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:10px 18px;text-decoration:none;border-radius:2px;transition:all .2s;}
+  .btn-primary{background:var(--gold-b);color:var(--dark);}
+  .btn-primary:hover{background:var(--gold-light-b);}
+  .btn-outline{border:1px solid var(--gold-b);color:var(--gold-b);}
+  .btn-outline:hover{background:rgba(181,134,45,.08);}
+  footer{background:var(--ink);color:rgba(255,255,255,.4);text-align:center;padding:24px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;}
+  footer a{color:rgba(255,255,255,.6);text-decoration:none;}
+  @media(max-width:900px){
+    .layout{grid-template-columns:1fr;padding:0 20px;}
+    .toc{display:none;}
+    .main{padding:32px 0;}
+    .hero{padding:60px 20px 50px;}
+    .struct-grid,.check-grid{grid-template-columns:1fr;}
+    .summary-strip{padding:20px;}
+    .summary-strip-inner{grid-template-columns:1fr;}
+  }
 </style>
 </head>
-<body>
-
-<nav class="sidebar">
-  <div class="sidebar-brand"><a href="../index.html">E<span>.</span>LAW</a></div>
-  <h3>目录</h3>
-  <ul>
-    <li><a href="#s1">① 法律结构</a></li>
-    <li><a href="#s2">② 税务影响</a></li>
-    <li><a href="#s3">③ 负债承继</a></li>
-    <li><a href="#s4">④ 合同转让</a></li>
-    <li><a href="#s5">⑤ 员工处理</a></li>
-    <li><a href="#s6">⑥ 知识产权</a></li>
-    <li><a href="#s7">⑦ 监管审批</a></li>
-    <li><a href="#s8">⑧ 交易复杂度</a></li>
-    <li><a href="#summary">对比总表</a></li>
-    <li><a href="#guide">选择指南</a></li>
-  </ul>
+<body class="lang-zh">
+<div class="reading-bar"><div class="reading-fill" id="readingFill"></div></div>
+<nav>
+  <a class="nav-brand" href="../index.html">Evonne Xu Legal</a>
+  <div class="nav-links">
+    <a href="../index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a>
+    <a href="../blog.html"><span data-lang="zh">博客</span><span data-lang="en">Blog</span></a>
+    <a href="../index.html#contact"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a>
+    <button id="langBtn" onclick="toggleLang()" style="font-family:'JetBrains Mono',monospace;font-size:11px;background:transparent;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.7);padding:4px 12px;cursor:pointer;letter-spacing:.08em;border-radius:2px;">English</button>
+  </div>
 </nav>
 
-<main class="main">
-  <div class="hero">
-    <div class="hero-tag">M&amp;A · 并购法律</div>
-    <h1>资产收购 vs 股权收购<br>深度法律对比</h1>
-    <p>美国并购交易中两种核心交易结构的全面解析——从税务到负债，从合同转让到监管审批，8大维度系统对比，助您做出最优交易决策。</p>
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span data-lang="zh">M&amp;A · 并购交易结构实务</span>
+      <span data-lang="en">M&amp;A · Acquisition Structure Practice</span>
+    </div>
+    <h1 data-lang="zh">资产收购 vs 股权收购：<em>并购结构的关键抉择</em></h1>
+    <h1 data-lang="en">Asset vs. Stock Acquisition: <em>The Critical M&amp;A Structural Choice</em></h1>
+    <div class="hero-sub">
+      <span data-lang="zh">8大维度深度对比 · 税务 · 负债 · 合同 · 员工 · 知识产权 · 监管</span>
+      <span data-lang="en">8 Dimensions · Tax · Liability · Contracts · Employees · IP · Regulatory</span>
+    </div>
+    <div class="hero-meta">
+      <span data-lang="zh">并购实务指南 · 约15分钟阅读</span>
+      <span data-lang="en">M&amp;A Practice Guide · ~15 min read</span>
+      <span>Evonne Xu</span>
+      <span>April 2026</span>
+    </div>
   </div>
+</div>
 
-  <div class="legend">
-    <div class="legend-item"><div class="dot dot-blue"></div>资产收购 Asset Acquisition</div>
-    <div class="legend-item"><div class="dot dot-orange"></div>股权收购 Stock Acquisition</div>
+<div class="summary-strip">
+  <div class="summary-strip-inner">
+    <div class="summary-label"><span data-lang="zh">文章摘要</span><span data-lang="en">Summary</span></div>
+    <div class="summary-text">
+      <span data-lang="zh">在美国并购交易中，选择资产收购（Asset Acquisition）还是股权收购（Stock Acquisition）是决定交易结构的核心问题。两种结构在税务处理、负债隔离、合同转让、员工安排、知识产权过户及监管审批等方面存在根本性差异。买方通常偏向资产收购以获得税基提升和负债隔离；卖方则倾向股权收购以享受更低的资本利得税率。本文系统梳理8大对比维度，并附综合对比表与场景选择指南。</span>
+      <span data-lang="en">In U.S. M&amp;A transactions, choosing between an asset acquisition and a stock acquisition is one of the most consequential structural decisions. The two approaches differ fundamentally across tax treatment, liability exposure, contract continuity, employee handling, IP transfer, and regulatory approvals. Buyers typically prefer asset deals for step-up basis and liability isolation; sellers prefer stock deals for capital gains treatment. This guide covers all eight key dimensions, with a comparative table and scenario decision framework.</span>
+    </div>
   </div>
+</div>
 
-  <div id="s1" class="dim-card">
-    <div class="dim-header"><span class="dim-num">01</span><span class="dim-title">法律结构</span><span class="dim-en">Legal Structure</span></div>
-    <div class="dim-body">
-      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">买方</span>资产收购</div>
-        <ul><li>买方选择性购买特定资产</li><li>卖方公司实体继续存在</li><li>需逐项列明转让资产清单</li><li>买方创建新实体或并入现有实体</li></ul>
-        <div class="note">买方仅获得已明确约定的资产，法律边界清晰。</div>
+<div class="layout">
+  <aside class="toc">
+    <div class="toc-title"><span data-lang="zh">📋 目录</span><span data-lang="en">📋 Contents</span></div>
+    <ul>
+      <li class="toc-section"><a href="#s1"><span data-lang="zh">一 法律结构</span><span data-lang="en">I. Legal Structure</span></a></li>
+      <li class="toc-section"><a href="#s2"><span data-lang="zh">二 税务影响</span><span data-lang="en">II. Tax Implications</span></a></li>
+      <li class="toc-sub"><a href="#s2"><span data-lang="zh">IRC §338(h)(10) 选举</span><span data-lang="en">IRC §338(h)(10) Election</span></a></li>
+      <li class="toc-section"><a href="#s3"><span data-lang="zh">三 负债承继</span><span data-lang="en">III. Liability Succession</span></a></li>
+      <li class="toc-section"><a href="#s4"><span data-lang="zh">四 合同转让</span><span data-lang="en">IV. Contract Assignment</span></a></li>
+      <li class="toc-section"><a href="#s5"><span data-lang="zh">五 员工处理</span><span data-lang="en">V. Employee Treatment</span></a></li>
+      <li class="toc-section"><a href="#s6"><span data-lang="zh">六 知识产权转让</span><span data-lang="en">VI. IP Transfer</span></a></li>
+      <li class="toc-section"><a href="#s7"><span data-lang="zh">七 监管审批</span><span data-lang="en">VII. Regulatory Approvals</span></a></li>
+      <li class="toc-section"><a href="#s8"><span data-lang="zh">八 交易执行复杂度</span><span data-lang="en">VIII. Transaction Complexity</span></a></li>
+      <li class="toc-section"><a href="#summary"><span data-lang="zh">综合对比总表</span><span data-lang="en">Comparison Table</span></a></li>
+      <li class="toc-section"><a href="#guide"><span data-lang="zh">场景选择指南</span><span data-lang="en">Decision Guide</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="main">
+
+    <!-- S1: Legal Structure -->
+    <section class="section" id="s1">
+      <div class="section-num"><span data-lang="zh">01 · 法律结构</span><span data-lang="en">01 · Legal Structure</span></div>
+      <h2 class="section-title" data-lang="zh">两种结构的<em>本质区别</em></h2>
+      <h2 class="section-title" data-lang="en">The <em>Fundamental Difference</em> Between the Two Structures</h2>
+      <div class="section-title-en">
+        <span data-lang="zh">买什么、卖什么——这一选择决定后续所有条款</span>
+        <span data-lang="en">What is being bought and sold — this choice shapes every downstream term</span>
       </div>
-      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">买方</span>股权收购</div>
-        <ul><li>买方购买目标公司股份/成员权益</li><li>目标公司作为独立实体继续运营</li><li>公司名称、资质、许可证随之转让</li><li>卖方退出公司所有权结构</li></ul>
-        <div class="note">买方继承整个公司，包括所有未披露的风险敞口。</div>
+
+      <p data-lang="zh">资产收购与股权收购的根本区别在于：<strong>交易标的是公司的特定资产，还是公司的所有权本身。</strong>这一选择对买卖双方在税务、风险、运营连续性等方面产生截然不同的影响。</p>
+      <p data-lang="en">The fundamental distinction between an asset acquisition and a stock acquisition is: <strong>are you buying specific assets of the business, or ownership of the company itself?</strong> This choice produces dramatically different consequences for both parties across tax, risk, and operational continuity.</p>
+
+      <div class="struct-grid">
+        <div class="struct-card asset">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">资产收购 · Asset Acquisition</span><span data-lang="en">Asset Acquisition</span></div>
+            <div class="struct-card-title"><span data-lang="zh">购买特定资产</span><span data-lang="en">Buying Specific Assets</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">买方选择性购买特定资产（有形/无形）</li>
+              <li data-lang="en">Buyer selectively acquires specific assets (tangible/intangible)</li>
+              <li data-lang="zh">卖方公司实体在交割后继续存在</li>
+              <li data-lang="en">Seller's legal entity continues to exist post-closing</li>
+              <li data-lang="zh">需逐项列明转让资产清单（Asset Schedule）</li>
+              <li data-lang="en">Requires detailed asset schedule listing each transferred item</li>
+              <li data-lang="zh">买方通常创建新实体或并入现有实体</li>
+              <li data-lang="en">Buyer typically acquires through a new or existing entity</li>
+            </ul>
+            <p style="font-size:12px;color:var(--ink-faint);margin-top:10px;margin-bottom:0;font-style:italic;" data-lang="zh">法律边界清晰，买方仅获得已明确约定的资产和负债。</p>
+            <p style="font-size:12px;color:var(--ink-faint);margin-top:10px;margin-bottom:0;font-style:italic;" data-lang="en">Clear legal boundaries — buyer only acquires expressly agreed assets and assumed liabilities.</p>
+          </div>
+        </div>
+        <div class="struct-card stock">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">股权收购 · Stock Acquisition</span><span data-lang="en">Stock Acquisition</span></div>
+            <div class="struct-card-title"><span data-lang="zh">购买公司所有权</span><span data-lang="en">Buying Company Ownership</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">买方购买目标公司股份或成员权益</li>
+              <li data-lang="en">Buyer acquires shares or membership interests of the target</li>
+              <li data-lang="zh">目标公司作为独立实体继续运营，所有权换人</li>
+              <li data-lang="en">Target continues as a legal entity — only ownership changes</li>
+              <li data-lang="zh">公司名称、资质、许可证随实体自动延续</li>
+              <li data-lang="en">Company name, credentials, and licenses continue automatically</li>
+              <li data-lang="zh">卖方退出公司所有权结构，收取对价</li>
+              <li data-lang="en">Sellers exit the ownership structure in exchange for consideration</li>
+            </ul>
+            <p style="font-size:12px;color:var(--ink-faint);margin-top:10px;margin-bottom:0;font-style:italic;" data-lang="zh">买方继承整个公司，包括所有已知和未知的风险敞口。</p>
+            <p style="font-size:12px;color:var(--ink-faint);margin-top:10px;margin-bottom:0;font-style:italic;" data-lang="en">Buyer inherits the entire company — including all known and unknown liabilities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- S2: Tax Implications -->
+    <section class="section" id="s2">
+      <div class="section-num"><span data-lang="zh">02 · 税务影响</span><span data-lang="en">02 · Tax Implications</span></div>
+      <h2 class="section-title" data-lang="zh"><em>税务处理</em>：买卖双方的利益博弈</h2>
+      <h2 class="section-title" data-lang="en"><em>Tax Treatment</em>: The Fundamental Buyer-Seller Tension</h2>
+      <div class="section-title-en">
+        <span data-lang="zh">IRC §338(h)(10)、§1060 与 stepped-up 税基</span>
+        <span data-lang="en">IRC §338(h)(10), §1060, and the step-up in basis</span>
+      </div>
+
+      <p data-lang="zh">税务处理是资产收购与股权收购之间最核心的分歧点。买方通常偏向资产收购（获得 stepped-up 税基，未来折旧/摊销抵税），卖方通常偏向股权收购（只缴资本利得税，税率更低）。这一结构性矛盾是并购谈判中的永恒张力。</p>
+      <p data-lang="en">Tax treatment is the single biggest point of divergence between the two structures. Buyers typically prefer asset deals (step-up in basis enables future depreciation/amortization deductions); sellers typically prefer stock deals (capital gains treatment at lower rates). This structural tension is a constant feature of M&amp;A negotiations.</p>
+
+      <div class="struct-grid">
+        <div class="struct-card asset">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">买方有利 · Buyer-Favorable</span><span data-lang="en">Buyer-Favorable</span></div>
+            <div class="struct-card-title"><span data-lang="zh">资产收购税务</span><span data-lang="en">Asset Deal Tax Treatment</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">买方获得资产「stepped-up」税基（按收购价重新计算）</li>
+              <li data-lang="en">Buyer receives a "stepped-up" tax basis in acquired assets (reset to purchase price)</li>
+              <li data-lang="zh">有形资产可按 MACRS 折旧，无形资产（含商誉）按 IRC §1060 / §197 分配并摊销15年</li>
+              <li data-lang="en">Tangible assets depreciated under MACRS; intangibles (including goodwill) allocated under IRC §1060 and amortized over 15 years per §197</li>
+              <li data-lang="zh">卖方面临两层税：普通收入税（存货、应收款等）+ 资本利得税（资产增值部分）</li>
+              <li data-lang="en">Seller faces two-layer taxation: ordinary income tax (inventory, receivables) + capital gains tax (asset appreciation)</li>
+              <li data-lang="zh">C 型公司卖方可能面临"双重征税"（公司层+股东层）</li>
+              <li data-lang="en">C-corp sellers may face "double taxation" (corporate level + shareholder level)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="struct-card stock">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">卖方有利 · Seller-Favorable</span><span data-lang="en">Seller-Favorable</span></div>
+            <div class="struct-card-title"><span data-lang="zh">股权收购税务</span><span data-lang="en">Stock Deal Tax Treatment</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">卖方通常仅缴长期资本利得税（联邦最高 20%），税率显著低于普通收入税</li>
+              <li data-lang="en">Sellers generally pay long-term capital gains tax (federal max 20%), significantly lower than ordinary income rates</li>
+              <li data-lang="zh">买方无法获得 stepped-up 税基，延续卖方历史税基</li>
+              <li data-lang="en">Buyer receives no step-up — carries over seller's historical (carryover) basis</li>
+              <li data-lang="zh">目标公司的净亏损结转（NOL）随实体转移至买方，但受 IRC §382 限制</li>
+              <li data-lang="en">Target's net operating loss carryforwards (NOL) transfer to buyer, subject to IRC §382 annual limitations</li>
+              <li data-lang="zh">其他税务属性（税收抵免、资本损失结转）也随实体转移</li>
+              <li data-lang="en">Other tax attributes (tax credits, capital loss carryforwards) also transfer with the entity</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-insight">
+        <div class="callout-icon">💡 <span data-lang="zh">IRC §338(h)(10) 选举：双方均可接受的妥协方案</span><span data-lang="en">IRC §338(h)(10) Election: A Mutually Acceptable Compromise</span></div>
+        <p data-lang="zh">对于 S 型公司或子公司股权收购，双方可以联合选择 IRC §338(h)(10)，将股权交易在税务上视同资产交易处理。买方因此获得 stepped-up 税基；卖方通常可通过谈判要求更高的收购价格作为补偿。这是并购谈判中弥合税务分歧的常见工具。</p>
+        <p data-lang="en">For acquisitions of S-corporation or subsidiary stock, the parties may jointly elect IRC §338(h)(10) to treat the stock deal as an asset deal for tax purposes. Buyers get the step-up; sellers typically negotiate a higher gross purchase price to compensate for increased tax exposure. This is one of the most common tools for bridging the tax gap in M&amp;A negotiations.</p>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+    <!-- S3: Liability -->
+    <section class="section" id="s3">
+      <div class="section-num"><span data-lang="zh">03 · 负债承继</span><span data-lang="en">03 · Liability Succession</span></div>
+      <h2 class="section-title" data-lang="zh">买方的<em>风险隔离</em>与全面承继</h2>
+      <h2 class="section-title" data-lang="en"><em>Liability Isolation</em> vs. Full Succession</h2>
+      <div class="section-title-en">
+        <span data-lang="zh">历史负债、诉讼风险与环境责任的分配</span>
+        <span data-lang="en">Historical liabilities, litigation risk, and environmental responsibility</span>
+      </div>
+
+      <p data-lang="zh">负债处理是资产收购最大的优势之一。原则上，在资产收购中，买方仅承继交易文件中明确约定的负债；而在股权收购中，买方继承目标公司的全部负债——无论是否已知、是否已披露。</p>
+      <p data-lang="en">Liability treatment is one of the biggest advantages of an asset deal. In principle, an asset buyer assumes only the liabilities expressly agreed upon in the transaction documents; a stock buyer inherits all of the target's liabilities — whether known, unknown, or undisclosed.</p>
+
+      <div class="struct-grid">
+        <div class="struct-card asset">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">买方有利 · 较好隔离</span><span data-lang="en">Buyer-Favorable · Better Isolation</span></div>
+            <div class="struct-card-title"><span data-lang="zh">资产收购负债处理</span><span data-lang="en">Asset Deal Liability Treatment</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">原则上仅承继交易文件中明确约定的负债</li>
+              <li data-lang="en">Generally assumes only liabilities expressly stated in transaction documents</li>
+              <li data-lang="zh">历史诉讼风险留存于卖方实体</li>
+              <li data-lang="en">Historical litigation risk remains with seller's entity</li>
+              <li data-lang="zh">环境污染责任可有效隔离（CERCLA 例外须注意）</li>
+              <li data-lang="en">Environmental liabilities can be effectively isolated (watch CERCLA successor liability exceptions)</li>
+              <li data-lang="zh">税务审计风险不随资产转移</li>
+              <li data-lang="en">Tax audit risk does not follow the assets</li>
+            </ul>
+            <p style="font-size:12px;color:var(--ink-faint);margin-top:10px;margin-bottom:0;font-style:italic;" data-lang="zh">⚠️ 注意：产品责任、劳工法下的"继承者责任"理论可能突破隔离。</p>
+            <p style="font-size:12px;color:var(--ink-faint);margin-top:10px;margin-bottom:0;font-style:italic;" data-lang="en">⚠️ Note: "Successor liability" doctrines in products liability and labor law may pierce the isolation.</p>
+          </div>
+        </div>
+        <div class="struct-card stock">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">风险较高 · 全面承继</span><span data-lang="en">Higher Risk · Full Succession</span></div>
+            <div class="struct-card-title"><span data-lang="zh">股权收购负债处理</span><span data-lang="en">Stock Deal Liability Treatment</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">买方承继目标公司全部已知及未知负债</li>
+              <li data-lang="en">Buyer inherits all known and unknown liabilities of the target</li>
+              <li data-lang="zh">包括未决诉讼、潜在环境责任、税务敞口</li>
+              <li data-lang="en">Including pending litigation, environmental exposure, and tax liabilities</li>
+              <li data-lang="zh">历史税务审计风险随公司实体转移至买方</li>
+              <li data-lang="en">Historical tax audit risk transfers to buyer with the company entity</li>
+              <li data-lang="zh">需通过全面尽职调查量化并定价未知风险</li>
+              <li data-lang="en">Requires comprehensive due diligence to identify, quantify, and price unknown risks</li>
+            </ul>
+            <p style="font-size:12px;color:var(--ink-faint);margin-top:10px;margin-bottom:0;font-style:italic;" data-lang="zh">陈述与保证保险（R&amp;W Insurance）是股权收购中核心风控工具。</p>
+            <p style="font-size:12px;color:var(--ink-faint);margin-top:10px;margin-bottom:0;font-style:italic;" data-lang="en">Representations &amp; Warranties Insurance (R&amp;W) is a core risk management tool in stock deals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- S4: Contract Assignment -->
+    <section class="section" id="s4">
+      <div class="section-num"><span data-lang="zh">04 · 合同转让</span><span data-lang="en">04 · Contract Assignment</span></div>
+      <h2 class="section-title" data-lang="zh">客户合同与许可证：<em>逐一取得同意</em>还是自动延续？</h2>
+      <h2 class="section-title" data-lang="en">Customer Contracts and Licenses: <em>Consent Required</em> or Automatic Continuity?</h2>
+      <div class="section-title-en">
+        <span data-lang="zh">变更控制条款与合同存续风险</span>
+        <span data-lang="en">Change-of-control clauses and contract continuity risk</span>
+      </div>
+
+      <p data-lang="zh">合同转让的处理方式是资产收购与股权收购之间最直接影响交易执行效率的差异。在资产收购中，每一份重要合同原则上需要对方当事人的书面同意才能转让；而股权收购中，合同主体（目标公司）未变，理论上无需重新取得同意。</p>
+      <p data-lang="en">Contract assignment treatment is one of the most directly impactful differences on deal execution efficiency. In an asset deal, each material contract in principle requires counterparty consent to assign; in a stock deal, the contracting party (the target company) is unchanged — so consent is theoretically not required.</p>
+
+      <div class="struct-grid">
+        <div class="struct-card asset">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">繁琐 · 逐一取得同意</span><span data-lang="en">Burdensome · Consent Required</span></div>
+            <div class="struct-card-title"><span data-lang="zh">资产收购合同处理</span><span data-lang="en">Asset Deal Contract Handling</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">每份重要合同须单独取得对方书面同意</li>
+              <li data-lang="en">Each material contract requires separate written counterparty consent</li>
+              <li data-lang="zh">含"变更控制条款"的合同须重新谈判或获批准</li>
+              <li data-lang="en">Contracts with "change of control" provisions must be renegotiated or waived</li>
+              <li data-lang="zh">客户合同转让存在流失风险（对方借机重谈或终止）</li>
+              <li data-lang="en">Customer contract assignment carries attrition risk (counterparty may renegotiate or terminate)</li>
+              <li data-lang="zh">政府合同通常需要监管机构特别审批</li>
+              <li data-lang="en">Government contracts typically require separate regulatory approval</li>
+            </ul>
+          </div>
+        </div>
+        <div class="struct-card stock">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">便利 · 通常自动延续</span><span data-lang="en">Convenient · Generally Automatic</span></div>
+            <div class="struct-card-title"><span data-lang="zh">股权收购合同处理</span><span data-lang="en">Stock Deal Contract Handling</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">合同主体未变，理论上无需重新取得对方同意</li>
+              <li data-lang="en">Contracting party unchanged — consent theoretically not required</li>
+              <li data-lang="zh">许可证、行业资质通常随实体继续有效</li>
+              <li data-lang="en">Licenses and industry qualifications generally remain valid with the entity</li>
+              <li data-lang="zh">但仍需审查是否有明确的"股权变更触发条款"</li>
+              <li data-lang="en">Must still review for explicit "equity change of control" trigger provisions</li>
+              <li data-lang="zh">PE/VC 支持企业的合同常含股权变更触发条款</li>
+              <li data-lang="en">PE/VC-backed companies often have equity change-of-control triggers in key contracts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-warn">
+        <div class="callout-icon">⚠️ <span data-lang="zh">变更控制条款是最容易被忽视的风险点</span><span data-lang="en">Change-of-Control Clauses: The Most Overlooked Risk</span></div>
+        <p data-lang="zh">无论是资产收购还是股权收购，对目标公司所有重要合同（客户合同、供应商协议、许可证、融资协议、关键员工协议）进行系统性"变更控制条款扫描"是尽职调查中不可省略的步骤。遗漏一份关键合同的变更控制条款，可能在交割后立即引发重大业务中断。</p>
+        <p data-lang="en">Regardless of deal structure, a systematic "change-of-control clause sweep" across all material contracts (customer agreements, supplier contracts, licenses, financing arrangements, key employee agreements) is a non-negotiable due diligence step. Missing a single change-of-control provision in a critical contract can trigger a major business disruption immediately post-closing.</p>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- S5: Employee Treatment -->
+    <section class="section" id="s5">
+      <div class="section-num"><span data-lang="zh">05 · 员工处理</span><span data-lang="en">05 · Employee Treatment</span></div>
+      <h2 class="section-title" data-lang="zh">选择性录用还是<em>全员随实体转移</em>？</h2>
+      <h2 class="section-title" data-lang="en">Selective Hiring vs. <em>Automatic Transfer of All Employees</em>?</h2>
+      <div class="section-title-en">
+        <span data-lang="zh">WARN Act、CBA 与员工留存风险</span>
+        <span data-lang="en">WARN Act, CBAs, and employee retention risk</span>
+      </div>
+
+      <p data-lang="zh">员工安排的差异直接影响交割后的人才留存和劳工合规风险。资产收购给买方提供了选择性录用员工的灵活性；股权收购则意味着全体员工随公司整体转移，现有雇用条款延续。</p>
+      <p data-lang="en">Employee treatment differences directly impact post-closing talent retention and labor compliance risk. An asset deal gives the buyer flexibility to selectively hire employees; a stock deal means all employees transfer with the company, with existing employment terms continuing.</p>
+
+      <div class="struct-grid">
+        <div class="struct-card asset">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">灵活 · 可选择性录用</span><span data-lang="en">Flexible · Selective Hiring</span></div>
+            <div class="struct-card-title"><span data-lang="zh">资产收购员工处理</span><span data-lang="en">Asset Deal Employee Handling</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">买方可选择性录用员工，无需全员接收</li>
+              <li data-lang="en">Buyer may selectively hire employees — not required to offer employment to all</li>
+              <li data-lang="zh">原雇用关系在交割时终止，需重新签订劳动合同</li>
+              <li data-lang="en">Existing employment relationships terminate at closing; new agreements must be executed</li>
+              <li data-lang="zh">若涉及大规模裁员，可能触发 WARN Act（提前60天通知义务）</li>
+              <li data-lang="en">Mass layoffs may trigger WARN Act (60-day advance notice requirement)</li>
+              <li data-lang="zh">福利计划（401k、健康险）需重新设立或衔接，存在"过渡期"风险</li>
+              <li data-lang="en">Benefit plans (401k, health insurance) must be re-established; "gap period" risk exists</li>
+            </ul>
+            <p style="font-size:12px;color:var(--ink-faint);margin-top:10px;margin-bottom:0;font-style:italic;" data-lang="zh">可精准选择核心人才，但需防范歧视性录用（拒绝受保护群体）的法律风险。</p>
+            <p style="font-size:12px;color:var(--ink-faint);margin-top:10px;margin-bottom:0;font-style:italic;" data-lang="en">Can target key talent precisely, but must guard against discriminatory hiring (rejecting protected classes).</p>
+          </div>
+        </div>
+        <div class="struct-card stock">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">稳定 · 全员随实体转移</span><span data-lang="en">Stable · All Employees Transfer</span></div>
+            <div class="struct-card-title"><span data-lang="zh">股权收购员工处理</span><span data-lang="en">Stock Deal Employee Handling</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">全体员工随公司整体转移，原有雇用合同延续</li>
+              <li data-lang="en">All employees transfer with the company; existing employment contracts continue</li>
+              <li data-lang="zh">福利计划（401k、健康险、股权激励）延续有效</li>
+              <li data-lang="en">Benefit plans (401k, health insurance, equity incentives) remain in effect</li>
+              <li data-lang="zh">工会协议（CBA）随实体继续有效，买方须遵守</li>
+              <li data-lang="en">Collective bargaining agreements (CBAs) continue with the entity; buyer must comply</li>
+              <li data-lang="zh">交割触发员工留任激励（Retention Bonus）通常在此时支付</li>
+              <li data-lang="en">Closing often triggers retention bonuses; timing and payment mechanics need attention</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+    <!-- S6: IP Transfer -->
+    <section class="section" id="s6">
+      <div class="section-num"><span data-lang="zh">06 · 知识产权转让</span><span data-lang="en">06 · IP Transfer</span></div>
+      <h2 class="section-title" data-lang="zh">专利、商标与域名：<em>逐一过户</em>还是自动延续？</h2>
+      <h2 class="section-title" data-lang="en">Patents, Trademarks &amp; Domains: <em>Individual Transfer</em> or Automatic Continuity?</h2>
+      <div class="section-title-en">
+        <span data-lang="zh">USPTO 登记、IP 链条审查与第三方许可</span>
+        <span data-lang="en">USPTO registration, IP chain of title, and third-party licenses</span>
+      </div>
+
+      <p data-lang="zh">知识产权（IP）是科技、品牌和创意行业并购的核心标的。资产收购需要逐一完成知识产权的形式转让手续；股权收购则因公司主体不变，IP 随实体自动延续，但须确认 IP 确实归属目标公司所有。</p>
+      <p data-lang="en">Intellectual property is the core acquisition target in technology, brand, and creative industry deals. Asset deals require formal transfer procedures for each IP asset; stock deals allow IP to continue automatically with the entity — but confirming the target actually owns the IP remains critical.</p>
+
+      <div class="struct-grid">
+        <div class="struct-card asset">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">需逐一登记过户</span><span data-lang="en">Individual Registration Required</span></div>
+            <div class="struct-card-title"><span data-lang="zh">资产收购 IP 处理</span><span data-lang="en">Asset Deal IP Handling</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">专利须向 USPTO 提交转让登记（Assignment of Patent）</li>
+              <li data-lang="en">Patents require USPTO Assignment recordation</li>
+              <li data-lang="zh">商标须向 USPTO 提交商标转让申请（Assignment of Trademark）</li>
+              <li data-lang="en">Trademarks require USPTO Trademark Assignment filing</li>
+              <li data-lang="zh">版权转让需单独书面协议，并可向版权局登记</li>
+              <li data-lang="en">Copyright transfers require a separate written agreement; optional Copyright Office recordation</li>
+              <li data-lang="zh">域名、社交媒体账号、商业秘密需逐一过户和交接</li>
+              <li data-lang="en">Domain names, social media accounts, and trade secrets require individual transfer and handoff</li>
+            </ul>
+            <p style="font-size:12px;color:var(--ink-faint);margin-top:10px;margin-bottom:0;font-style:italic;" data-lang="zh">IP 链条（Chain of Title）审查是科技行业资产收购尽调的核心项目。</p>
+            <p style="font-size:12px;color:var(--ink-faint);margin-top:10px;margin-bottom:0;font-style:italic;" data-lang="en">IP chain-of-title review is a core diligence item in tech asset acquisitions.</p>
+          </div>
+        </div>
+        <div class="struct-card stock">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">随实体自动延续</span><span data-lang="en">Continues Automatically with Entity</span></div>
+            <div class="struct-card-title"><span data-lang="zh">股权收购 IP 处理</span><span data-lang="en">Stock Deal IP Handling</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">IP 所有权随公司实体自动延续，无需单独过户</li>
+              <li data-lang="en">IP ownership continues automatically with the entity — no separate transfer needed</li>
+              <li data-lang="zh">仍需确认 IP 确实属于目标公司所有（非创始人个人）</li>
+              <li data-lang="en">Must confirm IP is actually owned by the target (not founder personally)</li>
+              <li data-lang="zh">审查第三方许可协议中的"控制权变更"终止条款</li>
+              <li data-lang="en">Review third-party license agreements for "change of control" termination triggers</li>
+              <li data-lang="zh">确认开源软件使用合规，避免 Copyleft 风险</li>
+              <li data-lang="en">Verify open-source software compliance; avoid copyleft contamination risk</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- S7: Regulatory -->
+    <section class="section" id="s7">
+      <div class="section-num"><span data-lang="zh">07 · 监管审批</span><span data-lang="en">07 · Regulatory Approvals</span></div>
+      <h2 class="section-title" data-lang="zh">HSR 申报、CFIUS 与<em>行业特许审批</em></h2>
+      <h2 class="section-title" data-lang="en">HSR Filing, CFIUS, and <em>Industry-Specific Approvals</em></h2>
+      <div class="section-title-en">
+        <span data-lang="zh">反垄断申报阈值与外资审查差异</span>
+        <span data-lang="en">Antitrust filing thresholds and foreign investment review differences</span>
+      </div>
+
+      <p data-lang="zh">两种结构在监管审批方面的主要差异体现在：HSR 申报阈值的计算基础不同、行业许可证的处理方式不同，以及 CFIUS 对外资股权收购的审查通常更为严格。</p>
+      <p data-lang="en">The key regulatory differences relate to: how HSR filing thresholds are calculated, how industry licenses are handled, and the generally stricter CFIUS scrutiny applied to foreign stock acquisitions.</p>
+
+      <div class="struct-grid">
+        <div class="struct-card asset">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">视行业 · 许可证须重新申请</span><span data-lang="en">Industry-Dependent · Licenses Require Refiling</span></div>
+            <div class="struct-card-title"><span data-lang="zh">资产收购监管处理</span><span data-lang="en">Asset Deal Regulatory Handling</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">HSR 申报阈值以被转让资产的公允市场价值计算</li>
+              <li data-lang="en">HSR filing threshold calculated based on fair market value of transferred assets</li>
+              <li data-lang="zh">行业许可证（金融、医疗、电信等）通常需向监管机构重新申请</li>
+              <li data-lang="en">Industry licenses (financial, healthcare, telecom) typically must be re-applied for</li>
+              <li data-lang="zh">CFIUS 审查视具体转让资产的性质和战略重要性而定</li>
+              <li data-lang="en">CFIUS review depends on nature and strategic importance of specific transferred assets</li>
+              <li data-lang="zh">环境许可证转让可能需要州环保机构单独审批</li>
+              <li data-lang="en">Environmental permits may require separate state agency approval for transfer</li>
+            </ul>
+          </div>
+        </div>
+        <div class="struct-card stock">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">视规模 · 许可证通常延续</span><span data-lang="en">Scale-Dependent · Licenses Generally Continue</span></div>
+            <div class="struct-card-title"><span data-lang="zh">股权收购监管处理</span><span data-lang="en">Stock Deal Regulatory Handling</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">HSR 申报阈值以收购对价（股权价值）计算</li>
+              <li data-lang="en">HSR filing threshold based on acquisition consideration (equity value)</li>
+              <li data-lang="zh">现有许可证通常随实体继续有效，无需重新申请</li>
+              <li data-lang="en">Existing licenses generally remain valid with the entity — no refiling required</li>
+              <li data-lang="zh">CFIUS 对外资股权收购通常审查更为严格（特别是涉及关键技术或基础设施）</li>
+              <li data-lang="en">CFIUS typically applies stricter scrutiny to foreign stock acquisitions (especially critical tech or infrastructure)</li>
+              <li data-lang="zh">银行、保险、电信等特许行业需专项监管审批，审批周期长</li>
+              <li data-lang="en">Banking, insurance, and telecom require specific regulatory approvals with long review timelines</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- S8: Transaction Complexity -->
+    <section class="section" id="s8">
+      <div class="section-num"><span data-lang="zh">08 · 交易执行复杂度</span><span data-lang="en">08 · Transaction Complexity</span></div>
+      <h2 class="section-title" data-lang="zh">APA vs SPA：<em>文件结构与交割复杂度</em></h2>
+      <h2 class="section-title" data-lang="en">APA vs. SPA: <em>Document Structure and Closing Complexity</em></h2>
+      <div class="section-title-en">
+        <span data-lang="zh">资产购买协议 vs 股权购买协议的核心差异</span>
+        <span data-lang="en">The core differences between an Asset Purchase Agreement and a Stock Purchase Agreement</span>
+      </div>
+
+      <p data-lang="zh">从交易执行角度，资产收购通常需要更多的交割文件（每类资产需单独的转让文件），但股权收购的尽职调查范围通常更广（需审查整个公司）。</p>
+      <p data-lang="en">From an execution perspective, asset deals typically require more closing documents (each asset category needs a separate transfer instrument), while stock deals generally involve broader due diligence scope (reviewing the entire company).</p>
+
+      <div class="struct-grid">
+        <div class="struct-card asset">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">文件多 · 交割清单长</span><span data-lang="en">More Documents · Longer Closing Checklist</span></div>
+            <div class="struct-card-title"><span data-lang="zh">资产购买协议（APA）</span><span data-lang="en">Asset Purchase Agreement (APA)</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">核心协议：资产购买协议（APA），附件包括资产清单、承继负债清单</li>
+              <li data-lang="en">Core document: Asset Purchase Agreement (APA) with schedules listing acquired assets and assumed liabilities</li>
+              <li data-lang="zh">须逐项起草资产转让文件（专利让渡书、商标转让书、不动产过户契约等）</li>
+              <li data-lang="en">Individual transfer instruments required for each asset class (patent assignments, trademark assignments, deeds, etc.)</li>
+              <li data-lang="zh">交割清单通常较长，各类资产过户手续并行推进</li>
+              <li data-lang="en">Closing checklist typically longer; multiple asset transfer procedures running in parallel</li>
+              <li data-lang="zh">不动产转让须额外办理产权登记，可能延长交割时间线</li>
+              <li data-lang="en">Real estate transfer requires title recordation, potentially extending closing timeline</li>
+            </ul>
+          </div>
+        </div>
+        <div class="struct-card stock">
+          <div class="struct-card-header">
+            <div class="struct-card-label"><span data-lang="zh">文件少 · 尽调范围广</span><span data-lang="en">Fewer Documents · Broader Diligence Scope</span></div>
+            <div class="struct-card-title"><span data-lang="zh">股权购买协议（SPA）</span><span data-lang="en">Stock Purchase Agreement (SPA)</span></div>
+          </div>
+          <div class="struct-card-body">
+            <ul>
+              <li data-lang="zh">核心协议：股权购买协议（SPA），附件包括股权陈述保证清单</li>
+              <li data-lang="en">Core document: Stock Purchase Agreement (SPA) with disclosure schedules</li>
+              <li data-lang="zh">股权/成员权益转让手续相对简单（股权转让书或 LLC Interest Assignment）</li>
+              <li data-lang="en">Equity/membership interest transfer is relatively simple (stock transfer certificate or LLC Interest Assignment)</li>
+              <li data-lang="zh">交割清单聚焦于股权交割、董事会决议和监管批准文件</li>
+              <li data-lang="en">Closing checklist focuses on equity delivery, board resolutions, and regulatory approval documentation</li>
+              <li data-lang="zh">但尽职调查范围更广——需审查整个公司的历史运营和全部负债</li>
+              <li data-lang="en">But due diligence scope is broader — reviewing the entire company's historical operations and all liabilities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="pullquote">
+        <span data-lang="zh">"在并购谈判中，买方代理律师的第一选择几乎总是资产收购；卖方代理律师的第一选择几乎总是股权收购。最终交易结构，是双方律师和财务顾问在税务、风险和运营便利性之间博弈的结果。"</span>
+        <span data-lang="en">"In M&amp;A negotiations, the buyer's counsel almost always prefers an asset deal; seller's counsel almost always prefers a stock deal. The final structure is the product of negotiation between both sides' lawyers and financial advisors, balancing tax, risk, and operational convenience."</span>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+    <!-- Summary Table -->
+    <section class="section" id="summary">
+      <div class="section-num"><span data-lang="zh">综合对比</span><span data-lang="en">Comparison Overview</span></div>
+      <h2 class="section-title" data-lang="zh"><em>综合对比总表</em></h2>
+      <h2 class="section-title" data-lang="en"><em>Comprehensive Comparison Table</em></h2>
+      <div class="section-title-en">
+        <span data-lang="zh">8大维度一览</span>
+        <span data-lang="en">All 8 dimensions at a glance</span>
+      </div>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th><span data-lang="zh">对比维度</span><span data-lang="en">Dimension</span></th>
+            <th class="th-asset"><span data-lang="zh">资产收购</span><span data-lang="en">Asset Acquisition</span></th>
+            <th class="th-stock"><span data-lang="zh">股权收购</span><span data-lang="en">Stock Acquisition</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span data-lang="zh">法律结构</span><span data-lang="en">Legal Structure</span></td>
+            <td><span data-lang="zh">购买特定资产，卖方实体存续</span><span data-lang="en">Buy specific assets; seller entity survives</span></td>
+            <td><span data-lang="zh">购买公司所有权，目标实体存续</span><span data-lang="en">Buy ownership; target entity continues</span></td>
+          </tr>
+          <tr>
+            <td><span data-lang="zh">税基 Stepped-up</span><span data-lang="en">Step-Up in Basis</span></td>
+            <td><span data-lang="zh">✅ 买方获得 stepped-up 税基</span><span data-lang="en">✅ Buyer receives step-up in basis</span></td>
+            <td><span data-lang="zh">❌ 买方延续历史税基（除非§338选举）</span><span data-lang="en">❌ Carryover basis (unless §338 election)</span></td>
+          </tr>
+          <tr>
+            <td><span data-lang="zh">卖方税负</span><span data-lang="en">Seller Tax Burden</span></td>
+            <td><span data-lang="zh">较高：普通收入税 + 资本利得税双重</span><span data-lang="en">Higher: ordinary income + capital gains</span></td>
+            <td><span data-lang="zh">较低：通常仅缴长期资本利得税</span><span data-lang="en">Lower: generally only long-term capital gains</span></td>
+          </tr>
+          <tr>
+            <td><span data-lang="zh">历史负债隔离</span><span data-lang="en">Liability Isolation</span></td>
+            <td><span data-lang="zh">✅ 较好隔离（注意继承者责任例外）</span><span data-lang="en">✅ Better isolation (watch successor liability exceptions)</span></td>
+            <td><span data-lang="zh">❌ 全部承继（已知+未知负债）</span><span data-lang="en">❌ Full succession (known + unknown liabilities)</span></td>
+          </tr>
+          <tr>
+            <td><span data-lang="zh">合同转让</span><span data-lang="en">Contract Assignment</span></td>
+            <td><span data-lang="zh">需逐一取得对方书面同意</span><span data-lang="en">Written consent required for each contract</span></td>
+            <td><span data-lang="zh">通常无需再取得同意（注意变更控制条款）</span><span data-lang="en">Generally no consent needed (watch CoC clauses)</span></td>
+          </tr>
+          <tr>
+            <td><span data-lang="zh">IP 过户手续</span><span data-lang="en">IP Transfer Formalities</span></td>
+            <td><span data-lang="zh">需逐一登记（USPTO、版权局等）</span><span data-lang="en">Individual registration required (USPTO, Copyright Office)</span></td>
+            <td><span data-lang="zh">随实体自动延续，无需单独登记</span><span data-lang="en">Continues automatically; no separate filing needed</span></td>
+          </tr>
+          <tr>
+            <td><span data-lang="zh">员工处理</span><span data-lang="en">Employee Handling</span></td>
+            <td><span data-lang="zh">可选择性录用，原合同终止</span><span data-lang="en">Selective hiring; existing contracts terminate</span></td>
+            <td><span data-lang="zh">全员随实体转移，原合同延续</span><span data-lang="en">All transfer with entity; contracts continue</span></td>
+          </tr>
+          <tr>
+            <td><span data-lang="zh">行业许可证</span><span data-lang="en">Industry Licenses</span></td>
+            <td><span data-lang="zh">通常需重新向监管机构申请</span><span data-lang="en">Typically must be re-applied for</span></td>
+            <td><span data-lang="zh">通常随实体延续有效</span><span data-lang="en">Generally continue with the entity</span></td>
+          </tr>
+          <tr>
+            <td><span data-lang="zh">交割文件量</span><span data-lang="en">Closing Document Volume</span></td>
+            <td><span data-lang="zh">较多（APA + 各类资产转让文件）</span><span data-lang="en">More (APA + individual asset transfer instruments)</span></td>
+            <td><span data-lang="zh">较少（SPA + 股权转让文件）</span><span data-lang="en">Fewer (SPA + equity transfer documents)</span></td>
+          </tr>
+          <tr>
+            <td><span data-lang="zh">尽职调查范围</span><span data-lang="en">Diligence Scope</span></td>
+            <td><span data-lang="zh">聚焦于目标资产</span><span data-lang="en">Focused on target assets</span></td>
+            <td><span data-lang="zh">覆盖整个公司历史运营</span><span data-lang="en">Covers entire company historical operations</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Decision Guide -->
+    <section class="section" id="guide">
+      <div class="section-num"><span data-lang="zh">场景指南</span><span data-lang="en">Decision Guide</span></div>
+      <h2 class="section-title" data-lang="zh">哪种结构<em>更适合你的交易</em>？</h2>
+      <h2 class="section-title" data-lang="en">Which Structure Is <em>Right for Your Deal</em>?</h2>
+      <div class="section-title-en">
+        <span data-lang="zh">基于交易特征的选择框架</span>
+        <span data-lang="en">A selection framework based on deal characteristics</span>
+      </div>
+
+      <p data-lang="zh">没有普遍适用的"最优结构"——选择取决于双方的税务状况、风险偏好、目标公司特征和行业监管环境。以下是常见场景下的参考框架。</p>
+      <p data-lang="en">There is no universally "optimal" structure — the choice depends on each party's tax position, risk tolerance, target company characteristics, and regulatory environment. Below is a reference framework for common scenarios.</p>
+
+      <div class="check-grid">
+        <div class="check-item">
+          <div class="check-icon">📋</div>
+          <div>
+            <div class="check-name" data-lang="zh">优先考虑资产收购的场景</div>
+            <div class="check-name" data-lang="en">When to Prefer an Asset Deal</div>
+            <ul class="content-list" data-lang="zh">
+              <li>目标公司存在重大未知或未披露负债</li>
+              <li>买方希望最大化未来税务折旧/摊销抵扣</li>
+              <li>仅需要目标公司的特定业务线或资产</li>
+              <li>目标公司有大量诉讼或环境污染风险</li>
+              <li>买方税率较高，stepped-up 税基价值显著</li>
+            </ul>
+            <ul class="content-list" data-lang="en">
+              <li>Target has significant unknown or undisclosed liabilities</li>
+              <li>Buyer wants to maximize future depreciation/amortization deductions</li>
+              <li>Only a specific business line or asset set is needed</li>
+              <li>Target carries substantial litigation or environmental exposure</li>
+              <li>Buyer has a high effective tax rate making step-up especially valuable</li>
+            </ul>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-icon">🏢</div>
+          <div>
+            <div class="check-name" data-lang="zh">优先考虑股权收购的场景</div>
+            <div class="check-name" data-lang="en">When to Prefer a Stock Deal</div>
+            <ul class="content-list" data-lang="zh">
+              <li>目标公司拥有大量难以转让或不可转让的合同</li>
+              <li>行业许可证/资质重新申请成本或周期极高</li>
+              <li>卖方坚持资本利得税处理（税率优惠）</li>
+              <li>目标公司具有 NOL 等有价值的税务属性</li>
+              <li>员工稳定性对业务连续性至关重要</li>
+            </ul>
+            <ul class="content-list" data-lang="en">
+              <li>Target has many contracts that are non-assignable or difficult to transfer</li>
+              <li>Re-obtaining industry licenses would be prohibitively expensive or time-consuming</li>
+              <li>Seller insists on capital gains treatment (favorable tax rates)</li>
+              <li>Target has valuable tax attributes such as NOL carryforwards</li>
+              <li>Employee stability is critical for business continuity post-closing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-insight">
+        <div class="callout-icon">💡 <span data-lang="zh">实践中的混合方案</span><span data-lang="en">Hybrid Solutions in Practice</span></div>
+        <p data-lang="zh">在实践中，许多并购交易会综合运用两种结构的优势：例如通过 IRC §338(h)(10) 选举使股权交易享有资产交易的税务待遇；或采用合并（Merger）结构替代直接资产/股权收购，在特定情形下既实现负债隔离又保持合同延续。选择最优结构需要并购律师与税务顾问的密切协作，结合目标公司的具体情况综合分析。</p>
+        <p data-lang="en">In practice, many M&amp;A transactions combine elements of both structures: for example, a §338(h)(10) election gives a stock deal asset-deal tax treatment; or a merger structure may achieve both liability isolation and contract continuity in certain scenarios. Selecting the optimal structure requires close collaboration between M&amp;A counsel and tax advisors, tailored to the specific facts of the target company.</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="author-strip">
+  <div class="author-inner">
+    <div class="author-avatar">E</div>
+    <div>
+      <div class="author-name">Evonne Xu</div>
+      <div class="author-title"><span data-lang="zh">并购律师 · AI 法律工程师 · Evonne Xu Legal</span><span data-lang="en">M&amp;A Lawyer · AI Legal Engineer · Evonne Xu Legal</span></div>
+      <p class="author-bio">
+        <span data-lang="zh">专注于中美跨境并购与科技交易法律服务。如果您正在评估交易结构选择，或需要对收购协议进行法律审查，欢迎预约咨询。本文仅供信息参考，不构成法律意见。</span>
+        <span data-lang="en">Specializing in U.S.-China cross-border M&amp;A and technology transactions. If you are evaluating acquisition structure or need legal review of a purchase agreement, book a consultation. This article is for informational purposes only and does not constitute legal advice.</span>
+      </p>
+      <div class="author-cta">
+        <a href="https://evonnexulegal.beehiiv.com/subscribe" class="btn btn-primary"><span data-lang="zh">订阅每周简报</span><span data-lang="en">Subscribe to Newsletter</span></a>
+        <a href="https://calendly.com/evonne-xu-legal/30min" class="btn btn-outline"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Consultation</span></a>
       </div>
     </div>
   </div>
+</div>
 
-  <div id="s2" class="dim-card">
-    <div class="dim-header"><span class="dim-num">02</span><span class="dim-title">税务影响</span><span class="dim-en">Tax Implications</span></div>
-    <div class="dim-body">
-      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">买方优</span>资产收购</div>
-        <ul><li>买方获得资产「stepped-up」税基</li><li>折旧/摊销抵税效果显著</li><li>商誉可按15年直线法摊销（IRC §1060）</li><li>卖方面临普通收入与资本利得双重税</li></ul>
-        <div class="note">IRC §338(h)(10) 选举可将股权交易视同资产交易处理，兼顾双方需求。</div>
-      </div>
-      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">卖方优</span>股权收购</div>
-        <ul><li>卖方通常仅缴资本利得税（税率更低）</li><li>买方无法获得stepped-up税基</li><li>历史税务亏损结转（NOL）随实体转移</li><li>可利用§382限制下的NOL结转</li></ul>
-        <div class="note">卖方税负通常更低，谈判中卖方倾向于股权收购结构。</div>
-      </div>
-    </div>
-  </div>
+<footer>
+  <p>© 2026 · <a href="../index.html">evonnexulegal.com</a> · <a href="../blog.html"><span data-lang="zh">博客</span><span data-lang="en">Blog</span></a> · <a href="../index.html#contact"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a></p>
+</footer>
 
-  <div id="s3" class="dim-card">
-    <div class="dim-header"><span class="dim-num">03</span><span class="dim-title">负债承继</span><span class="dim-en">Liability Succession</span></div>
-    <div class="dim-body">
-      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">买方优</span>资产收购</div>
-        <ul><li>原则上仅承继已明确约定的负债</li><li>历史诉讼风险留存于卖方实体</li><li>环境污染责任可有效隔离</li><li>注意「继承者责任」例外规则</li></ul>
-        <div class="note">需警惕产品责任、劳工法下的法定继承者责任理论。</div>
-      </div>
-      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">卖方优</span>股权收购</div>
-        <ul><li>买方承继目标公司全部已知/未知负债</li><li>包括未决诉讼、环境责任</li><li>税务审计风险随公司转移</li><li>需要全面尽职调查以量化风险</li></ul>
-        <div class="note">全面的陈述与保证条款（R&amp;W）及保险是核心风控工具。</div>
-      </div>
-    </div>
-  </div>
-
-  <div id="s4" class="dim-card">
-    <div class="dim-header"><span class="dim-num">04</span><span class="dim-title">合同转让</span><span class="dim-en">Contract Assignment</span></div>
-    <div class="dim-body">
-      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">较繁琐</span>资产收购</div>
-        <ul><li>每份合同须单独取得对方同意</li><li>含「变更控制条款」合同须重新谈判</li><li>客户合同转让可能引发流失风险</li><li>政府合同通常需特别审批</li></ul>
-      </div>
-      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">较便利</span>股权收购</div>
-        <ul><li>合同主体未变，理论上无需重新同意</li><li>仍需审查「变更控制」触发条款</li><li>许可证、特许权一般随实体延续</li><li>例外：含明确股权变更触发条款的合同</li></ul>
-      </div>
-    </div>
-  </div>
-
-  <div id="s5" class="dim-card">
-    <div class="dim-header"><span class="dim-num">05</span><span class="dim-title">员工处理</span><span class="dim-en">Employee Treatment</span></div>
-    <div class="dim-body">
-      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">灵活</span>资产收购</div>
-        <ul><li>买方选择性录用员工</li><li>原雇用关系终止，重新签订劳动合同</li><li>WARN Act通知义务需评估</li><li>福利计划需重新设立或衔接</li></ul>
-        <div class="note">可精准选择核心人才，但需注意歧视性录用的法律风险。</div>
-      </div>
-      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">稳定</span>股权收购</div>
-        <ul><li>全体员工随公司整体转移</li><li>原有雇用合同、福利计划延续</li><li>工会协议（CBA）随实体继续有效</li><li>留任激励计划通常在交割时触发</li></ul>
-      </div>
-    </div>
-  </div>
-
-  <div id="s6" class="dim-card">
-    <div class="dim-header"><span class="dim-num">06</span><span class="dim-title">知识产权转让</span><span class="dim-en">IP Transfer</span></div>
-    <div class="dim-body">
-      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">需登记</span>资产收购</div>
-        <ul><li>专利、商标需向USPTO办理转让登记</li><li>版权转让需书面协议</li><li>域名、社媒账号需逐一过户</li><li>IP链条审查是核心尽调项目</li></ul>
-      </div>
-      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">自动延续</span>股权收购</div>
-        <ul><li>IP所有权随公司实体自动延续</li><li>无需单独办理转让手续</li><li>仍需确认IP确实属于目标公司所有</li><li>审查第三方许可及限制条款</li></ul>
-      </div>
-    </div>
-  </div>
-
-  <div id="s7" class="dim-card">
-    <div class="dim-header"><span class="dim-num">07</span><span class="dim-title">监管审批</span><span class="dim-en">Regulatory Approvals</span></div>
-    <div class="dim-body">
-      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">视行业</span>资产收购</div>
-        <ul><li>HSR申报阈值以资产价值计算</li><li>行业许可证通常需重新申请</li><li>CFIUS审查视具体资产性质而定</li><li>FCC、FDA等行业监管视具体情况</li></ul>
-      </div>
-      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">视规模</span>股权收购</div>
-        <ul><li>HSR申报阈值以收购价值计算</li><li>现有许可证通常随实体延续</li><li>CFIUS对外资股权收购审查更严</li><li>银行、保险、电信等特许行业需专项审批</li></ul>
-      </div>
-    </div>
-  </div>
-
-  <div id="s8" class="dim-card">
-    <div class="dim-header"><span class="dim-num">08</span><span class="dim-title">交易执行复杂度</span><span class="dim-en">Transaction Complexity</span></div>
-    <div class="dim-body">
-      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">文件多</span>资产收购</div>
-        <ul><li>核心文件：资产购买协议（APA）</li><li>需逐项起草资产转让文件</li><li>交割清单通常更长更复杂</li><li>不动产转让需额外过户手续</li></ul>
-      </div>
-      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">相对简洁</span>股权收购</div>
-        <ul><li>核心文件：股权购买协议（SPA）</li><li>股权/成员权益转让手续相对简单</li><li>交割清单聚焦于股权交割</li><li>但尽职调查范围更广</li></ul>
-      </div>
-    </div>
-  </div>
-
-  <div id="summary" class="summary-section">
-    <h2>综合对比总表</h2>
-    <table>
-      <thead><tr><th>维度</th><th class="asset">资产收购</th><th class="stock">股权收购</th></tr></thead>
-      <tbody>
-        <tr><td class="td-dim">税基stepped-up</td><td>✅ 买方获益</td><td>❌ 不可获得</td></tr>
-        <tr><td class="td-dim">卖方税负</td><td>较高（双重税）</td><td>较低（资本利得）</td></tr>
-        <tr><td class="td-dim">历史负债隔离</td><td>✅ 较好隔离</td><td>❌ 全部承继</td></tr>
-        <tr><td class="td-dim">合同转让便利性</td><td>需逐一取得同意</td><td>通常无需再同意</td></tr>
-        <tr><td class="td-dim">IP过户手续</td><td>需单独登记</td><td>随实体自动延续</td></tr>
-        <tr><td class="td-dim">员工灵活度</td><td>可选择性录用</td><td>全员随实体转移</td></tr>
-        <tr><td class="td-dim">行业许可证</td><td>需重新申请</td><td>通常随实体延续</td></tr>
-        <tr><td class="td-dim">交割文件量</td><td>较多</td><td>相对较少</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div id="guide" class="guide">
-    <h2>交易结构选择指南</h2>
-    <div class="guide-grid">
-      <div class="guide-card asset">
-        <h3>优先考虑资产收购的场景</h3>
-        <ul>
-          <li>目标公司存在重大未知负债</li>
-          <li>买方希望最大化税务抵扣效益</li>
-          <li>仅需要特定业务线或资产</li>
-          <li>目标公司有大量诉讼或环境风险</li>
-          <li>买方税率较高，stepped-up税基价值显著</li>
-        </ul>
-      </div>
-      <div class="guide-card stock">
-        <h3>优先考虑股权收购的场景</h3>
-        <ul>
-          <li>目标公司拥有大量难以转让的合同</li>
-          <li>行业许可证/资质重新申请成本极高</li>
-          <li>卖方坚持资本利得税处理（税率优惠）</li>
-          <li>目标公司具有NOL等税务属性可利用</li>
-          <li>员工稳定性对业务连续性至关重要</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <p>© 2026 Evonne Xu Law · 本文仅供参考，不构成法律意见 · <a href="../blog.html" style="color:#2563eb">返回博客</a></p>
-  </footer>
-</main>
+<script>
+  const saved = localStorage.getItem('lang') || 'zh';
+  document.body.className = 'lang-' + saved;
+  document.getElementById('langBtn').textContent = saved === 'zh' ? 'English' : '中文';
+  function toggleLang() {
+    const next = document.body.classList.contains('lang-zh') ? 'en' : 'zh';
+    document.body.className = 'lang-' + next;
+    document.getElementById('langBtn').textContent = next === 'zh' ? 'English' : '中文';
+    localStorage.setItem('lang', next);
+  }
+  window.addEventListener('scroll', () => {
+    const progress = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('readingFill').style.width = progress + '%';
+  });
+  const sections = document.querySelectorAll('section.section');
+  const tocLinks = document.querySelectorAll('.toc ul li a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector('.toc a[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -60% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
 </body>
 </html>
