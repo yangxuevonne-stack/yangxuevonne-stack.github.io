@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>资产收购 vs 股权收购深度对比 | Evonne Xu Law</title>
+<meta name="description" content="美国并购交易中资产收购与股权收购的全面法律对比：税务、负债、合同、员工、知识产权等8大维度深度分析">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"DM Sans",sans-serif;background:#f4f6f9;color:#1a2332;display:flex;min-height:100vh}
+a{color:inherit;text-decoration:none}
+
+/* Sidebar */
+.sidebar{width:220px;min-width:220px;background:#0d1b2a;color:#c8d6e5;position:fixed;top:0;left:0;height:100vh;overflow-y:auto;padding:32px 0;z-index:100}
+.sidebar-brand{padding:0 24px 28px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:20px}
+.sidebar-brand a{color:#fff;font-size:13px;letter-spacing:.15em;text-transform:uppercase}
+.sidebar-brand span{color:#e87a2d}
+.sidebar h3{padding:0 24px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(200,214,229,.4);margin-bottom:10px}
+.sidebar ul{list-style:none}
+.sidebar ul li a{display:block;padding:8px 24px;font-size:12px;color:rgba(200,214,229,.75);transition:.2s;border-left:2px solid transparent}
+.sidebar ul li a:hover{color:#fff;border-left-color:#e87a2d;background:rgba(255,255,255,.04)}
+
+/* Main */
+.main{margin-left:220px;flex:1;padding:48px 48px 80px}
+.hero{background:linear-gradient(135deg,#0d1b2a 0%,#1a3a5c 100%);color:#fff;border-radius:8px;padding:48px 40px;margin-bottom:40px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:280px;height:280px;border-radius:50%;background:rgba(232,122,45,.12);pointer-events:none}
+.hero-tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#e87a2d;margin-bottom:16px}
+.hero h1{font-family:"Noto Serif SC",serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;line-height:1.35;margin-bottom:16px}
+.hero p{font-size:14px;color:rgba(255,255,255,.7);line-height:1.8;max-width:600px}
+
+/* Legend */
+.legend{display:flex;gap:24px;margin-bottom:32px;align-items:center}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:500;letter-spacing:.05em}
+.dot{width:10px;height:10px;border-radius:50%}
+.dot-blue{background:#2563eb}
+.dot-orange{background:#e87a2d}
+
+/* Dimension cards */
+.dim-card{background:#fff;border-radius:8px;border:1px solid #e2e8f0;margin-bottom:24px;overflow:hidden}
+.dim-header{background:#1a2332;color:#fff;padding:16px 24px;display:flex;align-items:center;gap:12px}
+.dim-num{background:rgba(255,255,255,.15);border-radius:4px;padding:2px 8px;font-size:11px;letter-spacing:.1em;font-weight:500}
+.dim-title{font-size:14px;font-weight:500;letter-spacing:.05em}
+.dim-en{font-size:10px;color:rgba(255,255,255,.5);margin-left:auto;letter-spacing:.1em;text-transform:uppercase}
+.dim-body{display:grid;grid-template-columns:1fr 1fr}
+.dim-col{padding:24px}
+.dim-col-title{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.dim-col.asset{border-right:1px solid #e2e8f0;background:#f0f6ff}
+.dim-col.asset .dim-col-title{color:#2563eb}
+.dim-col.asset .tag{background:#dbeafe;color:#1d4ed8}
+.dim-col.stock{background:#fff8f3}
+.dim-col.stock .dim-col-title{color:#c2611a}
+.dim-col.stock .tag{background:#fed7aa;color:#92400e}
+.tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:.05em}
+.dim-col ul{list-style:none;margin-top:4px}
+.dim-col ul li{font-size:13px;line-height:1.7;color:#374151;padding:3px 0 3px 14px;position:relative}
+.dim-col ul li::before{content:"›";position:absolute;left:0;color:#94a3b8}
+.note{font-size:11px;color:#6b7280;margin-top:12px;padding:10px;background:rgba(0,0,0,.03);border-radius:4px;line-height:1.6}
+
+/* Summary table */
+.summary-section{background:#fff;border-radius:8px;border:1px solid #e2e8f0;padding:32px;margin-bottom:24px}
+.summary-section h2{font-family:"Noto Serif SC",serif;font-size:1.1rem;font-weight:400;margin-bottom:20px;color:#0d1b2a}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#0d1b2a;color:#fff;padding:10px 14px;text-align:left;font-size:11px;letter-spacing:.08em;font-weight:500}
+th.asset{background:#1d4ed8}
+th.stock{background:#c2611a}
+td{padding:10px 14px;border-bottom:1px solid #f1f5f9;color:#374151;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#fafbfc}
+.td-dim{font-weight:500;color:#1a2332;font-size:12px;width:22%}
+
+/* Guide section */
+.guide{background:#fff;border-radius:8px;border:1px solid #e2e8f0;padding:32px;margin-bottom:24px}
+.guide h2{font-family:"Noto Serif SC",serif;font-size:1.1rem;font-weight:400;margin-bottom:20px;color:#0d1b2a}
+.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.guide-card{border-radius:6px;padding:20px}
+.guide-card.asset{background:#eff6ff;border:1px solid #bfdbfe}
+.guide-card.stock{background:#fff7ed;border:1px solid #fed7aa}
+.guide-card h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:12px}
+.guide-card.asset h3{color:#1d4ed8}
+.guide-card.stock h3{color:#c2611a}
+.guide-card ul{list-style:none}
+.guide-card ul li{font-size:13px;line-height:1.75;color:#374151;padding-left:16px;position:relative}
+.guide-card ul li::before{content:"✓";position:absolute;left:0;font-size:11px}
+.guide-card.asset ul li::before{color:#2563eb}
+.guide-card.stock ul li::before{color:#e87a2d}
+
+footer{text-align:center;font-size:11px;color:#9ca3af;margin-top:20px;padding-top:24px;border-top:1px solid #e2e8f0}
+</style>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-brand"><a href="../index.html">E<span>.</span>LAW</a></div>
+  <h3>目录</h3>
+  <ul>
+    <li><a href="#s1">① 法律结构</a></li>
+    <li><a href="#s2">② 税务影响</a></li>
+    <li><a href="#s3">③ 负债承继</a></li>
+    <li><a href="#s4">④ 合同转让</a></li>
+    <li><a href="#s5">⑤ 员工处理</a></li>
+    <li><a href="#s6">⑥ 知识产权</a></li>
+    <li><a href="#s7">⑦ 监管审批</a></li>
+    <li><a href="#s8">⑧ 交易复杂度</a></li>
+    <li><a href="#summary">对比总表</a></li>
+    <li><a href="#guide">选择指南</a></li>
+  </ul>
+</nav>
+
+<main class="main">
+  <div class="hero">
+    <div class="hero-tag">M&amp;A · 并购法律</div>
+    <h1>资产收购 vs 股权收购<br>深度法律对比</h1>
+    <p>美国并购交易中两种核心交易结构的全面解析——从税务到负债，从合同转让到监管审批，8大维度系统对比，助您做出最优交易决策。</p>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="dot dot-blue"></div>资产收购 Asset Acquisition</div>
+    <div class="legend-item"><div class="dot dot-orange"></div>股权收购 Stock Acquisition</div>
+  </div>
+
+  <div id="s1" class="dim-card">
+    <div class="dim-header"><span class="dim-num">01</span><span class="dim-title">法律结构</span><span class="dim-en">Legal Structure</span></div>
+    <div class="dim-body">
+      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">买方</span>资产收购</div>
+        <ul><li>买方选择性购买特定资产</li><li>卖方公司实体继续存在</li><li>需逐项列明转让资产清单</li><li>买方创建新实体或并入现有实体</li></ul>
+        <div class="note">买方仅获得已明确约定的资产，法律边界清晰。</div>
+      </div>
+      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">买方</span>股权收购</div>
+        <ul><li>买方购买目标公司股份/成员权益</li><li>目标公司作为独立实体继续运营</li><li>公司名称、资质、许可证随之转让</li><li>卖方退出公司所有权结构</li></ul>
+        <div class="note">买方继承整个公司，包括所有未披露的风险敞口。</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="s2" class="dim-card">
+    <div class="dim-header"><span class="dim-num">02</span><span class="dim-title">税务影响</span><span class="dim-en">Tax Implications</span></div>
+    <div class="dim-body">
+      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">买方优</span>资产收购</div>
+        <ul><li>买方获得资产「stepped-up」税基</li><li>折旧/摊销抵税效果显著</li><li>商誉可按15年直线法摊销（IRC §1060）</li><li>卖方面临普通收入与资本利得双重税</li></ul>
+        <div class="note">IRC §338(h)(10) 选举可将股权交易视同资产交易处理，兼顾双方需求。</div>
+      </div>
+      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">卖方优</span>股权收购</div>
+        <ul><li>卖方通常仅缴资本利得税（税率更低）</li><li>买方无法获得stepped-up税基</li><li>历史税务亏损结转（NOL）随实体转移</li><li>可利用§382限制下的NOL结转</li></ul>
+        <div class="note">卖方税负通常更低，谈判中卖方倾向于股权收购结构。</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="s3" class="dim-card">
+    <div class="dim-header"><span class="dim-num">03</span><span class="dim-title">负债承继</span><span class="dim-en">Liability Succession</span></div>
+    <div class="dim-body">
+      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">买方优</span>资产收购</div>
+        <ul><li>原则上仅承继已明确约定的负债</li><li>历史诉讼风险留存于卖方实体</li><li>环境污染责任可有效隔离</li><li>注意「继承者责任」例外规则</li></ul>
+        <div class="note">需警惕产品责任、劳工法下的法定继承者责任理论。</div>
+      </div>
+      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">卖方优</span>股权收购</div>
+        <ul><li>买方承继目标公司全部已知/未知负债</li><li>包括未决诉讼、环境责任</li><li>税务审计风险随公司转移</li><li>需要全面尽职调查以量化风险</li></ul>
+        <div class="note">全面的陈述与保证条款（R&amp;W）及保险是核心风控工具。</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="s4" class="dim-card">
+    <div class="dim-header"><span class="dim-num">04</span><span class="dim-title">合同转让</span><span class="dim-en">Contract Assignment</span></div>
+    <div class="dim-body">
+      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">较繁琐</span>资产收购</div>
+        <ul><li>每份合同须单独取得对方同意</li><li>含「变更控制条款」合同须重新谈判</li><li>客户合同转让可能引发流失风险</li><li>政府合同通常需特别审批</li></ul>
+      </div>
+      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">较便利</span>股权收购</div>
+        <ul><li>合同主体未变，理论上无需重新同意</li><li>仍需审查「变更控制」触发条款</li><li>许可证、特许权一般随实体延续</li><li>例外：含明确股权变更触发条款的合同</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="s5" class="dim-card">
+    <div class="dim-header"><span class="dim-num">05</span><span class="dim-title">员工处理</span><span class="dim-en">Employee Treatment</span></div>
+    <div class="dim-body">
+      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">灵活</span>资产收购</div>
+        <ul><li>买方选择性录用员工</li><li>原雇用关系终止，重新签订劳动合同</li><li>WARN Act通知义务需评估</li><li>福利计划需重新设立或衔接</li></ul>
+        <div class="note">可精准选择核心人才，但需注意歧视性录用的法律风险。</div>
+      </div>
+      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">稳定</span>股权收购</div>
+        <ul><li>全体员工随公司整体转移</li><li>原有雇用合同、福利计划延续</li><li>工会协议（CBA）随实体继续有效</li><li>留任激励计划通常在交割时触发</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="s6" class="dim-card">
+    <div class="dim-header"><span class="dim-num">06</span><span class="dim-title">知识产权转让</span><span class="dim-en">IP Transfer</span></div>
+    <div class="dim-body">
+      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">需登记</span>资产收购</div>
+        <ul><li>专利、商标需向USPTO办理转让登记</li><li>版权转让需书面协议</li><li>域名、社媒账号需逐一过户</li><li>IP链条审查是核心尽调项目</li></ul>
+      </div>
+      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">自动延续</span>股权收购</div>
+        <ul><li>IP所有权随公司实体自动延续</li><li>无需单独办理转让手续</li><li>仍需确认IP确实属于目标公司所有</li><li>审查第三方许可及限制条款</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="s7" class="dim-card">
+    <div class="dim-header"><span class="dim-num">07</span><span class="dim-title">监管审批</span><span class="dim-en">Regulatory Approvals</span></div>
+    <div class="dim-body">
+      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">视行业</span>资产收购</div>
+        <ul><li>HSR申报阈值以资产价值计算</li><li>行业许可证通常需重新申请</li><li>CFIUS审查视具体资产性质而定</li><li>FCC、FDA等行业监管视具体情况</li></ul>
+      </div>
+      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">视规模</span>股权收购</div>
+        <ul><li>HSR申报阈值以收购价值计算</li><li>现有许可证通常随实体延续</li><li>CFIUS对外资股权收购审查更严</li><li>银行、保险、电信等特许行业需专项审批</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="s8" class="dim-card">
+    <div class="dim-header"><span class="dim-num">08</span><span class="dim-title">交易执行复杂度</span><span class="dim-en">Transaction Complexity</span></div>
+    <div class="dim-body">
+      <div class="dim-col asset"><div class="dim-col-title"><span class="tag">文件多</span>资产收购</div>
+        <ul><li>核心文件：资产购买协议（APA）</li><li>需逐项起草资产转让文件</li><li>交割清单通常更长更复杂</li><li>不动产转让需额外过户手续</li></ul>
+      </div>
+      <div class="dim-col stock"><div class="dim-col-title"><span class="tag">相对简洁</span>股权收购</div>
+        <ul><li>核心文件：股权购买协议（SPA）</li><li>股权/成员权益转让手续相对简单</li><li>交割清单聚焦于股权交割</li><li>但尽职调查范围更广</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="summary" class="summary-section">
+    <h2>综合对比总表</h2>
+    <table>
+      <thead><tr><th>维度</th><th class="asset">资产收购</th><th class="stock">股权收购</th></tr></thead>
+      <tbody>
+        <tr><td class="td-dim">税基stepped-up</td><td>✅ 买方获益</td><td>❌ 不可获得</td></tr>
+        <tr><td class="td-dim">卖方税负</td><td>较高（双重税）</td><td>较低（资本利得）</td></tr>
+        <tr><td class="td-dim">历史负债隔离</td><td>✅ 较好隔离</td><td>❌ 全部承继</td></tr>
+        <tr><td class="td-dim">合同转让便利性</td><td>需逐一取得同意</td><td>通常无需再同意</td></tr>
+        <tr><td class="td-dim">IP过户手续</td><td>需单独登记</td><td>随实体自动延续</td></tr>
+        <tr><td class="td-dim">员工灵活度</td><td>可选择性录用</td><td>全员随实体转移</td></tr>
+        <tr><td class="td-dim">行业许可证</td><td>需重新申请</td><td>通常随实体延续</td></tr>
+        <tr><td class="td-dim">交割文件量</td><td>较多</td><td>相对较少</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="guide" class="guide">
+    <h2>交易结构选择指南</h2>
+    <div class="guide-grid">
+      <div class="guide-card asset">
+        <h3>优先考虑资产收购的场景</h3>
+        <ul>
+          <li>目标公司存在重大未知负债</li>
+          <li>买方希望最大化税务抵扣效益</li>
+          <li>仅需要特定业务线或资产</li>
+          <li>目标公司有大量诉讼或环境风险</li>
+          <li>买方税率较高，stepped-up税基价值显著</li>
+        </ul>
+      </div>
+      <div class="guide-card stock">
+        <h3>优先考虑股权收购的场景</h3>
+        <ul>
+          <li>目标公司拥有大量难以转让的合同</li>
+          <li>行业许可证/资质重新申请成本极高</li>
+          <li>卖方坚持资本利得税处理（税率优惠）</li>
+          <li>目标公司具有NOL等税务属性可利用</li>
+          <li>员工稳定性对业务连续性至关重要</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Evonne Xu Law · 本文仅供参考，不构成法律意见 · <a href="../blog.html" style="color:#2563eb">返回博客</a></p>
+  </footer>
+</main>
+</body>
+</html>
