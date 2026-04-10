@@ -3,78 +3,493 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>中美跨境并购 US-China Cross-Border M&A | Evonne Xu Law</title>
-<meta name="description" content="从尽职调查、交易结构设计，到监管审批的全流程中美跨境并购法律支持。">
+<title>M&A Deal Navigator | Evonne Xu Law</title>
+<meta name="description" content="中美跨境并购全流程法律导航——从制定收购计划、组建顾问团队到尽调、税务规划和交割，每一步都有工具、清单和实战资源。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPB5RY7C2"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4XPB5RY7C2');</script>
+
 <style>
-:root{--cream:#F7F3EE;--warm-white:#FAF8F5;--rose-gold:#C49A7A;--rose-deep:#A67A5B;--champagne:#E8D5C0;--dark:#1C1510;--mid:#4A3728;--light-text:#8C7060;--border:rgba(196,154,122,0.2);}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--cream);color:var(--dark);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;}
-[data-lang]{display:none;}
-body.lang-zh [data-lang="zh"]{display:block;}
-body.lang-en [data-lang="en"]{display:block;}
-body.lang-zh span[data-lang="zh"],body.lang-en span[data-lang="en"]{display:inline;}
+:root {
+  --cream: #F7F3EE;
+  --warm-white: #FAF8F5;
+  --rose-gold: #C49A7A;
+  --rose-deep: #A67A5B;
+  --champagne: #E8D5C0;
+  --dark: #1C1510;
+  --mid: #4A3728;
+  --light-text: #8C7060;
+  --border: rgba(196,154,122,0.2);
+  --border-strong: rgba(196,154,122,0.4);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--cream);
+  color: var(--dark);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 60px;height:64px;background:rgba(247,243,238,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;text-decoration:none;color:var(--dark);letter-spacing:2px;white-space:nowrap;}
-.nav-back{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--light-text);text-decoration:none;transition:color .2s;}
-.nav-back:hover{color:var(--rose-gold);}
-.lang-switch{display:flex;align-items:center;gap:0;border:1px solid var(--border);overflow:hidden;}
-.lang-btn{padding:5px 12px;font-size:11px;letter-spacing:1.5px;font-weight:500;cursor:pointer;border:none;background:transparent;color:var(--light-text);font-family:'DM Sans',sans-serif;transition:all .2s;}
-.lang-btn.active{background:var(--dark);color:var(--cream);}
+/* ── NAV ── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 60px; height:64px;
+  background:rgba(247,243,238,0.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo {
+  font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:600;
+  text-decoration:none; color:var(--dark); letter-spacing:2px; white-space:nowrap;
+}
+.nav-back {
+  font-size:12px; letter-spacing:1.5px; text-transform:uppercase;
+  color:var(--light-text); text-decoration:none; display:flex; align-items:center; gap:6px;
+  transition:color 0.2s;
+}
+.nav-back:hover { color:var(--rose-gold); }
+.lang-switch { display:flex; align-items:center; gap:0; border:1px solid var(--border); overflow:hidden; }
+.lang-btn { padding:5px 12px; font-size:11px; letter-spacing:1.5px; font-weight:500; cursor:pointer; border:none; background:transparent; color:var(--light-text); font-family:'DM Sans',sans-serif; transition:all 0.2s; }
+.lang-btn.active { background:var(--dark); color:var(--cream); }
+.lang-btn:hover:not(.active) { color:var(--rose-gold); }
 
-.hero{padding:160px 60px 80px;max-width:1100px;margin:0 auto;}
-.hero-tag{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--rose-gold);margin-bottom:24px;display:flex;align-items:center;gap:14px;}
-.hero-tag::before{content:'';width:36px;height:1px;background:var(--rose-gold);}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4.5vw,4rem);font-weight:300;color:var(--dark);line-height:1.15;margin-bottom:28px;}
-.hero-title em{color:var(--rose-gold);font-style:italic;}
-.hero-subtitle{font-size:15px;line-height:1.9;color:var(--mid);max-width:680px;margin-bottom:40px;}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
-.btn-primary{display:inline-block;padding:14px 34px;background:var(--dark);color:var(--cream);text-decoration:none;font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:all .2s;}
-.btn-primary:hover{background:var(--rose-gold);color:var(--dark);}
-.btn-ghost{display:inline-block;padding:14px 34px;border:1px solid rgba(28,21,16,.3);color:var(--dark);text-decoration:none;font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:all .2s;}
-.btn-ghost:hover{border-color:var(--rose-gold);color:var(--rose-gold);}
+/* ── LANG SYSTEM ── */
+[data-lang] { display:none; }
+.lang-zh [data-lang="zh"] { display:block; }
+.lang-en [data-lang="en"] { display:block; }
+span[data-lang] { display:none; }
+.lang-zh span[data-lang="zh"] { display:inline; }
+.lang-en span[data-lang="en"] { display:inline; }
 
-.section{max-width:1100px;margin:0 auto;padding:60px;}
-.section-tag{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--rose-gold);margin-bottom:14px;text-align:center;}
-.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:300;color:var(--dark);text-align:center;margin-bottom:48px;}
-.section-title em{color:var(--rose-gold);font-style:italic;}
+/* ── HERO ── */
+.hero {
+  padding-top:64px;
+  background:var(--dark);
+  position:relative; overflow:hidden;
+}
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse at 80% 10%, rgba(196,154,122,0.12) 0%, transparent 60%),
+             radial-gradient(ellipse at 10% 100%, rgba(196,154,122,0.06) 0%, transparent 55%);
+  pointer-events:none;
+}
+.hero-inner {
+  max-width:1240px; margin:0 auto;
+  padding:80px 60px 60px;
+  display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;
+  position:relative; z-index:1;
+}
+.hero-tag {
+  font-size:11px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--rose-gold); margin-bottom:20px;
+}
+.hero-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.6rem,4.8vw,3.8rem);
+  font-weight:300; line-height:1.1;
+  color:var(--cream); margin-bottom:22px;
+}
+.hero-title em { color:var(--rose-gold); font-style:italic; }
+.hero-subtitle {
+  font-size:14px; line-height:1.9; color:rgba(247,243,238,0.62);
+  margin-bottom:32px; max-width:460px;
+}
+.hero-cta-group { display:flex; gap:12px; flex-wrap:wrap; }
+.btn-primary {
+  padding:13px 28px; background:var(--rose-gold); color:var(--dark);
+  text-decoration:none; font-size:12px; letter-spacing:1.5px; text-transform:uppercase;
+  font-weight:500; transition:all 0.2s; border:1px solid var(--rose-gold);
+}
+.btn-primary:hover { background:var(--rose-deep); border-color:var(--rose-deep); }
+.btn-ghost {
+  padding:13px 28px; background:transparent; color:var(--champagne);
+  text-decoration:none; font-size:12px; letter-spacing:1.5px; text-transform:uppercase;
+  font-weight:500; border:1px solid rgba(196,154,122,0.4); transition:all 0.2s;
+}
+.btn-ghost:hover { border-color:var(--rose-gold); color:var(--rose-gold); }
 
-.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
-.resource-card{background:var(--warm-white);padding:36px 30px;display:flex;flex-direction:column;gap:12px;}
-.resource-card-num{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:var(--champagne);line-height:1;margin-bottom:4px;}
-.resource-card-title{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--dark);line-height:1.3;}
-.resource-card-desc{font-size:13px;line-height:1.75;color:var(--light-text);flex:1;}
-.resource-card-soon{display:inline-block;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rose-gold);border:1px solid var(--rose-gold);padding:4px 10px;align-self:flex-start;}
+/* Stage quick-jump pills */
+.hero-right { display:flex; flex-direction:column; gap:8px; }
+.stage-pills-label {
+  font-size:11px; letter-spacing:2px; text-transform:uppercase;
+  color:rgba(247,243,238,0.35); margin-bottom:4px;
+}
+.stage-pill {
+  display:flex; align-items:center; gap:14px; padding:12px 18px;
+  border:1px solid rgba(196,154,122,0.2); cursor:pointer;
+  transition:all 0.25s; text-decoration:none; position:relative;
+  overflow:hidden;
+}
+.stage-pill:hover, .stage-pill.current {
+  border-color:var(--rose-gold);
+  background:rgba(196,154,122,0.08);
+}
+.stage-pill-num {
+  font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:300;
+  color:var(--rose-gold); min-width:26px;
+}
+.stage-pill-info { flex:1; }
+.stage-pill-title {
+  font-size:12px; font-weight:500; color:var(--cream); line-height:1.3;
+}
+.stage-pill-sub {
+  font-size:10px; color:rgba(247,243,238,0.4); margin-top:2px; letter-spacing:0.5px;
+}
 
-.coming-soon{background:var(--warm-white);border:1px solid var(--border);padding:60px 40px;text-align:center;margin-top:40px;}
-.coming-soon-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--rose-gold);margin-bottom:14px;}
-.coming-soon-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,2.4vw,1.9rem);font-weight:300;color:var(--dark);margin-bottom:14px;}
-.coming-soon-text{font-size:14px;line-height:1.8;color:var(--mid);max-width:560px;margin:0 auto 28px;}
+/* ── JOURNEY MAP ── */
+.journey-section {
+  background: var(--dark);
+  padding: 0;
+  overflow: hidden;
+  border-top:1px solid rgba(196,154,122,0.1);
+}
+.journey-track {
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 0;
+  width: 100%;
+}
+.journey-track::-webkit-scrollbar { display: none; }
 
-.cta-section{background:var(--dark);color:var(--cream);padding:80px 60px;margin-top:80px;text-align:center;}
-.cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;margin-bottom:16px;}
-.cta-section h2 em{color:var(--rose-gold);font-style:italic;}
-.cta-section p{font-size:14px;color:rgba(247,243,238,.7);max-width:520px;margin:0 auto 32px;line-height:1.8;}
-.cta-section .btn-primary{background:var(--rose-gold);color:var(--dark);}
-.cta-section .btn-primary:hover{background:var(--cream);}
+.journey-card {
+  flex: 1 1 0;
+  min-width: 130px;
+  min-height: 220px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: flex-start;
+  cursor: pointer; position: relative;
+  border-right: 1px solid rgba(196,154,122,0.12);
+  transition: background 0.3s;
+  scroll-snap-align: start;
+  padding: 28px 12px 24px;
+  overflow: hidden;
+}
+.journey-card:last-child { border-right: none; }
+.journey-card-bg {
+  position: absolute; inset: 0;
+  opacity: 0.1; transition: opacity 0.35s;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 76px; pointer-events: none;
+  filter: blur(2px);
+}
+.journey-card:hover .journey-card-bg,
+.journey-card.active .journey-card-bg { opacity: 0.22; }
+.journey-card-art {
+  position: relative; z-index: 2;
+  width: 68px; height: 68px;
+  margin-bottom: 14px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.journey-card-art svg {
+  width: 100%; height: 100%;
+  transition: transform 0.3s;
+}
+.journey-card:hover .journey-card-art svg,
+.journey-card.active .journey-card-art svg {
+  transform: scale(1.08) translateY(-2px);
+}
+.journey-card-num {
+  position: absolute; top: 14px; left: 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px; font-weight: 400;
+  color: rgba(196,154,122,0.35);
+  letter-spacing: 1px;
+  transition: color 0.3s;
+  z-index: 3;
+}
+.journey-card:hover .journey-card-num,
+.journey-card.active .journey-card-num { color: var(--rose-gold); }
+.journey-card-label {
+  position: relative; z-index: 2;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; font-weight: 400;
+  color: rgba(247,243,238,0.5);
+  text-align: center; line-height: 1.3;
+  transition: color 0.3s;
+  margin-bottom: 6px;
+  padding: 0 6px;
+}
+.journey-card-sub {
+  position: relative; z-index: 2;
+  font-size: 10px; letter-spacing: 0.6px;
+  color: rgba(247,243,238,0.28);
+  text-align: center; line-height: 1.5;
+  transition: color 0.3s;
+  max-width: 120px;
+}
+.journey-card:hover .journey-card-label,
+.journey-card.active .journey-card-label { color: var(--cream); }
+.journey-card:hover .journey-card-sub,
+.journey-card.active .journey-card-sub { color: rgba(247,243,238,0.55); }
+.journey-card.active { background: rgba(196,154,122,0.1); }
+.journey-card.active::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  background: var(--rose-gold);
+}
+.journey-card.done .journey-card-label { color: rgba(196,154,122,0.7); }
+.journey-card.done .journey-card-num { color: var(--rose-gold); }
+.journey-connector {
+  position: absolute; right: -1px; top: 50%; transform: translateY(-50%);
+  width: 0; height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 8px solid rgba(196,154,122,0.15);
+  z-index: 4;
+}
+.journey-scroll-hint {
+  text-align: center; padding: 10px 0 20px;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(247,243,238,0.2);
+  display: none;
+}
+@media (max-width: 900px) {
+  .journey-card { min-width: 140px; min-height: 190px; padding: 22px 10px 18px; }
+  .journey-card-art { width: 52px; height: 52px; }
+  .journey-scroll-hint { display: block; }
+}
 
-footer{background:var(--dark);color:rgba(247,243,238,.4);padding:32px 60px;text-align:center;font-size:11px;letter-spacing:1.5px;border-top:1px solid rgba(196,154,122,.15);}
+/* ── MAIN CONTENT AREA ── */
+.content-area { background:var(--cream); min-height:600px; }
+.stage-panel {
+  display:none;
+  max-width:1200px; margin:0 auto; padding:72px 60px;
+  animation: fadeIn 0.4s ease;
+}
+.stage-panel.active { display:block; }
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(16px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+.stage-header { margin-bottom:52px; }
+.stage-eyebrow {
+  font-size:11px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--rose-gold); margin-bottom:12px;
+}
+.stage-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,3.4vw,2.8rem);
+  font-weight:300; line-height:1.2; color:var(--dark); margin-bottom:14px;
+}
+.stage-title em { color:var(--rose-gold); font-style:italic; }
+.stage-desc {
+  font-size:14px; line-height:1.9; color:var(--light-text); max-width:720px;
+}
 
-@media(max-width:900px){
-  nav{padding:0 20px;}
-  .hero{padding:130px 24px 60px;}
-  .section{padding:40px 24px;}
-  .resource-grid{grid-template-columns:1fr;}
-  .cta-section{padding:60px 24px;}
+/* Pain banner */
+.pain-banner {
+  background:var(--dark); padding:20px 28px; margin-bottom:48px;
+  border-left:3px solid var(--rose-gold);
+  display:flex; align-items:flex-start; gap:16px;
+}
+.pain-icon { font-size:20px; margin-top:2px; flex-shrink:0; }
+.pain-text { font-size:13px; line-height:1.8; color:rgba(247,243,238,0.72); }
+.pain-text strong { color:var(--champagne); font-weight:500; }
+
+/* Tool cards */
+.tools-label {
+  font-size:11px; letter-spacing:2.5px; text-transform:uppercase;
+  color:var(--light-text); margin-bottom:24px; padding-bottom:12px;
+  border-bottom:1px solid var(--border);
+}
+.tools-grid {
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(320px,1fr));
+  gap:20px; margin-bottom:48px;
+}
+.tool-card {
+  border:1px solid var(--border); background:white;
+  transition:all 0.3s; display:flex; flex-direction:column;
+  position:relative; overflow:hidden;
+}
+.tool-card:hover { transform:translateY(-3px); box-shadow:0 16px 48px rgba(28,21,16,0.08); }
+.tool-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background:transparent; transition:background 0.3s;
+}
+.tool-card.evonne::before { background:var(--rose-gold); }
+.tool-card.interactive { background:var(--dark); }
+.tool-card.interactive::before { background:var(--champagne); }
+.tool-card.external::before { background:rgba(140,112,96,0.3); }
+.card-top { padding:24px 24px 0; display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.card-icon { font-size:28px; line-height:1; }
+.card-type-badge {
+  font-size:9px; letter-spacing:2px; text-transform:uppercase;
+  padding:4px 8px; border:1px solid var(--border); color:var(--light-text);
+  flex-shrink:0;
+}
+.tool-card.evonne .card-type-badge { border-color:var(--rose-gold); color:var(--rose-gold); }
+.tool-card.interactive .card-type-badge { border-color:rgba(196,154,122,0.4); color:var(--champagne); }
+.card-body { padding:16px 24px 24px; flex:1; display:flex; flex-direction:column; gap:10px; }
+.card-title {
+  font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:400;
+  line-height:1.3; color:var(--dark);
+}
+.tool-card.interactive .card-title { color:var(--cream); }
+.card-desc { font-size:12px; line-height:1.8; color:var(--light-text); flex:1; }
+.tool-card.interactive .card-desc { color:rgba(247,243,238,0.58); }
+.card-link {
+  font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+  color:var(--rose-gold); text-decoration:none; display:flex; align-items:center;
+  gap:6px; margin-top:auto; transition:gap 0.2s;
+}
+.card-link:hover { gap:10px; }
+.tool-card.interactive .card-link { color:var(--champagne); }
+
+/* Evonne tip box inside cards */
+.evonne-tip {
+  margin-top:14px; padding:12px 16px;
+  background:rgba(196,154,122,0.06); border-left:2px solid var(--rose-gold);
+  font-size:12px; line-height:1.7; color:var(--light-text);
+}
+.evonne-tip strong { color:var(--dark); }
+
+/* Comparison table */
+.compare-table { width:100%; border-collapse:collapse; margin-top:10px; }
+.compare-table th {
+  padding:12px 14px; text-align:left;
+  font-size:10px; letter-spacing:1.5px; text-transform:uppercase; font-weight:500;
+  border-bottom:1px solid var(--border);
+}
+.compare-table th:first-child { color:var(--light-text); width:30%; }
+.compare-table th:not(:first-child) { color:var(--rose-gold); }
+.compare-table td {
+  padding:12px 14px; font-size:12px; line-height:1.6;
+  border-bottom:1px solid rgba(196,154,122,0.08); vertical-align:top;
+}
+.compare-table td:first-child { color:var(--light-text); font-weight:400; }
+.compare-table tr:last-child td { border-bottom:none; }
+.compare-table tr:hover td { background:rgba(196,154,122,0.03); }
+
+/* Checklist */
+.checklist { list-style:none; display:flex; flex-direction:column; gap:0; }
+.checklist li {
+  display:flex; align-items:flex-start; gap:12px;
+  padding:11px 0; border-bottom:1px solid rgba(196,154,122,0.08);
+  font-size:12px; line-height:1.6; cursor:pointer;
+  transition:all 0.2s;
+}
+.checklist li:last-child { border-bottom:none; }
+.check-box {
+  width:18px; height:18px; border:1px solid var(--border);
+  flex-shrink:0; margin-top:2px; display:flex; align-items:center;
+  justify-content:center; transition:all 0.2s;
+}
+.checklist li.checked .check-box {
+  background:var(--rose-gold); border-color:var(--rose-gold);
+}
+.checklist li.checked .check-box::after { content:'✓'; font-size:11px; color:white; }
+.checklist li.checked .check-text { color:var(--light-text); text-decoration:line-through; }
+.check-text { flex:1; }
+.check-priority {
+  font-size:9px; letter-spacing:1px; padding:2px 6px;
+  border:1px solid var(--border); color:var(--light-text);
+  text-transform:uppercase; flex-shrink:0; margin-top:3px;
+}
+.check-priority.high { border-color:rgba(196,154,122,0.5); color:var(--rose-gold); }
+
+/* CFIUS risk screener */
+.risk-screener { padding:0; }
+.risk-progress { height:3px; background:rgba(196,154,122,0.15); }
+.risk-progress-fill { height:100%; background:var(--rose-gold); transition:width 0.4s ease; }
+.risk-q {
+  font-family:'Cormorant Garamond',serif; font-size:16px; font-weight:300;
+  color:var(--cream); line-height:1.5; margin-bottom:16px; min-height:48px;
+}
+.risk-opts { display:flex; flex-direction:column; gap:8px; }
+.risk-opt {
+  padding:10px 14px; border:1px solid rgba(196,154,122,0.25); cursor:pointer;
+  font-size:12px; color:rgba(247,243,238,0.7); transition:all 0.2s;
+  background:transparent; text-align:left; font-family:'DM Sans',sans-serif; width:100%;
+}
+.risk-opt:hover { border-color:var(--rose-gold); color:var(--cream); background:rgba(196,154,122,0.08); }
+.risk-result { text-align:center; padding:12px 0; display:none; }
+.risk-result.show { display:block; }
+.risk-result-icon { font-size:36px; margin-bottom:10px; }
+.risk-result-verdict {
+  font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:300;
+  color:var(--cream); margin-bottom:8px;
+}
+.risk-result-sub { font-size:12px; line-height:1.7; color:rgba(247,243,238,0.55); }
+.risk-restart {
+  margin-top:14px; padding:8px 20px; background:transparent;
+  border:1px solid rgba(196,154,122,0.35); color:var(--champagne);
+  font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+  cursor:pointer; font-family:'DM Sans',sans-serif; transition:all 0.2s;
+}
+.risk-restart:hover { border-color:var(--rose-gold); color:var(--rose-gold); }
+.risk-step-count { font-size:10px; letter-spacing:1.5px; color:rgba(247,243,238,0.3); margin-bottom:12px; text-transform:uppercase; }
+
+/* Resources */
+.resources-section { margin-top:52px; padding-top:40px; border-top:1px solid var(--border); }
+.resources-label { font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:var(--light-text); margin-bottom:20px; }
+.resource-links { display:flex; flex-direction:column; gap:1px; }
+.resource-link {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 20px; background:white; border:1px solid var(--border);
+  text-decoration:none; transition:all 0.25s; gap:16px; margin-bottom:8px;
+}
+.resource-link:hover { border-color:var(--rose-gold); background:var(--warm-white); }
+.resource-link-left { display:flex; align-items:center; gap:14px; }
+.resource-link-icon { font-size:18px; flex-shrink:0; }
+.resource-link-cat { font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--rose-gold); margin-bottom:3px; }
+.resource-link-title { font-size:14px; font-weight:400; color:var(--dark); font-family:'Cormorant Garamond',serif; }
+.resource-link-meta { font-size:11px; color:var(--light-text); margin-top:2px; }
+.resource-link-arrow { font-size:16px; color:var(--rose-gold); flex-shrink:0; transition:transform 0.2s; }
+.resource-link:hover .resource-link-arrow { transform:translateX(4px); }
+
+/* CTA */
+.cta-section {
+  background:var(--dark); padding:80px 60px; text-align:center;
+  position:relative; overflow:hidden;
+}
+.cta-section::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse at 50% 0%, rgba(196,154,122,0.1) 0%, transparent 70%);
+}
+.cta-inner { position:relative; z-index:1; max-width:560px; margin:0 auto; }
+.cta-tag { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--rose-gold); margin-bottom:16px; }
+.cta-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,4vw,2.8rem); font-weight:300; color:var(--cream); margin-bottom:14px; line-height:1.2; }
+.cta-title em { color:var(--rose-gold); font-style:italic; }
+.cta-desc { font-size:14px; line-height:1.8; color:rgba(247,243,238,0.55); margin-bottom:32px; }
+.cta-btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+/* Footer */
+footer {
+  background:var(--dark); padding:24px 60px;
+  border-top:1px solid rgba(196,154,122,0.1);
+  display:flex; align-items:center; justify-content:space-between;
+}
+.footer-text { font-size:12px; color:rgba(247,243,238,0.3); }
+.footer-link { font-size:12px; color:var(--rose-gold); text-decoration:none; letter-spacing:0.5px; }
+
+/* Responsive */
+@media (max-width:900px) {
+  nav { padding:0 24px; }
+  .hero-inner { grid-template-columns:1fr; padding:48px 24px 40px; gap:40px; }
+  .hero-right { display:none; }
+  .stage-panel { padding:48px 24px; }
+  .tools-grid { grid-template-columns:1fr; }
+  .cta-section { padding:60px 24px; }
+  footer { padding:20px 24px; flex-direction:column; gap:8px; text-align:center; }
+  .compare-table { font-size:11px; }
+  .compare-table th, .compare-table td { padding:10px 10px; }
+}
+@media (max-width:600px) {
+  .hero-cta-group { flex-direction:column; }
+  .btn-primary, .btn-ghost { text-align:center; }
 }
 </style>
 </head>
+
 <body class="lang-zh">
 
+<!-- NAV -->
 <nav>
   <a href="../index.html" class="nav-logo">Evonne Xu Law</a>
   <a href="../index.html" class="nav-back">← <span data-lang="zh">返回主页</span><span data-lang="en">Back to Home</span></a>
@@ -84,72 +499,1680 @@ footer{background:var(--dark);color:rgba(247,243,238,.4);padding:32px 60px;text-
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-tag">Cross-Border M&A</div>
-  <h1 class="hero-title">
-    <span data-lang="zh">中美跨境并购<br><em>全流程法律支持</em></span>
-    <span data-lang="en">US-China Cross-Border M&A<br><em>End-to-End Legal Support</em></span>
-  </h1>
-  <p class="hero-subtitle">
-    <span data-lang="zh">代理上市公司、私募基金与家族企业完成复杂并购交易——从尽职调查、交易结构设计，到监管审批（CFIUS、反垄断、外汇）及交易后整合，提供全流程法律支持。</span>
-    <span data-lang="en">Representing public companies, private equity funds, and family-owned businesses through complex cross-border transactions — from due diligence and deal structuring to regulatory approvals (CFIUS, antitrust, FX) and post-closing integration.</span>
-  </p>
-  <div class="hero-btns">
-    <a href="https://calendly.com/evonne-xu-legal/30min" target="_blank" class="btn-primary"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a>
-    <a href="../index.html#contact" class="btn-ghost"><span data-lang="zh">了解更多</span><span data-lang="en">Learn More</span></a>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-tag">M&A Deal Navigator</div>
+      <h1 class="hero-title">
+        <span data-lang="zh">中美跨境并购<br>每一步<br>都有<em>路线图</em></span>
+        <span data-lang="en">Cross-Border M&A<br>A Roadmap for<br><em>Every Step</em></span>
+      </h1>
+      <p class="hero-subtitle">
+        <span data-lang="zh">并购不是单个文件的签署，而是一场跨越6-12个月的协同作战。从制定收购计划、组建顾问团队，到尽职调查、监管审批、税务规划与交割——每个阶段都有专属工具、清单和实战资源。</span>
+        <span data-lang="en">M&A isn't a single signing — it's a 6-to-12 month campaign. From acquisition planning and assembling your advisor team, to due diligence, regulatory approvals, tax structuring, and closing — every stage has tools, checklists, and real-world resources.</span>
+      </p>
+      <div class="hero-cta-group">
+        <a href="#stage-0" class="btn-primary" onclick="showStage(0)">
+          <span data-lang="zh">从第一步开始 →</span>
+          <span data-lang="en">Start from Step 1 →</span>
+        </a>
+        <a href="https://calendly.com/evonne-xu-legal/30min" target="_blank" class="btn-ghost">
+          <span data-lang="zh">预约咨询</span>
+          <span data-lang="en">Book a Call</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="stage-pills-label">
+        <span data-lang="zh">跳转到阶段</span>
+        <span data-lang="en">Jump to stage</span>
+      </div>
+      <a class="stage-pill current" onclick="showStage(0); return false;" href="#">
+        <div class="stage-pill-num">0</div>
+        <div class="stage-pill-info">
+          <div class="stage-pill-title"><span data-lang="zh">制定收购计划</span><span data-lang="en">Deal Planning</span></div>
+          <div class="stage-pill-sub"><span data-lang="zh">战略、预算、目标筛选</span><span data-lang="en">Strategy · Budget · Targets</span></div>
+        </div>
+      </a>
+      <a class="stage-pill" onclick="showStage(1); return false;" href="#">
+        <div class="stage-pill-num">1</div>
+        <div class="stage-pill-info">
+          <div class="stage-pill-title"><span data-lang="zh">组建顾问团队</span><span data-lang="en">Hire Advisors</span></div>
+          <div class="stage-pill-sub"><span data-lang="zh">投行 · 律师 · 会计</span><span data-lang="en">IB · Lawyer · Accountant</span></div>
+        </div>
+      </a>
+      <a class="stage-pill" onclick="showStage(2); return false;" href="#">
+        <div class="stage-pill-num">2</div>
+        <div class="stage-pill-info">
+          <div class="stage-pill-title"><span data-lang="zh">独家 vs 竞标</span><span data-lang="en">Proprietary vs Auction</span></div>
+          <div class="stage-pill-sub"><span data-lang="zh">交易获取策略</span><span data-lang="en">Deal sourcing</span></div>
+        </div>
+      </a>
+      <a class="stage-pill" onclick="showStage(3); return false;" href="#">
+        <div class="stage-pill-num">3</div>
+        <div class="stage-pill-info">
+          <div class="stage-pill-title"><span data-lang="zh">IOI 初步报价</span><span data-lang="en">IOI — Indication</span></div>
+          <div class="stage-pill-sub"><span data-lang="zh">估值 · 约束力</span><span data-lang="en">Valuation · Non-binding</span></div>
+        </div>
+      </a>
+      <a class="stage-pill" onclick="showStage(4); return false;" href="#">
+        <div class="stage-pill-num">4</div>
+        <div class="stage-pill-info">
+          <div class="stage-pill-title"><span data-lang="zh">LOI 意向书</span><span data-lang="en">LOI — Letter of Intent</span></div>
+          <div class="stage-pill-sub"><span data-lang="zh">排他期 · 关键条款</span><span data-lang="en">Exclusivity · Key terms</span></div>
+        </div>
+      </a>
+      <a class="stage-pill" onclick="showStage(5); return false;" href="#">
+        <div class="stage-pill-num">5</div>
+        <div class="stage-pill-info">
+          <div class="stage-pill-title"><span data-lang="zh">尽职调查</span><span data-lang="en">Due Diligence</span></div>
+          <div class="stage-pill-sub"><span data-lang="zh">法律 · 财务 · 税务</span><span data-lang="en">Legal · Finance · Tax</span></div>
+        </div>
+      </a>
+      <a class="stage-pill" onclick="showStage(6); return false;" href="#">
+        <div class="stage-pill-num">6</div>
+        <div class="stage-pill-info">
+          <div class="stage-pill-title"><span data-lang="zh">监管与税务</span><span data-lang="en">Regulatory & Tax</span></div>
+          <div class="stage-pill-sub"><span data-lang="zh">CFIUS · HSR · 税务架构</span><span data-lang="en">CFIUS · HSR · Structuring</span></div>
+        </div>
+      </a>
+      <a class="stage-pill" onclick="showStage(7); return false;" href="#">
+        <div class="stage-pill-num">7</div>
+        <div class="stage-pill-info">
+          <div class="stage-pill-title"><span data-lang="zh">交割与整合</span><span data-lang="en">Closing & Integration</span></div>
+          <div class="stage-pill-sub"><span data-lang="zh">SPA · 过户 · 交接</span><span data-lang="en">SPA · Transfer · Handover</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Journey Map -->
+  <div class="journey-section">
+    <div class="journey-track" id="journeyTrack">
+
+      <!-- Stage 0: Planning -->
+      <div class="journey-card active" onclick="showStage(0)" id="node-0">
+        <div class="journey-card-num">00</div>
+        <div class="journey-card-bg">🗺️</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 18 L28 14 L44 20 L58 16 L58 54 L44 58 L28 52 L14 56 Z" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.08)" stroke-linejoin="round"/>
+            <line x1="28" y1="14" x2="28" y2="52" stroke="#E8D5C0" stroke-width="1" opacity="0.5"/>
+            <line x1="44" y1="20" x2="44" y2="58" stroke="#E8D5C0" stroke-width="1" opacity="0.5"/>
+            <circle cx="36" cy="34" r="2.5" fill="#C49A7A"/>
+            <path d="M36 26 L36 34" stroke="#C49A7A" stroke-width="1.2" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="journey-card-label"><span data-lang="zh">制定计划</span><span data-lang="en">Planning</span></div>
+        <div class="journey-card-sub">Strategy · Budget</div>
+        <div class="journey-connector"></div>
+      </div>
+
+      <!-- Stage 1: Advisors -->
+      <div class="journey-card" onclick="showStage(1)" id="node-1">
+        <div class="journey-card-num">01</div>
+        <div class="journey-card-bg">🤝</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="24" r="7" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.12)"/>
+            <circle cx="50" cy="24" r="7" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.12)"/>
+            <circle cx="36" cy="42" r="7" stroke="#E8D5C0" stroke-width="1.3" fill="rgba(232,213,192,0.08)"/>
+            <path d="M22 32 Q22 40 36 42" stroke="#C49A7A" stroke-width="1.2" fill="none" opacity="0.6"/>
+            <path d="M50 32 Q50 40 36 42" stroke="#C49A7A" stroke-width="1.2" fill="none" opacity="0.6"/>
+            <line x1="18" y1="56" x2="54" y2="56" stroke="#C49A7A" stroke-width="1.2" opacity="0.5"/>
+            <line x1="22" y1="60" x2="50" y2="60" stroke="#C49A7A" stroke-width="1" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="journey-card-label"><span data-lang="zh">组建团队</span><span data-lang="en">Advisors</span></div>
+        <div class="journey-card-sub">IB · Lawyer</div>
+        <div class="journey-connector"></div>
+      </div>
+
+      <!-- Stage 2: Sourcing -->
+      <div class="journey-card" onclick="showStage(2)" id="node-2">
+        <div class="journey-card-num">02</div>
+        <div class="journey-card-bg">🎯</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="36" cy="36" r="20" stroke="#C49A7A" stroke-width="1.5" fill="none"/>
+            <circle cx="36" cy="36" r="13" stroke="#C49A7A" stroke-width="1.2" fill="none" opacity="0.6"/>
+            <circle cx="36" cy="36" r="6" stroke="#C49A7A" stroke-width="1.2" fill="rgba(196,154,122,0.15)"/>
+            <circle cx="36" cy="36" r="2" fill="#C49A7A"/>
+            <path d="M50 22 L56 16 M54 14 L58 18" stroke="#E8D5C0" stroke-width="1.2" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="journey-card-label"><span data-lang="zh">寻找标的</span><span data-lang="en">Sourcing</span></div>
+        <div class="journey-card-sub">Proprietary · Auction</div>
+        <div class="journey-connector"></div>
+      </div>
+
+      <!-- Stage 3: IOI -->
+      <div class="journey-card" onclick="showStage(3)" id="node-3">
+        <div class="journey-card-num">03</div>
+        <div class="journey-card-bg">📝</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="18" y="14" width="32" height="42" rx="2" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.08)"/>
+            <line x1="24" y1="24" x2="44" y2="24" stroke="#E8D5C0" stroke-width="1" opacity="0.6"/>
+            <line x1="24" y1="30" x2="44" y2="30" stroke="#E8D5C0" stroke-width="1" opacity="0.6"/>
+            <line x1="24" y1="36" x2="38" y2="36" stroke="#E8D5C0" stroke-width="1" opacity="0.6"/>
+            <text x="36" y="50" font-family="serif" font-size="10" fill="#C49A7A" text-anchor="middle">$</text>
+            <path d="M46 10 L56 20 L48 22 Z" stroke="#C49A7A" stroke-width="1.2" fill="rgba(196,154,122,0.15)"/>
+          </svg>
+        </div>
+        <div class="journey-card-label">IOI</div>
+        <div class="journey-card-sub">Non-binding</div>
+        <div class="journey-connector"></div>
+      </div>
+
+      <!-- Stage 4: LOI -->
+      <div class="journey-card" onclick="showStage(4)" id="node-4">
+        <div class="journey-card-num">04</div>
+        <div class="journey-card-bg">🤝</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="18" width="44" height="36" rx="2" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.08)"/>
+            <line x1="20" y1="28" x2="52" y2="28" stroke="#E8D5C0" stroke-width="1" opacity="0.6"/>
+            <line x1="20" y1="34" x2="52" y2="34" stroke="#E8D5C0" stroke-width="1" opacity="0.6"/>
+            <line x1="20" y1="40" x2="42" y2="40" stroke="#E8D5C0" stroke-width="1" opacity="0.6"/>
+            <circle cx="48" cy="46" r="4" stroke="#C49A7A" stroke-width="1.3" fill="rgba(196,154,122,0.2)"/>
+            <path d="M46 46 L47.5 47.5 L50 44.5" stroke="#C49A7A" stroke-width="1.2" fill="none"/>
+          </svg>
+        </div>
+        <div class="journey-card-label">LOI</div>
+        <div class="journey-card-sub">Exclusivity</div>
+        <div class="journey-connector"></div>
+      </div>
+
+      <!-- Stage 5: Due Diligence -->
+      <div class="journey-card" onclick="showStage(5)" id="node-5">
+        <div class="journey-card-num">05</div>
+        <div class="journey-card-bg">🔍</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="14" stroke="#C49A7A" stroke-width="1.8" fill="rgba(196,154,122,0.1)"/>
+            <line x1="40" y1="40" x2="54" y2="54" stroke="#C49A7A" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="28" x2="36" y2="28" stroke="#E8D5C0" stroke-width="1" opacity="0.7"/>
+            <line x1="24" y1="32" x2="36" y2="32" stroke="#E8D5C0" stroke-width="1" opacity="0.7"/>
+            <line x1="24" y1="26" x2="30" y2="26" stroke="#E8D5C0" stroke-width="1" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="journey-card-label"><span data-lang="zh">尽职调查</span><span data-lang="en">Due Diligence</span></div>
+        <div class="journey-card-sub">Legal · Finance</div>
+        <div class="journey-connector"></div>
+      </div>
+
+      <!-- Stage 6: Regulatory/Tax -->
+      <div class="journey-card" onclick="showStage(6)" id="node-6">
+        <div class="journey-card-num">06</div>
+        <div class="journey-card-bg">🏛️</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="14,24 36,10 58,24" stroke="#C49A7A" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+            <rect x="18" y="24" width="36" height="28" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.08)"/>
+            <line x1="24" y1="26" x2="24" y2="52" stroke="#E8D5C0" stroke-width="1.2" opacity="0.6"/>
+            <line x1="32" y1="26" x2="32" y2="52" stroke="#E8D5C0" stroke-width="1.2" opacity="0.6"/>
+            <line x1="40" y1="26" x2="40" y2="52" stroke="#E8D5C0" stroke-width="1.2" opacity="0.6"/>
+            <line x1="48" y1="26" x2="48" y2="52" stroke="#E8D5C0" stroke-width="1.2" opacity="0.6"/>
+            <line x1="12" y1="56" x2="60" y2="56" stroke="#C49A7A" stroke-width="1.5" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="journey-card-label"><span data-lang="zh">监管税务</span><span data-lang="en">Regulatory</span></div>
+        <div class="journey-card-sub">CFIUS · HSR</div>
+        <div class="journey-connector"></div>
+      </div>
+
+      <!-- Stage 7: Closing -->
+      <div class="journey-card" onclick="showStage(7)" id="node-7">
+        <div class="journey-card-num">07</div>
+        <div class="journey-card-bg">✅</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="36" cy="36" r="22" stroke="#C49A7A" stroke-width="1.8" fill="rgba(196,154,122,0.1)"/>
+            <path d="M24 38 L32 46 L50 28" stroke="#C49A7A" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="36" cy="36" r="28" stroke="#E8D5C0" stroke-width="0.8" fill="none" stroke-dasharray="3,2" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="journey-card-label"><span data-lang="zh">交割整合</span><span data-lang="en">Closing</span></div>
+        <div class="journey-card-sub">SPA · Handover</div>
+      </div>
+
+    </div>
+    <div class="journey-scroll-hint">← <span data-lang="zh">滑动查看全部阶段</span><span data-lang="en">Scroll to see all stages</span> →</div>
   </div>
 </section>
 
-<section class="section">
-  <div class="section-tag"><span data-lang="zh">资源与工具</span><span data-lang="en">Resources & Tools</span></div>
-  <h2 class="section-title"><span data-lang="zh">即将上线的<em>内容</em></span><span data-lang="en">Coming <em>Soon</em></span></h2>
+<!-- CONTENT AREA -->
+<div class="content-area">
 
-  <div class="resource-grid">
-    <div class="resource-card">
-      <div class="resource-card-num">01</div>
-      <div class="resource-card-title"><span data-lang="zh">尽职调查清单</span><span data-lang="en">Due Diligence Checklist</span></div>
-      <p class="resource-card-desc"><span data-lang="zh">覆盖公司、财务、合规、知识产权、员工、税务的尽调模板，专为中资企业赴美收购设计。</span><span data-lang="en">A comprehensive due diligence template covering corporate, financial, compliance, IP, employment, and tax — tailored for Chinese acquirers entering the US market.</span></p>
-      <span class="resource-card-soon"><span data-lang="zh">即将上线</span><span data-lang="en">Coming Soon</span></span>
+  <!-- ══ STAGE 0: PLANNING ══ -->
+  <div class="stage-panel active" id="panel-0">
+    <div class="stage-header">
+      <div class="stage-eyebrow">Stage 00 · <span data-lang="zh">制定收购计划</span><span data-lang="en">Acquisition Planning</span></div>
+      <h2 class="stage-title">
+        <span data-lang="zh">先想清楚<br><em>为什么</em>要买</span>
+        <span data-lang="en">Start with <em>Why</em><br>You're Buying</span>
+      </h2>
+      <p class="stage-desc">
+        <span data-lang="zh">一笔成功的并购，80%的决定在正式启动之前就已做出。战略定位是否清晰、预算是否现实、团队是否有能力整合——这些问题没想清楚，就会在后面的每一步付出加倍代价。</span>
+        <span data-lang="en">80% of a successful deal is decided before you ever pick up the phone. If your strategic thesis isn't sharp, your budget isn't realistic, or your team can't integrate — every later stage costs you twice as much.</span>
+      </p>
     </div>
-    <div class="resource-card">
-      <div class="resource-card-num">02</div>
-      <div class="resource-card-title"><span data-lang="zh">CFIUS 审查指南</span><span data-lang="en">CFIUS Review Guide</span></div>
-      <p class="resource-card-desc"><span data-lang="zh">详解美国外国投资委员会审查流程、敏感行业判定、申报策略与常见陷阱——让监管不再是黑箱。</span><span data-lang="en">A practical guide to CFIUS review — process, sensitive sectors, filing strategy, and common pitfalls. Regulation, demystified.</span></p>
-      <span class="resource-card-soon"><span data-lang="zh">即将上线</span><span data-lang="en">Coming Soon</span></span>
+
+    <div class="pain-banner">
+      <div class="pain-icon">⚡</div>
+      <div class="pain-text">
+        <span data-lang="zh"><strong>最常见的失败模式：</strong>"看到一个好机会就出手。"没有清晰的投资标准和估值纪律，结果要么买贵、要么买错——整合阶段才发现业务根本合不上。</span>
+        <span data-lang="en"><strong>The most common failure mode:</strong> "We saw a good opportunity and jumped." Without clear investment criteria and valuation discipline, you either overpay or buy the wrong thing — and only discover the integration mismatch after closing.</span>
+      </div>
     </div>
-    <div class="resource-card">
-      <div class="resource-card-num">03</div>
-      <div class="resource-card-title"><span data-lang="zh">交易文件解读</span><span data-lang="en">Deal Document Playbook</span></div>
-      <p class="resource-card-desc"><span data-lang="zh">LOI、SPA、APA 关键条款逐条解读，谈判红线与常见妥协点——帮你读懂每一份交易文件。</span><span data-lang="en">Clause-by-clause walkthrough of LOIs, SPAs, and APAs — red lines, fallback positions, and how to read between the lines.</span></p>
-      <span class="resource-card-soon"><span data-lang="zh">即将上线</span><span data-lang="en">Coming Soon</span></span>
+
+    <div class="tools-label"><span data-lang="zh">工具 & 资源</span><span data-lang="en">Tools & Resources</span></div>
+    <div class="tools-grid">
+
+      <!-- Strategic thesis card -->
+      <div class="tool-card evonne" style="grid-column:1/-1;">
+        <div class="card-top">
+          <div class="card-icon">🎯</div>
+          <div class="card-type-badge">Evonne原创 · Framework</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">收购战略框架：5个必答问题</span>
+            <span data-lang="en">Acquisition Thesis Framework: 5 Questions You Must Answer</span>
+          </div>
+          <p class="card-desc">
+            <span data-lang="zh">签约前，请先用这5个问题自我拷问。答不清楚的话，现在就停下来。</span>
+            <span data-lang="en">Before you sign anything, work through these five questions. If you can't answer them crisply, stop now.</span>
+          </p>
+          <ul style="list-style:none; margin-top:8px; display:flex; flex-direction:column; gap:10px;">
+            <li style="display:flex;gap:12px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;font-weight:500;">01</span>
+              <span><span data-lang="zh"><strong style="color:var(--dark);">战略逻辑：</strong>这笔收购解决了什么问题？是买客户、买技术、买产能，还是买现金流？一句话说不清，就是没想清楚。</span><span data-lang="en"><strong style="color:var(--dark);">Strategic logic:</strong> What problem does this deal solve? Customers, tech, capacity, or cash flow? If you can't say it in one sentence, you haven't figured it out.</span></span>
+            </li>
+            <li style="display:flex;gap:12px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;font-weight:500;">02</span>
+              <span><span data-lang="zh"><strong style="color:var(--dark);">估值上限：</strong>在什么价格之上，这笔交易就不值得做？提前定好"walk away price"，避免被谈判情绪绑架。</span><span data-lang="en"><strong style="color:var(--dark);">Valuation ceiling:</strong> Above what price does this deal stop making sense? Set your walk-away number in advance — so negotiation emotion doesn't drag you past it.</span></span>
+            </li>
+            <li style="display:flex;gap:12px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;font-weight:500;">03</span>
+              <span><span data-lang="zh"><strong style="color:var(--dark);">资金来源：</strong>自有资金、银行贷款、股权融资、卖方融资——每种结构对税务、控制权、时间表的影响都完全不同。</span><span data-lang="en"><strong style="color:var(--dark);">Funding source:</strong> Cash, bank debt, equity, seller financing — each structure has radically different implications for tax, control, and timeline.</span></span>
+            </li>
+            <li style="display:flex;gap:12px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;font-weight:500;">04</span>
+              <span><span data-lang="zh"><strong style="color:var(--dark);">监管风险：</strong>目标公司是否涉及关键技术、敏感数据或基础设施？CFIUS、出口管制、反垄断——这些审查可能直接杀死交易。</span><span data-lang="en"><strong style="color:var(--dark);">Regulatory risk:</strong> Does the target touch critical tech, sensitive data, or infrastructure? CFIUS, export control, antitrust — any of these can kill the deal outright.</span></span>
+            </li>
+            <li style="display:flex;gap:12px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;font-weight:500;">05</span>
+              <span><span data-lang="zh"><strong style="color:var(--dark);">整合计划：</strong>谁来当CEO？核心团队留不留？IT系统怎么合并？整合计划不在LOI之前写好，交割后就是一地鸡毛。</span><span data-lang="en"><strong style="color:var(--dark);">Integration plan:</strong> Who runs the company post-close? Does the founding team stay? How do IT systems merge? If integration isn't mapped before the LOI, post-close is a mess.</span></span>
+            </li>
+          </ul>
+          <div class="evonne-tip">
+            <strong><span data-lang="zh">Evonne 建议：</span><span data-lang="en">Evonne's tip:</span></strong>
+            <span data-lang="zh">把这5个问题的答案写成一份一页纸的"Deal Thesis Memo"，作为后续所有决策的锚点。当团队意见分歧时，这份文件就是仲裁标准。</span>
+            <span data-lang="en">Turn these answers into a one-page "Deal Thesis Memo" that anchors every subsequent decision. When your team disagrees later, this document is the tiebreaker.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Budget ranges -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">💰</div>
+          <div class="card-type-badge">Cost Reality</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">并购总成本的真实构成</span>
+            <span data-lang="en">The Real Cost of an M&A Deal</span>
+          </div>
+          <p class="card-desc">
+            <span data-lang="zh">只算标的公司的购买价，是最大的预算误区。一个中型跨境交易的"隐性成本"通常占到购买价的 5–12%。</span>
+            <span data-lang="en">Budgeting only for the purchase price is the biggest planning mistake. "Hidden" costs in a mid-market cross-border deal typically run 5–12% on top.</span>
+          </p>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:8px; font-size:12px; color:var(--light-text); line-height:1.7;">
+            <li>→ <span data-lang="zh">投行费用：1–2% 交易金额</span><span data-lang="en">Investment bank fees: 1–2% of deal value</span></li>
+            <li>→ <span data-lang="zh">律师费用：$200K–$2M+（视复杂度）</span><span data-lang="en">Legal fees: $200K–$2M+ (depending on complexity)</span></li>
+            <li>→ <span data-lang="zh">财务/税务尽调：$100K–$500K</span><span data-lang="en">Financial/tax DD: $100K–$500K</span></li>
+            <li>→ <span data-lang="zh">CFIUS/反垄断申报费：$30K–$300K</span><span data-lang="en">CFIUS/antitrust filing fees: $30K–$300K</span></li>
+            <li>→ <span data-lang="zh">整合成本：5–10% 交易金额（常被低估）</span><span data-lang="en">Integration costs: 5–10% of deal value (often underestimated)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Target screening card -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">🎯</div>
+          <div class="card-type-badge">Checklist</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">标的筛选标准清单</span>
+            <span data-lang="en">Target Screening Checklist</span>
+          </div>
+          <p class="card-desc">
+            <span data-lang="zh">点击勾选已确认项目：</span>
+            <span data-lang="en">Check off as you confirm each:</span>
+          </p>
+          <ul class="checklist">
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">标的规模与预算匹配（EBITDA倍数合理）</span><span data-lang="en">Size matches budget (reasonable EBITDA multiple)</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">行业与自身战略协同</span><span data-lang="en">Industry fits strategic thesis</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">初步CFIUS风险可接受</span><span data-lang="en">Preliminary CFIUS risk acceptable</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">卖方有明确的出售意愿</span><span data-lang="en">Seller has clear intent to sell</span></span>
+              <span class="check-priority">MEDIUM</span>
+            </li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">文化/管理风格大致匹配</span><span data-lang="en">Culture/management style roughly aligned</span></span>
+              <span class="check-priority">MEDIUM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resources-section">
+      <div class="resources-label"><span data-lang="zh">Evonne 推荐阅读</span><span data-lang="en">Evonne Recommends</span></div>
+      <div class="resource-links">
+        <a href="../blog/blog-ma-process.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">📘</div>
+            <div>
+              <div class="resource-link-cat">Blog · M&A Process</div>
+              <div class="resource-link-title"><span data-lang="zh">一桩并购交易的完整流程：从启动到交割</span><span data-lang="en">The Full M&A Process: From Kickoff to Closing</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="../blog/blog-ma-pricing.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">💹</div>
+            <div>
+              <div class="resource-link-cat">Blog · Valuation</div>
+              <div class="resource-link-title"><span data-lang="zh">并购定价的逻辑：买家与卖家的博弈</span><span data-lang="en">The Logic of M&A Pricing: Buyer vs Seller</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="../blog/us-deal-approvals.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🏛️</div>
+            <div>
+              <div class="resource-link-cat">Blog · Regulatory</div>
+              <div class="resource-link-title"><span data-lang="zh">过关斩将：美国大型交易必须通过的审批关卡</span><span data-lang="en">Running the Gauntlet: Approvals Every Major US Deal Must Clear</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+      </div>
     </div>
   </div>
 
-  <div class="coming-soon">
-    <div class="coming-soon-label"><span data-lang="zh">持续更新中</span><span data-lang="en">In Progress</span></div>
-    <h3 class="coming-soon-title"><span data-lang="zh">更多实战资源正在整理中</span><span data-lang="en">More practical resources on the way</span></h3>
-    <p class="coming-soon-text"><span data-lang="zh">订阅每周简报，第一时间获取跨境并购前沿动态、监管更新与实战案例分析。</span><span data-lang="en">Subscribe to the weekly newsletter for cross-border M&A updates, regulatory alerts, and case studies — delivered every week.</span></p>
-    <a href="https://evonnexulegal.beehiiv.com" target="_blank" class="btn-ghost"><span data-lang="zh">订阅简报</span><span data-lang="en">Subscribe</span></a>
-  </div>
-</section>
+  <!-- ══ STAGE 1: ADVISORS ══ -->
+  <div class="stage-panel" id="panel-1">
+    <div class="stage-header">
+      <div class="stage-eyebrow">Stage 01 · <span data-lang="zh">组建顾问团队</span><span data-lang="en">Hire Advisors</span></div>
+      <h2 class="stage-title">
+        <span data-lang="zh">顾问团队的质量<br>决定<em>交易的上限</em></span>
+        <span data-lang="en">Your Advisors Set<br>the <em>Ceiling of the Deal</em></span>
+      </h2>
+      <p class="stage-desc">
+        <span data-lang="zh">在跨境并购中，好的顾问能帮你多赚一倍、少亏一半；差的顾问会让你付出看不见的代价。投行、律师、会计——三者必须协同作战，而不是各自为政。</span>
+        <span data-lang="en">In cross-border M&A, the right advisors can double your upside and halve your downside — while the wrong ones cost you in ways you'll never see. Your banker, lawyer, and accountant must work as one team, not in silos.</span>
+      </p>
+    </div>
 
+    <div class="pain-banner">
+      <div class="pain-icon">💼</div>
+      <div class="pain-text">
+        <span data-lang="zh"><strong>常见误区：</strong>"律师等到有草案了再找就行。"实际上，最关键的决定——交易结构、税务架构、谈判策略——都在签LOI之前就锁死了。等你有SPA草案的时候，律师能做的只是"damage control"。</span>
+        <span data-lang="en"><strong>Common mistake:</strong> "We'll bring in a lawyer once we have a draft." By then it's too late — deal structure, tax structuring, and negotiation posture are already locked in before the LOI. Once there's a draft SPA, your lawyer is doing damage control, not deal-shaping.</span>
+      </div>
+    </div>
+
+    <div class="tools-label"><span data-lang="zh">工具 & 资源</span><span data-lang="en">Tools & Resources</span></div>
+    <div class="tools-grid">
+
+      <!-- Advisor roles comparison -->
+      <div class="tool-card evonne" style="grid-column:1/-1;">
+        <div class="card-top">
+          <div class="card-icon">🧭</div>
+          <div class="card-type-badge">Evonne原创 · Roles Map</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">三类顾问各自负责什么？</span>
+            <span data-lang="en">Who Does What on Your Deal Team?</span>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th><span data-lang="zh">角色</span><span data-lang="en">Role</span></th>
+                  <th><span data-lang="zh">核心价值</span><span data-lang="en">Core Value</span></th>
+                  <th><span data-lang="zh">介入时点</span><span data-lang="en">When to Engage</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span data-lang="zh">投资银行</span><span data-lang="en">Investment Bank</span></td>
+                  <td><span data-lang="zh">标的寻源、估值建模、过程管理、价格谈判</span><span data-lang="en">Target sourcing, valuation, process management, price negotiation</span></td>
+                  <td><span data-lang="zh">战略规划后，寻标的前</span><span data-lang="en">After strategy, before sourcing</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">交易律师</span><span data-lang="en">Deal Lawyer</span></td>
+                  <td><span data-lang="zh">结构设计、法律尽调、合同谈判、监管合规</span><span data-lang="en">Structure design, legal DD, contract negotiation, regulatory</span></td>
+                  <td><span data-lang="zh">和投行同时，或更早</span><span data-lang="en">Same time as IB, or earlier</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">税务会计</span><span data-lang="en">Tax Accountant</span></td>
+                  <td><span data-lang="zh">税务架构、财务尽调、QoE报告、交割计算</span><span data-lang="en">Tax structure, financial DD, QoE reports, closing calcs</span></td>
+                  <td><span data-lang="zh">签LOI前，和律师同步</span><span data-lang="en">Before LOI, in sync with lawyer</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">公关/游说</span><span data-lang="en">PR / Government Relations</span></td>
+                  <td><span data-lang="zh">敏感行业需要，CFIUS预沟通</span><span data-lang="en">For sensitive sectors, CFIUS pre-briefings</span></td>
+                  <td><span data-lang="zh">视风险而定，越早越好</span><span data-lang="en">Risk-dependent, the earlier the better</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="evonne-tip">
+            <strong><span data-lang="zh">Evonne 建议：</span><span data-lang="en">Evonne's tip:</span></strong>
+            <span data-lang="zh">中资买家最容易犯的错是"只请中国律师"——对美国交易惯例、监管机构沟通、本土判例都有盲区。跨境交易至少需要一位在美国本土执业、同时懂中方客户沟通习惯的主办律师。</span>
+            <span data-lang="en">Chinese buyers most often make the mistake of "using only Chinese lawyers" — creating blind spots on US deal customs, regulator communications, and domestic case law. Cross-border deals need at least one lead counsel who practices in the US but understands Chinese client communication.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interview questions card -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">❓</div>
+          <div class="card-type-badge">Interview Guide</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">面试律师/投行的10个关键问题</span>
+            <span data-lang="en">10 Questions to Ask Before Hiring</span>
+          </div>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:6px; font-size:12px; color:var(--light-text); line-height:1.65;">
+            <li>01 · <span data-lang="zh">最近18个月做过几笔类似交易？</span><span data-lang="en">How many similar deals in the past 18 months?</span></li>
+            <li>02 · <span data-lang="zh">谁是主办合伙人？谁做日常执行？</span><span data-lang="en">Who's the lead partner? Who does day-to-day?</span></li>
+            <li>03 · <span data-lang="zh">收费结构（小时/固定/成功费）？</span><span data-lang="en">Fee structure (hourly/fixed/success)?</span></li>
+            <li>04 · <span data-lang="zh">是否代表过卖方，有没有对立经验？</span><span data-lang="en">Ever represented sellers — do you see both sides?</span></li>
+            <li>05 · <span data-lang="zh">有无利益冲突？</span><span data-lang="en">Any conflicts of interest?</span></li>
+            <li>06 · <span data-lang="zh">中文沟通能力如何？</span><span data-lang="en">Chinese-language capacity?</span></li>
+            <li>07 · <span data-lang="zh">CFIUS经验？最近成功/被否案例？</span><span data-lang="en">CFIUS experience? Recent wins/blocks?</span></li>
+            <li>08 · <span data-lang="zh">是否愿意书面提供参考客户？</span><span data-lang="en">Will you provide written references?</span></li>
+            <li>09 · <span data-lang="zh">对这笔交易的初步风险判断？</span><span data-lang="en">Preliminary risk read on this deal?</span></li>
+            <li>10 · <span data-lang="zh">你什么情况下会建议放弃？</span><span data-lang="en">When would you advise walking away?</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Engagement letter card -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">📄</div>
+          <div class="card-type-badge">Red Flags</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">委托合同里的4个红灯条款</span>
+            <span data-lang="en">4 Red Flags in Engagement Letters</span>
+          </div>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:10px; font-size:12px; color:var(--light-text); line-height:1.65;">
+            <li><strong style="color:var(--dark);"><span data-lang="zh">无上限的小时费。</span><span data-lang="en">Uncapped hourly fees.</span></strong> <span data-lang="zh">总要谈一个预估范围和超支通知机制。</span><span data-lang="en">Always negotiate an estimate and an overrun notification.</span></li>
+            <li><strong style="color:var(--dark);"><span data-lang="zh">自动顺延的尾款。</span><span data-lang="en">Auto-extending trailers.</span></strong> <span data-lang="zh">"后续交易自动按此费率"——不要签。</span><span data-lang="en">"Future deals default to this rate" — don't sign.</span></li>
+            <li><strong style="color:var(--dark);"><span data-lang="zh">不对称的免责条款。</span><span data-lang="en">Asymmetric indemnification.</span></strong> <span data-lang="zh">顾问完全免责，客户全赔。</span><span data-lang="en">Advisor fully indemnified, client fully exposed.</span></li>
+            <li><strong style="color:var(--dark);"><span data-lang="zh">终止条款不对等。</span><span data-lang="en">One-sided termination.</span></strong> <span data-lang="zh">你要能在合理时间内解聘顾问。</span><span data-lang="en">You must be able to terminate on reasonable notice.</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resources-section">
+      <div class="resources-label"><span data-lang="zh">Evonne 推荐阅读</span><span data-lang="en">Evonne Recommends</span></div>
+      <div class="resource-links">
+        <a href="../blog/blog-ma-process.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">📘</div>
+            <div>
+              <div class="resource-link-cat">Blog · M&A Process</div>
+              <div class="resource-link-title"><span data-lang="zh">如何挑选一位"对"的并购律师</span><span data-lang="en">How to Pick the Right M&A Lawyer</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ STAGE 2: SOURCING ══ -->
+  <div class="stage-panel" id="panel-2">
+    <div class="stage-header">
+      <div class="stage-eyebrow">Stage 02 · <span data-lang="zh">独家交易 vs 竞标</span><span data-lang="en">Proprietary vs Auction</span></div>
+      <h2 class="stage-title">
+        <span data-lang="zh">你是在<em>独家谈判</em>，<br>还是在竞标场里抢标的？</span>
+        <span data-lang="en">Are You in an <em>Exclusive</em><br>or Fighting in an Auction?</span>
+      </h2>
+      <p class="stage-desc">
+        <span data-lang="zh">交易获取方式决定了你的节奏、筹码和价格。独家谈判更从容但需要信任关系；竞标场效率高但价格水分大。两种路径的策略完全不同。</span>
+        <span data-lang="en">How you source a deal decides your pace, leverage, and price. Proprietary deals are calmer but need trust; auctions move fast but pump up price. The strategy for each is completely different.</span>
+      </p>
+    </div>
+
+    <div class="pain-banner">
+      <div class="pain-icon">⚖️</div>
+      <div class="pain-text">
+        <span data-lang="zh"><strong>买家最容易上的当：</strong>以为自己在做独家谈判，结果卖方投行同时在跑一个"隐形auction"。你以为自己是唯一选择，实际上是在做"stalking horse"。</span>
+        <span data-lang="en"><strong>Where buyers get played:</strong> You think it's a proprietary deal, but the seller's banker is actually running a quiet parallel auction. You think you're the chosen one — you're actually the stalking horse.</span>
+      </div>
+    </div>
+
+    <div class="tools-label"><span data-lang="zh">工具 & 资源</span><span data-lang="en">Tools & Resources</span></div>
+    <div class="tools-grid">
+
+      <!-- Proprietary vs Auction table -->
+      <div class="tool-card evonne" style="grid-column:1/-1;">
+        <div class="card-top">
+          <div class="card-icon">⚖️</div>
+          <div class="card-type-badge">Evonne原创 · Comparison</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">独家 vs 竞标：5个维度对比</span>
+            <span data-lang="en">Proprietary vs Auction: 5-Dimension Comparison</span>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th><span data-lang="zh">维度</span><span data-lang="en">Dimension</span></th>
+                  <th><span data-lang="zh">独家谈判</span><span data-lang="en">Proprietary</span></th>
+                  <th><span data-lang="zh">竞标拍卖</span><span data-lang="en">Auction</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span data-lang="zh">价格</span><span data-lang="en">Price</span></td>
+                  <td><span data-lang="zh">通常偏低（无竞争）</span><span data-lang="en">Lower (no competition)</span></td>
+                  <td><span data-lang="zh">偏高（溢价 10–30%）</span><span data-lang="en">Higher (10–30% premium)</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">节奏</span><span data-lang="en">Pace</span></td>
+                  <td><span data-lang="zh">由买卖双方自控</span><span data-lang="en">Both sides control</span></td>
+                  <td><span data-lang="zh">卖方投行主导，deadline密集</span><span data-lang="en">Banker-driven, deadline-heavy</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">尽调深度</span><span data-lang="en">DD Depth</span></td>
+                  <td><span data-lang="zh">充分时间</span><span data-lang="en">Ample time</span></td>
+                  <td><span data-lang="zh">压缩到 2–4 周</span><span data-lang="en">Compressed to 2–4 weeks</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">谈判筹码</span><span data-lang="en">Leverage</span></td>
+                  <td><span data-lang="zh">相对对等</span><span data-lang="en">Roughly equal</span></td>
+                  <td><span data-lang="zh">卖方主导，买方让步多</span><span data-lang="en">Seller-dominant, buyer concedes more</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">成功率</span><span data-lang="en">Close Rate</span></td>
+                  <td><span data-lang="zh">通常较高</span><span data-lang="en">Generally higher</span></td>
+                  <td><span data-lang="zh">30–50%（淘汰率高）</span><span data-lang="en">30–50% (high elimination)</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="evonne-tip">
+            <strong><span data-lang="zh">Evonne 建议：</span><span data-lang="en">Evonne's tip:</span></strong>
+            <span data-lang="zh">第一次做跨境并购的买家，尽量选"proprietary"路线——避免在陌生的美国竞标规则里付出"学费"。如果必须进auction，至少请一位做过多轮auction的美国律师同行。</span>
+            <span data-lang="en">First-time cross-border buyers should lean proprietary — avoid paying tuition in a US auction you don't understand. If you must enter an auction, bring a US lawyer who's run several before.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Auction phases card -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">🔨</div>
+          <div class="card-type-badge">Auction Playbook</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">典型auction流程拆解</span>
+            <span data-lang="en">Anatomy of a Typical Auction</span>
+          </div>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:8px; font-size:12px; color:var(--light-text); line-height:1.65;">
+            <li><strong style="color:var(--dark);">Round 1 · <span data-lang="zh">初筛：</span><span data-lang="en">Screening:</span></strong> <span data-lang="zh">签NDA、收CIM、提交IOI（2-3周）</span><span data-lang="en">NDA, CIM, submit IOI (2-3 weeks)</span></li>
+            <li><strong style="color:var(--dark);">Round 2 · <span data-lang="zh">短名单：</span><span data-lang="en">Shortlist:</span></strong> <span data-lang="zh">管理层见面、DataRoom、提交final bid（4-6周）</span><span data-lang="en">Mgmt meetings, data room, final bid (4-6 weeks)</span></li>
+            <li><strong style="color:var(--dark);">Round 3 · <span data-lang="zh">独家谈判：</span><span data-lang="en">Exclusivity:</span></strong> <span data-lang="zh">中标方进入LOI，锁排他期</span><span data-lang="en">Winner enters LOI, lock exclusivity</span></li>
+            <li><strong style="color:var(--dark);"><span data-lang="zh">签约交割：</span><span data-lang="en">Sign & close:</span></strong> <span data-lang="zh">确定性尽调、SPA谈判、监管、交割（8-16周）</span><span data-lang="en">Confirmatory DD, SPA, regulatory, close (8-16 weeks)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bidding strategy card -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">♟️</div>
+          <div class="card-type-badge">Tactics</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">竞标中的3个加分动作</span>
+            <span data-lang="en">3 Moves That Win an Auction</span>
+          </div>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:10px; font-size:12px; color:var(--light-text); line-height:1.65;">
+            <li>→ <strong style="color:var(--dark);"><span data-lang="zh">交易确定性。</span><span data-lang="en">Certainty of close.</span></strong> <span data-lang="zh">卖方怕"签了又黄"，愿意为确定性降价。无融资条件、CFIUS已预判、快速批准——都是加分项。</span><span data-lang="en">Sellers fear a failed close and will discount for certainty. No financing contingency, pre-screened CFIUS, quick internal approvals — all pluses.</span></li>
+            <li>→ <strong style="color:var(--dark);"><span data-lang="zh">管理层关系。</span><span data-lang="en">Management relationships.</span></strong> <span data-lang="zh">在IOI前就和目标CEO建立信任，有时比多出5%的报价更有效。</span><span data-lang="en">Building CEO trust before the IOI often beats paying 5% more.</span></li>
+            <li>→ <strong style="color:var(--dark);"><span data-lang="zh">对卖方痛点的定制方案。</span><span data-lang="en">Solve the seller's real pain.</span></strong> <span data-lang="zh">老股东想套现？管理层想留任？家族企业想传承品牌？对症下药。</span><span data-lang="en">Shareholders want liquidity? Mgmt wants to stay? Family wants legacy? Address it directly.</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resources-section">
+      <div class="resources-label"><span data-lang="zh">Evonne 推荐阅读</span><span data-lang="en">Evonne Recommends</span></div>
+      <div class="resource-links">
+        <a href="../blog/small-business-seller-exit.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🏷️</div>
+            <div>
+              <div class="resource-link-cat">Blog · Seller's View</div>
+              <div class="resource-link-title"><span data-lang="zh">从卖方视角看交易：中小企业出售实战</span><span data-lang="en">The Seller's View: Small Business Exit in Practice</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="../blog/blog-ma-process.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">📘</div>
+            <div>
+              <div class="resource-link-cat">Blog · M&A Process</div>
+              <div class="resource-link-title"><span data-lang="zh">独家 vs 竞标：并购流程全解析</span><span data-lang="en">Proprietary vs Auction: The Full M&A Process</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ STAGE 3: IOI ══ -->
+  <div class="stage-panel" id="panel-3">
+    <div class="stage-header">
+      <div class="stage-eyebrow">Stage 03 · <span data-lang="zh">初步意向函 IOI</span><span data-lang="en">Indication of Interest</span></div>
+      <h2 class="stage-title">
+        <span data-lang="zh">一份<em>一页纸</em><br>决定你能否进下一轮</span>
+        <span data-lang="en">One <em>Single Page</em><br>Decides if You Advance</span>
+      </h2>
+      <p class="stage-desc">
+        <span data-lang="zh">IOI 不是合同——它没有约束力，但决定了卖方如何看待你。一份写得好的IOI，能让你在不付出任何法律代价的情况下进入短名单；写得差的IOI，连第一轮都过不了。</span>
+        <span data-lang="en">An IOI isn't a contract — it has no legal force, but it decides how the seller sees you. A well-crafted IOI gets you shortlisted with zero legal exposure; a weak one doesn't clear round one.</span>
+      </p>
+    </div>
+
+    <div class="pain-banner">
+      <div class="pain-icon">📝</div>
+      <div class="pain-text">
+        <span data-lang="zh"><strong>中资买家常犯的错：</strong>把IOI当成"先占坑"随便写，或者反过来，把它写成一份 detailed LOI。两种做法都会失分——卖方看重的是"诚意+执行力"的平衡。</span>
+        <span data-lang="en"><strong>Where Chinese buyers get it wrong:</strong> Treating the IOI either as a "save my spot" throwaway, or over-engineering it into a detailed LOI. Both lose you points — sellers want to see a balance of intent and execution capacity.</span>
+      </div>
+    </div>
+
+    <div class="tools-label"><span data-lang="zh">工具 & 资源</span><span data-lang="en">Tools & Resources</span></div>
+    <div class="tools-grid">
+
+      <!-- IOI anatomy card -->
+      <div class="tool-card evonne" style="grid-column:1/-1;">
+        <div class="card-top">
+          <div class="card-icon">📄</div>
+          <div class="card-type-badge">Evonne原创 · Template</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">一份标准IOI的7个必备元素</span>
+            <span data-lang="en">7 Must-Have Elements of a Strong IOI</span>
+          </div>
+          <ul style="list-style:none; margin-top:8px; display:flex; flex-direction:column; gap:10px;">
+            <li style="display:flex;gap:12px;font-size:12px;line-height:1.7;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;font-weight:500;">01</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">买方简介。</span><span data-lang="en">Buyer profile.</span></strong> <span data-lang="zh">公司背景、过往交易记录、战略逻辑。让卖方一眼看出你"为什么要买"。</span><span data-lang="en">Company background, deal track record, strategic thesis. Signal "why you're buying" on page one.</span></span>
+            </li>
+            <li style="display:flex;gap:12px;font-size:12px;line-height:1.7;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;font-weight:500;">02</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">估值区间。</span><span data-lang="en">Valuation range.</span></strong> <span data-lang="zh">通常给出一个区间（如 $80M–$100M），附简要估值逻辑。</span><span data-lang="en">Usually a range (e.g., $80M–$100M) with a brief rationale.</span></span>
+            </li>
+            <li style="display:flex;gap:12px;font-size:12px;line-height:1.7;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;font-weight:500;">03</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">资金来源。</span><span data-lang="en">Source of funds.</span></strong> <span data-lang="zh">现金/贷款/股权？有无融资条件？这是卖方最关心的"确定性"指标。</span><span data-lang="en">Cash, debt, equity? Any financing contingency? Sellers read this as the certainty signal.</span></span>
+            </li>
+            <li style="display:flex;gap:12px;font-size:12px;line-height:1.7;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;font-weight:500;">04</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">交易结构偏好。</span><span data-lang="en">Preferred structure.</span></strong> <span data-lang="zh">资产收购 vs 股权收购？现金 vs 股权对价？</span><span data-lang="en">Asset vs stock deal? Cash vs stock consideration?</span></span>
+            </li>
+            <li style="display:flex;gap:12px;font-size:12px;line-height:1.7;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;font-weight:500;">05</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">所需尽调范围。</span><span data-lang="en">DD scope requested.</span></strong> <span data-lang="zh">商业、法律、财务、税务、ESG——告诉卖方你需要什么。</span><span data-lang="en">Commercial, legal, financial, tax, ESG — tell the seller what you'll need.</span></span>
+            </li>
+            <li style="display:flex;gap:12px;font-size:12px;line-height:1.7;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;font-weight:500;">06</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">监管预判。</span><span data-lang="en">Regulatory outlook.</span></strong> <span data-lang="zh">CFIUS、反垄断、行业许可——提前表态"我们已做评估"。</span><span data-lang="en">CFIUS, antitrust, industry approvals — signal "we've pre-assessed."</span></span>
+            </li>
+            <li style="display:flex;gap:12px;font-size:12px;line-height:1.7;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;font-weight:500;">07</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">关键假设与免责声明。</span><span data-lang="en">Key assumptions & disclaimer.</span></strong> <span data-lang="zh">"基于公开信息"、"无约束力"、"待董事会批准"。</span><span data-lang="en">"Based on public info," "non-binding," "subject to board approval."</span></span>
+            </li>
+          </ul>
+          <div class="evonne-tip">
+            <strong><span data-lang="zh">Evonne 建议：</span><span data-lang="en">Evonne's tip:</span></strong>
+            <span data-lang="zh">IOI最好控制在1-2页。语气要有信心但不能过度承诺。每一句话都会成为你后面谈判时的"承诺基线"——说过的话，收不回来。</span>
+            <span data-lang="en">Keep your IOI to 1-2 pages. Confident, but don't over-commit. Every sentence becomes a promise baseline for later negotiations — you can't walk back what you put on paper.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Valuation ranges card -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">📊</div>
+          <div class="card-type-badge">Valuation</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">如何给出一个"合理"的估值区间</span>
+            <span data-lang="en">How to Set a "Defensible" Valuation Range</span>
+          </div>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:8px; font-size:12px; color:var(--light-text); line-height:1.7;">
+            <li>→ <span data-lang="zh">用3种方法交叉验证：EBITDA倍数、DCF、交易可比</span><span data-lang="en">Triangulate with 3 methods: EBITDA multiple, DCF, precedent transactions</span></li>
+            <li>→ <span data-lang="zh">区间上限 = "努力够一下"的价格，下限 = "不亏本"的价格</span><span data-lang="en">High end = "stretch" price, low end = "no regret" price</span></li>
+            <li>→ <span data-lang="zh">留 10–15% 的尽调调整空间</span><span data-lang="en">Leave 10–15% headroom for DD adjustments</span></li>
+            <li>→ <span data-lang="zh">考虑卖方预期：CIM里的"EBITDA"通常已经调高</span><span data-lang="en">Discount the seller's "adjusted EBITDA" in the CIM</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Common IOI mistakes -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">⚠️</div>
+          <div class="card-type-badge">Pitfalls</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">IOI阶段的4个常见陷阱</span>
+            <span data-lang="en">4 Common Traps at the IOI Stage</span>
+          </div>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:10px; font-size:12px; color:var(--light-text); line-height:1.65;">
+            <li>✗ <span data-lang="zh"><strong style="color:var(--dark);">报价过高抢名次：</strong>进了下一轮却拉不回价格。</span><span data-lang="en"><strong style="color:var(--dark);">Lowballing to advance:</strong> You get shortlisted but can't climb back down on price.</span></li>
+            <li>✗ <span data-lang="zh"><strong style="color:var(--dark);">承诺"无CFIUS风险"：</strong>这几乎不可能对中资买家成立。</span><span data-lang="en"><strong style="color:var(--dark);">"No CFIUS risk" promises:</strong> Almost never credible for Chinese buyers.</span></li>
+            <li>✗ <span data-lang="zh"><strong style="color:var(--dark);">不写"无约束力"：</strong>部分表述可能被解释为合同要约。</span><span data-lang="en"><strong style="color:var(--dark);">Skipping "non-binding":</strong> Some phrasing may be read as an offer.</span></li>
+            <li>✗ <span data-lang="zh"><strong style="color:var(--dark);">遗漏董事会批准条件：</strong>必须写明最终决定需内部批准。</span><span data-lang="en"><strong style="color:var(--dark);">No board-approval caveat:</strong> Must flag that final decision needs internal approval.</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resources-section">
+      <div class="resources-label"><span data-lang="zh">Evonne 推荐阅读</span><span data-lang="en">Evonne Recommends</span></div>
+      <div class="resource-links">
+        <a href="../blog/blog-ma-pricing.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">💹</div>
+            <div>
+              <div class="resource-link-cat">Blog · Valuation</div>
+              <div class="resource-link-title"><span data-lang="zh">并购定价的逻辑：买家如何出价</span><span data-lang="en">M&A Pricing Logic: How Buyers Set the Number</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="../blog/blog-ma-process.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">📘</div>
+            <div>
+              <div class="resource-link-cat">Blog · M&A Process</div>
+              <div class="resource-link-title"><span data-lang="zh">从IOI到LOI：并购流程中的关键转折</span><span data-lang="en">From IOI to LOI: The Critical Turn in Every Deal</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ STAGE 4: LOI ══ -->
+  <div class="stage-panel" id="panel-4">
+    <div class="stage-header">
+      <div class="stage-eyebrow">Stage 04 · <span data-lang="zh">意向书 LOI</span><span data-lang="en">Letter of Intent</span></div>
+      <h2 class="stage-title">
+        <span data-lang="zh">LOI 是交易的<br><em>第二场</em>真正的谈判</span>
+        <span data-lang="en">The LOI Is the Deal's<br><em>Second Real</em> Negotiation</span>
+      </h2>
+      <p class="stage-desc">
+        <span data-lang="zh">很多人以为LOI只是"先签个东西"，然后大事到SPA再谈。错。LOI里的每一个关键条款——排他期、no-shop、分手费、关键交易假设——在SPA阶段几乎无法再改。LOI没谈好，SPA的空间就被提前锁死。</span>
+        <span data-lang="en">Many think the LOI is a placeholder — "we'll fight it out in the SPA." Wrong. Every key LOI term — exclusivity, no-shop, break fees, core deal assumptions — is nearly impossible to move in the SPA phase. A weak LOI locks down your SPA room before you ever start.</span>
+      </p>
+    </div>
+
+    <div class="pain-banner">
+      <div class="pain-icon">🔐</div>
+      <div class="pain-text">
+        <span data-lang="zh"><strong>最昂贵的 LOI 错误：</strong>接受一个"60天排他期+无条件分手费"的LOI，然后在尽调发现重大问题时，卖方以"你签了排他期"为由，拒绝下调价格或调整结构。此时你只有两个选择——付原价买，或者白白烧掉几百万法律费用。</span>
+        <span data-lang="en"><strong>The most expensive LOI mistake:</strong> Accepting "60-day exclusivity + unconditional break fee" — then in DD you find serious issues, and the seller refuses to reprice or restructure because "you're locked in." Now you either pay the original price or walk with millions in sunk legal fees.</span>
+      </div>
+    </div>
+
+    <div class="tools-label"><span data-lang="zh">工具 & 资源</span><span data-lang="en">Tools & Resources</span></div>
+    <div class="tools-grid">
+
+      <!-- LOI key terms -->
+      <div class="tool-card evonne" style="grid-column:1/-1;">
+        <div class="card-top">
+          <div class="card-icon">🗝️</div>
+          <div class="card-type-badge">Evonne原创 · Clause Guide</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">LOI必谈的5个关键条款</span>
+            <span data-lang="en">5 Must-Negotiate Clauses in Every LOI</span>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th><span data-lang="zh">条款</span><span data-lang="en">Clause</span></th>
+                  <th><span data-lang="zh">买方立场</span><span data-lang="en">Buyer Position</span></th>
+                  <th><span data-lang="zh">常见妥协</span><span data-lang="en">Common Landing</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span data-lang="zh">排他期</span><span data-lang="en">Exclusivity</span></td>
+                  <td><span data-lang="zh">60天足够尽调</span><span data-lang="en">60 days enough for DD</span></td>
+                  <td><span data-lang="zh">45–90天，可延展</span><span data-lang="en">45–90 days, extendable</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">No-shop</span><span data-lang="en">No-shop</span></td>
+                  <td><span data-lang="zh">绝对不接洽其他买家</span><span data-lang="en">No contact with other buyers</span></td>
+                  <td><span data-lang="zh">允许"被动接收" offer</span><span data-lang="en">Passive receipt of offers allowed</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">分手费</span><span data-lang="en">Break fee</span></td>
+                  <td><span data-lang="zh">仅在买方无正当理由退出时触发</span><span data-lang="en">Only if buyer walks without cause</span></td>
+                  <td><span data-lang="zh">1–3% 交易金额，有限情形</span><span data-lang="en">1–3% of deal value, limited triggers</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">尽调合作</span><span data-lang="en">DD cooperation</span></td>
+                  <td><span data-lang="zh">全面数据访问和管理层面谈</span><span data-lang="en">Full data access + mgmt meetings</span></td>
+                  <td><span data-lang="zh">限定范围 + NDA 保护</span><span data-lang="en">Scoped + under NDA</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">价格调整条件</span><span data-lang="en">Price adjustment</span></td>
+                  <td><span data-lang="zh">保留因重大问题调价权</span><span data-lang="en">Keep right to reprice on material issues</span></td>
+                  <td><span data-lang="zh">限定"material adverse"情形</span><span data-lang="en">Limited to "material adverse" events</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="evonne-tip">
+            <strong><span data-lang="zh">Evonne 建议：</span><span data-lang="en">Evonne's tip:</span></strong>
+            <span data-lang="zh">LOI 里最容易被买方"轻率签署"的两项是分手费和排他期。分手费一定要和卖方达成对等（双向触发），排他期建议不超过 60 天并允许因尽调重大发现而终止。</span>
+            <span data-lang="en">Break fees and exclusivity are where buyers most often sign too casually. Make break fees reciprocal, cap exclusivity at ~60 days, and reserve the right to terminate for material DD findings.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Binding vs Non-binding -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">🧩</div>
+          <div class="card-type-badge">Legal Structure</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">LOI里哪些部分有约束力？</span>
+            <span data-lang="en">Which LOI Terms Are Actually Binding?</span>
+          </div>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:8px; font-size:12px; color:var(--light-text); line-height:1.7;">
+            <li><strong style="color:var(--dark);"><span data-lang="zh">无约束力的部分：</span><span data-lang="en">Non-binding:</span></strong> <span data-lang="zh">价格、交易结构、结束条件</span><span data-lang="en">Price, structure, closing conditions</span></li>
+            <li><strong style="color:var(--dark);"><span data-lang="zh">有约束力的部分：</span><span data-lang="en">Binding:</span></strong> <span data-lang="zh">排他期、保密、费用分摊、适用法律、争议解决</span><span data-lang="en">Exclusivity, confidentiality, cost allocation, governing law, dispute resolution</span></li>
+            <li><strong style="color:var(--dark);"><span data-lang="zh">灰色地带：</span><span data-lang="en">Gray area:</span></strong> <span data-lang="zh">"本着诚信谈判"—— 看起来软，实际可能被法院视为合同义务</span><span data-lang="en">"Negotiate in good faith" — soft-sounding but courts can read it as a contractual duty</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Deal certainty levers -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">⚙️</div>
+          <div class="card-type-badge">Certainty Levers</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">买方保留的4个"逃生通道"</span>
+            <span data-lang="en">4 Exit Ramps Buyers Should Preserve</span>
+          </div>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:8px; font-size:12px; color:var(--light-text); line-height:1.65;">
+            <li>→ <span data-lang="zh">尽调完成条件（"subject to satisfactory DD"）</span><span data-lang="en">DD satisfaction clause</span></li>
+            <li>→ <span data-lang="zh">监管批准条件（CFIUS、HSR、行业审批）</span><span data-lang="en">Regulatory approval condition</span></li>
+            <li>→ <span data-lang="zh">董事会/股东最终批准</span><span data-lang="en">Board/shareholder final approval</span></li>
+            <li>→ <span data-lang="zh">融资确定性（如适用）</span><span data-lang="en">Financing certainty (if applicable)</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resources-section">
+      <div class="resources-label"><span data-lang="zh">Evonne 推荐阅读</span><span data-lang="en">Evonne Recommends</span></div>
+      <div class="resource-links">
+        <a href="../blog/blog-ma-process.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">📘</div>
+            <div>
+              <div class="resource-link-cat">Blog · LOI</div>
+              <div class="resource-link-title"><span data-lang="zh">LOI阶段：买方律师的三张"护城河"</span><span data-lang="en">LOI Stage: Three Moats a Buyer's Lawyer Must Hold</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="../blog/blog-ma-pricing.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">💹</div>
+            <div>
+              <div class="resource-link-cat">Blog · Valuation</div>
+              <div class="resource-link-title"><span data-lang="zh">价格调整的博弈：定价逻辑与谈判策略</span><span data-lang="en">The Repricing Game: Valuation Logic & Negotiation Leverage</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ STAGE 5: DUE DILIGENCE ══ -->
+  <div class="stage-panel" id="panel-5">
+    <div class="stage-header">
+      <div class="stage-eyebrow">Stage 05 · <span data-lang="zh">尽职调查</span><span data-lang="en">Due Diligence</span></div>
+      <h2 class="stage-title">
+        <span data-lang="zh">尽调是<br><em>最后的</em>重新定价机会</span>
+        <span data-lang="en">DD Is Your <em>Last</em><br>Chance to Reprice</span>
+      </h2>
+      <p class="stage-desc">
+        <span data-lang="zh">尽职调查不只是"检查一下"——它是系统性地发现那些会影响价格、结构、甚至要不要继续做的问题。尽调做不扎实，交割后才暴雷，代价可能是整笔交易的几倍。</span>
+        <span data-lang="en">Due diligence isn't just a "check the boxes" exercise — it's the systematic discovery of problems that can change price, structure, or whether you proceed at all. Weak DD means post-closing surprises that can cost multiples of the deal value.</span>
+      </p>
+    </div>
+
+    <div class="pain-banner">
+      <div class="pain-icon">🔍</div>
+      <div class="pain-text">
+        <span data-lang="zh"><strong>中资买家的尽调盲区：</strong>过度依赖卖方data room里的"官方材料"，忽略了公开数据库、员工访谈、客户电话、供应商核实等独立信息源。真正重要的问题，往往藏在数据室之外。</span>
+        <span data-lang="en"><strong>The Chinese buyer DD blind spot:</strong> Over-reliance on the seller's data room "official materials," ignoring independent sources — public databases, employee interviews, customer calls, supplier verification. The real issues usually live outside the data room.</span>
+      </div>
+    </div>
+
+    <div class="tools-label"><span data-lang="zh">工具 & 资源</span><span data-lang="en">Tools & Resources</span></div>
+    <div class="tools-grid">
+
+      <!-- DD checklist -->
+      <div class="tool-card evonne" style="grid-column:1/-1;">
+        <div class="card-top">
+          <div class="card-icon">📋</div>
+          <div class="card-type-badge">Evonne原创 · Master Checklist</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">跨境并购尽调清单 · 法律维度</span>
+            <span data-lang="en">Cross-Border M&A Legal DD Checklist</span>
+          </div>
+          <ul class="checklist">
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">公司组织文件、股权结构、子公司链条</span><span data-lang="en">Corporate docs, cap table, subsidiary chain</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">重大合同清单（客户、供应商、贷款、租赁）</span><span data-lang="en">Material contracts (customer, supplier, debt, lease)</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">变更控制条款（change of control clauses）</span><span data-lang="en">Change-of-control clauses</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">知识产权权属与侵权风险</span><span data-lang="en">IP ownership & infringement risk</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">员工合同、期权计划、遣散责任</span><span data-lang="en">Employment, option plans, severance liability</span></span>
+              <span class="check-priority">MEDIUM</span>
+            </li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">未决诉讼、监管调查、政府处罚</span><span data-lang="en">Litigation, regulatory inquiries, sanctions</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">数据隐私、AI合规、出口管制</span><span data-lang="en">Data privacy, AI compliance, export control</span></span>
+              <span class="check-priority">MEDIUM</span>
+            </li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">房地产、环境责任、保险覆盖</span><span data-lang="en">Real estate, environmental, insurance</span></span>
+              <span class="check-priority">MEDIUM</span>
+            </li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">关联方交易、潜在利益冲突</span><span data-lang="en">Related-party deals, conflicts of interest</span></span>
+              <span class="check-priority">MEDIUM</span>
+            </li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">税务申报合规与潜在税务负债</span><span data-lang="en">Tax compliance & contingent tax liabilities</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+          </ul>
+          <div class="evonne-tip">
+            <strong><span data-lang="zh">Evonne 建议：</span><span data-lang="en">Evonne's tip:</span></strong>
+            <span data-lang="zh">每个HIGH项目如果发现异常，都要转成一张"Issues List"并对应到具体的SPA条款（价格调整、特别陈述保证、托管金、特别赔偿）。不要把发现藏在脚注里。</span>
+            <span data-lang="en">Every HIGH-priority finding should go on an "Issues List" mapped to a specific SPA lever — price adjustment, special reps, escrow, specific indemnity. Don't bury findings in footnotes.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Red flag map -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">🚩</div>
+          <div class="card-type-badge">Red Flag Map</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">5个"红灯级"发现</span>
+            <span data-lang="en">5 Deal-Killer Findings</span>
+          </div>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:8px; font-size:12px; color:var(--light-text); line-height:1.7;">
+            <li>🚩 <span data-lang="zh">单一客户超过40%收入</span><span data-lang="en">Single customer &gt;40% of revenue</span></li>
+            <li>🚩 <span data-lang="zh">核心IP权属不清或存在争议</span><span data-lang="en">Core IP ownership unclear or disputed</span></li>
+            <li>🚩 <span data-lang="zh">未披露的重大未决诉讼</span><span data-lang="en">Undisclosed material litigation</span></li>
+            <li>🚩 <span data-lang="zh">税务申报存在系统性瑕疵</span><span data-lang="en">Systemic tax compliance issues</span></li>
+            <li>🚩 <span data-lang="zh">关键合同含限制性change of control</span><span data-lang="en">Critical contracts with restrictive change-of-control</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Independent sources card -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">🔎</div>
+          <div class="card-type-badge">Outside-In DD</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">数据室之外的6个信息源</span>
+            <span data-lang="en">6 Sources Outside the Data Room</span>
+          </div>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:8px; font-size:12px; color:var(--light-text); line-height:1.65;">
+            <li>→ <span data-lang="zh">PACER（联邦诉讼数据库）</span><span data-lang="en">PACER (federal litigation database)</span></li>
+            <li>→ <span data-lang="zh">州级UCC/留置权查询</span><span data-lang="en">State UCC / lien search</span></li>
+            <li>→ <span data-lang="zh">OFAC/BIS制裁与出口管制筛查</span><span data-lang="en">OFAC/BIS sanctions & export screening</span></li>
+            <li>→ <span data-lang="zh">员工访谈（LinkedIn 离职员工）</span><span data-lang="en">Employee interviews (LinkedIn alumni)</span></li>
+            <li>→ <span data-lang="zh">前五大客户/供应商电话核实</span><span data-lang="en">Top-5 customer/supplier calls</span></li>
+            <li>→ <span data-lang="zh">行业记者与第三方市场报告</span><span data-lang="en">Industry press & third-party market reports</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resources-section">
+      <div class="resources-label"><span data-lang="zh">Evonne 推荐阅读</span><span data-lang="en">Evonne Recommends</span></div>
+      <div class="resource-links">
+        <a href="../blog/blog-ma-process.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">📘</div>
+            <div>
+              <div class="resource-link-cat">Blog · M&A Process</div>
+              <div class="resource-link-title"><span data-lang="zh">尽调实战：卖方数据室里你该怎么看</span><span data-lang="en">DD in Practice: How to Navigate the Seller's Data Room</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="../blog/blog-cfius-2026.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🛡️</div>
+            <div>
+              <div class="resource-link-cat">Blog · CFIUS</div>
+              <div class="resource-link-title"><span data-lang="zh">CFIUS 2026审查趋势：尽调中必须提前排雷</span><span data-lang="en">CFIUS 2026 Trends: Defuse Regulatory Risk During DD</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="../blog/us-deal-approvals.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🏛️</div>
+            <div>
+              <div class="resource-link-cat">Blog · Regulatory</div>
+              <div class="resource-link-title"><span data-lang="zh">尽调必查：美国交易审批全景图</span><span data-lang="en">DD Must-Check: The Full US Deal Approvals Map</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ STAGE 6: REGULATORY / TAX ══ -->
+  <div class="stage-panel" id="panel-6">
+    <div class="stage-header">
+      <div class="stage-eyebrow">Stage 06 · <span data-lang="zh">监管审批与税务架构</span><span data-lang="en">Regulatory & Tax Structuring</span></div>
+      <h2 class="stage-title">
+        <span data-lang="zh">CFIUS 和税务<br><em>决定</em>了一切</span>
+        <span data-lang="en">CFIUS & Tax<br><em>Decide</em> Everything</span>
+      </h2>
+      <p class="stage-desc">
+        <span data-lang="zh">对中资买家而言，2026年的美国并购环境有两座"看不见的墙"——CFIUS国家安全审查和不断收紧的外国所得税规则。提前评估、提前规划、提前沟通，是避免交易被"拦腰截断"的唯一方法。</span>
+        <span data-lang="en">For Chinese buyers in 2026, US M&A has two invisible walls — CFIUS national-security review and increasingly tight foreign-earnings tax rules. Early assessment, structuring, and regulator engagement are the only ways to avoid a deal being cut in half.</span>
+      </p>
+    </div>
+
+    <div class="pain-banner">
+      <div class="pain-icon">🏛️</div>
+      <div class="pain-text">
+        <span data-lang="zh"><strong>2026 年的新现实：</strong>CFIUS 审查面越来越宽，"关键技术""敏感数据""基础设施"的定义不断扩大；而美国对外国所得的征税规则（包括 BEAT、GILTI、FIRPTA）也在持续收紧。不提前把这两条拉通，任何结构都只是纸上谈兵。</span>
+        <span data-lang="en"><strong>The 2026 reality:</strong> CFIUS scope is widening — "critical tech," "sensitive data," and "infrastructure" keep expanding. Meanwhile US taxation of foreign earnings (BEAT, GILTI, FIRPTA) keeps tightening. Without running these two tracks together from day one, any structure is just paper.</span>
+      </div>
+    </div>
+
+    <div class="tools-label"><span data-lang="zh">工具 & 资源</span><span data-lang="en">Tools & Resources</span></div>
+    <div class="tools-grid">
+
+      <!-- CFIUS risk screener -->
+      <div class="tool-card interactive risk-screener" style="grid-column:1/-1;">
+        <div class="risk-progress"><div class="risk-progress-fill" id="riskProgress" style="width:0%"></div></div>
+        <div class="card-top" style="padding-top:20px;">
+          <div class="card-icon">🛡️</div>
+          <div class="card-type-badge">Interactive · CFIUS Screener</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title"><span data-lang="zh">CFIUS 风险快速筛查器</span><span data-lang="en">CFIUS Risk Quick Screener</span></div>
+          <p class="card-desc">
+            <span data-lang="zh">5个问题，3分钟预判这笔交易的 CFIUS 暴露度。仅供初步参考，不构成法律意见。</span>
+            <span data-lang="en">5 questions, 3 minutes — get a preliminary CFIUS exposure read. For screening only; not legal advice.</span>
+          </p>
+          <div class="risk-step-count" id="riskStepCount">1 / 5</div>
+          <div class="risk-q" id="riskQuestion"></div>
+          <div class="risk-opts" id="riskOptions"></div>
+          <div class="risk-result" id="riskResult">
+            <div class="risk-result-icon" id="riskResultIcon"></div>
+            <div class="risk-result-verdict" id="riskResultVerdict"></div>
+            <div class="risk-result-sub" id="riskResultSub"></div>
+            <button class="risk-restart" onclick="restartRisk()">
+              <span data-lang="zh">重新开始</span><span data-lang="en">Restart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sensitive sectors card -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">⚠️</div>
+          <div class="card-type-badge">Sensitive Sectors</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">CFIUS 高敏感行业清单</span>
+            <span data-lang="en">CFIUS High-Sensitivity Sectors</span>
+          </div>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:7px; font-size:12px; color:var(--light-text); line-height:1.65;">
+            <li>→ <span data-lang="zh">半导体、AI、量子计算</span><span data-lang="en">Semiconductors, AI, quantum</span></li>
+            <li>→ <span data-lang="zh">生物技术、基因数据、医疗设备</span><span data-lang="en">Biotech, genomic data, medical devices</span></li>
+            <li>→ <span data-lang="zh">关键矿产、能源、航天</span><span data-lang="en">Critical minerals, energy, aerospace</span></li>
+            <li>→ <span data-lang="zh">云计算、数据中心、网络安全</span><span data-lang="en">Cloud, data centers, cybersecurity</span></li>
+            <li>→ <span data-lang="zh">涉军用途、双用技术</span><span data-lang="en">Military / dual-use tech</span></li>
+            <li>→ <span data-lang="zh">港口、机场等基础设施邻近资产</span><span data-lang="en">Assets near ports, airports, critical infra</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tax structuring card -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">💹</div>
+          <div class="card-type-badge">Tax Structure</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">中资买家常见税务架构</span>
+            <span data-lang="en">Common Structures for Chinese Buyers</span>
+          </div>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:10px; font-size:12px; color:var(--light-text); line-height:1.65;">
+            <li><strong style="color:var(--dark);"><span data-lang="zh">美国 C-Corp 控股：</span><span data-lang="en">US C-Corp holdco:</span></strong> <span data-lang="zh">简单直接，但股息汇出受 WHT 影响。</span><span data-lang="en">Simple but dividends face withholding.</span></li>
+            <li><strong style="color:var(--dark);"><span data-lang="zh">香港/新加坡中间控股：</span><span data-lang="en">HK/SG intermediate holdco:</span></strong> <span data-lang="zh">需满足经济实质，规避反滥用规则。</span><span data-lang="en">Needs economic substance, watch anti-abuse rules.</span></li>
+            <li><strong style="color:var(--dark);"><span data-lang="zh">资产 vs 股权收购：</span><span data-lang="en">Asset vs stock purchase:</span></strong> <span data-lang="zh">税基步进 vs 税负连带，权衡折中。</span><span data-lang="en">Step-up basis vs assumed liabilities — trade-offs differ.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Regulatory timeline -->
+      <div class="tool-card evonne" style="grid-column:1/-1;">
+        <div class="card-top">
+          <div class="card-icon">⏳</div>
+          <div class="card-type-badge">Timeline Reality</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">美国并购审批时间表（2026 实战版）</span>
+            <span data-lang="en">US M&A Approval Timeline (2026 Reality)</span>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th><span data-lang="zh">审批项</span><span data-lang="en">Approval</span></th>
+                  <th><span data-lang="zh">典型时间</span><span data-lang="en">Typical Duration</span></th>
+                  <th><span data-lang="zh">触发条件</span><span data-lang="en">Trigger</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CFIUS (<span data-lang="zh">短表</span><span data-lang="en">Declaration</span>)</td>
+                  <td>30 <span data-lang="zh">天</span><span data-lang="en">days</span></td>
+                  <td><span data-lang="zh">TID业务 + 外资收购</span><span data-lang="en">TID + foreign acquirer</span></td>
+                </tr>
+                <tr>
+                  <td>CFIUS (<span data-lang="zh">长表</span><span data-lang="en">Full Notice</span>)</td>
+                  <td>45+45+15 <span data-lang="zh">天</span><span data-lang="en">days</span></td>
+                  <td><span data-lang="zh">高敏感交易</span><span data-lang="en">High-sensitivity deals</span></td>
+                </tr>
+                <tr>
+                  <td>HSR <span data-lang="zh">反垄断</span><span data-lang="en">Antitrust</span></td>
+                  <td>30 <span data-lang="zh">天初审</span><span data-lang="en">days initial</span></td>
+                  <td><span data-lang="zh">超过门槛交易额</span><span data-lang="en">Above threshold</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">行业许可</span><span data-lang="en">Industry Approvals</span></td>
+                  <td><span data-lang="zh">因行业而异</span><span data-lang="en">Varies by industry</span></td>
+                  <td><span data-lang="zh">金融、通信、能源、国防</span><span data-lang="en">Finance, telecom, energy, defense</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">中国境内审批</span><span data-lang="en">China Outbound Approval</span></td>
+                  <td>1–3 <span data-lang="zh">个月</span><span data-lang="en">months</span></td>
+                  <td><span data-lang="zh">ODI 备案/核准</span><span data-lang="en">ODI filing/approval</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resources-section">
+      <div class="resources-label"><span data-lang="zh">Evonne 推荐阅读</span><span data-lang="en">Evonne Recommends</span></div>
+      <div class="resource-links">
+        <a href="../blog/blog-cfius-2026.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🛡️</div>
+            <div>
+              <div class="resource-link-cat">Blog · CFIUS 2026</div>
+              <div class="resource-link-title"><span data-lang="zh">CFIUS 2026：中资买家的新规与新风险</span><span data-lang="en">CFIUS 2026: New Rules and New Risks for Chinese Buyers</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="../blog/us-deal-approvals.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🏛️</div>
+            <div>
+              <div class="resource-link-cat">Blog · Approvals</div>
+              <div class="resource-link-title"><span data-lang="zh">一笔美国并购，要过多少监管关</span><span data-lang="en">A US Deal: How Many Approval Gates?</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="../blog/ieepa-refund-participation.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">⚖️</div>
+            <div>
+              <div class="resource-link-cat">Blog · Sanctions</div>
+              <div class="resource-link-title"><span data-lang="zh">IEEPA 退款案参与：中资企业的主动维权</span><span data-lang="en">IEEPA Refund Participation: Proactive Rights Protection</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ STAGE 7: CLOSING ══ -->
+  <div class="stage-panel" id="panel-7">
+    <div class="stage-header">
+      <div class="stage-eyebrow">Stage 07 · <span data-lang="zh">交割与整合</span><span data-lang="en">Closing & Integration</span></div>
+      <h2 class="stage-title">
+        <span data-lang="zh">签了字<br>只是<em>新故事</em>的开始</span>
+        <span data-lang="en">Signing Is Just the<br><em>Start</em> of the Next Story</span>
+      </h2>
+      <p class="stage-desc">
+        <span data-lang="zh">交割日之后的90天，决定了这笔交易是"价值创造"还是"价值毁灭"。SPA 的每一条陈述与保证、每一笔调整金、每一次"交割条件"都是为了让这个新故事顺利开始——而整合计划则决定了它能不能一直写下去。</span>
+        <span data-lang="en">The 90 days after closing decide whether this deal creates or destroys value. Every SPA rep, every adjustment, every closing condition exists so the next chapter can start cleanly — and your integration plan decides whether it keeps going.</span>
+      </p>
+    </div>
+
+    <div class="pain-banner">
+      <div class="pain-icon">🎯</div>
+      <div class="pain-text">
+        <span data-lang="zh"><strong>交割后的"第一个月危机"：</strong>核心员工流失、客户流失、IT系统脱节、合规漏洞暴露——统计显示，超过 60% 的并购"价值损失"发生在交割后前 90 天。整合计划必须在交割前就已到位。</span>
+        <span data-lang="en"><strong>The "first 30 days" crisis:</strong> Key employees leave, customers walk, IT systems detach, compliance gaps surface. Studies show over 60% of M&A value loss happens in the first 90 days after close. Integration must be ready on closing day — not drafted on it.</span>
+      </div>
+    </div>
+
+    <div class="tools-label"><span data-lang="zh">工具 & 资源</span><span data-lang="en">Tools & Resources</span></div>
+    <div class="tools-grid">
+
+      <!-- Closing day checklist -->
+      <div class="tool-card evonne" style="grid-column:1/-1;">
+        <div class="card-top">
+          <div class="card-icon">✅</div>
+          <div class="card-type-badge">Evonne原创 · Closing Day</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">交割日必办清单（14项）</span>
+            <span data-lang="en">Closing Day Checklist (14 items)</span>
+          </div>
+          <ul class="checklist">
+            <li onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-text"><span data-lang="zh">所有 Closing Conditions 已满足并书面确认</span><span data-lang="en">All closing conditions satisfied & confirmed in writing</span></span><span class="check-priority high">HIGH</span></li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-text"><span data-lang="zh">监管批准（CFIUS、HSR、行业许可）到位</span><span data-lang="en">Regulatory approvals in hand</span></span><span class="check-priority high">HIGH</span></li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-text"><span data-lang="zh">SPA、披露函、附件全部签署</span><span data-lang="en">SPA, disclosure letter, exhibits executed</span></span><span class="check-priority high">HIGH</span></li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-text"><span data-lang="zh">交割价格计算、调整金与托管金确认</span><span data-lang="en">Closing calc, adjustments, escrow confirmed</span></span><span class="check-priority high">HIGH</span></li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-text"><span data-lang="zh">资金到位并按交割流程表支付</span><span data-lang="en">Funds wired per closing flow</span></span><span class="check-priority high">HIGH</span></li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-text"><span data-lang="zh">股权/资产过户文件签署和登记</span><span data-lang="en">Transfer docs signed & recorded</span></span><span class="check-priority high">HIGH</span></li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-text"><span data-lang="zh">原董事/高管辞职书签署</span><span data-lang="en">Director/officer resignations signed</span></span><span class="check-priority">MEDIUM</span></li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-text"><span data-lang="zh">新董事会组建与章程修订</span><span data-lang="en">New board constituted, charter updated</span></span><span class="check-priority">MEDIUM</span></li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-text"><span data-lang="zh">银行账户签字权变更</span><span data-lang="en">Bank signing authority updated</span></span><span class="check-priority">MEDIUM</span></li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-text"><span data-lang="zh">员工、客户、供应商通知</span><span data-lang="en">Notices to employees, customers, suppliers</span></span><span class="check-priority">MEDIUM</span></li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-text"><span data-lang="zh">保险过户、D&O覆盖</span><span data-lang="en">Insurance transfer, D&O coverage</span></span><span class="check-priority">MEDIUM</span></li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-text"><span data-lang="zh">交割后30天/90天整合启动</span><span data-lang="en">Integration kickoff within 30/90 days</span></span><span class="check-priority">MEDIUM</span></li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-text"><span data-lang="zh">W&I 保险生效通知</span><span data-lang="en">W&I insurance bound</span></span><span class="check-priority">LOW</span></li>
+            <li onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-text"><span data-lang="zh">交割材料归档、各方存档副本</span><span data-lang="en">Closing binder archived for all parties</span></span><span class="check-priority">LOW</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Post-close integration card -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">🧭</div>
+          <div class="card-type-badge">Integration 90-day</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">交割后 90 天整合地图</span>
+            <span data-lang="en">90-Day Integration Map</span>
+          </div>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:10px; font-size:12px; color:var(--light-text); line-height:1.65;">
+            <li><strong style="color:var(--dark);"><span data-lang="zh">Day 1:</span><span data-lang="en">Day 1:</span></strong> <span data-lang="zh">全员通告、CEO演讲、客户/供应商信件</span><span data-lang="en">All-hands, CEO note, customer/supplier letters</span></li>
+            <li><strong style="color:var(--dark);"><span data-lang="zh">Week 1:</span><span data-lang="en">Week 1:</span></strong> <span data-lang="zh">核心员工1对1、留任协议签署</span><span data-lang="en">Key employee 1:1s, retention agreements</span></li>
+            <li><strong style="color:var(--dark);"><span data-lang="zh">Day 30:</span><span data-lang="en">Day 30:</span></strong> <span data-lang="zh">整合委员会启动、关键指标仪表盘</span><span data-lang="en">Integration steering committee, KPI dashboard live</span></li>
+            <li><strong style="color:var(--dark);"><span data-lang="zh">Day 90:</span><span data-lang="en">Day 90:</span></strong> <span data-lang="zh">第一次"交易复盘"会议，调整剧本</span><span data-lang="en">First "deal retrospective," recalibrate playbook</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Common post-close disputes -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">⚖️</div>
+          <div class="card-type-badge">Dispute Traps</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">交割后最常见的4类争议</span>
+            <span data-lang="en">4 Most Common Post-Close Disputes</span>
+          </div>
+          <ul style="list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:10px; font-size:12px; color:var(--light-text); line-height:1.65;">
+            <li>⚡ <strong style="color:var(--dark);"><span data-lang="zh">营运资本调整。</span><span data-lang="en">Working capital adjustment.</span></strong> <span data-lang="zh">计算口径分歧几乎是必发。</span><span data-lang="en">Definitional disputes are nearly universal.</span></li>
+            <li>⚡ <strong style="color:var(--dark);"><span data-lang="zh">Earn-out 触发条件。</span><span data-lang="en">Earn-out triggers.</span></strong> <span data-lang="zh">指标定义模糊是主要原因。</span><span data-lang="en">Vague metric definitions are the usual cause.</span></li>
+            <li>⚡ <strong style="color:var(--dark);"><span data-lang="zh">R&W违约索赔。</span><span data-lang="en">R&W breach claims.</span></strong> <span data-lang="zh">"Material" 的定义经常成为争议点。</span><span data-lang="en">"Material" definitions become the battleground.</span></li>
+            <li>⚡ <strong style="color:var(--dark);"><span data-lang="zh">核心员工离职。</span><span data-lang="en">Key employee attrition.</span></strong> <span data-lang="zh">留任条款和非竞争条款的执行。</span><span data-lang="en">Retention & non-compete enforcement.</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resources-section">
+      <div class="resources-label"><span data-lang="zh">Evonne 推荐阅读</span><span data-lang="en">Evonne Recommends</span></div>
+      <div class="resource-links">
+        <a href="../blog/blog-ma-process.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">📘</div>
+            <div>
+              <div class="resource-link-cat">Blog · Closing</div>
+              <div class="resource-link-title"><span data-lang="zh">从签约到交割：那些合同里不写的"潜规则"</span><span data-lang="en">From Signing to Closing: The Unwritten Rules</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="../blog/us-deal-approvals.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🏛️</div>
+            <div>
+              <div class="resource-link-cat">Blog · Regulatory</div>
+              <div class="resource-link-title"><span data-lang="zh">交割前最后一关：审批流程全景</span><span data-lang="en">The Final Gate: Regulatory Approvals Before Closing</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="../blog/small-business-seller-exit.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🏷️</div>
+            <div>
+              <div class="resource-link-cat">Blog · Seller's View</div>
+              <div class="resource-link-title"><span data-lang="zh">卖方视角：交割日卖家最在意什么</span><span data-lang="en">Seller's Perspective: What Sellers Care About on Closing Day</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- /content-area -->
+
+<!-- CTA SECTION -->
 <section class="cta-section">
-  <h2><span data-lang="zh">有具体交易？<em>直接聊聊</em></span><span data-lang="en">Have a Deal? <em>Let's Talk</em></span></h2>
-  <p><span data-lang="zh">每一次合作都始于一次对话。免费 30 分钟咨询，看看我是否能帮到你。</span><span data-lang="en">Every engagement starts with a conversation. Book a complimentary 30-minute call to see if we're the right fit.</span></p>
-  <a href="https://calendly.com/evonne-xu-legal/30min" target="_blank" class="btn-primary"><span data-lang="zh">预约咨询 →</span><span data-lang="en">Book a Call →</span></a>
+  <div class="cta-inner">
+    <div class="cta-tag">Deal Navigator</div>
+    <h2 class="cta-title">
+      <span data-lang="zh">有正在进行的交易？<em>让我们谈谈</em></span>
+      <span data-lang="en">A Live Deal on Your Desk? <em>Let's Talk</em></span>
+    </h2>
+    <p class="cta-desc">
+      <span data-lang="zh">每一笔跨境并购都是独一无二的。免费 30 分钟沟通，看看我能否帮你把路线图落到实处。</span>
+      <span data-lang="en">Every cross-border deal is unique. Book a complimentary 30-minute call — let's see if I can help you turn this roadmap into action.</span>
+    </p>
+    <div class="cta-btns">
+      <a href="https://calendly.com/evonne-xu-legal/30min" target="_blank" class="btn-primary">
+        <span data-lang="zh">预约咨询 →</span><span data-lang="en">Book a Call →</span>
+      </a>
+      <a href="mailto:evonne.xu.legal@gmail.com" class="btn-ghost">
+        <span data-lang="zh">邮件联系</span><span data-lang="en">Email Me</span>
+      </a>
+    </div>
+  </div>
 </section>
 
-<footer>© 2026 Evonne Xu Law · evonne.xu.legal@gmail.com</footer>
+<footer>
+  <div class="footer-text">© 2026 Evonne Xu Law · evonne.xu.legal@gmail.com</div>
+  <a href="../index.html" class="footer-link"><span data-lang="zh">返回主页</span><span data-lang="en">Back to Home</span></a>
+</footer>
 
 <script>
-function switchLang(lang){
-  document.body.className='lang-'+lang;
-  document.getElementById('btn-zh').classList.toggle('active',lang==='zh');
-  document.getElementById('btn-en').classList.toggle('active',lang==='en');
-  localStorage.setItem('evonne-lang',lang);
+/* ─── LANGUAGE ─── */
+function switchLang(lang) {
+  document.body.className = 'lang-' + lang;
+  document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  localStorage.setItem('evonne-lang', lang);
+  applyLang(lang);
+  // Re-render risk quiz with new language
+  if (!document.getElementById('riskResult').classList.contains('show')) {
+    renderRiskStep();
+  }
 }
-const saved=localStorage.getItem('evonne-lang')||'zh';
-switchLang(saved);
+function applyLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    const isSpan = el.tagName === 'SPAN';
+    el.style.display = el.getAttribute('data-lang') === lang ? (isSpan ? 'inline' : 'block') : 'none';
+  });
+}
+const savedLang = localStorage.getItem('evonne-lang') || 'zh';
+switchLang(savedLang);
+
+/* ─── STAGE NAVIGATION ─── */
+let currentStage = 0;
+function showStage(n) {
+  document.querySelectorAll('.stage-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.journey-card').forEach((nd, i) => {
+    nd.classList.remove('active', 'done');
+    if (i < n) nd.classList.add('done');
+    if (i === n) nd.classList.add('active');
+  });
+  document.querySelectorAll('.stage-pill').forEach(p => p.classList.remove('current'));
+  const panelEl = document.getElementById('panel-' + n);
+  if (panelEl) panelEl.classList.add('active');
+  const pills = document.querySelectorAll('.stage-pill');
+  if (pills[n]) pills[n].classList.add('current');
+  currentStage = n;
+  applyLang(document.body.classList.contains('lang-zh') ? 'zh' : 'en');
+  const card = document.getElementById('node-' + n);
+  if (card) card.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+  setTimeout(() => {
+    document.querySelector('.content-area').scrollIntoView({behavior:'smooth', block:'start'});
+  }, 150);
+}
+
+/* ─── CHECKLIST TOGGLE ─── */
+function toggleCheck(li) { li.classList.toggle('checked'); }
+
+/* ─── CFIUS RISK SCREENER ─── */
+const RISK = {
+  zh: [
+    { q:'标的公司是否涉及以下任一领域：半导体、AI、量子、生物技术、关键矿产？',
+      opts:['是，核心业务就在这个领域','部分涉及，但非核心','完全不涉及'], scores:[3,2,0]},
+    { q:'标的公司是否接触美国公民的敏感个人数据（健康、金融、生物识别等）？',
+      opts:['是，大规模处理此类数据','少量涉及','不涉及'], scores:[3,1,0]},
+    { q:'标的公司的地理位置或资产是否邻近军事基地、港口、机场等敏感基础设施？',
+      opts:['是，邻近敏感设施','不确定，需核实','不涉及'], scores:[3,1,0]},
+    { q:'买方是否来自CFIUS"关注国家"（中国、俄罗斯等）？',
+      opts:['是','是，但通过第三国主体持有','否'], scores:[3,2,0]},
+    { q:'买方是否获得标的公司董事会席位、非公开信息访问或实质控制权？',
+      opts:['是，控制权收购','是，少数股权但有一定权利','被动投资，无特殊权利'], scores:[3,2,0]}
+  ],
+  en: [
+    { q:'Does the target touch any of: semiconductors, AI, quantum, biotech, critical minerals?',
+      opts:['Yes — core business','Partially, but not core','Not at all'], scores:[3,2,0]},
+    { q:'Does the target handle sensitive personal data of US citizens (health, financial, biometric)?',
+      opts:['Yes — at scale','A small amount','Not at all'], scores:[3,1,0]},
+    { q:'Is the target\'s location or assets near military bases, ports, airports, or critical infra?',
+      opts:['Yes — near sensitive facilities','Unclear — needs checking','Not at all'], scores:[3,1,0]},
+    { q:'Is the buyer from a CFIUS "country of concern" (China, Russia, etc.)?',
+      opts:['Yes','Yes, but via a third-country entity','No'], scores:[3,2,0]},
+    { q:'Does the buyer get board seats, non-public information access, or substantive control?',
+      opts:['Yes — control acquisition','Yes — minority with rights','Passive, no special rights'], scores:[3,2,0]}
+  ]
+};
+
+let riskAnswers = []; let riskStep = 0;
+function initRisk() { riskAnswers = []; riskStep = 0; renderRiskStep(); }
+function renderRiskStep() {
+  const lang = document.body.classList.contains('lang-zh') ? 'zh' : 'en';
+  const q = RISK[lang][riskStep];
+  document.getElementById('riskProgress').style.width = ((riskStep / 5) * 100) + '%';
+  document.getElementById('riskStepCount').textContent = (riskStep + 1) + ' / 5';
+  document.getElementById('riskQuestion').textContent = q.q;
+  document.getElementById('riskResult').classList.remove('show');
+  document.getElementById('riskStepCount').style.display = 'block';
+  const optsEl = document.getElementById('riskOptions');
+  optsEl.innerHTML = q.opts.map((opt, i) =>
+    `<button class="risk-opt" onclick="answerRisk(${q.scores[i]})">${opt}</button>`
+  ).join('');
+}
+function answerRisk(score) {
+  riskAnswers.push(score);
+  riskStep++;
+  if (riskStep < 5) renderRiskStep();
+  else showRiskResult();
+}
+function showRiskResult() {
+  const lang = document.body.classList.contains('lang-zh') ? 'zh' : 'en';
+  const total = riskAnswers.reduce((a,b) => a+b, 0);
+  document.getElementById('riskProgress').style.width = '100%';
+  document.getElementById('riskStepCount').style.display = 'none';
+  document.getElementById('riskQuestion').textContent = '';
+  document.getElementById('riskOptions').innerHTML = '';
+  const resultEl = document.getElementById('riskResult');
+  if (total >= 11) {
+    document.getElementById('riskResultIcon').textContent = '🚨';
+    document.getElementById('riskResultVerdict').textContent = lang === 'zh' ? '风险等级：高' : 'Risk: HIGH';
+    document.getElementById('riskResultSub').textContent = lang === 'zh'
+      ? '这笔交易大概率落入 CFIUS 强制申报范围，且可能被要求结构性补救或禁止。强烈建议在签LOI前就与CFIUS专业律师预沟通，并评估是否做短表或长表申报。'
+      : 'This deal likely falls within mandatory CFIUS review and may face structural remedies or a block. Engage CFIUS counsel before signing an LOI and assess declaration vs full notice.';
+  } else if (total >= 6) {
+    document.getElementById('riskResultIcon').textContent = '⚠️';
+    document.getElementById('riskResultVerdict').textContent = lang === 'zh' ? '风险等级：中' : 'Risk: MODERATE';
+    document.getElementById('riskResultSub').textContent = lang === 'zh'
+      ? '自愿申报可能更安全。在尽调阶段应做CFIUS风险评估备忘录，并预留监管时间表和缓解措施空间（如网络安全协议、董事任命限制等）。'
+      : 'Voluntary filing may be the safer path. Build a CFIUS risk memo during DD and leave timeline/mitigation room (e.g., cybersecurity protocols, board appointment limits).';
+  } else {
+    document.getElementById('riskResultIcon').textContent = '✅';
+    document.getElementById('riskResultVerdict').textContent = lang === 'zh' ? '风险等级：低' : 'Risk: LOW';
+    document.getElementById('riskResultSub').textContent = lang === 'zh'
+      ? '当前信息显示CFIUS风险较低，但仍建议在尽调中确认没有遗漏敏感技术、敏感数据或敏感资产。低风险不等于零申报义务。'
+      : 'Current inputs suggest low CFIUS risk, but confirm in DD that no sensitive tech, data, or assets have been missed. Low risk ≠ zero filing obligation.';
+  }
+  resultEl.classList.add('show');
+}
+function restartRisk() { initRisk(); }
+
+// Init risk screener
+initRisk();
 </script>
+
 </body>
 </html>
