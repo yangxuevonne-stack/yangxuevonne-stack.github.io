@@ -3,100 +3,750 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M&A卖方NDA谈判指南 | Evonne Xu Law</title>
-<meta name="description" content="并购交易中卖方如何谈判保密协议：机密信息定义、停滞条款、竞业禁止等5大核心条款解析">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@300;400&family=Noto+Serif+SC:wght@300;400&display=swap" rel="stylesheet">
+<title>NDA卖方谈判完全指南 | Evonne Xu Law</title>
+<meta name="description" content="收购流程中卖方如何审查NDA：8大核心条款解析、样本语言与谈判建议，保护商业秘密与谈判自由。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPB5RY7C2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4XPB5RY7C2');</script>
 <style>
-:root{--cream:#F7F3EE;--dark:#1C1510;--mid:#4A3728;--rose-gold:#C49A7A;--border:rgba(196,154,122,0.2);}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:"DM Sans",sans-serif;font-weight:300;background:var(--cream);color:var(--mid);display:flex;min-height:100vh;}
-.sidebar{width:220px;min-width:220px;background:var(--dark);position:fixed;top:0;left:0;height:100vh;padding:36px 20px;display:flex;flex-direction:column;gap:8px;z-index:10;}
-.sidebar .brand{font-family:"Cormorant Garamond",serif;color:var(--cream);font-size:15px;letter-spacing:.1em;margin-bottom:24px;text-decoration:none;}
-.sidebar .brand span{color:var(--rose-gold);}
-.sidebar ul{list-style:none;display:flex;flex-direction:column;gap:4px;}
-.sidebar ul li a{color:rgba(247,243,238,.6);font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:6px 8px;display:block;border-radius:2px;transition:color .2s;}
-.sidebar ul li a:hover{color:var(--rose-gold);}
-.sidebar ul li a.toc-link{font-size:10px;padding:4px 8px 4px 16px;letter-spacing:.06em;text-transform:none;color:rgba(247,243,238,.4);}
-.sidebar ul li a.toc-link:hover{color:rgba(196,154,122,.8);}
-.main{margin-left:220px;flex:1;padding:60px 48px 80px;max-width:800px;}
-.cat{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-gold);margin-bottom:12px;}
-h1{font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:300;line-height:1.25;color:var(--dark);margin-bottom:20px;}
-.meta{font-size:11px;color:#8C7060;letter-spacing:.08em;border-bottom:1px solid var(--border);padding-bottom:24px;margin-bottom:36px;}
-.intro{font-size:15px;line-height:1.85;margin-bottom:36px;}
-.clause{border:1px solid var(--border);border-radius:4px;padding:24px 28px;margin:20px 0;background:#fff;}
-.clause h2{font-family:"Cormorant Garamond",serif;font-size:1.1rem;font-weight:400;color:var(--dark);margin-bottom:10px;}
-.clause p{font-size:14px;line-height:1.8;margin-bottom:14px;}
-.clause pre{background:var(--dark);color:#d4b896;font-size:12px;line-height:1.7;padding:16px 18px;border-radius:3px;overflow-x:auto;white-space:pre-wrap;word-break:break-word;}
-.checklist{background:var(--dark);color:var(--cream);border-radius:4px;padding:28px 32px;margin-top:36px;}
-.checklist h3{font-family:"Cormorant Garamond",serif;font-size:1.15rem;font-weight:300;color:var(--rose-gold);margin-bottom:16px;}
-.checklist ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.checklist ul li{font-size:13px;line-height:1.6;padding-left:20px;position:relative;}
-.checklist ul li::before{content:"✓";position:absolute;left:0;color:var(--rose-gold);}
+/* ── 双语系统 ── */
+[data-lang]{display:none}
+body.zh [data-lang="zh"]{display:block}
+body.en [data-lang="en"]{display:block}
+body.zh span[data-lang="zh"],body.zh li[data-lang="zh"],body.zh td[data-lang="zh"],body.zh th[data-lang="zh"]{display:inline}
+body.en span[data-lang="en"],body.en li[data-lang="en"],body.en td[data-lang="en"],body.en th[data-lang="en"]{display:inline}
+body.zh div[data-lang="zh"],body.en div[data-lang="en"]{display:block}
+
+/* ── CSS变量 ── */
+:root{
+  --gold:#C49A7A;
+  --dark:#1C1510;
+  --cream:#F7F3EE;
+  --paper:#f5f2ec;
+  --gold-b:#b5862d;
+  --teal:#3a6b5a;
+  --mid:#4A3728;
+  --light:#8C7060;
+  --border:rgba(196,154,122,0.2);
+  --border-strong:rgba(196,154,122,0.45);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--mid);font-family:'Source Serif 4',serif;font-weight:300;line-height:1.8}
+
+/* ── 进度条 ── */
+#progress-bar{
+  position:fixed;top:52px;left:0;right:0;height:2px;z-index:200;
+  background:linear-gradient(90deg,var(--gold) var(--pct,0%),transparent 0);
+  transition:background .1s;
+}
+
+/* ── 导航 ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:var(--dark);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;height:52px;
+  border-bottom:2px solid var(--gold);
+}
+.nav-brand{
+  font-family:'DM Sans',sans-serif;color:var(--cream);
+  font-size:13px;letter-spacing:.15em;text-decoration:none;text-transform:uppercase;
+}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{
+  color:rgba(247,243,238,.7);text-decoration:none;
+  font-family:'DM Sans',sans-serif;font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;opacity:.7;transition:opacity .2s;
+}
+.nav-links a:hover{opacity:1}
+#langBtn{
+  font-family:'DM Sans',sans-serif;font-size:11px;
+  background:transparent;border:1px solid rgba(255,255,255,.3);
+  color:rgba(255,255,255,.7);padding:4px 12px;cursor:pointer;
+  letter-spacing:.08em;border-radius:2px;transition:border-color .2s,color .2s;
+}
+#langBtn:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ── Hero ── */
+.hero{
+  margin-top:52px;
+  background:var(--dark);
+  color:var(--cream);
+  padding:80px 40px 72px;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(196,154,122,0.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(196,154,122,0.06) 1px,transparent 1px);
+  background-size:40px 40px;
+  pointer-events:none;
+}
+.hero::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 70% 0%,rgba(196,154,122,0.18) 0%,transparent 60%),
+              radial-gradient(ellipse at 5% 100%,rgba(196,154,122,0.1) 0%,transparent 50%);
+  pointer-events:none;
+}
+.hero-inner{max-width:780px;margin:0 auto;position:relative;z-index:1}
+.hero-tag{
+  display:inline-block;margin-bottom:20px;
+  font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);border:1px solid rgba(196,154,122,0.4);
+  padding:4px 14px;border-radius:2px;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.2;
+  color:var(--cream);margin-bottom:20px;
+}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero-meta{
+  font-family:'DM Sans',sans-serif;font-size:12px;
+  letter-spacing:.08em;color:rgba(247,243,238,.5);
+  display:flex;gap:20px;flex-wrap:wrap;
+}
+
+/* ── 摘要条 ── */
+.summary-bar{
+  background:var(--dark);color:var(--cream);
+  padding:24px 40px;border-bottom:1px solid var(--border-strong);
+}
+.summary-bar-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;gap:16px;align-items:flex-start;
+}
+.summary-icon{font-size:22px;flex-shrink:0;margin-top:2px}
+.summary-text{
+  font-family:'DM Sans',sans-serif;font-size:13px;
+  line-height:1.7;color:rgba(247,243,238,.75);
+}
+.summary-text strong{color:var(--gold)}
+
+/* ── 主体布局 ── */
+.page-body{
+  max-width:1100px;margin:0 auto;padding:48px 40px 80px;
+  display:flex;gap:48px;align-items:flex-start;
+}
+
+/* ── TOC ── */
+.toc-wrap{
+  width:260px;flex-shrink:0;
+  position:sticky;top:72px;
+}
+.toc-title{
+  font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--light);
+  margin-bottom:16px;padding-bottom:10px;
+  border-bottom:1px solid var(--border);
+}
+.toc-list{list-style:none;padding:0}
+.toc-list li{margin-bottom:4px}
+.toc-list a{
+  display:block;font-family:'DM Sans',sans-serif;font-size:12px;
+  color:var(--light);text-decoration:none;padding:6px 10px;
+  border-left:2px solid transparent;border-radius:0 3px 3px 0;
+  transition:color .2s,border-color .2s,background .2s;line-height:1.4;
+}
+.toc-list a:hover,.toc-list a.active{
+  color:var(--gold);border-left-color:var(--gold);
+  background:rgba(196,154,122,0.08);
+}
+.toc-risk{
+  display:inline-block;width:7px;height:7px;border-radius:50%;
+  margin-right:6px;vertical-align:middle;flex-shrink:0;
+}
+.risk-high{background:#e74c3c}
+.risk-med{background:#f39c12}
+.risk-low{background:#2ecc71}
+
+/* ── 文章主体 ── */
+.article-body{flex:1;min-width:0}
+
+/* ── 章节 ── */
+.clause-section{
+  margin:0 0 32px;
+  border:1px solid var(--border);border-radius:4px;
+  overflow:hidden;background:#fff;
+}
+.clause-header{
+  padding:22px 28px 18px;
+  border-bottom:1px solid var(--border);
+  background:var(--paper);
+  display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
+}
+.clause-num{
+  font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--light);
+  margin-bottom:6px;
+}
+.clause-title{
+  font-family:'Playfair Display',serif;
+  font-size:1.15rem;font-weight:700;color:var(--dark);line-height:1.3;
+}
+.risk-badge{
+  display:inline-flex;align-items:center;gap:5px;flex-shrink:0;
+  padding:4px 12px;border-radius:2px;
+  font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:.05em;text-transform:uppercase;
+}
+.badge-high{background:#e74c3c;color:#fff}
+.badge-med{background:#f39c12;color:#fff}
+.badge-low{background:#2ecc71;color:#222}
+.clause-body{padding:24px 28px}
+.clause-body p{
+  font-family:'Source Serif 4',serif;font-size:15px;
+  line-height:1.85;color:var(--mid);margin-bottom:14px;
+}
+.clause-body p:last-child{margin-bottom:0}
+.clause-body ul{
+  margin:10px 0 14px 20px;
+}
+.clause-body ul li{
+  font-family:'Source Serif 4',serif;font-size:15px;
+  line-height:1.8;color:var(--mid);margin-bottom:6px;
+}
+.clause-body strong{color:var(--dark);font-weight:600}
+
+/* ── Sample clause ── */
+.sample-block{
+  margin:20px 0 8px;
+  border-left:3px solid var(--gold);
+  background:var(--paper);
+  border-radius:0 4px 4px 0;
+  overflow:hidden;
+}
+.sample-label{
+  font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--gold);
+  padding:8px 16px 0;
+}
+.sample-block pre{
+  font-family:'JetBrains Mono',monospace;font-size:12.5px;
+  line-height:1.7;color:var(--mid);
+  padding:8px 16px 14px;white-space:pre-wrap;word-break:break-word;
+}
+
+/* ── 提示框 ── */
+.tip-box{
+  margin:16px 0;padding:16px 20px;
+  border-radius:4px;border-left:3px solid var(--teal);
+  background:rgba(58,107,90,0.07);
+}
+.tip-box p{
+  font-family:'DM Sans',sans-serif;font-size:13.5px;
+  line-height:1.7;color:var(--mid);margin:0;
+}
+.tip-box p strong{color:var(--teal)}
+
+/* ── Author strip ── */
+.author-strip{
+  margin:40px 0 0;padding:28px;
+  border:1px solid var(--border);border-radius:4px;
+  background:var(--paper);
+  display:flex;gap:20px;align-items:center;
+}
+.author-avatar{
+  width:56px;height:56px;border-radius:50%;
+  background:var(--dark);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:22px;font-style:italic;
+  flex-shrink:0;
+}
+.author-name{
+  font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;
+  color:var(--dark);letter-spacing:.04em;margin-bottom:4px;
+}
+.author-bio{
+  font-family:'DM Sans',sans-serif;font-size:12px;
+  color:var(--light);line-height:1.6;
+}
+.author-cta{
+  margin-left:auto;flex-shrink:0;
+  font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold);text-decoration:none;
+  border:1px solid var(--border-strong);padding:8px 18px;border-radius:2px;
+  transition:background .2s,color .2s;
+}
+.author-cta:hover{background:var(--gold);color:#fff}
+
+/* ── Footer ── */
+footer{
+  background:var(--dark);color:rgba(247,243,238,.5);
+  padding:40px;text-align:center;
+  font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:.05em;
+  border-top:1px solid rgba(196,154,122,0.2);
+}
+footer a{color:var(--gold);text-decoration:none}
+
+@media(max-width:820px){
+  .toc-wrap{display:none}
+  .page-body{padding:32px 20px 60px}
+  .hero{padding:60px 20px 52px}
+  nav{padding:0 20px}
+  .summary-bar{padding:20px}
+  .clause-header{flex-direction:column;gap:10px}
+  .author-strip{flex-wrap:wrap}
+  .author-cta{margin-left:0;margin-top:8px}
+}
 </style>
 </head>
-<body>
-<nav class="sidebar">
-  <a class="brand" href="../index.html">E<span>.</span>LAW</a>
-  <ul>
-    <li><a href="../index.html">首页</a></li>
-    <li><a href="../blog.html">博客</a></li>
-    <li><a href="../index.html#contact">联系</a></li>
-    <li style="margin-top:20px;"><a class="toc-link" href="#s1">1. 机密信息定义</a></li>
-    <li><a class="toc-link" href="#s2">2. 停滞条款</a></li>
-    <li><a class="toc-link" href="#s3">3. 竞业禁止</a></li>
-    <li><a class="toc-link" href="#s4">4. 允许的披露</a></li>
-    <li><a class="toc-link" href="#s5">5. 期限与存续</a></li>
-  </ul>
+<body class="zh">
+
+<div id="progress-bar"></div>
+
+<nav>
+  <a class="nav-brand" href="../index.html">Evonne Xu Legal</a>
+  <div class="nav-links">
+    <a href="../index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a>
+    <a href="../blog.html"><span data-lang="zh">博客</span><span data-lang="en">Blog</span></a>
+    <a href="../index.html#contact"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a>
+    <button id="langBtn" onclick="toggleLang()">English</button>
+  </div>
 </nav>
 
-<main class="main">
-  <div class="cat">M&A · NDA · 卖方指南</div>
-  <h1>并购交易中卖方的NDA谈判：五大核心条款全解析</h1>
-  <div class="meta">April 2026 &nbsp;·&nbsp; Evonne Xu Law &nbsp;·&nbsp; 10 min read</div>
-
-  <p class="intro">在并购交易启动之前，买卖双方通常会先签署保密协议（NDA / Confidentiality Agreement）。对于卖方而言，这份文件远不只是一道"形式关"——其条款直接决定你的商业秘密、客户信息和谈判筹码能否得到切实保护。本文梳理卖方最应重点谈判的五个条款，并附示范语言供参考。</p>
-
-  <div class="clause" id="s1">
-    <h2>条款一：机密信息的定义范围</h2>
-    <p>定义越宽泛，卖方越受保护。建议将"机密信息"定义为买方在尽职调查期间接触到的<strong>一切</strong>非公开信息，包括财务数据、客户名单、定价策略、技术文档及内部沟通记录，而非仅限于书面标注"机密"的材料。同时，应明确排除条款（如已公开信息），避免买方以此为由缩小保护范围。</p>
-    <pre>"Confidential Information" means all non-public information disclosed by Seller to Recipient in connection with the Transaction, whether oral, written, or electronic, including without limitation financial statements, customer and supplier lists, pricing data, technical specifications, and business strategies, regardless of whether such information is labeled as confidential.</pre>
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">M&amp;A · NDA</div>
+    <h1>
+      <span data-lang="zh">卖方NDA谈判<em>完全指南</em>：<br>8大核心条款解析</span>
+      <span data-lang="en">The Seller's Complete<br><em>NDA Negotiation Guide</em>:<br>8 Key Clauses Decoded</span>
+    </h1>
+    <div class="hero-meta">
+      <span>April 2026</span>
+      <span>·</span>
+      <span>15 min read</span>
+      <span>·</span>
+      <span data-lang="zh">企业并购 &amp; 商业秘密保护</span>
+      <span data-lang="en">M&amp;A &amp; Trade Secret Protection</span>
+    </div>
   </div>
+</section>
 
-  <div class="clause" id="s2">
-    <h2>条款二：停滞条款（Standstill）</h2>
-    <p>停滞条款禁止买方在保密协议有效期内，未经卖方董事会同意，直接向卖方股东发起收购要约或积累卖方股票。对于上市公司卖方尤为重要。谈判要点：限制期限通常为12–18个月，同时约定"Don't-Ask, Don't-Waive"条款，防止买方私下要求豁免。</p>
-    <pre>Recipient agrees that, for a period of 18 months from the date hereof, it will not, directly or indirectly, without the prior written consent of Seller's Board of Directors, (i) acquire or seek to acquire any securities or assets of Seller, (ii) solicit proxies or seek to influence any shareholder of Seller, or (iii) request that Seller waive or amend this standstill provision.</pre>
+<!-- Summary bar -->
+<div class="summary-bar">
+  <div class="summary-bar-inner">
+    <div class="summary-icon">📋</div>
+    <div class="summary-text">
+      <div data-lang="zh"><strong>本文要点：</strong>在收购流程中，买方提供的NDA往往有利于买方。作为卖方，您需要在签署前仔细审查并谈判8个核心条款——从机密信息定义到停滞条款，每一条都可能影响您的谈判自由度与商业秘密安全。</div>
+      <div data-lang="en"><strong>Key Takeaway:</strong> In an M&amp;A process, the NDA presented by buyers is typically buyer-friendly. As a seller, you must carefully review and negotiate 8 key clauses before signing — from the definition of confidential information to standstill provisions, each clause can affect your negotiating freedom and trade secret protection.</div>
+    </div>
   </div>
+</div>
 
-  <div class="clause" id="s3">
-    <h2>条款三：竞业禁止与不挖角（Non-Solicit）</h2>
-    <p>双向的不挖角条款是标准市场实践，但卖方应确保条款对等：买方不得在谈判期间及之后一定期限内，招募卖方的关键员工或高管，无论是否通过正式招聘渠道。建议限制期为12–24个月，并明确"solicitation"的触发标准，区分主动接触与回应公开招聘的情形。</p>
-    <pre>For a period of 24 months following the date hereof, Recipient shall not, directly or indirectly, solicit for employment or hire any Key Employee of Seller who was identified or introduced to Recipient in connection with the Transaction, provided that general advertisement not targeted at Seller's employees shall not constitute solicitation.</pre>
-  </div>
+<!-- Page body -->
+<div class="page-body">
 
-  <div class="clause" id="s4">
-    <h2>条款四：允许披露的情形</h2>
-    <p>买方通常会要求将机密信息披露给其顾问、律师、财务顾问及银行，以完成尽职调查。卖方的谈判目标是：限制接收方范围（need-to-know basis）、要求买方对顾问的违约行为承担连带责任，并明确禁止买方在无卖方同意的情况下将信息用于收购目的以外的任何用途。</p>
-    <pre>Recipient may disclose Confidential Information solely to its Representatives who have a need to know such information for the purpose of evaluating the Transaction, provided that (a) such Representatives are bound by confidentiality obligations no less restrictive than those herein, and (b) Recipient shall be primarily liable for any breach by its Representatives. Recipient shall not use Confidential Information for any purpose other than evaluating the Transaction.</pre>
-  </div>
-
-  <div class="clause" id="s5">
-    <h2>条款五：期限与信息销毁义务</h2>
-    <p>NDA保密义务的存续期建议不少于3年（商业秘密条款可约定永久）。谈判失败后，卖方应要求买方在一定期限内（通常10个工作日）销毁或归还所有机密材料，并由买方授权代表书面确认销毁完成。注意区分"销毁"与"归档留存"——IT系统的自动备份应纳入豁免但仍受保密约束。</p>
-    <pre>The obligations of confidentiality hereunder shall survive for a period of three (3) years from the date hereof, provided that obligations with respect to trade secrets shall survive indefinitely. Upon Seller's written request, Recipient shall, within 10 business days, destroy or return all Confidential Information and certify such destruction in writing, except for archival copies retained in automated backup systems, which shall remain subject to this Agreement.</pre>
-  </div>
-
-  <div class="checklist">
-    <h3>卖方NDA签署前检查清单</h3>
-    <ul>
-      <li>机密信息定义是否涵盖口头信息与电子信息，不以"机密"标注为前提</li>
-      <li>是否包含停滞条款，限制买方在谈判期间积累股份或绕过董事会</li>
-      <li>不挖角条款是否双向对等，关键人员是否被明确保护</li>
-      <li>顾问披露范围是否限定为need-to-know，买方是否承担连带责任</li>
-      <li>谈判失败后是否有明确的信息销毁/归还程序及书面确认义务</li>
-      <li>保密期限是否足够（建议3年以上），商业秘密是否单独约定永久保密</li>
+  <!-- TOC -->
+  <aside class="toc-wrap">
+    <div class="toc-title">
+      <span data-lang="zh">目录</span>
+      <span data-lang="en">Contents</span>
+    </div>
+    <ul class="toc-list" id="toc">
+      <li><a href="#s1"><span class="toc-risk risk-high"></span><span data-lang="zh">1. 机密信息定义</span><span data-lang="en">1. Confidential Information</span></a></li>
+      <li><a href="#s2"><span class="toc-risk risk-high"></span><span data-lang="zh">2. 停滞条款</span><span data-lang="en">2. Standstill</span></a></li>
+      <li><a href="#s3"><span class="toc-risk risk-high"></span><span data-lang="zh">3. 竞业禁止</span><span data-lang="en">3. Non-Compete/Non-Solicit</span></a></li>
+      <li><a href="#s4"><span class="toc-risk risk-med"></span><span data-lang="zh">4. 允许的披露</span><span data-lang="en">4. Permitted Disclosures</span></a></li>
+      <li><a href="#s5"><span class="toc-risk risk-med"></span><span data-lang="zh">5. 期限与存续</span><span data-lang="en">5. Term &amp; Survival</span></a></li>
+      <li><a href="#s6"><span class="toc-risk risk-med"></span><span data-lang="zh">6. 违约救济</span><span data-lang="en">6. Remedies</span></a></li>
+      <li><a href="#s7"><span class="toc-risk risk-low"></span><span data-lang="zh">7. 管辖法律</span><span data-lang="en">7. Governing Law</span></a></li>
+      <li><a href="#s8"><span class="toc-risk risk-med"></span><span data-lang="zh">8. 知识产权保护</span><span data-lang="en">8. IP Protection</span></a></li>
     </ul>
-  </div>
-</main>
+  </aside>
+
+  <!-- Article -->
+  <div class="article-body">
+
+    <!-- Clause 1 -->
+    <div class="clause-section" id="s1">
+      <div class="clause-header">
+        <div>
+          <div class="clause-num"><span data-lang="zh">条款 1</span><span data-lang="en">Clause 1</span></div>
+          <div class="clause-title">
+            <span data-lang="zh">机密信息定义</span>
+            <span data-lang="en">Confidential Information</span>
+          </div>
+        </div>
+        <span class="risk-badge badge-high">🔴 HIGH</span>
+      </div>
+      <div class="clause-body">
+        <div data-lang="zh">
+          <p>这是NDA中最关键的条款。定义过窄可能遗漏关键商业秘密；定义过宽则可能导致买方以"已知信息"为由拒绝保密义务。作为卖方，您应争取<strong>宽泛定义加排除清单</strong>的结构。</p>
+          <p>应涵盖的内容：财务数据、客户名单、定价策略、技术秘密、合同条款、雇员信息，以及<strong>所有以书面或口头形式披露的信息</strong>（需在口头披露后书面确认）。</p>
+          <ul>
+            <li>明确口头披露的确认机制（通常30天内书面确认）</li>
+            <li>将客户名单和供应商关系明确列为机密</li>
+            <li>排除"已公开信息"需要严格证明标准</li>
+          </ul>
+        </div>
+        <div data-lang="en">
+          <p>This is the most critical clause in any NDA. A definition that is too narrow may leave key trade secrets unprotected; too broad and the buyer may invoke "already known" exceptions. As a seller, push for a <strong>broad definition with a narrow exclusion list</strong>.</p>
+          <p>Coverage should include: financial data, customer lists, pricing strategy, technical secrets, contract terms, employee information, and <strong>all information disclosed in written or oral form</strong> (with oral disclosures confirmed in writing within 30 days).</p>
+          <ul>
+            <li>Require written confirmation of oral disclosures (typically within 30 days)</li>
+            <li>Explicitly list customer lists and supplier relationships as confidential</li>
+            <li>Require strict proof for the "publicly available" exclusion</li>
+          </ul>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">Sample Clause</div>
+          <pre>"Confidential Information" means any and all information or data that has or could have commercial value or other utility in the business in which Disclosing Party is engaged, including but not limited to financial statements, customer and supplier lists, pricing data, trade secrets, technical information, business plans, and employee data, whether disclosed in written, oral, electronic, or visual form. Information disclosed orally shall be confirmed in writing within thirty (30) days of disclosure to be deemed Confidential Information hereunder.</pre>
+        </div>
+        <div class="tip-box">
+          <p><strong>谈判提示 / Negotiation Tip：</strong> <span data-lang="zh">拒绝仅以"Confidential"标记为保护前提的条款——在尽调中不可能对每份文件都加盖印章。</span><span data-lang="en">Reject clauses that require documents to be marked "Confidential" as a prerequisite for protection — it's impossible to stamp every document during due diligence.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clause 2 -->
+    <div class="clause-section" id="s2">
+      <div class="clause-header">
+        <div>
+          <div class="clause-num"><span data-lang="zh">条款 2</span><span data-lang="en">Clause 2</span></div>
+          <div class="clause-title">
+            <span data-lang="zh">停滞条款</span>
+            <span data-lang="en">Standstill Provision</span>
+          </div>
+        </div>
+        <span class="risk-badge badge-high">🔴 HIGH</span>
+      </div>
+      <div class="clause-body">
+        <div data-lang="zh">
+          <p>停滞条款限制买方在一定期限内不得在未经卖方董事会批准的情况下<strong>公开收购卖方股份或资产</strong>。这对上市公司卖方尤为重要，但私有企业同样适用。</p>
+          <p>卖方应争取：</p>
+          <ul>
+            <li>停滞期限不少于18个月</li>
+            <li>禁止买方"私下拉票"现有股东（wolf pack条款）</li>
+            <li>设置"主动邀请"例外：若卖方主动邀请收购，停滞自动解除</li>
+            <li>禁止买方在停滞期内游说卖方管理层或员工</li>
+          </ul>
+        </div>
+        <div data-lang="en">
+          <p>A standstill provision restricts the buyer from <strong>publicly acquiring shares or assets of the seller</strong> without board approval for a defined period. This is especially critical for public-company sellers, but equally applicable in private deals.</p>
+          <p>Sellers should push for:</p>
+          <ul>
+            <li>A standstill period of no less than 18 months</li>
+            <li>Prohibition on "private solicitation" of existing shareholders (anti-wolf-pack provision)</li>
+            <li>"Invited acquisition" carve-out: standstill automatically lifts if seller invites a bid</li>
+            <li>Prohibition on buyer lobbying seller's management or employees during standstill</li>
+          </ul>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">Sample Clause</div>
+          <pre>During the Standstill Period of eighteen (18) months from the date hereof, Recipient shall not, directly or indirectly, (i) acquire, offer to acquire, or agree to acquire any securities, assets, or debt of Disclosing Party; (ii) solicit proxies or consents with respect to any securities of Disclosing Party; or (iii) encourage, advise, or assist any other person in connection with the foregoing; unless expressly invited in writing by the Board of Directors of Disclosing Party.</pre>
+        </div>
+        <div class="tip-box">
+          <p><strong>谈判提示 / Negotiation Tip：</strong> <span data-lang="zh">如买方拒绝停滞条款，这通常是一个危险信号——意味着买方可能计划绕过谈判桌直接发起敌意收购。</span><span data-lang="en">If the buyer refuses a standstill, this is usually a red flag — it may signal intent to pursue a hostile takeover outside the negotiating process.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clause 3 -->
+    <div class="clause-section" id="s3">
+      <div class="clause-header">
+        <div>
+          <div class="clause-num"><span data-lang="zh">条款 3</span><span data-lang="en">Clause 3</span></div>
+          <div class="clause-title">
+            <span data-lang="zh">竞业禁止 / 不挖角条款</span>
+            <span data-lang="en">Non-Compete / Non-Solicit</span>
+          </div>
+        </div>
+        <span class="risk-badge badge-high">🔴 HIGH</span>
+      </div>
+      <div class="clause-body">
+        <div data-lang="zh">
+          <p>许多NDA中包含针对卖方的<strong>双向不挖角条款</strong>，但卖方往往只关注买方不挖角自己员工，而忽视买方要求卖方同样承诺不挖角买方员工的对等条款。</p>
+          <p>更危险的是宽泛的竞业禁止条款——如果交易最终未成交，这类条款可能严重限制卖方未来融资或引进战略合作伙伴的自由。</p>
+          <ul>
+            <li>明确不挖角范围：仅限于"因本次交易而接触到"的员工</li>
+            <li>竞业禁止期限不超过12个月（若交易未达成则自动失效）</li>
+            <li>确保不挖角条款为双向对等，或明确排除卖方单方义务</li>
+          </ul>
+        </div>
+        <div data-lang="en">
+          <p>Many NDAs include <strong>mutual non-solicitation provisions</strong>, but sellers often focus only on the buyer's obligation not to poach their employees, overlooking the buyer's reciprocal demand that the seller also refrain from soliciting buyer employees.</p>
+          <p>Even more dangerous are broad non-compete clauses — if the deal falls through, these can severely restrict the seller's ability to raise future funding or bring in strategic partners.</p>
+          <ul>
+            <li>Limit non-solicit scope to employees "contacted in connection with this transaction"</li>
+            <li>Cap non-compete duration at 12 months (automatically void if deal does not close)</li>
+            <li>Ensure non-solicit is truly mutual, or explicitly exclude unilateral seller obligations</li>
+          </ul>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">Sample Clause</div>
+          <pre>During the Term and for a period of twelve (12) months thereafter, neither party shall, without prior written consent, directly solicit for employment any employee of the other party who was introduced to such party solely as a result of this Agreement. This restriction shall not apply to (i) general solicitations not directed at specific individuals, or (ii) any employee who responds to a general public advertisement.</pre>
+        </div>
+        <div class="tip-box">
+          <p><strong>谈判提示 / Negotiation Tip：</strong> <span data-lang="zh">将竞业禁止条款的生效与交割挂钩——仅在交易完成后生效，交易未成交则自动作废。</span><span data-lang="en">Tie any non-compete to closing — it should only take effect upon completion of the transaction and automatically lapse if the deal does not close.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clause 4 -->
+    <div class="clause-section" id="s4">
+      <div class="clause-header">
+        <div>
+          <div class="clause-num"><span data-lang="zh">条款 4</span><span data-lang="en">Clause 4</span></div>
+          <div class="clause-title">
+            <span data-lang="zh">允许的披露范围</span>
+            <span data-lang="en">Permitted Disclosures</span>
+          </div>
+        </div>
+        <span class="risk-badge badge-med">🟡 MED</span>
+      </div>
+      <div class="clause-body">
+        <div data-lang="zh">
+          <p>买方需要将机密信息分享给其顾问、律师、融资方等"需要知道"的人员。卖方应确保这一例外受到严格限制，并明确规定<strong>买方对其代理人的违约行为承担连带责任</strong>。</p>
+          <p>关键谈判点：</p>
+          <ul>
+            <li>要求买方列出可接触信息的具体人员名单（或至少按类别限定）</li>
+            <li>明确买方代理人须签署同等保密义务（直接约束）或买方对其行为承担责任</li>
+            <li>禁止买方将信息用于"评估本次交易"以外的任何目的</li>
+          </ul>
+        </div>
+        <div data-lang="en">
+          <p>Buyers need to share confidential information with their advisors, lawyers, financing sources, and other "need-to-know" parties. Sellers should ensure this exception is tightly constrained, with a clear provision that <strong>the buyer remains liable for any breach by its representatives</strong>.</p>
+          <p>Key negotiation points:</p>
+          <ul>
+            <li>Require buyer to identify specific personnel (or at minimum, categories) authorized to access information</li>
+            <li>Require buyer's representatives to either sign equivalent confidentiality obligations or hold buyer liable for their actions</li>
+            <li>Prohibit use of information for any purpose other than "evaluating this transaction"</li>
+          </ul>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">Sample Clause</div>
+          <pre>Recipient may disclose Confidential Information only to its directors, officers, employees, legal counsel, accountants, and financing sources who (i) need to know such information solely for the purpose of evaluating the Proposed Transaction, and (ii) are bound by written confidentiality obligations no less restrictive than those contained herein. Recipient shall be responsible for any breach of this Agreement by its Representatives.</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clause 5 -->
+    <div class="clause-section" id="s5">
+      <div class="clause-header">
+        <div>
+          <div class="clause-num"><span data-lang="zh">条款 5</span><span data-lang="en">Clause 5</span></div>
+          <div class="clause-title">
+            <span data-lang="zh">期限与存续条款</span>
+            <span data-lang="en">Term &amp; Survival</span>
+          </div>
+        </div>
+        <span class="risk-badge badge-med">🟡 MED</span>
+      </div>
+      <div class="clause-body">
+        <div data-lang="zh">
+          <p>标准NDA期限通常为2-3年，但对于包含商业秘密的信息，<strong>保密义务应无限期存续</strong>。务必在NDA中明确区分普通机密信息与商业秘密的不同存续期限。</p>
+          <ul>
+            <li>普通机密信息：自披露日起3年</li>
+            <li>商业秘密（技术秘密、核心算法等）：无限期保密</li>
+            <li>协议期满后，要求买方归还或销毁所有机密信息并书面确认</li>
+            <li>销毁确认书应在协议终止后30天内提交</li>
+          </ul>
+        </div>
+        <div data-lang="en">
+          <p>Standard NDA terms are typically 2-3 years, but for information constituting trade secrets, <strong>confidentiality obligations should survive indefinitely</strong>. The NDA must clearly distinguish between the survival periods for general confidential information and trade secrets.</p>
+          <ul>
+            <li>General confidential information: 3 years from date of disclosure</li>
+            <li>Trade secrets (technical secrets, core algorithms, etc.): perpetual confidentiality</li>
+            <li>Upon expiration, require buyer to return or destroy all confidential information with written certification</li>
+            <li>Destruction certificate to be submitted within 30 days of termination</li>
+          </ul>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">Sample Clause</div>
+          <pre>This Agreement shall remain in effect for three (3) years from the Effective Date; provided, however, that obligations with respect to Confidential Information constituting trade secrets shall survive indefinitely. Upon termination or written request by Disclosing Party, Recipient shall promptly return or certifiably destroy all Confidential Information and provide written certification of such destruction within thirty (30) days.</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clause 6 -->
+    <div class="clause-section" id="s6">
+      <div class="clause-header">
+        <div>
+          <div class="clause-num"><span data-lang="zh">条款 6</span><span data-lang="en">Clause 6</span></div>
+          <div class="clause-title">
+            <span data-lang="zh">违约救济条款</span>
+            <span data-lang="en">Remedies for Breach</span>
+          </div>
+        </div>
+        <span class="risk-badge badge-med">🟡 MED</span>
+      </div>
+      <div class="clause-body">
+        <div data-lang="zh">
+          <p>当机密信息泄露发生时，损害往往难以量化。卖方必须确保NDA明确规定<strong>禁令救济权</strong>（即无需证明金钱损害即可申请法院禁令），否则卖方将在诉讼中陷入被动。</p>
+          <ul>
+            <li>明确约定金钱损害赔偿难以量化，禁令救济应视为充分且适当</li>
+            <li>买方明确同意不以"无法证明不可弥补损害"为由对抗禁令申请</li>
+            <li>可约定预定损害赔偿（liquidated damages）作为最低赔偿标准</li>
+            <li>败诉方承担律师费</li>
+          </ul>
+        </div>
+        <div data-lang="en">
+          <p>When confidential information is leaked, damages are often difficult to quantify. Sellers must ensure the NDA expressly provides for <strong>injunctive relief</strong> — the right to seek a court injunction without needing to prove monetary damages — otherwise sellers will be at a severe disadvantage in litigation.</p>
+          <ul>
+            <li>Expressly acknowledge that monetary damages are inadequate and injunctive relief is appropriate</li>
+            <li>Buyer agrees not to contest injunctive applications on grounds of "failure to prove irreparable harm"</li>
+            <li>Consider liquidated damages provision as a minimum damages floor</li>
+            <li>Prevailing party to recover reasonable attorneys' fees</li>
+          </ul>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">Sample Clause</div>
+          <pre>The parties acknowledge that any breach of this Agreement would cause irreparable harm for which monetary damages would be an inadequate remedy. Accordingly, in addition to any other remedies available at law or in equity, Disclosing Party shall be entitled to seek injunctive relief without the requirement to post bond or prove actual damages. Recipient hereby waives any defense that Disclosing Party has an adequate remedy at law.</pre>
+        </div>
+        <div class="tip-box">
+          <p><strong>谈判提示 / Negotiation Tip：</strong> <span data-lang="zh">在加州，"不可弥补损害推定"已被立法加强（《统一商业秘密法》），但NDA中的明确约定仍能显著降低维权诉讼成本。</span><span data-lang="en">In California, "presumption of irreparable harm" has been strengthened by statute (Uniform Trade Secrets Act), but an express contractual acknowledgment still significantly reduces litigation costs in enforcement actions.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clause 7 -->
+    <div class="clause-section" id="s7">
+      <div class="clause-header">
+        <div>
+          <div class="clause-num"><span data-lang="zh">条款 7</span><span data-lang="en">Clause 7</span></div>
+          <div class="clause-title">
+            <span data-lang="zh">管辖法律与争议解决</span>
+            <span data-lang="en">Governing Law &amp; Dispute Resolution</span>
+          </div>
+        </div>
+        <span class="risk-badge badge-low">🟢 LOW</span>
+      </div>
+      <div class="clause-body">
+        <div data-lang="zh">
+          <p>管辖法律的选择直接影响商业秘密保护力度。建议卖方优先选择<strong>加州法律</strong>（适用《统一商业秘密法》且司法实践成熟）或企业注册地法律。</p>
+          <ul>
+            <li>优先选择卖方主要经营地或注册地的法律</li>
+            <li>明确约定专属管辖法院（避免买方在外州提起诉讼）</li>
+            <li>考虑是否约定仲裁（更快速保密，但执行禁令较复杂）</li>
+            <li>明确约定语言为英文，避免翻译争议</li>
+          </ul>
+        </div>
+        <div data-lang="en">
+          <p>The choice of governing law directly impacts trade secret protection. Sellers should prefer <strong>California law</strong> (which applies the Uniform Trade Secrets Act with mature case law) or the law of the seller's state of incorporation.</p>
+          <ul>
+            <li>Prefer the law of the seller's principal place of business or state of incorporation</li>
+            <li>Specify exclusive jurisdiction court (prevent buyer from filing in a distant forum)</li>
+            <li>Consider whether to include arbitration (faster and confidential, but injunctive relief is more complex)</li>
+            <li>Specify English as the controlling language to avoid translation disputes</li>
+          </ul>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">Sample Clause</div>
+          <pre>This Agreement shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of laws provisions. Each party hereby irrevocably submits to the exclusive jurisdiction of the state and federal courts located in San Francisco County, California, for any dispute arising under this Agreement, and waives any objection to venue in such courts.</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clause 8 -->
+    <div class="clause-section" id="s8">
+      <div class="clause-header">
+        <div>
+          <div class="clause-num"><span data-lang="zh">条款 8</span><span data-lang="en">Clause 8</span></div>
+          <div class="clause-title">
+            <span data-lang="zh">知识产权保护条款</span>
+            <span data-lang="en">Intellectual Property Protection</span>
+          </div>
+        </div>
+        <span class="risk-badge badge-med">🟡 MED</span>
+      </div>
+      <div class="clause-body">
+        <div data-lang="zh">
+          <p>NDA中经常被忽视的一条：明确规定<strong>披露机密信息不构成任何知识产权许可</strong>。否则买方可能主张在尽调中获取的技术信息构成隐性许可（implied license）。</p>
+          <p>此外，还需特别关注：</p>
+          <ul>
+            <li>明确卖方对所披露信息的<strong>所有权保留条款</strong></li>
+            <li>禁止买方对卖方信息进行逆向工程</li>
+            <li>禁止买方将卖方技术信息用于开发竞品</li>
+            <li>明确任何在尽调期间产生的衍生作品归属问题</li>
+          </ul>
+        </div>
+        <div data-lang="en">
+          <p>A frequently overlooked NDA clause: expressly provide that <strong>disclosure of confidential information does not constitute a license of any intellectual property rights</strong>. Otherwise the buyer may argue that technical information obtained in due diligence constitutes an implied license.</p>
+          <p>Additional protections:</p>
+          <ul>
+            <li>Include an express <strong>ownership retention clause</strong> for all disclosed information</li>
+            <li>Prohibit buyer from reverse engineering seller's technical information</li>
+            <li>Prohibit buyer from using seller's technical information to develop competing products</li>
+            <li>Clarify ownership of any derivative works created during the due diligence period</li>
+          </ul>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">Sample Clause</div>
+          <pre>Nothing in this Agreement shall be construed as granting Recipient any right, title, license, or interest in or to any Confidential Information, including any intellectual property rights therein. All Confidential Information remains the sole and exclusive property of Disclosing Party. Recipient shall not reverse engineer, decompile, or disassemble any Confidential Information, nor use it for the purpose of developing products or services that compete with those of Disclosing Party.</pre>
+        </div>
+        <div class="tip-box">
+          <p><strong>谈判提示 / Negotiation Tip：</strong> <span data-lang="zh">对于科技公司卖方，这条比停滞条款更重要——一旦核心技术被"学习"，即使买方未完成收购，卖方的竞争优势已遭到实质性损害。</span><span data-lang="en">For tech-company sellers, this clause may be more critical than the standstill — once core technology has been "studied," even if the acquisition is abandoned, the seller's competitive advantage may be permanently compromised.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Author strip -->
+    <div class="author-strip">
+      <div class="author-avatar">E</div>
+      <div>
+        <div class="author-name">Evonne Xu</div>
+        <div class="author-bio">
+          <span data-lang="zh">美国企业并购律师，专注跨境交易、商业秘密保护及AI合规。执业于加利福尼亚州。</span>
+          <span data-lang="en">U.S. M&amp;A attorney focused on cross-border transactions, trade secret protection, and AI compliance. Licensed in California.</span>
+        </div>
+      </div>
+      <a class="author-cta" href="../index.html#contact">
+        <span data-lang="zh">预约咨询</span>
+        <span data-lang="en">Book a Call</span>
+      </a>
+    </div>
+
+  </div><!-- /article-body -->
+</div><!-- /page-body -->
+
+<footer>
+  <p>© 2026 Evonne Xu Law &nbsp;·&nbsp; <a href="../index.html">evonnexulegal.com</a> &nbsp;·&nbsp; <span data-lang="zh">本文仅供信息参考，不构成法律意见。</span><span data-lang="en">For informational purposes only. Not legal advice.</span></p>
+</footer>
+
+<script>
+// 双语切换
+var currentLang = localStorage.getItem('lang') || 'zh';
+function applyLang(l){
+  document.body.className = l;
+  var btn = document.getElementById('langBtn');
+  if(btn) btn.textContent = l === 'zh' ? 'English' : '中文';
+}
+function toggleLang(){
+  currentLang = currentLang === 'zh' ? 'en' : 'zh';
+  localStorage.setItem('lang', currentLang);
+  applyLang(currentLang);
+}
+applyLang(currentLang);
+
+// 阅读进度条
+function updateProgress(){
+  var el = document.documentElement;
+  var pct = (el.scrollTop / (el.scrollHeight - el.clientHeight)) * 100;
+  document.getElementById('progress-bar').style.setProperty('--pct', pct.toFixed(1) + '%');
+}
+window.addEventListener('scroll', updateProgress, {passive:true});
+
+// TOC 高亮
+var sections = document.querySelectorAll('.clause-section[id]');
+var tocLinks = document.querySelectorAll('.toc-list a');
+var obs = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      tocLinks.forEach(function(a){ a.classList.remove('active'); });
+      var link = document.querySelector('.toc-list a[href="#' + e.target.id + '"]');
+      if(link) link.classList.add('active');
+    }
+  });
+},{rootMargin:'-20% 0px -60% 0px'});
+sections.forEach(function(s){ obs.observe(s); });
+</script>
 </body>
 </html>
