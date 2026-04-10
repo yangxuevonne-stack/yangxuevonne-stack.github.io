@@ -1,14 +1,14 @@
 [
   {
-    "file": "blog/ma-seller-nda-negotiation.html",
-    "titleZh": "卖方视角：如何在并购交易中谈判NDA保密协议",
-    "titleEn": "The Seller's NDA Playbook: Negotiating Confidentiality Agreements in M&A",
-    "excerptZh": "并购NDA不是形式文件。九大核心条款按风险等级深度拆解：禁止招揽、停滞条款、救济措施、机密定义——卖方律师视角的谈判策略与建议条款语言。",
-    "excerptEn": "M&A NDAs are not formalities. Nine critical clauses ranked by risk: non-solicitation, standstill, remedies, CI definition — negotiation strategies and model language from the seller's perspective.",
-    "catZh": "跨境并购 · 法律实务",
-    "catEn": "Cross-Border M&A · Legal Practice",
+    "file": "blog/seller-nda-negotiation.html",
+    "titleZh": "卖方必读：并购NDA条款逐条拆解——按风险排列的谈判全攻略",
+    "titleEn": "The Seller's NDA Playbook: Every Clause, Ranked by Risk",
+    "excerptZh": "NDA是卖方签的第一份合同，也往往是保护最薄弱的。本文按风险级别逐条拆解NDA核心条款，每条款含风险分析、陷阱、谈判策略与可直接使用的建议合同语言。",
+    "excerptEn": "The NDA is the first contract a seller signs — and often the most poorly negotiated. Every key clause ranked by risk, with traps, tactics, and model language for each.",
+    "catZh": "跨境并购 · 卖方实战指南",
+    "catEn": "Cross-Border M&A · Seller Playbook",
     "date": "April 2026",
-    "readTime": "25 min",
+    "readTime": "15 min",
     "featured": true
   },
   {

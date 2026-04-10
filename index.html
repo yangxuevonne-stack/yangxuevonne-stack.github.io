@@ -303,83 +303,6 @@ nav {
   margin: 28px 0;
   opacity: 0.5;
 }
-.about-mission {
-  position: relative;
-  background: var(--dark);
-  color: var(--cream);
-  padding: 38px 40px 36px;
-  margin: 36px 0 28px;
-  border-left: 3px solid var(--rose-gold);
-  overflow: hidden;
-}
-.about-mission::before {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  width: 180px; height: 180px;
-  background: radial-gradient(circle at top right, rgba(196,154,122,0.18), transparent 70%);
-  pointer-events: none;
-}
-.about-mission-label {
-  font-size: 10px;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  color: var(--rose-gold);
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  position: relative;
-}
-.about-mission-label::before {
-  content: '';
-  display: block;
-  width: 28px; height: 1px;
-  background: var(--rose-gold);
-}
-.about-mission-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(17px, 1.6vw, 21px);
-  font-weight: 300;
-  line-height: 1.7;
-  color: var(--cream);
-  font-style: italic;
-  position: relative;
-}
-.about-mission-text em {
-  color: var(--rose-gold);
-  font-style: normal;
-  font-weight: 400;
-}
-.about-trust {
-  margin: 0 0 28px;
-  padding: 26px 30px;
-  background: var(--cream);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--rose-gold);
-}
-.about-trust-label {
-  font-size: 10px;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  color: var(--rose-gold);
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.about-trust-label::before {
-  content: '';
-  display: block;
-  width: 28px; height: 1px;
-  background: var(--rose-gold);
-}
-.about-trust-text {
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--mid);
-  font-style: italic;
-}
 .about-tags {
   display: flex;
   flex-wrap: wrap;
@@ -485,16 +408,11 @@ nav {
 .section-title em { color: var(--rose-gold); font-style: italic; }
 .services-wrap { padding: 0 60px; max-width: 1200px; margin: 0 auto; }
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-.service-card { background: var(--warm-white); padding: 40px 36px; transition: all 0.3s; text-decoration: none; color: inherit; display: flex; flex-direction: column; position: relative; }
+.service-card { background: var(--warm-white); padding: 40px 36px; transition: all 0.3s; }
 .service-card:hover { background: white; transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); }
-.service-card.featured { background: linear-gradient(180deg, var(--warm-white) 0%, #fdfaf6 100%); border-left: 2px solid var(--rose-gold); }
-.service-card.featured .service-num { color: var(--rose-gold); }
-.service-card-badge { position: absolute; top: 20px; right: 24px; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; background: var(--rose-gold); color: var(--cream); padding: 4px 10px; }
 .service-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--champagne); line-height: 1; margin-bottom: 16px; }
 .service-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--dark); margin-bottom: 14px; line-height: 1.3; }
-.service-desc { font-size: 13px; line-height: 1.8; color: var(--light-text); flex: 1; margin-bottom: 18px; }
-.service-link { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--rose-gold); display: flex; align-items: center; gap: 8px; transition: gap 0.2s; margin-top: auto; }
-.service-card:hover .service-link { gap: 14px; }
+.service-desc { font-size: 13px; line-height: 1.8; color: var(--light-text); }
 
 .portfolio-section { background: var(--dark); padding: 100px 0; }
 .portfolio-section .section-tag { color: var(--champagne); }
@@ -745,18 +663,18 @@ footer { background: var(--dark); padding: 80px 0 0; }
         <div class="about-credential-bar">
           <div class="about-credential-item">
             <div class="about-credential-dot"></div>
-            <span data-lang="zh">Taft 律所合伙人（1,250+ 律师）</span>
-            <span data-lang="en">Partner, Taft Law Firm (1,250+ Attorneys)</span>
+            <span data-lang="zh">美国执业律师</span>
+            <span data-lang="en">U.S. Licensed Attorney</span>
           </div>
           <div class="about-credential-item">
             <div class="about-credential-dot"></div>
-            <span data-lang="zh">美国纽约州 · 密西根州律师</span>
-            <span data-lang="en">Admitted in New York & Michigan</span>
+            <span data-lang="zh">中国执业律师</span>
+            <span data-lang="en">China Licensed Attorney</span>
           </div>
           <div class="about-credential-item">
             <div class="about-credential-dot"></div>
-            <span data-lang="zh">中国律师执业资格</span>
-            <span data-lang="en">PRC Bar Qualification</span>
+            <span data-lang="zh">1000+ 企业服务案例</span>
+            <span data-lang="en">1000+ Clients Served</span>
           </div>
         </div>
       </div>
@@ -766,33 +684,23 @@ footer { background: var(--dark); padding: 80px 0 0; }
           <span data-lang="en">About Me</span>
         </div>
         <h2 class="about-bio-heading">
-          <span data-lang="zh">让每一次跨境决策，<br>都有<em>可以依靠的判断</em></span>
-          <span data-lang="en">So Every Cross-Border Decision<br>Rests on <em>Sound Judgment</em></span>
+          <span data-lang="zh">在AI与法律的<br>交叉口，找到<br><em>商业的确定性</em></span>
+          <span data-lang="en">Where AI Meets Law,<br>Clarity Meets<br><em>Strategy</em></span>
         </h2>
         <p class="about-bio-text">
-          <span data-lang="zh">十余年美中跨境法律一线经验，专注并购、跨境交易与 AI 合规。作为美中双执照律师，熟悉两套法律体系，也读得懂两种商业文化——把复杂的跨境难题，翻译成客户真正能用的决策语言。</span>
-          <span data-lang="en">Over a decade of frontline US–China cross-border practice, focused on M&A, cross-border transactions, and AI compliance. Dual-qualified in both jurisdictions and fluent in both business cultures — turning complex cross-border challenges into clear, actionable decisions for the people who have to make them.</span>
+          <span data-lang="zh">执业逾十年，我深度服务于公众公司、私人企业与跨国机构，专注并购、跨境交易与AI法律合规。凭借敏锐的商业洞察力与对客户业务需求的深度理解，我在并购、跨境交易、监管合规与复杂商业安排上提供全面法律支持——涵盖股权与资产的收购处置、主体架构设计、公司重组、合资与战略联盟、融资及债权股权安排。</span>
+          <span data-lang="en">With over a decade of practice, I advise public companies, private enterprises, and institutional clients on M&A, cross-border transactions, and AI legal compliance. Recognized for sharp business acumen and a deep understanding of clients' operational needs, I provide comprehensive legal support across mergers and acquisitions, cross-border transactions, regulatory compliance, and complex commercial arrangements — including equity and asset transactions, entity structuring, joint ventures, and debt and equity financings.</span>
         </p>
-
-        <div class="about-mission">
-          <div class="about-mission-label">
-            <span data-lang="zh">使命</span><span data-lang="en">Mission</span>
-          </div>
-          <p class="about-mission-text">
-            <span data-lang="zh">这个网站，是为那些正在或即将踏上<em>美国并购与创业</em>之路的公司、企业家与创业者而建。希望把一线积累下来的判断与经验，转化成可以直接参考的实战建议——让每一次关键决策，都少走一段弯路，多一分底气。</span>
-            <span data-lang="en">This space is built for the companies, entrepreneurs, and founders charting their path through <em>US M&A and entrepreneurship</em>. The hope is to turn frontline experience into practical guidance you can actually use — so every critical decision is made with fewer blind spots, and a little more confidence.</span>
-          </p>
-        </div>
-
-        <div class="about-trust">
-          <div class="about-trust-label">
-            <span data-lang="zh">关于信任</span><span data-lang="en">On Trust</span>
-          </div>
-          <p class="about-trust-text">
-            <span data-lang="zh">好的法律服务，归根到底是一段关于信任的关系。愿这里读到的每一篇文章、用到的每一个工具，都能成为彼此多一分了解的起点——在真正合作之前，先让彼此看得清，再一起走得远。</span>
-            <span data-lang="en">Meaningful legal work is, at its core, a relationship built on trust. May every article you read and every tool you use here become a small step toward mutual understanding — so that long before any engagement begins, there's already a foundation to build on.</span>
-          </p>
-        </div>
+        <div class="about-bio-divider"></div>
+        <p class="about-bio-text">
+          <span data-lang="zh">我的并购实践横跨国内与跨境两大维度。在美国本土，我代理上市公司、私募基金与家族企业完成复杂并购交易，涵盖股权收购、资产交易、杠杆收购及公司重组。在跨境领域，我曾成功引导数百家亚太国际企业——包括来自中国、韩国及其他亚太地区的公司——完成赴美投资与业务扩张的全流程法律工作：公司架构搭建、治理与合规、商业争议、劳工雇佣、融资尽调、并购交易、合同起草谈判、移民事务及合资安排。</span>
+          <span data-lang="en">My M&A practice spans both domestic and cross-border transactions. In the U.S., I have represented public companies, private equity funds, and family-owned businesses in complex transactions — including stock and asset acquisitions, leveraged buyouts, and corporate restructurings. On the cross-border side, I have successfully guided hundreds of international enterprises from China, Korea, and across Asia-Pacific through the full lifecycle of U.S. market entry: corporate structuring, governance and compliance, commercial disputes, labor and employment, financing, due diligence, contract negotiation, immigration, and joint ventures.</span>
+        </p>
+        <div class="about-bio-divider"></div>
+        <p class="about-bio-text">
+          <span data-lang="zh">作为美国与中国的双执照律师，我以流利的中英双语，弥合法律体系与商业文化之间的鸿沟。我的执业领域聚焦于汽车、科技、服务业、制造、自动化与新兴AI行业。在小红书与每周简报上，我持续将复杂法律风险翻译成企业家听得懂的决策语言。</span>
+          <span data-lang="en">As a dual-qualified attorney admitted in both the U.S. and China, I bridge legal and cultural complexities in cross-border engagements — fluent in both English and Chinese. My practice is concentrated in automotive, technology, services, manufacturing, automation, and emerging AI sectors. Through Xiaohongshu and my weekly newsletter, I translate complex legal risk into clear, actionable strategy for founders and executives.</span>
+        </p>
         <div class="about-tags">
           <span class="tag">M&A · 并购</span>
           <span class="tag">AI Compliance</span>
@@ -856,43 +764,12 @@ footer { background: var(--dark); padding: 80px 0 0; }
   </div>
   <div class="services-wrap">
     <div class="services-grid">
-      <a href="services/startup.html" class="service-card featured">
-        <div class="service-card-badge">Live</div>
-        <div class="service-num">01</div>
-        <div class="service-title"><span data-lang="zh">创业公司法律咨询</span><span data-lang="en">Startup Legal Consulting</span></div>
-        <p class="service-desc"><span data-lang="zh">从注册公司到 IPO，每一步都有法律支撑。陪伴创始人走完从 0 到 1 再到 1000 的每一个关键节点——提供实战资源、文件模板与阶段化的法律工具箱。</span><span data-lang="en">From incorporation to IPO — legal tools at every step. A curated library of templates, checklists, and stage-matched resources that walks founders through every critical milestone.</span></p>
-        <div class="service-link"><span data-lang="zh">查看资源 →</span><span data-lang="en">Explore Resources →</span></div>
-      </a>
-      <a href="services/cross-border-ma.html" class="service-card">
-        <div class="service-num">02</div>
-        <div class="service-title"><span data-lang="zh">中美跨境并购</span><span data-lang="en">US-China Cross-Border M&A</span></div>
-        <p class="service-desc"><span data-lang="zh">代理上市公司、私募基金与家族企业完成复杂并购交易——从尽职调查、交易结构设计，到 CFIUS 审批与交易后整合的全流程法律支持。</span><span data-lang="en">Representing public companies, PE funds, and family businesses through complex deals — from due diligence and deal structuring to CFIUS review and post-closing integration.</span></p>
-        <div class="service-link"><span data-lang="zh">了解更多 →</span><span data-lang="en">Learn More →</span></div>
-      </a>
-      <a href="services/general-counsel.html" class="service-card">
-        <div class="service-num">03</div>
-        <div class="service-title"><span data-lang="zh">常年法律顾问</span><span data-lang="en">Fractional General Counsel</span></div>
-        <p class="service-desc"><span data-lang="zh">不需要养一整支法务团队，却希望每次重要决策都有可信赖的法律意见？像内部法务一样懂你的业务——灵活的常年法律顾问服务，陪伴企业从初创到成熟。</span><span data-lang="en">All the trust of in-house counsel, without the full-time overhead. Ongoing legal support tailored to growing companies — from first contract to scale.</span></p>
-        <div class="service-link"><span data-lang="zh">了解更多 →</span><span data-lang="en">Learn More →</span></div>
-      </a>
-      <a href="services/ai-compliance.html" class="service-card">
-        <div class="service-num">04</div>
-        <div class="service-title"><span data-lang="zh">AI 法律合规咨询</span><span data-lang="en">AI Legal Compliance</span></div>
-        <p class="service-desc"><span data-lang="zh">帮助科技公司梳理 AI 产品合规风险，从美国各州 AI 法案到欧盟 AI Act 的合规路径，再到 AI 合同条款的谈判策略——把监管不确定性，转化为清晰的行动方案。</span><span data-lang="en">Helping tech companies navigate AI product compliance — US state AI laws, the EU AI Act, and key clauses in AI procurement and licensing contracts. Regulatory uncertainty, turned into a clear action plan.</span></p>
-        <div class="service-link"><span data-lang="zh">了解更多 →</span><span data-lang="en">Learn More →</span></div>
-      </a>
-      <a href="services/real-estate.html" class="service-card">
-        <div class="service-num">05</div>
-        <div class="service-title"><span data-lang="zh">房地产交易</span><span data-lang="en">Real Estate Transactions</span></div>
-        <p class="service-desc"><span data-lang="zh">商业与住宅房地产交易法律支持——从购房合同、尽职调查，到产权过户、税务规划（含 FIRPTA）、1031 交换与持有架构设计，为海外买家与投资人提供全流程陪伴。</span><span data-lang="en">End-to-end legal support for commercial and residential real estate deals — purchase agreements, diligence, title transfer, tax planning (including FIRPTA), 1031 exchanges, and holding structures.</span></p>
-        <div class="service-link"><span data-lang="zh">了解更多 →</span><span data-lang="en">Learn More →</span></div>
-      </a>
-      <a href="services/speaking-media.html" class="service-card">
-        <div class="service-num">06</div>
-        <div class="service-title"><span data-lang="zh">演讲与媒体合作</span><span data-lang="en">Speaking & Media</span></div>
-        <p class="service-desc"><span data-lang="zh">受邀参与行业峰会、企业内训、播客访谈与媒体专访，围绕 AI 法律、中美科技竞争、跨境并购市场等主题，提供兼具深度与可读性的专业解读。</span><span data-lang="en">Industry conferences, corporate trainings, podcasts, and media features — deep, readable analysis on AI regulation, US-China tech competition, and cross-border M&A.</span></p>
-        <div class="service-link"><span data-lang="zh">了解更多 →</span><span data-lang="en">Learn More →</span></div>
-      </a>
+      <div class="service-card"><div class="service-num">01</div><div class="service-title"><span data-lang="zh">AI法律合规咨询</span><span data-lang="en">AI Legal Compliance</span></div><p class="service-desc"><span data-lang="zh">帮助科技公司梳理AI产品的合规风险，包括美国各州AI法案、欧盟AI Act合规路径，以及AI合同条款谈判策略。</span><span data-lang="en">Helping tech companies navigate AI product compliance risks, including US state AI laws, EU AI Act requirements, and AI contract negotiation strategies.</span></p></div>
+      <div class="service-card"><div class="service-num">02</div><div class="service-title"><span data-lang="zh">中美跨境并购</span><span data-lang="en">US-China Cross-Border M&A</span></div><p class="service-desc"><span data-lang="zh">主导或参与中美双向并购交易，提供从尽职调查、交易结构设计，到监管审批的全流程法律支持。</span><span data-lang="en">Leading or advising on US-China bilateral M&A transactions, providing full-cycle legal support from due diligence and deal structuring to regulatory approval.</span></p></div>
+      <div class="service-card"><div class="service-num">03</div><div class="service-title"><span data-lang="zh">创业公司法律顾问</span><span data-lang="en">Startup General Counsel</span></div><p class="service-desc"><span data-lang="zh">为早期到成长期科技公司提供常年法律顾问服务，覆盖融资协议、股权架构、IP保护等关键法律文件。</span><span data-lang="en">Serving as ongoing legal counsel for early to growth-stage tech companies, covering financing agreements, equity structures, IP protection, and key legal documents.</span></p></div>
+      <div class="service-card"><div class="service-num">04</div><div class="service-title"><span data-lang="zh">法律内容合作</span><span data-lang="en">Legal Content Partnership</span></div><p class="service-desc"><span data-lang="zh">为品牌、律所提供高质量中文法律科普内容，覆盖AI监管、并购市场、科技法律领域，触达小红书商业精英受众。</span><span data-lang="en">Creating high-quality legal content for brands and law firms covering AI regulation, M&A trends, and tech law, reaching business-savvy audiences across platforms.</span></p></div>
+      <div class="service-card"><div class="service-num">05</div><div class="service-title"><span data-lang="zh">高管培训工作坊</span><span data-lang="en">Executive Legal Workshops</span></div><p class="service-desc"><span data-lang="zh">为企业管理团队定制AI法律风险培训，内容涵盖AI采购合同、员工AI使用政策、AI生成内容版权等。</span><span data-lang="en">Customized AI legal risk training for leadership teams, covering AI procurement contracts, employee AI usage policies, and AI-generated content copyright.</span></p></div>
+      <div class="service-card"><div class="service-num">06</div><div class="service-title"><span data-lang="zh">演讲与媒体合作</span><span data-lang="en">Speaking & Media</span></div><p class="service-desc"><span data-lang="zh">受邀参与行业峰会、播客、媒体专访，围绕AI法律监管、中美科技竞争、并购市场等主题提供深度专业解读。</span><span data-lang="en">Available for industry conferences, podcasts, and media appearances on AI regulation, US-China tech competition, and M&A market trends.</span></p></div>
     </div>
   </div>
 </section>
@@ -1101,13 +978,13 @@ footer { background: var(--dark); padding: 80px 0 0; }
 <script>
 const POSTS = [
   {
-    file: "blog/ma-seller-nda-negotiation.html",
-    titleZh: "卖方视角：如何在并购交易中谈判NDA保密协议",
-    titleEn: "The Seller's NDA Playbook: Negotiating Confidentiality Agreements in M&A",
-    excerptZh: "并购NDA不是形式文件。九大核心条款按风险等级深度拆解：禁止招揽、停滞条款、救济措施、机密定义——卖方律师视角的谈判策略与建议条款语言。",
-    excerptEn: "M&A NDAs are not formalities. Nine critical clauses ranked by risk: non-solicitation, standstill, remedies, CI definition — negotiation strategies and model language from the seller's perspective.",
-    catZh: "跨境并购 · 法律实务", catEn: "Cross-Border M&A · Legal Practice",
-    date: "April 2026", readTime: "25 min", featured: true
+    file: "blog/seller-nda-negotiation.html",
+    titleZh: "卖方必读：并购NDA条款逐条拆解——按风险排列的谈判全攻略",
+    titleEn: "The Seller's NDA Playbook: Every Clause, Ranked by Risk",
+    excerptZh: "NDA是卖方签的第一份合同，也往往是保护最薄弱的。本文按风险级别逐条拆解NDA核心条款，每条款含风险分析、陷阱、谈判策略与可直接使用的建议合同语言。",
+    excerptEn: "The NDA is the first contract a seller signs — and often the most poorly negotiated. Every key clause ranked by risk, with traps, tactics, and model language for each.",
+    catZh: "跨境并购 · 卖方实战指南", catEn: "Cross-Border M&A · Seller Playbook",
+    date: "April 2026", readTime: "15 min", featured: true
   },
   {
     file: "blog/us-v-heppner-ai-privilege.html",
