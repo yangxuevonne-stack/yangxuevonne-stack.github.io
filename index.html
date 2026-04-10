@@ -485,11 +485,16 @@ nav {
 .section-title em { color: var(--rose-gold); font-style: italic; }
 .services-wrap { padding: 0 60px; max-width: 1200px; margin: 0 auto; }
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-.service-card { background: var(--warm-white); padding: 40px 36px; transition: all 0.3s; }
+.service-card { background: var(--warm-white); padding: 40px 36px; transition: all 0.3s; text-decoration: none; color: inherit; display: flex; flex-direction: column; position: relative; }
 .service-card:hover { background: white; transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); }
+.service-card.featured { background: linear-gradient(180deg, var(--warm-white) 0%, #fdfaf6 100%); border-left: 2px solid var(--rose-gold); }
+.service-card.featured .service-num { color: var(--rose-gold); }
+.service-card-badge { position: absolute; top: 20px; right: 24px; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; background: var(--rose-gold); color: var(--cream); padding: 4px 10px; }
 .service-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--champagne); line-height: 1; margin-bottom: 16px; }
 .service-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--dark); margin-bottom: 14px; line-height: 1.3; }
-.service-desc { font-size: 13px; line-height: 1.8; color: var(--light-text); }
+.service-desc { font-size: 13px; line-height: 1.8; color: var(--light-text); flex: 1; margin-bottom: 18px; }
+.service-link { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--rose-gold); display: flex; align-items: center; gap: 8px; transition: gap 0.2s; margin-top: auto; }
+.service-card:hover .service-link { gap: 14px; }
 
 .portfolio-section { background: var(--dark); padding: 100px 0; }
 .portfolio-section .section-tag { color: var(--champagne); }
@@ -851,12 +856,43 @@ footer { background: var(--dark); padding: 80px 0 0; }
   </div>
   <div class="services-wrap">
     <div class="services-grid">
-      <div class="service-card"><div class="service-num">01</div><div class="service-title"><span data-lang="zh">AI法律合规咨询</span><span data-lang="en">AI Legal Compliance</span></div><p class="service-desc"><span data-lang="zh">帮助科技公司梳理AI产品的合规风险，包括美国各州AI法案、欧盟AI Act合规路径，以及AI合同条款谈判策略。</span><span data-lang="en">Helping tech companies navigate AI product compliance risks, including US state AI laws, EU AI Act requirements, and AI contract negotiation strategies.</span></p></div>
-      <div class="service-card"><div class="service-num">02</div><div class="service-title"><span data-lang="zh">中美跨境并购</span><span data-lang="en">US-China Cross-Border M&A</span></div><p class="service-desc"><span data-lang="zh">主导或参与中美双向并购交易，提供从尽职调查、交易结构设计，到监管审批的全流程法律支持。</span><span data-lang="en">Leading or advising on US-China bilateral M&A transactions, providing full-cycle legal support from due diligence and deal structuring to regulatory approval.</span></p></div>
-      <div class="service-card"><div class="service-num">03</div><div class="service-title"><span data-lang="zh">创业公司法律顾问</span><span data-lang="en">Startup General Counsel</span></div><p class="service-desc"><span data-lang="zh">为早期到成长期科技公司提供常年法律顾问服务，覆盖融资协议、股权架构、IP保护等关键法律文件。</span><span data-lang="en">Serving as ongoing legal counsel for early to growth-stage tech companies, covering financing agreements, equity structures, IP protection, and key legal documents.</span></p></div>
-      <div class="service-card"><div class="service-num">04</div><div class="service-title"><span data-lang="zh">法律内容合作</span><span data-lang="en">Legal Content Partnership</span></div><p class="service-desc"><span data-lang="zh">为品牌、律所提供高质量中文法律科普内容，覆盖AI监管、并购市场、科技法律领域，触达小红书商业精英受众。</span><span data-lang="en">Creating high-quality legal content for brands and law firms covering AI regulation, M&A trends, and tech law, reaching business-savvy audiences across platforms.</span></p></div>
-      <div class="service-card"><div class="service-num">05</div><div class="service-title"><span data-lang="zh">高管培训工作坊</span><span data-lang="en">Executive Legal Workshops</span></div><p class="service-desc"><span data-lang="zh">为企业管理团队定制AI法律风险培训，内容涵盖AI采购合同、员工AI使用政策、AI生成内容版权等。</span><span data-lang="en">Customized AI legal risk training for leadership teams, covering AI procurement contracts, employee AI usage policies, and AI-generated content copyright.</span></p></div>
-      <div class="service-card"><div class="service-num">06</div><div class="service-title"><span data-lang="zh">演讲与媒体合作</span><span data-lang="en">Speaking & Media</span></div><p class="service-desc"><span data-lang="zh">受邀参与行业峰会、播客、媒体专访，围绕AI法律监管、中美科技竞争、并购市场等主题提供深度专业解读。</span><span data-lang="en">Available for industry conferences, podcasts, and media appearances on AI regulation, US-China tech competition, and M&A market trends.</span></p></div>
+      <a href="services/startup.html" class="service-card featured">
+        <div class="service-card-badge">Live</div>
+        <div class="service-num">01</div>
+        <div class="service-title"><span data-lang="zh">创业公司法律咨询</span><span data-lang="en">Startup Legal Consulting</span></div>
+        <p class="service-desc"><span data-lang="zh">从注册公司到 IPO，每一步都有法律支撑。陪伴创始人走完从 0 到 1 再到 1000 的每一个关键节点——提供实战资源、文件模板与阶段化的法律工具箱。</span><span data-lang="en">From incorporation to IPO — legal tools at every step. A curated library of templates, checklists, and stage-matched resources that walks founders through every critical milestone.</span></p>
+        <div class="service-link"><span data-lang="zh">查看资源 →</span><span data-lang="en">Explore Resources →</span></div>
+      </a>
+      <a href="services/cross-border-ma.html" class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-title"><span data-lang="zh">中美跨境并购</span><span data-lang="en">US-China Cross-Border M&A</span></div>
+        <p class="service-desc"><span data-lang="zh">代理上市公司、私募基金与家族企业完成复杂并购交易——从尽职调查、交易结构设计，到 CFIUS 审批与交易后整合的全流程法律支持。</span><span data-lang="en">Representing public companies, PE funds, and family businesses through complex deals — from due diligence and deal structuring to CFIUS review and post-closing integration.</span></p>
+        <div class="service-link"><span data-lang="zh">了解更多 →</span><span data-lang="en">Learn More →</span></div>
+      </a>
+      <a href="services/general-counsel.html" class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-title"><span data-lang="zh">常年法律顾问</span><span data-lang="en">Fractional General Counsel</span></div>
+        <p class="service-desc"><span data-lang="zh">不需要养一整支法务团队，却希望每次重要决策都有可信赖的法律意见？像内部法务一样懂你的业务——灵活的常年法律顾问服务，陪伴企业从初创到成熟。</span><span data-lang="en">All the trust of in-house counsel, without the full-time overhead. Ongoing legal support tailored to growing companies — from first contract to scale.</span></p>
+        <div class="service-link"><span data-lang="zh">了解更多 →</span><span data-lang="en">Learn More →</span></div>
+      </a>
+      <a href="services/ai-compliance.html" class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-title"><span data-lang="zh">AI 法律合规咨询</span><span data-lang="en">AI Legal Compliance</span></div>
+        <p class="service-desc"><span data-lang="zh">帮助科技公司梳理 AI 产品合规风险，从美国各州 AI 法案到欧盟 AI Act 的合规路径，再到 AI 合同条款的谈判策略——把监管不确定性，转化为清晰的行动方案。</span><span data-lang="en">Helping tech companies navigate AI product compliance — US state AI laws, the EU AI Act, and key clauses in AI procurement and licensing contracts. Regulatory uncertainty, turned into a clear action plan.</span></p>
+        <div class="service-link"><span data-lang="zh">了解更多 →</span><span data-lang="en">Learn More →</span></div>
+      </a>
+      <a href="services/real-estate.html" class="service-card">
+        <div class="service-num">05</div>
+        <div class="service-title"><span data-lang="zh">房地产交易</span><span data-lang="en">Real Estate Transactions</span></div>
+        <p class="service-desc"><span data-lang="zh">商业与住宅房地产交易法律支持——从购房合同、尽职调查，到产权过户、税务规划（含 FIRPTA）、1031 交换与持有架构设计，为海外买家与投资人提供全流程陪伴。</span><span data-lang="en">End-to-end legal support for commercial and residential real estate deals — purchase agreements, diligence, title transfer, tax planning (including FIRPTA), 1031 exchanges, and holding structures.</span></p>
+        <div class="service-link"><span data-lang="zh">了解更多 →</span><span data-lang="en">Learn More →</span></div>
+      </a>
+      <a href="services/speaking-media.html" class="service-card">
+        <div class="service-num">06</div>
+        <div class="service-title"><span data-lang="zh">演讲与媒体合作</span><span data-lang="en">Speaking & Media</span></div>
+        <p class="service-desc"><span data-lang="zh">受邀参与行业峰会、企业内训、播客访谈与媒体专访，围绕 AI 法律、中美科技竞争、跨境并购市场等主题，提供兼具深度与可读性的专业解读。</span><span data-lang="en">Industry conferences, corporate trainings, podcasts, and media features — deep, readable analysis on AI regulation, US-China tech competition, and cross-border M&A.</span></p>
+        <div class="service-link"><span data-lang="zh">了解更多 →</span><span data-lang="en">Learn More →</span></div>
+      </a>
     </div>
   </div>
 </section>

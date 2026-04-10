@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Startup Legal Toolbox | Evonne Xu Law</title>
+<meta name="description" content="从注册公司到IPO，每一步都有法律支撑。专为创业者设计的法律工具箱。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream: #F7F3EE;
+  --warm-white: #FAF8F5;
+  --rose-gold: #C49A7A;
+  --rose-deep: #A67A5B;
+  --champagne: #E8D5C0;
+  --dark: #1C1510;
+  --mid: #4A3728;
+  --light-text: #8C7060;
+  --border: rgba(196,154,122,0.2);
+  --border-strong: rgba(196,154,122,0.4);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: var(--cream);
+  color: var(--dark);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 60px; height:64px;
+  background:rgba(247,243,238,0.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo {
+  font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400;
+  text-decoration:none; color:var(--dark); letter-spacing:2px;
+}
+.nav-logo span { color:var(--rose-gold); }
+.nav-back {
+  font-size:12px; letter-spacing:1.5px; text-transform:uppercase;
+  color:var(--light-text); text-decoration:none; display:flex; align-items:center; gap:6px;
+  transition:color 0.2s;
+}
+.nav-back:hover { color:var(--rose-gold); }
+.lang-switch { display:flex; align-items:center; gap:0; border:1px solid var(--border); overflow:hidden; }
+.lang-btn { padding:5px 12px; font-size:11px; letter-spacing:1.5px; font-weight:500; cursor:pointer; border:none; background:transparent; color:var(--light-text); font-family:'DM Sans',sans-serif; transition:all 0.2s; }
+.lang-btn.active { background:var(--dark); color:var(--cream); }
+.lang-btn:hover:not(.active) { color:var(--rose-gold); }
+
+/* ── LANG SYSTEM ── */
+[data-lang] { display:none; }
+.lang-zh [data-lang="zh"] { display:block; }
+.lang-en [data-lang="en"] { display:block; }
+span[data-lang] { display:none; }
+.lang-zh span[data-lang="zh"] { display:inline; }
+.lang-en span[data-lang="en"] { display:inline; }
+
+/* ── HERO ── */
+.hero {
+  padding-top:64px;
+  background:var(--dark);
+  position:relative; overflow:hidden;
+}
+.hero-inner {
+  max-width:1200px; margin:0 auto;
+  padding:80px 60px 60px;
+  display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;
+}
+.hero-tag {
+  font-size:11px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--rose-gold); margin-bottom:20px;
+}
+.hero-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.8rem,5vw,4rem);
+  font-weight:300; line-height:1.1;
+  color:var(--cream); margin-bottom:20px;
+}
+.hero-title em { color:var(--rose-gold); font-style:italic; }
+.hero-subtitle {
+  font-size:14px; line-height:1.9; color:rgba(247,243,238,0.6);
+  margin-bottom:32px; max-width:420px;
+}
+.hero-cta-group { display:flex; gap:12px; flex-wrap:wrap; }
+.btn-primary {
+  padding:13px 28px; background:var(--rose-gold); color:var(--dark);
+  text-decoration:none; font-size:12px; letter-spacing:1.5px; text-transform:uppercase;
+  font-weight:500; transition:all 0.2s; border:1px solid var(--rose-gold);
+}
+.btn-primary:hover { background:var(--rose-deep); border-color:var(--rose-deep); }
+.btn-ghost {
+  padding:13px 28px; background:transparent; color:var(--champagne);
+  text-decoration:none; font-size:12px; letter-spacing:1.5px; text-transform:uppercase;
+  font-weight:500; border:1px solid rgba(196,154,122,0.4); transition:all 0.2s;
+}
+.btn-ghost:hover { border-color:var(--rose-gold); color:var(--rose-gold); }
+
+/* Stage quick-jump pills */
+.hero-right { display:flex; flex-direction:column; gap:10px; }
+.stage-pills-label {
+  font-size:11px; letter-spacing:2px; text-transform:uppercase;
+  color:rgba(247,243,238,0.35); margin-bottom:4px;
+}
+.stage-pill {
+  display:flex; align-items:center; gap:14px; padding:14px 20px;
+  border:1px solid rgba(196,154,122,0.2); cursor:pointer;
+  transition:all 0.25s; text-decoration:none; position:relative;
+  overflow:hidden;
+}
+.stage-pill:hover, .stage-pill.current {
+  border-color:var(--rose-gold);
+  background:rgba(196,154,122,0.08);
+}
+.stage-pill-num {
+  font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:300;
+  color:var(--rose-gold); min-width:28px;
+}
+.stage-pill-info { flex:1; }
+.stage-pill-title {
+  font-size:13px; font-weight:500; color:var(--cream); line-height:1.3;
+}
+.stage-pill-sub {
+  font-size:11px; color:rgba(247,243,238,0.4); margin-top:2px; letter-spacing:0.5px;
+}
+.stage-pill-badge {
+  font-size:9px; letter-spacing:1.5px; text-transform:uppercase;
+  padding:3px 8px; background:var(--rose-gold); color:var(--dark);
+}
+.stage-pill-badge.soon {
+  background:transparent; border:1px solid rgba(196,154,122,0.3);
+  color:rgba(247,243,238,0.3);
+}
+
+/* ── JOURNEY MAP ── */
+.journey-section {
+  background: var(--dark);
+  padding: 0 0 0;
+  overflow: hidden;
+}
+
+.journey-track {
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 0;
+  width: 100%;
+}
+.journey-track::-webkit-scrollbar { display: none; }
+
+.journey-card {
+  flex: 1 1 0;
+  min-width: 120px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  position: relative;
+  border-right: 1px solid rgba(196,154,122,0.12);
+  transition: background 0.3s, transform 0.2s;
+  scroll-snap-align: start;
+  padding: 28px 12px 24px;
+  overflow: hidden;
+}
+.journey-card:last-child { border-right: none; }
+
+/* Background visual layer */
+.journey-card-bg {
+  position: absolute; inset: 0;
+  opacity: 0.12; transition: opacity 0.35s;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 80px; pointer-events: none;
+  filter: blur(2px);
+}
+.journey-card:hover .journey-card-bg,
+.journey-card.active .journey-card-bg { opacity: 0.22; }
+
+/* SVG illustration layer */
+.journey-card-art {
+  position: relative; z-index: 2;
+  width: 72px; height: 72px;
+  margin-bottom: 16px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.journey-card-art svg {
+  width: 100%; height: 100%;
+  transition: transform 0.3s;
+}
+.journey-card:hover .journey-card-art svg,
+.journey-card.active .journey-card-art svg {
+  transform: scale(1.08) translateY(-2px);
+}
+
+.journey-card-num {
+  position: absolute; top: 14px; left: 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px; font-weight: 400;
+  color: rgba(196,154,122,0.35);
+  letter-spacing: 1px;
+  transition: color 0.3s;
+  z-index: 3;
+}
+.journey-card:hover .journey-card-num,
+.journey-card.active .journey-card-num { color: var(--rose-gold); }
+
+.journey-card-label {
+  position: relative; z-index: 2;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px; font-weight: 400;
+  color: rgba(247,243,238,0.5);
+  text-align: center; line-height: 1.3;
+  transition: color 0.3s;
+  margin-bottom: 6px;
+}
+.journey-card-sub {
+  position: relative; z-index: 2;
+  font-size: 10px; letter-spacing: 0.8px;
+  color: rgba(247,243,238,0.25);
+  text-align: center; line-height: 1.5;
+  transition: color 0.3s;
+  max-width: 120px;
+}
+.journey-card:hover .journey-card-label,
+.journey-card.active .journey-card-label { color: var(--cream); }
+.journey-card:hover .journey-card-sub,
+.journey-card.active .journey-card-sub { color: rgba(247,243,238,0.55); }
+
+/* Active state */
+.journey-card.active {
+  background: rgba(196,154,122,0.1);
+}
+.journey-card.active::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  background: var(--rose-gold);
+}
+
+/* Done state */
+.journey-card.done .journey-card-label { color: rgba(196,154,122,0.7); }
+.journey-card.done .journey-card-num { color: var(--rose-gold); }
+
+/* Soon badge */
+.journey-card-soon {
+  position: absolute; top: 12px; right: 12px;
+  font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: rgba(247,243,238,0.2); border: 1px solid rgba(196,154,122,0.15);
+  padding: 2px 6px; z-index: 3;
+}
+.journey-card.live-stage .journey-card-soon { display: none; }
+
+/* Connector arrow between cards */
+.journey-connector {
+  position: absolute; right: -1px; top: 50%; transform: translateY(-50%);
+  width: 0; height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 8px solid rgba(196,154,122,0.15);
+  z-index: 4;
+}
+
+/* Mobile scroll hint */
+.journey-scroll-hint {
+  text-align: center; padding: 10px 0 20px;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(247,243,238,0.2);
+  display: none;
+}
+@media (max-width: 900px) {
+  .journey-card { width: 130px; min-height: 190px; padding: 24px 10px 20px; }
+  .journey-card-art { width: 56px; height: 56px; }
+  .journey-scroll-hint { display: block; }
+}
+
+/* ── MAIN CONTENT AREA ── */
+.content-area {
+  background:var(--cream); min-height:600px;
+}
+
+/* Stage panels */
+.stage-panel {
+  display:none;
+  max-width:1200px; margin:0 auto; padding:72px 60px;
+  animation: fadeIn 0.4s ease;
+}
+.stage-panel.active { display:block; }
+
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(16px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+.stage-header { margin-bottom:52px; }
+.stage-eyebrow {
+  font-size:11px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--rose-gold); margin-bottom:12px;
+}
+.stage-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,3.5vw,2.8rem);
+  font-weight:300; line-height:1.2; color:var(--dark); margin-bottom:14px;
+}
+.stage-title em { color:var(--rose-gold); font-style:italic; }
+.stage-desc {
+  font-size:14px; line-height:1.9; color:var(--light-text); max-width:680px;
+}
+
+/* Pain point banner */
+.pain-banner {
+  background:var(--dark); padding:20px 28px; margin-bottom:48px;
+  border-left:3px solid var(--rose-gold);
+  display:flex; align-items:flex-start; gap:16px;
+}
+.pain-icon { font-size:20px; margin-top:2px; flex-shrink:0; }
+.pain-text { font-size:13px; line-height:1.8; color:rgba(247,243,238,0.7); }
+.pain-text strong { color:var(--champagne); font-weight:500; }
+
+/* Tool cards grid */
+.tools-label {
+  font-size:11px; letter-spacing:2.5px; text-transform:uppercase;
+  color:var(--light-text); margin-bottom:24px; padding-bottom:12px;
+  border-bottom:1px solid var(--border);
+}
+.tools-grid {
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(320px,1fr));
+  gap:20px; margin-bottom:48px;
+}
+
+/* Card base */
+.tool-card {
+  border:1px solid var(--border); background:white;
+  transition:all 0.3s; display:flex; flex-direction:column;
+  position:relative; overflow:hidden;
+}
+.tool-card:hover { transform:translateY(-3px); box-shadow:0 16px 48px rgba(28,21,16,0.08); }
+.tool-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background:transparent; transition:background 0.3s;
+}
+/* Card types */
+.tool-card.evonne::before { background:var(--rose-gold); }
+.tool-card.interactive { background:var(--dark); }
+.tool-card.interactive::before { background:var(--champagne); }
+.tool-card.external::before { background:rgba(140,112,96,0.3); }
+
+.card-top { padding:24px 24px 0; display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.card-icon { font-size:28px; line-height:1; }
+.card-type-badge {
+  font-size:9px; letter-spacing:2px; text-transform:uppercase;
+  padding:4px 8px; border:1px solid var(--border); color:var(--light-text);
+  flex-shrink:0;
+}
+.tool-card.evonne .card-type-badge { border-color:var(--rose-gold); color:var(--rose-gold); }
+.tool-card.interactive .card-type-badge { border-color:rgba(196,154,122,0.4); color:var(--champagne); }
+
+.card-body { padding:16px 24px 24px; flex:1; display:flex; flex-direction:column; gap:10px; }
+.card-title {
+  font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:400;
+  line-height:1.3; color:var(--dark);
+}
+.tool-card.interactive .card-title { color:var(--cream); }
+.card-desc {
+  font-size:12px; line-height:1.8; color:var(--light-text); flex:1;
+}
+.tool-card.interactive .card-desc { color:rgba(247,243,238,0.55); }
+.card-link {
+  font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+  color:var(--rose-gold); text-decoration:none; display:flex; align-items:center;
+  gap:6px; margin-top:auto; transition:gap 0.2s;
+}
+.card-link:hover { gap:10px; }
+.tool-card.interactive .card-link { color:var(--champagne); }
+
+/* ── INTERACTIVE TOOLS ── */
+
+/* 83b countdown */
+.tool-83b { padding:0; }
+.tool-83b .card-body { padding:20px 24px 24px; }
+.input-group { display:flex; flex-direction:column; gap:6px; margin-bottom:16px; }
+.input-label { font-size:11px; letter-spacing:1px; text-transform:uppercase; color:var(--champagne); opacity:0.7; }
+.date-input {
+  background:rgba(247,243,238,0.08); border:1px solid rgba(196,154,122,0.3);
+  padding:10px 14px; font-size:13px; color:var(--cream);
+  font-family:'DM Sans',sans-serif; outline:none; width:100%;
+  transition:border-color 0.2s;
+}
+.date-input:focus { border-color:var(--rose-gold); }
+.date-input::-webkit-calendar-picker-indicator { filter:invert(0.7); cursor:pointer; }
+.countdown-result {
+  background:rgba(196,154,122,0.1); border:1px solid rgba(196,154,122,0.3);
+  padding:16px; text-align:center; min-height:72px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px;
+}
+.countdown-num {
+  font-family:'Cormorant Garamond',serif; font-size:40px; font-weight:300;
+  color:var(--rose-gold); line-height:1;
+}
+.countdown-num.urgent { color:#E8A87C; }
+.countdown-num.expired { color:#cc6666; }
+.countdown-sub { font-size:11px; letter-spacing:1px; text-transform:uppercase; color:rgba(247,243,238,0.5); }
+.countdown-deadline { font-size:12px; color:rgba(247,243,238,0.6); margin-top:6px; }
+.countdown-warning {
+  margin-top:12px; padding:10px 14px; background:rgba(200,100,80,0.15);
+  border:1px solid rgba(200,100,80,0.3); font-size:12px; line-height:1.6;
+  color:rgba(247,243,238,0.7); display:none;
+}
+.countdown-warning.show { display:block; }
+
+/* Employee vs Contractor quiz */
+.quiz-wrap { padding:0; }
+.quiz-progress {
+  height:3px; background:rgba(196,154,122,0.15);
+  margin-bottom:0;
+}
+.quiz-progress-fill {
+  height:100%; background:var(--rose-gold); transition:width 0.4s ease;
+}
+.quiz-body { padding:20px 24px 24px; }
+.quiz-q {
+  font-family:'Cormorant Garamond',serif; font-size:17px; font-weight:300;
+  color:var(--cream); line-height:1.5; margin-bottom:16px; min-height:52px;
+}
+.quiz-options { display:flex; flex-direction:column; gap:8px; }
+.quiz-opt {
+  padding:10px 14px; border:1px solid rgba(196,154,122,0.25); cursor:pointer;
+  font-size:12px; color:rgba(247,243,238,0.7); transition:all 0.2s;
+  background:transparent; text-align:left; font-family:'DM Sans',sans-serif;
+}
+.quiz-opt:hover { border-color:var(--rose-gold); color:var(--cream); background:rgba(196,154,122,0.08); }
+.quiz-result {
+  text-align:center; padding:16px 0; display:none;
+}
+.quiz-result.show { display:block; }
+.quiz-result-icon { font-size:36px; margin-bottom:10px; }
+.quiz-result-verdict {
+  font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:300;
+  color:var(--cream); margin-bottom:8px;
+}
+.quiz-result-sub { font-size:12px; line-height:1.7; color:rgba(247,243,238,0.55); }
+.quiz-restart {
+  margin-top:14px; padding:8px 20px; background:transparent;
+  border:1px solid rgba(196,154,122,0.35); color:var(--champagne);
+  font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+  cursor:pointer; font-family:'DM Sans',sans-serif; transition:all 0.2s;
+}
+.quiz-restart:hover { border-color:var(--rose-gold); color:var(--rose-gold); }
+.quiz-step-count { font-size:10px; letter-spacing:1.5px; color:rgba(247,243,238,0.3); margin-bottom:12px; text-transform:uppercase; }
+
+/* Comparison table */
+.compare-table { width:100%; border-collapse:collapse; }
+.compare-table th {
+  padding:12px 16px; text-align:left;
+  font-size:11px; letter-spacing:2px; text-transform:uppercase; font-weight:500;
+  border-bottom:1px solid var(--border);
+}
+.compare-table th:first-child { color:var(--light-text); width:35%; }
+.compare-table th:not(:first-child) { color:var(--rose-gold); }
+.compare-table td {
+  padding:12px 16px; font-size:13px; line-height:1.6;
+  border-bottom:1px solid rgba(196,154,122,0.08); vertical-align:top;
+}
+.compare-table td:first-child { color:var(--light-text); font-weight:400; }
+.compare-table tr:last-child td { border-bottom:none; }
+.compare-table tr:hover td { background:rgba(196,154,122,0.03); }
+.check { color:#7ab87a; }
+.cross { color:#cc8888; }
+.neutral { color:var(--light-text); }
+
+/* Checklist */
+.checklist { list-style:none; display:flex; flex-direction:column; gap:0; }
+.checklist li {
+  display:flex; align-items:flex-start; gap:12px;
+  padding:11px 0; border-bottom:1px solid rgba(196,154,122,0.08);
+  font-size:13px; line-height:1.6; cursor:pointer;
+  transition:all 0.2s;
+}
+.checklist li:last-child { border-bottom:none; }
+.checklist li:hover { color:var(--dark); }
+.check-box {
+  width:18px; height:18px; border:1px solid var(--border);
+  flex-shrink:0; margin-top:2px; display:flex; align-items:center;
+  justify-content:center; transition:all 0.2s; cursor:pointer;
+}
+.checklist li.checked .check-box {
+  background:var(--rose-gold); border-color:var(--rose-gold);
+}
+.checklist li.checked .check-box::after { content:'✓'; font-size:11px; color:white; }
+.checklist li.checked .check-text { color:var(--light-text); text-decoration:line-through; }
+.check-text { flex:1; }
+.check-priority {
+  font-size:9px; letter-spacing:1px; padding:2px 6px;
+  border:1px solid var(--border); color:var(--light-text);
+  text-transform:uppercase; flex-shrink:0; margin-top:3px;
+}
+.check-priority.high { border-color:rgba(196,154,122,0.5); color:var(--rose-gold); }
+
+/* Coming soon overlay */
+.coming-soon-panel {
+  max-width:1200px; margin:0 auto; padding:72px 60px;
+  display:none; text-align:center;
+  animation:fadeIn 0.4s ease;
+}
+.coming-soon-panel.active { display:block; }
+.coming-soon-icon { font-size:60px; margin-bottom:24px; opacity:0.5; }
+.coming-soon-title {
+  font-family:'Cormorant Garamond',serif; font-size:2.4rem; font-weight:300;
+  color:var(--dark); margin-bottom:12px;
+}
+.coming-soon-sub { font-size:14px; color:var(--light-text); margin-bottom:32px; max-width:400px; margin-left:auto; margin-right:auto; }
+.coming-soon-stages {
+  display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:40px;
+}
+.coming-soon-tag {
+  padding:8px 16px; border:1px solid var(--border);
+  font-size:12px; color:var(--light-text); letter-spacing:0.5px;
+}
+
+/* Blog resources section within stage */
+.resources-section { margin-top:52px; padding-top:40px; border-top:1px solid var(--border); }
+.resources-label { font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:var(--light-text); margin-bottom:20px; }
+.resource-links { display:flex; flex-direction:column; gap:1px; }
+.resource-link {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 20px; background:white; border:1px solid var(--border);
+  text-decoration:none; transition:all 0.25s; gap:16px;
+  margin-bottom:8px;
+}
+.resource-link:hover { border-color:var(--rose-gold); background:var(--warm-white); }
+.resource-link-left { display:flex; align-items:center; gap:14px; }
+.resource-link-icon { font-size:18px; flex-shrink:0; }
+.resource-link-info {}
+.resource-link-cat { font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--rose-gold); margin-bottom:3px; }
+.resource-link-title { font-size:14px; font-weight:400; color:var(--dark); font-family:'Cormorant Garamond',serif; }
+.resource-link-meta { font-size:11px; color:var(--light-text); margin-top:2px; }
+.resource-link-arrow { font-size:16px; color:var(--rose-gold); flex-shrink:0; transition:transform 0.2s; }
+.resource-link:hover .resource-link-arrow { transform:translateX(4px); }
+
+/* ── CTA SECTION ── */
+.cta-section {
+  background:var(--dark); padding:80px 60px; text-align:center;
+  position:relative; overflow:hidden;
+}
+.cta-section::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse at 50% 0%, rgba(196,154,122,0.1) 0%, transparent 70%);
+}
+.cta-inner { position:relative; z-index:1; max-width:560px; margin:0 auto; }
+.cta-tag { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--rose-gold); margin-bottom:16px; }
+.cta-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,4vw,2.8rem); font-weight:300; color:var(--cream); margin-bottom:14px; line-height:1.2; }
+.cta-title em { color:var(--rose-gold); font-style:italic; }
+.cta-desc { font-size:14px; line-height:1.8; color:rgba(247,243,238,0.55); margin-bottom:32px; }
+.cta-btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+/* ── FOOTER ── */
+footer {
+  background:var(--dark); padding:24px 60px;
+  border-top:1px solid rgba(196,154,122,0.1);
+  display:flex; align-items:center; justify-content:space-between;
+}
+.footer-text { font-size:12px; color:rgba(247,243,238,0.3); }
+.footer-link { font-size:12px; color:var(--rose-gold); text-decoration:none; letter-spacing:0.5px; }
+.footer-link:hover { text-decoration:underline; }
+
+/* ── RESPONSIVE ── */
+@media (max-width:900px) {
+  nav { padding:0 24px; }
+  .hero-inner { grid-template-columns:1fr; padding:48px 24px 40px; gap:40px; }
+  .hero-right { display:none; }
+  .stage-panel, .coming-soon-panel { padding:48px 24px; }
+  .timeline-bar { padding:0 24px; }
+  .tools-grid { grid-template-columns:1fr; }
+  .cta-section { padding:60px 24px; }
+  footer { padding:20px 24px; flex-direction:column; gap:8px; text-align:center; }
+  .compare-table { font-size:12px; }
+  .compare-table th, .compare-table td { padding:10px 12px; }
+}
+
+@media (max-width:600px) {
+  .hero-cta-group { flex-direction:column; }
+  .btn-primary, .btn-ghost { text-align:center; }
+}
+</style>
+</head>
+
+<body class="lang-zh">
+
+<!-- NAV -->
+<nav>
+  <a href="../index.html" class="nav-logo">E<span>.</span>LAW</a>
+  <a href="../index.html" class="nav-back">← <span data-lang="zh">返回主页</span><span data-lang="en">Back to Home</span></a>
+  <div class="lang-switch">
+    <button class="lang-btn active" id="btn-zh" onclick="switchLang('zh')">CN</button>
+    <button class="lang-btn" id="btn-en" onclick="switchLang('en')">EN</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-tag">Startup Legal Toolbox</div>
+      <h1 class="hero-title">
+        <span data-lang="zh">从注册公司<br>到 <em>IPO</em><br>每步都有法律支撑</span>
+        <span data-lang="en">From Incorporation<br>to <em>IPO</em><br>Legal Tools at Every Step</span>
+      </h1>
+      <p class="hero-subtitle">
+        <span data-lang="zh">专为在美华人创始人设计。每个创业阶段，精准匹配最需要的法律工具、文件模板和实战资源。</span>
+        <span data-lang="en">Built for founders navigating the US legal system. Tools, checklists, and resources matched to where you actually are.</span>
+      </p>
+      <div class="hero-cta-group">
+        <a href="#stage-0" class="btn-primary" onclick="showStage(0)">
+          <span data-lang="zh">从第一步开始 →</span>
+          <span data-lang="en">Start from Step 1 →</span>
+        </a>
+        <a href="https://calendly.com/evonne-xu-legal/30min" target="_blank" class="btn-ghost">
+          <span data-lang="zh">预约咨询</span>
+          <span data-lang="en">Book a Call</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="stage-pills-label">
+        <span data-lang="zh">选择你的阶段</span>
+        <span data-lang="en">Jump to your stage</span>
+      </div>
+      <a class="stage-pill current" onclick="showStage(0); return false;" href="#">
+        <div class="stage-pill-num">0</div>
+        <div class="stage-pill-info">
+          <div class="stage-pill-title"><span data-lang="zh">想法 & 架构</span><span data-lang="en">Idea & Structure</span></div>
+          <div class="stage-pill-sub"><span data-lang="zh">LLC vs C-Corp · 注册地选择</span><span data-lang="en">LLC vs C-Corp · Where to incorporate</span></div>
+        </div>
+        <div class="stage-pill-badge">Live</div>
+      </a>
+      <a class="stage-pill" onclick="showStage(1); return false;" href="#">
+        <div class="stage-pill-num">1</div>
+        <div class="stage-pill-info">
+          <div class="stage-pill-title"><span data-lang="zh">公司成立</span><span data-lang="en">Incorporation</span></div>
+          <div class="stage-pill-sub"><span data-lang="zh">股权分配 · 83(b) Election</span><span data-lang="en">Equity split · 83(b) Election</span></div>
+        </div>
+        <div class="stage-pill-badge">Live</div>
+      </a>
+      <a class="stage-pill" onclick="showStage(2); return false;" href="#">
+        <div class="stage-pill-num">2</div>
+        <div class="stage-pill-info">
+          <div class="stage-pill-title"><span data-lang="zh">第一个员工</span><span data-lang="en">First Hire</span></div>
+          <div class="stage-pill-sub"><span data-lang="zh">雇员 vs 承包商 · 期权授予</span><span data-lang="en">Employee vs contractor · Options</span></div>
+        </div>
+        <div class="stage-pill-badge">Live</div>
+      </a>
+      <a class="stage-pill" onclick="showStage(3); return false;" href="#">
+        <div class="stage-pill-num">3</div>
+        <div class="stage-pill-info">
+          <div class="stage-pill-title"><span data-lang="zh">早期融资</span><span data-lang="en">Seed Funding</span></div>
+          <div class="stage-pill-sub"><span data-lang="zh">SAFE · Term Sheet</span><span data-lang="en">SAFE · Term Sheet red flags</span></div>
+        </div>
+        <div class="stage-pill-badge soon">Soon</div>
+      </a>
+      <a class="stage-pill" onclick="showStage(4); return false;" href="#">
+        <div class="stage-pill-num">4</div>
+        <div class="stage-pill-info">
+          <div class="stage-pill-title"><span data-lang="zh">成长 & 合规</span><span data-lang="en">Growth & Compliance</span></div>
+          <div class="stage-pill-sub"><span data-lang="zh">AI合规 · 数据隐私</span><span data-lang="en">AI compliance · Data privacy</span></div>
+        </div>
+        <div class="stage-pill-badge soon">Soon</div>
+      </a>
+      <a class="stage-pill" onclick="showStage(5); return false;" href="#">
+        <div class="stage-pill-num">5</div>
+        <div class="stage-pill-info">
+          <div class="stage-pill-title"><span data-lang="zh">跨境扩张</span><span data-lang="en">Cross-Border</span></div>
+          <div class="stage-pill-sub"><span data-lang="zh">CFIUS · VIE结构</span><span data-lang="en">CFIUS · VIE structure</span></div>
+        </div>
+        <div class="stage-pill-badge soon">Soon</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Journey Map -->
+  <div class="journey-section">
+    <div class="journey-track" id="journeyTrack">
+
+      <!-- Stage 0: Idea -->
+      <div class="journey-card active live-stage" onclick="showStage(0)" id="node-0">
+        <div class="journey-card-num">00</div>
+        <div class="journey-card-bg">💡</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Lightbulb -->
+            <circle cx="36" cy="30" r="14" stroke="#C49A7A" stroke-width="1.5" fill="none" opacity="0.6"/>
+            <path d="M28 30 Q28 38 36 42 Q44 38 44 30" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.1)"/>
+            <line x1="32" y1="44" x2="40" y2="44" stroke="#C49A7A" stroke-width="1.5" opacity="0.7"/>
+            <line x1="33" y1="47" x2="39" y2="47" stroke="#C49A7A" stroke-width="1.5" opacity="0.5"/>
+            <!-- rays -->
+            <line x1="36" y1="12" x2="36" y2="8" stroke="#E8D5C0" stroke-width="1.2" opacity="0.5"/>
+            <line x1="50" y1="16" x2="53" y2="13" stroke="#E8D5C0" stroke-width="1.2" opacity="0.4"/>
+            <line x1="22" y1="16" x2="19" y2="13" stroke="#E8D5C0" stroke-width="1.2" opacity="0.4"/>
+            <line x1="56" y1="30" x2="60" y2="30" stroke="#E8D5C0" stroke-width="1.2" opacity="0.35"/>
+            <line x1="16" y1="30" x2="12" y2="30" stroke="#E8D5C0" stroke-width="1.2" opacity="0.35"/>
+          </svg>
+        </div>
+        <div class="journey-card-label"><span data-lang="zh">想法 &amp; 架构</span><span data-lang="en">Idea &amp; Structure</span></div>
+        <div class="journey-card-sub">LLC vs C-Corp</div>
+        <div class="journey-connector"></div>
+      </div>
+
+      <!-- Stage 1: Incorporate -->
+      <div class="journey-card live-stage" onclick="showStage(1)" id="node-1">
+        <div class="journey-card-num">01</div>
+        <div class="journey-card-bg">🏛️</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Building / certificate -->
+            <rect x="18" y="24" width="36" height="28" rx="1" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.08)"/>
+            <!-- Roof / pediment -->
+            <polyline points="14,24 36,10 58,24" stroke="#C49A7A" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+            <!-- Columns -->
+            <line x1="24" y1="24" x2="24" y2="52" stroke="#E8D5C0" stroke-width="1.2" opacity="0.6"/>
+            <line x1="32" y1="24" x2="32" y2="52" stroke="#E8D5C0" stroke-width="1.2" opacity="0.6"/>
+            <line x1="40" y1="24" x2="40" y2="52" stroke="#E8D5C0" stroke-width="1.2" opacity="0.6"/>
+            <line x1="48" y1="24" x2="48" y2="52" stroke="#E8D5C0" stroke-width="1.2" opacity="0.6"/>
+            <!-- Steps -->
+            <line x1="14" y1="54" x2="58" y2="54" stroke="#C49A7A" stroke-width="1.5" opacity="0.7"/>
+            <line x1="10" y1="58" x2="62" y2="58" stroke="#C49A7A" stroke-width="1" opacity="0.4"/>
+            <!-- Star at top -->
+            <circle cx="36" cy="10" r="2" fill="#C49A7A" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="journey-card-label"><span data-lang="zh">公司成立</span><span data-lang="en">Incorporation</span></div>
+        <div class="journey-card-sub">83(b) · Equity Split</div>
+        <div class="journey-connector"></div>
+      </div>
+
+      <!-- Stage 2: First Hire -->
+      <div class="journey-card live-stage" onclick="showStage(2)" id="node-2">
+        <div class="journey-card-num">02</div>
+        <div class="journey-card-bg">👥</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Person 1 (founder) -->
+            <circle cx="26" cy="24" r="8" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.12)"/>
+            <path d="M12 52 Q12 38 26 38 Q40 38 40 52" stroke="#C49A7A" stroke-width="1.5" fill="none"/>
+            <!-- Person 2 (hire) - slightly offset, lighter -->
+            <circle cx="46" cy="26" r="7" stroke="#E8D5C0" stroke-width="1.2" fill="rgba(232,213,192,0.08)" opacity="0.7"/>
+            <path d="M33 52 Q34 41 46 41 Q58 41 59 52" stroke="#E8D5C0" stroke-width="1.2" fill="none" opacity="0.6"/>
+            <!-- Plus sign (new hire) -->
+            <line x1="54" y1="18" x2="54" y2="26" stroke="#C49A7A" stroke-width="1.5" opacity="0.8"/>
+            <line x1="50" y1="22" x2="58" y2="22" stroke="#C49A7A" stroke-width="1.5" opacity="0.8"/>
+            <!-- Document line -->
+            <line x1="18" y1="58" x2="54" y2="58" stroke="rgba(196,154,122,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+          </svg>
+        </div>
+        <div class="journey-card-label"><span data-lang="zh">第一个员工</span><span data-lang="en">First Hire</span></div>
+        <div class="journey-card-sub">ISO · Offer Letter</div>
+        <div class="journey-connector"></div>
+      </div>
+
+      <!-- Stage 3: Seed Funding (SOON) -->
+      <div class="journey-card" onclick="showStage(3)" id="node-3">
+        <div class="journey-card-num">03</div>
+        <div class="journey-card-soon">Soon</div>
+        <div class="journey-card-bg">💰</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="0.5">
+            <!-- Rocket -->
+            <path d="M36 56 L30 44 Q36 14 42 44 Z" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.1)" stroke-linejoin="round"/>
+            <path d="M30 44 Q24 46 24 52 L30 50 Z" stroke="#C49A7A" stroke-width="1.2" fill="rgba(196,154,122,0.08)"/>
+            <path d="M42 44 Q48 46 48 52 L42 50 Z" stroke="#C49A7A" stroke-width="1.2" fill="rgba(196,154,122,0.08)"/>
+            <circle cx="36" cy="32" r="3" stroke="#E8D5C0" stroke-width="1.2" fill="none"/>
+            <!-- Stars -->
+            <circle cx="20" cy="20" r="1.5" fill="#E8D5C0" opacity="0.5"/>
+            <circle cx="52" cy="18" r="1.5" fill="#E8D5C0" opacity="0.5"/>
+            <circle cx="16" cy="36" r="1" fill="#E8D5C0" opacity="0.4"/>
+            <circle cx="56" cy="32" r="1" fill="#E8D5C0" opacity="0.4"/>
+            <!-- Flame -->
+            <path d="M33 54 Q36 62 39 54" stroke="#C49A7A" stroke-width="1.2" fill="rgba(196,154,122,0.15)"/>
+          </svg>
+        </div>
+        <div class="journey-card-label"><span data-lang="zh">早期融资</span><span data-lang="en">Seed Funding</span></div>
+        <div class="journey-card-sub">SAFE · Term Sheet</div>
+        <div class="journey-connector"></div>
+      </div>
+
+      <!-- Stage 4: Growth (SOON) -->
+      <div class="journey-card" onclick="showStage(4)" id="node-4">
+        <div class="journey-card-num">04</div>
+        <div class="journey-card-soon">Soon</div>
+        <div class="journey-card-bg">🤖</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="0.5">
+            <!-- Bar chart growth -->
+            <rect x="14" y="44" width="10" height="14" rx="1" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.1)"/>
+            <rect x="28" y="34" width="10" height="24" rx="1" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.15)"/>
+            <rect x="42" y="22" width="10" height="36" rx="1" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.2)"/>
+            <!-- Trend arrow -->
+            <polyline points="14,50 28,40 42,28 56,16" stroke="#E8D5C0" stroke-width="1.5" fill="none" stroke-dasharray="4,3" opacity="0.6"/>
+            <polyline points="50,14 56,16 54,22" stroke="#E8D5C0" stroke-width="1.5" fill="none" opacity="0.6" stroke-linejoin="round"/>
+            <!-- AI chip hint -->
+            <rect x="26" y="10" width="12" height="10" rx="1" stroke="#C49A7A" stroke-width="1" fill="none" opacity="0.4"/>
+            <line x1="30" y1="10" x2="30" y2="8" stroke="#C49A7A" stroke-width="1" opacity="0.4"/>
+            <line x1="34" y1="10" x2="34" y2="8" stroke="#C49A7A" stroke-width="1" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="journey-card-label"><span data-lang="zh">成长 &amp; 合规</span><span data-lang="en">Growth &amp; AI</span></div>
+        <div class="journey-card-sub">AI Compliance · CCPA</div>
+        <div class="journey-connector"></div>
+      </div>
+
+      <!-- Stage 5: Cross-Border (SOON) -->
+      <div class="journey-card" onclick="showStage(5)" id="node-5">
+        <div class="journey-card-num">05</div>
+        <div class="journey-card-soon">Soon</div>
+        <div class="journey-card-bg">🌏</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="0.5">
+            <!-- Globe -->
+            <circle cx="36" cy="36" r="20" stroke="#C49A7A" stroke-width="1.5" fill="none"/>
+            <!-- Latitude lines -->
+            <ellipse cx="36" cy="36" rx="20" ry="8" stroke="#C49A7A" stroke-width="1" fill="none" opacity="0.4"/>
+            <!-- Longitude lines -->
+            <ellipse cx="36" cy="36" rx="10" ry="20" stroke="#C49A7A" stroke-width="1" fill="none" opacity="0.4"/>
+            <line x1="16" y1="36" x2="56" y2="36" stroke="#C49A7A" stroke-width="1" opacity="0.4"/>
+            <!-- Connection dots -->
+            <circle cx="24" cy="28" r="2.5" fill="#C49A7A" opacity="0.8"/>
+            <circle cx="48" cy="28" r="2.5" fill="#E8D5C0" opacity="0.6"/>
+            <!-- Flight path -->
+            <path d="M24 28 Q36 18 48 28" stroke="#E8D5C0" stroke-width="1.2" fill="none" stroke-dasharray="3,2" opacity="0.6"/>
+            <!-- Plane icon -->
+            <path d="M34 23 L38 21 L38 23 L42 23 L38 25 L38 27 Z" fill="#C49A7A" opacity="0.7" transform="rotate(-20 36 24)"/>
+          </svg>
+        </div>
+        <div class="journey-card-label"><span data-lang="zh">跨境扩张</span><span data-lang="en">Cross-Border</span></div>
+        <div class="journey-card-sub">CFIUS · VIE</div>
+        <div class="journey-connector"></div>
+      </div>
+
+      <!-- Stage 6: M&A / IPO (SOON) -->
+      <div class="journey-card" onclick="showStage(6)" id="node-6">
+        <div class="journey-card-num">06</div>
+        <div class="journey-card-soon">Soon</div>
+        <div class="journey-card-bg">🏆</div>
+        <div class="journey-card-art">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="0.5">
+            <!-- Trophy cup -->
+            <path d="M24 18 L24 36 Q24 48 36 50 Q48 48 48 36 L48 18 Z" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.1)" stroke-linejoin="round"/>
+            <!-- Handles -->
+            <path d="M24 22 Q14 22 14 30 Q14 38 24 38" stroke="#C49A7A" stroke-width="1.5" fill="none"/>
+            <path d="M48 22 Q58 22 58 30 Q58 38 48 38" stroke="#C49A7A" stroke-width="1.5" fill="none"/>
+            <!-- Base stem -->
+            <line x1="36" y1="50" x2="36" y2="56" stroke="#C49A7A" stroke-width="1.5"/>
+            <line x1="26" y1="56" x2="46" y2="56" stroke="#C49A7A" stroke-width="1.5"/>
+            <line x1="22" y1="60" x2="50" y2="60" stroke="#C49A7A" stroke-width="1.2" opacity="0.5"/>
+            <!-- Star inside -->
+            <path d="M36 26 L37.5 30.5 L42 30.5 L38.5 33 L40 37.5 L36 35 L32 37.5 L33.5 33 L30 30.5 L34.5 30.5 Z" stroke="#E8D5C0" stroke-width="0.8" fill="rgba(232,213,192,0.15)"/>
+          </svg>
+        </div>
+        <div class="journey-card-label"><span data-lang="zh">并购 / IPO</span><span data-lang="en">M&amp;A / IPO</span></div>
+        <div class="journey-card-sub">Due Diligence · Exit</div>
+      </div>
+
+    </div>
+    <div class="journey-scroll-hint">← <span data-lang="zh">滑动查看全部阶段</span><span data-lang="en">Scroll to see all stages</span> →</div>
+  </div>
+</section>
+
+<!-- CONTENT AREA -->
+<div class="content-area">
+
+  <!-- ══ STAGE 0: IDEA ══ -->
+  <div class="stage-panel active" id="panel-0">
+    <div class="stage-header">
+      <div class="stage-eyebrow">Stage 00 · <span data-lang="zh">想法阶段</span><span data-lang="en">Idea Stage</span></div>
+      <h2 class="stage-title">
+        <span data-lang="zh">注册哪种实体？<br>在<em>哪个州</em>注册？</span>
+        <span data-lang="en">Which entity?<br>Which <em>state</em>?</span>
+      </h2>
+      <p class="stage-desc">
+        <span data-lang="zh">大多数创始人在这里就走错了方向。选错实体类型或注册地，后期重组成本极高。先用下面的工具搞清楚基本问题。</span>
+        <span data-lang="en">Most founders get this wrong before they even start. Choosing the wrong entity type or state means expensive restructuring later. Use the tools below to nail the basics first.</span>
+      </p>
+    </div>
+
+    <div class="pain-banner">
+      <div class="pain-icon">⚡</div>
+      <div class="pain-text">
+        <span data-lang="zh"><strong>常见痛点：</strong>很多华人创始人默认注册LLC，因为"简单省钱"。但如果你计划接受VC融资或做股权激励，LLC在税务和结构上会带来严重麻烦。</span>
+        <span data-lang="en"><strong>Common mistake:</strong> Many founders default to an LLC because it seems "simpler and cheaper." But if you plan to raise VC funding or give equity to employees, LLC structure creates serious tax and structural complications.</span>
+      </div>
+    </div>
+
+    <div class="tools-label"><span data-lang="zh">工具 & 资源</span><span data-lang="en">Tools & Resources</span></div>
+    <div class="tools-grid">
+
+      <!-- Comparison Table Card -->
+      <div class="tool-card evonne" style="grid-column:1/-1;">
+        <div class="card-top">
+          <div class="card-icon">⚖️</div>
+          <div class="card-type-badge">Evonne原创 · Comparison</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">C-Corp vs LLC 深度对比</span>
+            <span data-lang="en">C-Corp vs LLC — Deep Comparison</span>
+          </div>
+          <p class="card-desc">
+            <span data-lang="zh">从融资、税务、股权激励、到上市路径，7个维度全面对比。</span>
+            <span data-lang="en">Seven dimensions compared: funding, taxes, equity incentives, exit paths, and more.</span>
+          </p>
+          <div style="overflow-x:auto; margin-top:8px;">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th><span data-lang="zh">维度</span><span data-lang="en">Factor</span></th>
+                  <th>C-Corp (Delaware)</th>
+                  <th>LLC</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span data-lang="zh">VC融资</span><span data-lang="en">VC Funding</span></td>
+                  <td><span class="check">✓</span> <span data-lang="zh">标准结构，VC首选</span><span data-lang="en">Standard, VC preferred</span></td>
+                  <td><span class="cross">✗</span> <span data-lang="zh">大多数VC不投</span><span data-lang="en">Most VCs won't invest</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">股权期权</span><span data-lang="en">Stock Options</span></td>
+                  <td><span class="check">✓</span> ISO / NSO <span data-lang="zh">完整支持</span><span data-lang="en">fully supported</span></td>
+                  <td><span class="neutral">△</span> <span data-lang="zh">只有利润分成权，结构复杂</span><span data-lang="en">Profit interests only, complex</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">双重课税</span><span data-lang="en">Double Taxation</span></td>
+                  <td><span class="cross">✗</span> <span data-lang="zh">公司层+个人层</span><span data-lang="en">Corporate + personal level</span></td>
+                  <td><span class="check">✓</span> <span data-lang="zh">穿透课税，只征一次</span><span data-lang="en">Pass-through, taxed once</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">IPO路径</span><span data-lang="en">IPO Path</span></td>
+                  <td><span class="check">✓</span> <span data-lang="zh">直接上市</span><span data-lang="en">Direct path</span></td>
+                  <td><span class="cross">✗</span> <span data-lang="zh">上市前必须转换</span><span data-lang="en">Must convert first</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">设立成本</span><span data-lang="en">Setup Cost</span></td>
+                  <td><span class="neutral">△</span> <span data-lang="zh">稍高，$500–$1,500</span><span data-lang="en">Slightly higher, $500–$1,500</span></td>
+                  <td><span class="check">✓</span> <span data-lang="zh">较低，$50–$500</span><span data-lang="en">Lower, $50–$500</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">年度合规</span><span data-lang="en">Annual Compliance</span></td>
+                  <td><span class="neutral">△</span> <span data-lang="zh">董事会、股东会记录要求</span><span data-lang="en">Board & shareholder records required</span></td>
+                  <td><span class="check">✓</span> <span data-lang="zh">要求较少</span><span data-lang="en">Less requirements</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">外国创始人</span><span data-lang="en">Foreign Founders</span></td>
+                  <td><span class="check">✓</span> <span data-lang="zh">无限制</span><span data-lang="en">No restrictions</span></td>
+                  <td><span class="neutral">△</span> <span data-lang="zh">税务申报更复杂</span><span data-lang="en">More complex tax filings</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="margin-top:16px; padding:12px 16px; background:rgba(196,154,122,0.06); border-left:2px solid var(--rose-gold); font-size:12px; line-height:1.7; color:var(--light-text);">
+            <strong style="color:var(--dark);">Evonne建议：</strong>
+            <span data-lang="zh">计划融资或招募员工给股权？直接选 Delaware C-Corp。只是想简单做个小生意/咨询业务且不打算融资？LLC可以考虑。</span>
+            <span data-lang="en">Planning to raise funding or give employees equity? Go Delaware C-Corp. Running a simple consulting or service business with no plans to fundraise? LLC may work.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delaware Why Card -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">🏛️</div>
+          <div class="card-type-badge">Quick Guide</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">为什么选 Delaware？</span>
+            <span data-lang="en">Why Delaware?</span>
+          </div>
+          <p class="card-desc">
+            <span data-lang="zh">Delaware 不是你住的地方，而是公司"法律上的家"。它有3个不可替代的优势：</span>
+            <span data-lang="en">Delaware isn't where you live — it's your company's legal home. Three irreplaceable advantages:</span>
+          </p>
+          <ul style="list-style:none; margin-top:8px; display:flex; flex-direction:column; gap:8px;">
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;">01</span>
+              <span><span data-lang="zh"><strong style="color:var(--dark);">投资人预期</strong>：几乎所有VC的Term Sheet都默认要求Delaware C-Corp</span><span data-lang="en"><strong style="color:var(--dark);">Investor expectation:</strong> Almost all VC term sheets default to Delaware C-Corp</span></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;">02</span>
+              <span><span data-lang="zh"><strong style="color:var(--dark);">成熟公司法</strong>：200年法院判例，法律不确定性最低</span><span data-lang="en"><strong style="color:var(--dark);">Mature case law:</strong> 200+ years of court precedent, lowest legal uncertainty</span></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;">03</span>
+              <span><span data-lang="zh"><strong style="color:var(--dark);">灵活的章程</strong>：允许多类股、反收购条款等复杂资本结构</span><span data-lang="en"><strong style="color:var(--dark);">Flexible charter:</strong> Allows multi-class stock, anti-takeover provisions, complex capital structures</span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Registration Services Card -->
+      <div class="tool-card external">
+        <div class="card-top">
+          <div class="card-icon">🔧</div>
+          <div class="card-type-badge">External Tools</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">注册服务推荐</span>
+            <span data-lang="en">Recommended Registration Services</span>
+          </div>
+          <p class="card-desc">
+            <span data-lang="zh">以下工具可帮助你快速完成公司注册（非广告，Evonne个人推荐）：</span>
+            <span data-lang="en">These services help you incorporate quickly. Not sponsored — Evonne's personal picks:</span>
+          </p>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+            <div style="padding:10px 12px;border:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+              <div>
+                <div style="font-size:13px;font-weight:500;color:var(--dark);">Stripe Atlas</div>
+                <div style="font-size:11px;color:var(--light-text);margin-top:2px;"><span data-lang="zh">最适合国际创始人，$500 一站式</span><span data-lang="en">Best for international founders, $500 all-in</span></div>
+              </div>
+              <a href="https://stripe.com/atlas" target="_blank" style="font-size:11px;color:var(--rose-gold);text-decoration:none;letter-spacing:1px;">→</a>
+            </div>
+            <div style="padding:10px 12px;border:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+              <div>
+                <div style="font-size:13px;font-weight:500;color:var(--dark);">Clerky</div>
+                <div style="font-size:11px;color:var(--light-text);margin-top:2px;"><span data-lang="zh">融资导向，文件规范，律师常用</span><span data-lang="en">Funding-ready docs, lawyer-approved</span></div>
+              </div>
+              <a href="https://www.clerky.com" target="_blank" style="font-size:11px;color:var(--rose-gold);text-decoration:none;letter-spacing:1px;">→</a>
+            </div>
+            <div style="padding:10px 12px;border:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+              <div>
+                <div style="font-size:13px;font-weight:500;color:var(--dark);">Doola</div>
+                <div style="font-size:11px;color:var(--light-text);margin-top:2px;"><span data-lang="zh">中文支持，适合非美居民</span><span data-lang="en">Chinese support, great for non-US residents</span></div>
+              </div>
+              <a href="https://www.doola.com" target="_blank" style="font-size:11px;color:var(--rose-gold);text-decoration:none;letter-spacing:1px;">→</a>
+            </div>
+          </div>
+          <div style="margin-top:12px;font-size:11px;color:var(--light-text);font-style:italic;">
+            <span data-lang="zh">⚠️ 这些工具适合结构简单的公司。如有复杂股权结构或跨境需求，建议直接咨询律师。</span>
+            <span data-lang="en">⚠️ These work for simple structures. For complex equity or cross-border needs, consult a lawyer directly.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Resources -->
+    <div class="resources-section">
+      <div class="resources-label"><span data-lang="zh">Evonne 推荐阅读</span><span data-lang="en">Evonne Recommends</span></div>
+      <div class="resource-links">
+        <a href="https://evonnexulegal.beehiiv.com" target="_blank" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">📄</div>
+            <div class="resource-link-info">
+              <div class="resource-link-cat">Newsletter</div>
+              <div class="resource-link-title"><span data-lang="zh">创业法律系列：从第一天开始避免的10个法律错误</span><span data-lang="en">Startup Legal Series: 10 Legal Mistakes to Avoid from Day One</span></div>
+              <div class="resource-link-meta">Evonne Xu Law · <span data-lang="zh">订阅获取</span><span data-lang="en">Subscribe to access</span></div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ STAGE 1: INCORPORATION ══ -->
+  <div class="stage-panel" id="panel-1">
+    <div class="stage-header">
+      <div class="stage-eyebrow">Stage 01 · <span data-lang="zh">公司成立</span><span data-lang="en">Incorporation</span></div>
+      <h2 class="stage-title">
+        <span data-lang="zh">注册完了，<br>接下来<em>最重要</em>的事</span>
+        <span data-lang="en">You're incorporated.<br>Here's what <em>actually matters</em> next.</span>
+      </h2>
+      <p class="stage-desc">
+        <span data-lang="zh">公司注册只是开始。接下来的30天内，有几件事如果没做，后悔都来不及——尤其是83(b) Election。</span>
+        <span data-lang="en">Incorporation is just the beginning. There are a few things in the next 30 days that, if missed, you can't undo — especially the 83(b) election.</span>
+      </p>
+    </div>
+
+    <div class="pain-banner">
+      <div class="pain-icon">🚨</div>
+      <div class="pain-text">
+        <span data-lang="zh"><strong>创始人最贵的遗忘：</strong>83(b) Election 必须在股权授予后 <strong>30天内</strong> 提交给IRS。错过了，你可能需要在没有实际收到钱的情况下，为未来的增值缴纳高额普通所得税。</span>
+        <span data-lang="en"><strong>The most expensive thing founders forget:</strong> The 83(b) election must be filed with the IRS within <strong>30 days</strong> of your equity grant. Miss it, and you could owe ordinary income tax on future appreciation — with no cash to pay it.</span>
+      </div>
+    </div>
+
+    <div class="tools-label"><span data-lang="zh">工具 & 资源</span><span data-lang="en">Tools & Resources</span></div>
+    <div class="tools-grid">
+
+      <!-- 83b Countdown Tool -->
+      <div class="tool-card interactive tool-83b">
+        <div class="quiz-progress"><div class="quiz-progress-fill" style="width:100%"></div></div>
+        <div class="card-top" style="padding-top:20px;">
+          <div class="card-icon">⏱️</div>
+          <div class="card-type-badge">Interactive Tool</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">83(b) Election <span data-lang="zh">倒计时</span><span data-lang="en">Countdown</span></div>
+          <p class="card-desc">
+            <span data-lang="zh">输入股权授予日期，立即看到距离IRS截止日期还剩多少天。</span>
+            <span data-lang="en">Enter your grant date — see exactly how many days you have left to file with the IRS.</span>
+          </p>
+          <div class="input-group">
+            <div class="input-label"><span data-lang="zh">股权授予日期</span><span data-lang="en">Grant Date</span></div>
+            <input type="date" class="date-input" id="grantDate" onchange="calc83b()">
+          </div>
+          <div class="countdown-result" id="countdownResult">
+            <div style="font-size:12px;color:rgba(247,243,238,0.3);letter-spacing:1px;">
+              <span data-lang="zh">输入日期查看倒计时</span>
+              <span data-lang="en">Enter grant date above</span>
+            </div>
+          </div>
+          <div class="countdown-warning" id="countdownWarning"></div>
+          <div style="margin-top:14px;font-size:11px;color:rgba(247,243,238,0.4);line-height:1.7;">
+            <span data-lang="zh">83(b)需以实物信件寄给IRS，同时保留邮寄证明。建议用挂号信。</span>
+            <span data-lang="en">83(b) must be mailed to the IRS via physical letter. Keep your mailing proof. Certified mail recommended.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Founder Checklist -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">✅</div>
+          <div class="card-type-badge">Checklist</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">成立后30天必办清单</span>
+            <span data-lang="en">30-Day Post-Incorporation Checklist</span>
+          </div>
+          <p class="card-desc">
+            <span data-lang="zh">点击勾选已完成的项目：</span>
+            <span data-lang="en">Click to check off completed items:</span>
+          </p>
+          <ul class="checklist" id="checklist1">
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">提交 83(b) Election 给IRS（30天内）</span><span data-lang="en">File 83(b) Election with IRS (within 30 days)</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">签署创始人股权分配协议（Founder Stock Agreement）</span><span data-lang="en">Sign Founder Stock Purchase Agreement</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">设置4年Vesting + 1年Cliff（行业标准）</span><span data-lang="en">Set up 4-year vesting + 1-year cliff (industry standard)</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">开设公司银行账户（不要用个人账户）</span><span data-lang="en">Open a dedicated business bank account</span></span>
+              <span class="check-priority">MEDIUM</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">申请EIN（雇主识别号）</span><span data-lang="en">Apply for EIN (Employer Identification Number)</span></span>
+              <span class="check-priority">MEDIUM</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">草拟IP转让协议（将个人IP转入公司）</span><span data-lang="en">Draft IP assignment agreement (transfer personal IP to company)</span></span>
+              <span class="check-priority">MEDIUM</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">召开第一次董事会并记录会议纪要</span><span data-lang="en">Hold first board meeting and record minutes</span></span>
+              <span class="check-priority">LOW</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">注册 Delaware 州的 Registered Agent</span><span data-lang="en">Set up Delaware Registered Agent</span></span>
+              <span class="check-priority">LOW</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Equity structure card -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">📊</div>
+          <div class="card-type-badge">Guide</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">创始人股权常见误区</span>
+            <span data-lang="en">Common Founder Equity Mistakes</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+            <div style="padding:12px;background:rgba(196,154,122,0.05);border:1px solid var(--border);">
+              <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--rose-gold);margin-bottom:6px;">
+                <span data-lang="zh">误区01</span><span data-lang="en">Mistake 01</span>
+              </div>
+              <div style="font-size:13px;font-weight:500;color:var(--dark);margin-bottom:4px;">
+                <span data-lang="zh">50/50分股权</span><span data-lang="en">50/50 equity split</span>
+              </div>
+              <div style="font-size:12px;line-height:1.7;color:var(--light-text);">
+                <span data-lang="zh">平等分配看起来"公平"，但在分歧时可能导致公司僵局。建议基于贡献、风险和角色做差异化分配。</span>
+                <span data-lang="en">Equal splits feel fair but create deadlock. Differentiate based on contribution, risk, and role instead.</span>
+              </div>
+            </div>
+            <div style="padding:12px;background:rgba(196,154,122,0.05);border:1px solid var(--border);">
+              <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--rose-gold);margin-bottom:6px;">
+                <span data-lang="zh">误区02</span><span data-lang="en">Mistake 02</span>
+              </div>
+              <div style="font-size:13px;font-weight:500;color:var(--dark);margin-bottom:4px;">
+                <span data-lang="zh">没有 Vesting 条款</span><span data-lang="en">No vesting schedule</span>
+              </div>
+              <div style="font-size:12px;line-height:1.7;color:var(--light-text);">
+                <span data-lang="zh">联合创始人中途离开但拿着大量股权，是创业公司最常见的灾难。Vesting 是保护公司的基本机制。</span>
+                <span data-lang="en">A co-founder leaving with a large chunk of equity is one of the most common startup disasters. Vesting is the basic protection mechanism.</span>
+              </div>
+            </div>
+            <div style="padding:12px;background:rgba(196,154,122,0.05);border:1px solid var(--border);">
+              <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--rose-gold);margin-bottom:6px;">
+                <span data-lang="zh">误区03</span><span data-lang="en">Mistake 03</span>
+              </div>
+              <div style="font-size:13px;font-weight:500;color:var(--dark);margin-bottom:4px;">
+                <span data-lang="zh">忘记 IP 归属问题</span><span data-lang="en">Forgetting IP assignment</span>
+              </div>
+              <div style="font-size:12px;line-height:1.7;color:var(--light-text);">
+                <span data-lang="zh">创始人用个人名义开发的产品技术，在法律上属于个人。不签IP转让协议，公司可能根本不拥有它的核心技术。</span>
+                <span data-lang="en">Technology developed under your personal name belongs to you, not the company. Without an IP assignment, your company may not legally own its core product.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resources-section">
+      <div class="resources-label"><span data-lang="zh">Evonne 推荐阅读</span><span data-lang="en">Evonne Recommends</span></div>
+      <div class="resource-links">
+        <a href="https://evonnexulegal.beehiiv.com" target="_blank" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">📄</div>
+            <div class="resource-link-info">
+              <div class="resource-link-cat">Deep Dive</div>
+              <div class="resource-link-title"><span data-lang="zh">83(b) Election 完全指南：为什么它是创始人最重要的税务决策</span><span data-lang="en">Complete 83(b) Election Guide: Why It's the Most Important Tax Decision for Founders</span></div>
+              <div class="resource-link-meta">Evonne Xu Law · Newsletter</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="https://carta.com" target="_blank" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🔧</div>
+            <div class="resource-link-info">
+              <div class="resource-link-cat">External Tool</div>
+              <div class="resource-link-title"><span data-lang="zh">Carta — 股权管理首选工具</span><span data-lang="en">Carta — The standard for cap table management</span></div>
+              <div class="resource-link-meta"><span data-lang="zh">早期免费，VC最认可的股权记录平台</span><span data-lang="en">Free for early-stage, the VC-recognized standard</span></div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ STAGE 2: FIRST HIRE ══ -->
+  <div class="stage-panel" id="panel-2">
+    <div class="stage-header">
+      <div class="stage-eyebrow">Stage 02 · <span data-lang="zh">第一个员工</span><span data-lang="en">First Hire</span></div>
+      <h2 class="stage-title">
+        <span data-lang="zh">雇员还是<em>承包商</em>？<br>期权怎么设计？</span>
+        <span data-lang="en">Employee or <em>Contractor</em>?<br>How to structure equity?</span>
+      </h2>
+      <p class="stage-desc">
+        <span data-lang="zh">雇人是公司法律风险急速上升的节点。错误分类一个员工，可能导致数万美元的税务罚款和劳动纠纷。先用下面的工具做判断。</span>
+        <span data-lang="en">Hiring triggers a major jump in legal exposure. Misclassifying a worker can mean tens of thousands in tax penalties and labor disputes. Use the tool below to think it through.</span>
+      </p>
+    </div>
+
+    <div class="pain-banner">
+      <div class="pain-icon">⚡</div>
+      <div class="pain-text">
+        <span data-lang="zh"><strong>最常见违规：</strong>很多创业公司把长期、全职工作的人签成"承包商"来省掉社保税和福利成本。IRS和各州劳工部门的审查标准非常严格，一旦被认定为错误分类，补缴税款+罚款可能让公司雪上加霜。</span>
+        <span data-lang="en"><strong>Most common violation:</strong> Many startups sign full-time workers as "contractors" to avoid payroll taxes and benefits. IRS and state labor authorities apply strict classification standards. Misclassification findings can be devastating for early-stage companies.</span>
+      </div>
+    </div>
+
+    <div class="tools-label"><span data-lang="zh">工具 & 资源</span><span data-lang="en">Tools & Resources</span></div>
+    <div class="tools-grid">
+
+      <!-- Employee vs Contractor Quiz -->
+      <div class="tool-card interactive quiz-wrap">
+        <div class="quiz-progress"><div class="quiz-progress-fill" id="quizProgress" style="width:0%"></div></div>
+        <div class="card-top" style="padding-top:20px;">
+          <div class="card-icon">🤔</div>
+          <div class="card-type-badge">Interactive Quiz</div>
+        </div>
+        <div class="quiz-body" id="quizBody">
+          <div class="card-title" style="color:var(--cream);margin-bottom:12px;">
+            <span data-lang="zh">雇员 vs 承包商 快速判断</span>
+            <span data-lang="en">Employee vs Contractor Quick Test</span>
+          </div>
+          <div class="quiz-step-count" id="quizStepCount">1 / 5</div>
+          <div class="quiz-q" id="quizQuestion"></div>
+          <div class="quiz-options" id="quizOptions"></div>
+          <div class="quiz-result" id="quizResult">
+            <div class="quiz-result-icon" id="quizResultIcon"></div>
+            <div class="quiz-result-verdict" id="quizResultVerdict"></div>
+            <div class="quiz-result-sub" id="quizResultSub"></div>
+            <button class="quiz-restart" onclick="restartQuiz()">
+              <span data-lang="zh">重新测试</span><span data-lang="en">Restart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Option types card -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">📈</div>
+          <div class="card-type-badge">Comparison</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">ISO vs NSO：期权类型选择</span>
+            <span data-lang="en">ISO vs NSO: Which Option Type?</span>
+          </div>
+          <div style="overflow-x:auto;margin-top:8px;">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>ISO</th>
+                  <th>NSO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span data-lang="zh">授予对象</span><span data-lang="en">Who gets it</span></td>
+                  <td><span data-lang="zh">仅员工</span><span data-lang="en">Employees only</span></td>
+                  <td><span data-lang="zh">员工、顾问、董事</span><span data-lang="en">Employees, advisors, directors</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">行权税务</span><span data-lang="en">Exercise tax</span></td>
+                  <td><span class="check"><span data-lang="zh">可能无</span><span data-lang="en">Potentially none</span></span></td>
+                  <td><span class="cross"><span data-lang="zh">按普通收入课税</span><span data-lang="en">Taxed as ordinary income</span></span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">出售税务</span><span data-lang="en">Sale tax</span></td>
+                  <td><span class="check"><span data-lang="zh">资本利得税率</span><span data-lang="en">Capital gains rate</span></span></td>
+                  <td><span class="neutral"><span data-lang="zh">普通收入+资本利得</span><span data-lang="en">Ordinary + capital gains</span></span></td>
+                </tr>
+                <tr>
+                  <td>AMT</td>
+                  <td><span class="cross"><span data-lang="zh">可能触发</span><span data-lang="en">May trigger</span></span></td>
+                  <td><span class="check"><span data-lang="zh">不触发</span><span data-lang="en">Does not trigger</span></span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">最高额度</span><span data-lang="en">Annual limit</span></td>
+                  <td>$100,000/yr</td>
+                  <td><span data-lang="zh">无上限</span><span data-lang="en">No limit</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="margin-top:14px;padding:10px 14px;background:rgba(196,154,122,0.06);border-left:2px solid var(--rose-gold);font-size:12px;line-height:1.7;color:var(--light-text);">
+            <strong style="color:var(--dark);">Evonne建议：</strong>
+            <span data-lang="zh">给正式员工尽量用ISO（税务优势明显）。给顾问、外部服务商用NSO。早期可以先建期权池占总股权的10-15%。</span>
+            <span data-lang="en">Use ISO for full-time employees (significant tax advantage). Use NSO for advisors and contractors. Create an option pool of 10-15% of total equity early on.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offer letter checklist -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">📋</div>
+          <div class="card-type-badge">Checklist</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">Offer Letter 必备条款</span>
+            <span data-lang="en">Offer Letter — Must-Have Terms</span>
+          </div>
+          <p class="card-desc">
+            <span data-lang="zh">一份合规的录用通知书，这些条款缺一不可：</span>
+            <span data-lang="en">A compliant offer letter must include all of these:</span>
+          </p>
+          <ul class="checklist" id="offerChecklist">
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">明确雇佣类型（at-will employment 声明）</span><span data-lang="en">State employment type (at-will employment declaration)</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">薪资/工资结构（含OT法规考量）</span><span data-lang="en">Compensation structure (consider OT regulations)</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">期权授予条款（股数、行权价、Vesting计划）</span><span data-lang="en">Equity grant terms (shares, strike price, vesting schedule)</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">IP归属声明（工作产出归公司所有）</span><span data-lang="en">IP assignment clause (work product belongs to company)</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">保密协议引用（NDA/CIIA）</span><span data-lang="en">Reference to NDA/CIIA</span></span>
+              <span class="check-priority">MEDIUM</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">竞业限制条款（注意各州执行力不同）</span><span data-lang="en">Non-compete clause (enforceability varies by state)</span></span>
+              <span class="check-priority">MEDIUM</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">I-9 就业资格验证（所有员工必须在Day 1完成）</span><span data-lang="en">I-9 employment eligibility verification (required Day 1)</span></span>
+              <span class="check-priority">MEDIUM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resources-section">
+      <div class="resources-label"><span data-lang="zh">Evonne 推荐阅读</span><span data-lang="en">Evonne Recommends</span></div>
+      <div class="resource-links">
+        <a href="https://evonnexulegal.beehiiv.com" target="_blank" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">📄</div>
+            <div class="resource-link-info">
+              <div class="resource-link-cat">Deep Dive</div>
+              <div class="resource-link-title"><span data-lang="zh">创业公司第一个员工：法律风险全解析</span><span data-lang="en">Your First Hire: Complete Legal Risk Guide for Startups</span></div>
+              <div class="resource-link-meta">Evonne Xu Law · Newsletter</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="https://gusto.com" target="_blank" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🔧</div>
+            <div class="resource-link-info">
+              <div class="resource-link-cat">External Tool</div>
+              <div class="resource-link-title"><span data-lang="zh">Gusto — 创业公司薪酬管理首选</span><span data-lang="en">Gusto — Payroll & HR for startups</span></div>
+              <div class="resource-link-meta"><span data-lang="zh">自动处理联邦和州税务合规</span><span data-lang="en">Automates federal and state tax compliance</span></div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ STAGES 3-6: COMING SOON ══ -->
+  <div class="coming-soon-panel" id="panel-3">
+    <div class="coming-soon-icon">🚧</div>
+    <h2 class="coming-soon-title"><span data-lang="zh">即将上线</span><span data-lang="en">Coming Soon</span></h2>
+    <p class="coming-soon-sub"><span data-lang="zh">早期融资工具箱正在构建中，包括SAFE协议解析、Term Sheet红旗清单和天使融资谈判策略。</span><span data-lang="en">The Seed Funding toolkit is under construction, including SAFE breakdown, Term Sheet red flags, and angel negotiation strategy.</span></p>
+    <div class="coming-soon-stages">
+      <div class="coming-soon-tag">SAFE vs Convertible Note</div>
+      <div class="coming-soon-tag">Term Sheet Red Flags</div>
+      <div class="coming-soon-tag"><span data-lang="zh">天使融资谈判</span><span data-lang="en">Angel Negotiation</span></div>
+      <div class="coming-soon-tag">Cap Table 101</div>
+    </div>
+    <a href="https://evonnexulegal.beehiiv.com" target="_blank" class="btn-primary"><span data-lang="zh">订阅，第一时间获知上线</span><span data-lang="en">Subscribe to be notified</span></a>
+  </div>
+
+  <div class="coming-soon-panel" id="panel-4">
+    <div class="coming-soon-icon">🤖</div>
+    <h2 class="coming-soon-title"><span data-lang="zh">即将上线</span><span data-lang="en">Coming Soon</span></h2>
+    <p class="coming-soon-sub"><span data-lang="zh">成长期合规工具箱，聚焦AI产品合规、数据隐私和商业合同审查。</span><span data-lang="en">The Growth & Compliance toolkit focuses on AI product compliance, data privacy, and commercial contract review.</span></p>
+    <div class="coming-soon-stages">
+      <div class="coming-soon-tag">AI Compliance Checklist</div>
+      <div class="coming-soon-tag">CCPA / GDPR Basics</div>
+      <div class="coming-soon-tag"><span data-lang="zh">商业合同红旗</span><span data-lang="en">Contract Red Flags</span></div>
+    </div>
+    <a href="https://evonnexulegal.beehiiv.com" target="_blank" class="btn-primary"><span data-lang="zh">订阅，第一时间获知上线</span><span data-lang="en">Subscribe to be notified</span></a>
+  </div>
+
+  <div class="coming-soon-panel" id="panel-5">
+    <div class="coming-soon-icon">🌏</div>
+    <h2 class="coming-soon-title"><span data-lang="zh">即将上线</span><span data-lang="en">Coming Soon</span></h2>
+    <p class="coming-soon-sub"><span data-lang="zh">跨境扩张工具箱，专注中国企业进入美国市场的法律路径，包括CFIUS风险评估和架构选择。</span><span data-lang="en">Cross-Border toolkit for Chinese companies entering the US market, including CFIUS risk assessment and structure selection.</span></p>
+    <div class="coming-soon-stages">
+      <div class="coming-soon-tag">CFIUS Risk Self-Assessment</div>
+      <div class="coming-soon-tag">VIE vs Direct Holding</div>
+      <div class="coming-soon-tag"><span data-lang="zh">进入美国市场路径</span><span data-lang="en">US Market Entry Paths</span></div>
+    </div>
+    <a href="https://evonnexulegal.beehiiv.com" target="_blank" class="btn-primary"><span data-lang="zh">订阅，第一时间获知上线</span><span data-lang="en">Subscribe to be notified</span></a>
+  </div>
+
+  <div class="coming-soon-panel" id="panel-6">
+    <div class="coming-soon-icon">🏆</div>
+    <h2 class="coming-soon-title"><span data-lang="zh">即将上线</span><span data-lang="en">Coming Soon</span></h2>
+    <p class="coming-soon-sub"><span data-lang="zh">并购与IPO工具箱，从卖方尽职调查清单到IPO前100天法律准备。</span><span data-lang="en">M&A & IPO toolkit — from seller due diligence checklists to 100-day pre-IPO legal preparation.</span></p>
+    <div class="coming-soon-stages">
+      <div class="coming-soon-tag">M&A Due Diligence Checklist</div>
+      <div class="coming-soon-tag">IPO Legal Readiness</div>
+      <div class="coming-soon-tag"><span data-lang="zh">创始人保护条款</span><span data-lang="en">Founder Protection Terms</span></div>
+    </div>
+    <a href="https://evonnexulegal.beehiiv.com" target="_blank" class="btn-primary"><span data-lang="zh">订阅，第一时间获知上线</span><span data-lang="en">Subscribe to be notified</span></a>
+  </div>
+
+</div><!-- end content-area -->
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-tag"><span data-lang="zh">需要更具体的建议？</span><span data-lang="en">Need Specific Advice?</span></div>
+    <h2 class="cta-title">
+      <span data-lang="zh">工具解决<em>通用问题</em><br>律师解决你的问题</span>
+      <span data-lang="en">Tools answer <em>general</em> questions.<br>Lawyers answer yours.</span>
+    </h2>
+    <p class="cta-desc">
+      <span data-lang="zh">本页工具提供通用法律信息，不构成法律建议。每家公司情况不同，如果你不确定，和Evonne聊30分钟可能比自己摸索3个月更值。</span>
+      <span data-lang="en">The tools here provide general legal information, not legal advice. Every company is different. If you're unsure, 30 minutes with Evonne may save you months of trial and error.</span>
+    </p>
+    <div class="cta-btns">
+      <a href="https://calendly.com/evonne-xu-legal/30min" target="_blank" class="btn-primary">
+        <span data-lang="zh">预约30分钟咨询 →</span>
+        <span data-lang="en">Book a 30-min Call →</span>
+      </a>
+      <a href="https://evonnexulegal.beehiiv.com" target="_blank" class="btn-ghost">
+        <span data-lang="zh">订阅法律简报</span>
+        <span data-lang="en">Subscribe to Newsletter</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-text">© 2026 Evonne Xu Law · <span data-lang="zh">信息仅供参考，不构成法律意见</span><span data-lang="en">For informational purposes only, not legal advice</span></span>
+  <a href="../index.html" class="footer-link"><span data-lang="zh">← 返回主页</span><span data-lang="en">← Back to Home</span></a>
+</footer>
+
+<script>
+/* ─── LANG ─── */
+function switchLang(lang) {
+  document.body.className = 'lang-' + lang;
+  document.getElementById('btn-zh').classList.toggle('active', lang==='zh');
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  localStorage.setItem('evonne-lang', lang);
+  // Re-apply to dynamically rendered quiz
+  applyLang(lang);
+}
+function applyLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    const isSpan = el.tagName === 'SPAN';
+    el.style.display = el.getAttribute('data-lang') === lang ? (isSpan ? 'inline' : 'block') : 'none';
+  });
+}
+const savedLang = localStorage.getItem('evonne-lang') || 'zh';
+switchLang(savedLang);
+
+/* ─── TIMELINE / STAGE NAVIGATION ─── */
+let currentStage = 0;
+const LIVE_STAGES = [0, 1, 2];
+
+function showStage(n) {
+  // Hide all panels
+  document.querySelectorAll('.stage-panel, .coming-soon-panel').forEach(p => p.classList.remove('active'));
+  // Deactivate all journey cards
+  document.querySelectorAll('.journey-card').forEach((nd, i) => {
+    nd.classList.remove('active', 'done');
+    if (i < n) nd.classList.add('done');
+    if (i === n) nd.classList.add('active');
+  });
+  document.querySelectorAll('.stage-pill').forEach(p => p.classList.remove('current'));
+
+  // Show target panel
+  const panelEl = document.getElementById('panel-' + n);
+  if (panelEl) panelEl.classList.add('active');
+
+  // Update pills
+  const pills = document.querySelectorAll('.stage-pill');
+  if (pills[n]) pills[n].classList.add('current');
+
+  currentStage = n;
+
+  // Re-apply language to newly shown content
+  applyLang(document.body.classList.contains('lang-zh') ? 'zh' : 'en');
+
+  // Scroll active card into view within the track
+  const card = document.getElementById('node-' + n);
+  if (card) card.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+
+  // Scroll page to content
+  setTimeout(() => {
+    document.querySelector('.content-area').scrollIntoView({behavior:'smooth', block:'start'});
+  }, 150);
+}
+
+/* ─── 83(b) COUNTDOWN ─── */
+function calc83b() {
+  const val = document.getElementById('grantDate').value;
+  if (!val) return;
+  const grant = new Date(val + 'T00:00:00');
+  const deadline = new Date(grant);
+  deadline.setDate(deadline.getDate() + 30);
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const diff = Math.ceil((deadline - today) / 86400000);
+
+  const resultEl = document.getElementById('countdownResult');
+  const warningEl = document.getElementById('countdownWarning');
+
+  const lang = document.body.classList.contains('lang-zh') ? 'zh' : 'en';
+  const deadlineStr = deadline.toLocaleDateString(lang==='zh' ? 'zh-CN' : 'en-US', {year:'numeric',month:'long',day:'numeric'});
+
+  if (diff < 0) {
+    resultEl.innerHTML = `
+      <div class="countdown-num expired">✗</div>
+      <div class="countdown-sub">${lang==='zh'?'已过截止日期':'Deadline passed'}</div>
+      <div class="countdown-deadline">${lang==='zh'?'截止日期':'Deadline'}: ${deadlineStr}</div>`;
+    warningEl.innerHTML = lang==='zh'
+      ? '⚠️ 83(b) Election 窗口已关闭。建议尽快咨询税务律师，了解你的实际影响。'
+      : '⚠️ The 83(b) election window has closed. Consult a tax attorney immediately to understand your exposure.';
+    warningEl.classList.add('show');
+  } else if (diff === 0) {
+    resultEl.innerHTML = `
+      <div class="countdown-num urgent">今天</div>
+      <div class="countdown-sub">${lang==='zh'?'今日截止！立即寄出':'Due TODAY — Mail immediately'}</div>`;
+    warningEl.innerHTML = lang==='zh'
+      ? '🚨 今天是最后一天！必须今天以挂号信寄出83(b) Election，并保留邮寄证明。'
+      : '🚨 Today is the deadline! You must mail your 83(b) election today via certified mail and keep your proof of mailing.';
+    warningEl.classList.add('show');
+  } else if (diff <= 7) {
+    resultEl.innerHTML = `
+      <div class="countdown-num urgent">${diff}</div>
+      <div class="countdown-sub">${lang==='zh'?'天剩余 — 紧急':'days left — URGENT'}</div>
+      <div class="countdown-deadline">${lang==='zh'?'截止':'Deadline'}: ${deadlineStr}</div>`;
+    warningEl.innerHTML = lang==='zh'
+      ? `⚠️ 只剩 ${diff} 天！请立即准备83(b) Election信件并寄出。`
+      : `⚠️ Only ${diff} days left! Prepare and mail your 83(b) election letter immediately.`;
+    warningEl.classList.add('show');
+  } else {
+    resultEl.innerHTML = `
+      <div class="countdown-num">${diff}</div>
+      <div class="countdown-sub">${lang==='zh'?'天剩余':'days remaining'}</div>
+      <div class="countdown-deadline">${lang==='zh'?'截止':'Deadline'}: ${deadlineStr}</div>`;
+    warningEl.classList.remove('show');
+  }
+}
+
+/* ─── CHECKLIST TOGGLE ─── */
+function toggleCheck(li) {
+  li.classList.toggle('checked');
+}
+
+/* ─── EMPLOYEE/CONTRACTOR QUIZ ─── */
+const QUIZ = {
+  zh: [
+    {
+      q:'这个人在工作时间和地点上，你有多大控制权？',
+      opts:['我决定他/她什么时候、在哪里工作','我们协商，但我有最终决定权','他/她完全自己安排时间地点'],
+      scores:[3,1,0]
+    },
+    {
+      q:'这个人是否只给你一家公司提供服务？',
+      opts:['是，基本全职为我工作','大部分时间，但偶尔有其他客户','不，他/她同时服务多个客户'],
+      scores:[3,1,0]
+    },
+    {
+      q:'这个人使用的工具和设备是谁的？',
+      opts:['主要用公司提供的设备和工具','混用，部分是公司的，部分是自己的','完全用自己的设备和工具'],
+      scores:[3,1,0]
+    },
+    {
+      q:'这个人提供的是持续性的工作，还是完成特定项目后结束？',
+      opts:['持续性工作，没有明确结束时间','长期项目，但有明确目标','单次或短期项目，完成即结束'],
+      scores:[3,1,0]
+    },
+    {
+      q:'如果这个人不能完成工作，他/她是否可以派其他人来替代？',
+      opts:['不行，只能本人完成','理论上可以，但实际不太会发生','可以，他/她可以自由分包工作'],
+      scores:[3,1,0]
+    }
+  ],
+  en: [
+    {
+      q:'How much control do you have over when and where this person works?',
+      opts:['I set their schedule and location','We negotiate, but I have final say','They completely control their own time and place'],
+      scores:[3,1,0]
+    },
+    {
+      q:'Does this person work exclusively for your company?',
+      opts:['Yes, effectively full-time for me','Mostly, but occasionally has other clients','No, they serve multiple clients simultaneously'],
+      scores:[3,1,0]
+    },
+    {
+      q:'Whose tools and equipment does this person primarily use?',
+      opts:['Mainly company-provided tools and equipment','Mixed — some company, some their own','Entirely their own tools and equipment'],
+      scores:[3,1,0]
+    },
+    {
+      q:'Is this person\'s work ongoing, or does it end when a specific project is done?',
+      opts:['Ongoing work with no defined end date','Long-term project but with a specific goal','One-time or short-term project that ends on completion'],
+      scores:[3,1,0]
+    },
+    {
+      q:'If this person can\'t complete the work, can they send someone else?',
+      opts:['No — only they can do this work','In theory yes, but unlikely in practice','Yes — they can freely subcontract'],
+      scores:[3,1,0]
+    }
+  ]
+};
+
+let quizAnswers = [];
+let quizStep = 0;
+
+function initQuiz() {
+  quizAnswers = []; quizStep = 0;
+  renderQuizStep();
+}
+
+function renderQuizStep() {
+  const lang = document.body.classList.contains('lang-zh') ? 'zh' : 'en';
+  const q = QUIZ[lang][quizStep];
+  document.getElementById('quizProgress').style.width = ((quizStep / 5) * 100) + '%';
+  document.getElementById('quizStepCount').textContent = (quizStep + 1) + ' / 5';
+  document.getElementById('quizQuestion').textContent = q.q;
+  document.getElementById('quizResult').classList.remove('show');
+  document.getElementById('quizStepCount').style.display = 'block';
+
+  const optsEl = document.getElementById('quizOptions');
+  optsEl.innerHTML = q.opts.map((opt, i) =>
+    `<button class="quiz-opt" onclick="answerQuiz(${q.scores[i]})">${opt}</button>`
+  ).join('');
+}
+
+function answerQuiz(score) {
+  quizAnswers.push(score);
+  quizStep++;
+  if (quizStep < 5) {
+    renderQuizStep();
+  } else {
+    showQuizResult();
+  }
+}
+
+function showQuizResult() {
+  const lang = document.body.classList.contains('lang-zh') ? 'zh' : 'en';
+  const total = quizAnswers.reduce((a,b) => a+b, 0);
+  document.getElementById('quizProgress').style.width = '100%';
+  document.getElementById('quizStepCount').style.display = 'none';
+  document.getElementById('quizQuestion').textContent = '';
+  document.getElementById('quizOptions').innerHTML = '';
+
+  const resultEl = document.getElementById('quizResult');
+
+  if (total >= 11) {
+    document.getElementById('quizResultIcon').textContent = '👤';
+    document.getElementById('quizResultVerdict').textContent = lang === 'zh' ? '倾向：正式员工' : 'Likely: Employee';
+    document.getElementById('quizResultSub').textContent = lang === 'zh'
+      ? '根据你的回答，这个人更符合雇员的特征。建议按雇员处理，签署正式Offer Letter，走薪酬系统。以承包商身份处理风险较高。'
+      : 'Based on your answers, this person has the characteristics of an employee. Treat them as an employee, issue a formal Offer Letter, and run them through payroll. Contractor classification carries significant risk here.';
+  } else if (total >= 6) {
+    document.getElementById('quizResultIcon').textContent = '⚖️';
+    document.getElementById('quizResultVerdict').textContent = lang === 'zh' ? '模糊区间，建议咨询律师' : 'Gray area — consult a lawyer';
+    document.getElementById('quizResultSub').textContent = lang === 'zh'
+      ? '这个案例处于雇员和承包商的模糊地带。强烈建议在做决定前咨询律师，避免后续的劳工纠纷和税务问题。'
+      : 'This situation falls in the gray zone between employee and contractor. Strongly recommend consulting an attorney before making a classification decision to avoid labor and tax exposure.';
+  } else {
+    document.getElementById('quizResultIcon').textContent = '🔧';
+    document.getElementById('quizResultVerdict').textContent = lang === 'zh' ? '倾向：独立承包商' : 'Likely: Independent Contractor';
+    document.getElementById('quizResultSub').textContent = lang === 'zh'
+      ? '根据你的回答，这个人更符合独立承包商的特征。仍需签署专业的承包商协议（Independent Contractor Agreement），明确双方权利义务。'
+      : 'Based on your answers, this person has the characteristics of an independent contractor. Still make sure to sign a professional Independent Contractor Agreement clearly defining rights and obligations.';
+  }
+
+  resultEl.classList.add('show');
+}
+
+function restartQuiz() {
+  initQuiz();
+}
+
+// Init quiz on load
+initQuiz();
+
+// Re-init quiz when switching language (answers remain, display updates)
+const origSwitchLang = switchLang;
+</script>
+
+</body>
+</html>
