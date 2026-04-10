@@ -1,5 +1,41 @@
 [
   {
+    "file": "blog/nda-negotiation-seller-guide.html",
+    "titleZh": "M&A卖方NDA谈判指南：13个关键条款深度解析",
+    "titleEn": "M&A Seller's NDA Negotiation Guide: Deep Dive into 13 Key Clauses",
+    "excerptZh": "并购交易中，NDA是卖方保护机密信息的第一道防线。本文逐条拆解13个关键条款，帮助卖方识别风险、掌握谈判主动权。",
+    "excerptEn": "In M&A deals, the NDA is the seller's first line of defense. This guide breaks down 13 key clauses to help sellers identify risks and take control of negotiations.",
+    "catZh": "M&A · 合同谈判",
+    "catEn": "M&A · Contract Negotiation",
+    "date": "April 2026",
+    "readTime": "15 min",
+    "featured": false
+  },
+  {
+    "file": "blog/ai-vendor-contract-playbook.html",
+    "titleZh": "AI供应商合同谈判Playbook：15个核心条款全攻略",
+    "titleEn": "AI Vendor Contract Negotiation Playbook: Complete Guide to 15 Key Clauses",
+    "excerptZh": "企业采购AI服务时，合同条款直接决定数据安全、法律责任与商业利益。本文提供15个核心条款的谈判策略与红线清单。",
+    "excerptEn": "When enterprises procure AI services, contract terms directly determine data security, legal liability, and business interests. This playbook covers negotiation strategies for 15 key clauses.",
+    "catZh": "Technology · 合同谈判",
+    "catEn": "Technology · Contract Negotiation",
+    "date": "April 2026",
+    "readTime": "18 min",
+    "featured": false
+  },
+  {
+    "file": "blog/asset-vs-stock-acquisition.html",
+    "titleZh": "美国资产收购vs股权收购：10大维度深度对比",
+    "titleEn": "Asset vs Stock Acquisition in the US: In-Depth Comparison Across 10 Dimensions",
+    "excerptZh": "资产收购还是股权收购？这是并购交易中最关键的结构选择。本文从税务、责任、操作复杂度等10个维度深度对比，助你做出最优决策。",
+    "excerptEn": "Asset or stock acquisition? This is the most critical structural choice in M&A. This article compares both approaches across 10 dimensions including tax, liability, and operational complexity.",
+    "catZh": "M&A · 交易结构",
+    "catEn": "M&A · Deal Structure",
+    "date": "April 2026",
+    "readTime": "12 min",
+    "featured": false
+  },
+  {
     "file": "blog/us-v-heppner-ai-privilege.html",
     "titleZh": "AI时代的特权陷阱：United States v. Heppner 深度剖析",
     "titleEn": "The Privilege Trap of the AI Age: A Deep Dive into United States v. Heppner",
