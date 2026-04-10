@@ -665,7 +665,7 @@ footer {
           <div class="stage-pill-title"><span data-lang="zh">早期融资</span><span data-lang="en">Seed Funding</span></div>
           <div class="stage-pill-sub"><span data-lang="zh">SAFE · Term Sheet</span><span data-lang="en">SAFE · Term Sheet red flags</span></div>
         </div>
-        <div class="stage-pill-badge soon">Soon</div>
+        <div class="stage-pill-badge">Live</div>
       </a>
       <a class="stage-pill" onclick="showStage(4); return false;" href="#">
         <div class="stage-pill-num">4</div>
@@ -673,7 +673,7 @@ footer {
           <div class="stage-pill-title"><span data-lang="zh">成长 & 合规</span><span data-lang="en">Growth & Compliance</span></div>
           <div class="stage-pill-sub"><span data-lang="zh">AI合规 · 数据隐私</span><span data-lang="en">AI compliance · Data privacy</span></div>
         </div>
-        <div class="stage-pill-badge soon">Soon</div>
+        <div class="stage-pill-badge">Live</div>
       </a>
       <a class="stage-pill" onclick="showStage(5); return false;" href="#">
         <div class="stage-pill-num">5</div>
@@ -681,7 +681,7 @@ footer {
           <div class="stage-pill-title"><span data-lang="zh">跨境扩张</span><span data-lang="en">Cross-Border</span></div>
           <div class="stage-pill-sub"><span data-lang="zh">CFIUS · VIE结构</span><span data-lang="en">CFIUS · VIE structure</span></div>
         </div>
-        <div class="stage-pill-badge soon">Soon</div>
+        <div class="stage-pill-badge">Live</div>
       </a>
     </div>
   </div>
@@ -765,13 +765,12 @@ footer {
         <div class="journey-connector"></div>
       </div>
 
-      <!-- Stage 3: Seed Funding (SOON) -->
-      <div class="journey-card" onclick="showStage(3)" id="node-3">
+      <!-- Stage 3: Seed Funding -->
+      <div class="journey-card live-stage" onclick="showStage(3)" id="node-3">
         <div class="journey-card-num">03</div>
-        <div class="journey-card-soon">Soon</div>
         <div class="journey-card-bg">💰</div>
         <div class="journey-card-art">
-          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="0.5">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Rocket -->
             <path d="M36 56 L30 44 Q36 14 42 44 Z" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.1)" stroke-linejoin="round"/>
             <path d="M30 44 Q24 46 24 52 L30 50 Z" stroke="#C49A7A" stroke-width="1.2" fill="rgba(196,154,122,0.08)"/>
@@ -791,13 +790,12 @@ footer {
         <div class="journey-connector"></div>
       </div>
 
-      <!-- Stage 4: Growth (SOON) -->
-      <div class="journey-card" onclick="showStage(4)" id="node-4">
+      <!-- Stage 4: Growth -->
+      <div class="journey-card live-stage" onclick="showStage(4)" id="node-4">
         <div class="journey-card-num">04</div>
-        <div class="journey-card-soon">Soon</div>
         <div class="journey-card-bg">🤖</div>
         <div class="journey-card-art">
-          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="0.5">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Bar chart growth -->
             <rect x="14" y="44" width="10" height="14" rx="1" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.1)"/>
             <rect x="28" y="34" width="10" height="24" rx="1" stroke="#C49A7A" stroke-width="1.5" fill="rgba(196,154,122,0.15)"/>
@@ -816,13 +814,12 @@ footer {
         <div class="journey-connector"></div>
       </div>
 
-      <!-- Stage 5: Cross-Border (SOON) -->
-      <div class="journey-card" onclick="showStage(5)" id="node-5">
+      <!-- Stage 5: Cross-Border -->
+      <div class="journey-card live-stage" onclick="showStage(5)" id="node-5">
         <div class="journey-card-num">05</div>
-        <div class="journey-card-soon">Soon</div>
         <div class="journey-card-bg">🌏</div>
         <div class="journey-card-art">
-          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="0.5">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Globe -->
             <circle cx="36" cy="36" r="20" stroke="#C49A7A" stroke-width="1.5" fill="none"/>
             <!-- Latitude lines -->
@@ -1463,42 +1460,706 @@ footer {
     </div>
   </div>
 
-  <!-- ══ STAGES 3-6: COMING SOON ══ -->
-  <div class="coming-soon-panel" id="panel-3">
-    <div class="coming-soon-icon">🚧</div>
-    <h2 class="coming-soon-title"><span data-lang="zh">即将上线</span><span data-lang="en">Coming Soon</span></h2>
-    <p class="coming-soon-sub"><span data-lang="zh">早期融资工具箱正在构建中，包括SAFE协议解析、Term Sheet红旗清单和天使融资谈判策略。</span><span data-lang="en">The Seed Funding toolkit is under construction, including SAFE breakdown, Term Sheet red flags, and angel negotiation strategy.</span></p>
-    <div class="coming-soon-stages">
-      <div class="coming-soon-tag">SAFE vs Convertible Note</div>
-      <div class="coming-soon-tag">Term Sheet Red Flags</div>
-      <div class="coming-soon-tag"><span data-lang="zh">天使融资谈判</span><span data-lang="en">Angel Negotiation</span></div>
-      <div class="coming-soon-tag">Cap Table 101</div>
+  <!-- ══ STAGE 3: SEED FUNDING ══ -->
+  <div class="stage-panel" id="panel-3">
+    <div class="stage-header">
+      <div class="stage-eyebrow">Stage 03 · <span data-lang="zh">早期融资</span><span data-lang="en">Seed Funding</span></div>
+      <h2 class="stage-title">
+        <span data-lang="zh">你签的不是支票<br>是<em>公司的未来</em></span>
+        <span data-lang="en">You're Not Signing a Check<br>You're Signing Your<br><em>Company's Future</em></span>
+      </h2>
+      <p class="stage-desc">
+        <span data-lang="zh">SAFE 看起来只有3页纸，但它决定了你在下一轮融资后还能拥有多少公司。很多创始人在天使轮犯的错，要到A轮才暴露——那时候改不了了。</span>
+        <span data-lang="en">A SAFE looks like 3 pages, but it determines how much of your company you'll still own after the next round. Most founders' angel-round mistakes don't surface until Series A — when it's too late to fix.</span>
+      </p>
     </div>
-    <a href="https://evonnexulegal.beehiiv.com" target="_blank" class="btn-primary"><span data-lang="zh">订阅，第一时间获知上线</span><span data-lang="en">Subscribe to be notified</span></a>
+
+    <div class="pain-banner">
+      <div class="pain-icon">💸</div>
+      <div class="pain-text">
+        <span data-lang="zh"><strong>常见痛点：</strong>创始人以为"YC的SAFE是标准的，直接签就行"。但投资人经常在标准模板上加Side Letter，修改Pro Rata权、信息权、甚至反稀释条款。你以为签了标准SAFE，其实签了一个定制版。</span>
+        <span data-lang="en"><strong>Common mistake:</strong> Founders think "YC's SAFE is standard — just sign it." But investors often attach Side Letters modifying Pro Rata rights, information rights, even anti-dilution terms. You think you signed a standard SAFE; you actually signed a custom one.</span>
+      </div>
+    </div>
+
+    <div class="tools-label"><span data-lang="zh">工具 & 资源</span><span data-lang="en">Tools & Resources</span></div>
+    <div class="tools-grid">
+
+      <!-- SAFE vs Convertible Note -->
+      <div class="tool-card evonne" style="grid-column:1/-1;">
+        <div class="card-top">
+          <div class="card-icon">⚖️</div>
+          <div class="card-type-badge">Evonne原创 · Comparison</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">SAFE vs 可转换票据 — 深度对比</span>
+            <span data-lang="en">SAFE vs Convertible Note — Deep Comparison</span>
+          </div>
+          <div style="overflow-x:auto; margin-top:8px;">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th><span data-lang="zh">维度</span><span data-lang="en">Factor</span></th>
+                  <th>SAFE</th>
+                  <th><span data-lang="zh">可转换票据</span><span data-lang="en">Convertible Note</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span data-lang="zh">法律性质</span><span data-lang="en">Legal Nature</span></td>
+                  <td><span data-lang="zh">不是债务，无到期日</span><span data-lang="en">Not debt, no maturity date</span></td>
+                  <td><span data-lang="zh">是债务，有到期日</span><span data-lang="en">Debt instrument with maturity</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">利息</span><span data-lang="en">Interest</span></td>
+                  <td><span class="check">✓</span> <span data-lang="zh">无利息</span><span data-lang="en">No interest</span></td>
+                  <td><span class="cross">✗</span> <span data-lang="zh">通常5-8%年利率</span><span data-lang="en">Usually 5-8% annual interest</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">Valuation Cap</span><span data-lang="en">Valuation Cap</span></td>
+                  <td><span data-lang="zh">有，是核心谈判点</span><span data-lang="en">Yes, the key negotiation point</span></td>
+                  <td><span data-lang="zh">有，但还叠加利息</span><span data-lang="en">Yes, but stacked with interest</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">折扣率</span><span data-lang="en">Discount</span></td>
+                  <td><span data-lang="zh">可选，通常15-25%</span><span data-lang="en">Optional, usually 15-25%</span></td>
+                  <td><span data-lang="zh">标配，通常15-25%</span><span data-lang="en">Standard, usually 15-25%</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">到期还款风险</span><span data-lang="en">Maturity Default Risk</span></td>
+                  <td><span class="check">✓</span> <span data-lang="zh">无此风险</span><span data-lang="en">No risk</span></td>
+                  <td><span class="cross">✗</span> <span data-lang="zh">到期可要求还款</span><span data-lang="en">Investor can demand repayment</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">文件复杂度</span><span data-lang="en">Complexity</span></td>
+                  <td><span class="check">✓</span> <span data-lang="zh">3-5页，简洁</span><span data-lang="en">3-5 pages, simple</span></td>
+                  <td><span class="neutral">△</span> <span data-lang="zh">10-15页，条款更多</span><span data-lang="en">10-15 pages, more terms</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">创始人友好度</span><span data-lang="en">Founder-Friendly</span></td>
+                  <td><span class="check">✓</span> <span data-lang="zh">更友好</span><span data-lang="en">More friendly</span></td>
+                  <td><span class="neutral">△</span> <span data-lang="zh">投资人保护更多</span><span data-lang="en">More investor protections</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="margin-top:16px; padding:12px 16px; background:rgba(196,154,122,0.06); border-left:2px solid var(--rose-gold); font-size:12px; line-height:1.7; color:var(--light-text);">
+            <strong style="color:var(--dark);">Evonne建议：</strong>
+            <span data-lang="zh">2026年绝大多数种子轮用SAFE。但如果投资人坚持要可转换票据，注意谈判到期日（至少18-24个月）和利息上限。永远不要签没有Cap的Note。</span>
+            <span data-lang="en">In 2026, most seed rounds use SAFEs. But if the investor insists on a convertible note, negotiate maturity (at least 18-24 months) and interest caps. Never sign a note without a valuation cap.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAFE Dilution Calculator -->
+      <div class="tool-card interactive" style="grid-column:1/-1;">
+        <div class="card-top">
+          <div class="card-icon">📊</div>
+          <div class="card-type-badge">Interactive · Calculator</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">SAFE 稀释计算器</span>
+            <span data-lang="en">SAFE Dilution Calculator</span>
+          </div>
+          <p class="card-desc">
+            <span data-lang="zh">输入你的SAFE条款，看看A轮后你还剩多少。</span>
+            <span data-lang="en">Enter your SAFE terms and see what you'll own after the Series A.</span>
+          </p>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;">
+            <div class="input-group">
+              <label class="input-label"><span data-lang="zh">SAFE 金额</span><span data-lang="en">SAFE Amount</span> ($)</label>
+              <input type="number" class="date-input" id="safeAmount" value="500000" onchange="calcSafe()">
+            </div>
+            <div class="input-group">
+              <label class="input-label">Valuation Cap ($)</label>
+              <input type="number" class="date-input" id="safeCap" value="8000000" onchange="calcSafe()">
+            </div>
+            <div class="input-group">
+              <label class="input-label"><span data-lang="zh">A轮估值 (Pre-money)</span><span data-lang="en">Series A Pre-money</span> ($)</label>
+              <input type="number" class="date-input" id="safePreMoney" value="20000000" onchange="calcSafe()">
+            </div>
+            <div class="input-group">
+              <label class="input-label"><span data-lang="zh">A轮融资额</span><span data-lang="en">Series A Raise</span> ($)</label>
+              <input type="number" class="date-input" id="safeSeriesA" value="5000000" onchange="calcSafe()">
+            </div>
+          </div>
+          <div class="countdown-result" id="safeResult" style="margin-top:16px;">
+            <div class="countdown-sub"><span data-lang="zh">点击计算</span><span data-lang="en">Enter values above</span></div>
+          </div>
+          <div style="margin-top:10px;font-size:10px;color:rgba(247,243,238,0.35);text-align:center;">
+            <span data-lang="zh">⚠️ 简化模型，仅供参考。实际稀释受期权池、多轮SAFE等因素影响。</span>
+            <span data-lang="en">⚠️ Simplified model for illustration only. Actual dilution depends on option pool, multiple SAFEs, etc.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Term Sheet Red Flags -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">🚩</div>
+          <div class="card-type-badge">Evonne原创 · Red Flags</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">Term Sheet 8大红旗</span>
+            <span data-lang="en">8 Term Sheet Red Flags</span>
+          </div>
+          <ul style="list-style:none; margin-top:8px; display:flex; flex-direction:column; gap:8px;">
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:#cc8888;flex-shrink:0;">🚩</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">全棘轮反稀释</span><span data-lang="en">Full ratchet anti-dilution</span></strong> — <span data-lang="zh">下轮估值低，你的股份被大幅稀释</span><span data-lang="en">Down round wipes out your ownership</span></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:#cc8888;flex-shrink:0;">🚩</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">参与型优先清算权</span><span data-lang="en">Participating preferred liquidation</span></strong> — <span data-lang="zh">投资人先拿回本金，再按比例分剩下的</span><span data-lang="en">Investor gets money back first, then shares remainder pro-rata</span></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:#cc8888;flex-shrink:0;">🚩</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">超额期权池</span><span data-lang="en">Oversized option pool carve-out</span></strong> — <span data-lang="zh">A轮前要求20%以上期权池，稀释全算创始人头上</span><span data-lang="en">20%+ pool pre-A, dilution charged entirely to founders</span></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:#cc8888;flex-shrink:0;">🚩</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">多数席位的董事会控制</span><span data-lang="en">Investor board majority</span></strong> — <span data-lang="zh">投资人占董事会多数席位</span><span data-lang="en">Investor gets majority board seats</span></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:#cc8888;flex-shrink:0;">🚩</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">创始人回购条款</span><span data-lang="en">Founder redemption clause</span></strong> — <span data-lang="zh">投资人可要求公司回购股份</span><span data-lang="en">Investor can force the company to buy back shares</span></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:#cc8888;flex-shrink:0;">🚩</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">无限制的保护性条款</span><span data-lang="en">Uncapped protective provisions</span></strong> — <span data-lang="zh">投资人对公司每一项重大决策都有否决权</span><span data-lang="en">Investor veto over every major company decision</span></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:#cc8888;flex-shrink:0;">🚩</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">拖售权（Drag-Along）过宽</span><span data-lang="en">Overly broad Drag-Along rights</span></strong> — <span data-lang="zh">投资人可以低于你预期的价格强制卖公司</span><span data-lang="en">Investor can force a sale below your desired price</span></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:#cc8888;flex-shrink:0;">🚩</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">创始人加速vesting被取消</span><span data-lang="en">No founder acceleration on change of control</span></strong> — <span data-lang="zh">公司被收购，你的股份还在vesting中</span><span data-lang="en">Company sold but your shares are still vesting</span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Cap Table 101 -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">🧮</div>
+          <div class="card-type-badge">Quick Guide</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">Cap Table 101：创始人必须看懂的数字</span>
+            <span data-lang="en">Cap Table 101: Numbers Every Founder Must Read</span>
+          </div>
+          <ul style="list-style:none; margin-top:8px; display:flex; flex-direction:column; gap:8px;">
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;">01</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">全面稀释后股份数</span><span data-lang="en">Fully-diluted share count</span></strong> — <span data-lang="zh">包括已发行股份 + 期权池 + 所有SAFE转换</span><span data-lang="en">Issued shares + option pool + all SAFE conversions</span></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;">02</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">期权池大小与来源</span><span data-lang="en">Option pool size & source</span></strong> — <span data-lang="zh">池子从创始人份额中扣除，不是从投资人那边</span><span data-lang="en">Pool comes from founder shares, not investor's allocation</span></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;">03</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">Conversion Price vs Share Price</span><span data-lang="en">Conversion Price vs Share Price</span></strong> — <span data-lang="zh">SAFE的转换价格 ≠ A轮股价，取决于Cap和折扣中更低者</span><span data-lang="en">SAFE conversion price ≠ Series A price; it's the lower of cap and discount</span></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:var(--rose-gold);flex-shrink:0;">04</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">Pro Rata 权利</span><span data-lang="en">Pro Rata rights</span></strong> — <span data-lang="zh">让种子投资人在后续轮次按比例跟投，防止稀释</span><span data-lang="en">Lets seed investors invest proportionally in later rounds to maintain ownership</span></span>
+            </li>
+          </ul>
+          <div style="margin-top:16px; padding:12px 16px; background:rgba(196,154,122,0.06); border-left:2px solid var(--rose-gold); font-size:12px; line-height:1.7; color:var(--light-text);">
+            <strong style="color:var(--dark);">Evonne建议：</strong>
+            <span data-lang="zh">融资前先用Carta或Pulley搭好Cap Table。每次签SAFE都立刻更新。等到A轮才整理Cap Table，你会被数字吓到。</span>
+            <span data-lang="en">Set up your cap table on Carta or Pulley before fundraising. Update it every time you sign a SAFE. If you wait until Series A to organize it, the numbers will shock you.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- External tools -->
+      <div class="tool-card external">
+        <div class="card-top">
+          <div class="card-icon">🔧</div>
+          <div class="card-type-badge">External Tools</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">融资工具推荐</span>
+            <span data-lang="en">Recommended Fundraising Tools</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+            <div style="padding:10px 12px;border:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+              <div>
+                <div style="font-size:13px;font-weight:500;color:var(--dark);">Y Combinator SAFE Docs</div>
+                <div style="font-size:11px;color:var(--light-text);margin-top:2px;"><span data-lang="zh">官方SAFE模板（最新2024版）</span><span data-lang="en">Official SAFE templates (latest 2024 version)</span></div>
+              </div>
+              <a href="https://www.ycombinator.com/documents" target="_blank" style="font-size:11px;color:var(--rose-gold);text-decoration:none;letter-spacing:1px;">→</a>
+            </div>
+            <div style="padding:10px 12px;border:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+              <div>
+                <div style="font-size:13px;font-weight:500;color:var(--dark);">Carta</div>
+                <div style="font-size:11px;color:var(--light-text);margin-top:2px;"><span data-lang="zh">股权管理与Cap Table平台</span><span data-lang="en">Equity management & cap table platform</span></div>
+              </div>
+              <a href="https://carta.com" target="_blank" style="font-size:11px;color:var(--rose-gold);text-decoration:none;letter-spacing:1px;">→</a>
+            </div>
+            <div style="padding:10px 12px;border:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+              <div>
+                <div style="font-size:13px;font-weight:500;color:var(--dark);">Pulley</div>
+                <div style="font-size:11px;color:var(--light-text);margin-top:2px;"><span data-lang="zh">早期创业公司最爱的Cap Table工具</span><span data-lang="en">Early-stage favorite cap table tool</span></div>
+              </div>
+              <a href="https://pulley.com" target="_blank" style="font-size:11px;color:var(--rose-gold);text-decoration:none;letter-spacing:1px;">→</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resources-section">
+      <div class="resources-label"><span data-lang="zh">Evonne 推荐阅读</span><span data-lang="en">Evonne Recommends</span></div>
+      <div class="resource-links">
+        <a href="https://evonnexulegal.beehiiv.com" target="_blank" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">📄</div>
+            <div class="resource-link-info">
+              <div class="resource-link-cat">Deep Dive</div>
+              <div class="resource-link-title"><span data-lang="zh">SAFE协议逐条拆解：创始人必知的5个隐藏风险</span><span data-lang="en">SAFE Agreement Line by Line: 5 Hidden Risks Every Founder Must Know</span></div>
+              <div class="resource-link-meta">Evonne Xu Law · Newsletter</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+      </div>
+    </div>
   </div>
 
-  <div class="coming-soon-panel" id="panel-4">
-    <div class="coming-soon-icon">🤖</div>
-    <h2 class="coming-soon-title"><span data-lang="zh">即将上线</span><span data-lang="en">Coming Soon</span></h2>
-    <p class="coming-soon-sub"><span data-lang="zh">成长期合规工具箱，聚焦AI产品合规、数据隐私和商业合同审查。</span><span data-lang="en">The Growth & Compliance toolkit focuses on AI product compliance, data privacy, and commercial contract review.</span></p>
-    <div class="coming-soon-stages">
-      <div class="coming-soon-tag">AI Compliance Checklist</div>
-      <div class="coming-soon-tag">CCPA / GDPR Basics</div>
-      <div class="coming-soon-tag"><span data-lang="zh">商业合同红旗</span><span data-lang="en">Contract Red Flags</span></div>
+  <!-- ══ STAGE 4: GROWTH & COMPLIANCE ══ -->
+  <div class="stage-panel" id="panel-4">
+    <div class="stage-header">
+      <div class="stage-eyebrow">Stage 04 · <span data-lang="zh">成长 & 合规</span><span data-lang="en">Growth & Compliance</span></div>
+      <h2 class="stage-title">
+        <span data-lang="zh">合规不是增长的<em>刹车</em><br>是增长的<em>护栏</em></span>
+        <span data-lang="en">Compliance Isn't the <em>Brake</em><br>on Growth — It's the <em>Guardrail</em></span>
+      </h2>
+      <p class="stage-desc">
+        <span data-lang="zh">当你的产品开始有用户、签合同、处理数据，合规问题就不再是"以后再说"。特别是AI产品，2026年的监管环境比一年前严格十倍。不提前布局，一封律师函就可能毁掉增长。</span>
+        <span data-lang="en">Once you have users, contracts, and data flows, compliance is no longer a "later" problem. Especially for AI products — 2026's regulatory environment is 10x tighter than last year. One demand letter can kill your momentum if you haven't prepared.</span>
+      </p>
     </div>
-    <a href="https://evonnexulegal.beehiiv.com" target="_blank" class="btn-primary"><span data-lang="zh">订阅，第一时间获知上线</span><span data-lang="en">Subscribe to be notified</span></a>
+
+    <div class="pain-banner">
+      <div class="pain-icon">🤖</div>
+      <div class="pain-text">
+        <span data-lang="zh"><strong>AI创始人最常忽略的：</strong>你以为"我只是调用OpenAI API"就不算AI公司。错。只要你的产品用AI做决策、生成内容或处理个人数据，你就受AI法规约束。欧盟AI Act、加州AI透明度法案、CCPA的AI推断数据条款——全部适用。</span>
+        <span data-lang="en"><strong>What AI founders miss most:</strong> You think "I'm just calling the OpenAI API" means you're not an AI company. Wrong. If your product uses AI for decisions, content generation, or personal data processing, you're subject to AI regulations. EU AI Act, California AI transparency laws, CCPA's AI inference provisions — they all apply.</span>
+      </div>
+    </div>
+
+    <div class="tools-label"><span data-lang="zh">工具 & 资源</span><span data-lang="en">Tools & Resources</span></div>
+    <div class="tools-grid">
+
+      <!-- AI Compliance Checklist -->
+      <div class="tool-card evonne" style="grid-column:1/-1;">
+        <div class="card-top">
+          <div class="card-icon">📋</div>
+          <div class="card-type-badge">Evonne原创 · Checklist</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">AI 产品合规清单 · 2026</span>
+            <span data-lang="en">AI Product Compliance Checklist · 2026</span>
+          </div>
+          <ul class="checklist" id="aiChecklist">
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">AI功能向用户明确披露（不能伪装成人类）</span><span data-lang="en">AI features clearly disclosed to users (no pretending to be human)</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">隐私政策更新，覆盖AI数据处理</span><span data-lang="en">Privacy policy updated to cover AI data processing</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">AI生成内容标注（水印/声明）</span><span data-lang="en">AI-generated content labeling (watermark/disclosure)</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">训练数据版权合规审查</span><span data-lang="en">Training data copyright compliance review</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">偏见/歧视测试与记录（特别是涉及信用、就业、住房）</span><span data-lang="en">Bias/discrimination testing & documentation (esp. credit, employment, housing)</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">用户opt-out AI决策的机制</span><span data-lang="en">User opt-out mechanism for AI-driven decisions</span></span>
+              <span class="check-priority">MEDIUM</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">与AI供应商的DPA（数据处理协议）签署</span><span data-lang="en">DPA (Data Processing Agreement) with AI vendors</span></span>
+              <span class="check-priority high">HIGH</span>
+            </li>
+            <li onclick="toggleCheck(this)">
+              <div class="check-box"></div>
+              <span class="check-text"><span data-lang="zh">AI事故响应计划（模型幻觉、数据泄漏）</span><span data-lang="en">AI incident response plan (hallucinations, data leaks)</span></span>
+              <span class="check-priority">MEDIUM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Privacy comparison -->
+      <div class="tool-card evonne" style="grid-column:1/-1;">
+        <div class="card-top">
+          <div class="card-icon">🔐</div>
+          <div class="card-type-badge">Comparison</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">CCPA vs GDPR — 创业公司必知对比</span>
+            <span data-lang="en">CCPA vs GDPR — What Startups Must Know</span>
+          </div>
+          <div style="overflow-x:auto; margin-top:8px;">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th><span data-lang="zh">维度</span><span data-lang="en">Factor</span></th>
+                  <th>CCPA/CPRA</th>
+                  <th>GDPR</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span data-lang="zh">适用门槛</span><span data-lang="en">Threshold</span></td>
+                  <td><span data-lang="zh">年收入>$25M 或 处理10万+消费者数据</span><span data-lang="en">&gt;$25M revenue or 100K+ consumer data</span></td>
+                  <td><span data-lang="zh">处理欧盟居民数据即适用</span><span data-lang="en">Any EU resident data processing</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">同意模式</span><span data-lang="en">Consent Model</span></td>
+                  <td><span data-lang="zh">Opt-out（默认可收集，用户可选择退出）</span><span data-lang="en">Opt-out (collect by default, user can opt out)</span></td>
+                  <td><span data-lang="zh">Opt-in（先征得同意才能收集）</span><span data-lang="en">Opt-in (consent required before collection)</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">最高罚款</span><span data-lang="en">Max Fine</span></td>
+                  <td>$7,500 <span data-lang="zh">每次违规</span><span data-lang="en">per violation</span></td>
+                  <td><span data-lang="zh">全球年收入的4%</span><span data-lang="en">4% of global annual revenue</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">AI相关要求</span><span data-lang="en">AI Requirements</span></td>
+                  <td><span data-lang="zh">AI推断数据可被用户请求删除</span><span data-lang="en">AI inferences can be deleted on request</span></td>
+                  <td><span data-lang="zh">自动化决策必须可由人类审查</span><span data-lang="en">Automated decisions must be human-reviewable</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">创业公司优先级</span><span data-lang="en">Startup Priority</span></td>
+                  <td><span data-lang="zh">有加州用户就要注意</span><span data-lang="en">Watch if you have CA users</span></td>
+                  <td><span data-lang="zh">有欧洲用户必须合规</span><span data-lang="en">Must comply with any EU users</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vendor contract red flags -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">📝</div>
+          <div class="card-type-badge">Contract Guide</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">SaaS / AI 供应商合同5大红旗</span>
+            <span data-lang="en">5 Red Flags in SaaS / AI Vendor Contracts</span>
+          </div>
+          <ul style="list-style:none; margin-top:8px; display:flex; flex-direction:column; gap:8px;">
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:#cc8888;flex-shrink:0;">🚩</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">供应商可用你的数据训练模型</span><span data-lang="en">Vendor can use your data to train models</span></strong></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:#cc8888;flex-shrink:0;">🚩</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">无限制的API使用政策变更权</span><span data-lang="en">Unlimited right to change API usage policies</span></strong></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:#cc8888;flex-shrink:0;">🚩</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">IP归属条款模糊（AI输出归谁？）</span><span data-lang="en">Vague IP ownership (who owns AI outputs?)</span></strong></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:#cc8888;flex-shrink:0;">🚩</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">无SLA（服务等级承诺）或极低赔偿上限</span><span data-lang="en">No SLA or extremely low liability cap</span></strong></span>
+            </li>
+            <li style="display:flex;gap:10px;font-size:12px;line-height:1.6;color:var(--light-text);">
+              <span style="color:#cc8888;flex-shrink:0;">🚩</span>
+              <span><strong style="color:var(--dark);"><span data-lang="zh">数据跨境传输无保护措施</span><span data-lang="en">Cross-border data transfer without safeguards</span></strong></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Commercial contract checklist -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">🤝</div>
+          <div class="card-type-badge">Checklist</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">你的第一份大客户合同</span>
+            <span data-lang="en">Your First Enterprise Contract</span>
+          </div>
+          <p class="card-desc">
+            <span data-lang="zh">当大公司发来一份50页的MSA，你需要关注这几个核心条款：</span>
+            <span data-lang="en">When a large company sends a 50-page MSA, focus on these core terms:</span>
+          </p>
+          <ul style="list-style:none; margin-top:8px; display:flex; flex-direction:column; gap:6px;">
+            <li style="font-size:12px;line-height:1.6;color:var(--light-text);">→ <strong style="color:var(--dark);"><span data-lang="zh">赔偿上限</span><span data-lang="en">Liability cap</span></strong> — <span data-lang="zh">争取限制在合同金额的1-2倍</span><span data-lang="en">Aim for 1-2x contract value</span></li>
+            <li style="font-size:12px;line-height:1.6;color:var(--light-text);">→ <strong style="color:var(--dark);"><span data-lang="zh">知识产权保证</span><span data-lang="en">IP indemnity</span></strong> — <span data-lang="zh">不要做无限制的IP保证</span><span data-lang="en">Never give unlimited IP warranties</span></li>
+            <li style="font-size:12px;line-height:1.6;color:var(--light-text);">→ <strong style="color:var(--dark);"><span data-lang="zh">终止条款</span><span data-lang="en">Termination</span></strong> — <span data-lang="zh">确保你能合理退出</span><span data-lang="en">Ensure you can exit reasonably</span></li>
+            <li style="font-size:12px;line-height:1.6;color:var(--light-text);">→ <strong style="color:var(--dark);"><span data-lang="zh">数据归属与迁移</span><span data-lang="en">Data ownership & portability</span></strong> — <span data-lang="zh">客户数据归客户，你的模型/方法论归你</span><span data-lang="en">Customer data stays theirs, your models/methods stay yours</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resources-section">
+      <div class="resources-label"><span data-lang="zh">Evonne 推荐阅读</span><span data-lang="en">Evonne Recommends</span></div>
+      <div class="resource-links">
+        <a href="../blog/ai-vendor-contract-playbook.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">📘</div>
+            <div class="resource-link-info">
+              <div class="resource-link-cat">Blog · AI Contracts</div>
+              <div class="resource-link-title"><span data-lang="zh">AI供应商合同审查手册：创业公司必看</span><span data-lang="en">AI Vendor Contract Playbook for Startups</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="../blog/xai-vs-california.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">⚖️</div>
+            <div class="resource-link-info">
+              <div class="resource-link-cat">Blog · AI Regulation</div>
+              <div class="resource-link-title"><span data-lang="zh">xAI vs 加州：AI监管的前沿战场</span><span data-lang="en">xAI vs California: The AI Regulation Frontier</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="../blog/us-v-heppner-ai-privilege.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🔒</div>
+            <div class="resource-link-info">
+              <div class="resource-link-cat">Blog · AI & Legal Privilege</div>
+              <div class="resource-link-title"><span data-lang="zh">AI与律师特权：Heppner案的启示</span><span data-lang="en">AI & Attorney Privilege: Lessons from US v. Heppner</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="ai-compliance.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🤖</div>
+            <div class="resource-link-info">
+              <div class="resource-link-cat">Service Page</div>
+              <div class="resource-link-title"><span data-lang="zh">Evonne 的 AI 合规服务详情</span><span data-lang="en">Evonne's AI Compliance Service Page</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+      </div>
+    </div>
   </div>
 
-  <div class="coming-soon-panel" id="panel-5">
-    <div class="coming-soon-icon">🌏</div>
-    <h2 class="coming-soon-title"><span data-lang="zh">即将上线</span><span data-lang="en">Coming Soon</span></h2>
-    <p class="coming-soon-sub"><span data-lang="zh">跨境扩张工具箱，专注中国企业进入美国市场的法律路径，包括CFIUS风险评估和架构选择。</span><span data-lang="en">Cross-Border toolkit for Chinese companies entering the US market, including CFIUS risk assessment and structure selection.</span></p>
-    <div class="coming-soon-stages">
-      <div class="coming-soon-tag">CFIUS Risk Self-Assessment</div>
-      <div class="coming-soon-tag">VIE vs Direct Holding</div>
-      <div class="coming-soon-tag"><span data-lang="zh">进入美国市场路径</span><span data-lang="en">US Market Entry Paths</span></div>
+  <!-- ══ STAGE 5: CROSS-BORDER ══ -->
+  <div class="stage-panel" id="panel-5">
+    <div class="stage-header">
+      <div class="stage-eyebrow">Stage 05 · <span data-lang="zh">跨境扩张</span><span data-lang="en">Cross-Border Expansion</span></div>
+      <h2 class="stage-title">
+        <span data-lang="zh">走出去之前<br>先搞清楚<em>路线图</em></span>
+        <span data-lang="en">Before You Go Global<br>Get the <em>Roadmap</em> Right</span>
+      </h2>
+      <p class="stage-desc">
+        <span data-lang="zh">中国创始人进入美国市场、或美国公司拓展中国业务，面临的不只是商业挑战。CFIUS审查、VIE结构、外汇管制、数据跨境——法律架构选错，整个扩张计划可能从第一天就埋下隐患。</span>
+        <span data-lang="en">Chinese founders entering the US — or US companies expanding into China — face more than business challenges. CFIUS review, VIE structures, forex controls, cross-border data — the wrong legal architecture means your entire expansion carries hidden risk from day one.</span>
+      </p>
     </div>
-    <a href="https://evonnexulegal.beehiiv.com" target="_blank" class="btn-primary"><span data-lang="zh">订阅，第一时间获知上线</span><span data-lang="en">Subscribe to be notified</span></a>
+
+    <div class="pain-banner">
+      <div class="pain-icon">🌏</div>
+      <div class="pain-text">
+        <span data-lang="zh"><strong>2026年的现实：</strong>CFIUS的审查范围不断扩大，"关键技术"的定义越来越宽。与此同时，中国的境外投资审批（ODI）和数据出境安全评估也在收紧。两头挤压之下，架构规划必须比以往任何时候都更早开始。</span>
+        <span data-lang="en"><strong>The 2026 reality:</strong> CFIUS review scope keeps expanding — the definition of "critical technology" grows wider every year. Meanwhile, China's outbound investment approval (ODI) and data cross-border security assessments are tightening. Squeezed from both sides, structure planning must start earlier than ever.</span>
+      </div>
+    </div>
+
+    <div class="tools-label"><span data-lang="zh">工具 & 资源</span><span data-lang="en">Tools & Resources</span></div>
+    <div class="tools-grid">
+
+      <!-- Market Entry Structure Comparison -->
+      <div class="tool-card evonne" style="grid-column:1/-1;">
+        <div class="card-top">
+          <div class="card-icon">🏗️</div>
+          <div class="card-type-badge">Evonne原创 · Comparison</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">进入美国市场的3种架构</span>
+            <span data-lang="en">3 Structures for Entering the US Market</span>
+          </div>
+          <div style="overflow-x:auto; margin-top:8px;">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th><span data-lang="zh">维度</span><span data-lang="en">Factor</span></th>
+                  <th><span data-lang="zh">直接设立美国子公司</span><span data-lang="en">Direct US Subsidiary</span></th>
+                  <th><span data-lang="zh">VIE 架构</span><span data-lang="en">VIE Structure</span></th>
+                  <th><span data-lang="zh">合资公司 (JV)</span><span data-lang="en">Joint Venture</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span data-lang="zh">控制权</span><span data-lang="en">Control</span></td>
+                  <td><span class="check">✓</span> <span data-lang="zh">完全控制</span><span data-lang="en">Full control</span></td>
+                  <td><span class="neutral">△</span> <span data-lang="zh">合同控制，法律不确定</span><span data-lang="en">Contractual control, legally uncertain</span></td>
+                  <td><span class="cross">✗</span> <span data-lang="zh">共享控制</span><span data-lang="en">Shared control</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">CFIUS 风险</span><span data-lang="en">CFIUS Risk</span></td>
+                  <td><span class="cross">✗</span> <span data-lang="zh">高（直接外资控制）</span><span data-lang="en">High (direct foreign control)</span></td>
+                  <td><span class="neutral">△</span> <span data-lang="zh">中（取决于行业）</span><span data-lang="en">Medium (industry-dependent)</span></td>
+                  <td><span class="neutral">△</span> <span data-lang="zh">取决于持股比例和行业</span><span data-lang="en">Depends on ownership % and sector</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">适用场景</span><span data-lang="en">Best For</span></td>
+                  <td><span data-lang="zh">非敏感行业，需要美国运营</span><span data-lang="en">Non-sensitive sectors, US operations needed</span></td>
+                  <td><span data-lang="zh">中国限制外资的行业</span><span data-lang="en">China-restricted foreign investment sectors</span></td>
+                  <td><span data-lang="zh">需要本地合作伙伴的行业</span><span data-lang="en">Sectors requiring local partner</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">设立复杂度</span><span data-lang="en">Setup Complexity</span></td>
+                  <td><span class="check">✓</span> <span data-lang="zh">相对简单</span><span data-lang="en">Relatively simple</span></td>
+                  <td><span class="cross">✗</span> <span data-lang="zh">极其复杂</span><span data-lang="en">Extremely complex</span></td>
+                  <td><span class="neutral">△</span> <span data-lang="zh">中等</span><span data-lang="en">Moderate</span></td>
+                </tr>
+                <tr>
+                  <td><span data-lang="zh">法律费用</span><span data-lang="en">Legal Cost</span></td>
+                  <td>$5K–$20K</td>
+                  <td>$50K–$200K+</td>
+                  <td>$20K–$80K</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="margin-top:16px; padding:12px 16px; background:rgba(196,154,122,0.06); border-left:2px solid var(--rose-gold); font-size:12px; line-height:1.7; color:var(--light-text);">
+            <strong style="color:var(--dark);">Evonne建议：</strong>
+            <span data-lang="zh">大多数不涉及敏感技术的中国创业公司进入美国市场，直接设立Delaware子公司是最简单的路径。VIE架构主要适用于需要中国牌照但想在海外上市的公司。</span>
+            <span data-lang="en">For most Chinese startups not in sensitive tech, a direct Delaware subsidiary is the simplest US market entry. VIE is primarily for companies needing Chinese licenses but planning offshore listing.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CFIUS Quick Guide -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">🛡️</div>
+          <div class="card-type-badge">Evonne原创 · CFIUS Guide</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">CFIUS 风险快速判断</span>
+            <span data-lang="en">CFIUS Risk Quick Assessment</span>
+          </div>
+          <p class="card-desc">
+            <span data-lang="zh">以下任何一项答"是"，你的交易可能触发CFIUS审查：</span>
+            <span data-lang="en">If any of these apply, your deal may trigger CFIUS review:</span>
+          </p>
+          <ul style="list-style:none; margin-top:8px; display:flex; flex-direction:column; gap:8px;">
+            <li style="font-size:12px;line-height:1.6;color:var(--light-text);">⚠️ <strong style="color:var(--dark);"><span data-lang="zh">目标涉及"关键技术"</span><span data-lang="en">Target involves "critical technology"</span></strong> — <span data-lang="zh">AI、半导体、量子、生物、网络安全</span><span data-lang="en">AI, semiconductors, quantum, biotech, cybersecurity</span></li>
+            <li style="font-size:12px;line-height:1.6;color:var(--light-text);">⚠️ <strong style="color:var(--dark);"><span data-lang="zh">处理100万+美国公民敏感个人数据</span><span data-lang="en">Processes sensitive data of 1M+ US persons</span></strong></li>
+            <li style="font-size:12px;line-height:1.6;color:var(--light-text);">⚠️ <strong style="color:var(--dark);"><span data-lang="zh">位于军事基地或政府设施附近</span><span data-lang="en">Located near military bases or government facilities</span></strong></li>
+            <li style="font-size:12px;line-height:1.6;color:var(--light-text);">⚠️ <strong style="color:var(--dark);"><span data-lang="zh">涉及关键基础设施</span><span data-lang="en">Involves critical infrastructure</span></strong> — <span data-lang="zh">电信、能源、港口、金融</span><span data-lang="en">Telecom, energy, ports, finance</span></li>
+            <li style="font-size:12px;line-height:1.6;color:var(--light-text);">⚠️ <strong style="color:var(--dark);"><span data-lang="zh">有美国政府合同或安全许可</span><span data-lang="en">Has US government contracts or security clearances</span></strong></li>
+          </ul>
+          <div style="margin-top:16px; padding:12px 16px; background:rgba(196,154,122,0.06); border-left:2px solid var(--rose-gold); font-size:12px; line-height:1.7; color:var(--light-text);">
+            <strong style="color:var(--dark);">Evonne建议：</strong>
+            <span data-lang="zh">即使不确定是否触发CFIUS，也建议在交易早期做一次非正式评估。主动申报（Voluntary Filing）反而比被动调查更安全。详细分析见我的CFIUS博客。</span>
+            <span data-lang="en">Even if unsure about CFIUS triggers, get an informal assessment early. Voluntary filing is safer than waiting for an uninvited review. See my CFIUS blog for a full analysis.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cross-border data & compliance -->
+      <div class="tool-card evonne">
+        <div class="card-top">
+          <div class="card-icon">📡</div>
+          <div class="card-type-badge">Data & Compliance</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <span data-lang="zh">跨境数据合规要点</span>
+            <span data-lang="en">Cross-Border Data Compliance Essentials</span>
+          </div>
+          <ul style="list-style:none; margin-top:8px; display:flex; flex-direction:column; gap:8px;">
+            <li style="font-size:12px;line-height:1.6;color:var(--light-text);">→ <strong style="color:var(--dark);"><span data-lang="zh">中国《数据出境安全评估办法》</span><span data-lang="en">China Data Export Security Assessment</span></strong> — <span data-lang="zh">重要数据或100万+用户个人信息出境需评估</span><span data-lang="en">Assessment required for critical data or 1M+ user personal info exports</span></li>
+            <li style="font-size:12px;line-height:1.6;color:var(--light-text);">→ <strong style="color:var(--dark);"><span data-lang="zh">美国数据本地化趋势</span><span data-lang="en">US Data Localization Trends</span></strong> — <span data-lang="zh">越来越多州要求某些数据不出境</span><span data-lang="en">More states requiring certain data to stay domestic</span></li>
+            <li style="font-size:12px;line-height:1.6;color:var(--light-text);">→ <strong style="color:var(--dark);"><span data-lang="zh">合同中的数据条款</span><span data-lang="en">Contractual Data Provisions</span></strong> — <span data-lang="zh">标准合同条款（SCC）是跨境数据传输的基本框架</span><span data-lang="en">Standard Contractual Clauses (SCCs) are the baseline framework for cross-border data transfers</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resources-section">
+      <div class="resources-label"><span data-lang="zh">Evonne 推荐阅读</span><span data-lang="en">Evonne Recommends</span></div>
+      <div class="resource-links">
+        <a href="../blog/blog-cfius-2026.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🛡️</div>
+            <div class="resource-link-info">
+              <div class="resource-link-cat">Blog · CFIUS</div>
+              <div class="resource-link-title"><span data-lang="zh">CFIUS 2026审查趋势：红线在哪里</span><span data-lang="en">CFIUS 2026 Trends: Where Are the Red Lines?</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="../blog/us-deal-approvals.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🏛️</div>
+            <div class="resource-link-info">
+              <div class="resource-link-cat">Blog · Regulatory</div>
+              <div class="resource-link-title"><span data-lang="zh">美国大型交易必须通过的审批关卡</span><span data-lang="en">Approvals Every Major US Deal Must Clear</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+        <a href="cross-border-ma.html" class="resource-link">
+          <div class="resource-link-left">
+            <div class="resource-link-icon">🗺️</div>
+            <div class="resource-link-info">
+              <div class="resource-link-cat">Service Page</div>
+              <div class="resource-link-title"><span data-lang="zh">跨境并购全流程工具箱</span><span data-lang="en">Cross-Border M&A Deal Navigator</span></div>
+              <div class="resource-link-meta">Evonne Xu Law</div>
+            </div>
+          </div>
+          <div class="resource-link-arrow">→</div>
+        </a>
+      </div>
+    </div>
   </div>
 
   <div class="coming-soon-panel" id="panel-6">
@@ -1566,7 +2227,7 @@ switchLang(savedLang);
 
 /* ─── TIMELINE / STAGE NAVIGATION ─── */
 let currentStage = 0;
-const LIVE_STAGES = [0, 1, 2];
+const LIVE_STAGES = [0, 1, 2, 3, 4, 5];
 
 function showStage(n) {
   // Hide all panels
@@ -1658,6 +2319,43 @@ function calc83b() {
 function toggleCheck(li) {
   li.classList.toggle('checked');
 }
+
+/* ─── SAFE DILUTION CALCULATOR ─── */
+function calcSafe() {
+  var safeAmt = parseFloat(document.getElementById('safeAmount').value) || 0;
+  var cap = parseFloat(document.getElementById('safeCap').value) || 0;
+  var preMoney = parseFloat(document.getElementById('safePreMoney').value) || 0;
+  var seriesA = parseFloat(document.getElementById('safeSeriesA').value) || 0;
+  var resultEl = document.getElementById('safeResult');
+  var lang = document.body.classList.contains('lang-zh') ? 'zh' : 'en';
+
+  if (!safeAmt || !cap || !preMoney || !seriesA) {
+    resultEl.innerHTML = '<div class="countdown-sub">' + (lang==='zh' ? '请填写所有字段' : 'Please fill in all fields') + '</div>';
+    return;
+  }
+
+  // SAFE converts at cap (simplified: cap < pre-money, so cap price applies)
+  var conversionPrice = cap;
+  var safeOwnership = safeAmt / conversionPrice;
+  var seriesAOwnership = seriesA / preMoney;
+  var founderOwnership = 1 - safeOwnership - seriesAOwnership;
+
+  // Clamp
+  if (founderOwnership < 0) founderOwnership = 0;
+
+  var fPct = (founderOwnership * 100).toFixed(1);
+  var sPct = (safeOwnership * 100).toFixed(1);
+  var aPct = (seriesAOwnership * 100).toFixed(1);
+
+  resultEl.innerHTML =
+    '<div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;">' +
+      '<div><div class="countdown-num" style="font-size:32px;">' + fPct + '%</div><div class="countdown-sub">' + (lang==='zh' ? '创始人' : 'Founders') + '</div></div>' +
+      '<div><div class="countdown-num" style="font-size:32px;color:var(--champagne);">' + sPct + '%</div><div class="countdown-sub">SAFE</div></div>' +
+      '<div><div class="countdown-num" style="font-size:32px;color:rgba(247,243,238,0.5);">' + aPct + '%</div><div class="countdown-sub">Series A</div></div>' +
+    '</div>';
+}
+// Auto-calculate on load
+setTimeout(function(){ if(document.getElementById('safeAmount')) calcSafe(); }, 300);
 
 /* ─── EMPLOYEE/CONTRACTOR QUIZ ─── */
 const QUIZ = {
