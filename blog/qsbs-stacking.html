@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QSBS与Stacking策略：创始人如何把$1500万免税额度变成$1.5亿 | Evonne Xu Legal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C49A7A;--gold-deep:#a87a5a;--gold-light:#d4b49a;--dark:#1C1510;--dark-soft:#2a2118;--cream:#F7F3EE;--cream-warm:#efe8de;--text-muted:#7a6a5a;--text-soft:#4a3f33;--rule:#d8cdbf;--accent-red:#9b3b2c;--accent-green:#3d6b52;--shadow:0 4px 20px rgba(28,21,16,0.06)}
+[data-lang]{display:none}body.lang-zh [data-lang="zh"]{display:block}body.lang-en [data-lang="en"]{display:block}span[data-lang]{display:none}body.lang-zh span[data-lang="zh"]{display:inline}body.lang-en span[data-lang="en"]{display:inline}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'DM Sans',-apple-system,sans-serif;background:var(--cream);color:var(--dark);font-size:16.5px;line-height:1.75}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--dark);display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:56px;border-bottom:1px solid var(--gold)}
+.nav-brand{font-family:'Cormorant Garamond',serif;color:var(--cream);font-size:18px;letter-spacing:0.18em;text-decoration:none;font-weight:500}.nav-brand em{color:var(--gold);font-style:italic}
+.nav-links{display:flex;gap:26px;align-items:center}.nav-links a{color:rgba(247,243,238,0.7);text-decoration:none;font-size:13px;letter-spacing:0.05em}.nav-links a:hover{color:var(--gold)}
+#langBtn{font-family:'JetBrains Mono',monospace;font-size:11px;background:transparent;border:1px solid rgba(196,154,122,0.4);color:var(--gold);padding:5px 14px;cursor:pointer;letter-spacing:0.08em;border-radius:2px}#langBtn:hover{background:var(--gold);color:var(--dark)}
+.reading-bar{position:fixed;top:56px;left:0;right:0;height:2px;z-index:99;background:rgba(28,21,16,0.05)}.reading-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-deep));width:0%;transition:width 0.1s}
+.hero{margin-top:56px;background:var(--dark);padding:110px 40px 90px;position:relative;overflow:hidden;color:var(--cream)}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 80% 20%,rgba(196,154,122,0.12) 0%,transparent 50%),radial-gradient(circle at 15% 75%,rgba(196,154,122,0.06) 0%,transparent 45%);pointer-events:none}
+.hero-inner{max-width:880px;margin:0 auto;position:relative}
+.hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:32px;display:flex;align-items:center;gap:14px}
+.hero-eyebrow::before{content:'';display:inline-block;width:36px;height:1px;background:var(--gold)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5.5vw,64px);font-weight:500;line-height:1.1;margin-bottom:24px;letter-spacing:-0.01em}
+.hero h1 em{font-style:italic;color:var(--gold);font-weight:400}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2.4vw,26px);font-style:italic;color:rgba(247,243,238,0.65);margin-bottom:44px;line-height:1.4}
+.hero-meta{display:flex;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(247,243,238,0.45);letter-spacing:0.1em}
+.hero-meta span{padding-right:22px;margin-right:22px;border-right:1px solid rgba(247,243,238,0.15)}.hero-meta span:last-child{border-right:none}
+.summary-strip{background:var(--gold);padding:32px 40px;border-bottom:4px solid var(--gold-deep)}
+.summary-strip-inner{max-width:880px;margin:0 auto;display:grid;grid-template-columns:130px 1fr;gap:32px;align-items:start}
+.summary-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--dark);padding-top:6px;font-weight:500}
+.summary-text{color:var(--dark);font-size:16px;line-height:1.65;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500}
+.toc-wrapper{background:var(--cream-warm);border-bottom:1px solid var(--rule);padding:36px 40px}.toc-inner{max-width:880px;margin:0 auto}
+.toc-title{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-muted);margin-bottom:18px}
+.toc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 32px}
+.toc-grid a{display:flex;align-items:baseline;gap:12px;padding:6px 0;color:var(--text-soft);text-decoration:none;font-size:14.5px;border-bottom:1px dotted var(--rule)}.toc-grid a:hover{color:var(--gold-deep)}
+.toc-num{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gold);font-weight:500;min-width:22px}
+.article{max-width:760px;margin:0 auto;padding:70px 40px 60px}.section{margin-bottom:64px;scroll-margin-top:80px}
+.section-num{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--gold-deep);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:14px}
+.section-num::before{content:'';display:inline-block;width:24px;height:1px;background:var(--gold)}
+h2.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.6vw,44px);font-weight:600;color:var(--dark);line-height:1.15;margin-bottom:8px;letter-spacing:-0.01em}
+h2.section-title em{font-style:italic;color:var(--gold-deep);font-weight:500}
+.section-title-en{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--text-muted);margin-bottom:32px}
+h3.sub-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--dark);margin:44px 0 14px;line-height:1.25}
+h4.sub-sub{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-deep);margin:30px 0 12px}
+p{margin-bottom:18px;color:var(--text-soft)}p strong{color:var(--dark);font-weight:600}
+.section-divider{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--rule),transparent);margin:60px 0;position:relative}
+.section-divider::after{content:'◆';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--cream);padding:0 16px;color:var(--gold);font-size:10px}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);margin:36px 0;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);background:white}
+.stat-cell{padding:28px 24px;text-align:center;border-right:1px solid var(--rule)}.stat-cell:last-child{border-right:none}
+.stat-value{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:var(--gold-deep);line-height:1;margin-bottom:6px}.stat-value em{font-style:italic}
+.stat-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted)}
+.law-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14.5px;background:white;box-shadow:var(--shadow)}
+.law-table th{background:var(--dark);color:var(--cream);font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;padding:14px 16px;text-align:left;font-weight:500}
+.law-table th:first-child{background:#0f0a06}.law-table th.col-new{background:var(--gold-deep)}
+.law-table td{padding:14px 16px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.55;color:var(--text-soft)}
+.law-table tr:last-child td{border-bottom:none}
+.law-table td:first-child{font-weight:600;color:var(--dark);background:var(--cream-warm);border-right:1px solid var(--rule);width:28%}
+.law-table td.new-rule{background:rgba(196,154,122,0.08);color:var(--dark)}
+.tier-track{display:grid;grid-template-columns:repeat(3,1fr);margin:28px 0;background:white;border:1px solid var(--rule);box-shadow:var(--shadow)}
+.tier-cell{padding:28px 22px;text-align:center;border-right:1px solid var(--rule)}.tier-cell:last-child{border-right:none}
+.tier-cell.t50{background:rgba(196,154,122,0.05)}.tier-cell.t75{background:rgba(196,154,122,0.12)}.tier-cell.t100{background:rgba(196,154,122,0.22)}
+.tier-years{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.15em;color:var(--text-muted);text-transform:uppercase;margin-bottom:8px}
+.tier-percent{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:600;color:var(--gold-deep);line-height:1;margin-bottom:6px}.tier-percent em{font-style:italic}
+.tier-label{font-size:13px;color:var(--text-soft);margin-bottom:4px}.tier-label strong{color:var(--dark)}
+.tier-tax{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);margin-top:6px}
+.req-box{background:white;border:1px solid var(--rule);border-left:4px solid var(--gold);padding:24px 28px;margin:28px 0;box-shadow:var(--shadow)}
+.req-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--dark);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.req-title-icon{color:var(--gold)}
+.req-list{list-style:none}.req-list li{position:relative;padding:10px 0 10px 32px;border-bottom:1px dotted var(--rule);font-size:14.5px;color:var(--text-soft);line-height:1.55}
+.req-list li:last-child{border-bottom:none}.req-list li::before{content:'✓';position:absolute;left:0;top:9px;color:var(--gold-deep);font-weight:700;font-size:14px}
+.req-list li strong{color:var(--dark)}
+.callout{border-left:4px solid var(--gold);background:white;padding:22px 26px;margin:28px 0;box-shadow:var(--shadow)}
+.callout-icon{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:8px;font-weight:500}
+.callout p{margin-bottom:0;font-size:15px;line-height:1.65;color:var(--text-soft)}.callout p strong{color:var(--dark)}
+.callout-warn{border-left-color:var(--accent-red)}.callout-warn .callout-icon{color:var(--accent-red)}
+.callout-tip{border-left-color:var(--accent-green)}.callout-tip .callout-icon{color:var(--accent-green)}
+.pullquote{font-family:'Cormorant Garamond',serif;font-size:26px;font-style:italic;font-weight:500;line-height:1.4;color:var(--dark);border-top:2px solid var(--gold);border-bottom:1px solid var(--rule);padding:36px 0;margin:48px 0;text-align:center}
+.pullquote .en{display:block;font-size:16px;font-weight:400;color:var(--text-muted);margin-top:14px;font-family:'Cormorant Garamond',serif}
+.formula-box{background:var(--cream-warm);padding:18px 22px;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--dark);border-left:3px solid var(--gold);margin:18px 0}
+.stack-diagram{background:white;border:1px solid var(--rule);padding:36px 28px;margin:32px 0;box-shadow:var(--shadow)}
+.stack-title{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);text-align:center;margin-bottom:6px}
+.stack-subtitle{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--dark);text-align:center;margin-bottom:28px}
+.stack-rows{display:flex;flex-direction:column;gap:8px}
+.stack-row{display:grid;grid-template-columns:200px 1fr 100px;align-items:center;gap:16px;padding:14px 18px;background:var(--cream-warm);border-left:3px solid var(--gold);transition:transform 0.2s}
+.stack-row:hover{transform:translateX(4px)}
+.stack-role{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--dark);display:block}
+.stack-role-sub{font-size:11px;color:var(--text-muted);font-family:'DM Sans',sans-serif;font-weight:400;display:block;margin-top:2px}
+.stack-bar-wrap{height:24px;background:rgba(196,154,122,0.15);border-radius:2px;overflow:hidden}
+.stack-bar{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-deep));border-radius:2px}
+.stack-amount{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;color:var(--gold-deep);text-align:right}
+.stack-total{margin-top:18px;padding:18px 20px;background:var(--dark);color:var(--cream);display:flex;justify-content:space-between;align-items:center;border-radius:2px}
+.stack-total-label{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic}
+.stack-total-value{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;color:var(--gold)}
+.timeline{margin:36px 0;position:relative}
+.timeline::before{content:'';position:absolute;left:22px;top:12px;bottom:12px;width:2px;background:linear-gradient(180deg,var(--gold),var(--gold-deep))}
+.tl-item{position:relative;padding:14px 0 22px 64px}
+.tl-item::before{content:'';position:absolute;left:16px;top:18px;width:14px;height:14px;background:var(--cream);border:3px solid var(--gold);border-radius:50%}
+.tl-num{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;color:var(--gold-deep);text-transform:uppercase;font-weight:500;margin-bottom:4px}
+.tl-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--dark);margin-bottom:6px;line-height:1.3}
+.tl-desc{font-size:14.5px;color:var(--text-soft);line-height:1.6}.tl-desc strong{color:var(--dark)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:28px 0}
+.col-card{background:white;border:1px solid var(--rule);padding:22px 24px;box-shadow:var(--shadow)}
+.col-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:8px;font-weight:500}
+.col-card h4{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--dark);margin-bottom:10px;line-height:1.3}
+.col-card p{font-size:14px;color:var(--text-soft);margin-bottom:0;line-height:1.6}
+.worked-ex{background:linear-gradient(135deg,var(--dark) 0%,var(--dark-soft) 100%);color:var(--cream);padding:36px;margin:36px 0;position:relative;overflow:hidden}
+.worked-ex::before{content:'';position:absolute;top:0;right:0;width:240px;height:240px;background:radial-gradient(circle,rgba(196,154,122,0.18) 0%,transparent 70%);pointer-events:none}
+.worked-ex-eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;position:relative}
+.worked-ex h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--cream);margin-bottom:18px;position:relative}
+.worked-ex p{color:rgba(247,243,238,0.78);font-size:15px;margin-bottom:14px;position:relative;line-height:1.7}.worked-ex p strong{color:var(--gold-light)}
+.ex-result{display:grid;grid-template-columns:1fr 1fr;margin-top:22px;border:1px solid rgba(196,154,122,0.3);position:relative}
+.ex-cell{padding:18px 22px}.ex-cell:first-child{border-right:1px solid rgba(196,154,122,0.3)}
+.ex-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(196,154,122,0.7);margin-bottom:6px}
+.ex-value{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--cream)}
+.ex-value.savings{color:var(--gold);font-size:28px}
+.trust-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:white;box-shadow:var(--shadow)}
+.trust-table th{background:var(--cream-warm);color:var(--dark);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:12px 14px;text-align:left;font-weight:500;border-bottom:2px solid var(--gold)}
+.trust-table td{padding:12px 14px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.55;color:var(--text-soft)}
+.trust-table td:first-child{font-weight:600;color:var(--dark);font-family:'Cormorant Garamond',serif;font-size:16px}
+.trust-table tr:last-child td{border-bottom:none}.trust-table tr:nth-child(even) td{background:rgba(231,213,192,0.15)}
+.cta{background:linear-gradient(135deg,var(--dark) 0%,var(--dark-soft) 100%);color:var(--cream);padding:64px 40px;margin-top:80px;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 70% 30%,rgba(196,154,122,0.15) 0%,transparent 60%);pointer-events:none}
+.cta-inner{max-width:680px;margin:0 auto;position:relative}
+.cta-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.cta h3{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;color:var(--cream);margin-bottom:16px;line-height:1.2}.cta h3 em{color:var(--gold);font-style:italic}
+.cta p{color:rgba(247,243,238,0.7);font-size:16px;margin-bottom:32px;line-height:1.65}
+.cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{font-family:'DM Sans',sans-serif;font-size:14px;letter-spacing:0.05em;padding:14px 28px;text-decoration:none;border-radius:2px;display:inline-block;font-weight:500;transition:all 0.25s}
+.btn-primary{background:var(--gold);color:var(--dark)}.btn-primary:hover{background:var(--gold-light);transform:translateY(-1px)}
+.btn-outline{border:1px solid rgba(247,243,238,0.4);color:var(--cream)}.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.author-strip{background:var(--cream-warm);border-top:1px solid var(--rule);padding:48px 40px}
+.author-inner{max-width:760px;margin:0 auto;display:flex;gap:24px;align-items:flex-start}
+.author-avatar{width:64px;height:64px;background:var(--dark);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold);font-style:italic}
+.author-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--dark);margin-bottom:4px}
+.author-title{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px}
+.author-bio{font-size:14.5px;color:var(--text-soft);line-height:1.7}
+footer{background:var(--dark);color:rgba(247,243,238,0.4);text-align:center;padding:28px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em}
+footer a{color:rgba(247,243,238,0.65);text-decoration:none;margin:0 6px}footer a:hover{color:var(--gold)}
+@media(max-width:768px){nav{padding:0 20px}.nav-links{gap:16px}.nav-links a:not(#langBtn){display:none}.hero{padding:70px 24px 60px}.article{padding:50px 24px}.summary-strip{padding:24px}.summary-strip-inner{grid-template-columns:1fr;gap:12px}.toc-wrapper{padding:28px 24px}.toc-grid{grid-template-columns:1fr}.stat-grid,.tier-track,.ex-result,.two-col{grid-template-columns:1fr}.stat-cell,.tier-cell{border-right:none;border-bottom:1px solid var(--rule)}.stat-cell:last-child,.tier-cell:last-child{border-bottom:none}.stack-row{grid-template-columns:130px 1fr 80px;gap:10px;padding:12px 14px}.stack-role{font-size:14px}.ex-cell:first-child{border-right:none;border-bottom:1px solid rgba(196,154,122,0.3)}.law-table{font-size:13px}.law-table th,.law-table td{padding:10px 12px}.cta{padding:48px 24px}.cta h3{font-size:26px}.author-strip{padding:36px 24px}.author-inner{flex-direction:column;gap:16px}}
+</style></head>
+<body class="lang-zh">
+<div class="reading-bar"><div class="reading-fill" id="readingFill"></div></div>
+<nav>
+<a class="nav-brand" href="../index.html">EVONNE <em>XU</em></a>
+<div class="nav-links">
+<a href="../index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a>
+<a href="../blog.html"><span data-lang="zh">博客</span><span data-lang="en">Blog</span></a>
+<a href="../index.html#contact"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a>
+<button id="langBtn" onclick="toggleLang()">English</button>
+</div>
+</nav>
+<div class="hero"><div class="hero-inner">
+<div class="hero-eyebrow"><span data-lang="zh">跨境并购 · 深度分析 · QSBS税务规划</span><span data-lang="en">Cross-Border M&amp;A · Deep Analysis · QSBS Tax Planning</span></div>
+<h1><span data-lang="zh">QSBS 与 <em>Stacking</em> 策略</span><span data-lang="en">QSBS &amp; the <em>Stacking</em> Strategy</span></h1>
+<div class="hero-sub"><span data-lang="zh">创始人如何把1500万美元的免税额度，合法地放大到1.5亿</span><span data-lang="en">How Founders Legally Multiply a $15M Exclusion into $150M of Tax-Free Gain</span></div>
+<div class="hero-meta"><span data-lang="zh">深度指南 · 25分钟阅读</span><span data-lang="en">Deep Guide · 25 min read</span><span>OBBBA 2025</span><span>IRC § 1202</span><span>2026</span></div>
+</div></div>
+<div class="summary-strip"><div class="summary-strip-inner">
+<div class="summary-label"><span data-lang="zh">文章摘要</span><span data-lang="en">Summary</span></div>
+<div class="summary-text">
+<span data-lang="zh">QSBS（合格小企业股票）是美国税法中对创始人和早期投资者最慷慨的礼物之一——2025年7月OBBBA法案将单笔免税额度从1000万提升至1500万。但真正的杠杆，在于"Stacking"：通过非授予人信托和家庭赠与，把1500万的法定上限合法放大10倍以上。本文系统拆解：QSBS的全部资格要件、最新OBBBA改革、stacking的操作机制、风险红线，以及从决定退出前24个月就必须开始的规划路径。</span>
+<span data-lang="en">QSBS (Qualified Small Business Stock) is one of the most generous gifts in the U.S. tax code for founders. The July 2025 OBBBA bumped the single-taxpayer exclusion from $10M to $15M. The real leverage lies in "stacking" — using non-grantor trusts and family gifts to legally multiply that $15M cap by ten times or more. This piece walks through every QSBS qualification requirement, the OBBBA reforms, exactly how stacking works, the red lines that trigger IRS scrutiny, and the planning runway you must start no later than 24 months before exit.</span>
+</div>
+</div></div>
+<div class="toc-wrapper"><div class="toc-inner">
+<div class="toc-title"><span data-lang="zh">目录 · Contents</span><span data-lang="en">Contents</span></div>
+<div class="toc-grid">
+<a href="#s1"><span class="toc-num">01</span><span data-lang="zh">什么是QSBS：源起与本质</span><span data-lang="en">What is QSBS</span></a>
+<a href="#s2"><span class="toc-num">02</span><span data-lang="zh">资格要件：公司+股东+持有期</span><span data-lang="en">Qualification Requirements</span></a>
+<a href="#s3"><span class="toc-num">03</span><span data-lang="zh">OBBBA 2025最新改革</span><span data-lang="en">OBBBA 2025 Reforms</span></a>
+<a href="#s4"><span class="toc-num">04</span><span data-lang="zh">免税额度计算：1500万 vs 10倍基础</span><span data-lang="en">Exclusion Math: $15M vs 10× Basis</span></a>
+<a href="#s5"><span class="toc-num">05</span><span data-lang="zh">Stacking核心原理</span><span data-lang="en">Stacking — Core Mechanics</span></a>
+<a href="#s6"><span class="toc-num">06</span><span data-lang="zh">非授予人信托：Stacking引擎</span><span data-lang="en">Non-Grantor Trusts: The Engine</span></a>
+<a href="#s7"><span class="toc-num">07</span><span data-lang="zh">实战案例：1.2亿退出的税务结构</span><span data-lang="en">Worked Example: $120M Exit</span></a>
+<a href="#s8"><span class="toc-num">08</span><span data-lang="zh">红线与风险</span><span data-lang="en">Red Lines &amp; Risks</span></a>
+<a href="#s9"><span class="toc-num">09</span><span data-lang="zh">规划时间线：24个月倒推</span><span data-lang="en">Timeline: 24-Month Runway</span></a>
+<a href="#s10"><span class="toc-num">10</span><span data-lang="zh">结语</span><span data-lang="en">Conclusion</span></a>
+</div>
+</div></div>
+<article class="article">
+
+<section class="section" id="s1">
+<div class="section-num"><span data-lang="zh">01 · 源起与本质</span><span data-lang="en">01 · Origins &amp; Essence</span></div>
+<h2 class="section-title"><span data-lang="zh">什么是 <em>QSBS</em></span><span data-lang="en">What is <em>QSBS</em></span></h2>
+<div class="section-title-en">Section 1202 — A Tax Code Gift Most Founders Don't Fully Understand</div>
+<div data-lang="zh">
+<p>QSBS——Qualified Small Business Stock，合格小企业股票——是美国《国内税收法典》第1202条（IRC § 1202）下的一项税收激励。它的核心承诺极其简单：<strong>如果你持有满足条件的小企业股票超过规定年限，出售时，可以将巨额资本利得排除在联邦所得税之外。</strong></p>
+<p>这条法律1993年由克林顿政府签署成法，最初的目的是把资本引导到中小企业。但在硅谷崛起后，QSBS的真正受益者变成了科技初创公司的创始人、早期员工和天使投资人。一笔成功的IPO或并购退出，配合正确的QSBS规划，可以让一位创始人合法地把数千万乃至上亿美元的资本利得变成完全免税的现金。</p>
+<p>2025年7月4日，特朗普签署的"One Big Beautiful Bill Act"（OBBBA，《大而美法案》）是QSBS立法十多年来最重要的一次升级。它做了三件事：<strong>把单一发行人免税额度从1000万美元提高到1500万、引入分级持有期（3年/4年/5年=50%/75%/100%免税）、并把"小企业"的总资产门槛从5000万提高到7500万。</strong></p>
+<p>这意味着，即使你的初创公司估值已经达到7500万美元的临界点，新发行的股份依然可以是QSBS。也意味着，如果你在第3年遇到收购机会，不再需要为了等满5年而强行延迟交易——可以拿走50%的免税额度先走再说。</p>
+</div>
+<div data-lang="en">
+<p>QSBS — Qualified Small Business Stock — is the tax incentive under <strong>Internal Revenue Code Section 1202</strong>. Its promise is simple: hold qualifying small business stock for the required period, and when you sell, a massive chunk of the capital gain can be excluded from federal income tax entirely.</p>
+<p>Enacted in 1993 to channel capital toward small businesses, Section 1202 became, in the Silicon Valley era, the secret weapon of startup founders, early employees, and angel investors. A successful IPO or acquisition exit, paired with proper QSBS planning, can convert tens of millions — sometimes hundreds of millions — of capital gain into fully tax-free cash.</p>
+<p>On July 4, 2025, President Trump signed the <strong>One Big Beautiful Bill Act (OBBBA)</strong>, the most important QSBS upgrade in over a decade. It did three things: <strong>raised the per-issuer exclusion from $10M to $15M, introduced tiered holding periods (3/4/5 years = 50%/75%/100% exclusion), and bumped the corporate gross asset cap from $50M to $75M.</strong></p>
+<p>Translation: companies that previously aged out of QSBS at $50M can now keep issuing qualified shares up to $75M. And if a buyer shows up at year three, you no longer have to choose between a deal and the tax shield — you can take 50% of the benefit and walk.</p>
+</div>
+<div class="stat-grid">
+<div class="stat-cell"><div class="stat-value">$15<em>M</em></div><div class="stat-label"><span data-lang="zh">单一发行人免税上限</span><span data-lang="en">Per-Issuer Cap (post-7/4/25)</span></div></div>
+<div class="stat-cell"><div class="stat-value">3<em>yr</em></div><div class="stat-label"><span data-lang="zh">最短持有期（50%免税）</span><span data-lang="en">Min Holding (50% excl.)</span></div></div>
+<div class="stat-cell"><div class="stat-value">$75<em>M</em></div><div class="stat-label"><span data-lang="zh">公司总资产上限</span><span data-lang="en">Gross Asset Ceiling</span></div></div>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<section class="section" id="s2">
+<div class="section-num"><span data-lang="zh">02 · 资格要件</span><span data-lang="en">02 · Qualification Requirements</span></div>
+<h2 class="section-title"><span data-lang="zh"><em>三道</em>必须同时通过的关卡</span><span data-lang="en"><em>Three Gates</em> You Must Pass Simultaneously</span></h2>
+<div class="section-title-en">Company Test · Shareholder Test · Holding Period</div>
+<div data-lang="zh"><p>QSBS的吸引力如此之大，以至于税务局对它的资格审查异常严格。任何一道关卡失败，整笔免税待遇都会作废。</p><h3 class="sub-title">第一关：公司层面</h3></div>
+<div data-lang="en"><p>QSBS's generosity is matched by the IRS's strictness. Miss any one gate, and the entire exclusion vanishes.</p><h3 class="sub-title">Gate One: The Company</h3></div>
+<div class="req-box">
+<div class="req-title"><span class="req-title-icon">①</span><span data-lang="zh">合格小企业（Qualified Small Business）</span><span data-lang="en">Qualified Small Business Test</span></div>
+<ul class="req-list">
+<li><span data-lang="zh"><strong>美国C型公司：</strong>必须是美国国内的C corporation。LLC、S corporation、合伙企业都不符合。LLC转C-corp的转换日是新的"原始发行日"。</span><span data-lang="en"><strong>U.S. domestic C corporation:</strong> LLCs, S corps, and partnerships do not qualify. The date of an LLC-to-C-corp conversion becomes the new "original issuance" date.</span></li>
+<li><span data-lang="zh"><strong>总资产门槛：</strong>在你的股票发行时（以及发行后立即），公司总资产（按税基计算）不得超过<strong>$7500万</strong>（OBBBA后；2025年7月4日之前发行的股票仍是$5000万门槛）。</span><span data-lang="en"><strong>Gross asset ceiling:</strong> At and immediately after issuance, total gross assets must not exceed <strong>$75M</strong> (post-OBBBA; pre-7/4/25 stock retains the $50M cap).</span></li>
+<li><span data-lang="zh"><strong>积极业务测试：</strong>公司至少80%的资产必须用于"合格行业"——基本上排除了金融、保险、农业、矿业、酒店、餐饮，以及大多数"个人服务行业"（律所、医生、咨询、表演、运动等）。</span><span data-lang="en"><strong>Active business test:</strong> 80%+ of assets must be used in a "qualified trade or business." Excludes finance, insurance, farming, mining, hotels, restaurants, and most personal service industries.</span></li>
+<li><span data-lang="zh"><strong>原始发行：</strong>股票必须直接从公司获得，作为换取现金、财产或服务的对价。从其他股东手上买的二手股不符合（赠与是关键例外）。</span><span data-lang="en"><strong>Original issuance:</strong> Stock must come directly from the company in exchange for cash, property, or services. Secondary purchases don't qualify — gifts are the critical exception.</span></li>
+</ul>
+</div>
+<h3 class="sub-title"><span data-lang="zh">第二关：股东层面</span><span data-lang="en">Gate Two: The Shareholder</span></h3>
+<div class="req-box">
+<div class="req-title"><span class="req-title-icon">②</span><span data-lang="zh">合格股东</span><span data-lang="en">Eligible Shareholder Test</span></div>
+<ul class="req-list">
+<li><span data-lang="zh"><strong>非C型公司纳税人：</strong>个人、合伙企业、S corporation、信托——都可以。但持股的C corporation不行。</span><span data-lang="en"><strong>Non-corporate taxpayer:</strong> Individuals, partnerships, S corps, and trusts qualify. C corporations as shareholders do <em>not</em>.</span></li>
+<li><span data-lang="zh"><strong>赠与例外：</strong>第1202(h)条规定，通过赠与、遗产继承获得QSBS的人，"踏入前手鞋子"——继承前手的持有期和成本基础，并享有自己独立的免税额度。<strong>这一条是stacking策略的法律基石。</strong></span><span data-lang="en"><strong>The gift exception:</strong> Under § 1202(h), recipients via gift or inheritance "step into the shoes" — inheriting holding period and basis, while qualifying for their own independent exclusion. <strong>This is the legal foundation of the entire stacking strategy.</strong></span></li>
+</ul>
+</div>
+<h3 class="sub-title"><span data-lang="zh">第三关：持有期</span><span data-lang="en">Gate Three: Holding Period</span></h3>
+<div data-lang="zh"><p>OBBBA改革的最大亮点就是这一关。原来是"5年悬崖"——少一天都拿不到任何免税。现在是分级，更人性化：</p></div>
+<div data-lang="en"><p>OBBBA's most consequential reform happens here. The old "5-year cliff" — miss it by a day, get nothing — is now a graduated tier:</p></div>
+<div class="tier-track">
+<div class="tier-cell t50"><div class="tier-years"><span data-lang="zh">持有 ≥ 3年</span><span data-lang="en">Hold ≥ 3 yrs</span></div><div class="tier-percent">50<em>%</em></div><div class="tier-label"><span data-lang="zh"><strong>免税</strong>资本利得</span><span data-lang="en"><strong>Excluded</strong> from Tax</span></div><div class="tier-tax"><span data-lang="zh">未免部分按28%税率</span><span data-lang="en">Unexcluded @ 28% rate</span></div></div>
+<div class="tier-cell t75"><div class="tier-years"><span data-lang="zh">持有 ≥ 4年</span><span data-lang="en">Hold ≥ 4 yrs</span></div><div class="tier-percent">75<em>%</em></div><div class="tier-label"><span data-lang="zh"><strong>免税</strong>资本利得</span><span data-lang="en"><strong>Excluded</strong> from Tax</span></div><div class="tier-tax"><span data-lang="zh">未免部分按28%税率</span><span data-lang="en">Unexcluded @ 28% rate</span></div></div>
+<div class="tier-cell t100"><div class="tier-years"><span data-lang="zh">持有 ≥ 5年</span><span data-lang="en">Hold ≥ 5 yrs</span></div><div class="tier-percent">100<em>%</em></div><div class="tier-label"><span data-lang="zh"><strong>完全免税</strong></span><span data-lang="en"><strong>Fully Excluded</strong></span></div><div class="tier-tax"><span data-lang="zh">无AMT、无NIIT</span><span data-lang="en">No AMT, no NIIT</span></div></div>
+</div>
+<div class="callout callout-warn">
+<div class="callout-icon"><span data-lang="zh">⚠ 关键提醒</span><span data-lang="en">⚠ Key Warning</span></div>
+<p><span data-lang="zh"><strong>分级持有期只适用于2025年7月4日之后发行的QSBS。</strong>如果你的股票是在那之前发行的（绝大多数现存创始人都是这种情况），你仍然受制于5年悬崖——而且额度仍是$1000万上限，不是$1500万。规划之前先确认你的股票发行日。</span><span data-lang="en"><strong>The tiered holding period applies only to QSBS issued after July 4, 2025.</strong> Stock issued before that date is still subject to the 5-year cliff — and the cap remains $10M, not $15M.</span></p>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<section class="section" id="s3">
+<div class="section-num"><span data-lang="zh">03 · OBBBA 2025</span><span data-lang="en">03 · OBBBA 2025</span></div>
+<h2 class="section-title"><span data-lang="zh">新旧法律<em>逐项对照</em></span><span data-lang="en">Old vs. <em>New Law</em>, Side by Side</span></h2>
+<div class="section-title-en">What Actually Changed on July 4, 2025</div>
+<table class="law-table">
+<thead><tr>
+<th><span data-lang="zh">维度</span><span data-lang="en">Dimension</span></th>
+<th><span data-lang="zh">旧法（2025/7/4之前发行）</span><span data-lang="en">Old Law (pre-7/4/25)</span></th>
+<th class="col-new"><span data-lang="zh">新法（2025/7/4之后发行）</span><span data-lang="en">New Law (post-7/4/25)</span></th>
+</tr></thead>
+<tbody>
+<tr><td><span data-lang="zh">单一发行人免税上限</span><span data-lang="en">Per-Issuer Cap</span></td><td><span data-lang="zh">$10M 或 10×成本（取大）</span><span data-lang="en">$10M or 10× basis</span></td><td class="new-rule"><span data-lang="zh"><strong>$15M</strong> 或 10×基础；2026起按通胀调整</span><span data-lang="en"><strong>$15M</strong> or 10× basis; inflation-indexed</span></td></tr>
+<tr><td><span data-lang="zh">持有期</span><span data-lang="en">Holding Period</span></td><td><span data-lang="zh">5年悬崖（满5年=100%；不满=0%）</span><span data-lang="en">5-year cliff</span></td><td class="new-rule"><span data-lang="zh"><strong>分级</strong>：3年=50% / 4年=75% / 5年=100%</span><span data-lang="en"><strong>Tiered</strong>: 3yr=50% / 4yr=75% / 5yr=100%</span></td></tr>
+<tr><td><span data-lang="zh">公司总资产上限</span><span data-lang="en">Gross Asset Ceiling</span></td><td>$50M</td><td class="new-rule"><strong>$75M</strong> <span data-lang="zh">· 通胀调整</span><span data-lang="en">· inflation-adjusted</span></td></tr>
+<tr><td><span data-lang="zh">通胀调整机制</span><span data-lang="en">Inflation Indexing</span></td><td><span data-lang="zh">无</span><span data-lang="en">None</span></td><td class="new-rule"><span data-lang="zh"><strong>有</strong>：额度和资产上限均自动调整</span><span data-lang="en"><strong>Yes</strong>: caps index annually</span></td></tr>
+<tr><td><span data-lang="zh">Section 1045 滚转</span><span data-lang="en">§ 1045 Rollover</span></td><td><span data-lang="zh">60天内再投资可递延</span><span data-lang="en">Reinvest within 60 days</span></td><td><span data-lang="zh">规则保留</span><span data-lang="en">Retained</span></td></tr>
+</tbody>
+</table>
+<div class="callout callout-tip">
+<div class="callout-icon"><span data-lang="zh">💡 规划机会</span><span data-lang="en">💡 Planning Opportunity</span></div>
+<p><span data-lang="zh">对于2025年12月31日之前发行新QSBS的人，"3年时钟"可以从2025年立即起跑——意味着<strong>2028年底就有可能拿到50%免税</strong>。如果你正在融资、转换实体或发行新一轮股票，时机选择直接影响你未来5年的税务弹性。</span><span data-lang="en">For taxpayers acquiring QSBS before Dec 31, 2025, the "3-year clock" starts now — meaning <strong>50% exclusion eligibility could arrive as early as late 2028</strong>.</span></p>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<section class="section" id="s4">
+<div class="section-num"><span data-lang="zh">04 · 免税额度数学</span><span data-lang="en">04 · The Exclusion Math</span></div>
+<h2 class="section-title"><span data-lang="zh">$1500万 vs <em>10倍基础</em>，谁更划算？</span><span data-lang="en">$15M vs <em>10× Basis</em> — Which Wins?</span></h2>
+<div class="section-title-en">The Per-Issuer Cap Has Two Limbs</div>
+<div data-lang="zh">
+<p>第1202条的免税上限是<strong>"取较大值"</strong>：</p>
+<div class="formula-box">最大免税额 = MAX( $15,000,000 , 10 × 你的成本基础 )</div>
+<p>对于成本基础极低的创始人——比如从零开始用1美元换100万股——10×基础几乎没有意义。所以创始人的实际上限就是$1500万。</p>
+<p>但对于<strong>后续大额投资人</strong>——比如以$5000万买入Series B股份的VC——10×基础=$5亿，远远超过$1500万。这就是为什么VC的QSBS税务规划逻辑和创始人完全不同：他们追求的是"放大基础"。</p>
+</div>
+<div data-lang="en">
+<p>Section 1202's per-issuer cap is the <strong>greater of</strong> two numbers:</p>
+<div class="formula-box">Max Exclusion = MAX( $15,000,000 , 10 × your basis )</div>
+<p>For founders with near-zero basis (think: $1 for 1M shares), 10× basis is effectively meaningless. The hard cap is $15M.</p>
+<p>But for a <strong>later-stage investor</strong> — say a VC putting $50M into Series B — 10× basis = $500M, far above $15M. VCs amplify <em>basis</em>, founders multiply <em>taxpayers</em>.</p>
+</div>
+<h4 class="sub-sub"><span data-lang="zh">两个关键变量</span><span data-lang="en">Two Critical Variables</span></h4>
+<div class="two-col">
+<div class="col-card">
+<div class="col-label"><span data-lang="zh">关键变量 1</span><span data-lang="en">Variable 1</span></div>
+<h4><span data-lang="zh">每个发行人独立计算</span><span data-lang="en">Per-Issuer, Not Per-Transaction</span></h4>
+<p><span data-lang="zh">免税额度是"per issuer"——每家发行公司独立有一个$1500万。如果你同时持有公司A和公司B的QSBS，可以分别用满两次$1500万。</span><span data-lang="en">The cap is "per issuer" — each company gives you a fresh $15M. Hold QSBS in both Company A and Company B? You get $15M for each.</span></p>
+</div>
+<div class="col-card">
+<div class="col-label"><span data-lang="zh">关键变量 2</span><span data-lang="en">Variable 2</span></div>
+<h4><span data-lang="zh">每个纳税人独立计算</span><span data-lang="en">Per-Taxpayer, Not Per-Family</span></h4>
+<p><span data-lang="zh">"每个纳税人"是stacking的命门。只要每一位持有人都是法律上独立的纳税主体，他们各自享有完整的$1500万额度。</span><span data-lang="en">"Per taxpayer" is the keystone of stacking. As long as each holder is a separate tax entity, each gets a full $15M.</span></p>
+</div>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<section class="section" id="s5">
+<div class="section-num"><span data-lang="zh">05 · Stacking 核心原理</span><span data-lang="en">05 · Stacking — Core Mechanics</span></div>
+<h2 class="section-title"><span data-lang="zh">把<em>1500万</em>变成<em>1.5亿</em>的合法路径</span><span data-lang="en">Turning <em>$15M</em> into <em>$150M</em> — Legally</span></h2>
+<div class="section-title-en">The Strategy That Compounds the Per-Taxpayer Cap</div>
+<div data-lang="zh">
+<p>Stacking——直译"叠加"——是创始人税务规划中威力最大的单一技术。它的逻辑可以一句话总结：</p>
+<div class="pullquote">QSBS免税额度是"每个纳税人 × 每个发行人"。<br>如果你能合法地创造更多纳税人，你就能合法地累加更多$1500万。<span class="en">The QSBS exclusion is "per taxpayer × per issuer." Create more legitimate taxpayers — and the $15M caps multiply.</span></div>
+<p>核心机制依赖于第1202(h)条的赠与条款。当你把QSBS<strong>在签订有约束力的销售协议之前</strong>，通过赠与方式转给：你的成年子女、父母、兄弟姐妹、独立设立的非授予人信托——受赠方继承你的持有期和成本基础，但获得他/她/它<strong>自己独立的</strong>$1500万免税额度。</p>
+<p>对一家估值1.5亿的公司，理论上可以这样累加：</p>
+</div>
+<div data-lang="en">
+<p>Stacking is the single most powerful technique in founder tax planning. The mechanic in one sentence:</p>
+<div class="pullquote">The QSBS cap is "per taxpayer × per issuer."<br>Legitimately create more taxpayers, and you legitimately stack more $15M caps.<span class="en">Compound the cap by compounding the taxpayers — without breaking a single rule.</span></div>
+<p>The mechanic relies on § 1202(h). When you gift QSBS — <strong>before any binding sale agreement exists</strong> — to an adult child, parent, sibling, or properly drafted non-grantor trust, the recipient inherits your holding period and basis, but qualifies for <strong>their own</strong> independent $15M cap.</p>
+<p>For a hypothetical $150M exit, the math could look like this:</p>
+</div>
+<div class="stack-diagram">
+<div class="stack-title"><span data-lang="zh">单一发行人 · 多纳税人累加示意</span><span data-lang="en">Single Issuer · Multi-Taxpayer Stack</span></div>
+<div class="stack-subtitle"><span data-lang="zh">$1.5亿退出 · 假设每位持有人均满足5年100%免税</span><span data-lang="en">$150M Exit · Each holder qualifies for 100% exclusion</span></div>
+<div class="stack-rows">
+<div class="stack-row"><div><span class="stack-role"><span data-lang="zh">创始人本人</span><span data-lang="en">Founder</span></span><span class="stack-role-sub"><span data-lang="zh">直接持有</span><span data-lang="en">Direct holding</span></span></div><div class="stack-bar-wrap"><div class="stack-bar" style="width:15%;"></div></div><div class="stack-amount">$15M</div></div>
+<div class="stack-row"><div><span class="stack-role"><span data-lang="zh">子女信托 #1</span><span data-lang="en">Child #1 NGT</span></span><span class="stack-role-sub"><span data-lang="zh">非授予人信托</span><span data-lang="en">Non-grantor trust</span></span></div><div class="stack-bar-wrap"><div class="stack-bar" style="width:15%;"></div></div><div class="stack-amount">$15M</div></div>
+<div class="stack-row"><div><span class="stack-role"><span data-lang="zh">子女信托 #2</span><span data-lang="en">Child #2 NGT</span></span><span class="stack-role-sub"><span data-lang="zh">非授予人信托</span><span data-lang="en">Non-grantor trust</span></span></div><div class="stack-bar-wrap"><div class="stack-bar" style="width:15%;"></div></div><div class="stack-amount">$15M</div></div>
+<div class="stack-row"><div><span class="stack-role"><span data-lang="zh">父母信托</span><span data-lang="en">Parents' NGT</span></span><span class="stack-role-sub"><span data-lang="zh">独立受益人</span><span data-lang="en">Distinct beneficiaries</span></span></div><div class="stack-bar-wrap"><div class="stack-bar" style="width:15%;"></div></div><div class="stack-amount">$15M</div></div>
+<div class="stack-row"><div><span class="stack-role"><span data-lang="zh">兄弟（直接赠与）</span><span data-lang="en">Sibling (outright)</span></span><span class="stack-role-sub"><span data-lang="zh">个人接受</span><span data-lang="en">Direct gift</span></span></div><div class="stack-bar-wrap"><div class="stack-bar" style="width:15%;"></div></div><div class="stack-amount">$15M</div></div>
+<div class="stack-row"><div><span class="stack-role"><span data-lang="zh">朝代信托</span><span data-lang="en">Dynasty Trust</span></span><span class="stack-role-sub"><span data-lang="zh">隔代财富传承</span><span data-lang="en">Multi-gen transfer</span></span></div><div class="stack-bar-wrap"><div class="stack-bar" style="width:15%;"></div></div><div class="stack-amount">$15M</div></div>
+</div>
+<div class="stack-total"><div class="stack-total-label"><span data-lang="zh">累计免税额度</span><span data-lang="en">Total Stacked Exclusion</span></div><div class="stack-total-value">$90M</div></div>
+</div>
+<div class="callout">
+<div class="callout-icon"><span data-lang="zh">配偶规则的细节</span><span data-lang="en">A Note on the Spouse Rule</span></div>
+<p><span data-lang="zh">配偶并不能简单地把$1500万翻倍。第1202条对联合申报的处理是把单一$1500万额度<strong>在夫妻间分配</strong>，而非自动翻倍。要让配偶贡献额度，通常需要通过SLANT（配偶终身受益权非授予人信托）或更复杂的结构。</span><span data-lang="en">A spouse does not automatically double the cap. Section 1202 treats the joint-return cap as something <strong>allocated between spouses</strong>, not doubled. To get the spouse's "slot," planners typically use a SLANT or more elaborate structures.</span></p>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<section class="section" id="s6">
+<div class="section-num"><span data-lang="zh">06 · 信托工具箱</span><span data-lang="en">06 · The Trust Toolkit</span></div>
+<h2 class="section-title"><span data-lang="zh">非授予人信托：<em>Stacking引擎</em></span><span data-lang="en">Non-Grantor Trusts: <em>The Stacking Engine</em></span></h2>
+<div class="section-title-en">Why "Non-Grantor" Is the Word That Multiplies Your Exclusion</div>
+<div data-lang="zh">
+<p>Stacking最常用的工具是<strong>非授予人信托（Non-Grantor Trust, NGT）</strong>。理解它，需要先理解一个反例：</p>
+<p>"授予人信托（Grantor Trust）"在所得税上是<strong>透明的</strong>——信托内的所有收入和资本利得仍然归创建人（the grantor）报税。它不是独立纳税人。所以对于QSBS而言，gift to a grantor trust = no new exclusion. 把股票放进授予人信托，就像把钱从左口袋放到右口袋——没有税务效果。</p>
+<p>"非授予人信托"则是<strong>独立的纳税主体</strong>，它有自己的EIN（雇主识别号）、自己提交1041表格、自己缴所得税——也因此<strong>享有自己独立的$1500万QSBS免税额度</strong>。每多一个非授予人信托，就多一个$1500万的"槽位"。</p>
+</div>
+<div data-lang="en">
+<p>The default tool for stacking is the <strong>Non-Grantor Trust (NGT)</strong>. To understand it, start with the foil:</p>
+<p>A "grantor trust" is <strong>transparent</strong> for income tax purposes — all income and gains flow back to the grantor's personal return. It is not a separate taxpayer. So gifting QSBS to a grantor trust = <strong>no new exclusion</strong>. It's moving cash from your left pocket to your right.</p>
+<p>A non-grantor trust is a <strong>separate taxable entity</strong> — its own EIN, its own Form 1041, its own income tax — and therefore <strong>its own independent $15M QSBS cap</strong>. Each properly structured NGT is one more $15M slot.</p>
+</div>
+<h4 class="sub-sub"><span data-lang="zh">三类常见的Stacking信托结构</span><span data-lang="en">Three Common Stacking Trust Structures</span></h4>
+<table class="trust-table">
+<thead><tr>
+<th><span data-lang="zh">结构</span><span data-lang="en">Structure</span></th>
+<th><span data-lang="zh">运作方式</span><span data-lang="en">How It Works</span></th>
+<th><span data-lang="zh">优势</span><span data-lang="en">Pros</span></th>
+<th><span data-lang="zh">代价</span><span data-lang="en">Tradeoffs</span></th>
+</tr></thead>
+<tbody>
+<tr><td><span data-lang="zh">不可撤销NGT</span><span data-lang="en">Irrevocable NGT</span></td><td><span data-lang="zh">为每名独立子女设立独立信托，独立受托人</span><span data-lang="en">Separate trust per child with independent trustee</span></td><td><span data-lang="zh">最干净的结构；每信托独立$15M额度</span><span data-lang="en">Cleanest structure; independent $15M each</span></td><td><span data-lang="zh">完全放弃控制权；动用终身赠与免税额</span><span data-lang="en">Total loss of control; uses lifetime gift exemption</span></td></tr>
+<tr><td>SLANT</td><td><span data-lang="zh">配偶为主要受益人，子女为受托人和剩余受益人</span><span data-lang="en">Spouse = primary beneficiary; child = trustee &amp; remainder</span></td><td><span data-lang="zh">配偶可获得分配（家庭仍可使用资金）</span><span data-lang="en">Spouse can receive distributions; family retains access</span></td><td><span data-lang="zh">离婚/配偶身故时复杂；州法影响大</span><span data-lang="en">Complications on divorce/death; state-law dependent</span></td></tr>
+<tr><td><span data-lang="zh">朝代信托</span><span data-lang="en">Dynasty NGT</span></td><td><span data-lang="zh">设立在特拉华、内华达、南达科他</span><span data-lang="en">Sited in DE/NV/SD; benefits multiple generations</span></td><td><span data-lang="zh">QSBS免税 + 几代避免遗产税 + 资产保护</span><span data-lang="en">QSBS + multi-gen estate-tax avoidance + asset protection</span></td><td><span data-lang="zh">最高的复杂度；GST税务规划必要</span><span data-lang="en">Highest complexity; GST tax planning required</span></td></tr>
+</tbody>
+</table>
+<div class="callout callout-warn">
+<div class="callout-icon"><span data-lang="zh">⚠ 州税陷阱</span><span data-lang="en">⚠ State Tax Trap</span></div>
+<p><span data-lang="zh">联邦层面的QSBS免税并不等于州层面的免税。<strong>加州、纽约、宾州、新泽西</strong>不承认或仅部分承认QSBS免税——这意味着即使联邦零税，州税可能仍要承担13.3%（加州）的资本利得税。Stacking规划必须考虑信托设立州（situs）：特拉华、内华达、南达科他、华盛顿等是常见首选。</span><span data-lang="en">Federal QSBS exclusion ≠ state exclusion. <strong>California, New York, Pennsylvania, and New Jersey</strong> do not fully conform — meaning even with $0 federal tax, you may still owe up to 13.3% (CA) state capital gains tax. Stacking planning must consider <em>trust situs</em>.</span></p>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<section class="section" id="s7">
+<div class="section-num"><span data-lang="zh">07 · 实战案例</span><span data-lang="en">07 · Worked Example</span></div>
+<h2 class="section-title"><span data-lang="zh">$1.2亿退出的<em>税务结构</em></span><span data-lang="en">A $120M Exit, <em>Engineered</em></span></h2>
+<div class="section-title-en">Same Founder, Same Sale — $26M of Taxes Saved</div>
+<div class="worked-ex">
+<div class="worked-ex-eyebrow"><span data-lang="zh">案例假设</span><span data-lang="en">Case Setup</span></div>
+<h3><span data-lang="zh">创始人 Anna · 2021年发行QSBS · 持股已满5年</span><span data-lang="en">Founder Anna · QSBS issued 2021 · holding period &gt; 5 years</span></h3>
+<p><span data-lang="zh">Anna是一家SaaS公司的创始人，2021年公司刚成立时，她以$50,000的价格获得2,000,000股普通股。2026年公司被收购，Anna的股份估值<strong>$1.2亿</strong>。她是加州居民，已婚，有两个成年子女。</span><span data-lang="en">Anna founded a SaaS company in 2021, taking 2,000,000 shares of common stock for $50,000. In 2026 the company is acquired — Anna's stake is now worth <strong>$120M</strong>. CA resident, married, two adult children.</span></p>
+<div class="ex-result">
+<div class="ex-cell">
+<div class="ex-label"><span data-lang="zh">情境 A：无规划</span><span data-lang="en">Scenario A: No Planning</span></div>
+<div class="ex-value">~$26.2M</div>
+<p style="font-size:13px;margin-top:8px;margin-bottom:0;color:rgba(247,243,238,0.6);"><span data-lang="zh">联邦税：($120M-$10M免税额) × 23.8%</span><span data-lang="en">Federal: ($120M − $10M cap) × 23.8%</span></p>
+</div>
+<div class="ex-cell">
+<div class="ex-label"><span data-lang="zh">情境 B：充分Stacking</span><span data-lang="en">Scenario B: Full Stacking</span></div>
+<div class="ex-value savings">$0</div>
+<p style="font-size:13px;margin-top:8px;margin-bottom:0;color:rgba(247,243,238,0.6);"><span data-lang="zh">$10M（Anna）+ $10M×2（子女NGT）+ $10M（父母）+ 其余通过10×基础放大覆盖</span><span data-lang="en">$10M (Anna) + $10M × 2 (children NGTs) + $10M (parents) + 10× basis amplification</span></p>
+</div>
+</div>
+<p style="margin-top:22px;"><span data-lang="zh"><strong>关键时间点：</strong>所有信托必须在2024年初设立，赠与必须在并购意向书签署之前完成（建议提前12–18个月）。</span><span data-lang="en"><strong>The critical timing:</strong> All trusts settled by early 2024, gifts completed <em>before</em> any binding LOI (12–18 months ahead is the safe zone).</span></p>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<section class="section" id="s8">
+<div class="section-num"><span data-lang="zh">08 · 红线与风险</span><span data-lang="en">08 · Red Lines &amp; Risks</span></div>
+<h2 class="section-title"><span data-lang="zh">IRS 在<em>哪里</em>会出手</span><span data-lang="en">Where the IRS <em>Pushes Back</em></span></h2>
+<div class="section-title-en">Five Failure Modes That Unwind the Whole Strategy</div>
+<div class="timeline">
+<div class="tl-item">
+<div class="tl-num"><span data-lang="zh">风险 01</span><span data-lang="en">Risk 01</span></div>
+<div class="tl-title"><span data-lang="zh">"收入归属"原则</span><span data-lang="en">Assignment-of-Income Doctrine</span></div>
+<div class="tl-desc"><span data-lang="zh">如果你在已经"实质上拥有买家"的情况下进行赠与，IRS可能裁定这笔利得在赠与之前已经"实现"。<strong>规则：所有赠与必须在任何具有约束力的销售协议之前完成。</strong>实务上，安全期是LOI之前的12–18个月。</span><span data-lang="en"><strong>The rule:</strong> All gifts must occur before any binding sale agreement. If you gift after a buyer is essentially locked in, the IRS can claim the gain was "realized" before the gift. Safe zone: 12–18 months before any LOI.</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-num"><span data-lang="zh">风险 02</span><span data-lang="en">Risk 02</span></div>
+<div class="tl-title"><span data-lang="zh">IRC § 643(f)：多信托合并规则</span><span data-lang="en">§ 643(f) Multiple-Trust Anti-Abuse Rule</span></div>
+<div class="tl-desc"><span data-lang="zh">国会授权IRS"合并"多个信托视为一个：(a) 实质上同一授予人和主要受益人；(b) 主要目的是避税。<strong>实务建议：</strong>每个信托应有独立受益人、独立条款、独立受托人，2–4个是稳健的，10个为单一受益人设立的信托是激进的。</span><span data-lang="en">Congress authorized the IRS to "collapse" multiple trusts where (a) substantially the same grantor &amp; primary beneficiary, and (b) a principal purpose is tax avoidance. <strong>Practical guidance:</strong> Each trust needs distinct beneficiaries, terms, and trustees. Two to four trusts is defensible.</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-num"><span data-lang="zh">风险 03</span><span data-lang="en">Risk 03</span></div>
+<div class="tl-title"><span data-lang="zh">授予人信托身份意外触发</span><span data-lang="en">Inadvertent Grantor-Trust Status</span></div>
+<div class="tl-desc"><span data-lang="zh">如果信托起草不当（保留分配权、对受托人有过多控制权），可能被税法重新归类为"授予人信托"——所有所得归回创建人，丧失独立纳税人身份。<strong>整个stacking策略归零。</strong></span><span data-lang="en">A poorly drafted trust can be reclassified as a grantor trust — income flows back to the grantor, separate taxpayer status is lost. <strong>The entire stacking strategy collapses.</strong></span></div>
+</div>
+<div class="tl-item">
+<div class="tl-num"><span data-lang="zh">风险 04</span><span data-lang="en">Risk 04</span></div>
+<div class="tl-title"><span data-lang="zh">公司层面资格丧失</span><span data-lang="en">Company-Level Disqualification</span></div>
+<div class="tl-desc"><span data-lang="zh">公司在持有期内必须持续满足"积极业务"测试。如果公司转向"非合格业务"，或多次回购股份触发反规避规则，QSBS资格可能被追溯取消。</span><span data-lang="en">The company must continuously satisfy the active-business test through the holding period. Pivots toward non-qualified businesses, or share repurchases triggering anti-abuse rules, can retroactively disqualify QSBS status.</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-num"><span data-lang="zh">风险 05</span><span data-lang="en">Risk 05</span></div>
+<div class="tl-title"><span data-lang="zh">州税不一致</span><span data-lang="en">State Conformity Risk</span></div>
+<div class="tl-desc"><span data-lang="zh">即使联邦层面完美执行stacking，加州（不承认QSBS免税）的居民仍然要承担13.3%州税。<strong>解决路径：</strong>退出前迁居+信托设立在不征税州。</span><span data-lang="en">Even with perfect federal stacking, a CA resident still owes 13.3% state tax. <strong>The path forward:</strong> pre-exit relocation + non-conforming-state trust situs.</span></div>
+</div>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<section class="section" id="s9">
+<div class="section-num"><span data-lang="zh">09 · 规划时间线</span><span data-lang="en">09 · Planning Timeline</span></div>
+<h2 class="section-title"><span data-lang="zh">从退出日<em>倒推24个月</em></span><span data-lang="en">Working <em>Backward 24 Months</em> from Exit</span></h2>
+<div class="section-title-en">Why Stacking Is a 2-Year Project, Not a 2-Month Sprint</div>
+<div data-lang="zh"><p>Stacking最常见的失败原因，不是规则不懂，而是<strong>开始得太晚</strong>。当你在LOI前6个月才开始考虑赠与，已经为时已晚——IRS会用assignment of income原则把所有税务效益打回原形。</p></div>
+<div data-lang="en"><p>The most common reason stacking fails isn't a misunderstanding of the rules — it's <strong>starting too late</strong>. Begin thinking about gifts six months before LOI, and the IRS can use assignment-of-income to unwind everything.</p></div>
+<div class="timeline">
+<div class="tl-item">
+<div class="tl-num">T-24 <span data-lang="zh">个月</span><span data-lang="en">months</span></div>
+<div class="tl-title"><span data-lang="zh">QSBS资格审计 + 战略规划</span><span data-lang="en">QSBS Audit &amp; Strategic Planning</span></div>
+<div class="tl-desc"><span data-lang="zh">委托税务律师对所有股票发行进行QSBS资格审计。识别哪些股份是QSBS、哪些不是、原始发行日是哪一天、是否存在导致disqualify的事件。同时绘制stacking方案：哪些家人、几个信托、信托设立在哪个州。</span><span data-lang="en">Engage tax counsel for a full QSBS qualification audit on all stock grants. Identify which shares qualify, original issuance dates, and any disqualifying events. Map the stacking architecture.</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-num">T-18</div>
+<div class="tl-title"><span data-lang="zh">信托起草与设立</span><span data-lang="en">Trust Drafting &amp; Settling</span></div>
+<div class="tl-desc"><span data-lang="zh">起草不可撤销非授予人信托文件（每个独立信托独立条款）、申请EIN、选定独立受托人。如果选择特拉华或南达科他作为信托设立州，需协调当地律师。</span><span data-lang="en">Draft irrevocable non-grantor trusts, apply for EINs, select independent trustees. Coordinate with local counsel for DE/SD/NV.</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-num">T-15</div>
+<div class="tl-title"><span data-lang="zh">完成赠与（关键节点）</span><span data-lang="en">Complete the Gifts (Critical Milestone)</span></div>
+<div class="tl-desc"><span data-lang="zh">将QSBS股份正式赠与各信托或家庭成员。需要做：股权变更登记、公司同意、提交709号赠与税申报表、获取独立估值报告。<strong>这一步必须在任何收购讨论开始前完成。</strong></span><span data-lang="en">Formally transfer QSBS to each trust or family member. Required: stock transfer entries, Form 709 gift tax return, independent gift-tax valuation. <strong>This step must be complete before any acquisition discussions begin.</strong></span></div>
+</div>
+<div class="tl-item">
+<div class="tl-num">T-12</div>
+<div class="tl-title"><span data-lang="zh">州税居住地优化</span><span data-lang="en">State-Tax Residency Optimization</span></div>
+<div class="tl-desc"><span data-lang="zh">如果你在加州/纽约等不承认QSBS的州，考虑迁居至德州、佛州、华盛顿、内华达等无州所得税州。需提前12个月以上建立"实质性"居住。</span><span data-lang="en">If domiciled in CA/NY, consider relocation to TX, FL, WA, or NV. Establish "substantive" residency at least 12 months pre-exit.</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-num">T-6</div>
+<div class="tl-title"><span data-lang="zh">退出谈判开启</span><span data-lang="en">Exit Negotiations Begin</span></div>
+<div class="tl-desc"><span data-lang="zh">与潜在买家接触。<strong>到这一步，所有stacking动作必须已经完成。</strong>从此刻起，任何新增的赠与都将面临assignment of income的严重风险。</span><span data-lang="en">Engage with potential buyers. <strong>By this point, all stacking actions must already be complete.</strong> Any new gifts from this moment on face severe assignment-of-income risk.</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-num">T-0</div>
+<div class="tl-title"><span data-lang="zh">交割与文档</span><span data-lang="en">Closing &amp; Documentation</span></div>
+<div class="tl-desc"><span data-lang="zh">交割时确保每位QSBS持有人独立收取卖出对价，独立报税。提交Form 8949 + Schedule D，注明QSBS免税额度的运用（注释代码"Q"）。</span><span data-lang="en">At closing, ensure each QSBS holder independently receives proceeds and reports independently. File Form 8949 + Schedule D, marking QSBS exclusion (code "Q").</span></div>
+</div>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<section class="section" id="s10">
+<div class="section-num"><span data-lang="zh">10 · 结语</span><span data-lang="en">10 · Conclusion</span></div>
+<h2 class="section-title"><span data-lang="zh">杠杆的<em>代价</em>与<em>回报</em></span><span data-lang="en">The <em>Price</em> and <em>Reward</em> of Leverage</span></h2>
+<div class="section-title-en">When Stacking Makes Sense — and When It Doesn't</div>
+<div data-lang="zh">
+<p>QSBS Stacking是合法税务规划中威力最强、起步最难、技术性最高的策略之一。它的真正魅力不在节税本身——而在于它揭示了美国税法的一个根本逻辑：<strong>税法激励的是"提前规划者"，不是"事后聪明者"</strong>。</p>
+<p>但杠杆都有代价。Stacking意味着：<strong>放弃控制权</strong>（被赠予的股票，无论是给子女还是给信托，你都不再实质拥有。如果家庭关系发生变化或公司退出失败，这些资产无法收回）；<strong>动用终身赠与免税额</strong>（每笔赠与都消耗你的终身赠与/遗产税免税额，2026年约$1500万/人）；<strong>高昂的执行成本</strong>（律师费、信托设立费、独立受托人费用、独立估值费、年度1041报税——一套完整的stacking架构，前期投入15万–50万美元是常态。只有在预期免税收益超过200万美元时，这个投入才在经济上合理）。</p>
+<p>对真正的合适人群——即将退出的高潜力创始人——这些代价相对于潜在节税额都微不足道。但对于不到$2000万退出预期的创业者，简单地把QSBS用满$1500万就够了，不需要stacking。</p>
+<p>真正的智慧在于：<strong>知道这件事存在，知道它什么时候开始有用，知道它何时变得过度复杂</strong>。这也是为什么早期咨询是关键——不是为了立即执行，而是为了让你在未来某个关键时刻，有正确的选择权。</p>
+</div>
+<div data-lang="en">
+<p>QSBS Stacking is one of the most powerful, hardest to start, and most technically demanding strategies in legal tax planning. Its real beauty isn't the tax savings — it's what it reveals about the underlying logic of U.S. tax law: <strong>the code rewards advance planners, not after-the-fact strategists</strong>.</p>
+<p>But leverage has a price. Stacking means: <strong>loss of control</strong> (gifted stock is no longer substantively yours); <strong>using lifetime gift exemption</strong> (~$15M per person in 2026); <strong>significant execution cost</strong> ($150K–$500K upfront — economically rational only when expected savings exceed $2M).</p>
+<p>For the right candidates — high-potential founders approaching exit — these costs are trivial relative to potential savings. But for entrepreneurs with sub-$20M exit expectations, simply maximizing your single $15M cap is enough; stacking is overkill.</p>
+<p>Real wisdom is: <strong>knowing this exists, knowing when it starts mattering, and knowing when it becomes overengineered</strong>. That's why early consultation matters — not for immediate execution, but to ensure that when the critical moment arrives, you still have the right options on the table.</p>
+</div>
+<div class="pullquote"><span data-lang="zh">税法的最大慷慨，从来不是"宽容"，而是"奖励准备"。</span><span data-lang="en">The tax code's greatest generosity is not leniency — it is rewarding preparation.</span></div>
+</section>
+
+</article>
+
+<div class="cta">
+<div class="cta-inner">
+<div class="cta-eyebrow"><span data-lang="zh">下一步</span><span data-lang="en">Next Step</span></div>
+<h3><span data-lang="zh">规划<em>退出</em>，从24个月前开始</span><span data-lang="en">Plan Your <em>Exit</em> — 24 Months Out</span></h3>
+<p><span data-lang="zh">如果你正在考虑公司的退出路径，或想评估你的QSBS规划是否到位，欢迎预约一对一咨询。订阅每周简报获取最新跨境并购与税务规划洞察。</span><span data-lang="en">If you're evaluating an exit path or want to assess whether your QSBS planning is on track, book a one-on-one consultation. Subscribe to the weekly brief for the latest cross-border M&amp;A and tax planning insights.</span></p>
+<div class="cta-buttons">
+<a href="https://evonnexulegal.beehiiv.com/subscribe" class="btn btn-primary"><span data-lang="zh">订阅简报</span><span data-lang="en">Subscribe to Brief</span></a>
+<a href="../index.html" class="btn btn-outline"><span data-lang="zh">了解徐律师业务</span><span data-lang="en">Explore Evonne's Practice</span></a>
+</div>
+</div>
+</div>
+
+<div class="author-strip">
+<div class="author-inner">
+<div class="author-avatar">E</div>
+<div>
+<div class="author-name">Evonne Xu</div>
+<div class="author-title"><span data-lang="zh">并购律师 · AI法律工程师</span><span data-lang="en">M&amp;A Lawyer · AI Legal Engineer</span></div>
+<p class="author-bio"><span data-lang="zh">专注中美跨境并购、税务结构与AI法律合规。深度服务汽车、自动化与制造业客户的跨境收购战略设计与执行。如果你正在评估退出路径、QSBS规划或SPA税务条款，欢迎联系。</span><span data-lang="en">Cross-border M&amp;A, tax structuring, and AI legal compliance. Deep work with automotive, automation, and manufacturing clients on acquisition strategy and execution.</span></p>
+</div>
+</div>
+</div>
+
+<footer><p>© 2026 · <a href="../index.html">evonnexulegal.com</a> · <a href="../blog.html"><span data-lang="zh">博客</span><span data-lang="en">Blog</span></a> · <a href="../index.html#contact"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a></p></footer>
+
+<script>
+const saved = localStorage.getItem('lang') || 'zh';
+document.body.className = 'lang-' + saved;
+document.getElementById('langBtn').textContent = saved === 'zh' ? 'English' : '中文';
+function toggleLang() {
+  const next = document.body.classList.contains('lang-zh') ? 'en' : 'zh';
+  document.body.className = 'lang-' + next;
+  document.getElementById('langBtn').textContent = next === 'zh' ? 'English' : '中文';
+  localStorage.setItem('lang', next);
+}
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  document.getElementById('readingFill').style.width = progress + '%';
+});
+</script>
+</body></html>
