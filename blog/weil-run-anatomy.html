@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一场挤兑的解剖 — Weil、Kirkland 与 Cravath | Evonne Xu Law</title>
+<meta name="description" content="Weil Gotshal &amp; Manges 2026 年解散全解析：60 天时间线、出走地图、薪酬差距与规则 5.6。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPB5RY7C2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4XPB5RY7C2');</script>
+<style>
+/* ---- bilingual toggle ---- */
+[data-lang]{display:none}
+body.lang-en [data-lang="en"]{display:block}
+body.lang-zh [data-lang="zh"]{display:block}
+body.lang-en span[data-lang="en"],body.lang-zh span[data-lang="zh"]{display:inline}
+body.lang-en div[data-lang="en"],body.lang-zh div[data-lang="zh"]{display:block}
+body.lang-en li[data-lang="en"],body.lang-zh li[data-lang="zh"]{display:list-item}
+body.lang-en td[data-lang="en"],body.lang-zh td[data-lang="zh"]{display:table-cell}
+
+/* ---- CSS tokens ---- */
+:root{
+  --cream:#F7F3EE;--warm:#FAF8F5;--gold:#C49A7A;--gold-deep:#A67A5B;
+  --champagne:#E8D5C0;--dark:#1C1510;--mid:#4A3728;--light:#8C7060;
+  --border:rgba(196,154,122,.2);--paper:#f5f1eb;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--warm);color:var(--mid);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7}
+
+/* ---- NAV ---- */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:var(--dark);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;height:52px;
+  border-bottom:2px solid var(--gold);
+}
+.nav-brand{font-family:'DM Sans',sans-serif;color:var(--cream);font-size:13px;letter-spacing:.15em;text-decoration:none;text-transform:uppercase}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:rgba(247,243,238,.7);text-decoration:none;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+#langBtn{font-family:'DM Sans',sans-serif;font-size:11px;background:transparent;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.7);padding:4px 12px;cursor:pointer;letter-spacing:.08em;border-radius:2px}
+
+/* ---- HERO ---- */
+.hero{margin-top:52px;background:var(--dark);color:var(--cream);padding:72px 40px 64px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 0%,rgba(196,154,122,.15) 0%,transparent 60%),radial-gradient(ellipse at 5% 100%,rgba(196,154,122,.08) 0%,transparent 50%);pointer-events:none}
+.hero-inner{max-width:860px;margin:0 auto;position:relative}
+.hero-cat{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.6rem);font-weight:300;line-height:1.15;margin-bottom:24px}
+.hero-title em{font-style:italic;color:var(--gold)}
+.hero-meta{font-size:11px;color:rgba(247,243,238,.5);letter-spacing:1px}
+
+/* ---- ARTICLE ---- */
+.article-wrap{max-width:860px;margin:0 auto;padding:40px 40px 80px}
+
+/* ---- STATS GRID ---- */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:32px 0}
+.stat-card{background:var(--dark);color:var(--cream);padding:24px 20px;border-radius:2px;text-align:center}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:var(--gold);line-height:1}
+.stat-label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(247,243,238,.55);margin-top:8px}
+
+/* ---- SECTION HEADINGS ---- */
+.section-kicker{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.section-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2.4rem);font-weight:300;color:var(--dark);margin-bottom:20px}
+.section-h2 em{font-style:italic;color:var(--gold)}
+.section-lead{font-size:15px;line-height:1.85;color:var(--mid);max-width:680px;margin-bottom:24px}
+
+/* ---- TIMELINE ---- */
+.timeline{margin:24px 0;border-left:2px solid var(--border);padding-left:24px}
+.tl-item{margin-bottom:20px;position:relative}
+.tl-item::before{content:'';position:absolute;left:-30px;top:5px;width:8px;height:8px;border-radius:50%;background:var(--gold);border:2px solid var(--warm)}
+.tl-date{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.tl-event{font-size:14px;color:var(--dark);font-weight:400;line-height:1.5}
+.tl-detail{font-size:12px;color:var(--light);margin-top:3px}
+
+/* ---- CALLOUT ---- */
+.callout{background:rgba(196,154,122,.08);border-left:3px solid var(--gold);padding:16px 20px;margin:20px 0;font-size:14px;color:var(--mid);line-height:1.75}
+
+/* ---- SECTION DIVIDER ---- */
+.section-block{margin:40px 0;padding:32px 0;border-top:1px solid var(--border)}
+
+/* ---- FLOW SVG ---- */
+.flow-wrap{margin:20px 0;overflow-x:auto}
+.flow-wrap svg{width:100%;height:auto;min-width:360px;max-height:420px;display:block}
+.wd-flow-name{font-family:'Cormorant Garamond',serif;font-size:28px;fill:var(--cream)}
+.wd-flow-sub{font-family:'DM Sans',sans-serif;font-size:12px;font-style:italic;fill:var(--cream);opacity:.78}
+.wd-flow-meta{font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:.06em;fill:var(--light)}
+.wd-flow-dest{font-family:'DM Sans',sans-serif;font-size:14px;fill:var(--dark)}
+.wd-flow-dest.is-hot{fill:var(--gold-deep)}
+.wd-flow-ribbon path{fill:none;stroke:var(--mid);opacity:.35;stroke-linecap:butt}
+.wd-flow-ribbon path.is-hot{stroke:var(--gold);opacity:.8}
+
+/* ---- TABLE ---- */
+.table-wrap{overflow-x:auto;margin:20px 0}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--light);font-weight:400;padding:8px 12px;border-bottom:2px solid var(--border);text-align:left}
+th.is-hot{color:var(--gold-deep)}
+td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--mid);vertical-align:top;line-height:1.55}
+td.is-hot{color:var(--gold-deep);font-weight:400}
+tr.wd-row-key td{background:rgba(196,154,122,.05)}
+tr.is-hot td{background:rgba(196,154,122,.06);color:var(--gold-deep);font-weight:500}
+
+/* ---- BAR CHARTS ---- */
+.bars-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--light);margin-bottom:12px}
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.bar-name{font-size:12px;min-width:90px;color:var(--mid)}
+.bar-track{flex:1;height:6px;background:var(--border);border-radius:1px;overflow:hidden}
+.bar-track b{display:block;height:100%;background:var(--mid);width:0;transition:width 1s ease}
+.bar-row.is-hot .bar-track b{background:var(--gold)}
+.bar-val{font-size:12px;min-width:70px;color:var(--mid);text-align:right}
+.bar-row.is-hot .bar-val{color:var(--gold-deep);font-weight:500}
+
+/* ---- INTERACTIVE SIMULATORS ---- */
+.sim-box{background:var(--cream);border:1px solid var(--border);padding:24px;margin:20px 0;border-radius:2px}
+.sim-box.dark{background:var(--dark);border-color:rgba(196,154,122,.15)}
+.sim-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.sim-h{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--dark);margin-bottom:16px}
+.sim-box.dark .sim-h{color:var(--cream)}
+.ctl-wrap{margin:12px 0}
+.ctl-wrap label{display:flex;justify-content:space-between;font-size:12px;color:var(--light);margin-bottom:6px}
+.ctl-wrap label b{color:var(--dark);font-weight:400}
+.sim-box.dark .ctl-wrap label{color:rgba(247,243,238,.55)}
+.sim-box.dark .ctl-wrap label b{color:var(--cream)}
+input[type=range]{width:100%;accent-color:var(--gold);cursor:pointer}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{background:transparent;border:1px solid var(--border);color:var(--light);font-size:11px;padding:4px 12px;cursor:pointer;border-radius:1px;font-family:'DM Sans',sans-serif;transition:border-color .2s}
+.chip:hover{border-color:var(--gold);color:var(--gold-deep)}
+.pay-bars{margin:16px 0}
+.pay-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.pay-name{font-size:12px;min-width:70px;color:var(--mid)}
+.pay-track{flex:1;height:10px;background:var(--border);border-radius:1px;overflow:hidden}
+.pay-track b{display:block;height:100%;background:var(--mid);width:0;transition:width .4s}
+.pay-row.is-hot .pay-track b{background:var(--gold)}
+.pay-val{font-size:13px;min-width:80px;text-align:right;color:var(--mid);font-weight:400}
+.pay-row.is-hot .pay-val{color:var(--gold-deep)}
+.pay-verdict{font-size:12px;color:var(--light);margin-top:8px;line-height:1.6}
+.readout{display:flex;gap:20px;flex-wrap:wrap;margin:12px 0}
+.readout div{text-align:center;padding:12px 16px;border:1px solid var(--border);flex:1;min-width:100px}
+.readout span{display:block;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(247,243,238,.5);margin-bottom:4px}
+.readout b{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--cream);font-weight:300}
+.readout div.is-hot b{color:var(--gold)}
+.gauge-wrap{height:8px;background:rgba(255,255,255,.1);border-radius:1px;margin:12px 0;overflow:hidden}
+#gauge{display:block;height:100%;width:100%;background:var(--gold);transition:width .4s;border-radius:1px}
+.verdict-txt{font-size:12px;color:rgba(247,243,238,.65);margin-top:8px}
+.sim-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:620px){.sim-grid{grid-template-columns:1fr}}
+
+/* ---- PANEL ---- */
+.panel{background:rgba(196,154,122,.06);border:1px solid var(--border);padding:16px 18px;margin-bottom:12px;border-radius:1px}
+.panel-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.panel p{font-size:13px;color:var(--mid);line-height:1.7;margin-top:8px}
+.panel ul{font-size:13px;color:var(--mid);padding-left:16px;line-height:1.7}
+
+/* ---- RULE 5.6 TABLE ---- */
+.mini-table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0}
+.mini-table td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--mid)}
+.mini-table tr.is-hot td{color:var(--gold-deep);background:rgba(196,154,122,.06);font-weight:500}
+
+/* ---- CLOSING QUOTE ---- */
+.closing-block{background:var(--dark);color:var(--cream);padding:56px 40px;margin:40px 0;text-align:center;position:relative;overflow:hidden}
+.closing-block::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(196,154,122,.1) 0%,transparent 70%);pointer-events:none}
+.closing-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:300;line-height:1.3;color:var(--gold);position:relative;margin-bottom:24px}
+.closing-sub{font-size:14px;color:rgba(247,243,238,.65);max-width:540px;margin:0 auto;line-height:1.75}
+
+/* ---- SOURCES ---- */
+.sources-list{margin:16px 0}
+.sources-list a{display:block;font-size:12px;color:var(--gold-deep);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--border);transition:color .2s;line-height:1.5}
+.sources-list a:hover{color:var(--dark)}
+.sources-note{font-size:11px;color:var(--light);line-height:1.6;margin-top:16px;padding-top:12px;border-top:1px solid var(--border)}
+
+/* ---- COMPACT LIST ---- */
+.compact-list{font-size:13px;color:var(--mid);padding-left:18px;line-height:1.75}
+.compact-list li{margin-bottom:4px}
+
+/* ---- CURVE SVG ---- */
+#curve{width:100%;height:auto;max-height:200px;display:block;overflow:visible}
+#curve text{font-family:'DM Sans',sans-serif;font-size:9px;fill:var(--light)}
+
+@media(max-width:600px){
+  nav{padding:0 16px}
+  .hero{padding:56px 20px 48px}
+  .article-wrap{padding:24px 20px 60px}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .closing-block{padding:40px 20px}
+}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav>
+  <a class="nav-brand" href="../index.html">Evonne Xu Legal</a>
+  <div class="nav-links">
+    <a href="../index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a>
+    <a href="../blog.html"><span data-lang="zh">博客</span><span data-lang="en">Blog</span></a>
+    <a href="../index.html#contact"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a>
+    <button id="langBtn" onclick="toggleLang()">English</button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-cat">
+      <span data-lang="zh">律所解析 · 合伙制研究</span>
+      <span data-lang="en">Law Firm Analysis · Partnership Study</span>
+    </div>
+    <h1 class="hero-title">
+      <span data-lang="zh">一场挤兑的解剖 —<br><em>Weil、Kirkland 与 Cravath</em></span>
+      <span data-lang="en">Anatomy of a Run —<br><em>Weil, Kirkland &amp; Cravath</em></span>
+    </h1>
+    <div class="hero-meta">
+      November 2026 &nbsp;·&nbsp; 20 min read
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+
+  <!-- STATS -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-num">$2.08B</div>
+      <div class="stat-label"><span data-lang="zh">年营收</span><span data-lang="en">Revenue</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">$5.59M</div>
+      <div class="stat-label"><span data-lang="zh">人均利润</span><span data-lang="en">PEP</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">1,200</div>
+      <div class="stat-label"><span data-lang="zh">律师</span><span data-lang="en">Lawyers</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">60</div>
+      <div class="stat-label"><span data-lang="zh">天，从辞职到解散</span><span data-lang="en">Days to dissolution</span></div>
+    </div>
+  </div>
+
+  <!-- ACT I: TIMELINE -->
+  <div class="section-block">
+    <div class="section-kicker"><span data-lang="zh">第一幕 · 时间线</span><span data-lang="en">Act I · The Sequence</span></div>
+    <h2 class="section-h2">
+      <span data-lang="zh">六十天</span>
+      <span data-lang="en">Sixty Days</span>
+    </h2>
+    <div class="section-lead" data-lang="zh">这不是一家在衰退中挣扎的律所。2026 年 8 月，Weil 仍在 Am Law 的 A 级名单上。表决来自于 10 月。</div>
+    <div class="section-lead" data-lang="en">This was not a firm struggling in decline. In August 2026, Weil was still on the Am Law A-List. The vote came in October.</div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date"><span data-lang="zh">2026 年 8 月</span><span data-lang="en">August 2026</span></div>
+        <div class="tl-event"><span data-lang="zh">第一道裂缝</span><span data-lang="en">The first crack</span></div>
+        <div class="tl-detail"><span data-lang="zh">Ramona Nee 告诉管理层她不会接任执行合伙人一职。三月时她刚被宣布为接班人。</span><span data-lang="en">Ramona Nee tells leadership she will not serve as managing partner. She had been named successor in March.</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date"><span data-lang="zh">2026 年 9 月 11 日</span><span data-lang="en">11 September 2026</span></div>
+        <div class="tl-event"><span data-lang="zh">Aiello 离职</span><span data-lang="en">Aiello departs</span></div>
+        <div class="tl-detail"><span data-lang="zh">公司业务部主席 Mike Aiello 与五名合伙人加入 Cravath。据报年收入超 2,000 万美元。</span><span data-lang="en">Corporate chair Mike Aiello and five partners join Cravath. His revenue reportedly exceeded $20 million a year.</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date"><span data-lang="zh">2026 年 9–10 月</span><span data-lang="en">September–October 2026</span></div>
+        <div class="tl-event"><span data-lang="zh">雪崩</span><span data-lang="en">The avalanche</span></div>
+        <div class="tl-detail"><span data-lang="zh">PE 联席主管、全球 PE 联席主管相继出走，团队去往 Paul Weiss、Simpson Thacher、Sullivan &amp; Cromwell、Gibson Dunn。</span><span data-lang="en">PE co-heads and groups move to Paul Weiss, Simpson Thacher, Sullivan &amp; Cromwell and Gibson Dunn.</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date"><span data-lang="zh">2026 年 10 月 27–28 日</span><span data-lang="en">27–28 October 2026</span></div>
+        <div class="tl-event"><span data-lang="zh">合伙人表决解散</span><span data-lang="en">Partners vote to dissolve</span></div>
+        <div class="tl-detail"><span data-lang="zh">剩余合伙人投票通过解散决议。与 Willkie 的合并谈判已经失败。</span><span data-lang="en">Remaining partners vote to wind down. Merger talks with Willkie had collapsed.</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date"><span data-lang="zh">2026 年 11 月 5 日</span><span data-lang="en">5 November 2026</span></div>
+        <div class="tl-event"><span data-lang="zh">全员释放</span><span data-lang="en">All released</span></div>
+        <div class="tl-detail"><span data-lang="zh">Weil 备忘录豁免所有合伙人的通知期，允许他们即刻离职并保留利润分成。</span><span data-lang="en">Weil memo waives all notice periods, allowing partners to resign immediately and keep their profit share.</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date"><span data-lang="zh">2026 年 11 月 6 日</span><span data-lang="en">6 November 2026</span></div>
+        <div class="tl-event"><span data-lang="zh">最后一批离开</span><span data-lang="en">Last group out</span></div>
+        <div class="tl-detail"><span data-lang="zh">Nee 领 40 人团队加入 Kirkland。伦敦办公室约 200 名律师将于 12 月 31 日关闭。</span><span data-lang="en">Nee leads 40-lawyer group to Kirkland. London office (~200 lawyers) to close 31 December.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACT II: EXODUS MAP -->
+  <div class="section-block">
+    <div class="section-kicker"><span data-lang="zh">第二幕 · 出走</span><span data-lang="en">Act II · The Exodus</span></div>
+    <h2 class="section-h2">
+      <span data-lang="zh"><em>业务被重新分配</em></span>
+      <span data-lang="en"><em>The book, redistributed</em></span>
+    </h2>
+    <div class="section-lead" data-lang="zh">七个去向。每一组人都去了自己的客户已经有其他业务的地方。</div>
+    <div class="section-lead" data-lang="en">Seven destinations. Each group went where its own clients already had other work.</div>
+    <div class="flow-wrap">
+      <svg viewBox="0 0 1000 470" xmlns="http://www.w3.org/2000/svg">
+        <rect x="24" y="130" width="186" height="200" fill="var(--dark)"/>
+        <text x="117" y="208" text-anchor="middle" class="wd-flow-name">Weil</text>
+        <text x="117" y="232" text-anchor="middle" class="wd-flow-sub">Gotshal &amp; Manges</text>
+        <text x="117" y="258" text-anchor="middle" class="wd-flow-meta" data-lang="zh" style="display:block">营收 20.8 亿 · PEP 559 万</text>
+        <text x="117" y="258" text-anchor="middle" class="wd-flow-meta" data-lang="en" style="display:none">$2.08B rev · $5.59M PEP</text>
+        <text x="117" y="276" text-anchor="middle" class="wd-flow-meta" data-lang="zh" style="display:block">约 230 名权益合伙人</text>
+        <text x="117" y="276" text-anchor="middle" class="wd-flow-meta" data-lang="en" style="display:none">~230 equity partners</text>
+        <g class="wd-flow-ribbon">
+          <path d="M210 172 C 400 172, 460 56, 620 56" stroke-width="40" class="is-hot"/>
+          <path d="M210 212 C 400 212, 460 146, 620 146" stroke-width="15"/>
+          <path d="M210 238 C 400 238, 460 226, 620 226" stroke-width="13"/>
+          <path d="M210 262 C 400 262, 460 296, 620 296" stroke-width="11"/>
+          <path d="M210 284 C 400 284, 460 356, 620 356" stroke-width="8"/>
+          <path d="M210 302 C 400 302, 460 406, 620 406" stroke-width="7"/>
+          <path d="M210 318 C 400 318, 460 450, 620 450" stroke-width="5"/>
+        </g>
+        <g>
+          <text x="640" y="52" class="wd-flow-dest is-hot">Kirkland &amp; Ellis</text>
+          <text x="640" y="70" class="wd-flow-meta" data-lang="zh" style="display:block">NEE + 40 人 · 私募股权与债务融资 · 2027 年 1 月</text>
+          <text x="640" y="70" class="wd-flow-meta" data-lang="en" style="display:none">NEE + 40 lawyers · PE &amp; debt finance · Jan 2027</text>
+          <text x="640" y="142" class="wd-flow-dest">Cravath</text>
+          <text x="640" y="160" class="wd-flow-meta" data-lang="zh" style="display:block">AIELLO + 5 名合伙人 · 上市公司并购 · 9 月</text>
+          <text x="640" y="160" class="wd-flow-meta" data-lang="en" style="display:none">AIELLO + 5 partners · public M&amp;A · September</text>
+          <text x="640" y="222" class="wd-flow-dest">Paul Weiss</text>
+          <text x="640" y="240" class="wd-flow-meta" data-lang="zh" style="display:block">MACHERA、WARNER、ZALKA 及 PE 团队</text>
+          <text x="640" y="240" class="wd-flow-meta" data-lang="en" style="display:none">MACHERA, WARNER, ZALKA &amp; PE group</text>
+          <text x="640" y="292" class="wd-flow-dest">Simpson Thacher</text>
+          <text x="640" y="310" class="wd-flow-meta" data-lang="zh" style="display:block">PARNESS、COX、SRULOWITZ · RICHARDS、BLAKEY（伦敦）</text>
+          <text x="640" y="310" class="wd-flow-meta" data-lang="en" style="display:none">PARNESS, COX, SRULOWITZ · RICHARDS, BLAKEY (London)</text>
+          <text x="640" y="352" class="wd-flow-dest">Sullivan &amp; Cromwell</text>
+          <text x="640" y="370" class="wd-flow-meta" data-lang="zh" style="display:block">AVERY-GEE、FLAHERTY · 伦敦并购</text>
+          <text x="640" y="370" class="wd-flow-meta" data-lang="en" style="display:none">AVERY-GEE, FLAHERTY · London M&amp;A</text>
+          <text x="640" y="402" class="wd-flow-dest">Gibson Dunn</text>
+          <text x="640" y="420" class="wd-flow-meta" data-lang="zh" style="display:block">整个私募基金团队</text>
+          <text x="640" y="420" class="wd-flow-meta" data-lang="en" style="display:none">Entire private funds group</text>
+          <text x="640" y="452" class="wd-flow-dest">Skadden · Akin · Latham</text>
+          <text x="640" y="466" class="wd-flow-meta" data-lang="zh" style="display:block">监管 · 破产重整</text>
+          <text x="640" y="466" class="wd-flow-meta" data-lang="en" style="display:none">Regulatory · restructuring</text>
+        </g>
+      </svg>
+    </div>
+    <p style="font-size:11px;color:var(--light);margin-top:4px"><span data-lang="zh">色带宽度约等于各次出走的规模</span><span data-lang="en">Band width roughly proportional to group size</span></p>
+  </div>
+
+  <!-- ACT III: ARITHMETIC -->
+  <div class="section-block">
+    <div class="section-kicker"><span data-lang="zh">第三幕 · 算术</span><span data-lang="en">Act III · The Arithmetic</span></div>
+    <h2 class="section-h2">
+      <span data-lang="zh">三台不同的机器</span>
+      <span data-lang="en">Three Different Machines</span>
+    </h2>
+    <div class="section-lead" data-lang="zh">合伙人不是为薪酬的高低离开的，是为斜率。而每年春天，Am Law 的榜单都会把斜率摆给他们看。</div>
+    <div class="section-lead" data-lang="en">Partners didn't leave for the level of pay. They left for the slope. And every spring the Am Law rankings made the slope visible.</div>
+
+    <!-- THREE PLATFORMS TABLE -->
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th class="is-hot">Weil <span style="font-weight:300;text-transform:none;letter-spacing:0"><span data-lang="zh">2025 财年</span><span data-lang="en">FY2025</span></span></th>
+            <th>Cravath <span style="font-weight:300;text-transform:none;letter-spacing:0"><span data-lang="zh">2025 财年</span><span data-lang="en">FY2025</span></span></th>
+            <th>Kirkland <span style="font-weight:300;text-transform:none;letter-spacing:0"><span data-lang="zh">2025 财年</span><span data-lang="en">FY2025</span></span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span data-lang="zh">总营收</span><span data-lang="en">Revenue</span></td>
+            <td class="is-hot"><span data-lang="zh">20.8 亿 <em style="font-style:italic;font-size:11px">+2%</em></span><span data-lang="en">$2.08B <em style="font-style:italic;font-size:11px">+2%</em></span></td>
+            <td><span data-lang="zh">约 12 亿</span><span data-lang="en">~$1.2B</span></td>
+            <td><span data-lang="zh">106 亿 <em style="font-style:italic;font-size:11px">+20%</em></span><span data-lang="en">$10.6B <em style="font-style:italic;font-size:11px">+20%</em></span></td>
+          </tr>
+          <tr class="wd-row-key">
+            <td><span data-lang="zh">每位权益合伙人利润</span><span data-lang="en">Profits per equity partner</span></td>
+            <td class="is-hot"><span data-lang="zh">559 万</span><span data-lang="en">$5.59M</span></td>
+            <td><span data-lang="zh">720 万 <em style="font-style:italic;font-size:11px">+5.2%</em></span><span data-lang="en">$7.20M <em style="font-style:italic;font-size:11px">+5.2%</em></span></td>
+            <td><span data-lang="zh">1,110 万 <em style="font-style:italic;font-size:11px">+20%</em></span><span data-lang="en">$11.10M <em style="font-style:italic;font-size:11px">+20%</em></span></td>
+          </tr>
+          <tr>
+            <td><span data-lang="zh">权益合伙人</span><span data-lang="en">Equity partners</span></td>
+            <td class="is-hot"><span data-lang="zh">约 230</span><span data-lang="en">~230</span></td>
+            <td><span data-lang="zh">约 90–100</span><span data-lang="en">~90–100</span></td>
+            <td>595</td>
+          </tr>
+          <tr>
+            <td><span data-lang="zh">薪酬模型</span><span data-lang="en">Comp model</span></td>
+            <td class="is-hot"><span data-lang="zh">修正式同步晋薪，顶端集中</span><span data-lang="en">Modified lockstep, top-heavy</span></td>
+            <td><span data-lang="zh">2021 年起修正式同步晋薪 + 明星池</span><span data-lang="en">Modified lockstep since 2021 + star pool</span></td>
+            <td><span data-lang="zh">纯绩效，分布宽，大比例递延</span><span data-lang="en">Pure merit, wide spread, large deferral</span></td>
+          </tr>
+          <tr>
+            <td><span data-lang="zh">核心业务</span><span data-lang="en">Core practice</span></td>
+            <td class="is-hot"><span data-lang="zh">债务人侧破产重整、PE、上市公司并购</span><span data-lang="en">Debtor-side restructuring, PE, public M&amp;A</span></td>
+            <td><span data-lang="zh">上市公司并购、诉讼</span><span data-lang="en">Public M&amp;A, litigation</span></td>
+            <td><span data-lang="zh">基金发起人、私募基金、债务融资</span><span data-lang="en">Fund sponsors, private funds, debt finance</span></td>
+          </tr>
+          <tr>
+            <td><span data-lang="zh">律师 · 办公室</span><span data-lang="en">Lawyers · offices</span></td>
+            <td class="is-hot"><span data-lang="zh">约 1,200 · 15</span><span data-lang="en">~1,200 · 15</span></td>
+            <td><span data-lang="zh">约 600 · 3</span><span data-lang="en">~600 · 3</span></td>
+            <td><span data-lang="zh">约 4,100 · 20+</span><span data-lang="en">~4,100 · 20+</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- PAY GAP BARS -->
+    <div style="margin-top:28px">
+      <div class="bars-label"><span data-lang="zh">每位权益合伙人利润 · 2025 财年（美元）</span><span data-lang="en">Profits per equity partner · FY2025 (USD)</span></div>
+      <div class="bar-row"><span class="bar-name">Wachtell</span><span class="bar-track"><b data-w="100"></b></span><span class="bar-val" data-lang="zh">1,250 万</span><span class="bar-val" data-lang="en">$12.5M</span></div>
+      <div class="bar-row"><span class="bar-name">Kirkland</span><span class="bar-track"><b data-w="89"></b></span><span class="bar-val" data-lang="zh">1,110 万</span><span class="bar-val" data-lang="en">$11.1M</span></div>
+      <div class="bar-row"><span class="bar-name">Latham</span><span class="bar-track"><b data-w="69"></b></span><span class="bar-val" data-lang="zh">865 万</span><span class="bar-val" data-lang="en">$8.65M</span></div>
+      <div class="bar-row"><span class="bar-name">Paul Weiss</span><span class="bar-track"><b data-w="69"></b></span><span class="bar-val" data-lang="zh">约 860 万</span><span class="bar-val" data-lang="en">~$8.6M</span></div>
+      <div class="bar-row"><span class="bar-name">Cravath</span><span class="bar-track"><b data-w="58"></b></span><span class="bar-val" data-lang="zh">720 万</span><span class="bar-val" data-lang="en">$7.2M</span></div>
+      <div class="bar-row is-hot"><span class="bar-name">Weil</span><span class="bar-track"><b data-w="45"></b></span><span class="bar-val" data-lang="zh">559 万</span><span class="bar-val" data-lang="en">$5.59M</span></div>
+    </div>
+
+    <div class="callout" style="margin-top:24px">
+      <span data-lang="zh">在市场的这一端，这个差额不是四舍五入，是一整个第二职业的价格。一个创收者每年把 400 万留在桌上，留十年，就是花 4,000 万买「忠诚」两个字。</span>
+      <span data-lang="en">At this end of the market, the gap is not rounding error. It is the price of an entire second career. A rainmaker leaving $4 million on the table every year, for ten years, pays $40 million for the word loyalty.</span>
+    </div>
+  </div>
+
+  <!-- SALARY SIMULATOR -->
+  <div class="section-block">
+    <div class="section-kicker"><span data-lang="zh">可交互 · 模型一</span><span data-lang="en">Interactive · Model One</span></div>
+    <h2 class="section-h2">
+      <span data-lang="zh">同一个律师，同一份业务，三份薪水</span>
+      <span data-lang="en">One lawyer, one book, three cheques</span>
+    </h2>
+
+    <div class="sim-box">
+      <div class="sim-grid">
+        <div>
+          <div class="ctl-wrap">
+            <label><span data-lang="zh">年创收（业务量）</span><span data-lang="en">Annual originations</span> <b id="bOut">$20M</b></label>
+            <input id="bk" type="range" min="3" max="60" step="1" value="20">
+          </div>
+          <div class="ctl-wrap">
+            <label><span data-lang="zh">做合伙人的年数</span><span data-lang="en">Years as partner</span> <b id="tOut">10</b></label>
+            <input id="tn" type="range" min="1" max="25" step="1" value="10">
+          </div>
+          <div class="chips">
+            <button class="chip" data-b="50" data-t="20"><span data-lang="zh">创收王</span><span data-lang="en">Rainmaker</span></button>
+            <button class="chip" data-b="8" data-t="15"><span data-lang="zh">资深稳健型</span><span data-lang="en">Senior steady</span></button>
+            <button class="chip" data-b="20" data-t="5"><span data-lang="zh">新星</span><span data-lang="en">Rising star</span></button>
+            <button class="chip" data-b="12" data-t="8"><span data-lang="zh">服务型合伙人</span><span data-lang="en">Service partner</span></button>
+          </div>
+          <div class="pay-bars">
+            <div class="pay-row"><span class="pay-name">Kirkland</span><span class="pay-track"><b id="pk"></b></span><span class="pay-val" id="vk">—</span></div>
+            <div class="pay-row"><span class="pay-name">Cravath</span><span class="pay-track"><b id="pc"></b></span><span class="pay-val" id="vc">—</span></div>
+            <div class="pay-row is-hot"><span class="pay-name">Weil</span><span class="pay-track"><b id="pw"></b></span><span class="pay-val" id="vw">—</span></div>
+          </div>
+          <p class="pay-verdict" id="payverdict"></p>
+        </div>
+        <div>
+          <svg id="curve" viewBox="0 0 520 230" aria-label="pay vs originations curve"></svg>
+          <div class="panel" style="margin-top:12px">
+            <div class="panel-label"><span data-lang="zh">怎么读这三条曲线</span><span data-lang="en">How to read the curves</span></div>
+            <p data-lang="zh"><b>Kirkland 对业务量陡峭，对年资平坦。</b>创收翻倍，薪酬翻倍。资深但业务一般的合伙人可能根本不在权益层里。</p>
+            <p data-lang="en"><b>Kirkland is steep on originations, flat on tenure.</b> Double the book, double the pay. A senior partner with moderate originations may not be in the equity tier at all.</p>
+            <p style="margin-top:8px" data-lang="zh"><b>Cravath 对年资陡峭，对业务量几乎平坦。</b>资深稳健型在这里拿得最多。创收王则要比在 Kirkland 少拿四到五成。</p>
+            <p style="margin-top:8px" data-lang="en"><b>Cravath is steep on tenure, nearly flat on originations.</b> The senior steady earns the most here. The rainmaker earns 40–50% less than at Kirkland.</p>
+            <p style="margin-top:8px" data-lang="zh"><b>Weil 夹在两者之间，而池子更小。</b>结果是创收王和资深稳健型相对各自的「天然归宿」都被低估了。</p>
+            <p style="margin-top:8px" data-lang="en"><b>Weil sits in between, with a smaller pool.</b> The result: both the rainmaker and the senior steady are underpriced relative to their natural home.</p>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:11px;color:var(--light);margin-top:12px"><span data-lang="zh">示意模型，参数经校准以复现 2025 财年公开均值与已报道的分布</span><span data-lang="en">Illustrative model; parameters calibrated to reproduce published FY2025 averages and reported spreads</span></p>
+    </div>
+  </div>
+
+  <!-- RUN SIMULATOR -->
+  <div class="section-block">
+    <div class="section-kicker"><span data-lang="zh">可交互 · 模型二</span><span data-lang="en">Interactive · Model Two</span></div>
+    <h2 class="section-h2">
+      <span data-lang="zh">为什么早走才是理性的</span>
+      <span data-lang="en">Why leaving early is the rational move</span>
+    </h2>
+    <p class="section-lead" data-lang="zh">一个简化的 Weil：250 名合伙人，20 亿美元营收，6 亿美元的律师、员工与租约成本。创收王每人带来约 5,000 万。其余所有人从剩下的里面分。</p>
+    <p class="section-lead" data-lang="en">A simplified Weil: 250 partners, $2B revenue, $600M in lawyer salaries, staff and leases. Each rainmaker brings about $50M. Everyone else splits what is left.</p>
+
+    <div class="sim-box dark">
+      <div class="sim-grid">
+        <div>
+          <div class="ctl-wrap">
+            <label><span data-lang="zh">已经离开的创收王</span><span data-lang="en">Rainmakers who have left</span> <b id="nOut">0</b></label>
+            <input id="rng" type="range" min="0" max="20" value="0" step="1">
+          </div>
+          <div class="readout">
+            <div><span data-lang="zh">剩余营收</span><span data-lang="en">Remaining revenue</span><b id="rev">$2.00B</b></div>
+            <div><span data-lang="zh">利润池</span><span data-lang="en">Profit pool</span><b id="pool">$1.40B</b></div>
+            <div class="is-hot"><span data-lang="zh">留下者的人均利润</span><span data-lang="en">Remaining PEP</span><b id="pep">$5.59M</b></div>
+          </div>
+          <div class="gauge-wrap"><i id="gauge"></i></div>
+          <p class="verdict-txt" id="verdict"></p>
+        </div>
+        <div>
+          <div class="panel" style="background:rgba(255,255,255,.04);border-color:rgba(196,154,122,.15)">
+            <div class="panel-label"><span data-lang="zh">为什么会加速</span><span data-lang="en">Why it accelerates</span></div>
+            <p style="color:rgba(247,243,238,.7)" data-lang="zh"><b>固定成本不会跟着走。</b>租约、律师工资、行政人员都留着，营收却走了 — Weil 刚签下新总部。每一次离职造成的伤害都比上一次大。</p>
+            <p style="color:rgba(247,243,238,.7)" data-lang="en"><b>Fixed costs don't leave.</b> Leases, associate salaries, support staff — they stay while revenue walks out. Weil had just signed a new headquarters. Each departure is more damaging than the last.</p>
+            <p style="margin-top:8px;color:rgba(247,243,238,.7)" data-lang="zh"><b>合伙人是所有者。</b>利润跌 10%，当年收入就少 10%，没有缓冲期。<b>最后走的人背锅。</b>残余债务和租约担保，落在那时还在、还能签字的人头上。</p>
+            <p style="margin-top:8px;color:rgba(247,243,238,.7)" data-lang="en"><b>Partners are owners.</b> A 10% profit drop means 10% less income, with no buffer period. <b>The last ones out hold the bag.</b> Residual obligations and lease guarantees land on whoever is still there to sign.</p>
+          </div>
+          <div class="panel" style="background:rgba(255,255,255,.04);border-color:rgba(196,154,122,.15)">
+            <div class="panel-label"><span data-lang="zh">而且没有任何东西能刹车</span><span data-lang="en">And nothing can stop it</span></div>
+            <p style="color:rgba(247,243,238,.7)" data-lang="zh">执业行为规则第 5.6 条禁止限制律师离职后执业。2025 年 8 月纽约市律协更进一步：可没收的奖金、递延薪酬、资本金扣减，只要起到阻碍竞业的作用，同样不被允许。一旦算术翻转，纽约的律所没有刹车可踩。</p>
+            <p style="color:rgba(247,243,238,.7)" data-lang="en">Model Rule 5.6 bars any restriction on a lawyer's right to practise after leaving. The NYC Bar went further in August 2025: forfeitable bonuses, deferred comp, capital deductions — if they deter competition, they are impermissible too. Once the arithmetic flips, there is no brake to pull.</p>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:11px;color:rgba(247,243,238,.35);margin-top:12px"><span data-lang="zh">数字取自广为流传的评论推算，不是 Weil 的真实账册</span><span data-lang="en">Figures from widely cited commentary; not Weil's actual books</span></p>
+    </div>
+  </div>
+
+  <!-- ACT IV: RULE 5.6 -->
+  <div class="section-block">
+    <div class="section-kicker"><span data-lang="zh">第四幕 · 没有护城河</span><span data-lang="en">Act IV · No Moat</span></div>
+    <h2 class="section-h2">
+      <span data-lang="zh"><em>律师留不住</em></span>
+      <span data-lang="en"><em>A lawyer cannot be held</em></span>
+    </h2>
+    <p class="section-lead" data-lang="zh">一家没有金库的银行。存款是合伙人的客户关系，每个储户都能在任何一天全额取走，而且先走的那个不受任何惩罚。</p>
+    <p class="section-lead" data-lang="en">A bank with no vault. The deposits are the partners' relationships, every depositor can withdraw in full on any day, and there is no penalty for doing it first.</p>
+
+    <div class="panel" style="margin-bottom:16px">
+      <div class="panel-label"><span data-lang="zh">一次跳槽实际是怎么发生的</span><span data-lang="en">How a move actually works</span></div>
+      <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;margin-top:8px">
+        <div style="flex:1;min-width:140px">
+          <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:4px"><span data-lang="zh">周五</span><span data-lang="en">Friday</span></div>
+          <div style="font-size:14px;font-weight:400;color:var(--dark);margin-bottom:4px"><span data-lang="zh">递交辞呈</span><span data-lang="en">Resign</span></div>
+          <p style="font-size:12px;color:var(--light)"><span data-lang="zh">通知期通常几周。Weil 11 月 5 日的备忘录直接全部豁免。</span><span data-lang="en">A notice period of a few weeks. Weil's 5 November memo waived it outright.</span></p>
+        </div>
+        <div style="font-size:1.5rem;color:var(--gold);padding-top:16px">→</div>
+        <div style="flex:1;min-width:140px">
+          <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:4px"><span data-lang="zh">周一</span><span data-lang="en">Monday</span></div>
+          <div style="font-size:14px;font-weight:400;color:var(--dark);margin-bottom:4px"><span data-lang="zh">同一批客户，换一张信笺</span><span data-lang="en">Same clients, new letterhead</span></div>
+          <p style="font-size:12px;color:var(--light)"><span data-lang="zh">案卷按客户指示移交。在办的交易继续跑。没有花园假，没有冷静期，没有追回条款。</span><span data-lang="en">Files transfer on the client's instruction. Open deals keep running. No garden leave, no cooling-off, no clawback.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-label"><span data-lang="zh">法律依据</span><span data-lang="en">The authority</span></div>
+      <ul class="compact-list" data-lang="zh">
+        <li><b>ABA 模范规则 5.6(a)；纽约州执业行为规则 5.6(a)(1)。</b>除退休福利外，任何合伙协议或雇佣协议都不得限制律师离职后的执业权。各州均有对应条款。</li>
+        <li><b>Cohen v. Lord, Day &amp; Lord</b>（纽约，1989）与 <b>Denburg v. Parker Chapin</b>（纽约，1993）。纽约州最高法院否定了「竞业即没收」：律所不得因离职者继续执业而扣减其应得款项。</li>
+        <li><b>纽约市律协 2025-3 号正式意见</b>（2025 年 8 月）堵上了后门：可没收的奖金、递延薪酬、贷款豁免、资本金扣减，只要起到阻碍竞业的作用，同样不被允许。Kirkland 的递延之所以成立，是因为它是时间安排，不是没收。</li>
+        <li><b>ABA 489 号正式意见</b>（2019）。通知期不得被用来拖延离职，或阻止客户跟随律师。</li>
+      </ul>
+      <ul class="compact-list" data-lang="en">
+        <li><b>ABA Model Rule 5.6(a); N.Y. RPC 5.6(a)(1).</b> No partnership or employment agreement may restrict a lawyer's right to practise after leaving, retirement benefits aside. Every state has a version.</li>
+        <li><b>Cohen v. Lord, Day &amp; Lord</b> (N.Y. 1989) and <b>Denburg v. Parker Chapin</b> (N.Y. 1993). New York's highest court struck down forfeiture-for-competition: a firm cannot dock a departing partner's payout for competing.</li>
+        <li><b>NYC Bar Formal Op. 2025-3</b> (Aug 2025) closed the back doors. Forfeitable bonuses, deferred compensation, loan forgiveness and capital deductions that deter competition are impermissible too. Kirkland's deferral survives because it is a timing device, not a forfeiture.</li>
+        <li><b>ABA Formal Op. 489</b> (2019). Notice periods cannot be used to delay a departure or keep clients from following the lawyer.</li>
+      </ul>
+      <p style="font-size:12px;color:var(--light);margin-top:10px"><span data-lang="zh">这条规则保护的是客户选择律师的自由，不是律所在律师身上的投入。</span><span data-lang="en">The rule exists to protect the client's choice of counsel, not the firm's investment in the lawyer.</span></p>
+    </div>
+
+    <div class="table-wrap" style="margin-top:16px">
+      <table class="mini-table">
+        <tr>
+          <td><span data-lang="zh">投行人士</span><span data-lang="en">Investment banker</span></td>
+          <td><span data-lang="zh">竞业限制 + 三到六个月花园假，递延股票离职即没收</span><span data-lang="en">Non-compete, three to six months' garden leave, deferred stock forfeited</span></td>
+        </tr>
+        <tr>
+          <td><span data-lang="zh">医生、高管</span><span data-lang="en">Doctor, executive</span></td>
+          <td><span data-lang="zh">多数州竞业限制可执行（FTC 2024 年的禁令已被法院撤销）</span><span data-lang="en">Non-competes enforceable in most states; the FTC's 2024 ban was vacated</span></td>
+        </tr>
+        <tr>
+          <td><span data-lang="zh">职业球员</span><span data-lang="en">Footballer</span></td>
+          <td><span data-lang="zh">有合同在身，俱乐部收转会费</span><span data-lang="en">Under contract; the club collects a transfer fee</span></td>
+        </tr>
+        <tr class="is-hot">
+          <td><b><span data-lang="zh">律所合伙人</span><span data-lang="en">Law-firm partner</span></b></td>
+          <td><b><span data-lang="zh">全美国没有任何限制。每一天都是自由球员。</span><span data-lang="en">No restriction anywhere in the United States. A free agent every single day.</span></b></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- GOVERNANCE -->
+  <div class="section-block">
+    <div class="section-kicker"><span data-lang="zh">第四幕 · 治理</span><span data-lang="en">Act IV · Governance</span></div>
+    <h2 class="section-h2">
+      <span data-lang="zh">钱是燃料，<em>领导层是那颗火星</em></span>
+      <span data-lang="en">Money was the fuel, <em>leadership was the spark</em></span>
+    </h2>
+    <p class="section-lead" data-lang="zh">前合伙人形容这是一家「由个人组成的所」：客户关系属于某几个人，不属于机构。三件事把薪酬差距变成了解散。</p>
+    <p class="section-lead" data-lang="en">Former partners described a firm of individuals: the client relationships belonged to personalities rather than to the institution. Three facts turned a pay gap into a dissolution.</p>
+
+    <ul class="compact-list" style="margin-bottom:20px" data-lang="zh">
+      <li style="margin-bottom:12px"><b>双人轴心。</b>决策都走 Aiello 和 Wolf 这条线。据报管理委员会成员要推动增长方案得先拿到 Aiello 的首肯，至少有一人在一次正面冲突后申请退出委员会。</li>
+      <li style="margin-bottom:12px"><b>业务结构押错了边。</b>在 Kirkland、Latham、Simpson 搭建起如今承载交易流的基金发起人平台的那些年里，所里把资源给了上市公司并购而不是私募股权。Weil 的 PE 业务从未做到与它的名声相称。</li>
+      <li style="margin-bottom:12px"><b>蒸发掉的接班计划。</b>Nee 三月被宣布为接班人，八月告诉管理层她不会接任。合伙人们在最需要备选方案的时候，发现没有备选方案。</li>
+    </ul>
+    <ul class="compact-list" style="margin-bottom:20px" data-lang="en">
+      <li style="margin-bottom:12px"><b>An axis of two.</b> Decisions ran through Aiello and Wolf. Management-committee members reportedly needed Aiello's blessing to advance a growth idea; at least one asked to leave the committee after a confrontation.</li>
+      <li style="margin-bottom:12px"><b>The wrong bet on practice mix.</b> Public M&amp;A was favoured over private equity through the years in which Kirkland, Latham and Simpson built the sponsor platforms that now carry the deal flow. Weil's PE practice never scaled to its own reputation.</li>
+      <li style="margin-bottom:12px"><b>A succession that evaporated.</b> Nee was named successor in March and told leadership in August she would not serve. The partnership discovered there was no plan B at the moment it needed one.</li>
+    </ul>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
+      <div class="panel">
+        <div class="panel-label"><span data-lang="zh">结构位置</span><span data-lang="en">Structural position</span></div>
+        <p data-lang="zh">大到做不成 Cravath 或 Wachtell 那样的专精所，又小到做不成 Kirkland 或 Latham 那样的平台。精英市场的中间地带，正是增长停滞、明星被别人用价格挖走的地方。</p>
+        <p data-lang="en">Too big to be a specialist like Cravath or Wachtell. Too small to be a platform like Kirkland or Latham. The middle of the elite market is where growth stalls and stars get priced away.</p>
+      </div>
+      <div class="panel">
+        <div class="panel-label"><span data-lang="zh">这个剧本演过很多遍</span><span data-lang="en">The script</span></div>
+        <p data-lang="zh">Howrey。Dewey &amp; LeBoeuf。Bingham McCutchen。Stroock。团队出走、合并失败，然后表决。Weil 只是照着演的所里最大、最赚钱的那一家。</p>
+        <p data-lang="en">Howrey. Dewey &amp; LeBoeuf. Bingham McCutchen. Stroock. Group exits, a failed combination, then a vote. Weil is the largest and most profitable firm to follow it.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSING QUOTE -->
+  <div class="closing-block">
+    <div class="closing-quote">
+      <span data-lang="zh">律所唯一的资产，每天晚上都会走出大楼。</span>
+      <span data-lang="en">A law firm's only assets walk out of the building every night.</span>
+    </div>
+    <p class="closing-sub" data-lang="zh">Weil 的合伙人一个接一个地决定，第二天不再走回来。文化、薪酬公式、领导层，都只是「想留下」的理由。理由用完了，法律不会给律所留下任何可以留住人的东西。</p>
+    <p class="closing-sub" data-lang="en">Weil's partners decided, one by one, not to walk back in. Culture, pay formula and leadership are only reasons to want to. When the reasons run out, the law offers a firm nothing to hold anyone with.</p>
+  </div>
+
+  <!-- SOURCES -->
+  <div class="section-block">
+    <div class="section-kicker"><span data-lang="zh">来源与说明</span><span data-lang="en">Sources &amp; Notes</span></div>
+    <h2 class="section-h2"><span data-lang="zh">来源</span><span data-lang="en">Sources</span></h2>
+    <div class="sources-list">
+      <a href="https://www.law.com/americanlawyer/2026/11/06/kirkland-adds-40-lawyer-group-from-weil-including-ramona-nee/" target="_blank" rel="noopener">Law.com — <span data-lang="zh">Kirkland 接收 Weil 的 40 人团队，含 Ramona Nee</span><span data-lang="en">Kirkland adds 40-lawyer group from Weil, including Ramona Nee</span></a>
+      <a href="https://news.bloomberglaw.com/business-and-practice/weil-gotshal-corporate-chair-mike-aiello-to-join-cravath" target="_blank" rel="noopener">Bloomberg Law — <span data-lang="zh">Weil 公司业务部主席 Mike Aiello 将加入 Cravath</span><span data-lang="en">Weil corporate chair Mike Aiello to join Cravath</span></a>
+      <a href="https://www.law.com/americanlawyer/2026/09/11/cravath-recruits-6-weil-partners/" target="_blank" rel="noopener">Law.com — <span data-lang="zh">Cravath 引进六名 Weil 合伙人</span><span data-lang="en">Cravath recruits six Weil partners</span></a>
+      <a href="https://news.bloomberglaw.com/business-and-practice/weil-gotshals-closest-relationship-cost-the-firm-everything" target="_blank" rel="noopener">Bloomberg Law — <span data-lang="zh">Weil 最紧密的那段关系让它失去了一切</span><span data-lang="en">Weil's closest relationship cost the firm everything</span></a>
+      <a href="https://www.bloomberg.com/news/articles/2026-11-06/weil-gotshal-says-remaining-partners-can-resign-now-keep-profit" target="_blank" rel="noopener">Bloomberg — <span data-lang="zh">剩余合伙人可即刻退伙并保留利润分成</span><span data-lang="en">Remaining partners can resign now and keep profit</span></a>
+      <a href="https://www.law.com/americanlawyer/2026/10/27/weil-global-private-equity-co-head-exits-for-paul-weiss/" target="_blank" rel="noopener">Law.com — <span data-lang="zh">Weil 全球私募股权联席主管转投 Paul Weiss</span><span data-lang="en">Weil global PE co-head exits for Paul Weiss</span></a>
+      <a href="https://www.law.com/international-edition/2026/10/29/weil-broken-on-the-wheel-of-the-kirkland-hiring-era/" target="_blank" rel="noopener">Law.com International — <span data-lang="zh">Weil 碾碎在 Kirkland 式挖角时代的车轮下</span><span data-lang="en">Broken on the wheel of the Kirkland hiring era</span></a>
+      <a href="https://davidlat.substack.com/p/weil-gotshal-manges-biglaw-firm-failure-collapse-dissolution" target="_blank" rel="noopener">David Lat — <span data-lang="zh">Weil 解散的五点启示</span><span data-lang="en">Five takeaways from Weil's collapse</span></a>
+      <a href="https://viviachen.substack.com/p/did-kirkland-kill-weil" target="_blank" rel="noopener">Vivia Chen — <span data-lang="zh">是 Kirkland 杀死了 Weil 吗？</span><span data-lang="en">Did Kirkland kill Weil?</span></a>
+      <a href="https://www.nonbillable.co.uk/news/kirkland-record-law-firm-profits-pep-11-million" target="_blank" rel="noopener">Non-Billable — <span data-lang="zh">Kirkland 人均利润破 1,100 万：绩效模型与其分布</span><span data-lang="en">Kirkland PEP tops $11m; the merit model and its spread</span></a>
+      <a href="https://sartoriglobal.com/insights/salary/cravath-salary-2026/" target="_blank" rel="noopener">Sartori Global — <span data-lang="zh">Cravath 的 PEP、修正式同步晋薪与非权益层</span><span data-lang="en">Cravath PEP, modified lockstep and the non-equity tier</span></a>
+      <a href="https://www.nycbar.org/reports/formal-opinion-2025-3-permissibility-of-financial-disincentives-associated-with-a-lawyers-departure-from-a-law-firm/" target="_blank" rel="noopener">NYC Bar Formal Opinion 2025-3 — <span data-lang="zh">离职相关的经济性阻碍措施</span><span data-lang="en">financial disincentives on departure</span></a>
+      <a href="https://www.cityam.com/weil-gotshal-collapse-exposes-the-fragility-of-law-firm-partnerships/" target="_blank" rel="noopener">City A.M. — <span data-lang="zh">律所合伙制的脆弱</span><span data-lang="en">The fragility of law-firm partnerships</span></a>
+      <a href="https://www.bestlawfirms.com/articles/weil-gotshal-wind-down-big-law-firm-collapse-lessons/8615" target="_blank" rel="noopener">Best Law Firms — <span data-lang="zh">20 亿美元的瓦解，走的是一个熟悉的剧本</span><span data-lang="en">A $2bn unraveling followed a familiar script</span></a>
+      <a href="https://globallegalmarket.substack.com/p/the-collapse-of-weil-gotshal" target="_blank" rel="noopener">Global Legal Market — <span data-lang="zh">薪酬模型说明与 Kirkland 的递延机制</span><span data-lang="en">Comp-model notes and Kirkland's deferral</span></a>
+    </div>
+    <p class="sources-note">
+      <span data-lang="zh">利润、人数与薪酬机制数据均为公开披露；各所不披露单个合伙人薪酬。两个交互模型均为示意：其参数经校准以复现已公布的均值与已报道的分布，不是 Weil 的真实账册。金额单位均为美元。整理于 2026 年 11 月 7 日。</span>
+      <span data-lang="en">Profit, headcount and compensation-mechanics figures are as publicly reported; firms do not disclose individual partner pay. Both interactive models are illustrative: their parameters reproduce published averages and reported spreads, and are not Weil's books. Prepared 7 November 2026.</span>
+    </p>
+  </div>
+
+</div><!-- /article-wrap -->
+
+<footer style="background:var(--dark);color:rgba(247,243,238,.5);text-align:center;padding:32px 20px;font-size:11px;letter-spacing:1px">
+  <div style="color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:8px">E<span style="color:var(--cream)">.</span>LAW</div>
+  <p>© 2026 Evonne Xu Law</p>
+</footer>
+
+<script>
+/* ---- Language toggle ---- */
+var currentLang = 'zh';
+function toggleLang() {
+  currentLang = currentLang === 'zh' ? 'en' : 'zh';
+  document.body.className = 'lang-' + currentLang;
+  document.getElementById('langBtn').textContent = currentLang === 'zh' ? 'English' : '中文';
+  localStorage.setItem('lang', currentLang);
+  updateSvgLangTexts();
+  if (typeof pay === 'function') pay();
+  if (typeof sim === 'function') sim();
+}
+var saved = localStorage.getItem('lang') || 'zh';
+currentLang = saved;
+document.body.className = 'lang-' + currentLang;
+document.getElementById('langBtn').textContent = currentLang === 'zh' ? 'English' : '中文';
+
+/* SVG text nodes need special handling since data-lang inside SVG can be tricky */
+function updateSvgLangTexts() {
+  document.querySelectorAll('svg [data-lang]').forEach(function(el) {
+    if (el.getAttribute('data-lang') === currentLang) {
+      el.style.display = '';
+    } else {
+      el.style.display = 'none';
+    }
+  });
+}
+updateSvgLangTexts();
+
+/* ---- Bar chart entrance ---- */
+(function(){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      e.target.querySelectorAll('.bar-track b[data-w]').forEach(function(b){
+        b.style.width = b.dataset.w + '%';
+      });
+    });
+  }, {threshold: .2});
+  document.querySelectorAll('.section-block').forEach(function(s){ io.observe(s); });
+  setTimeout(function(){
+    document.querySelectorAll('.bar-track b[data-w]').forEach(function(b){ b.style.width = b.dataset.w + '%'; });
+  }, 800);
+})();
+
+/* ---- Model 1: Pay simulator ---- */
+(function(){
+  var M = { K:{m:.62, k:.80}, C:{pi:684, R:1300, sum:190}, W:{pi:1290, R:2080, sum:460} };
+  var pts  = function(T){ return Math.min(3, 1 + 2*(T/17)); };
+  var payK = function(B){ return M.K.m * M.K.k * B; };
+  var payC = function(B,T){ return .85*M.C.pi*pts(T)/M.C.sum + .15*M.C.pi*B/M.C.R; };
+  var payW = function(B,T){ return .60*M.W.pi*pts(T)/M.W.sum + .40*M.W.pi*B/M.W.R; };
+
+  var cs = getComputedStyle(document.documentElement);
+  function tok(n, fb){ var v = cs.getPropertyValue(n).trim(); return v || fb; }
+
+  function fmt(v){
+    if (currentLang === 'zh') {
+      return (v*100).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' 万';
+    } else {
+      var m = v/100;
+      return '$' + m.toFixed(1) + 'M';
+    }
+  }
+
+  var bk = document.getElementById('bk'), tn = document.getElementById('tn');
+
+  window.pay = function(){
+    if (!bk || !tn) return;
+    var B = +bk.value, T = +tn.value;
+    if (currentLang === 'zh') {
+      document.getElementById('bOut').textContent = (B*100).toLocaleString('zh-CN') + ' 万';
+    } else {
+      document.getElementById('bOut').textContent = '$' + B + 'M';
+    }
+    document.getElementById('tOut').textContent = T;
+    var k = payK(B), c = payC(B,T), w = payW(B,T), mx = Math.max(k,c,w,1);
+    document.getElementById('vk').textContent = fmt(k);
+    document.getElementById('vc').textContent = fmt(c);
+    document.getElementById('vw').textContent = fmt(w);
+    document.getElementById('pk').style.width = (k/mx*100) + '%';
+    document.getElementById('pc').style.width = (c/mx*100) + '%';
+    document.getElementById('pw').style.width = (w/mx*100) + '%';
+    var best = (k>=c && k>=w) ? 'Kirkland' : (c>=w ? 'Cravath' : 'Weil');
+    var hi = Math.max(k,c,w), lo = Math.min(k,c,w);
+    if (currentLang === 'zh') {
+      document.getElementById('payverdict').textContent =
+        '最佳归宿：' + best + '。最好与最差平台的年差额：' +
+        fmt(hi - lo) + '，相当于多 ' + ((hi/lo - 1)*100).toFixed(0) + '%。';
+    } else {
+      document.getElementById('payverdict').textContent =
+        'Best fit: ' + best + '. Annual gap between best and worst platform: ' +
+        fmt(hi - lo) + ' (' + ((hi/lo - 1)*100).toFixed(0) + '% more).';
+    }
+
+    /* SVG curve */
+    var svg = document.getElementById('curve');
+    if (!svg) return;
+    var ink = '#4A3728', line = '#d4c5b5', soft = '#e8ddd2', acc = '#C49A7A', helper = '#8C7060';
+    var W = 520, H = 230, px = 46, py = 14, pw = W - px - 12, ph = H - py - 34;
+    var maxB = 60, maxP = Math.max(payK(maxB), payW(maxB,25), payC(maxB,25)) * 1.05;
+    var X = function(b){ return px + b/maxB*pw; }, Y = function(p){ return py + ph - p/maxP*ph; };
+    var path = function(f, col, dash){
+      var d = '';
+      for (var b = 0; b <= maxB; b += 2) d += (b ? 'L' : 'M') + X(b).toFixed(1) + ' ' + Y(f(b)).toFixed(1) + ' ';
+      return '<path d="' + d + '" fill="none" stroke="' + col + '" stroke-width="1.6"' +
+             (dash ? ' stroke-dasharray="' + dash + '"' : '') + '/>';
+    };
+    var xLabel = currentLang === 'zh' ? '年创收 · 单位：百万美元' : 'Annual originations · $M';
+    var g = '';
+    for (var v = 0; v <= maxP; v += 10)
+      g += '<line x1="' + px + '" x2="' + (px+pw) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" stroke="' + soft + '"/>' +
+           '<text x="' + (px-7) + '" y="' + (Y(v)+3) + '" text-anchor="end" font-size="9" fill="' + helper + '">' + (currentLang==='zh' ? (v*100)+'万' : '$'+v+'M') + '</text>';
+    g += '<line x1="' + px + '" y1="' + py + '" x2="' + px + '" y2="' + (py+ph) + '" stroke="' + line + '"/>' +
+         '<line x1="' + px + '" y1="' + (py+ph) + '" x2="' + (px+pw) + '" y2="' + (py+ph) + '" stroke="' + line + '"/>';
+    for (var b2 = 0; b2 <= maxB; b2 += 10)
+      g += '<text x="' + X(b2) + '" y="' + (py+ph+14) + '" text-anchor="middle" font-size="9" fill="' + helper + '">' + (currentLang==='zh' ? (b2*100)+'万' : '$'+b2+'M') + '</text>';
+    g += '<text x="' + (px+pw/2) + '" y="' + (H-3) + '" text-anchor="middle" font-size="9" fill="' + helper + '">' + xLabel + '</text>';
+    g += path(payK, ink, '')
+       + path(function(x){ return payC(x,T); }, ink, '5 3')
+       + path(function(x){ return payW(x,T); }, acc, '');
+    g += '<line x1="' + X(B) + '" x2="' + X(B) + '" y1="' + py + '" y2="' + (py+ph) + '" stroke="' + helper + '" stroke-dasharray="2 3"/>';
+    [[k,ink],[c,ink],[w,acc]].forEach(function(d){
+      g += '<circle cx="' + X(B) + '" cy="' + Y(d[0]) + '" r="3.6" fill="' + d[1] + '"/>';
+    });
+    g += '<text x="' + (px+pw-2) + '" y="' + (Y(payK(maxB))-6) + '" text-anchor="end" fill="' + ink + '" font-size="9">KIRKLAND</text>' +
+         '<text x="' + (px+pw-2) + '" y="' + (Y(payC(maxB,T))+13) + '" text-anchor="end" fill="' + ink + '" font-size="9">CRAVATH</text>' +
+         '<text x="' + (px+pw-2) + '" y="' + (Y(payW(maxB,T))+13) + '" text-anchor="end" fill="' + acc + '" font-size="9">WEIL</text>';
+    svg.innerHTML = g;
+  };
+
+  if (bk && tn) {
+    bk.addEventListener('input', pay);
+    tn.addEventListener('input', pay);
+    document.querySelectorAll('.chip').forEach(function(ch){
+      ch.addEventListener('click', function(){ bk.value = ch.dataset.b; tn.value = ch.dataset.t; pay(); });
+    });
+    pay();
+  }
+})();
+
+/* ---- Model 2: Run simulator ---- */
+(function(){
+  var rng = document.getElementById('rng');
+  window.sim = function(){
+    if (!rng) return;
+    var n = +rng.value, R = 2000 - 50*n, P = R - 600, partners = 250 - n, pp = P/partners;
+    document.getElementById('nOut').textContent = n;
+    if (currentLang === 'zh') {
+      document.getElementById('rev').textContent  = (R/100).toFixed(1) + ' 亿';
+      document.getElementById('pool').textContent = (P/100).toFixed(1) + ' 亿';
+      document.getElementById('pep').textContent  = (pp*100).toFixed(0) + ' 万';
+    } else {
+      document.getElementById('rev').textContent  = '$' + (R/100).toFixed(2) + 'B';
+      document.getElementById('pool').textContent = '$' + (P/100).toFixed(2) + 'B';
+      document.getElementById('pep').textContent  = '$' + (pp*100/100).toFixed(2) + 'M';
+    }
+    document.getElementById('gauge').style.width = Math.max(0, Math.min(100, pp/5.6*100)) + '%';
+    if (currentLang === 'zh') {
+      document.getElementById('verdict').textContent =
+        pp > 5   ? '稳定。一个手握 500 万业务的合伙人，留下是划算的。' :
+        pp > 3.5 ? '动摇。中等业务量的合伙人，接下第一个找上门的报价就能多拿。' :
+        pp > 2.2 ? '挤兑。每一个还在的合伙人都是走更划算，而且都知道别人也算出来了。' :
+                   '崩解。利润池已经盖不住固定成本和市场薪酬。清盘成为理性的选择。';
+    } else {
+      document.getElementById('verdict').textContent =
+        pp > 5   ? 'Stable. A partner with $5M in originations is better off staying.' :
+        pp > 3.5 ? 'Wavering. A mid-book partner takes the first outside offer they get.' :
+        pp > 2.2 ? 'Run. Every remaining partner calculates that leaving pays. And every one knows every other one has run the same calc.' :
+                   'Collapse. The profit pool no longer covers fixed costs and market compensation. Winding down is the rational choice.';
+    }
+  };
+  if (rng) { rng.addEventListener('input', sim); sim(); }
+})();
+</script>
+</body>
+</html>
