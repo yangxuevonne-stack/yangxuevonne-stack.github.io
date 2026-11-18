@@ -115,7 +115,7 @@ td.n{font:700 1em Georgia,serif;color:var(--red);width:2.6em}td.b{color:var(--mu
     document.getElementById("bar").style.width=((i+1)/n*100)+"%";
     document.getElementById("prev").disabled=i===0;document.getElementById("next").disabled=i===n-1;
     slides.forEach(function(s,k){var v=s.querySelector("video");if(!v)return;
-      if(k===i){try{v.currentTime=0;}catch(e){}var p=v.play();if(p&&p.catch)p.catch(function(){});}else v.pause();});}
+      if(k===i){try{v.currentTime=0;v.playbackRate=1.5;}catch(e){}var p=v.play();if(p&&p.catch)p.catch(function(){});}else v.pause();});}
   var t;deck.addEventListener("scroll",function(){clearTimeout(t);t=setTimeout(function(){var i=Math.round(deck.scrollLeft/deck.clientWidth);if(i!==cur)show(i);},60);},{passive:true});
   document.getElementById("prev").addEventListener("click",function(){go(cur-1);});
   document.getElementById("next").addEventListener("click",function(){go(cur+1);});
