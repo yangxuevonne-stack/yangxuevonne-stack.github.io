@@ -1,5 +1,17 @@
 [
   {
+    "file": "blog/guolairen-ep01.html",
+    "titleZh": "Associate 怎么进 A Team｜过来人 EP.01",
+    "titleEn": "How to Get on a Partner's A Team | Guolairen EP.01",
+    "excerptZh": "年底 review 季，associate 怎么进 partner 的 A team。靠谱的五个方面。",
+    "excerptEn": "Year-end review season: five things that actually make a partner want you on their A team.",
+    "catZh": "职场成长 · 实战经验",
+    "catEn": "Career Growth · Insider Advice",
+    "date": "November 2026",
+    "readTime": "5 min",
+    "featured": true
+  },
+  {
     "file": "blog/weil-run-anatomy.html",
     "titleZh": "一场挤兑的解剖 — Weil、Kirkland 与 Cravath",
     "titleEn": "Anatomy of a Run — Weil, Kirkland & Cravath",
@@ -9,7 +21,7 @@
     "catEn": "Law Firm Analysis · Partnership Study",
     "date": "November 2026",
     "readTime": "20 min",
-    "featured": true
+    "featured": false
   },
   {
     "file": "blog/qsbs-stacking.html",
